@@ -75,7 +75,7 @@
   :chords: A7 Am Bm C D D7 G G7
   :play_key:  G
   :play_link: https://www.youtube.com/watch?v=swZw89RKIMg
-  :href: https://hopamchuan.com/song/1683/ben-nhau-ngay-vui/
+  :href: https://hopamchuan.com/song/1683/ben-nhau-ngay-vui/thienv
   :name: Bên Nhau Ngày Vui
   :preview: "| 4/4 | Surf Lấy tông, nốt:Một(Re)sớm(Si)tan(Sol)chuông(Sol) Một sớm
     [G]tan chuông tà áo trắng [A7"
@@ -453,7 +453,7 @@
   :artist:   Quốc Anh
   :chords:   Am C Dm F G G7
   :play_key: F
-  :href:     https://hopamchuan.com/song/2029/tinh-co-nhu-khong/
+  :href:     https://hopamchuan.com/song/2029/tinh-co-nhu-khong/thienv
   :name:     Tình Có Như Không
   :preview:  1. [C] Tình là tình nhiều khi không [Dm] mà có [G] Tình là tình nhiều
     lúc có như [C] không [Am] Tì
@@ -462,7 +462,7 @@
   :chords:   C D G
   :play_key: Eb
   :play_link: https://www.youtube.com/watch?v=YAQicB9kMLc
-  :href:     https://hopamchuan.com/song/7021/tinh-linh/
+  :href:     https://hopamchuan.com/song/7021/tinh-linh/thienv
   :name:     Tình Lính
   :preview:  Anh là lính đa [G] tình tình non sông rất nặng [D] Tình hải hồ ôm [C]
     mộng tình vũ trụ ngát [G] xan
@@ -471,7 +471,7 @@
   :chords: Am C Dm E7 G
   :play_key:  Bm
   :play_link: https://www.youtube.com/watch?v=sbNygSMdI7Y
-  :href: https://hopamchuan.com/song/8302/tinh-vong/
+  :href: https://hopamchuan.com/song/8302/tinh-vong/thienv
   :name: Tình Vọng
   :preview: 'Tone gốc Bm: Capo 2 Ôi như mộng [Am]du hồn ta đang thoát đi tìm [Dm]em
     Trong cơn dịu [G]êm tình đư'
@@ -485,7 +485,7 @@
 - !ruby/object:Hash
   :artist: Quang Dũng
   :chords: A7 Am C C6 Dm E7 F G7
-  :href: https://hopamchuan.com/song/2380/vi-do-la-em/
+  :href: https://hopamchuan.com/song/2380/vi-do-la-em/thienv
   :name: Vì Đó Là Em
   :preview: Không cần [Am] biết em là [E7] ai Không cần [Dm] biết em từ [Am] đâu Không
     cần [F] biết em ngày [
@@ -509,7 +509,7 @@
   :artist: Đức Huy
   :chords: Am C Dm Em F G G7
   :play_key: C
-  :href: https://hopamchuan.com/song/6278/xin-mot-ngay-mai-co-nhau/
+  :href: https://hopamchuan.com/song/6278/xin-mot-ngay-mai-co-nhau/thienv
   :name: Xin Một Ngày Mai Có Nhau
   :preview: 'Tone gốc E: Capo 4 Còn lại [C]đây một buổi chiều ướt cơn [F]mưa Còn lại
     [Dm]đây sương mù đường vắng'
@@ -568,7 +568,7 @@
   :chords: A A7 Bb C Cdim7 Dm Dm/C E Edim7 F Gm
   :play_key:  Bm
   :play_link: https://www.youtube.com/watch?v=etjleKIdoBk
-  :href: https://hopamchuan.com/song/1777/de-nho-mot-thoi-ta-da-yeu/
+  :href: https://hopamchuan.com/song/1777/de-nho-mot-thoi-ta-da-yeu/aococtay
   :name: Để Nhớ Một Thời Ta Đã Yêu
   :preview: Hạnh phúc trong tầm [Am]với đã không còn [F]tới khi vắng em trong [Am]đời
     Tìm đến chân trời [Dm]mới
