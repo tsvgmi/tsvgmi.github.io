@@ -7,19 +7,19 @@
 
 :css
   .qtip {font-size:80%}
+  .performer {color:yellow}
 
 .container
   %ul.list-unstyled
     - plist.sort_by{|e| e[:href].split('/')[5]}.each do |sentry|
       %li
-        %span.badge.badge-secondary.pull-right= "#{sentry[:play_key]}"
+        %a(href='#' title="#{sentry[:performer]}" data-toggle='tooltip' data-placement='right')
+          %span.badge.badge-secondary.pull-right= "#{sentry[:play_key]}"
         - if value = sentry[:play_link]
           %a.pull-right(href=value target='play_link')
             %i.fa.fa-music
             &nbsp;
-        - qref = {artist:sentry[:artist], preview:sentry[:preview]}
-        - qref = "<table><tr><td>Artist</td><td>#{sentry[:artist]}</td></tr><tr><td>Preview</td><td>#{sentry[:preview]}</td></row></table>"
-        - qref = "<div class=qtip>#{sentry[:artist]}<p>#{sentry[:preview]}</div>"
+        - qref = "<div class=qtip><span class=pull-left>#{sentry[:artist]}</span><span class='pull-right performer'>#{sentry[:performer]}</span><hr/>#{sentry[:preview]}</div>"
         %a.small(href="#{sentry[:href]}" target='if_content' data-toggle='tooltip' title="#{qref}")= sentry[:name]
 
 :javascript
