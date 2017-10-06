@@ -156,7 +156,8 @@
 - !ruby/object:Hash
   :artist: Mạnh Quỳnh
   :chords: A7 Bb Dm F Gm
-  :href: https://hopamchuan.com/song/5047/go-cua-trai-tim/
+  :href: https://hopamchuan.com/song/5047/go-cua-trai-tim/thienv
+  :play_link: http://www.nhaccuatui.com/bai-hat/go-cua-trai-tim-vinh-su-quang-le-ft-mai-thien-van.MOui2lUaqj.html
   :name: Gõ Cửa Trái Tim
   :preview: Gõ cửa trái [Dm] tim van em được vào Dù tình xót [Bb] đau chung thân huyệt
     [F] đào Ngủ vùi với chiêm
@@ -559,6 +560,7 @@
 - !ruby/object:Hash
   :artist: Đan Nguyên
   :chords: Am Am7 Bb C Dm Dm7 F Gm
+  :play_link: http://www.nhaccuatui.com/bai-hat/dap-mo-cuoc-tinh-dan-nguyen.wbktC1WAtkCq.html
   :href: https://hopamchuan.com/song/4726/dap-mo-cuoc-tinh/thienv
   :name: Đắp Mộ Cuộc Tình
   :preview: 1. Say giấc mộng ban [Dm] đầu yêu [Bb] người thủa mới đôi [F] mươi em
