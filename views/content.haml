@@ -7,12 +7,13 @@
 
 :css
   .qtip {font-size:80%}
-  .perfnote {background-color:#eef; border-top: 2px solid #888;}
+  .perfnote  {background-color:#eef; border-top: 1px dotted #888; margin-bottom:0}
+  .perfsound {background-color:#fee; border-top: 1px dotted #888; margin-bottom:0}
 
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'primary', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 .container
   %ul.list-unstyled
-    - plist.sort_by{|e| e[:href].split('/')[5]}.each do |sentry|
+    - plist.sort_by{|e| e[:href] ? e[:href].split('/')[5] : e[:name].downcase}.each do |sentry|
       %li
         - btype  = StyleColor[(sentry[:pstyle] || '').downcase] || 'secondary'
         - sclass = "small badge badge-#{btype} pull-right"
@@ -22,7 +23,10 @@
             %i.fa.fa-music
             &nbsp;
         - perfnote = (sentry[:perfnote] || '').gsub(/\n/, '<br/>')
-        - qref     = "<div class='small'><p><span class='badge badge-secondary'>#{sentry[:artist]}</span><span class='pull-right badge badge-primary'>#{sentry[:performer]} | #{sentry[:pstyle]}</span><p>#{sentry[:preview]}<p class=perfnote>#{perfnote}</div>"
+        - sound    = nil
+        - if value = sentry[:sound]
+          - sound  = %w(Upper: Lower: Rhymth:).zip(value.split(',')).join(' ')
+        - qref     = "<div class='small'><p><span class='badge badge-secondary'>#{sentry[:artist]}</span><span class='pull-right badge badge-primary'>#{sentry[:performer]} | #{sentry[:pstyle]}</span><p>#{sentry[:preview]}<p class=perfnote>#{perfnote}<p class=perfsound>#{sound}</div>"
         %a.small(href="#{sentry[:href]}" target='if_content' data-container="body" data-toggle="popover" data-placement="top" data-content=qref)= sentry[:name]
 
 

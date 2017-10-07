@@ -36,6 +36,7 @@
   :perfnote: |
     Intro: 3332 -(777)231 111 345 5554233 37222 2323 345+(12) - Sound effect (Hit 6 6 7 8)
     Voice: PolySynth, Orchestra Hit,
+  :sound: 0500,0822,0339
 
 - !ruby/object:Hash
   :artist:    Khánh Hà
@@ -97,6 +98,7 @@
     Ôi đớn [Am] đau đã nhiều
   :perfnote: |
     +385 +386 +4874565 +385 +387 +487+(124321)
+  :sound: 0139/0300/0486/0676,0008,0189
 
 - !ruby/object:Hash
   :artist:    Kim Anh
@@ -160,6 +162,10 @@
   :name:      Chuyện Thường Tình Thế Thôi
   :preview:   Cuộc tình ngày nào [Am]đã trao cho anh [A7], giờ chỉ còn trong đớn [Dm]đau
     Cuộc tình ngày nào [G7]đ
+  :perfnote:  |
+    Chord: C#m B G#m C#m
+    5555511 55544-(77) 44444-(55) 222-(8878) x 2
+
 - !ruby/object:Hash
   :artist:    Khánh Ly
   :chords:    C Dm F G7
@@ -203,6 +209,7 @@
   :name:      Giã Từ Đêm Mưa
   :preview:   Ðêm [Am]khuya mưa [Am7]rơi rơi trên đường [Dm]vắng [Dm7] Ðôi [G]chân lang
     [G7]thang tâm tư trầm [C]l
+
 - !ruby/object:Hash
   :artist:    Hồng Ngọc, Đàm Vĩnh Hưng
   :chords:    Am Dm E F G
@@ -213,6 +220,12 @@
   :name:      Dấu Tình Sầu
   :preview:   "[Am]Chiều còn vương nắng để gió đi tìm [G] [Dm] Vết bước [G]chân em qua
     [Dm]bao nhiêu lần [F]"
+  :perfnote:  |
+    Piano: +(3231) 557656 +(4342) 668765
+    Sax: 465468 354358 24324 6543
+    Chord: Dm D7 Gm C7 F Gm Dm A7 Dm C/A Dm
+    Sound: Piano, Sax
+
 - !ruby/object:Hash
   :artist:    Mạnh Quỳnh
   :chords:    A7 Bb Dm F Gm
@@ -397,6 +410,7 @@
   :perfnote: |
     Intro: 534231 534231 (Gm) then (Dm) then (Cm) (String: 1321 1321) (Gm)
     Am Em Dm Am 
+  :sound: 0290,0009,0188
 
 - !ruby/object:Hash
   :artist: Lê Thụ
@@ -500,6 +514,7 @@
   :perfnote: |
     Intro (PTT): 1754435 154313 21-7-5 1321-71
     Intro (TPB):  Am C D Em-G Am C D G-Am
+  :sound: 0319/0486,0578,0005 
 
 - !ruby/object:Hash
   :artist: Khánh Ly
@@ -625,6 +640,7 @@
   :perfnote: |
     Intro: Chord - 21 43 76 +(21 43 65 2315)
     Solo: Guitar - |Em | | Bm | | F# | G | A | F# | |
+  :sound: 0010/0294,
 
 - !ruby/object:Hash
   :artist:   Quốc Anh
@@ -636,17 +652,20 @@
   :name:     Tình Có Như Không
   :preview:  1. [C] Tình là tình nhiều khi không [Dm] mà có [G] Tình là tình nhiều
     lúc có như [C] không [Am] Tì
+
 - !ruby/object:Hash
-  :artist:   Y Vân
-  :chords:   C D G
-  :play_key: Eb
+  :artist:    Y Vân
+  :chords:    C D G
+  :play_key:  Eb
   :play_link: https://www.youtube.com/watch?v=YAQicB9kMLc
-  :href:     https://hopamchuan.com/song/7021/tinh-linh/thienv
-  :pstyle:  Twist
+  :href:      https://hopamchuan.com/song/7021/tinh-linh/thienv
+  :pstyle:    Twist
   :performer: Quan C.
-  :name:     Tình Lính
-  :preview:  Anh là lính đa [G] tình tình non sông rất nặng [D] Tình hải hồ ôm [C]
+  :name:      Tình Lính
+  :preview:   Anh là lính đa [G] tình tình non sông rất nặng [D] Tình hải hồ ôm [C]
     mộng tình vũ trụ ngát [G] xan
+  :sound: 0372,0008,0196
+
 - !ruby/object:Hash
   :artist: Tuấn Ngọc
   :chords: Am C Dm E7 G
@@ -737,6 +756,7 @@
     sy The way you look t
   :perfnote: |
     11-711-732 11-711-732 -(775775+398878) - 11-711-732 11-711-732 -(775775+398878)
+  :sound: 0498/0339,,0045
 
 - !ruby/object:Hash
   :artist: Phương Vy, Lê Hiếu
@@ -762,6 +782,7 @@
     hẹn thề xưa êm [G]ấm [Dm]Nhữ
   :perfnote: |
     Intro: 5854323453111 2321-(76789755) 585432345311 24321-71231
+  :sound: 0115,0009,0191
 
 - !ruby/object:Hash
   :artist:    Đan Nguyên
@@ -812,3 +833,16 @@
     123 232-7 321 123 232-7 321
     Gm F Gm F
     Nhac: 123 2324 4321-5 123 2324 432-6
+
+- :name:  Z_Piano-Acc-Guit
+  :sound: 0005/0115/0124/0250/0299/0465/0502/0674/0819,0286
+- :name:  Z_Piano-Acc-Guit
+  :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
+- :name:  Z_Tango
+  :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
+- :name:  Z_Valse
+  :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
+- :name:  Z_Slow-Rumba
+  :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
+- :name:  Z_New-Wave
+  :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
