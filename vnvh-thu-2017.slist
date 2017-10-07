@@ -170,6 +170,9 @@
   :name:      Cánh Buồm Xa Xưa
   :preview:   Điệu Tango Vi [C]vu đồi thông reo xao [G7]xác lá chiều nay thu [F]về Em
     [Dm]ơi cánh buồm [C]xưa cò
+  :perfnote: |
+    Intro: 3434348 2323237 1212126523 3434348 2323237 1212126 6521
+    Voice(Ah), Piano, Fantasie
 
 - !ruby/object:Hash
   :artist:    Thu Phương
@@ -324,6 +327,7 @@
   :name: Lính thích 33
   :preview: Lính thích [D] 33 [G7] như thích đi hành [D] quân Đời lính vui buồn ai
     nào [Bm] biết [A] Theo ngà
+
 - !ruby/object:Hash
   :artist: Đan Nguyên
   :chords: Am B7 C D Em G
@@ -334,6 +338,7 @@
   :name: Lại Nhớ Người Yêu
   :preview: Vì sao anh nhớ em thế [Em] này Thương nhớ đong [D] đầy trong lòng [G]
     mắt [Em] Buổi chiều còn gặp
+
 - !ruby/object:Hash
   :artist:    Thiên Vương
   :chords:    Bb Cm D D# F Gm
@@ -346,7 +351,8 @@
   :preview:   "[Gm]Anh number one! [F]Anh number one! [Gm]Anh xin thề anh sẽ yêu mãi
     thôi [F]Yêu em nồng say suốt"
   :perfnote: |
-    Intro: Gm F Gm F 87 76 6 6 7 7 5 5555
+    Intro: Gm F Gm F (Singing) 87 76 6 6 7 7 5 5555
+    Orchestra Hit, Fantasia, Horn
 
 - !ruby/object:Hash
   :artist: Nguyên Khang, Diễm Liên

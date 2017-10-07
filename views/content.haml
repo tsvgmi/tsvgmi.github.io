@@ -14,15 +14,15 @@
   %ul.list-unstyled
     - plist.sort_by{|e| e[:href].split('/')[5]}.each do |sentry|
       %li
-        %a(href='#' title="<div class=small>#{sentry[:performer]}-#{sentry[:pstyle]}</div>" data-toggle='tooltip' data-placement='right')
-          - btype  = StyleColor[(sentry[:pstyle] || '').downcase] || 'secondary'
-          - sclass = "small badge badge-#{btype} pull-right"
-          %span(class=sclass)= "#{sentry[:play_key]}"
+        - btype  = StyleColor[(sentry[:pstyle] || '').downcase] || 'secondary'
+        - sclass = "small badge badge-#{btype} pull-right"
+        %span(class=sclass)= "#{sentry[:play_key]}"
         - if value = sentry[:play_link]
           %a.pull-right(href=value target='play_link')
             %i.fa.fa-music
             &nbsp;
-        - qref = "<div class='small'><p><span class='badge badge-secondary'>#{sentry[:artist]}</span><span class='pull-right badge badge-primary'>#{sentry[:performer]} | #{sentry[:pstyle]}</span><p>#{sentry[:preview]}<p class=perfnote>#{sentry[:perfnote]}</div>"
+        - perfnote = (sentry[:perfnote] || '').gsub(/\n/, '<br/>')
+        - qref     = "<div class='small'><p><span class='badge badge-secondary'>#{sentry[:artist]}</span><span class='pull-right badge badge-primary'>#{sentry[:performer]} | #{sentry[:pstyle]}</span><p>#{sentry[:preview]}<p class=perfnote>#{perfnote}</div>"
         %a.small(href="#{sentry[:href]}" target='if_content' data-container="body" data-toggle="popover" data-placement="top" data-content=qref)= sentry[:name]
 
 
