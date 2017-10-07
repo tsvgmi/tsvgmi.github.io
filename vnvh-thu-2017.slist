@@ -11,6 +11,7 @@
   :chords: Am C Dm E Em Esus4 F G
   :play_key:  Em
   :href: https://hopamchuan.com/song/99/anh-con-no-em/
+  :pstyle:  Slow
   :performer: Thien Hương
   :name: Anh Còn Nợ Em
   :preview: Anh còn nợ [Am]em Công viên ghế [Em]đá Công viên ghế [Am]đá Lá đổ chiều
@@ -21,24 +22,27 @@
   :play_key:  Bm
   :play_link: https://www.youtube.com/watch?v=htRIWEclktg
   :href: https://hopamchuan.com/song/1797/anh-khac-hay-em-khac/
+  :pstyle:  Techno
   :performer: Quan C.
   :name: Anh Khác Hay Em Khác
   :preview: Có [Am] phải em hết yêu anh [Em] rồi Em [F] hãy nói đi người [C] ơi [Dm]
     Anh vô tâm, hay là [Em]
 - !ruby/object:Hash
-  :artist: Khánh Hà
-  :chords: C Em F G7
+  :artist:    Khánh Hà
+  :chords:    C Em F G7
   :play_key:  A
-  :href: https://hopamchuan.com/song/1198/bay-ngay-doi-mong/
+  :href:      https://hopamchuan.com/song/1198/bay-ngay-doi-mong/
+  :pstyle:    Rhumba
   :performer: Dieu Huyen
-  :name: Bảy Ngày Đợi Mong
-  :preview: "[C]Anh hẹn em cuối tuần [F] Chờ anh nơi cuối [C]phố [F]Biết anh thích
+  :name:      Bảy Ngày Đợi Mong
+  :preview:   "[C]Anh hẹn em cuối tuần [F] Chờ anh nơi cuối [C]phố [F]Biết anh thích
     màu [G7]trời Em đã bồi hồi chọ"
 - !ruby/object:Hash
   :artist:   Lý Hải
   :chords:   A Am Bb Bbm Bm C D Dm E F F#m G Gm
   :play_key: Gm
   :href:     https://hopamchuan.com/song/3583/ben-thuong-hai/
+  :pstyle:  rhumba
   :performer: lynn ngo
   :name:     Bến Thượng Hải
   :preview:  Biển [Am]sóng đạt [G]dào, trùng dương [Am]lớp lớp trôi đi về chốn [Dm]nao
@@ -48,6 +52,7 @@
   :chords:   A7 Am C C7 Dm E7 F G G7
   :play_key: Em
   :href:     https://hopamchuan.com/song/371/bien-can/thienv
+  :pstyle:  Boston
   :performer: Thien Hương
   :name:     Biển Cạn
   :preview:  Tone [Am] 1. Có [E7]người từ lâu nhớ thương [Am]biển Ngày xưa biển [Dm]xanh
@@ -73,6 +78,7 @@
   :play_key: Dm
   :play_link: https://www.youtube.com/watch?v=Xg2V2YC6X4s
   :href:     https://hopamchuan.com/song/1963/bai-khong-ten-cuoi-cung/
+  :pstyle:  Boston
   :performer: Thanh Chi
   :name:     Bài Không Tên Cuối Cùng
   :preview:  1. Nhớ em [Am] nhiều nhưng chẳng nói Nói ra [A7] nhiều cũng vậy [Dm] thôi
@@ -83,6 +89,7 @@
   :play_key:  G
   :play_link: https://www.youtube.com/watch?v=swZw89RKIMg
   :href: https://hopamchuan.com/song/1683/ben-nhau-ngay-vui/thienv
+  :pstyle:  bebop
   :performer: Loc Nhan
   :name: Bên Nhau Ngày Vui
   :preview: "| 4/4 | Surf Lấy tông, nốt:Một(Re)sớm(Si)tan(Sol)chuông(Sol) Một sớm
@@ -92,6 +99,7 @@
   :chords: A7 Am Am7 B7 C C7 Dm Dm7 E7 F Fm G
   :play_key:  Cm
   :href: https://hopamchuan.com/song/3950/ban-tinh-cuoi/
+  :pstyle:  slow
   :performer: Duy Linh
   :name: Bản Tình Cuối
   :preview: Mưa có [Am]rơi và nắng có [Am]phai Trên cuộc [E7]tình yêu em ngày [Am]nào
@@ -101,6 +109,7 @@
   :chords:   A B7 Bm C C#m D E Em G
   :play_key: Bbm
   :href:     https://hopamchuan.com/song/5973/ben-xuan/
+  :pstyle:  Slow
   :performer: Que Huong, Lynn Ngo
   :name:     Bến Xuân
   :preview:  Nhà [Em] tôi bên chiếc cầu soi [G] nước Em đến [C] tôi [Bm] một [Em] lần
@@ -110,6 +119,7 @@
   :chords: A A7 Asus4 C7 D7 Dm F Gm Gm6
   :play_key:  Am
   :href: https://hopamchuan.com/song/1666/cho-em-quen-tuoi-ngoc/
+  :pstyle:  boston
   :performer: Anh Thu
   :name: Cho Em Quên Tuổi Ngọc
   :preview: "| 3/4 | Say mê và tha thiết Lấy tông, nốt: Cho(La) em (La)quên (La) cơn(Fa)
@@ -127,6 +137,7 @@
   :play_key:  C#m
   :play_link: https://www.youtube.com/watch?v=HMEC7534pUE
   :href: https://hopamchuan.com/song/799/chuyen-thuong-tinh-the-thoi/
+  :pstyle:  Techno
   :performer: Vanessa Hoang 
   :name: Chuyện Thường Tình Thế Thôi
   :preview: Cuộc tình ngày nào [Am]đã trao cho anh [A7], giờ chỉ còn trong đớn [Dm]đau
@@ -137,6 +148,7 @@
   :play_key:  D
   :play_link: https://www.bing.com/videos/search?q=canh+buom+xa+xua&&view=detail&mid=A36C642D24E672DD403FA36C642D24E672DD403F&&FORM=VDRVRV
   :href: https://hopamchuan.com/song/3419/canh-buom-xa-xua/
+  :pstyle:  Tango
   :performer: Mai Hương
   :name: Cánh Buồm Xa Xưa
   :preview: Điệu Tango Vi [C]vu đồi thông reo xao [G7]xác lá chiều nay thu [F]về Em
@@ -146,6 +158,7 @@
   :chords:   A7 Dm7 F Gm Gm7
   :play_key: Dm
   :href:     https://hopamchuan.com/song/5939/co-nho-dem-nao/thienv
+  :pstyle:  Techno
   :performer: Michelle
   :name:     Có Nhớ Đêm Nào
   :preview:  Có nhớ đêm [Dm7] nào? Về chung với nhau nơi này Tìm đến hòa khúc sum [Gm7]
@@ -155,6 +168,7 @@
   :chords:   Am Am7 C D Dm Dm7 E E7 F G G7
   :play_key: Am
   :href:     https://hopamchuan.com/song/7439/gia-tu-dem-mua/
+  :pstyle:  Bebop
   :performer: Oánh Phạm
   :name:     Giã Từ Đêm Mưa
   :preview:  Ðêm [Am]khuya mưa [Am7]rơi rơi trên đường [Dm]vắng [Dm7] Ðôi [G]chân lang
@@ -182,6 +196,7 @@
   :chords: Am B B7 C D Em Em7 G
   :play_key:  Em
   :href: https://hopamchuan.com/song/2248/han-mac-tu/
+  :pstyle:  rhumba
   :performer: Duy Linh
   :name: Hàn Mặc Tử
   :preview: 'Tone Lệ Quyên: Bm Ngậm thơ: Ai mua [Em]trăng tôi bán trăng cho Trăng
@@ -192,6 +207,7 @@
   :play_key:  Am
   :play_link: https://www.youtube.com/watch?v=SR54YSLLUsg
   :href: https://hopamchuan.com/song/12253/han-tinh-trong-mua/
+  :pstyle:  Slow
   :name: Hận tình trong mưa
   :preview: 1. [Am]Người tình đi xa tít [Dm]nơi chân trời [G]Trời thì u tối, mùa đông
     đang đi [C]tới ngày thì d
@@ -199,6 +215,7 @@
   :artist: Nguyễn Hùng
   :chords: Am C Dm E E7 F
   :href: https://hopamchuan.com/song/4621/hay-cho-toi/
+  :pstyle:  Boston
   :performer: Michelle, Diệu Hiền
   :name: Hãy Cho Tôi
   :preview: "[Am]Hãy cho tôi nụ cười người ơi Hãy cho tôi một [Dm]giây phút thôi [E]Để
@@ -208,6 +225,7 @@
   :chords: A A7 Bb C Dm F Gm
   :play_key:  Am
   :href: https://hopamchuan.com/song/1309/hay-hat-len/
+  :pstyle:  Bebop
   :performer: Xuyen
   :name: Hãy Hát Lên
   :preview: "[Dm]Gió vẫn còn gọi mùa thu [Gm]đến khắp trời [C]Nắng vẫn còn gọi mùa
@@ -218,6 +236,7 @@
   :play_key:  Dm
   :play_link: https://www.youtube.com/watch?v=YKjzCxllZbA
   :href: https://hopamchuan.com/song/667/hay-tra-loi-em/
+  :pstyle:  Slow
   :performer: Minh, Diep
   :name: Hãy Trả Lời Em
   :preview: "[Dm]Em hỏi anh có [F]bao giờ [Bb]con sông kia thôi [Dm]ngừng trôi Anh
@@ -228,6 +247,7 @@
   :play_key:  Gm
   :play_link: https://www.youtube.com/watch?v=5tOepcir9DE
   :href: https://hopamchuan.com/song/12122/huong/
+  :pstyle:  Twist
   :performer: Dzuy Ngo
   :name: Hương
   :preview: "[E] Hương anh gọi tên [Am]em Trong ngút ngàn nỗi [Dm] nhớ [G7] Gọi tên
@@ -245,6 +265,7 @@
   :play_key:  Am
   :play_link: https://www.youtube.com/watch?v=D0bB0O1DbVs
   :href: https://hopamchuan.com/song/11810/lenh-denh-phan-buon/
+  :pstyle:  Rhumba
   :performer: Yen Phương
   :name: Lênh Đênh Phận Buồn
   :preview: 1. Bạn bè gặp nhau cứ |[Am]hỏi đã lâu không |[Dm6]còn trông thấy [E7]em
@@ -274,6 +295,7 @@
   :play_key:  Gm
   :play_link: https://www.youtube.com/watch?v=S_2LAEHELGA
   :href: https://hopamchuan.com/song/378/loi-to-tinh-de-thuong-2/
+  :pstyle:  Techno
   :performer: Quan C.
   :name: Lời Tỏ Tình Dễ Thương 2
   :preview: "[Gm]Anh number one! [F]Anh number one! [Gm]Anh xin thề anh sẽ yêu mãi
@@ -283,6 +305,7 @@
   :chords: A A7 Bb Dm F Gm
   :play_key:  Fm
   :href: https://hopamchuan.com/song/5016/mai-toi-di/
+  :pstyle:  boston
   :performer: Linh, Thu
   :name: Mai Tôi Đi
   :preview: 'Intro: [Dm] [A] [Dm] [Gm] [F] [Gm] [A] [Dm] Mai tôi đi[Dm] chắc trời
@@ -299,6 +322,7 @@
   :chords: A7 Am Bm C Cm D D7 E7 F G G7
   :play_key:  A
   :href: https://hopamchuan.com/song/909/mua-dong-cua-anh/
+  :pstyle:  Rhumba 
   :performer: Diệu Huyền
   :name: Mùa Đông Của Anh
   :preview: Ngày nào anh yêu em [G], anh đã quen trong cay đắng [G7]tuyệt vời [C]
@@ -309,6 +333,7 @@
   :play_key:  Gm
   :play_link: https://www.youtube.com/watch?v=dKa193D9V3I
   :href:      https://hopamchuan.com/song/11625/mua-he-dep-nhat/
+  :pstyle:  Boston
   :performer: Thuy Dung
   :name:      Mùa Hè Đẹp Nhất
   :preview:   1. [Em]Chiều trên phố vắng [Am7]ray rứt tiếng mưa buồn rơi [F]Ngày qua
@@ -326,6 +351,7 @@
   :chords: A Cm Dm F Gm
   :play_key:  Gm
   :href: https://hopamchuan.com/song/2815/mot-minh/
+  :pstyle:  Boston
   :performer: Anh Thu
   :name: Một Mình
   :preview: "[Am]Gió nhớ [Dm]gì ngẩn ngơ [Am]ngoài hiên [G]Mưa nhớ [Dm]gì thì thầm
@@ -359,6 +385,7 @@
   :play_key:  C
   :play_link: https://www.youtube.com/watch?v=LVCESXKK_8c
   :href: https://hopamchuan.com/song/3487/nhat-ky-cua-hai-dua-minh/
+  :pstyle:  Tango Habanera
   :performer: Minh, Diep
   :name: Nhật Ký Của Hai Đứa Mình
   :preview: Thức trắng đêm[G] nay ghép lại nhật[D7] ký của hai đứa[G] mình[Em] Đường
@@ -369,6 +396,7 @@
   :play_key:  Bm
   :play_link: https://www.youtube.com/watch?v=ODr8Wl980oU
   :href: https://hopamchuan.com/song/11073/nho/
+  :pstyle:  Slow
   :performer: Mai Nguyen
   :name: Nhớ
   :preview: "[Em] Nhớ ngày em [Am7] đi, [D] nhớ lần chia [Gmaj7] ly. [Am7] Biết nói
@@ -388,6 +416,7 @@
   :chords: Am Dm E7
   :play_key: Cm
   :href: https://hopamchuan.com/song/5238/nhung-tam-hon-co-don-tam-hon-co-don/thienv
+  :pstyle:  Chachacha
   :performer: Thien
   :name: Những tâm hồn cô đơn (Tâm hồn cô đơn)
   :preview: "[Am] Đời không như ước mơ lòng người Cuộc [Dm] đời xô đẩy mình đến rã
@@ -414,6 +443,7 @@
   :chords:   Am B7 C D Em G
   :play_key: Am
   :href:     https://hopamchuan.com/song/1742/roi-day-anh-se-dua-em-ve-nha/
+  :pstyle:  Bebop
   :performer: Ngọc Hưng, Diệu Hiền
   :name:     Rồi Đây Anh Sẽ Đưa Em Về Nhà
   :preview:  1. Rồi đây anh |[Cmaj7]sẽ [B]đưa em [Em]về nhà , Nhà của đôi |[Am]ta [D]xinh
@@ -431,6 +461,7 @@
   :chords: Am Bb C C7 Dm Dm6 E7 F G
   :play_key: Cm
   :href: https://hopamchuan.com/song/11624/song-nuoc-biec/
+  :pstyle:  Waltz
   :performer: Ngọc Sương
   :name: Sông Nước Biếc
   :preview: 1. [E7]Một dòng sông sâu cuồn cuộn [Am]sóng trôi về nơi đâu [Dm]Gió đưa
@@ -440,6 +471,7 @@
   :chords: A7 Am Bb C Dm F Gm
   :play_key:  Am
   :href: https://hopamchuan.com/song/3421/sau-tim-thiep-hong/
+  :pstyle:  Rhumba
   :performer: Tuyết, Oánh
   :name: Sầu Tím Thiệp Hồng
   :preview: Từ lúc quen [Dm]nhau chưa nói một lời [Gm]gì tỏ [C]tình ta [F]mến nhau
@@ -457,6 +489,7 @@
   :play_key: Fm
   :play_link: https://www.youtube.com/watch?v=nFjcrIbFmIc
   :href:     https://hopamchuan.com/song/12121/sau-lang/
+  :pstyle:  Tango
   :performer: Mai Nguyen
   :name:     Sầu Lắng
   :preview:  Chiều lắng nắng trên đường [Em]đã tắt Vài chiếc lá khô vàng [F#dim7]rơi
@@ -466,6 +499,7 @@
   :chords: Am Bdim C Dm E E7 F G Gaug
   :play_key: Dm
   :href: https://hopamchuan.com/song/4002/se-hon-bao-gio-het/
+  :pstyle:  Chachacha
   :performer: Michelle 
   :name: Sẽ Hơn Bao Giờ Hết
   :preview: "[/][Am]Đang có em chiều nay[/] [/]Mà đã nhớ em ngày [/][Dm]mai [/]Yêu
@@ -474,6 +508,7 @@
   :artist: Đàm Vĩnh Hưng
   :chords: Am Bm C D Em G
   :href: https://hopamchuan.com/song/363/thanh-pho-buon/
+  :pstyle:  Slow
   :performer: Yen Phương
   :name: Thành Phố Buồn
   :preview: 1. Thành phố [Em]nào nhớ không [G]em Nơi chúng [Bm]mình tìm phút êm [Em]đềm
@@ -481,7 +516,8 @@
 - !ruby/object:Hash
   :artist: Don Hồ
   :chords: A7 Dm Gm
-  :href: https://hopamchuan.com/song/419/trieu-doa-hoa-hong/
+  :play_key: Cm
+  :href: https://hopamchuan.com/song/419/trieu-doa-hoa-hong/thienv
   :name: Triệu Đóa Hoa Hồng
   :preview: 'Tone gốc Gm: Capo 5 [Dm]Chuyện một tình yêu anh họa sĩ Gửi trong tranh
     vẽ những nỗi [A7]buồn [A7]L'
@@ -489,6 +525,7 @@
   :artist:  Lưu Bích, Vy Oanh
   :chords:  Am Am7 Ammaj7 B B7 C Cmaj7 Em F#m7b5
   :href:    https://hopamchuan.com/song/4882/trai-tim-lam-lo/
+  :pstyle:  Chachacha
   :name:    Trái Tim Lầm Lỡ
   :preview: "[Em]Chiều về lạnh cơn [Em]gió Hạnh [Am7]phúc rét mướt như mùa [Em]đông
     Thềm [B7]hoa đâu con bướm ["
@@ -500,6 +537,7 @@
   :chords:   Am C Dm F G G7
   :play_key: F
   :href:     https://hopamchuan.com/song/2029/tinh-co-nhu-khong/thienv
+  :pstyle:  Chachacha
   :performer: Thien
   :name:     Tình Có Như Không
   :preview:  1. [C] Tình là tình nhiều khi không [Dm] mà có [G] Tình là tình nhiều
@@ -510,6 +548,7 @@
   :play_key: Eb
   :play_link: https://www.youtube.com/watch?v=YAQicB9kMLc
   :href:     https://hopamchuan.com/song/7021/tinh-linh/thienv
+  :pstyle:  Twist
   :performer: Quan C.
   :name:     Tình Lính
   :preview:  Anh là lính đa [G] tình tình non sông rất nặng [D] Tình hải hồ ôm [C]
@@ -542,6 +581,7 @@
   :chords: Am B7 Bm C D D7 E7 Em G
   :play_key:  Cm
   :href: https://hopamchuan.com/song/4547/vung-la-me-bay/
+  :pstyle:  Rhumba
   :performer: Tuyết Hồ
   :name: Vùng Lá Me Bay
   :preview: Nhìn lá me [Am] bay nhớ kỷ [Em] niệm hai chúng [Am] mình Ngày đó quen
@@ -551,6 +591,7 @@
   :chords:   A7 Am C Cmaj7 Dm E Em F G G7
   :play_key: Am
   :href:     https://hopamchuan.com/song/5056/xa-que-huong/
+  :pstyle:  Boston
   :performer: Ngọc Sương
   :name:     Xa Quê Hương
   :preview:  1. Chiều [G]buồn mênh mông xa quê thân [Em]yêu Khi bước chân [Am]đi trên
@@ -560,6 +601,7 @@
   :chords: Am C Dm Em F G G7
   :play_key: C
   :href: https://hopamchuan.com/song/6278/xin-mot-ngay-mai-co-nhau/thienv
+  :pstyle:  Chachacha
   :performer: Doan Cuong, Thien Huong
   :name: Xin Một Ngày Mai Có Nhau
   :preview: 'Tone gốc E: Capo 4 Còn lại [C]đây một buổi chiều ướt cơn [F]mưa Còn lại
@@ -570,6 +612,7 @@
   :play_key:  Dm
   :play_link: https://www.youtube.com/watch?v=U71XPPvrvAo
   :href:      https://hopamchuan.com/song/11725/xin-thoi-gian-ngung-troi/
+  :pstyle:    Slow
   :performer: Thuy Dung
   :name:      Xin thời gian ngừng trôi
   :preview:   "[Dm]Rượu nồng cạn chén bên [Gm]người Tình [C7]ái ấm nồng [F]chứa chan
@@ -579,25 +622,28 @@
   :chords: Bm C D Em G
   :play_key:  Bbm
   :href: https://hopamchuan.com/song/12229/xin-danh-tron-cho-em/
+  :pstyle:  Techno
   :performer: Vanessa Hoang
   :name: Xin dành trọn cho em
   :preview: 'ĐK: [Em] Xin dành [C] trọn cho em Ngàn [D] muôn chiếc hôn nồng [G] say
     [Em] Xin ghì [C] chặt vai'
 - !ruby/object:Hash
-  :artist:   Patty Ryan
-  :chords:   A Bb C Dm F Gm
-  :play_key: Dm
+  :artist:    Patty Ryan
+  :chords:    A Bb C Dm F Gm
+  :play_key:  Dm
   :play_link: https://www.youtube.com/watch?v=Kgu1vkqw-vA
-  :href:     https://hopamchuan.com/song/7027/you-re-my-love-you-re-my-life/
+  :href:      https://hopamchuan.com/song/7027/you-re-my-love-you-re-my-life/
+  :pstyle:    NewWave
   :performer: Mai Hương
-  :name:     You're My Love You're My Life
-  :preview:  1. [Dm] Since you were an angel [Gm] from the sky, [C] you fill my fanta-[Dm]
+  :name:      You're My Love You're My Life
+  :preview:   1. [Dm] Since you were an angel [Gm] from the sky, [C] you fill my fanta-[Dm]
     sy The way you look t
 - !ruby/object:Hash
   :artist: Phương Vy, Lê Hiếu
   :chords: Am C D D7 G
   :play_key:  G
   :href: https://hopamchuan.com/song/1222/yeu-em-dai-lau/
+  :pstyle:  Chachacha
   :performer: Loc, Vanessa
   :name: Yêu Em Dài Lâu
   :preview: 1. Em như cơn gió thu bay [G] bay nhè nhẹ Đưa anh đi tìm vần [Am] thơ
@@ -607,6 +653,7 @@
   :artist:    Lê Thụ
   :chords:    Am B7 D7 Dm E7 Em F G
   :href:      https://hopamchuan.com/song/1230/duong-xua/thienv
+  :pstyle:  waltz
   :performer: Quể Hương
   :play_key:  Fm
   :play_link: https://www.youtube.com/watch?v=Vj8Ssl_NYy4&feature=youtu.be
@@ -627,6 +674,7 @@
   :play_key:  Bm
   :play_link: https://www.youtube.com/watch?v=etjleKIdoBk
   :href: https://hopamchuan.com/song/1777/de-nho-mot-thoi-ta-da-yeu/aococtay
+  :pstyle:  Rhumba
   :performer: Lưu Quang Khải
   :name: Để Nhớ Một Thời Ta Đã Yêu
   :preview: Hạnh phúc trong tầm [Am]với đã không còn [F]tới khi vắng em trong [Am]đời
@@ -646,6 +694,7 @@
   :chords:   Bb Cm D7 Eb Gm
   :play_key: Am
   :href:     https://hopamchuan.com/song/6859/o-noi-nao-em-con-nho/thienv
+  :pstyle:  rumba
   :performer: Oánh Phạm
   :name:     Ở Nơi Nào Em Còn Nhớ
   :preview:  'Ở nơi nào em còn nhớ Tác giả: Ngô Thụy Miên Từ em [Gm] đi mùa xuân lặng

@@ -9,12 +9,15 @@
   .qtip {font-size:80%}
   .performer {color:yellow}
 
+- StyleColor = {'bebop'=>'success', 'chachacha'=>'danger', 'newwave'=>'primary', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 .container
   %ul.list-unstyled
     - plist.sort_by{|e| e[:href].split('/')[5]}.each do |sentry|
       %li
-        %a(href='#' title="#{sentry[:performer]}" data-toggle='tooltip' data-placement='right')
-          %span.badge.badge-secondary.pull-right= "#{sentry[:play_key]}"
+        %a(href='#' title="<div class-qtip>#{sentry[:performer]}-#{sentry[:pstyle]}</div>" data-toggle='tooltip' data-placement='right')
+          - btype  = StyleColor[(sentry[:pstyle] || '').downcase] || 'secondary'
+          - sclass = "small badge badge-#{btype} pull-right"
+          %span(class=sclass)= "#{sentry[:play_key]}"
         - if value = sentry[:play_link]
           %a.pull-right(href=value target='play_link')
             %i.fa.fa-music
