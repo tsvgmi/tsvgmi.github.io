@@ -180,6 +180,7 @@
   :perfnote: |
     Intro: 3434348 2323237 1212126523 3434348 2323237 1212126 6521
     Voice(Ah), Piano, Fantasie
+  :sound:    0005/0362/0593
 
 - !ruby/object:Hash
   :artist:    Thu Phương
@@ -756,7 +757,7 @@
     sy The way you look t
   :perfnote: |
     11-711-732 11-711-732 -(775775+398878) - 11-711-732 11-711-732 -(775775+398878)
-  :sound: 0498/0339,,0045
+  :sound: 0498/0339/0595,,0045
 
 - !ruby/object:Hash
   :artist: Phương Vy, Lê Hiếu
