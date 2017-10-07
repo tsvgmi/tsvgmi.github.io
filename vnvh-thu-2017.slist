@@ -57,9 +57,6 @@
   :name:      Bến Thượng Hải
   :preview:   Biển [Am]sóng đạt [G]dào, trùng dương [Am]lớp lớp trôi đi về chốn [Dm]nao
     Đời như [Em]những cơn són
-  :perfnote:
-    ... -(8878) -71-71344346534 -(78878) -(788)344346534
-    C7 C7 F7 C7 F7 C7 F7 ..
 
 - !ruby/object:Hash
   :artist:    Đàm Vĩnh Hưng
@@ -279,16 +276,20 @@
   :preview: "[Dm]Em hỏi anh có [F]bao giờ [Bb]con sông kia thôi [Dm]ngừng trôi Anh
     trả lời em [F]rằng một [C]ngày"
 - !ruby/object:Hash
-  :artist: Nguyễn Hưng
-  :chords: Am C Dm E F G G7
+  :artist:    Nguyễn Hưng
+  :chords:    Am C Dm E F G G7
   :play_key:  Gm
   :play_link: https://www.youtube.com/watch?v=5tOepcir9DE
-  :href: https://hopamchuan.com/song/12122/huong/
-  :pstyle:  Twist
+  :href:      https://hopamchuan.com/song/12122/huong/
+  :pstyle:    Twist
   :performer: Dzuy Ngo
-  :name: Hương
+  :name:      Hương
   :preview: "[E] Hương anh gọi tên [Am]em Trong ngút ngàn nỗi [Dm] nhớ [G7] Gọi tên
     em gọi mãi khôn [C] nguôi"
+  :perfnote: |
+    ... -(8878) -71-71344346534 -(78878) -(788)344346534
+    C7 C7 F7 C7 F7 C7 F7 ..
+
 - !ruby/object:Hash
   :artist: Hà Thanh Xuân
   :chords: Am C Dm E7 Em Em7 F G
