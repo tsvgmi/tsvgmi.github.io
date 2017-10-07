@@ -7,14 +7,14 @@
 
 :css
   .qtip {font-size:80%}
-  .performer {color:yellow}
+  .perfnote {background-color:#eef; border-top: 2px solid #888;}
 
 - StyleColor = {'bebop'=>'success', 'chachacha'=>'danger', 'newwave'=>'primary', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 .container
   %ul.list-unstyled
     - plist.sort_by{|e| e[:href].split('/')[5]}.each do |sentry|
       %li
-        %a(href='#' title="<div class-qtip>#{sentry[:performer]}-#{sentry[:pstyle]}</div>" data-toggle='tooltip' data-placement='right')
+        %a(href='#' title="<div class=small>#{sentry[:performer]}-#{sentry[:pstyle]}</div>" data-toggle='tooltip' data-placement='right')
           - btype  = StyleColor[(sentry[:pstyle] || '').downcase] || 'secondary'
           - sclass = "small badge badge-#{btype} pull-right"
           %span(class=sclass)= "#{sentry[:play_key]}"
@@ -22,10 +22,12 @@
           %a.pull-right(href=value target='play_link')
             %i.fa.fa-music
             &nbsp;
-        - qref = "<div class=qtip><span class=pull-left>#{sentry[:artist]}</span><span class='pull-right performer'>#{sentry[:performer]}</span><hr/>#{sentry[:preview]}</div>"
-        %a.small(href="#{sentry[:href]}" target='if_content' data-toggle='tooltip' title="#{qref}")= sentry[:name]
+        - qref = "<div class='small'><p><span class='badge badge-secondary'>#{sentry[:artist]}</span><span class='pull-right badge badge-primary'>#{sentry[:performer]} | #{sentry[:pstyle]}</span><p>#{sentry[:preview]}<p class=perfnote>#{sentry[:perfnote]}</div>"
+        %a.small(href="#{sentry[:href]}" target='if_content' data-container="body" data-toggle="popover" data-placement="top" data-content=qref)= sentry[:name]
+
 
 :javascript
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip({"html":true}); 
+    $('[data-toggle="popover"]').popover({"html":true, "trigger":"hover"});
   });
