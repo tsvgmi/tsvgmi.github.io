@@ -479,7 +479,7 @@ var Lightbox = (function ($) {
 						return _this3._$element.trigger('loaded.bs.modal');l;
 					}));
 				} else {
-					$containerForElement.html('<iframe src="' + url + '" frameborder="0" allowfullscreen width="100%" height="100%"></iframe>');
+					$containerForElement.html('<iframe src="' + url + '" frameborder="0" allowfullscreen width="100%" height="750"></iframe>');
 					this._config.onContentLoaded.call(this);
 				}
 
