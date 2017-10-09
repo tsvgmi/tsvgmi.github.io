@@ -124,6 +124,7 @@
   :name:      Bản Tình Cuối
   :preview:   Mưa có [Am]rơi và nắng có [Am]phai Trên cuộc [E7]tình yêu em ngày [Am]nào
     Ta đã [Dm7]yêu và ta đã
+
 - !ruby/object:Hash
   :artist:    Ánh Tuyết
   :chords:    A B7 Bm C C#m D E Em G
@@ -134,6 +135,7 @@
   :name:      Bến Xuân
   :preview:   Nhà [Em] tôi bên chiếc cầu soi [G] nước Em đến [C] tôi [Bm] một [Em] lần
     Bao lũ chim [Bm] rừng họp
+
 - !ruby/object:Hash
   :artist:    Ngọc Lan
   :chords:    A A7 Asus4 C7 D7 Dm F Gm Gm6
@@ -165,6 +167,7 @@
   :perfnote:  |
     Chord: C#m B G#m C#m
     5555511 55544-(77) 44444-(55) 222-(8878) x 2
+  :sound:     0492,0339,0064
 
 - !ruby/object:Hash
   :artist:    Khánh Ly
@@ -180,7 +183,7 @@
   :perfnote: |
     Intro: 3434348 2323237 1212126523 3434348 2323237 1212126 6521
     Voice(Ah), Piano, Fantasie
-  :sound:    0005/0362/0593
+  :sound:    0005/0362/0593,,221
 
 - !ruby/object:Hash
   :artist:    Thu Phương
@@ -222,10 +225,11 @@
   :preview:   "[Am]Chiều còn vương nắng để gió đi tìm [G] [Dm] Vết bước [G]chân em qua
     [Dm]bao nhiêu lần [F]"
   :perfnote:  |
-    Piano: +(3231) 557656 +(4342) 668765
+    Piano: +(5453) 557656 +(4342) 668765
     Sax: 465468 354358 24324 6543
     Chord: Dm D7 Gm C7 F Gm Dm A7 Dm C/A Dm
     Sound: Piano, Sax
+  :sound: 0002/0365,0002
 
 - !ruby/object:Hash
   :artist:    Mạnh Quỳnh
@@ -265,6 +269,7 @@
   :name: Hãy Cho Tôi
   :preview: "[Am]Hãy cho tôi nụ cười người ơi Hãy cho tôi một [Dm]giây phút thôi [E]Để
     tôi thấy [F]đời đang sốn"
+  :play_key:  Dm
   :perfnote: |
     56545651 56545684 45434562 65432345 56545651 56545684 45434562 65432321
     Mid
@@ -493,7 +498,7 @@
   :play_key:  Cm
   :href:      https://hopamchuan.com/song/5238/nhung-tam-hon-co-don-tam-hon-co-don/thienv
   :pstyle:    Chachacha
-  :performer: Thien
+  :performer: Thiện
   :name:      Những tâm hồn cô đơn (Tâm hồn cô đơn)
   :preview:   "[Am] Đời không như ước mơ lòng người Cuộc [Dm] đời xô đẩy mình đến rã
     [E7] rời Còn lại [Am] gì, ng"
@@ -544,7 +549,7 @@
   :artist:    Quang Lê
   :chords:    Am B7 D Em G
   :href:      https://hopamchuan.com/song/2821/sao-em-vo-tinh/
-  :performer: Thien
+  :performer: Thiện
   :name:      Sao Em Vô Tình
   :preview:   Capo 3 Đã biết em vô [Em]tình mà lòng anh vẫn [B7]yêu Đã biết em hững
     hờ mà anh vẫn nhớ [Em]thương Đ
@@ -593,6 +598,7 @@
   :play_key:  Dm
   :href:      https://hopamchuan.com/song/4002/se-hon-bao-gio-het/
   :pstyle:    Chachacha
+  :play_key:  Dm
   :performer: Michelle
   :name:      Sẽ Hơn Bao Giờ Hết
   :preview:   "[/][Am]Đang có em chiều nay[/] [/]Mà đã nhớ em ngày [/][Dm]mai [/]Yêu
@@ -649,7 +655,7 @@
   :play_key: F
   :href:     https://hopamchuan.com/song/2029/tinh-co-nhu-khong/thienv
   :pstyle:  Chachacha
-  :performer: Thien
+  :performer: Thiện
   :name:     Tình Có Như Không
   :preview:  1. [C] Tình là tình nhiều khi không [Dm] mà có [G] Tình là tình nhiều
     lúc có như [C] không [Am] Tì
@@ -782,8 +788,10 @@
   :preview:   Capo 3 [Em]Bước trên đường về em thương [Am]nhớ anh âm thầm [D7]Nhớ bao
     hẹn thề xưa êm [G]ấm [Dm]Nhữ
   :perfnote: |
-    Intro: 5854323453111 2321-(76789755) 585432345311 24321-71231
-  :sound: 0115,0009,0191
+    Intro #1: 5854323453111 2321-(76789755) 585432345311 24321-71231
+    Intro #2: Am E Am E
+    Sound: Piano, Violin, Accordeon
+  :sound: 0009/0118,0009,0191
 
 - !ruby/object:Hash
   :artist:    Đan Nguyên
@@ -794,6 +802,11 @@
   :name:      Đắp Mộ Cuộc Tình
   :preview:   1. Say giấc mộng ban [Dm] đầu yêu [Bb] người thủa mới đôi [F] mươi em
     [C] đang độ trăng [Dm] tròn
+  :perfnote:  |
+    +(131)75 575431 242(-75) 575431
+    C Am Em/G Am
+    Guitar, String
+  :sound:     0236/0708,0236
 
 - !ruby/object:Hash
   :artist:    Bằng Kiều
