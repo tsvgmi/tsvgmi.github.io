@@ -1,0 +1,102 @@
+- !ruby/object:Hash
+  :artist:  Thanh Lam, Nhật Trường
+  :chords:  A A7 Am Bb C C7 Dm F G7 Gm
+  :href:    https://hopamchuan.com/song/3275/ai-noi-yeu-em-dem-nay/thienv
+  :name:    Ai Nói Yêu Em Đêm Nay
+  :preview: Ai nói yêu em đêm [F]nay? Ai nói yêu em đêm [Am]mai? Ai sẽ yêu em sau
+    [C]này? Son phấn [A7]nào gi
+  :perfnote: |
+    875 (min)7634 5
+
+- !ruby/object:Hash
+  :artist:  Nhật Trung, Bằng Kiều
+  :chords:  Am B7 Bm C Cm D E Em F G
+  :href:    https://hopamchuan.com/song/1390/cho-lan-cuoi/
+  :name:    Cho Lần Cuối
+  :preview: Giờ [G]này [D]còn gần [Em]nhau gần [Bm]thắm thiết trong [F]mối [C]sầu
+    Gần [Am]bối [E]rối biên [Am]
+
+- !ruby/object:Hash
+  :artist:  Lệ Quyên
+  :chords:  A7 Am C Dm E F
+  :href:    https://hopamchuan.com/song/235/buon/
+  :name:    Buồn
+  :preview: Buồn như ly rượu [Am]đầy Không có ai cùng [E]cạn Buồn như ly rượu [E]cạn
+    Không còn rượu để [Am]say
+
+- !ruby/object:Hash
+  :artist:    Mạnh Quỳnh
+  :chords:    A7 Bb Dm F Gm
+  :href:      https://hopamchuan.com/song/5047/go-cua-trai-tim/thienv
+  :play_link: http://www.nhaccuatui.com/bai-hat/go-cua-trai-tim-vinh-su-quang-le-ft-mai-thien-van.MOui2lUaqj.html
+  :name:      Gõ Cửa Trái Tim
+  :preview:   Gõ cửa trái [Dm] tim van em được vào Dù tình xót [Bb] đau chung thân huyệt
+    [F] đào Ngủ vùi với chiêm
+
+- !ruby/object:Hash
+  :artist: Hà Thanh Xuân
+  :chords: Am C Dm E7 Em Em7 F G
+  :href: https://hopamchuan.com/song/1697/khuc-hat-an-tinh/
+  :name: Khúc Hát Ân Tình
+  :preview: Người [Am] từ là từ phương [C] Bắc đã qua dòng [Dm] sông Sông [F] dài
+    tìm đến phương [E7] này, một
+
+- !ruby/object:Hash
+  :artist: Hồng Nhung
+  :chords: A Cm Dm F Gm
+  :href: https://hopamchuan.com/song/2815/mot-minh/
+  :name: Một Mình
+  :preview: "[Am]Gió nhớ [Dm]gì ngẩn ngơ [Am]ngoài hiên [G]Mưa nhớ [Dm]gì thì thầm
+    [Am]ngoài hiên Bao [Dm]đêm tôi"
+- !ruby/object:Hash
+  :artist: Kiều Nga
+  :chords: A A7 Bb Dm Em F Gm
+  :href: https://hopamchuan.com/song/7004/moi-tim/
+  :name: Môi Tím
+  :preview: "[Dm] Tình mình là tình đẹp nhất đó [A] anh Tình tuổi học trò mực tím
+    áo [Dm] xanh Kỷ niệm lần đầu"
+
+- !ruby/object:Hash
+  :artist:  Nguyễn Hùng
+  :chords:  A A7 D D7 Dm E7 Gm
+  :href:    https://hopamchuan.com/song/2474/sau-dong/
+  :name:    Sầu Đông
+  :preview: 'Tone gốc Fm: Capo 3 Chiều nay gió [Dm]đông về, dừng chân trên [Gm]bến
+    xưa Đời trai gió [Dm]sương, v'
+
+- !ruby/object:Hash
+  :artist:   Don Hồ
+  :chords:   A7 Dm Gm
+  :play_key: Cm
+  :href:     https://hopamchuan.com/song/419/trieu-doa-hoa-hong/thienv
+  :name:     Triệu Đóa Hoa Hồng
+  :preview:  'Tone gốc Gm: Capo 5 [Dm]Chuyện một tình yêu anh họa sĩ Gửi trong tranh
+    vẽ những nỗi [A7]buồn [A7]L'
+  :perfnote: |
+    Sound: Accordeon
+    5544323 44332212 33221112 221117712 x (2)
+    Dm Gm Dm A Dm Gm Dm/F A/E Dm Gm Dm/F A/E Dm
+
+- !ruby/object:Hash
+  :artist: Thiên Tôn
+  :chords: Am Bm C Cm D7 Em G Gm
+  :href: https://hopamchuan.com/song/3427/tu-giong-hat-em/
+  :name: Từ Giọng Hát Em
+  :preview: Rồi [G]từ giọng hát em chợt vút [C]cao, vút cao một [G]trời, một trời
+    Bài ca thánh [Am]đêm [D7]vang
+
+- !ruby/object:Hash
+  :artist: Quang Dũng
+  :chords: A7 Am C C6 Dm E7 F G7
+  :href: https://hopamchuan.com/song/2380/vi-do-la-em/thienv
+  :name: Vì Đó Là Em
+  :preview: Không cần [Am] biết em là [E7] ai Không cần [Dm] biết em từ [Am] đâu Không
+    cần [F] biết em ngày [
+
+- !ruby/object:Hash
+  :artist: Đan Trường
+  :chords: A A7 Bb C D Dm Eb F G Gm Gm6
+  :href: https://hopamchuan.com/song/1757/nguoi-di-ngoai-pho/
+  :name: Người Đi Ngoài Phố
+  :preview: 1. Người đi đi ngoài | [Dm]phố, chiều nắng tắt bên | [Gm]sông. Người [Eb]đi
+    đi ngoài | [Gm]phố, bón

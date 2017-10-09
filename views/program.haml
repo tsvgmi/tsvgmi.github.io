@@ -10,7 +10,8 @@
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'primary', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 
 - plist.sort_by{|e| e[:href] ? e[:href].split('/')[5] : e[:name].downcase}.each_with_index do |sentry, index|
-  - next unless sentry[:href]
+  -# next if !(sentry[:href] || sentry[:play_link])
+  - next if sentry[:name] =~ /^Z_/
   .row
     .col-md-4
       - pstyle   = (sentry[:pstyle] || '').downcase
@@ -19,7 +20,7 @@
       %span.pull-right= sentry[:artist]
       %h4
         %a(href=href data-toggle="lightbox" data-type="url" data-width="1200" data-height="850")
-          = "#{index+1}. #{sentry[:name]}"
+          = "#{index+1}. #{sentry[:pname] || sentry[:name]}"
       %h5
         - btype  = StyleColor[pstyle] || 'secondary'
         - sclass = "small badge badge-#{btype}"
