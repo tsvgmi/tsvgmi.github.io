@@ -820,6 +820,18 @@
   :pstyle:   Chachacha
   :performer: Thong
 
+- !ruby/object:Hash
+  :artist: Elvis Phương
+  :chords: Am C Dm E7 F G G7
+  :href: https://hopamchuan.com/song/13474/neu-tinh-em-con-day-si-l-amour-existe-encore/
+  :name: Nếu Tình Em Còn Đây (Si L'amour Existe Encore)
+  :pname: Si L'amour Existe Encore
+  :preview: Si l'amour existe en[Dm]core [G7] Il res[E7]semble à ton [Am]corps Si
+    l'a[F]mour existe en[G]core
+  :pstyle:  Slow
+  :performer: Mai Nguyen
+  :play_key: G
+
 - :name:  Z_Piano-Acc-Guit
   :sound: 0005/0115/0124/0250/0299/0465/0502/0674/0819,0286
 - :name:  Z_Piano-Acc-Guit
