@@ -133,7 +133,7 @@
 - !ruby/object:Hash
   :artist:    Hồng Ngọc
   :chords:    A7 Am C Cmaj7 Dm E E7 Em F G7
-  :play_key:  C#m
+  :play_key:  Cm
   :play_link: https://www.youtube.com/watch?v=HMEC7534pUE
   :href:      https://hopamchuan.com/song/799/chuyen-thuong-tinh-the-thoi/
   :pstyle:    Techno
@@ -522,16 +522,18 @@
   :name: Sông Nước Biếc
   :preview: 1. [E7]Một dòng sông sâu cuồn cuộn [Am]sóng trôi về nơi đâu [Dm]Gió đưa
     buồm [Am]nâu mang tâm [E7]h
+
 - !ruby/object:Hash
   :artist:    Lệ Quyên, Quang Lê
   :chords:    A7 Am Bb C Dm F Gm
-  :play_key:  Am
+  :play_key:  Dm
   :href:      https://hopamchuan.com/song/3421/sau-tim-thiep-hong/
   :pstyle:    Rhumba
   :performer: Tuyết, Oánh
   :name:      Sầu Tím Thiệp Hồng
   :preview:   Từ lúc quen [Dm]nhau chưa nói một lời [Gm]gì tỏ [C]tình ta [F]mến nhau
     Nhiều đêm ngắm [Bb]sao mơ ướ
+
 - !ruby/object:Hash
   :artist:    Thế Sơn
   :chords:    Am B B7 C C#dim D#aug E Em Em7/D F#dim F#dim7
@@ -627,13 +629,14 @@
 - !ruby/object:Hash
   :artist: Duy Quang
   :chords: Am B7 Bm C D D7 E7 Em G
-  :play_key:  Cm
+  :play_key:  Bm
   :href: https://hopamchuan.com/song/4547/vung-la-me-bay/
   :pstyle:  Rhumba
   :performer: Tuyết Hồ
   :name: Vùng Lá Me Bay
   :preview: Nhìn lá me [Am] bay nhớ kỷ [Em] niệm hai chúng [Am] mình Ngày đó quen
     [F] nhau vương chút [G7] tình
+
 - !ruby/object:Hash
   :artist:   Kim Tước
   :chords:   A7 Am C Cmaj7 Dm E Em F G G7
