@@ -19,7 +19,7 @@
       -# href = "http://localhost:4567/lyric/" + CGI.escape(sentry[:href])
       %span.pull-right= sentry[:artist]
       %h4
-        %a(href=href data-toggle="lightbox" data-type="url" data-width="1200" data-height="850")
+        %a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
           = "#{index+1}. #{sentry[:pname] || sentry[:name]}"
       %h5
         - btype  = StyleColor[pstyle] || 'secondary'
