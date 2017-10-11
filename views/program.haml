@@ -41,6 +41,7 @@
           - else
             - start, stop = 0, 30
         - if soundfile && test(?s, "audio/#{soundfile}")
+          - soundfile = "intro-#{soundfile}" if test(?s, "audio/intro-#{soundfile}")
           .pull-right
             %a(href='#' onclick="return play_audio('/audio/#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
               %i.fa.fa-play
