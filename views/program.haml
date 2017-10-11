@@ -6,27 +6,48 @@
     color: #f8f8f8;
     background: url(../img/intro-bg.jpg) repeat-y center center;
   }
+  .backup-song {
+    background-color: #ddd;
+  }
 
-- StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'primary', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
+- StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'danger', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 
 - plist.sort_by{|e| e[:href] ? e[:href].split('/')[5] : e[:name].downcase}.each_with_index do |sentry, index|
-  -# next if !(sentry[:href] || sentry[:play_link])
   - next if sentry[:name] =~ /^Z_/
-  .row
+  - rowclass = (sentry[:tags] || []).include?('backup') ? 'backup-song' : ''
+  %div(class="row #{rowclass}")
     .col-md-4
-      - pstyle   = (sentry[:pstyle] || '').downcase
-      - href = sentry[:href]
-      -# href = "http://localhost:4567/lyric/" + CGI.escape(sentry[:href])
+      - pname  = sentry[:pname] || sentry[:name]
+      - pstyle = (sentry[:pstyle] || '').downcase
+      - href   = sentry[:href]
       %span.pull-right= sentry[:artist]
       %h4
         %a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
-          = "#{index+1}. #{sentry[:pname] || sentry[:name]}"
+          = "#{index+1}. #{pname}"
       %h5
         - btype  = StyleColor[pstyle] || 'secondary'
         - sclass = "small badge badge-#{btype}"
         %div(class=sclass)= sentry[:performer]
         %div(class=sclass)= sentry[:pstyle]
         %div(class=sclass)= sentry[:play_key]
+        - soundfile = nil
+        - if value = sentry[:play_audio]
+          - soundfile, start, stop = value
+        - elsif sentry[:href]
+          - sname = sentry[:href].split('/')[5]
+          - soundfile = "#{sname}.mp3"
+          - if sentry[:play_intro]
+            - start, stop = sentry[:play_intro]
+          - else
+            - start, stop = 0, 30
+        - if soundfile && test(?s, "audio/#{soundfile}")
+          .pull-right
+            %a(href='#' onclick="return play_audio('/audio/#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
+              %i.fa.fa-play
+            %a(href='#' onclick="return stop_audio()")
+              %i.fa.fa-pause
+            %a(href='#' onclick="return play_audio('/audio/#{soundfile}', true, #{start}, #{stop})" title="Loop intro for #{pname}" data-toggle="tooltip")
+              %i.fa.fa-repeat
       %p.text-muted= sentry[:preview]
     .col-md-6.intro-header
     .col-md-2
@@ -34,13 +55,41 @@
         %div(class=sclass)= sentry[:pstyle]
         %div(class=sclass)= sentry[:play_key]
         %div(class=sclass)= sentry[:performer]
+        - if value = sentry[:play_link]
+          %a(href=value target='play_link')
+            %i.fa.fa-music
 
 - content_for :javascript do
+  %script(src="/js/howler.js")
   :javascript
+    var cur_sound = null;
+
+    function play_audio(file, isloop, start, stop) {
+      if (cur_sound != null) {
+        cur_sound.stop();
+      }
+      
+      cur_sound = new Howl({
+        src:  [file],
+        loop: isloop,
+        sprite: {
+          intro: [start*1000, stop*1000]
+        }
+      });
+      cur_sound.play('intro');
+      return false;
+    };
+    function stop_audio() {
+      if (cur_sound != null) {
+        cur_sound.stop();
+      }
+      return false;
+    }
     $(document).ready(function() {
       $(document).on('click', '[data-toggle="lightbox"]',
         function(event) {
           event.preventDefault();
           $(this).ekkoLightbox();
         });
+      $('[data-toggle="tooltip"]').tooltip({"html":true}); 
     });

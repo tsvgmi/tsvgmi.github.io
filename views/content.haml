@@ -1,12 +1,16 @@
 :css
   .perfnote  {background-color:#eef; border-top: 1px dotted #888; margin-bottom:0}
   .perfsound {background-color:#fee; border-top: 1px dotted #888; margin-bottom:0}
+  .backup-song {
+    background-color: #ddd;
+  }
 
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'primary', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 .container
   %ul.list-unstyled
     - plist.sort_by{|e| e[:href] ? e[:href].split('/')[5] : e[:name].downcase}.each do |sentry|
-      %li
+      - sclass = (sentry[:tags] || []).include?('backup') ? 'backup-song' : ''
+      %li(class=sclass)
         - btype  = StyleColor[(sentry[:pstyle] || '').downcase] || 'secondary'
         - sclass = "small badge badge-#{btype} pull-right"
         %span(class=sclass)= "#{sentry[:play_key]}"

@@ -11,6 +11,7 @@
     [Em]êm Anh còn nợ [F]em Dò
   :perfnote: |
     +(32)78 8745 5434 42-71 32-71
+  :play_audio: [anh-con-no-em.mp3, 2, 16.5]
 
 - !ruby/object:Hash
   :artist:    Khắc Việt
@@ -27,12 +28,14 @@
     Intro: 3332 -(777)231 111 345 5554233 37222 2323 345+(12) - Sound effect (Hit 6 6 7 8)
     Voice: PolySynth, Orchestra Hit,
   :sound: 0500,0822,0339
+  :play_audio: [anh-khac-hay-em-khac.mp3, 0, 42]
 
 - !ruby/object:Hash
   :artist:    Khánh Hà
   :chords:    C Em F G7
   :play_key:  A
   :href:      https://hopamchuan.com/song/1198/bay-ngay-doi-mong/
+  :play_link: https://www.youtube.com/watch?v=fQLQHhgRGng
   :pstyle:    Rhumba
   :performer: Dieu Huyen
   :name:      Bảy Ngày Đợi Mong
@@ -44,6 +47,7 @@
   :chords:    A Am Bb Bbm Bm C D Dm E F F#m G Gm
   :play_key:  Gm
   :href:      https://hopamchuan.com/song/3583/ben-thuong-hai/
+  :play_link: https://www.youtube.com/watch?v=8ThNnsbm9l4&list=RD8ThNnsbm9l4&t=21
   :pstyle:    rhumba
   :performer: lynn ngo
   :name:      Bến Thượng Hải
@@ -55,6 +59,7 @@
   :chords:    A7 Am C C7 Dm E7 F G G7
   :play_key:  Em
   :href:      https://hopamchuan.com/song/371/bien-can/thienv
+  :play_link: https://www.youtube.com/watch?v=sS24R25XLx0
   :pstyle:    Boston
   :performer: Thien Hương
   :name:      Biển Cạn
@@ -64,6 +69,7 @@
   :artist:    Quang Lê
   :chords:    A Am Bm C C#m D E E7 F F#m G
   :href:      https://hopamchuan.com/song/263/bien-man/
+  :tags: [backup]
   :performer: Oánh Phạm
   :pstyle:    Rhumba
   :name:      Biển Mặn
@@ -103,6 +109,7 @@
   :chords:    A7 Am Am7 B7 C C7 Dm Dm7 E7 F Fm G
   :play_key:  Cm
   :href:      https://hopamchuan.com/song/3950/ban-tinh-cuoi/
+  :play_link: https://www.youtube.com/watch?v=hdKhE1aMRwY
   :pstyle:    slow
   :performer: Duy Linh
   :name:      Bản Tình Cuối
@@ -114,6 +121,7 @@
   :chords:    A B7 Bm C C#m D E Em G
   :play_key:  Bbm
   :href:      https://hopamchuan.com/song/5973/ben-xuan/
+  :play_link: https://www.youtube.com/watch?v=2v-mkRs1ck4
   :pstyle:    Slow
   :performer: Que Huong, Lynn Ngo
   :name:      Bến Xuân
@@ -125,6 +133,7 @@
   :chords:    A A7 Asus4 C7 D7 Dm F Gm Gm6
   :play_key:  Am
   :href:      https://hopamchuan.com/song/1666/cho-em-quen-tuoi-ngoc/
+  :play_link: https://www.youtube.com/watch?v=jfSpaeHID_Y
   :pstyle:    boston
   :performer: Anh Thu
   :name:      Cho Em Quên Tuổi Ngọc
@@ -145,12 +154,13 @@
     Chord: C#m B G#m C#m
     5555511 55544-(77) 44444-(55) 222-(8878) x 2
   :sound:     0492,0339,0064
+  :play_audio: [chuyen-thuong-tinh-the-thoi.mp3, 12, 26.5]
 
 - !ruby/object:Hash
   :artist:    Khánh Ly
   :chords:    C Dm F G7
   :play_key:  D
-  :play_link: https://www.bing.com/videos/search?q=canh+buom+xa+xua&&view=detail&mid=A36C642D24E672DD403FA36C642D24E672DD403F&&FORM=VDRVRV
+  :play_link: https://www.youtube.com/watch?v=od9mvKUakTM
   :href:      https://hopamchuan.com/song/3419/canh-buom-xa-xua/
   :pstyle:    Tango
   :performer: Mai Hương
@@ -179,12 +189,14 @@
 
     Intro 2 (Twist): Dm G Dm A G Dm A
     5788
+  :play_audio: [co-nho-dem-nao.mp3, 14, 27]
 
 - !ruby/object:Hash
   :artist:    Tuấn Vũ
   :chords:    Am Am7 C D Dm Dm7 E E7 F G G7
   :play_key:  Am
   :href:      https://hopamchuan.com/song/7439/gia-tu-dem-mua/
+  :play_link: https://www.youtube.com/watch?v=k3z0t0pL1Zk
   :pstyle:    Bebop
   :performer: Oánh Phạm
   :name:      Giã Từ Đêm Mưa
@@ -214,6 +226,7 @@
   :chords: Am B B7 C D Em Em7 G
   :play_key:  Em
   :href: https://hopamchuan.com/song/2248/han-mac-tu/
+  :play_link: https://www.youtube.com/watch?v=q6iTa9BhF9Q
   :pstyle:  rhumba
   :performer: Duy Linh
   :name: Hàn Mặc Tử
@@ -236,7 +249,8 @@
   :artist: Nguyễn Hùng
   :chords: Am C Dm E E7 F
   :href: https://hopamchuan.com/song/4621/hay-cho-toi/
-  :pstyle:  Boston
+  :play_link: https://www.youtube.com/watch?v=irMfnI5BC9s
+  :pstyle:  Chachacha
   :performer: Michelle, Diệu Hiền
   :name: Hãy Cho Tôi
   :preview: "[Am]Hãy cho tôi nụ cười người ơi Hãy cho tôi một [Dm]giây phút thôi [E]Để
@@ -254,6 +268,7 @@
   :chords: A A7 Bb C Dm F Gm
   :play_key:  Am
   :href: https://hopamchuan.com/song/1309/hay-hat-len/
+  :play_link: https://www.youtube.com/watch?v=cKhwoU5tKbk
   :pstyle:  Bebop
   :performer: Xuyen
   :name: Hãy Hát Lên
@@ -284,6 +299,7 @@
   :perfnote: |
     ... -(8878) -71-71344346534 -(78878) -(788)344346534
     C7 C7 F7 C7 F7 C7 F7 ..
+  :play_audio: [huong.mp3, 0, 25.5]
 
 - !ruby/object:Hash
   :artist:    Như Quỳnh
@@ -309,6 +325,7 @@
   :play_link: https://www.youtube.com/watch?v=zeX60H1hX0o
   :href:      https://hopamchuan.com/song/12228/linh-thich-33/
   :performer: Mai Huong
+  :tags: [backup]
   :pstyle:    Twist
   :name:      Lính thích 33
   :preview:   Lính thích [D] 33 [G7] như thích đi hành [D] quân Đời lính vui buồn ai
@@ -320,6 +337,7 @@
   :play_key: Am
   :play_link: https://www.youtube.com/watch?v=J3vqR9BEkYc
   :href: https://hopamchuan.com/song/9460/lai-nho-nguoi-yeu/
+  :tags: [backup]
   :performer: Thanh Liem
   :pstyle: Bolero
   :name: Lại Nhớ Người Yêu
@@ -340,12 +358,14 @@
   :perfnote: |
     Intro: Gm F Gm F (Singing) 87 76 6 6 7 7 5 5555
     Orchestra Hit, Fantasia, Horn
+  :play_audio: [loi-to-tinh-de-thuong-2.mp3, 6, 22]
 
 - !ruby/object:Hash
   :artist: Nguyên Khang, Diễm Liên
   :chords: A A7 Bb Dm F Gm
   :play_key:  Fm
   :href: https://hopamchuan.com/song/5016/mai-toi-di/
+  :play_link: https://www.youtube.com/watch?v=joqRJm3TurQ
   :pstyle:  boston
   :performer: Linh, Thu
   :name: Mai Tôi Đi
@@ -356,6 +376,7 @@
   :chords: A7 Am Bm C Cm D D7 E7 F G G7
   :play_key:  A
   :href: https://hopamchuan.com/song/909/mua-dong-cua-anh/
+  :play_link: https://www.youtube.com/watch?v=7MRJy6oQEak
   :pstyle:  Rhumba 
   :performer: Diệu Huyền
   :name: Mùa Đông Của Anh
@@ -382,6 +403,7 @@
   :artist: Lê Thụ
   :chords: A7 Bb C Dm F Gm
   :href: https://hopamchuan.com/song/3462/mua-thu-chet/
+  :tags: [backup]
   :performer: Ngọc Sương
   :pstyle: Slow
   :play_key: Am
@@ -393,6 +415,7 @@
   :artist: Quang Dũng
   :chords: Am C Dm E E7 Em F G
   :href: https://hopamchuan.com/song/7454/mot-minh-quang-dung/
+  :play_link: https://www.youtube.com/watch?v=VD6bde5Qllk
   :performer: Anh Thu
   :name: Một Mình - Quang Dũng
   :preview: 'Tone gốc Dm: Capo 5 Sớm mai thức [Am]giấc, nhìn [G]quanh một [C]mình
@@ -405,8 +428,9 @@
   :artist: Tuấn Vũ, Ngọc Lan
   :chords: Am B7 C Dm E E7 Em F
   :href: https://hopamchuan.com/song/3431/ngan-cach/
+  :play_link: https://www.youtube.com/watch?v=qqcN6lXwYGg
   :performer: Diệu Hiền
-  :pstyle: Bebop
+  :pstyle: Boston
   :play_key: Dm
   :name: Ngăn Cách
   :preview: "[Am]Yêu nhau trong cuộc [C]đời, mơ duyên tình dài gắn bó đôi [E7]lời
@@ -441,11 +465,13 @@
   :play_key: Fm
   :play_link: https://www.youtube.com/watch?v=eRlI0J6ISt8
   :href: https://hopamchuan.com/song/1508/nhung-buoc-chan-am-tham/
+  :tags: [backup]
   :performer: Thuy Dung
   :pstyle: Chachacha
   :name: Những Bước Chân Âm Thầm
   :preview: Cm G G Cm Cm Bb Bb Ab Ab G … G G# A Bb B (bass only) Từng [Cm]bước từng
     bước [Cm]thầm Hoa [Cm]vòn
+  :play_audio: [nhung-buoc-chan-am-tham.mp3, 1.5, 15]
 
 - !ruby/object:Hash
   :artist:    Tuấn Vũ, Nguyễn Hồng Ân
@@ -453,6 +479,7 @@
   :play_key:  Cm
   :href:      https://hopamchuan.com/song/5238/nhung-tam-hon-co-don-tam-hon-co-don/thienv
   :pstyle:    Chachacha
+  :play_link: https://www.youtube.com/watch?v=IsTlK_3fJe0
   :performer: Thiện
   :name:      Những tâm hồn cô đơn (Tâm hồn cô đơn)
   :preview:   "[Am] Đời không như ước mơ lòng người Cuộc [Dm] đời xô đẩy mình đến rã
@@ -493,6 +520,7 @@
   :chords:   Am B7 C D Em G
   :play_key: Am
   :href:     https://hopamchuan.com/song/1742/roi-day-anh-se-dua-em-ve-nha/
+  :play_link: https://www.youtube.com/watch?v=Zz9NMGYm6Ww
   :pstyle:   Bebop
   :performer: Ngọc Hưng, Diệu Hiền
   :name:     Rồi Đây Anh Sẽ Đưa Em Về Nhà
@@ -507,6 +535,7 @@
   :artist:    Quang Lê
   :chords:    Am B7 D Em G
   :href:      https://hopamchuan.com/song/2821/sao-em-vo-tinh/
+  :tags: [backup]
   :performer: Thiện
   :pstyle:    Tango
   :play_key:  Gm
@@ -518,6 +547,7 @@
   :chords: Am Bb C C7 Dm Dm6 E7 F G
   :play_key: Cm
   :href: https://hopamchuan.com/song/11624/song-nuoc-biec/
+  :play_link: https://www.youtube.com/watch?v=fDGPaKxacpQ
   :pstyle:  Waltz
   :performer: Ngọc Sương
   :name: Sông Nước Biếc
@@ -529,6 +559,8 @@
   :chords:    A7 Am Bb C Dm F Gm
   :play_key:  Dm
   :href:      https://hopamchuan.com/song/3421/sau-tim-thiep-hong/
+  :play_link: https://www.youtube.com/watch?v=PaDqX64Q_v4
+  :play_intro: [3, 12]
   :pstyle:    Rhumba
   :performer: Tuyết, Oánh
   :name:      Sầu Tím Thiệp Hồng
@@ -552,6 +584,7 @@
   :chords:    Am Bdim C Dm E E7 F G Gaug
   :play_key:  Dm
   :href:      https://hopamchuan.com/song/4002/se-hon-bao-gio-het/
+  :play_link: https://www.youtube.com/watch?v=XzYBbaiOGvc
   :pstyle:    Chachacha
   :play_key:  Dm
   :performer: Michelle
@@ -566,6 +599,7 @@
   :artist:    Đàm Vĩnh Hưng
   :chords:    Am Bm C D Em G
   :href:      https://hopamchuan.com/song/363/thanh-pho-buon/
+  :play_link: https://www.youtube.com/watch?v=0u4Nmirds2s
   :pstyle:    Slow
   :performer: Yen Phương
   :name:      Thành Phố Buồn
@@ -597,6 +631,7 @@
   :play_key: F
   :href:     https://hopamchuan.com/song/2029/tinh-co-nhu-khong/thienv
   :pstyle:  Chachacha
+  :play_link: https://www.youtube.com/watch?v=6EoyTG7Vvl0
   :performer: Thiện
   :name:     Tình Có Như Không
   :preview:  1. [C] Tình là tình nhiều khi không [Dm] mà có [G] Tình là tình nhiều
@@ -631,6 +666,7 @@
   :artist: Duy Quang
   :chords: Am B7 Bm C D D7 E7 Em G
   :play_key:  Bm
+  :play_link: https://www.youtube.com/watch?v=z8DLkLnemFY
   :href: https://hopamchuan.com/song/4547/vung-la-me-bay/
   :pstyle:  Rhumba
   :performer: Tuyết Hồ
@@ -643,6 +679,7 @@
   :chords:   A7 Am C Cmaj7 Dm E Em F G G7
   :play_key: Am
   :href:     https://hopamchuan.com/song/5056/xa-que-huong/
+  :play_link: https://www.youtube.com/watch?v=48sQ4MIzhGM
   :pstyle:  Boston
   :performer: Ngọc Sương
   :name:     Xa Quê Hương
@@ -678,11 +715,13 @@
   :chords: Bm C D Em G
   :play_key:  Bbm
   :href: https://hopamchuan.com/song/12229/xin-danh-tron-cho-em/
+  :play_link: https://www.youtube.com/watch?v=TZxkvcwIwhc
   :pstyle:  Techno
   :performer: Vanessa Hoang
   :name: Xin dành trọn cho em
   :preview: 'ĐK: [Em] Xin dành [C] trọn cho em Ngàn [D] muôn chiếc hôn nồng [G] say
     [Em] Xin ghì [C] chặt vai'
+
 - !ruby/object:Hash
   :artist:    Patty Ryan
   :chords:    A Bb C Dm F Gm
@@ -704,6 +743,7 @@
   :play_key:  G
   :href: https://hopamchuan.com/song/1222/yeu-em-dai-lau/
   :pstyle:  Chachacha
+  :play_link: https://www.youtube.com/watch?v=sxa2V4eG9RU
   :performer: Loc, Vanessa
   :name: Yêu Em Dài Lâu
   :preview: 1. Em như cơn gió thu bay [G] bay nhè nhẹ Đưa anh đi tìm vần [Am] thơ
@@ -729,9 +769,10 @@
 - !ruby/object:Hash
   :artist:    Đan Nguyên
   :chords:    Am Am7 Bb C Dm Dm7 F Gm
-  :play_link: http://www.nhaccuatui.com/bai-hat/dap-mo-cuoc-tinh-dan-nguyen.wbktC1WAtkCq.html
+  :play_link: https://www.youtube.com/watch?v=zEqj3Vz5Iuk
   :performer: Yen Phuong
   :pstyle:    Rhumba
+  :tags: [backup]
   :play_key:  Am
   :href:      https://hopamchuan.com/song/4726/dap-mo-cuoc-tinh/thienv
   :name:      Đắp Mộ Cuộc Tình
@@ -761,6 +802,7 @@
   :artist: Duy Quang
   :chords: Am C Dm E7 F G
   :play_key:  Dm
+  :tags: [backup]
   :play_link: https://www.youtube.com/watch?v=dvf8jRmU6cc
   :href: https://hopamchuan.com/song/811/dong-xanh/
   :performer: Lưu Quang Khải
@@ -773,6 +815,7 @@
   :chords:   Bb Cm D7 Eb Gm
   :play_key: Am
   :href:     https://hopamchuan.com/song/6859/o-noi-nao-em-con-nho/thienv
+  :play_link: https://www.youtube.com/watch?v=nTXSymTKg5I
   :pstyle:   Rhumba
   :performer: Oánh Phạm
   :name:     Ở Nơi Nào Em Còn Nhớ
@@ -828,6 +871,7 @@
   :artist: Elvis Phương
   :chords: Am C Dm E7 F G G7
   :href: https://hopamchuan.com/song/13474/neu-tinh-em-con-day-si-l-amour-existe-encore/
+  :play_link: https://www.youtube.com/watch?v=XTH2tx749MQ&list=RDXTH2tx749MQ&t=10
   :name: Nếu Tình Em Còn Đây (Si L'amour Existe Encore)
   :pname: Si L'amour Existe Encore
   :preview: Si l'amour existe en[Dm]core [G7] Il res[E7]semble à ton [Am]corps Si

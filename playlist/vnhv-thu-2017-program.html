@@ -21,8 +21,11 @@
     color: #f8f8f8;
     background: url(../img/intro-bg.jpg) repeat-y center center;
   }
+  .backup-song {
+    background-color: #ddd;
+  }
 </style>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Thu Minh</span>
 <h4>
@@ -46,7 +49,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Đàm Vĩnh Hưng</span>
 <h4>
@@ -58,6 +61,17 @@
 <div class='small badge badge-warning'>Thien Hương</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Em</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/anh-con-no-em.mp3&#39;, false, 2, 21.5)' title='Play intro for Anh Còn Nợ Em'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/anh-con-no-em.mp3&#39;, true, 2, 16.5)' title='Loop intro for Anh Còn Nợ Em'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Anh còn nợ [Am]em Công viên ghế [Em]đá Công viên ghế [Am]đá Lá đổ chiều [Em]êm Anh còn nợ [F]em Dò</p>
 </div>
@@ -70,7 +84,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Khắc Việt</span>
 <h4>
@@ -82,6 +96,17 @@
 <div class='small badge badge-danger'>Quan C.</div>
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Bm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/anh-khac-hay-em-khac.mp3&#39;, false, 0, 47)' title='Play intro for Anh Khác Hay Em Khác'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/anh-khac-hay-em-khac.mp3&#39;, true, 0, 42)' title='Loop intro for Anh Khác Hay Em Khác'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Có [Am] phải em hết yêu anh [Em] rồi Em [F] hãy nói đi người [C] ơi [Dm] Anh vô tâm, hay là [Em]</p>
 </div>
@@ -91,10 +116,13 @@
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Bm</div>
 <div class='small badge badge-danger'>Quan C.</div>
+<a href='https://www.youtube.com/watch?v=htRIWEclktg' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Bằng Kiều</span>
 <h4>
@@ -106,6 +134,17 @@
 <div class='small badge badge-info'>Thanh Chi</div>
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/bai-khong-ten-cuoi-cung.mp3&#39;, false, 0, 35)' title='Play intro for Bài Không Tên Cuối Cùng'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/bai-khong-ten-cuoi-cung.mp3&#39;, true, 0, 30)' title='Loop intro for Bài Không Tên Cuối Cùng'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. Nhớ em [Am] nhiều nhưng chẳng nói Nói ra [A7] nhiều cũng vậy [Dm] thôi Ôi đớn [Am] đau đã nhiều</p>
 </div>
@@ -115,10 +154,13 @@
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Dm</div>
 <div class='small badge badge-info'>Thanh Chi</div>
+<a href='https://www.youtube.com/watch?v=Xg2V2YC6X4s' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Tuấn Ngọc, Bằng Kiều</span>
 <h4>
@@ -130,6 +172,17 @@
 <div class='small badge badge-warning'>Duy Linh</div>
 <div class='small badge badge-warning'>slow</div>
 <div class='small badge badge-warning'>Cm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ban-tinh-cuoi.mp3&#39;, false, 0, 35)' title='Play intro for Bản Tình Cuối'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ban-tinh-cuoi.mp3&#39;, true, 0, 30)' title='Loop intro for Bản Tình Cuối'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Mưa có [Am]rơi và nắng có [Am]phai Trên cuộc [E7]tình yêu em ngày [Am]nào Ta đã [Dm7]yêu và ta đã</p>
 </div>
@@ -139,10 +192,13 @@
 <div class='small badge badge-warning'>slow</div>
 <div class='small badge badge-warning'>Cm</div>
 <div class='small badge badge-warning'>Duy Linh</div>
+<a href='https://www.youtube.com/watch?v=hdKhE1aMRwY' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Khánh Hà</span>
 <h4>
@@ -154,6 +210,17 @@
 <div class='small badge badge-warning'>Dieu Huyen</div>
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>A</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/bay-ngay-doi-mong.mp3&#39;, false, 0, 35)' title='Play intro for Bảy Ngày Đợi Mong'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/bay-ngay-doi-mong.mp3&#39;, true, 0, 30)' title='Loop intro for Bảy Ngày Đợi Mong'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[C]Anh hẹn em cuối tuần [F] Chờ anh nơi cuối [C]phố [F]Biết anh thích màu [G7]trời Em đã bồi hồi chọ</p>
 </div>
@@ -163,10 +230,13 @@
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>A</div>
 <div class='small badge badge-warning'>Dieu Huyen</div>
+<a href='https://www.youtube.com/watch?v=fQLQHhgRGng' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Kim Anh</span>
 <h4>
@@ -178,6 +248,17 @@
 <div class='small badge badge-success'>Loc Nhan</div>
 <div class='small badge badge-success'>bebop</div>
 <div class='small badge badge-success'>G</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ben-nhau-ngay-vui.mp3&#39;, false, 0, 35)' title='Play intro for Bên Nhau Ngày Vui'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ben-nhau-ngay-vui.mp3&#39;, true, 0, 30)' title='Loop intro for Bên Nhau Ngày Vui'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>| 4/4 | Surf Lấy tông, nốt:Một(Re)sớm(Si)tan(Sol)chuông(Sol) Một sớm [G]tan chuông tà áo trắng [A7</p>
 </div>
@@ -187,10 +268,13 @@
 <div class='small badge badge-success'>bebop</div>
 <div class='small badge badge-success'>G</div>
 <div class='small badge badge-success'>Loc Nhan</div>
+<a href='https://www.youtube.com/watch?v=swZw89RKIMg' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Lý Hải</span>
 <h4>
@@ -202,6 +286,17 @@
 <div class='small badge badge-warning'>lynn ngo</div>
 <div class='small badge badge-warning'>rhumba</div>
 <div class='small badge badge-warning'>Gm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ben-thuong-hai.mp3&#39;, false, 0, 35)' title='Play intro for Bến Thượng Hải'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ben-thuong-hai.mp3&#39;, true, 0, 30)' title='Loop intro for Bến Thượng Hải'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Biển [Am]sóng đạt [G]dào, trùng dương [Am]lớp lớp trôi đi về chốn [Dm]nao Đời như [Em]những cơn són</p>
 </div>
@@ -211,10 +306,13 @@
 <div class='small badge badge-warning'>rhumba</div>
 <div class='small badge badge-warning'>Gm</div>
 <div class='small badge badge-warning'>lynn ngo</div>
+<a href='https://www.youtube.com/watch?v=8ThNnsbm9l4&amp;list=RD8ThNnsbm9l4&amp;t=21' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Ánh Tuyết</span>
 <h4>
@@ -226,6 +324,17 @@
 <div class='small badge badge-warning'>Que Huong, Lynn Ngo</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Bbm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ben-xuan.mp3&#39;, false, 0, 35)' title='Play intro for Bến Xuân'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ben-xuan.mp3&#39;, true, 0, 30)' title='Loop intro for Bến Xuân'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Nhà [Em] tôi bên chiếc cầu soi [G] nước Em đến [C] tôi [Bm] một [Em] lần Bao lũ chim [Bm] rừng họp</p>
 </div>
@@ -235,10 +344,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Bbm</div>
 <div class='small badge badge-warning'>Que Huong, Lynn Ngo</div>
+<a href='https://www.youtube.com/watch?v=2v-mkRs1ck4' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Đàm Vĩnh Hưng</span>
 <h4>
@@ -250,6 +362,17 @@
 <div class='small badge badge-info'>Thien Hương</div>
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Em</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/bien-can.mp3&#39;, false, 0, 35)' title='Play intro for Biển Cạn'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/bien-can.mp3&#39;, true, 0, 30)' title='Loop intro for Biển Cạn'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Tone [Am] 1. Có [E7]người từ lâu nhớ thương [Am]biển Ngày xưa biển [Dm]xanh không như bây [G]giờ biể</p>
 </div>
@@ -259,10 +382,13 @@
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Em</div>
 <div class='small badge badge-info'>Thien Hương</div>
+<a href='https://www.youtube.com/watch?v=sS24R25XLx0' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row backup-song'>
 <div class='col-md-4'>
 <span class='pull-right'>Quang Lê</span>
 <h4>
@@ -286,7 +412,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Khánh Ly</span>
 <h4>
@@ -298,6 +424,17 @@
 <div class='small badge badge-success'>Mai Hương</div>
 <div class='small badge badge-success'>Tango</div>
 <div class='small badge badge-success'>D</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/canh-buom-xa-xua.mp3&#39;, false, 0, 35)' title='Play intro for Cánh Buồm Xa Xưa'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/canh-buom-xa-xua.mp3&#39;, true, 0, 30)' title='Loop intro for Cánh Buồm Xa Xưa'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Điệu Tango Vi [C]vu đồi thông reo xao [G7]xác lá chiều nay thu [F]về Em [Dm]ơi cánh buồm [C]xưa cò</p>
 </div>
@@ -307,10 +444,13 @@
 <div class='small badge badge-success'>Tango</div>
 <div class='small badge badge-success'>D</div>
 <div class='small badge badge-success'>Mai Hương</div>
+<a href='https://www.youtube.com/watch?v=od9mvKUakTM' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Ngọc Lan</span>
 <h4>
@@ -322,6 +462,17 @@
 <div class='small badge badge-info'>Anh Thu</div>
 <div class='small badge badge-info'>boston</div>
 <div class='small badge badge-info'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/cho-em-quen-tuoi-ngoc.mp3&#39;, false, 0, 35)' title='Play intro for Cho Em Quên Tuổi Ngọc'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/cho-em-quen-tuoi-ngoc.mp3&#39;, true, 0, 30)' title='Loop intro for Cho Em Quên Tuổi Ngọc'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>| 3/4 | Say mê và tha thiết Lấy tông, nốt: Cho(La) em (La)quên (La) cơn(Fa) mộng (Re*)ảo (Do2)(* =</p>
 </div>
@@ -331,10 +482,13 @@
 <div class='small badge badge-info'>boston</div>
 <div class='small badge badge-info'>Am</div>
 <div class='small badge badge-info'>Anh Thu</div>
+<a href='https://www.youtube.com/watch?v=jfSpaeHID_Y' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Hồng Ngọc</span>
 <h4>
@@ -346,6 +500,17 @@
 <div class='small badge badge-danger'>Vanessa Hoang</div>
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Cm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/chuyen-thuong-tinh-the-thoi.mp3&#39;, false, 12, 31.5)' title='Play intro for Chuyện Thường Tình Thế Thôi'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/chuyen-thuong-tinh-the-thoi.mp3&#39;, true, 12, 26.5)' title='Loop intro for Chuyện Thường Tình Thế Thôi'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Cuộc tình ngày nào [Am]đã trao cho anh [A7], giờ chỉ còn trong đớn [Dm]đau Cuộc tình ngày nào [G7]đ</p>
 </div>
@@ -355,10 +520,13 @@
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Cm</div>
 <div class='small badge badge-danger'>Vanessa Hoang</div>
+<a href='https://www.youtube.com/watch?v=HMEC7534pUE' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Thu Phương</span>
 <h4>
@@ -370,6 +538,17 @@
 <div class='small badge badge-danger'>Michelle</div>
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/co-nho-dem-nao.mp3&#39;, false, 14, 32)' title='Play intro for Có Nhớ Đêm Nào'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/co-nho-dem-nao.mp3&#39;, true, 14, 27)' title='Loop intro for Có Nhớ Đêm Nào'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Có nhớ đêm [Dm7] nào? Về chung với nhau nơi này Tìm đến hòa khúc sum [Gm7] vầy Tình xuân ngất</p>
 </div>
@@ -382,7 +561,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row backup-song'>
 <div class='col-md-4'>
 <span class='pull-right'>Đan Nguyên</span>
 <h4>
@@ -394,6 +573,17 @@
 <div class='small badge badge-warning'>Yen Phuong</div>
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/dap-mo-cuoc-tinh.mp3&#39;, false, 0, 35)' title='Play intro for Đắp Mộ Cuộc Tình'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/dap-mo-cuoc-tinh.mp3&#39;, true, 0, 30)' title='Loop intro for Đắp Mộ Cuộc Tình'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. Say giấc mộng ban [Dm] đầu yêu [Bb] người thủa mới đôi [F] mươi em [C] đang độ trăng [Dm] tròn</p>
 </div>
@@ -403,10 +593,13 @@
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Am</div>
 <div class='small badge badge-warning'>Yen Phuong</div>
+<a href='https://www.youtube.com/watch?v=zEqj3Vz5Iuk' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Hồng Ngọc, Đàm Vĩnh Hưng</span>
 <h4>
@@ -418,6 +611,17 @@
 <div class='small badge badge-warning'>Kim-Dung</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/dau-tinh-sau.mp3&#39;, false, 0, 35)' title='Play intro for Dấu Tình Sầu'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/dau-tinh-sau.mp3&#39;, true, 0, 30)' title='Loop intro for Dấu Tình Sầu'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Am]Chiều còn vương nắng để gió đi tìm [G] [Dm] Vết bước [G]chân em qua [Dm]bao nhiêu lần [F]</p>
 </div>
@@ -427,10 +631,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Dm</div>
 <div class='small badge badge-warning'>Kim-Dung</div>
+<a href='https://www.youtube.com/watch?v=tmY1NN7Vn1w' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Bằng Kiều</span>
 <h4>
@@ -442,6 +649,17 @@
 <div class='small badge badge-warning'>Lưu Quang Khải</div>
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Bm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/de-nho-mot-thoi-ta-da-yeu.mp3&#39;, false, 0, 35)' title='Play intro for Để Nhớ Một Thời Ta Đã Yêu'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/de-nho-mot-thoi-ta-da-yeu.mp3&#39;, true, 0, 30)' title='Loop intro for Để Nhớ Một Thời Ta Đã Yêu'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Hạnh phúc trong tầm [Am]với đã không còn [F]tới khi vắng em trong [Am]đời Tìm đến chân trời [Dm]mới</p>
 </div>
@@ -451,10 +669,13 @@
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Bm</div>
 <div class='small badge badge-warning'>Lưu Quang Khải</div>
+<a href='https://www.youtube.com/watch?v=etjleKIdoBk' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row backup-song'>
 <div class='col-md-4'>
 <span class='pull-right'>Duy Quang</span>
 <h4>
@@ -466,6 +687,17 @@
 <div class='small badge badge-secondary'>Lưu Quang Khải</div>
 <div class='small badge badge-secondary'></div>
 <div class='small badge badge-secondary'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/dong-xanh.mp3&#39;, false, 0, 35)' title='Play intro for Đồng Xanh'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/dong-xanh.mp3&#39;, true, 0, 30)' title='Loop intro for Đồng Xanh'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Tone gốc Cm: Capo 3 [Am]Đồng xanh là [Dm]chốn đây [Am]thiên đàng cỏ [E7]cây [Am]Là nơi bầy [Dm]thú h</p>
 </div>
@@ -475,10 +707,13 @@
 <div class='small badge badge-secondary'></div>
 <div class='small badge badge-secondary'>Dm</div>
 <div class='small badge badge-secondary'>Lưu Quang Khải</div>
+<a href='https://www.youtube.com/watch?v=dvf8jRmU6cc' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Lê Thụ</span>
 <h4>
@@ -490,6 +725,17 @@
 <div class='small badge badge-info'>Quể Hương</div>
 <div class='small badge badge-info'>waltz</div>
 <div class='small badge badge-info'>Fm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/duong-xua.mp3&#39;, false, 0, 35)' title='Play intro for Đường Xưa'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/duong-xua.mp3&#39;, true, 0, 30)' title='Loop intro for Đường Xưa'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Capo 3 [Em]Bước trên đường về em thương [Am]nhớ anh âm thầm [D7]Nhớ bao hẹn thề xưa êm [G]ấm [Dm]Nhữ</p>
 </div>
@@ -499,10 +745,13 @@
 <div class='small badge badge-info'>waltz</div>
 <div class='small badge badge-info'>Fm</div>
 <div class='small badge badge-info'>Quể Hương</div>
+<a href='https://www.youtube.com/watch?v=Vj8Ssl_NYy4&amp;feature=youtu.be' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Tuấn Vũ</span>
 <h4>
@@ -514,6 +763,17 @@
 <div class='small badge badge-success'>Oánh Phạm</div>
 <div class='small badge badge-success'>Bebop</div>
 <div class='small badge badge-success'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/gia-tu-dem-mua.mp3&#39;, false, 0, 35)' title='Play intro for Giã Từ Đêm Mưa'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/gia-tu-dem-mua.mp3&#39;, true, 0, 30)' title='Loop intro for Giã Từ Đêm Mưa'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Ðêm [Am]khuya mưa [Am7]rơi rơi trên đường [Dm]vắng [Dm7] Ðôi [G]chân lang [G7]thang tâm tư trầm [C]l</p>
 </div>
@@ -523,10 +783,13 @@
 <div class='small badge badge-success'>Bebop</div>
 <div class='small badge badge-success'>Am</div>
 <div class='small badge badge-success'>Oánh Phạm</div>
+<a href='https://www.youtube.com/watch?v=k3z0t0pL1Zk' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Lệ Quyên</span>
 <h4>
@@ -538,6 +801,17 @@
 <div class='small badge badge-warning'>Duy Linh</div>
 <div class='small badge badge-warning'>rhumba</div>
 <div class='small badge badge-warning'>Em</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/han-mac-tu.mp3&#39;, false, 0, 35)' title='Play intro for Hàn Mặc Tử'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/han-mac-tu.mp3&#39;, true, 0, 30)' title='Loop intro for Hàn Mặc Tử'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Tone Lệ Quyên: Bm Ngậm thơ: Ai mua [Em]trăng tôi bán trăng cho Trăng nằm [Am]im trên cành [Em]liễu đ</p>
 </div>
@@ -547,10 +821,13 @@
 <div class='small badge badge-warning'>rhumba</div>
 <div class='small badge badge-warning'>Em</div>
 <div class='small badge badge-warning'>Duy Linh</div>
+<a href='https://www.youtube.com/watch?v=q6iTa9BhF9Q' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Quang Dũng</span>
 <h4>
@@ -562,6 +839,17 @@
 <div class='small badge badge-warning'>Thanh Liem</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/han-tinh-trong-mua.mp3&#39;, false, 0, 35)' title='Play intro for Hận tình trong mưa'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/han-tinh-trong-mua.mp3&#39;, true, 0, 30)' title='Loop intro for Hận tình trong mưa'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. [Am]Người tình đi xa tít [Dm]nơi chân trời [G]Trời thì u tối, mùa đông đang đi [C]tới ngày thì d</p>
 </div>
@@ -571,10 +859,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Am</div>
 <div class='small badge badge-warning'>Thanh Liem</div>
+<a href='https://www.youtube.com/watch?v=SR54YSLLUsg' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Nguyễn Hùng</span>
 <h4>
@@ -583,22 +874,36 @@
 </a>
 </h4>
 <h5>
-<div class='small badge badge-info'>Michelle, Diệu Hiền</div>
-<div class='small badge badge-info'>Boston</div>
-<div class='small badge badge-info'>Dm</div>
+<div class='small badge badge-danger'>Michelle, Diệu Hiền</div>
+<div class='small badge badge-danger'>Chachacha</div>
+<div class='small badge badge-danger'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/hay-cho-toi.mp3&#39;, false, 0, 35)' title='Play intro for Hãy Cho Tôi'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/hay-cho-toi.mp3&#39;, true, 0, 30)' title='Loop intro for Hãy Cho Tôi'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Am]Hãy cho tôi nụ cười người ơi Hãy cho tôi một [Dm]giây phút thôi [E]Để tôi thấy [F]đời đang sốn</p>
 </div>
 <div class='col-md-6 intro-header'></div>
 <div class='col-md-2'>
 <h5 class='pull-right'>
-<div class='small badge badge-info'>Boston</div>
-<div class='small badge badge-info'>Dm</div>
-<div class='small badge badge-info'>Michelle, Diệu Hiền</div>
+<div class='small badge badge-danger'>Chachacha</div>
+<div class='small badge badge-danger'>Dm</div>
+<div class='small badge badge-danger'>Michelle, Diệu Hiền</div>
+<a href='https://www.youtube.com/watch?v=irMfnI5BC9s' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Đàm Vĩnh Hưng</span>
 <h4>
@@ -610,6 +915,17 @@
 <div class='small badge badge-success'>Xuyen</div>
 <div class='small badge badge-success'>Bebop</div>
 <div class='small badge badge-success'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/hay-hat-len.mp3&#39;, false, 0, 35)' title='Play intro for Hãy Hát Lên'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/hay-hat-len.mp3&#39;, true, 0, 30)' title='Loop intro for Hãy Hát Lên'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Dm]Gió vẫn còn gọi mùa thu [Gm]đến khắp trời [C]Nắng vẫn còn gọi mùa xuân [F]đến với đời [Dm]Thì an</p>
 </div>
@@ -619,10 +935,13 @@
 <div class='small badge badge-success'>Bebop</div>
 <div class='small badge badge-success'>Am</div>
 <div class='small badge badge-success'>Xuyen</div>
+<a href='https://www.youtube.com/watch?v=cKhwoU5tKbk' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Lệ Quyên</span>
 <h4>
@@ -634,6 +953,17 @@
 <div class='small badge badge-warning'>Minh, Diep</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/hay-tra-loi-em.mp3&#39;, false, 0, 35)' title='Play intro for Hãy Trả Lời Em'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/hay-tra-loi-em.mp3&#39;, true, 0, 30)' title='Loop intro for Hãy Trả Lời Em'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Dm]Em hỏi anh có [F]bao giờ [Bb]con sông kia thôi [Dm]ngừng trôi Anh trả lời em [F]rằng một [C]ngày</p>
 </div>
@@ -643,10 +973,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Dm</div>
 <div class='small badge badge-warning'>Minh, Diep</div>
+<a href='https://www.youtube.com/watch?v=YKjzCxllZbA' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Nguyễn Hưng</span>
 <h4>
@@ -658,6 +991,17 @@
 <div class='small badge badge-danger'>Dzuy Ngo</div>
 <div class='small badge badge-danger'>Twist</div>
 <div class='small badge badge-danger'>Gm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/huong.mp3&#39;, false, 0, 30.5)' title='Play intro for Hương'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/huong.mp3&#39;, true, 0, 25.5)' title='Loop intro for Hương'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[E] Hương anh gọi tên [Am]em Trong ngút ngàn nỗi [Dm] nhớ [G7] Gọi tên em gọi mãi khôn [C] nguôi</p>
 </div>
@@ -667,10 +1011,13 @@
 <div class='small badge badge-danger'>Twist</div>
 <div class='small badge badge-danger'>Gm</div>
 <div class='small badge badge-danger'>Dzuy Ngo</div>
+<a href='https://www.youtube.com/watch?v=5tOepcir9DE' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'></span>
 <h4>
@@ -694,7 +1041,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row backup-song'>
 <div class='col-md-4'>
 <span class='pull-right'>Đan Nguyên</span>
 <h4>
@@ -706,6 +1053,17 @@
 <div class='small badge badge-secondary'>Thanh Liem</div>
 <div class='small badge badge-secondary'>Bolero</div>
 <div class='small badge badge-secondary'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/lai-nho-nguoi-yeu.mp3&#39;, false, 0, 35)' title='Play intro for Lại Nhớ Người Yêu'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/lai-nho-nguoi-yeu.mp3&#39;, true, 0, 30)' title='Loop intro for Lại Nhớ Người Yêu'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Vì sao anh nhớ em thế [Em] này Thương nhớ đong [D] đầy trong lòng [G] mắt [Em] Buổi chiều còn gặp</p>
 </div>
@@ -715,10 +1073,13 @@
 <div class='small badge badge-secondary'>Bolero</div>
 <div class='small badge badge-secondary'>Am</div>
 <div class='small badge badge-secondary'>Thanh Liem</div>
+<a href='https://www.youtube.com/watch?v=J3vqR9BEkYc' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Như Quỳnh</span>
 <h4>
@@ -730,6 +1091,17 @@
 <div class='small badge badge-warning'>Yen Phương</div>
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/lenh-denh-phan-buon.mp3&#39;, false, 0, 35)' title='Play intro for Lênh Đênh Phận Buồn'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/lenh-denh-phan-buon.mp3&#39;, true, 0, 30)' title='Loop intro for Lênh Đênh Phận Buồn'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. Bạn bè gặp nhau cứ |[Am]hỏi đã lâu không |[Dm6]còn trông thấy [E7]em tươi nụ |[Am]cười | Rằng tạ</p>
 </div>
@@ -739,10 +1111,13 @@
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Am</div>
 <div class='small badge badge-warning'>Yen Phương</div>
+<a href='https://www.youtube.com/watch?v=D0bB0O1DbVs' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row backup-song'>
 <div class='col-md-4'>
 <span class='pull-right'>Hùng Cường</span>
 <h4>
@@ -754,6 +1129,17 @@
 <div class='small badge badge-danger'>Mai Huong</div>
 <div class='small badge badge-danger'>Twist</div>
 <div class='small badge badge-danger'></div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/linh-thich-33.mp3&#39;, false, 0, 35)' title='Play intro for Lính thích 33'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/linh-thich-33.mp3&#39;, true, 0, 30)' title='Loop intro for Lính thích 33'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Lính thích [D] 33 [G7] như thích đi hành [D] quân Đời lính vui buồn ai nào [Bm] biết [A] Theo ngà</p>
 </div>
@@ -763,10 +1149,13 @@
 <div class='small badge badge-danger'>Twist</div>
 <div class='small badge badge-danger'></div>
 <div class='small badge badge-danger'>Mai Huong</div>
+<a href='https://www.youtube.com/watch?v=zeX60H1hX0o' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Thiên Vương</span>
 <h4>
@@ -778,6 +1167,17 @@
 <div class='small badge badge-danger'>Quan C.</div>
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Gm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/loi-to-tinh-de-thuong-2.mp3&#39;, false, 6, 27)' title='Play intro for Lời Tỏ Tình Dễ Thương 2'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/loi-to-tinh-de-thuong-2.mp3&#39;, true, 6, 22)' title='Loop intro for Lời Tỏ Tình Dễ Thương 2'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Gm]Anh number one! [F]Anh number one! [Gm]Anh xin thề anh sẽ yêu mãi thôi [F]Yêu em nồng say suốt</p>
 </div>
@@ -787,10 +1187,13 @@
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Gm</div>
 <div class='small badge badge-danger'>Quan C.</div>
+<a href='https://www.youtube.com/watch?v=S_2LAEHELGA' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Nguyên Khang, Diễm Liên</span>
 <h4>
@@ -802,6 +1205,17 @@
 <div class='small badge badge-info'>Linh, Thu</div>
 <div class='small badge badge-info'>boston</div>
 <div class='small badge badge-info'>Fm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/mai-toi-di.mp3&#39;, false, 0, 35)' title='Play intro for Mai Tôi Đi'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/mai-toi-di.mp3&#39;, true, 0, 30)' title='Loop intro for Mai Tôi Đi'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Intro: [Dm] [A] [Dm] [Gm] [F] [Gm] [A] [Dm] Mai tôi đi[Dm] chắc trời giăng mưa l</p>
 </div>
@@ -811,10 +1225,13 @@
 <div class='small badge badge-info'>boston</div>
 <div class='small badge badge-info'>Fm</div>
 <div class='small badge badge-info'>Linh, Thu</div>
+<a href='https://www.youtube.com/watch?v=joqRJm3TurQ' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Quang Dũng</span>
 <h4>
@@ -826,6 +1243,17 @@
 <div class='small badge badge-info'>Anh Thu</div>
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Gm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/mot-minh-quang-dung.mp3&#39;, false, 0, 35)' title='Play intro for Một Mình - Quang Dũng'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/mot-minh-quang-dung.mp3&#39;, true, 0, 30)' title='Loop intro for Một Mình - Quang Dũng'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Tone gốc Dm: Capo 5 Sớm mai thức [Am]giấc, nhìn [G]quanh một [C]mình Ngoài hiên nắng [Em]lóe, đàn [E</p>
 </div>
@@ -835,10 +1263,13 @@
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Gm</div>
 <div class='small badge badge-info'>Anh Thu</div>
+<a href='https://www.youtube.com/watch?v=VD6bde5Qllk' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Lệ Quyên</span>
 <h4>
@@ -850,6 +1281,17 @@
 <div class='small badge badge-warning'>Diệu Huyền</div>
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>A</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/mua-dong-cua-anh.mp3&#39;, false, 0, 35)' title='Play intro for Mùa Đông Của Anh'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/mua-dong-cua-anh.mp3&#39;, true, 0, 30)' title='Loop intro for Mùa Đông Của Anh'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Ngày nào anh yêu em [G], anh đã quen trong cay đắng [G7]tuyệt vời [C] Ngày nào em yêu [F]anh, em hẳ</p>
 </div>
@@ -859,10 +1301,13 @@
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>A</div>
 <div class='small badge badge-warning'>Diệu Huyền</div>
+<a href='https://www.youtube.com/watch?v=7MRJy6oQEak' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Khánh Hà</span>
 <h4>
@@ -874,6 +1319,17 @@
 <div class='small badge badge-info'>Thuy Dung</div>
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Gm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/mua-he-dep-nhat.mp3&#39;, false, 0, 35)' title='Play intro for Mùa Hè Đẹp Nhất'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/mua-he-dep-nhat.mp3&#39;, true, 0, 30)' title='Loop intro for Mùa Hè Đẹp Nhất'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. [Em]Chiều trên phố vắng [Am7]ray rứt tiếng mưa buồn rơi [F]Ngày qua rất [Em]vội mây [F#dim]xám g</p>
 </div>
@@ -883,10 +1339,13 @@
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Gm</div>
 <div class='small badge badge-info'>Thuy Dung</div>
+<a href='https://www.youtube.com/watch?v=dKa193D9V3I' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row backup-song'>
 <div class='col-md-4'>
 <span class='pull-right'>Lê Thụ</span>
 <h4>
@@ -910,7 +1369,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Elvis Phương</span>
 <h4>
@@ -922,6 +1381,17 @@
 <div class='small badge badge-warning'>Mai Nguyen</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>G</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/neu-tinh-em-con-day-si-l-amour-existe-encore.mp3&#39;, false, 0, 35)' title='Play intro for Si L&#39;amour Existe Encore'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/neu-tinh-em-con-day-si-l-amour-existe-encore.mp3&#39;, true, 0, 30)' title='Loop intro for Si L&#39;amour Existe Encore'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Si l'amour existe en[Dm]core [G7] Il res[E7]semble à ton [Am]corps Si l'a[F]mour existe en[G]core</p>
 </div>
@@ -931,10 +1401,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>G</div>
 <div class='small badge badge-warning'>Mai Nguyen</div>
+<a href='https://www.youtube.com/watch?v=XTH2tx749MQ&amp;list=RDXTH2tx749MQ&amp;t=10' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Tuấn Vũ, Ngọc Lan</span>
 <h4>
@@ -943,22 +1416,36 @@
 </a>
 </h4>
 <h5>
-<div class='small badge badge-success'>Diệu Hiền</div>
-<div class='small badge badge-success'>Bebop</div>
-<div class='small badge badge-success'>Dm</div>
+<div class='small badge badge-info'>Diệu Hiền</div>
+<div class='small badge badge-info'>Boston</div>
+<div class='small badge badge-info'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ngan-cach.mp3&#39;, false, 0, 35)' title='Play intro for Ngăn Cách'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/ngan-cach.mp3&#39;, true, 0, 30)' title='Loop intro for Ngăn Cách'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Am]Yêu nhau trong cuộc [C]đời, mơ duyên tình dài gắn bó đôi [E7]lời [Dm]Ta quen nhau một [E7]ngà</p>
 </div>
 <div class='col-md-6 intro-header'></div>
 <div class='col-md-2'>
 <h5 class='pull-right'>
-<div class='small badge badge-success'>Bebop</div>
-<div class='small badge badge-success'>Dm</div>
-<div class='small badge badge-success'>Diệu Hiền</div>
+<div class='small badge badge-info'>Boston</div>
+<div class='small badge badge-info'>Dm</div>
+<div class='small badge badge-info'>Diệu Hiền</div>
+<a href='https://www.youtube.com/watch?v=qqcN6lXwYGg' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Quang Lê, Tâm Đoan</span>
 <h4>
@@ -970,6 +1457,17 @@
 <div class='small badge badge-secondary'>Minh, Diep</div>
 <div class='small badge badge-secondary'>Tango Habanera</div>
 <div class='small badge badge-secondary'>C</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/nhat-ky-cua-hai-dua-minh.mp3&#39;, false, 0, 35)' title='Play intro for LK Nhật Ký Của Hai Đứa Mình'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/nhat-ky-cua-hai-dua-minh.mp3&#39;, true, 0, 30)' title='Loop intro for LK Nhật Ký Của Hai Đứa Mình'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Thức trắng đêm[G] nay ghép lại nhật[D7] ký của hai đứa[G] mình[Em] Đường yêu anh[Bm] bước chân</p>
 </div>
@@ -979,10 +1477,13 @@
 <div class='small badge badge-secondary'>Tango Habanera</div>
 <div class='small badge badge-secondary'>C</div>
 <div class='small badge badge-secondary'>Minh, Diep</div>
+<a href='https://www.youtube.com/watch?v=LVCESXKK_8c' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Đàm Vĩnh Hưng</span>
 <h4>
@@ -994,6 +1495,17 @@
 <div class='small badge badge-warning'>Mai Nguyen</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Bm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/nho.mp3&#39;, false, 0, 35)' title='Play intro for Nhớ'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/nho.mp3&#39;, true, 0, 30)' title='Loop intro for Nhớ'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Em] Nhớ ngày em [Am7] đi, [D] nhớ lần chia [Gmaj7] ly. [Am7] Biết nói chi vời [D] vời, [Bm] tiếng</p>
 </div>
@@ -1003,10 +1515,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Bm</div>
 <div class='small badge badge-warning'>Mai Nguyen</div>
+<a href='https://www.youtube.com/watch?v=ODr8Wl980oU' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row backup-song'>
 <div class='col-md-4'>
 <span class='pull-right'>Chế Linh</span>
 <h4>
@@ -1018,6 +1533,17 @@
 <div class='small badge badge-danger'>Thuy Dung</div>
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Fm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/nhung-buoc-chan-am-tham.mp3&#39;, false, 1.5, 20)' title='Play intro for Những Bước Chân Âm Thầm'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/nhung-buoc-chan-am-tham.mp3&#39;, true, 1.5, 15)' title='Loop intro for Những Bước Chân Âm Thầm'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Cm G G Cm Cm Bb Bb Ab Ab G … G G# A Bb B (bass only) Từng [Cm]bước từng bước [Cm]thầm Hoa [Cm]vòn</p>
 </div>
@@ -1027,10 +1553,13 @@
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Fm</div>
 <div class='small badge badge-danger'>Thuy Dung</div>
+<a href='https://www.youtube.com/watch?v=eRlI0J6ISt8' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Tuấn Vũ, Nguyễn Hồng Ân</span>
 <h4>
@@ -1042,6 +1571,17 @@
 <div class='small badge badge-danger'>Thiện</div>
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Cm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/nhung-tam-hon-co-don-tam-hon-co-don.mp3&#39;, false, 0, 35)' title='Play intro for Những tâm hồn cô đơn (Tâm hồn cô đơn)'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/nhung-tam-hon-co-don-tam-hon-co-don.mp3&#39;, true, 0, 30)' title='Loop intro for Những tâm hồn cô đơn (Tâm hồn cô đơn)'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Am] Đời không như ước mơ lòng người Cuộc [Dm] đời xô đẩy mình đến rã [E7] rời Còn lại [Am] gì, ng</p>
 </div>
@@ -1051,10 +1591,13 @@
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Cm</div>
 <div class='small badge badge-danger'>Thiện</div>
+<a href='https://www.youtube.com/watch?v=IsTlK_3fJe0' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Tuấn Ngọc, Trần Thái Hòa</span>
 <h4>
@@ -1066,6 +1609,17 @@
 <div class='small badge badge-warning'>Oánh Phạm</div>
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/o-noi-nao-em-con-nho.mp3&#39;, false, 0, 35)' title='Play intro for Ở Nơi Nào Em Còn Nhớ'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/o-noi-nao-em-con-nho.mp3&#39;, true, 0, 30)' title='Loop intro for Ở Nơi Nào Em Còn Nhớ'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Ở nơi nào em còn nhớ Tác giả: Ngô Thụy Miên Từ em [Gm] đi mùa xuân lặng [Cm] lẽ cánh hoa [Gm] u sầu</p>
 </div>
@@ -1075,10 +1629,13 @@
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Am</div>
 <div class='small badge badge-warning'>Oánh Phạm</div>
+<a href='https://www.youtube.com/watch?v=nTXSymTKg5I' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'></span>
 <h4>
@@ -1099,10 +1656,13 @@
 <div class='small badge badge-secondary'></div>
 <div class='small badge badge-secondary'>Am</div>
 <div class='small badge badge-secondary'>Kim-Dung</div>
+<a href='https://www.youtube.com/watch?v=fysK2UI_1hI' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Hương Lan, Đoàn Minh</span>
 <h4>
@@ -1114,6 +1674,17 @@
 <div class='small badge badge-warning'>Yen Phương</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Cm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/phan-to-tam.mp3&#39;, false, 0, 35)' title='Play intro for LK Phan to tam - Thanh pho buon'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/phan-to-tam.mp3&#39;, true, 0, 30)' title='Loop intro for LK Phan to tam - Thanh pho buon'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Người có [Em]thương thân tôi nghệ [G]sĩ. Thì đừng có [Em]thương như thương hại [C]đời . Và đừng có</p>
 </div>
@@ -1123,10 +1694,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Cm</div>
 <div class='small badge badge-warning'>Yen Phương</div>
+<a href='https://www.youtube.com/watch?v=ahQclCm755U' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Khánh Ly</span>
 <h4>
@@ -1150,7 +1724,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Duy Quang</span>
 <h4>
@@ -1162,6 +1736,17 @@
 <div class='small badge badge-success'>Ngọc Hưng, Diệu Hiền</div>
 <div class='small badge badge-success'>Bebop</div>
 <div class='small badge badge-success'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/roi-day-anh-se-dua-em-ve-nha.mp3&#39;, false, 0, 35)' title='Play intro for Rồi Đây Anh Sẽ Đưa Em Về Nhà'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/roi-day-anh-se-dua-em-ve-nha.mp3&#39;, true, 0, 30)' title='Loop intro for Rồi Đây Anh Sẽ Đưa Em Về Nhà'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. Rồi đây anh |[Cmaj7]sẽ [B]đưa em [Em]về nhà , Nhà của đôi |[Am]ta [D]xinh xinh nhỏ [G]bé Có v</p>
 </div>
@@ -1171,10 +1756,13 @@
 <div class='small badge badge-success'>Bebop</div>
 <div class='small badge badge-success'>Am</div>
 <div class='small badge badge-success'>Ngọc Hưng, Diệu Hiền</div>
+<a href='https://www.youtube.com/watch?v=Zz9NMGYm6Ww' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row backup-song'>
 <div class='col-md-4'>
 <span class='pull-right'>Quang Lê</span>
 <h4>
@@ -1198,7 +1786,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Thế Sơn</span>
 <h4>
@@ -1210,6 +1798,17 @@
 <div class='small badge badge-success'>Mai Nguyen</div>
 <div class='small badge badge-success'>Tango</div>
 <div class='small badge badge-success'>Fm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/sau-lang.mp3&#39;, false, 0, 35)' title='Play intro for Sầu Lắng'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/sau-lang.mp3&#39;, true, 0, 30)' title='Loop intro for Sầu Lắng'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Chiều lắng nắng trên đường [Em]đã tắt Vài chiếc lá khô vàng [F#dim7]rơi Đời vắng bóng em buồn [B</p>
 </div>
@@ -1219,10 +1818,13 @@
 <div class='small badge badge-success'>Tango</div>
 <div class='small badge badge-success'>Fm</div>
 <div class='small badge badge-success'>Mai Nguyen</div>
+<a href='https://www.youtube.com/watch?v=nFjcrIbFmIc' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Lệ Quyên, Quang Lê</span>
 <h4>
@@ -1234,6 +1836,17 @@
 <div class='small badge badge-warning'>Tuyết, Oánh</div>
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/sau-tim-thiep-hong.mp3&#39;, false, 3, 17)' title='Play intro for Sầu Tím Thiệp Hồng'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/sau-tim-thiep-hong.mp3&#39;, true, 3, 12)' title='Loop intro for Sầu Tím Thiệp Hồng'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Từ lúc quen [Dm]nhau chưa nói một lời [Gm]gì tỏ [C]tình ta [F]mến nhau Nhiều đêm ngắm [Bb]sao mơ ướ</p>
 </div>
@@ -1243,10 +1856,13 @@
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Dm</div>
 <div class='small badge badge-warning'>Tuyết, Oánh</div>
+<a href='https://www.youtube.com/watch?v=PaDqX64Q_v4' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Lâm Nhật Tiến, Nguyên Khang</span>
 <h4>
@@ -1258,6 +1874,17 @@
 <div class='small badge badge-danger'>Michelle</div>
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/se-hon-bao-gio-het.mp3&#39;, false, 0, 35)' title='Play intro for Sẽ Hơn Bao Giờ Hết'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/se-hon-bao-gio-het.mp3&#39;, true, 0, 30)' title='Loop intro for Sẽ Hơn Bao Giờ Hết'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[/][Am]Đang có em chiều nay[/] [/]Mà đã nhớ em ngày [/][Dm]mai [/]Yêu nhau ngất ngây đêm [/][G]nay</p>
 </div>
@@ -1267,10 +1894,13 @@
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Dm</div>
 <div class='small badge badge-danger'>Michelle</div>
+<a href='https://www.youtube.com/watch?v=XzYBbaiOGvc' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Thanh Lan</span>
 <h4>
@@ -1282,6 +1912,17 @@
 <div class='small badge badge-info'>Ngọc Sương</div>
 <div class='small badge badge-info'>Waltz</div>
 <div class='small badge badge-info'>Cm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/song-nuoc-biec.mp3&#39;, false, 0, 35)' title='Play intro for Sông Nước Biếc'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/song-nuoc-biec.mp3&#39;, true, 0, 30)' title='Loop intro for Sông Nước Biếc'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. [E7]Một dòng sông sâu cuồn cuộn [Am]sóng trôi về nơi đâu [Dm]Gió đưa buồm [Am]nâu mang tâm [E7]h</p>
 </div>
@@ -1291,10 +1932,13 @@
 <div class='small badge badge-info'>Waltz</div>
 <div class='small badge badge-info'>Cm</div>
 <div class='small badge badge-info'>Ngọc Sương</div>
+<a href='https://www.youtube.com/watch?v=fDGPaKxacpQ' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Đàm Vĩnh Hưng</span>
 <h4>
@@ -1306,6 +1950,17 @@
 <div class='small badge badge-warning'>Yen Phương</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'></div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/thanh-pho-buon.mp3&#39;, false, 0, 35)' title='Play intro for Thành Phố Buồn'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/thanh-pho-buon.mp3&#39;, true, 0, 30)' title='Loop intro for Thành Phố Buồn'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. Thành phố [Em]nào nhớ không [G]em Nơi chúng [Bm]mình tìm phút êm [Em]đềm Thành phố [G]nào vừa đ</p>
 </div>
@@ -1315,10 +1970,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'></div>
 <div class='small badge badge-warning'>Yen Phương</div>
+<a href='https://www.youtube.com/watch?v=0u4Nmirds2s' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Quốc Anh</span>
 <h4>
@@ -1330,6 +1988,17 @@
 <div class='small badge badge-danger'>Thiện</div>
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>F</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/tinh-co-nhu-khong.mp3&#39;, false, 0, 35)' title='Play intro for Tình Có Như Không'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/tinh-co-nhu-khong.mp3&#39;, true, 0, 30)' title='Loop intro for Tình Có Như Không'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. [C] Tình là tình nhiều khi không [Dm] mà có [G] Tình là tình nhiều lúc có như [C] không [Am] Tì</p>
 </div>
@@ -1339,10 +2008,13 @@
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>F</div>
 <div class='small badge badge-danger'>Thiện</div>
+<a href='https://www.youtube.com/watch?v=6EoyTG7Vvl0' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Y Vân</span>
 <h4>
@@ -1354,6 +2026,17 @@
 <div class='small badge badge-danger'>Quan C.</div>
 <div class='small badge badge-danger'>Twist</div>
 <div class='small badge badge-danger'>Eb</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/tinh-linh.mp3&#39;, false, 0, 35)' title='Play intro for Tình Lính'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/tinh-linh.mp3&#39;, true, 0, 30)' title='Loop intro for Tình Lính'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Anh là lính đa [G] tình tình non sông rất nặng [D] Tình hải hồ ôm [C] mộng tình vũ trụ ngát [G] xan</p>
 </div>
@@ -1363,10 +2046,13 @@
 <div class='small badge badge-danger'>Twist</div>
 <div class='small badge badge-danger'>Eb</div>
 <div class='small badge badge-danger'>Quan C.</div>
+<a href='https://www.youtube.com/watch?v=YAQicB9kMLc' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Tuấn Ngọc</span>
 <h4>
@@ -1378,6 +2064,17 @@
 <div class='small badge badge-secondary'>Thanh</div>
 <div class='small badge badge-secondary'>Slow rock</div>
 <div class='small badge badge-secondary'>Bm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/tinh-vong.mp3&#39;, false, 0, 35)' title='Play intro for Tình Vọng'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/tinh-vong.mp3&#39;, true, 0, 30)' title='Loop intro for Tình Vọng'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Tone gốc Bm: Capo 2 Ôi như mộng [Am]du hồn ta đang thoát đi tìm [Dm]em Trong cơn dịu [G]êm tình đư</p>
 </div>
@@ -1387,10 +2084,13 @@
 <div class='small badge badge-secondary'>Slow rock</div>
 <div class='small badge badge-secondary'>Bm</div>
 <div class='small badge badge-secondary'>Thanh</div>
+<a href='https://www.youtube.com/watch?v=sbNygSMdI7Y' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Lưu Bích, Vy Oanh</span>
 <h4>
@@ -1402,6 +2102,17 @@
 <div class='small badge badge-danger'>Lưu Quang Khải</div>
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Bm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/trai-tim-lam-lo.mp3&#39;, false, 0, 35)' title='Play intro for Trái Tim Lầm Lỡ'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/trai-tim-lam-lo.mp3&#39;, true, 0, 30)' title='Loop intro for Trái Tim Lầm Lỡ'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Em]Chiều về lạnh cơn [Em]gió Hạnh [Am7]phúc rét mướt như mùa [Em]đông Thềm [B7]hoa đâu con bướm [</p>
 </div>
@@ -1411,10 +2122,13 @@
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Bm</div>
 <div class='small badge badge-danger'>Lưu Quang Khải</div>
+<a href='https://www.youtube.com/watch?v=IboYxP8XcV0' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Quốc Đại</span>
 <h4>
@@ -1438,7 +2152,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Duy Quang</span>
 <h4>
@@ -1450,6 +2164,17 @@
 <div class='small badge badge-warning'>Tuyết Hồ</div>
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Bm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/vung-la-me-bay.mp3&#39;, false, 0, 35)' title='Play intro for Vùng Lá Me Bay'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/vung-la-me-bay.mp3&#39;, true, 0, 30)' title='Loop intro for Vùng Lá Me Bay'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Nhìn lá me [Am] bay nhớ kỷ [Em] niệm hai chúng [Am] mình Ngày đó quen [F] nhau vương chút [G7] tình</p>
 </div>
@@ -1459,10 +2184,13 @@
 <div class='small badge badge-warning'>Rhumba</div>
 <div class='small badge badge-warning'>Bm</div>
 <div class='small badge badge-warning'>Tuyết Hồ</div>
+<a href='https://www.youtube.com/watch?v=z8DLkLnemFY' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'></span>
 <h4>
@@ -1486,7 +2214,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Kim Tước</span>
 <h4>
@@ -1498,6 +2226,17 @@
 <div class='small badge badge-info'>Ngọc Sương</div>
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Am</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/xa-que-huong.mp3&#39;, false, 0, 35)' title='Play intro for Xa Quê Hương'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/xa-que-huong.mp3&#39;, true, 0, 30)' title='Loop intro for Xa Quê Hương'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. Chiều [G]buồn mênh mông xa quê thân [Em]yêu Khi bước chân [Am]đi trên bến chia [F]ly [A7]Áng mâ</p>
 </div>
@@ -1507,10 +2246,13 @@
 <div class='small badge badge-info'>Boston</div>
 <div class='small badge badge-info'>Am</div>
 <div class='small badge badge-info'>Ngọc Sương</div>
+<a href='https://www.youtube.com/watch?v=48sQ4MIzhGM' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Quang Hà</span>
 <h4>
@@ -1522,6 +2264,17 @@
 <div class='small badge badge-danger'>Vanessa Hoang</div>
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Bbm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/xin-danh-tron-cho-em.mp3&#39;, false, 0, 35)' title='Play intro for Xin dành trọn cho em'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/xin-danh-tron-cho-em.mp3&#39;, true, 0, 30)' title='Loop intro for Xin dành trọn cho em'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>ĐK: [Em] Xin dành [C] trọn cho em Ngàn [D] muôn chiếc hôn nồng [G] say [Em] Xin ghì [C] chặt vai</p>
 </div>
@@ -1531,10 +2284,13 @@
 <div class='small badge badge-danger'>Techno</div>
 <div class='small badge badge-danger'>Bbm</div>
 <div class='small badge badge-danger'>Vanessa Hoang</div>
+<a href='https://www.youtube.com/watch?v=TZxkvcwIwhc' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Đức Huy</span>
 <h4>
@@ -1558,7 +2314,7 @@
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Ngọc Lan</span>
 <h4>
@@ -1570,6 +2326,17 @@
 <div class='small badge badge-warning'>Thuy Dung</div>
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/xin-thoi-gian-ngung-troi.mp3&#39;, false, 0, 35)' title='Play intro for Xin thời gian ngừng trôi'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/xin-thoi-gian-ngung-troi.mp3&#39;, true, 0, 30)' title='Loop intro for Xin thời gian ngừng trôi'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>[Dm]Rượu nồng cạn chén bên [Gm]người Tình [C7]ái ấm nồng [F]chứa chan [A7] [Dm]Mong thời gian thô</p>
 </div>
@@ -1579,10 +2346,13 @@
 <div class='small badge badge-warning'>Slow</div>
 <div class='small badge badge-warning'>Dm</div>
 <div class='small badge badge-warning'>Thuy Dung</div>
+<a href='https://www.youtube.com/watch?v=U71XPPvrvAo' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Phương Vy, Lê Hiếu</span>
 <h4>
@@ -1594,6 +2364,17 @@
 <div class='small badge badge-danger'>Loc, Vanessa</div>
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>G</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/yeu-em-dai-lau.mp3&#39;, false, 0, 35)' title='Play intro for Yêu Em Dài Lâu'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/yeu-em-dai-lau.mp3&#39;, true, 0, 30)' title='Loop intro for Yêu Em Dài Lâu'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. Em như cơn gió thu bay [G] bay nhè nhẹ Đưa anh đi tìm vần [Am] thơ Qua công viên lá rơi trên [D</p>
 </div>
@@ -1603,10 +2384,13 @@
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>G</div>
 <div class='small badge badge-danger'>Loc, Vanessa</div>
+<a href='https://www.youtube.com/watch?v=sxa2V4eG9RU' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
-<div class='row'>
+<div class='row '>
 <div class='col-md-4'>
 <span class='pull-right'>Patty Ryan</span>
 <h4>
@@ -1615,37 +2399,76 @@
 </a>
 </h4>
 <h5>
-<div class='small badge badge-primary'>Mai Hương</div>
-<div class='small badge badge-primary'>NewWave</div>
-<div class='small badge badge-primary'>Dm</div>
+<div class='small badge badge-danger'>Mai Hương</div>
+<div class='small badge badge-danger'>NewWave</div>
+<div class='small badge badge-danger'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/you-re-my-love-you-re-my-life.mp3&#39;, false, 0, 35)' title='Play intro for You&#39;re My Love You&#39;re My Life'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/you-re-my-love-you-re-my-life.mp3&#39;, true, 0, 30)' title='Loop intro for You&#39;re My Love You&#39;re My Life'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>1. [Dm] Since you were an angel [Gm] from the sky, [C] you fill my fanta-[Dm] sy The way you look t</p>
 </div>
 <div class='col-md-6 intro-header'></div>
 <div class='col-md-2'>
 <h5 class='pull-right'>
-<div class='small badge badge-primary'>NewWave</div>
-<div class='small badge badge-primary'>Dm</div>
-<div class='small badge badge-primary'>Mai Hương</div>
+<div class='small badge badge-danger'>NewWave</div>
+<div class='small badge badge-danger'>Dm</div>
+<div class='small badge badge-danger'>Mai Hương</div>
+<a href='https://www.youtube.com/watch?v=Kgu1vkqw-vA' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 </div>
 </div>
 
 <footer>
-<div class='small text-muted'>2017-10-10 23:24:22 -0700</div>
+<div class='small text-muted'>2017-10-11 13:54:57 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>
 <script crossorigin='anonymous' integrity='sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4' src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js'></script>
 <script crossorigin='anonymous' integrity='sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
 <script src='/js/ekko-lightbox.js'></script>
+<script src='/js/howler.js'></script>
 <script>
+  var cur_sound = null;
+  
+  function play_audio(file, isloop, start, stop) {
+    if (cur_sound != null) {
+      cur_sound.stop();
+    }
+    
+    cur_sound = new Howl({
+      src:  [file],
+      loop: isloop,
+      sprite: {
+        intro: [start*1000, stop*1000]
+      }
+    });
+    cur_sound.play('intro');
+    return false;
+  };
+  function stop_audio() {
+    if (cur_sound != null) {
+      cur_sound.stop();
+    }
+    return false;
+  }
   $(document).ready(function() {
     $(document).on('click', '[data-toggle="lightbox"]',
       function(event) {
         event.preventDefault();
         $(this).ekkoLightbox();
       });
+    $('[data-toggle="tooltip"]').tooltip({"html":true}); 
   });
 </script>
 
