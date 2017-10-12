@@ -11,7 +11,6 @@
     [Em]êm Anh còn nợ [F]em Dò
   :perfnote: |
     +(32)78 8745 5434 42-71 32-71
-  :play_audio: [anh-con-no-em.mp3, 2, 16.5]
 
 - !ruby/object:Hash
   :artist:    Khắc Việt
@@ -28,7 +27,6 @@
     Intro: 3332 -(777)231 111 345 5554233 37222 2323 345+(12) - Sound effect (Hit 6 6 7 8)
     Voice: PolySynth, Orchestra Hit,
   :sound: 0500,0822,0339
-  :play_audio: [anh-khac-hay-em-khac.mp3, 0, 42]
 
 - !ruby/object:Hash
   :artist:    Khánh Hà
@@ -154,7 +152,6 @@
     Chord: C#m B G#m C#m
     5555511 55544-(77) 44444-(55) 222-(8878) x 2
   :sound:     0492,0339,0064
-  :play_audio: [chuyen-thuong-tinh-the-thoi.mp3, 12, 26.5]
 
 - !ruby/object:Hash
   :artist:    Khánh Ly
@@ -189,7 +186,6 @@
 
     Intro 2 (Twist): Dm G Dm A G Dm A
     5788
-  :play_audio: [co-nho-dem-nao.mp3, 14, 27]
 
 - !ruby/object:Hash
   :artist:    Tuấn Vũ
@@ -300,7 +296,6 @@
   :perfnote: |
     ... -(8878) -71-71344346534 -(78878) -(788)344346534
     C7 C7 F7 C7 F7 C7 F7 ..
-  :play_audio: [huong.mp3, 0, 25.5]
 
 - !ruby/object:Hash
   :artist:    Như Quỳnh
@@ -359,7 +354,6 @@
   :perfnote: |
     Intro: Gm F Gm F (Singing) 87 76 6 6 7 7 5 5555
     Orchestra Hit, Fantasia, Horn
-  :play_audio: [loi-to-tinh-de-thuong-2.mp3, 6, 22]
 
 - !ruby/object:Hash
   :artist: Nguyên Khang, Diễm Liên
@@ -473,7 +467,6 @@
   :name: Những Bước Chân Âm Thầm
   :preview: Cm G G Cm Cm Bb Bb Ab Ab G … G G# A Bb B (bass only) Từng [Cm]bước từng
     bước [Cm]thầm Hoa [Cm]vòn
-  :play_audio: [nhung-buoc-chan-am-tham.mp3, 1.5, 15]
 
 - !ruby/object:Hash
   :artist:    Tuấn Vũ, Nguyễn Hồng Ân
@@ -562,7 +555,6 @@
   :play_key:  Dm
   :href:      https://hopamchuan.com/song/3421/sau-tim-thiep-hong/
   :play_link: https://www.youtube.com/watch?v=PaDqX64Q_v4
-  :play_intro: [3, 12]
   :pstyle:    Rhumba
   :performer: Tuyết, Oánh
   :name:      Sầu Tím Thiệp Hồng
@@ -967,6 +959,18 @@
   :name:      Let It Be
   :pstyle:    Slow
   :play_key:  C
+
+- !ruby/object:Hash
+  :artist: Khánh Ly
+  :chords: A7 Bb C C7 Dm E7 F Gm
+  :href: https://hopamchuan.com/song/3022/tinh-cho-khong/
+  :name: Tình Cho Không
+  :preview: "[Dm]Ngon như là trái [Gm]táo [C7]chín Thơm như vườn hoa [F]kín [Bb] Mong
+    manh như dây tơ [A7]chìm"
+  :performer: Thien
+  :pstyle:    Tango
+  :play_key:  Dm
+  :play_link: https://www.youtube.com/watch?v=s_MmpXb2YGI
 
 - :name:  Z_Piano-Acc-Guit
   :sound: 0005/0115/0124/0250/0299/0465/0502/0674/0819,0286

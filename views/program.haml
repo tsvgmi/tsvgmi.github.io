@@ -37,15 +37,10 @@
         %div(class=sclass)= sentry[:pstyle]
         %div(class=sclass)= sentry[:play_key]
         - soundfile = nil
-        - if value = sentry[:play_audio]
-          - soundfile, start, stop = value
-        - elsif sentry[:href]
+        - if sentry[:href]
           - sname = sentry[:href].split('/')[5]
           - soundfile = "#{sname}.mp3"
-          - if sentry[:play_intro]
-            - start, stop = sentry[:play_intro]
-          - else
-            - start, stop = 0, 30
+          - start, stop = 0, 90
         - if soundfile && test(?s, "audio/intro-#{soundfile}")
           - soundfile = "intro-#{soundfile}" if test(?s, "audio/intro-#{soundfile}")
           .pull-right
