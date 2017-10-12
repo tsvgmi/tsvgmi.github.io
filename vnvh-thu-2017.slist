@@ -727,6 +727,9 @@
   :name: Xin dành trọn cho em
   :preview: 'ĐK: [Em] Xin dành [C] trọn cho em Ngàn [D] muôn chiếc hôn nồng [G] say
     [Em] Xin ghì [C] chặt vai'
+  :perfnote: |
+    155 5655 5744 2321 155 5655 5744 21-71
+    Sound: SuperPoly, Polysynth
 
 - !ruby/object:Hash
   :artist:    Patty Ryan
@@ -920,6 +923,11 @@
   :pstyle:  Chachacha
   :performer: Michelle, Diệu Hiền
   :play_key: Bb
+  :perfnote: |
+    Chord: 2m 5 1 1 2m 5 1 1
+    -(568968) -(569865) -(568969)652 53 
+    -(568968) -(569865) -(568969)652 -6121
+    Sound: Piano, Fantasia, Distortion
 
 - !ruby/object:Hash
   :artist: Chubby Checker
@@ -943,6 +951,10 @@
   :pstyle:  Chachacha
   :performer: Hồng Vân
   :play_key: Em
+  :perfnote: |
+    1 1# 2m 5 1 1# 2m 5  111 1# 222 5 111 1# 222 555 5
+    4 14143 -(5-35)223 148765 23458 888
+    Piano / Trumpet/Horn Section
 
 - !ruby/object:Hash
   :artist:    Tuấn Vũ
@@ -968,9 +980,15 @@
   :name: Hình ảnh người em không đợi
 
 - !ruby/object:Hash
-  :href:      https://hopamchuan.com/song/xxxx/let-it-be/
-  :performer: Phi
   :name:      Let It Be
+  :href:      https://hopamchuan.com/song/872/let-it-be
+  :artist: The Beatles
+  :chords: Am C Dm Em F G
+  :href: https://hopamchuan.com/song/872/let-it-be/
+  :name: Let It Be
+  :preview: "(Intro) [C] [G] [Am] [F] [C] [G] [F] [C] [Dm] [C] (Verse 1) When I [C]find
+    myself in [G]times of tro"
+  :performer: Phi
   :pstyle:    Slow
   :play_key:  C
 
