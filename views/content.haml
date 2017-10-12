@@ -8,7 +8,11 @@
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'primary', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 .container
   %ul.list-unstyled
-    - plist.sort_by{|e| e[:href] ? e[:href].split('/')[5] : e[:name].downcase}.each do |sentry|
+    - plist.each do |sname, sentry|
+      - unless sentry
+        - if sname =~ /^---/
+          %hr/
+        - next
       - sclass = (sentry[:tags] || []).include?('backup') ? 'backup-song' : ''
       %li(class=sclass)
         - btype  = StyleColor[(sentry[:pstyle] || '').downcase] || 'secondary'

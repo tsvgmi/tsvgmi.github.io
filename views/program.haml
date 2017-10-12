@@ -12,8 +12,14 @@
 
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'danger', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 
-- plist.sort_by{|e| e[:href] ? e[:href].split('/')[5] : e[:name].downcase}.each_with_index do |sentry, index|
-  - next if sentry[:name] =~ /^Z_/
+- index = 0
+- plist.each do |aname, sentry|
+  - unless sentry
+    - if aname =~/^--/
+      %hr/
+    - next
+  - index += 1
+  - Plog.dump_info(index:index, aname:aname)
   - rowclass = (sentry[:tags] || []).include?('backup') ? 'backup-song' : ''
   %div(class="row #{rowclass}")
     .col-md-4
@@ -23,7 +29,7 @@
       %span.pull-right= sentry[:artist]
       %h4
         %a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
-          = "#{index+1}. #{pname}"
+          = "#{index}. #{pname}"
       %h5
         - btype  = StyleColor[pstyle] || 'secondary'
         - sclass = "small badge badge-#{btype}"
@@ -40,7 +46,7 @@
             - start, stop = sentry[:play_intro]
           - else
             - start, stop = 0, 30
-        - if soundfile && test(?s, "audio/#{soundfile}")
+        - if soundfile && test(?s, "audio/intro-#{soundfile}")
           - soundfile = "intro-#{soundfile}" if test(?s, "audio/intro-#{soundfile}")
           .pull-right
             %a(href='#' onclick="return play_audio('/audio/#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
