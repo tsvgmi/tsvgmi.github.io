@@ -9,6 +9,10 @@
   .backup-song {
     background-color: #ddd;
   }
+  .sname {
+    color: #aaa;
+    font-size: 60%;
+  }
 
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'danger', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 
@@ -26,7 +30,7 @@
       - pname  = sentry[:pname] || sentry[:name]
       - pstyle = (sentry[:pstyle] || '').downcase
       - href   = sentry[:href]
-      %span.pull-right= sentry[:artist]
+      %span.sname.pull-right= sentry[:sname]
       %h4
         %a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
           = "#{index}. #{pname}"
@@ -53,13 +57,14 @@
       %p.text-muted= sentry[:preview]
     .col-md-6.intro-header
     .col-md-2
-      %h5.pull-right
+      %h5
         %div(class=sclass)= sentry[:pstyle]
         %div(class=sclass)= sentry[:play_key]
         %div(class=sclass)= sentry[:performer]
         - if value = sentry[:play_link]
           %a(href=value target='play_link')
             %i.fa.fa-music
+      .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
 
 - content_for :javascript do
   %script(src="/js/howler.js")

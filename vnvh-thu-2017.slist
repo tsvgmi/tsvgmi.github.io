@@ -309,8 +309,8 @@
   :preview:   1. Bạn bè gặp nhau cứ |[Am]hỏi đã lâu không |[Dm6]còn trông thấy [E7]em
     tươi nụ |[Am]cười | Rằng tạ
   :perfnote: |
-    8987 4566785
-    555854 1543 3445-512
+    (Fantasia)8987 4566785
+    (Tranh) ~~ 555854 1543 3445-512 ~~
     Solo: (32-6 321) 135798 98786315 -513574 154342-(7758)  (23421)
     Solo Chord: |F |G |C |Am |Dm |F Em |Am Dm6 |Am 
     Out: Am Em F G Am (132121-7-5 132121-7-51)
@@ -366,6 +366,11 @@
   :name: Mai Tôi Đi
   :preview: 'Intro: [Dm] [A] [Dm] [Gm] [F] [Gm] [A] [Dm] Mai tôi đi[Dm] chắc trời
     giăng mưa l'
+  :perfnote: |
+    5 +(3322) 59988 121-7 16-(67656)4 +(56545)45675
+    78 5656 +(32) 4545 +(21)
+    Sound: Accordeon, String, Sax, Harp
+
 - !ruby/object:Hash
   :artist: Lệ Quyên
   :chords: A7 Am Bm C Cm D D7 E7 F G G7
@@ -455,6 +460,11 @@
   :name: Nhớ
   :preview: "[Em] Nhớ ngày em [Am7] đi, [D] nhớ lần chia [Gmaj7] ly. [Am7] Biết nói
     chi vời [D] vời, [Bm] tiếng"
+  :perfnote: |
+    345 31-654 2-743 1-6345 55
+    Sound: Orchestra
+    Chord: 1m 4m 7 3 6 4m 5
+
 - !ruby/object:Hash
   :artist: Chế Linh
   :chords: Ab Bb C7 Cm D Eb Fm G
@@ -476,7 +486,7 @@
   :pstyle:    Chachacha
   :play_link: https://www.youtube.com/watch?v=IsTlK_3fJe0
   :performer: Thiện
-  :name:      Những tâm hồn cô đơn (Tâm hồn cô đơn)
+  :name:      Những tâm hồn cô đơn
   :preview:   "[Am] Đời không như ước mơ lòng người Cuộc [Dm] đời xô đẩy mình đến rã
     [E7] rời Còn lại [Am] gì, ng"
   :perfnote: |
@@ -615,7 +625,8 @@
   :play_link: https://www.youtube.com/watch?v=IboYxP8XcV0
   :performer: Lưu Quang Khải
   :perfnote: |
-    Intro: Chord - 21 43 76 +(21 43 65 2315)
+    Intro: (Guitar)1 1235 5765 2345 (String) 21 43 76 +(21 43 65 2315)
+    Chord: 1m 4m 5 1m 7 6 5 1m
     Solo: Guitar - |Em | | Bm | | F# | G | A | F# | |
   :sound: 0010/0294,
 
@@ -791,6 +802,9 @@
   :preview:   Hạnh phúc trong tầm [Am]với đã không còn [F]tới khi vắng em trong [Am]đời
     Tìm đến chân trời [Dm]mới
   :perfnote: |
+    (QD): (Fantasie) 5 565 9 5 5654 4 46543 35432 1-(6789) (Sax) 55659 55654 +(44543 33432 17678) (Keyboard) 645
+    1m 1mM7 1m7 1m6 4m 1m 2 5 . 1m 1mM7 1m7 1m6 4m 1m 2 5 1m
+  :perfnote_0: |
     Intro: 32211 43322 43322345 65544 54433 4334342
 
 - !ruby/object:Hash
