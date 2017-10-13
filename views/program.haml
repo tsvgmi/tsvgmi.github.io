@@ -47,14 +47,18 @@
           - start, stop = 0, 90
         - if soundfile && test(?s, "audio/intro-#{soundfile}")
           .pull-right
-            %a(href='#' onclick="return play_audio('/audio/intro-#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
-              %i.fa.fa-play
-            %a(href='#' onclick="return stop_audio()")
-              %i.fa.fa-pause
-            - ['intro', 'solo'].each do |segment|
-              - next unless test(?s, "audio/#{segment}-#{soundfile}")
-              %a(href='#' onclick="return play_audio('/audio/#{segment}-#{soundfile}', true, #{start}, #{stop})" title="Loop #{segment} for #{pname}" data-toggle="tooltip")
-                %i.fa.fa-repeat
+            .small
+              %audio(controls loop)
+                %source(src="/audio/intro-#{soundfile}" type="audio/mpeg")
+            - if false
+              %a(href='#' onclick="return play_audio('/audio/intro-#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
+                %i.fa.fa-play
+              %a(href='#' onclick="return stop_audio()")
+                %i.fa.fa-pause
+              - ['intro', 'solo'].each do |segment|
+                - next unless test(?s, "audio/#{segment}-#{soundfile}")
+                %a(href='#' onclick="return play_audio('/audio/#{segment}-#{soundfile}', true, #{start}, #{stop})" title="Loop #{segment} for #{pname}" data-toggle="tooltip")
+                  %i.fa.fa-repeat
       %p.text-muted= sentry[:preview]
     .col-md-6.intro-header
     .col-md-2
