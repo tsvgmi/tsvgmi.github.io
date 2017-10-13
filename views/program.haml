@@ -46,14 +46,15 @@
           - soundfile = "#{sname}.mp3"
           - start, stop = 0, 90
         - if soundfile && test(?s, "audio/intro-#{soundfile}")
-          - soundfile = "intro-#{soundfile}" if test(?s, "audio/intro-#{soundfile}")
           .pull-right
-            %a(href='#' onclick="return play_audio('/audio/#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
+            %a(href='#' onclick="return play_audio('/audio/intro-#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
               %i.fa.fa-play
             %a(href='#' onclick="return stop_audio()")
               %i.fa.fa-pause
-            %a(href='#' onclick="return play_audio('/audio/#{soundfile}', true, #{start}, #{stop})" title="Loop intro for #{pname}" data-toggle="tooltip")
-              %i.fa.fa-repeat
+            - ['intro', 'solo'].each do |segment|
+              - next unless test(?s, "audio/#{segment}-#{soundfile}")
+              %a(href='#' onclick="return play_audio('/audio/#{segment}-#{soundfile}', true, #{start}, #{stop})" title="Loop #{segment} for #{pname}" data-toggle="tooltip")
+                %i.fa.fa-repeat
       %p.text-muted= sentry[:preview]
     .col-md-6.intro-header
     .col-md-2
@@ -69,7 +70,7 @@
 - content_for :javascript do
   %script(src="/js/howler.js")
   :javascript
-    var cur_sound = null;
+    var cur_sound  = null;
 
     function play_audio(file, isloop, start, stop) {
       if (cur_sound != null) {
@@ -86,6 +87,7 @@
       cur_sound.play('intro');
       return false;
     };
+
     function stop_audio() {
       if (cur_sound != null) {
         cur_sound.stop();
