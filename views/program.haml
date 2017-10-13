@@ -16,7 +16,7 @@
 
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'danger', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 
-- sections = plist.select{|n,v| n =~ /^---/}.size + 1
+- sections = [plist.select{|n,v| n =~ /^---/}.size + 1, 3].min
 %ul.list-inline
   - 1.upto(sections) do |sno|
     %li.list-inline-item
@@ -30,6 +30,7 @@
 - plist.each do |aname, sentry|
   - unless sentry
     - if aname =~/^--/
+      - break if sno > 3
       %a(name="section_#{sno}")
       %h3
         %a(href="#top") Phần #{sno}
