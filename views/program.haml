@@ -23,8 +23,8 @@
       %hr/
     - next
   - index += 1
-  - Plog.dump_info(index:index, aname:aname)
   - rowclass = (sentry[:tags] || []).include?('backup') ? 'backup-song' : ''
+  %a(name="s#{index}")
   %div(class="row #{rowclass}")
     .col-md-4
       - pname  = sentry[:pname] || sentry[:name]

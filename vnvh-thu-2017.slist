@@ -125,6 +125,9 @@
   :name:      Bến Xuân
   :preview:   Nhà [Em] tôi bên chiếc cầu soi [G] nước Em đến [C] tôi [Bm] một [Em] lần
     Bao lũ chim [Bm] rừng họp
+  :perfnote: |
+    (3) Str:5678 F:5678 Str:1232 F:1232 S:45 F:56765435 S:1-(545)
+    Sound: String, Flute, Guita
 
 - !ruby/object:Hash
   :artist:    Ngọc Lan
@@ -198,6 +201,9 @@
   :name:      Giã Từ Đêm Mưa
   :preview:   Ðêm [Am]khuya mưa [Am7]rơi rơi trên đường [Dm]vắng [Dm7] Ðôi [G]chân lang
     [G7]thang tâm tư trầm [C]l
+  :perfnote:  |
+    +(321)6451[x3] 4444445 5 53413-71 -7135341312-71 53413-715 -713444 4445
+    Chord: 1m[x6] |4m 4+ | 5  | 1m | 7 | 6 | 5 | 1m | 7 | 4m 4+ | 5 
 
 - !ruby/object:Hash
   :artist:    Hồng Ngọc, Đàm Vĩnh Hưng
@@ -228,6 +234,9 @@
   :name: Hàn Mặc Tử
   :preview: 'Tone Lệ Quyên: Bm Ngậm thơ: Ai mua [Em]trăng tôi bán trăng cho Trăng
     nằm [Am]im trên cành [Em]liễu đ'
+  :perfnote: |
+    (Fantasia) 5854 345854 3532 123532 (Flute/Piano) 876+3 987+4 1235342-71
+    Chord: 1m 5m 1m 5m 1m 7 6 5m 4m 5m 6 5m 1m
 
 - !ruby/object:Hash
   :artist: Quang Dũng
@@ -582,6 +591,9 @@
   :name:      Sầu Lắng
   :preview:   Chiều lắng nắng trên đường [Em]đã tắt Vài chiếc lá khô vàng [F#dim7]rơi
     Đời vắng bóng em buồn [B
+  :perfnote: |
+    -53321 11(7865) -54432 232345 16654 -7554 -64432 2345431 -- ~~
+    Chord: | 1m | 1m | 4m | 5 1 | 4m 7 | 3 6 | 4m 5 | 1m 4m 5 | 1m
 
 - !ruby/object:Hash
   :artist:    Lâm Nhật Tiến, Nguyên Khang
@@ -641,6 +653,9 @@
   :name:     Tình Có Như Không
   :preview:  1. [C] Tình là tình nhiều khi không [Dm] mà có [G] Tình là tình nhiều
     lúc có như [C] không [Am] Tì
+  :perfnote: |
+    113 224 -7-72 11 335 446 55 5
+    Chord: 1 2m 5 1 1 2m 5 5
 
 - !ruby/object:Hash
   :artist:    Y Vân
@@ -658,14 +673,17 @@
 - !ruby/object:Hash
   :artist: Tuấn Ngọc
   :chords: Am C Dm E7 G
-  :play_key:  Bm
   :play_link: https://www.youtube.com/watch?v=sbNygSMdI7Y
   :href: https://hopamchuan.com/song/8302/tinh-vong/thienv
   :name: Tình Vọng
   :preview: 'Tone gốc Bm: Capo 2 Ôi như mộng [Am]du hồn ta đang thoát đi tìm [Dm]em
     Trong cơn dịu [G]êm tình đư'
   :performer: Thanh
+  :play_key:  Bm
   :pstyle: Slow rock
+  :perfnote: |
+    Sax: 5+(3212)55 77665763 -(677665765) / 189856 178756 65- 43-521
+    Chord: 1m 6 5 / 1 4m 7 4m 5 4m 5 6 5
 
 - !ruby/object:Hash
   :artist: Duy Quang
@@ -702,6 +720,10 @@
   :pname:     LK Xin Mot Ngay Mai Co Nhau - Cho Lan Cuoi
   :preview:   'Tone gốc E: Capo 4 Còn lại [C]đây một buổi chiều ướt cơn [F]mưa Còn lại
     [Dm]đây sương mù đường vắng'
+  :perfnote: |
+    Guitar:(Chord) String:5564 4453 -71231 - (143)
+    Chord: F G/F G/C F Bb/C7 Dm Fm/G C G7 C
+
 - !ruby/object:Hash
   :artist:    Ngọc Lan
   :chords:    A7 Asus4 Bb C7 Dm E F Gm Gm6
@@ -857,6 +879,9 @@
   :performer: Kim-Dung
   :play_link: https://www.youtube.com/watch?v=fysK2UI_1hI
   :pstyle:   Chachacha
+  :perfnote: |
+    8 57 47 35 
+    Chord: 1m 7 6 5
 
 - !ruby/object:Hash
   :name: KachiUSA
@@ -938,6 +963,9 @@
   :pstyle:  Twist
   :performer: Tu Yen, Ai Loan
   :play_key: C
+  :perfnote: |
+    Drum intro - Chord: G7 5678
+
 
 - !ruby/object:Hash
   :artist:  Y Phụng, Hà Thanh Xuân
@@ -954,7 +982,7 @@
   :perfnote: |
     1 1# 2m 5 1 1# 2m 5  111 1# 222 5 111 1# 222 555 5
     4 14143 -(5-35)223 148765 23458 888
-    Piano / Trumpet/Horn Section
+    Piano / Trumpet/Horn Section / Flute
 
 - !ruby/object:Hash
   :artist:    Tuấn Vũ
@@ -982,15 +1010,18 @@
 - !ruby/object:Hash
   :name:      Let It Be
   :href:      https://hopamchuan.com/song/872/let-it-be
+  :play_link: https://www.youtube.com/watch?v=ih-8K1a_SsA
   :artist: The Beatles
   :chords: Am C Dm Em F G
-  :href: https://hopamchuan.com/song/872/let-it-be/
   :name: Let It Be
   :preview: "(Intro) [C] [G] [Am] [F] [C] [G] [F] [C] [Dm] [C] (Verse 1) When I [C]find
     myself in [G]times of tro"
   :performer: Phi
   :pstyle:    Slow
   :play_key:  C
+  :perfnote: |
+    Chord: 1 5 6m F 1 5 4 1
+    Sound: Piano (Rock)
 
 - !ruby/object:Hash
   :artist: Khánh Ly

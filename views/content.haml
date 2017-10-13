@@ -8,11 +8,13 @@
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'primary', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 .container
   %ul.list-unstyled
+    - index = 0
     - plist.each do |sname, sentry|
       - unless sentry
         - if sname =~ /^---/
           %hr/
         - next
+      - index += 1
       - sclass = (sentry[:tags] || []).include?('backup') ? 'backup-song' : ''
       %li(class=sclass)
         - btype  = StyleColor[(sentry[:pstyle] || '').downcase] || 'secondary'
@@ -27,7 +29,7 @@
         - if value = sentry[:sound]
           - sound  = %w(Upper: Lower: Rhymth:).zip(value.split(',')).join(' ')
         - qref     = "<div class='small'><p><span class='badge badge-secondary'>#{sentry[:artist]}</span><span class='pull-right badge badge-primary'>#{sentry[:performer]} | #{sentry[:pstyle]}</span><p>#{sentry[:preview]}<p class=perfnote>#{perfnote}<p class=perfsound>#{sound}</div>"
-        %a.small(href="#{sentry[:href]}" target='if_content' data-container="body" data-toggle="popover" data-placement="top" data-content=qref)= sentry[:name]
+        %a.small(href="#{sentry[:href]}" target='if_content' data-container="body" data-toggle="popover" data-placement="top" data-content=qref)= "#{index}. #{sentry[:name]}"
 
 - content_for :javascript do
   :javascript

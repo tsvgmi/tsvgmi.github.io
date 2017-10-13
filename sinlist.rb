@@ -5,7 +5,7 @@ require 'sinatra/content_for'
 require 'yaml'
 require 'core'
 
-set :bind, '0.0.0.0'
+#set :bind, '0.0.0.0'
 
 get '/' do
   haml :index
@@ -31,12 +31,10 @@ helpers do
       e[:sname] = e[:href] ? e[:href].split('/')[5] : e[:name].downcase
             end
     ord_file   = "#{event}.order"
-    order_list = nil
-    if test(?s, ord_file)
-      order_list = File.read(ord_file).split("\n")
-      Plog.dump_info(ord_file:ord_file, order_list:order_list)
+    order_list = if test(?s, ord_file)
+      File.read(ord_file).split("\n")
     else
-      order_list = plist.map{|r| r[:sname]}.sort
+      plist.map{|r| r[:sname]}.sort
     end
     p2list = Hash[plist.map{|e| [e[:sname], e]}]
     order_list.map{|e| [e, p2list[e]]}
