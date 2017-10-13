@@ -32,7 +32,8 @@
       - href   = sentry[:href]
       %span.sname.pull-right= sentry[:sname]
       %h4
-        %a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
+        -#%a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
+        %a(href=href)
           = "#{index}. #{pname}"
       %h5
         - btype  = StyleColor[pstyle] || 'secondary'
@@ -59,7 +60,7 @@
       %p.text-muted= sentry[:preview]
     .col-md-4.intro-header
     .col-md-4
-      %h5
+      %h5.pull-right
         %div(class=sclass)= sentry[:pstyle]
         %div(class=sclass)= sentry[:play_key]
         %div(class=sclass)= sentry[:performer]
