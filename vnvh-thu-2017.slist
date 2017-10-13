@@ -67,7 +67,7 @@
   :artist:    Quang Lê
   :chords:    A Am Bm C C#m D E E7 F F#m G
   :href:      https://hopamchuan.com/song/263/bien-man/
-  :tags: [backup]
+  :tags: [ignore]
   :performer: Oánh Phạm
   :pstyle:    Rhumba
   :name:      Biển Mặn
@@ -330,7 +330,7 @@
   :play_link: https://www.youtube.com/watch?v=zeX60H1hX0o
   :href:      https://hopamchuan.com/song/12228/linh-thich-33/
   :performer: Mai Huong
-  :tags: [backup]
+  :tags: [ignore]
   :pstyle:    Twist
   :name:      Lính thích 33
   :preview:   Lính thích [D] 33 [G7] như thích đi hành [D] quân Đời lính vui buồn ai
@@ -342,7 +342,7 @@
   :play_key: Am
   :play_link: https://www.youtube.com/watch?v=J3vqR9BEkYc
   :href: https://hopamchuan.com/song/9460/lai-nho-nguoi-yeu/
-  :tags: [backup]
+  :tags: [ignore]
   :performer: Thanh Liem
   :pstyle: Bolero
   :name: Lại Nhớ Người Yêu
@@ -413,7 +413,7 @@
   :chords: A7 Bb C Dm F Gm
   :href: https://hopamchuan.com/song/3462/mua-thu-chet/
   :play_link: https://www.youtube.com/watch?v=5tvf3C0k9nI
-  :tags: [backup]
+  :tags: [ignore]
   :performer: Ngọc Sương
   :pstyle: Slow
   :play_key: Am
@@ -480,7 +480,7 @@
   :play_key: Fm
   :play_link: https://www.youtube.com/watch?v=eRlI0J6ISt8
   :href: https://hopamchuan.com/song/1508/nhung-buoc-chan-am-tham/
-  :tags: [backup]
+  :tags: [ignore]
   :performer: Thuy Dung
   :pstyle: Chachacha
   :name: Những Bước Chân Âm Thầm
@@ -549,7 +549,7 @@
   :artist:    Quang Lê
   :chords:    Am B7 D Em G
   :href:      https://hopamchuan.com/song/2821/sao-em-vo-tinh/
-  :tags: [backup]
+  :tags: [ignore]
   :performer: Thiện
   :pstyle:    Tango
   :play_key:  Gm
@@ -803,7 +803,7 @@
   :play_link: https://www.youtube.com/watch?v=zEqj3Vz5Iuk
   :performer: Yen Phuong
   :pstyle:    Rhumba
-  :tags: [backup]
+  :tags: [ignore]
   :play_key:  Am
   :href:      https://hopamchuan.com/song/4726/dap-mo-cuoc-tinh/thienv
   :name:      Đắp Mộ Cuộc Tình
@@ -836,7 +836,7 @@
   :artist: Duy Quang
   :chords: Am C Dm E7 F G
   :play_key:  Dm
-  :tags: [backup]
+  :tags: [ignore]
   :play_link: https://www.youtube.com/watch?v=dvf8jRmU6cc
   :href: https://hopamchuan.com/song/811/dong-xanh/
   :performer: Lưu Quang Khải
@@ -1000,6 +1000,10 @@
   :name: Pingpong Game
 
 - !ruby/object:Hash
+  :href: https://hopamchuan.com/song/xxxx/mua-ba-mien/
+  :name: Mua Ba Mien
+
+- !ruby/object:Hash
   :href: https://hopamchuan.com/song/xxxx/bachata-group-dance/
   :name: Bachata Group Dance
 
@@ -1021,7 +1025,7 @@
   :play_key:  C
   :perfnote: |
     Chord: 1 5 6m F 1 5 4 1
-    Sound: Piano (Rock)
+    Sound: Piano (Rock), Organ, E Guitar
 
 - !ruby/object:Hash
   :artist: Khánh Ly
