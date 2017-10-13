@@ -16,10 +16,24 @@
 
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'danger', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 
-- index = 0
+- sections = plist.select{|n,v| n =~ /^---/}.size + 1
+%ul.list-inline
+  - 1.upto(sections) do |sno|
+    %li.list-inline-item
+      %a(href="#section_#{sno}") Phần #{sno}
+
+%a(name="section_1")
+%h3
+  %a(href="#top") Phần 1
+%hr/
+- index = 0; sno = 2
 - plist.each do |aname, sentry|
   - unless sentry
     - if aname =~/^--/
+      %a(name="section_#{sno}")
+      %h3
+        %a(href="#top") Phần #{sno}
+      - sno += 1
       %hr/
     - next
   - index += 1
