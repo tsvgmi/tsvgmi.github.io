@@ -47,9 +47,6 @@
           - start, stop = 0, 90
         - if soundfile && test(?s, "audio/intro-#{soundfile}")
           .pull-right
-            .small
-              %audio(controls loop)
-                %source(src="/audio/intro-#{soundfile}" type="audio/mpeg")
             - if false
               %a(href='#' onclick="return play_audio('/audio/intro-#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
                 %i.fa.fa-play
@@ -60,8 +57,8 @@
                 %a(href='#' onclick="return play_audio('/audio/#{segment}-#{soundfile}', true, #{start}, #{stop})" title="Loop #{segment} for #{pname}" data-toggle="tooltip")
                   %i.fa.fa-repeat
       %p.text-muted= sentry[:preview]
-    .col-md-6.intro-header
-    .col-md-2
+    .col-md-4.intro-header
+    .col-md-4
       %h5
         %div(class=sclass)= sentry[:pstyle]
         %div(class=sclass)= sentry[:play_key]
@@ -70,6 +67,8 @@
           %a(href=value target='play_link')
             %i.fa.fa-music
       .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
+      %audio(controls loop)
+        %source(src="/audio/intro-#{soundfile}" type="audio/mpeg")
 
 - content_for :javascript do
   %script(src="/js/howler.js")
