@@ -72,7 +72,7 @@
                 - next unless test(?s, "audio/#{segment}-#{soundfile}")
                 %a(href='#' onclick="return play_audio('/audio/#{segment}-#{soundfile}', true, #{start}, #{stop})" title="Loop #{segment} for #{pname}" data-toggle="tooltip")
                   %i.fa.fa-repeat
-      %p.text-muted= sentry[:preview]
+      %p.text-muted= (sentry[:preview] || "")[0..100]
     .col-md-4.intro-header
     .col-md-4
       %h5.pull-right

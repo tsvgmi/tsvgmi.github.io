@@ -123,8 +123,10 @@
   :pstyle:    Slow
   :performer: Que Huong, Lynn Ngo
   :name:      Bến Xuân
-  :preview:   Nhà [Em] tôi bên chiếc cầu soi [G] nước Em đến [C] tôi [Bm] một [Em] lần
-    Bao lũ chim [Bm] rừng họp
+  :preview:   |
+    Nhà [Bbm]tôi bên chiếc cầu soi [C#]nước 
+    Em đến [F#]tôi [Fm]một [Bbm]lần 
+    Bao lũ chim [Fm]rừng họp đàn trên khắp bến [Bbm]xuân 
   :perfnote: |
     (3) Str:5678 F:5678 Str:1232 F:1232 S:45 F:56765435 S:1-(545)
     Sound: String, Flute, Guita
@@ -183,10 +185,10 @@
   :preview:   Có nhớ đêm [Dm7] nào? Về chung với nhau nơi này Tìm đến hòa khúc sum [Gm7]
     vầy Tình xuân ngất
   :perfnote: |
-    55645 3534 2423 44645 3534 2431
     Intro 1 (Ho Le Thu): 1155511 115551 1551  1551
     Dm F Gm Dm (x2)
-
+  :perfnote_0: |
+    55645 3534 2423 44645 3534 2431
     Intro 2 (Twist): Dm G Dm A G Dm A
     5788
 
@@ -401,8 +403,10 @@
   :pstyle:    Boston
   :performer: Thuy Dung
   :name:      Mùa Hè Đẹp Nhất
-  :preview:   1. [Em]Chiều trên phố vắng [Am7]ray rứt tiếng mưa buồn rơi [F]Ngày qua
-    rất [Em]vội mây [F#dim]xám g
+  :preview:   |
+    1. [Gm]Chiều trên phố vắng [Cm7]ray rứt tiếng mưa buồn rơi 
+    [G#]Ngày qua rất [Gm]vội mây [Adim]xám giăng mờ ngõ [D]tối 
+    [Gm]Mùa Thu sao đã đến [Cm]cho lá úa trên hàng 
   :perfnote: |
     Intro: 534231 534231 (Gm) then (Dm) then (Cm) (String: 1321 1321) (Gm)
     Am Em Dm Am 
@@ -428,7 +432,7 @@
   :play_link: https://www.youtube.com/watch?v=VD6bde5Qllk
   :performer: Anh Thu
   :name: Một Mình - Quang Dũng
-  :preview: 'Tone gốc Dm: Capo 5 Sớm mai thức [Am]giấc, nhìn [G]quanh một [C]mình
+  :preview: 'Sớm mai thức [Am]giấc, nhìn [G]quanh một [C]mình
     Ngoài hiên nắng [Em]lóe, đàn [E'
   :play_key:  Gm
   :pstyle:  Boston
@@ -554,19 +558,20 @@
   :pstyle:    Tango
   :play_key:  Gm
   :name:      Sao Em Vô Tình
-  :preview:   Capo 3 Đã biết em vô [Em]tình mà lòng anh vẫn [B7]yêu Đã biết em hững
+  :preview:   Đã biết em vô [Em]tình mà lòng anh vẫn [B7]yêu Đã biết em hững
     hờ mà anh vẫn nhớ [Em]thương Đ
 - !ruby/object:Hash
   :artist: Thanh Lan
   :chords: Am Bb C C7 Dm Dm6 E7 F G
-  :play_key: Cm
+  :play_key: Cm/Eb/Ab/C
   :href: https://hopamchuan.com/song/11624/song-nuoc-biec/
   :play_link: https://www.youtube.com/watch?v=fDGPaKxacpQ
   :pstyle:  Waltz
   :performer: Ngọc Sương
   :name: Sông Nước Biếc
-  :preview: 1. [E7]Một dòng sông sâu cuồn cuộn [Am]sóng trôi về nơi đâu [Dm]Gió đưa
-    buồm [Am]nâu mang tâm [E7]h
+  :preview: |
+    1. [G7]Một dòng sông sâu cuồn cuộn [Cm]sóng trôi về nơi đâu 
+    [Fm]Gió đưa buồm [Cm]nâu mang tâm [G7]hồn vào cõi u [Cm]sầu 
 
 - !ruby/object:Hash
   :artist:    Lệ Quyên, Quang Lê
@@ -589,8 +594,11 @@
   :pstyle:    Tango
   :performer: Mai Nguyen
   :name:      Sầu Lắng
-  :preview:   Chiều lắng nắng trên đường [Em]đã tắt Vài chiếc lá khô vàng [F#dim7]rơi
-    Đời vắng bóng em buồn [B
+  :preview:   |
+    Chiều lắng nắng trên đường [Fm]đã tắt 
+    Vài chiếc lá khô vàng [Gdim7]rơi 
+    Đời vắng bóng em buồn [C7]héo hắt 
+    Mộng thắm cũng phai [Fm]tàn thôi 
   :perfnote: |
     -53321 11(7865) -54432 232345 16654 -7554 -64432 2345431 -- ~~
     Chord: | 1m | 1m | 4m | 5 1 | 4m 7 | 3 6 | 4m 5 | 1m 4m 5 | 1m
@@ -666,8 +674,9 @@
   :pstyle:    Twist
   :performer: Quan C.
   :name:      Tình Lính
-  :preview:   Anh là lính đa [G] tình tình non sông rất nặng [D] Tình hải hồ ôm [C]
-    mộng tình vũ trụ ngát [G] xan
+  :preview:   |
+    Anh là lính đa [Eb]tình tình non sông rất nặng 
+    [Eb7]Tình hải hồ ôm [G#7]mộng tình vũ trụ ngát [Eb]xanh 
   :sound: 0372,0008,0196
 
 - !ruby/object:Hash
@@ -676,8 +685,9 @@
   :play_link: https://www.youtube.com/watch?v=sbNygSMdI7Y
   :href: https://hopamchuan.com/song/8302/tinh-vong/thienv
   :name: Tình Vọng
-  :preview: 'Tone gốc Bm: Capo 2 Ôi như mộng [Am]du hồn ta đang thoát đi tìm [Dm]em
-    Trong cơn dịu [G]êm tình đư'
+  :preview: |
+    1. Ôi như mộng [Bm]du hồn ta đang [B7]thoát đi tìm [Em]em [Em7] 
+    Trong cơn dịu [A]êm tình đưa ta [A7]đến nơi bình [D]yên [F#7] 
   :performer: Thanh
   :play_key:  Bm
   :pstyle: Slow rock
@@ -718,7 +728,7 @@
   :performer: Doan Cuong, Thien Huong
   :name:      Xin Một Ngày Mai Có Nhau
   :pname:     LK Xin Mot Ngay Mai Co Nhau - Cho Lan Cuoi
-  :preview:   'Tone gốc E: Capo 4 Còn lại [C]đây một buổi chiều ướt cơn [F]mưa Còn lại
+  :preview:   'Còn lại [C]đây một buổi chiều ướt cơn [F]mưa Còn lại
     [Dm]đây sương mù đường vắng'
   :perfnote: |
     Guitar:(Chord) String:5564 4453 -71231 - (143)
@@ -747,8 +757,11 @@
   :pstyle:  Techno
   :performer: Vanessa Hoang
   :name: Xin dành trọn cho em
-  :preview: 'ĐK: [Em] Xin dành [C] trọn cho em Ngàn [D] muôn chiếc hôn nồng [G] say
-    [Em] Xin ghì [C] chặt vai'
+  :preview: |
+    [Bbm]Xin dành [F#]trọn cho em 
+    Ngàn [G#]muôn chiếc hôn nồng [C#]say 
+    [Bbm]Xin ghì [F#]chặt vai em 
+    Đừng [Fm]buông lơi đôi cánh [Bbm]tay 
   :perfnote: |
     155 5655 5744 2321 155 5655 5744 21-71
     Sound: SuperPoly, Polysynth
@@ -777,11 +790,11 @@
   :play_link: https://www.youtube.com/watch?v=sxa2V4eG9RU
   :performer: Loc, Vanessa
   :name: Yêu Em Dài Lâu
-  :preview: 1. Em như cơn gió thu bay [G] bay nhè nhẹ Đưa anh đi tìm vần [Am] thơ
+  :preview: |
+    1. Em như cơn gió thu bay [G] bay nhè nhẹ Đưa anh đi tìm vần [Am] thơ
     Qua công viên lá rơi trên [D
 
-- !ruby/object:Hash
-  :name:      Đường Xưa
+- :name:      Đường Xưa
   :artist:    Lê Thụ
   :chords:    Am B7 D7 Dm E7 Em F G
   :href:      https://hopamchuan.com/song/1230/duong-xua/thienv
@@ -789,7 +802,8 @@
   :performer: Quể Hương
   :play_key:  Fm
   :play_link: https://www.youtube.com/watch?v=Vj8Ssl_NYy4&feature=youtu.be
-  :preview:   Capo 3 [Em]Bước trên đường về em thương [Am]nhớ anh âm thầm [D7]Nhớ bao
+  :preview:   |
+    [Em]Bước trên đường về em thương [Am]nhớ anh âm thầm [D7]Nhớ bao
     hẹn thề xưa êm [G]ấm [Dm]Nhữ
   :perfnote: |
     Intro #1: 5854323453111 2321-(76789755) 585432345311 24321-71231
@@ -797,8 +811,7 @@
     Sound: Piano, Violin, Accordeon
   :sound: 0009/0118,0009,0191
 
-- !ruby/object:Hash
-  :artist:    Đan Nguyên
+- :artist:    Đan Nguyên
   :chords:    Am Am7 Bb C Dm Dm7 F Gm
   :play_link: https://www.youtube.com/watch?v=zEqj3Vz5Iuk
   :performer: Yen Phuong
@@ -807,8 +820,9 @@
   :play_key:  Am
   :href:      https://hopamchuan.com/song/4726/dap-mo-cuoc-tinh/thienv
   :name:      Đắp Mộ Cuộc Tình
-  :preview:   1. Say giấc mộng ban [Dm] đầu yêu [Bb] người thủa mới đôi [F] mươi em
-    [C] đang độ trăng [Dm] tròn
+  :preview:   |
+    1. Say giấc mộng ban [Am]đầu yêu người thủa mới đôi mươi em đang độ trăng tròn 
+    Từng ngày qua [F]phố áo [G]em trắng cả đường [C]về 
   :perfnote:  |
     +(131)75 575431 242(-75) 575431
     C Am Em/G Am
@@ -841,7 +855,7 @@
   :href: https://hopamchuan.com/song/811/dong-xanh/
   :performer: Lưu Quang Khải
   :name: Đồng Xanh
-  :preview: 'Tone gốc Cm: Capo 3 [Am]Đồng xanh là [Dm]chốn đây [Am]thiên đàng cỏ [E7]cây
+  :preview: '[Am]Đồng xanh là [Dm]chốn đây [Am]thiên đàng cỏ [E7]cây
     [Am]Là nơi bầy [Dm]thú h'
 
 - !ruby/object:Hash
@@ -853,8 +867,9 @@
   :pstyle:   Rhumba
   :performer: Oánh Phạm
   :name:     Ở Nơi Nào Em Còn Nhớ
-  :preview:  'Ở nơi nào em còn nhớ Tác giả: Ngô Thụy Miên Từ em [Gm] đi mùa xuân lặng
-    [Cm] lẽ cánh hoa [Gm] u sầu'
+  :preview:  |
+    Từ em [Am]đi mùa xuân lặng [Dm]lẽ cánh hoa [Am]u sầu [Bdim] [E] 
+    Từ em [Am]đi hạ thêm buồn [Dm]vắng nắng mưa [Dm6]phai màu 
   :perfnote: |
     123 232-7 321 123 232-7 321
     Gm F Gm F
@@ -923,8 +938,11 @@
   :play_link: https://www.youtube.com/watch?v=XTH2tx749MQ&list=RDXTH2tx749MQ&t=10
   :name: Nếu Tình Em Còn Đây (Si L'amour Existe Encore)
   :pname: Si L'amour Existe Encore
-  :preview: Si l'amour existe en[Dm]core [G7] Il res[E7]semble à ton [Am]corps Si
-    l'a[F]mour existe en[G]core
+  :preview: |
+    Si l'amour existe en[Am]core [D7] 
+    Il res[B7]semble à ton [Em]corps 
+    Si l'a[C]mour existe en[D]core 
+    Serre [B7]moi encore plus [Em]fort 
   :pstyle:  Slow
   :performer: Mai Nguyen
   :play_key: G
@@ -974,11 +992,15 @@
   :play_link: https://www.youtube.com/watch?v=xWbrAIqhFAw
   :name:    Thiên Đường Ái Ân
   :pname:   LK Thiên Đường Ái Ân
-  :preview: "[G]Đường nào vào thiên đàng ái[D7] ân [C]Là đường vào nhịp thở lâng[G]-lâng
-    Mùa[E7] Xuân đang đi t"
+  :preview: |
+    [E]Đường nào vào thiên đàng ái[B7]ân 
+    [A]Là đường vào nhịp thở lâng[E]-lâng 
+    Mùa[C#7]Xuân đang đi trong lời yêu[F#m]mới 
+    Có hoa[B7]vàng phủ đường 
+    mòn gót chân[E]mềm. 
   :pstyle:  Chachacha
   :performer: Hồng Vân
-  :play_key: Em
+  :play_key: E
   :perfnote: |
     1 1# 2m 5 1 1# 2m 5  111 1# 222 5 111 1# 222 555 5
     4 14143 -(5-35)223 148765 23458 888
@@ -1018,8 +1040,9 @@
   :artist: The Beatles
   :chords: Am C Dm Em F G
   :name: Let It Be
-  :preview: "(Intro) [C] [G] [Am] [F] [C] [G] [F] [C] [Dm] [C] (Verse 1) When I [C]find
-    myself in [G]times of tro"
+  :preview: |
+    When I [C]find myself in [G]times of trouble, [Am]Mother Mary [F]comes to me 
+    [C]Speaking words of [G]wisdom, let it [F]be [C Dm C] 
   :performer: Phi
   :pstyle:    Slow
   :play_key:  C
@@ -1032,8 +1055,9 @@
   :chords: A7 Bb C C7 Dm E7 F Gm
   :href: https://hopamchuan.com/song/3022/tinh-cho-khong/thienv
   :name: Tình Cho Không
-  :preview: "[Dm]Ngon như là trái [Gm]táo [C7]chín Thơm như vườn hoa [F]kín [Bb] Mong
-    manh như dây tơ [A7]chìm"
+  :preview: |
+    Comme une salaman[Gm]dre, [C]l'amour est merveil[Fmaj7]leux 
+    [Bb]Et renait de ses [A]cendres comme l'oiseau de [Dm]feu, 
   :performer: Thien
   :pstyle:    Tango
   :play_key:  Dm
