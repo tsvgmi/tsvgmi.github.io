@@ -42,6 +42,17 @@
 <div class='small badge badge-danger'>Thong</div>
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Dm</div>
+<div class='pull-right'>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/intro-ve-duoi-mai-nha.mp3&#39;, false, 0, 95)' title='Play intro for LK Về Dưới Mái Nhà - Khúc Hát Ân Tình'>
+<i class='fa fa-play'></i>
+</a>
+<a href='#' onclick='return stop_audio()'>
+<i class='fa fa-pause'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/intro-ve-duoi-mai-nha.mp3&#39;, true, 0, 90)' title='Loop intro for LK Về Dưới Mái Nhà - Khúc Hát Ân Tình'>
+<i class='fa fa-repeat'></i>
+</a>
+</div>
 </h5>
 <p class='text-muted'>Người [Em] ơi, mau về đây, [G] về bên bếp [Em] hồng tay cầm tay [G] Cười lên chan [C] chứa tươi làn</p>
 </div>
@@ -51,6 +62,9 @@
 <div class='small badge badge-danger'>Chachacha</div>
 <div class='small badge badge-danger'>Dm</div>
 <div class='small badge badge-danger'>Thong</div>
+<a href='https://www.youtube.com/watch?v=wQPbD6_3Pro' target='play_link'>
+<i class='fa fa-music'></i>
+</a>
 </h5>
 <div class='text-muted small'></div>
 </div>
@@ -352,7 +366,7 @@
 <div class='col-md-4'>
 <span class='sname pull-right'>tinh-cho-khong</span>
 <h4>
-<a data-height='850' data-toggle='lightbox' data-type='url' data-width='1400' href='https://hopamchuan.com/song/3022/tinh-cho-khong/'>
+<a data-height='850' data-toggle='lightbox' data-type='url' data-width='1400' href='https://hopamchuan.com/song/3022/tinh-cho-khong/thienv'>
 10. Tình Cho Không
 </a>
 </h4>
@@ -864,6 +878,9 @@
 <i class='fa fa-pause'></i>
 </a>
 <a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/intro-let-it-be.mp3&#39;, true, 0, 90)' title='Loop intro for Let It Be'>
+<i class='fa fa-repeat'></i>
+</a>
+<a data-toggle='tooltip' href='#' onclick='return play_audio(&#39;/audio/solo-let-it-be.mp3&#39;, true, 0, 90)' title='Loop solo for Let It Be'>
 <i class='fa fa-repeat'></i>
 </a>
 </div>
@@ -2260,7 +2277,7 @@
 <hr>
 
 <footer>
-<div class='small text-muted'>2017-10-12 23:17:33 -0700</div>
+<div class='small text-muted'>2017-10-13 01:12:23 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' src='https://code.jquery.com/jquery-3.2.1.slim.min.js'></script>
@@ -2269,7 +2286,7 @@
 <script src='/js/ekko-lightbox.js'></script>
 <script src='/js/howler.js'></script>
 <script>
-  var cur_sound = null;
+  var cur_sound  = null;
   
   function play_audio(file, isloop, start, stop) {
     if (cur_sound != null) {
@@ -2286,6 +2303,7 @@
     cur_sound.play('intro');
     return false;
   };
+  
   function stop_audio() {
     if (cur_sound != null) {
       cur_sound.stop();

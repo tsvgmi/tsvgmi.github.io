@@ -907,6 +907,7 @@
   :artist: Quốc Đại
   :chords: A Am B B7 Bsus4 C C#m D E E7 Em F#m G
   :href: https://hopamchuan.com/song/5218/ve-duoi-mai-nha/
+  :play_link: https://www.youtube.com/watch?v=wQPbD6_3Pro
   :name: Về Dưới Mái Nhà
   :pname: 'LK Về Dưới Mái Nhà - Khúc Hát Ân Tình'
   :preview: Người [Em] ơi, mau về đây, [G] về bên bếp [Em] hồng tay cầm tay [G] Cười
@@ -1025,7 +1026,7 @@
 - !ruby/object:Hash
   :artist: Khánh Ly
   :chords: A7 Bb C C7 Dm E7 F Gm
-  :href: https://hopamchuan.com/song/3022/tinh-cho-khong/
+  :href: https://hopamchuan.com/song/3022/tinh-cho-khong/thienv
   :name: Tình Cho Không
   :preview: "[Dm]Ngon như là trái [Gm]táo [C7]chín Thơm như vườn hoa [F]kín [Bb] Mong
     manh như dây tơ [A7]chìm"
