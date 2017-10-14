@@ -25,6 +25,12 @@ get '/program/:event' do |event|
   haml :program, locals: {plist:plist}
 end
 
+get '/master/:event' do |event|
+  ord_list   = YAML.load_file("#{event}.order2")
+  song_store = load_songs(event)
+  haml :master, locals: {ord_list:ord_list, song_store:song_store}
+end
+
 get '/send_patch/:pstring' do |pstring|
   command = "bk50set.rb apply_midi #{pstring}"
   presult = JSON.parse(`#{command}`)
@@ -33,17 +39,15 @@ end
 
 helpers do
   def load_plist(event)
+    p2list = load_songs(event)
+    order_list = File.read("#{event}.order").split("\n")
+    order_list.map{|e| [e, p2list[e]]}
+  end
+
+  def load_songs(event)
     plist = YAML.load_file("#{event}.slist").each do |e|
       e[:sname] = e[:href] ? e[:href].split('/')[5] : e[:name].downcase
             end
-    ord_file   = "#{event}.order"
-    order_list = if test(?s, ord_file)
-      File.read(ord_file).split("\n")
-    else
-      plist.map{|r| r[:sname]}.sort
-    end
-    p2list = Hash[plist.map{|e| [e[:sname], e]}]
-    Plog.dump_info(p2list:p2list)
-    order_list.map{|e| [e, p2list[e]]}
+    Hash[plist.map{|e| [e[:sname], e]}]
   end
 end

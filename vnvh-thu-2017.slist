@@ -768,17 +768,17 @@
 - !ruby/object:Hash
   :artist: Quang Hà
   :chords: Bm C D Em G
-  :play_key:  Bbm(Am+1)
+  :play_key:  Abm(Am-1)
   :href: https://hopamchuan.com/song/12229/xin-danh-tron-cho-em/
   :play_link: https://www.youtube.com/watch?v=TZxkvcwIwhc
   :pstyle:  Techno
   :performer: Vanessa Hoang
   :name: Xin dành trọn cho em
   :preview: |
-    [Bbm]Xin dành [F#]trọn cho em 
-    Ngàn [G#]muôn chiếc hôn nồng [C#]say 
-    [Bbm]Xin ghì [F#]chặt vai em 
-    Đừng [Fm]buông lơi đôi cánh [Bbm]tay 
+    [G#m]Xin dành [E]trọn cho em 
+    Ngàn [F#]muôn chiếc hôn nồng [B]say 
+    [G#m]Xin ghì [E]chặt vai em 
+    Đừng [Ebm]buông lơi đôi cánh [G#m]tay 
   :perfnote: |
     155 5655 5744 2321 155 5655 5744 21-71
     Sound: SuperPoly, Polysynth
@@ -1095,6 +1095,7 @@
   :tags:  [private]
 - :name:  Z_Piano-Acc-Guit_2
   :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
+  :tags:  [private]
 - :name:  Z_Tango
   :tags:  [private]
   :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009

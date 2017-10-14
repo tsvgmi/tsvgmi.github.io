@@ -1,0 +1,106 @@
+:css
+  .intro-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    color: #000;
+    background: url(../img/intro-bg.jpg) repeat-y center center;
+  }
+  .backup-song {
+    background-color: #ddd;
+  }
+  .sname {
+    color: #aaa;
+    font-size: 60%;
+  }
+  .prow {
+    border-bottom: 1px solid #888;
+  }
+
+- StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'danger', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
+
+- index = 0
+#accordion(role="tablist" aria-multiselectable=true)
+- ord_list.each_with_index do |asection, sec_no|
+  - sec_name  = "section_#{sec_no+1}"
+  - csec_name = "csection_#{sec_no+1}"
+  .card
+    .card-header.intro-header(role="tab" id=sec_name)
+      %h3.mb-0
+        %a(data-toggle="collapse" data-parent="#accordion" href="##{csec_name}" aria-expanded="true" aria-controls=csec_name)= asection['name']
+    - col_class = (sec_no == 0) ? "collapse show" : "collapse"
+    %div(class=col_class id=csec_name role="tabpanel" aria-labelledby=sec_name)
+      .card-block
+        - asection['list'].each do |aname|
+          - sentry = song_store[aname]
+          - next unless sentry
+          - index += 1
+          - tags = sentry[:tags] || []
+          - rowclass = tags.include?('backup') ? 'backup-song' : ''
+          - next if (params[:publish] && tags.include?('private'))
+          %a(name="s#{index}")
+          %div(class="row prow #{rowclass}")
+            .col-md-4
+              - pname  = sentry[:pname] || sentry[:name]
+              - pstyle = (sentry[:pstyle] || '').downcase
+              - href   = sentry[:href]
+              %span.sname.pull-right= sentry[:sname]
+              %h4
+                -#%a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
+                %a(href=href)
+                  = "#{index}. #{pname}"
+              %h5
+                - btype  = StyleColor[pstyle] || 'secondary'
+                - sclass = "small badge badge-#{btype}"
+                %div(class=sclass)= sentry[:performer]
+                %div(class=sclass)= sentry[:pstyle]
+                %div(class=sclass)= sentry[:play_key]
+                - soundfile = nil
+                - if sentry[:href]
+                  - sname = sentry[:href].split('/')[5]
+                  - soundfile = "#{sname}.mp3"
+                  - start, stop = 0, 90
+                - if soundfile && test(?s, "audio/intro-#{soundfile}")
+                  .pull-right
+              %p.small.text-muted= (sentry[:preview] || "")[0..100]
+            - ptarget = "pad_#{index}"
+            .col-md-4(id=ptarget)
+            .col-md-4
+              %h5
+                - if !params[:publish] && (value = sentry[:sound])
+                  - pstring = value.to_s.gsub('/', '+')
+                  %a(class=sclass href='#' onclick="return send_patch('#{pstring}', '##{ptarget}')")= value
+                .pull-right
+                  %div(class=sclass)= sentry[:pstyle]
+                  %div(class=sclass)= sentry[:play_key]
+                  %div(class=sclass)= sentry[:performer]
+
+              .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
+              - if soundfile && test(?s, "audio/intro-#{soundfile}")
+                - ['intro', 'solo'].each do |segment|
+                  - next unless test(?s, "audio/#{segment}-#{soundfile}")
+                  .pull-right
+                    = "#{segment.capitalize}[#{sentry[:skey]}]"
+                    %audio.pull-right(controls loop)
+                      %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
+                    - if value = sentry[:play_link]
+                      %a(href=value target='play_link')
+                        %i.fa.fa-music
+
+- content_for :javascript do
+  :javascript
+    function send_patch(pstring, target) {
+      jQuery.get("/send_patch/" + pstring, function(data) {
+        $(target).html(data);
+      });
+      return false;
+    };
+
+    $(document).ready(function() {
+      $(document).on('click', '[data-toggle="lightbox"]',
+        function(event) {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+        });
+      $('[data-toggle="tooltip"]').tooltip({"html":true}); 
+    });
