@@ -29,7 +29,7 @@
       %h3.mb-0
         %a(data-toggle="collapse" data-parent="#accordion" href="##{csec_name}" aria-expanded="true" aria-controls=csec_name)= asection['name']
     - col_class = (sec_no == 0) ? "collapse show" : "collapse"
-    %div(class=col_class id=csec_name role="tabpanel" aria-labelledby=sec_name)
+    .collapse.show(id=csec_name role="tabpanel" aria-labelledby=sec_name)
       .card-block
         - asection['list'].each do |aname|
           - sentry = song_store[aname]

@@ -614,6 +614,8 @@
   :perfnote: |
     -53321 11(7865) -54432 232345 16654 -7554 -64432 2345431 -- ~~
     Chord: | 1m | 1m | 4m | 5 1 | 4m 7 | 3 6 | 4m 5 | 1m 4m 5 | 1m
+    Sound: Violin, String
+  :sound:   307
 
 - !ruby/object:Hash
   :artist:    Lâm Nhật Tiến, Nguyên Khang
