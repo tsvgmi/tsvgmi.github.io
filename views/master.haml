@@ -44,11 +44,10 @@
               - pname  = sentry[:pname] || sentry[:name]
               - pstyle = (sentry[:pstyle] || '').downcase
               - href   = sentry[:href]
-              %span.sname.pull-right= sentry[:sname]
-              %h4
+              %h5
                 -#%a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
-                %a(href=href target='hac')
-                  = "#{index}. #{pname}"
+                %a(href=href target='hac')= "#{index}. #{pname}"
+              .sname= sentry[:sname]
               %h5
                 - btype  = StyleColor[pstyle] || 'secondary'
                 - sclass = "small badge badge-#{btype}"
