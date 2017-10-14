@@ -66,6 +66,7 @@
             - ptarget = "pad_#{index}"
             .col-md-4(id=ptarget)
             .col-md-4
+              - noteid = "note_#{index}"
               %h5
                 - if !params[:publish] && (value = sentry[:sound])
                   - pstring = value.to_s.gsub('/', '+')
@@ -73,19 +74,20 @@
                 .pull-right
                   %div(class=sclass)= sentry[:pstyle]
                   %div(class=sclass)= sentry[:play_key]
-                  %div(class=sclass)= sentry[:performer]
+                  %a(class=sclass data-toggle="collapse" href="##{noteid}" aria-expanded="false" aria-controls=noteid)= sentry[:performer]
 
-              .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
-              - if soundfile && test(?s, "audio/intro-#{soundfile}")
-                - ['intro', 'solo'].each do |segment|
-                  - next unless test(?s, "audio/#{segment}-#{soundfile}")
-                  .pull-right
-                    = "#{segment.capitalize}[#{sentry[:skey]}]"
-                    %audio.pull-right(controls loop)
-                      %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
-                    - if value = sentry[:play_link]
-                      %a(href=value target='play_link')
-                        %i.fa.fa-music
+              .collapse(id=noteid)
+                .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
+                - if soundfile && test(?s, "audio/intro-#{soundfile}")
+                  - ['intro', 'solo'].each do |segment|
+                    - next unless test(?s, "audio/#{segment}-#{soundfile}")
+                    .pull-right
+                      = "#{segment.capitalize}[#{sentry[:skey]}]"
+                      %audio.pull-right(controls loop)
+                        %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
+                      - if value = sentry[:play_link]
+                        %a(href=value target='play_link')
+                          %i.fa.fa-music
 
 - content_for :javascript do
   :javascript
