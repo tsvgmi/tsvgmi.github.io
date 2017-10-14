@@ -1090,15 +1090,20 @@
   :play_key:  Dm
   :play_link: https://www.youtube.com/watch?v=s_MmpXb2YGI
 
-- :name:  Z_Piano-Acc-Guit
+- :name:  Z_Piano-Acc-Guit_1
   :sound: 0005/0115/0124/0250/0299/0465/0502/0674/0819,0286
-- :name:  Z_Piano-Acc-Guit
+  :tags:  [private]
+- :name:  Z_Piano-Acc-Guit_2
   :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
 - :name:  Z_Tango
+  :tags:  [private]
   :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
 - :name:  Z_Valse
   :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
+  :tags:  [private]
 - :name:  Z_Slow-Rumba
   :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
+  :tags:  [private]
 - :name:  Z_New-Wave
   :sound: 0006/0116/0125/0251/0300/0466/509/0675/0820,0009
+  :tags:  [private]

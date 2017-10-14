@@ -41,7 +41,9 @@
       %hr/
     - next
   - index += 1
-  - rowclass = (sentry[:tags] || []).include?('backup') ? 'backup-song' : ''
+  - tags = sentry[:tags] || []
+  - rowclass = tags.include?('backup') ? 'backup-song' : ''
+  - next if (params[:publish] && tags.include?('private'))
   %a(name="s#{index}")
   %div(class="row prow #{rowclass}")
     .col-md-4
@@ -71,7 +73,7 @@
     .col-md-4.intro-header(id=ptarget)
     .col-md-4
       %h5
-        - if value = sentry[:sound]
+        - if !params[:publish] && (value = sentry[:sound])
           - pstring = value.to_s.gsub('/', '+')
           %a(class=sclass href='#' onclick="return send_patch('#{pstring}', '##{ptarget}')")= value
         .pull-right
