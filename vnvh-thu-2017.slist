@@ -782,6 +782,7 @@
   :perfnote: |
     155 5655 5744 2321 155 5655 5744 21-71
     Sound: SuperPoly, Polysynth
+  :sound: 502
 
 - !ruby/object:Hash
   :artist:    Patty Ryan
