@@ -25,6 +25,12 @@ get '/program/:event' do |event|
   haml :program, locals: {plist:plist}
 end
 
+get '/send_patch/:pstring' do |pstring|
+  command = "bk50set.rb apply_midi #{pstring}"
+  presult = JSON.parse(`#{command}`)
+  haml :patch_info, locals: {presult:presult}, layout:nil
+end
+
 helpers do
   def load_plist(event)
     plist = YAML.load_file("#{event}.slist").each do |e|
@@ -37,6 +43,7 @@ helpers do
       plist.map{|r| r[:sname]}.sort
     end
     p2list = Hash[plist.map{|e| [e[:sname], e]}]
+    Plog.dump_info(p2list:p2list)
     order_list.map{|e| [e, p2list[e]]}
   end
 end

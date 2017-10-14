@@ -15,7 +15,7 @@
 - !ruby/object:Hash
   :artist:    Khắc Việt
   :chords:    Am C Dm E7 Em F G
-  :play_key:  Bm
+  :play_key:  Bm(Am+2)
   :play_link: https://www.youtube.com/watch?v=htRIWEclktg
   :href:      https://hopamchuan.com/song/1797/anh-khac-hay-em-khac/
   :pstyle:    Techno
@@ -117,7 +117,7 @@
 - !ruby/object:Hash
   :artist:    Ánh Tuyết
   :chords:    A B7 Bm C C#m D E Em G
-  :play_key:  Bbm
+  :play_key:  Bbm(Am+1)
   :href:      https://hopamchuan.com/song/5973/ben-xuan/
   :play_link: https://www.youtube.com/watch?v=2v-mkRs1ck4
   :pstyle:    Slow
@@ -127,6 +127,7 @@
     Nhà [Bbm]tôi bên chiếc cầu soi [C#]nước 
     Em đến [F#]tôi [Fm]một [Bbm]lần 
     Bao lũ chim [Fm]rừng họp đàn trên khắp bến [Bbm]xuân 
+  :skey:     -5
   :perfnote: |
     (3) Str:5678 F:5678 Str:1232 F:1232 S:45 F:56765435 S:1-(545)
     Sound: String, Flute, Guita
@@ -187,6 +188,7 @@
   :perfnote: |
     Intro 1 (Ho Le Thu): 1155511 115551 1551  1551
     Dm F Gm Dm (x2)
+  :skey:     -2
   :perfnote_0: |
     55645 3534 2423 44645 3534 2431
     Intro 2 (Twist): Dm G Dm A G Dm A
@@ -201,10 +203,11 @@
   :pstyle:    Bebop
   :performer: Oánh Phạm
   :name:      Giã Từ Đêm Mưa
+  :skey:      5
   :preview:   Ðêm [Am]khuya mưa [Am7]rơi rơi trên đường [Dm]vắng [Dm7] Ðôi [G]chân lang
     [G7]thang tâm tư trầm [C]l
   :perfnote:  |
-    +(321)6451[x3] 4444445 5 53413-71 -7135341312-71 53413-715 -713444 4445
+    +(3212)785[x3] 4444#4#4#5 5 53413-71[x3] 444 4#4#4#5
     Chord: 1m[x6] |4m 4+ | 5  | 1m | 7 | 6 | 5 | 1m | 7 | 4m 4+ | 5 
 
 - !ruby/object:Hash
@@ -381,6 +384,7 @@
     5 +(3322) 59988 121-7 16-(67656)4 +(56545)45675
     78 5656 +(32) 4545 +(21)
     Sound: Accordeon, String, Sax, Harp
+  :sound: 306+365
 
 - !ruby/object:Hash
   :artist: Lệ Quyên
@@ -403,12 +407,14 @@
   :pstyle:    Boston
   :performer: Thuy Dung
   :name:      Mùa Hè Đẹp Nhất
+  :skey:      2
   :preview:   |
     1. [Gm]Chiều trên phố vắng [Cm7]ray rứt tiếng mưa buồn rơi 
     [G#]Ngày qua rất [Gm]vội mây [Adim]xám giăng mờ ngõ [D]tối 
     [Gm]Mùa Thu sao đã đến [Cm]cho lá úa trên hàng 
   :perfnote: |
     Intro: 534231 534231 (Gm) then (Dm) then (Cm) (String: 1321 1321) (Gm)
+    Low String: 15+(125)
     Am Em Dm Am 
   :sound: 0290,0009,0188
 
@@ -520,7 +526,7 @@
   :preview:   Người có [Em]thương thân tôi nghệ [G]sĩ. Thì đừng có [Em]thương như thương
     hại [C]đời . Và đừng có
   :perfnote: |
-    Intro (PTT): 1754435 154313 21-7-5 1321-71
+    Intro (PTT): 7545 315 7534 314 4543 432 321 (6545241)
     Intro (TPB):  Am C D Em-G Am C D G-Am
   :sound: 0319/0486,0578,0005 
 
@@ -563,7 +569,7 @@
 - !ruby/object:Hash
   :artist: Thanh Lan
   :chords: Am Bb C C7 Dm Dm6 E7 F G
-  :play_key: Cm/Eb/Ab/C
+  :play_key: Cm/Eb/Ab
   :href: https://hopamchuan.com/song/11624/song-nuoc-biec/
   :play_link: https://www.youtube.com/watch?v=fDGPaKxacpQ
   :pstyle:  Waltz
@@ -573,8 +579,10 @@
     1. [G7]Một dòng sông sâu cuồn cuộn [Cm]sóng trôi về nơi đâu 
     [Fm]Gió đưa buồm [Cm]nâu mang tâm [G7]hồn vào cõi u [Cm]sầu 
   :perfnote: |
-    -5135 +3985 7642 4321 . -5135 +3985 7642 4321
+    Intro: -5135 +3985 7642 4321 . -5135 +3985 +(22b2321)
+    Out: 1-512-723134245 56765 56778 58
     Orchestra String
+  :sound: 300
 
 - !ruby/object:Hash
   :artist:    Lệ Quyên, Quang Lê
@@ -591,12 +599,13 @@
 - !ruby/object:Hash
   :artist:    Thế Sơn
   :chords:    Am B B7 C C#dim D#aug E Em Em7/D F#dim F#dim7
-  :play_key:  Fm
+  :play_key:  Fm(Em+1)
   :play_link: https://www.youtube.com/watch?v=nFjcrIbFmIc
   :href:      https://hopamchuan.com/song/12121/sau-lang/
   :pstyle:    Tango
   :performer: Mai Nguyen
   :name:      Sầu Lắng
+  :skey:      1
   :preview:   |
     Chiều lắng nắng trên đường [Fm]đã tắt 
     Vài chiếc lá khô vàng [Gdim7]rơi 
@@ -676,6 +685,7 @@
   :href:      https://hopamchuan.com/song/7021/tinh-linh/thienv
   :pstyle:    Twist
   :performer: Quan C.
+  :skey:      5
   :name:      Tình Lính
   :preview:   |
     Anh là lính đa [Eb]tình tình non sông rất nặng 
@@ -694,9 +704,11 @@
   :performer: Thanh
   :play_key:  Bm
   :pstyle: Slow rock
+  :sound: 365
   :perfnote: |
-    Sax: 5+(3212)55 77665763 -(677665765) / 189856 178756 65- 43-521
+    Sax: 5+(3212)55 77665763 -(677665765) / 189857 178756 65-7 54-6 43-521
     Chord: 1m 6 5 / 1 4m 7 4m 5 4m 5 6 5
+    Chord: Am F E / A Dm G Dm E Dm E F E
 
 - !ruby/object:Hash
   :artist: Duy Quang
@@ -728,6 +740,7 @@
   :href:      https://hopamchuan.com/song/6278/xin-mot-ngay-mai-co-nhau/thienv
   :play_link: https://www.youtube.com/watch?v=6RfuLMUGsk8
   :pstyle:    Slow
+  :skey:      -2
   :performer: Doan Cuong, Thien Huong
   :name:      Xin Một Ngày Mai Có Nhau
   :pname:     LK Xin Mot Ngay Mai Co Nhau - Cho Lan Cuoi
@@ -746,6 +759,7 @@
   :pstyle:    Slow
   :performer: Thuy Dung
   :name:      Xin thời gian ngừng trôi
+  :skey:      0
   :preview:   "[Dm]Rượu nồng cạn chén bên [Gm]người Tình [C7]ái ấm nồng [F]chứa chan
     [A7] [Dm]Mong thời gian thô"
   :perfnote: |
@@ -754,7 +768,7 @@
 - !ruby/object:Hash
   :artist: Quang Hà
   :chords: Bm C D Em G
-  :play_key:  Bbm
+  :play_key:  Bbm(Am+1)
   :href: https://hopamchuan.com/song/12229/xin-danh-tron-cho-em/
   :play_link: https://www.youtube.com/watch?v=TZxkvcwIwhc
   :pstyle:  Techno
@@ -796,6 +810,9 @@
   :preview: |
     1. Em như cơn gió thu bay [G] bay nhè nhẹ Đưa anh đi tìm vần [Am] thơ
     Qua công viên lá rơi trên [D
+  :skey:     2
+  :perfnote: |
+    ~~ 1 132124-6 -(779878)3+5 1 33543446 -(779878) 111
 
 - :name:      Đường Xưa
   :artist:    Lê Thụ
@@ -814,9 +831,9 @@
     Sound: Piano, Violin, Accordeon
   :sound: 0009/0118,0009,0191
 
-- :artist:    Đan Nguyên
+- :artist:    Quang Lap
   :chords:    Am Am7 Bb C Dm Dm7 F Gm
-  :play_link: https://www.youtube.com/watch?v=zEqj3Vz5Iuk
+  :play_link: https://www.youtube.com/watch?v=zZjGBB5X3Z4
   :performer: Yen Phuong
   :pstyle:    Rhumba
   :tags: [ignore]
@@ -827,10 +844,13 @@
     1. Say giấc mộng ban [Am]đầu yêu người thủa mới đôi mươi em đang độ trăng tròn 
     Từng ngày qua [F]phố áo [G]em trắng cả đường [C]về 
   :perfnote:  |
+    78+388 788+875 ~~ 45755345-531 ~~ +378785 (8+3875) 5744345-531
+  :perfnote:  |
     +(131)75 575431 242(-75) 575431
     C Am Em/G Am
     Guitar, String
   :sound:     0236/0708,0236
+  :skey:      -6
 
 - !ruby/object:Hash
   :artist:    Bằng Kiều
@@ -870,13 +890,13 @@
   :pstyle:   Rhumba
   :performer: Oánh Phạm
   :name:     Ở Nơi Nào Em Còn Nhớ
+  :skey:     -2
   :preview:  |
     Từ em [Am]đi mùa xuân lặng [Dm]lẽ cánh hoa [Am]u sầu [Bdim] [E] 
     Từ em [Am]đi hạ thêm buồn [Dm]vắng nắng mưa [Dm6]phai màu 
   :perfnote: |
     123 232-7 321 123 232-7 321
-    Gm F Gm F
-    Nhac: 123 2324 4321-5 123 2324 432-6
+    Am G Am G
 
 - !ruby/object:Hash
   :artist: Thu Minh
@@ -897,6 +917,7 @@
   :performer: Kim-Dung
   :play_link: https://www.youtube.com/watch?v=fysK2UI_1hI
   :pstyle:   Chachacha
+  :skey:     2
   :perfnote: |
     8 57 47 35 
     Chord: 1m 7 6 5
@@ -964,7 +985,7 @@
   :chords: A Bm D Em F#m G
   :href: https://hopamchuan.com/song/3458/mua-thu-yeu-duong/
   :play_link: https://www.youtube.com/watch?v=n5OQmVQA5QE
-  :name: Mùa Thu Yêu Đương
+  :name: Mùa Thu Yêu Đ:eương
   :preview: Anh [D]muốn đôi [Em]ta mãi như người [D]tình Vui [Bm]đời hẹn [G]hò Khi
     trên dòng [Em]suối, Khi
   :pstyle:  Chachacha
@@ -985,6 +1006,7 @@
   :pstyle:  Twist
   :performer: Tu Yen, Ai Loan
   :play_key: C
+  :skey:     3
   :perfnote: |
     Drum intro - Chord: G7 5678
 
@@ -995,6 +1017,7 @@
   :play_link: https://www.youtube.com/watch?v=xWbrAIqhFAw
   :name:    Thiên Đường Ái Ân
   :pname:   LK Thiên Đường Ái Ân
+  :skey:    3
   :preview: |
     [E]Đường nào vào thiên đàng ái[B7]ân 
     [A]Là đường vào nhịp thở lâng[E]-lâng 
@@ -1052,6 +1075,7 @@
   :perfnote: |
     Chord: 1 5 6m F 1 5 4 1
     Sound: Piano (Rock), Organ, E Guitar
+    Out:   4321 -(76541)
 
 - !ruby/object:Hash
   :artist: Khánh Ly

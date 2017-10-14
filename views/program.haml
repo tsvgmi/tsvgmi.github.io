@@ -1,9 +1,9 @@
 :css
   .intro-header {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    color: #f8f8f8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    color: #000;
     background: url(../img/intro-bg.jpg) repeat-y center center;
   }
   .backup-song {
@@ -13,10 +13,13 @@
     color: #aaa;
     font-size: 60%;
   }
+  .prow {
+    border-bottom: 1px solid #888;
+  }
 
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'danger', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 
-- sections = [plist.select{|n,v| n =~ /^---/}.size + 1, 3].min
+- sections = plist.select{|n,v| n =~ /^---/}.size + 1
 %ul.list-inline
   - 1.upto(sections) do |sno|
     %li.list-inline-item
@@ -28,9 +31,9 @@
 %hr/
 - index = 0; sno = 2
 - plist.each do |aname, sentry|
+  -# Plog.dump_info(aname:aname, sentry:sentry)
   - unless sentry
     - if aname =~/^--/
-      - break if sno > 3
       %a(name="section_#{sno}")
       %h3
         %a(href="#top") Phần #{sno}
@@ -40,7 +43,7 @@
   - index += 1
   - rowclass = (sentry[:tags] || []).include?('backup') ? 'backup-song' : ''
   %a(name="s#{index}")
-  %div(class="row #{rowclass}")
+  %div(class="row prow #{rowclass}")
     .col-md-4
       - pname  = sentry[:pname] || sentry[:name]
       - pstyle = (sentry[:pstyle] || '').downcase
@@ -63,61 +66,40 @@
           - start, stop = 0, 90
         - if soundfile && test(?s, "audio/intro-#{soundfile}")
           .pull-right
-            - if false
-              %a(href='#' onclick="return play_audio('/audio/intro-#{soundfile}', false, #{start}, #{stop+5})" title="Play intro for #{pname}" data-toggle="tooltip")
-                %i.fa.fa-play
-              %a(href='#' onclick="return stop_audio()")
-                %i.fa.fa-pause
-              - ['intro', 'solo'].each do |segment|
-                - next unless test(?s, "audio/#{segment}-#{soundfile}")
-                %a(href='#' onclick="return play_audio('/audio/#{segment}-#{soundfile}', true, #{start}, #{stop})" title="Loop #{segment} for #{pname}" data-toggle="tooltip")
-                  %i.fa.fa-repeat
       %p.small.text-muted= (sentry[:preview] || "")[0..100]
-    .col-md-4.intro-header
+    - ptarget = "pad_#{index}"
+    .col-md-4.intro-header(id=ptarget)
     .col-md-4
-      %h5.pull-right
-        %div(class=sclass)= sentry[:pstyle]
-        %div(class=sclass)= sentry[:play_key]
-        %div(class=sclass)= sentry[:performer]
-        - if value = sentry[:play_link]
-          %a(href=value target='play_link')
-            %i.fa.fa-music
+      %h5
+        - if value = sentry[:sound]
+          - pstring = value.to_s.gsub('/', '+')
+          %a(class=sclass href='#' onclick="return send_patch('#{pstring}', '##{ptarget}')")= value
+        .pull-right
+          %div(class=sclass)= sentry[:pstyle]
+          %div(class=sclass)= sentry[:play_key]
+          %div(class=sclass)= sentry[:performer]
+
       .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
       - if soundfile && test(?s, "audio/intro-#{soundfile}")
         - ['intro', 'solo'].each do |segment|
           - next unless test(?s, "audio/#{segment}-#{soundfile}")
           .pull-right
-            = segment
+            = "#{segment.capitalize}[#{sentry[:skey]}]"
             %audio.pull-right(controls loop)
               %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
+            - if value = sentry[:play_link]
+              %a(href=value target='play_link')
+                %i.fa.fa-music
 
 - content_for :javascript do
-  %script(src="/js/howler.js")
   :javascript
-    var cur_sound  = null;
-
-    function play_audio(file, isloop, start, stop) {
-      if (cur_sound != null) {
-        cur_sound.stop();
-      }
-      
-      cur_sound = new Howl({
-        src:  [file],
-        loop: isloop,
-        sprite: {
-          intro: [start*1000, stop*1000]
-        }
+    function send_patch(pstring, target) {
+      jQuery.get("/send_patch/" + pstring, function(data) {
+        $(target).html(data);
       });
-      cur_sound.play('intro');
       return false;
     };
 
-    function stop_audio() {
-      if (cur_sound != null) {
-        cur_sound.stop();
-      }
-      return false;
-    }
     $(document).ready(function() {
       $(document).on('click', '[data-toggle="lightbox"]',
         function(event) {
