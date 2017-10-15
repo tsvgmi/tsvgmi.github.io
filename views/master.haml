@@ -63,7 +63,7 @@
                   .pull-right
               %p.small.text-muted= (sentry[:preview] || "")[0..100]
             - ptarget = "pad_#{index}"
-            .col-md-4(id=ptarget)
+            .col-md-4.small(id=ptarget)
             .col-md-4
               - noteid = "note_#{index}"
               %h5
@@ -80,7 +80,7 @@
                 - if soundfile && test(?s, "audio/intro-#{soundfile}")
                   - ['intro', 'solo'].each do |segment|
                     - next unless test(?s, "audio/#{segment}-#{soundfile}")
-                    .pull-right
+                    .pull-rlight
                       = "#{segment.capitalize}[#{sentry[:skey]}]"
                       %audio.pull-right(controls loop)
                         %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")

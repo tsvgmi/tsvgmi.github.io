@@ -55,7 +55,7 @@
 - !ruby/object:Hash
   :artist:    Đàm Vĩnh Hưng
   :chords:    A7 Am C C7 Dm E7 F G G7
-  :play_key:  Em
+  :play_key:  Am
   :href:      https://hopamchuan.com/song/371/bien-can/thienv
   :play_link: https://www.youtube.com/watch?v=sS24R25XLx0
   :pstyle:    Boston
@@ -368,6 +368,7 @@
   :perfnote: |
     Intro: Gm F Gm F (Singing) 87 76 6 6 7 7 5 5555
     Orchestra Hit, Fantasia, Horn
+  :sound:     593/395,822
 
 - !ruby/object:Hash
   :artist: Nguyên Khang, Diễm Liên
