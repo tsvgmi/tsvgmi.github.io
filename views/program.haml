@@ -19,79 +19,53 @@
 
 - StyleColor = {'bebop'=>'success', 'boston'=>'info', 'chachacha'=>'danger', 'newwave'=>'danger', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
 
-- sections = plist.select{|n,v| n =~ /^---/}.size + 1
-%ul.list-inline
-  - 1.upto(sections) do |sno|
-    %li.list-inline-item
-      %a(href="#section_#{sno}") Phần #{sno}
+%a.a-tooltip(data-toggle="collapse" href="#filters" aria-expanded="false" aria-controls="filters") Filters
+.collapse#filters
+  .row
+    .col-md-6
+      %h4 Performers
+      %form
+        %input.small.perf_sel(type="checkbox" value="All" checked)
+          %span.small All
+        - performers.each_with_index do |aperf, index|
+          %input.small.perf_sel(type="checkbox" value="perf_#{index}" checked)
+            %span.small= aperf
+    .col-md-6
+      %h4 Styles
+      %form
+        %input.small.sty_sel(type="checkbox" value="All" checked)
+          %span.small All
+        - styles.each do |astyle|
+          %input.small.sty_sel(type="checkbox" value="sty_#{astyle}" checked)
+            %span.small= astyle
 
-%a(name="section_1")
-%h3
-  %a(href="#top") Phần 1
-%hr/
-- index = 0; sno = 2
-- plist.each do |aname, sentry|
-  -# Plog.dump_info(aname:aname, sentry:sentry)
-  - unless sentry
-    - if aname =~/^--/
-      %a(name="section_#{sno}")
-      %h3
-        %a(href="#top") Phần #{sno}
-      - sno += 1
-      %hr/
-    - next
-  - index += 1
-  - tags = sentry[:tags] || []
-  - rowclass = tags.include?('backup') ? 'backup-song' : ''
-  - next if (params[:publish] && tags.include?('private'))
-  %a(name="s#{index}")
-  %div(class="row prow #{rowclass}")
-    .col-md-4
-      - pname  = sentry[:pname] || sentry[:name]
-      - pstyle = (sentry[:pstyle] || '').downcase
-      - href   = sentry[:href]
-      %span.sname.pull-right= sentry[:sname]
-      %h4
-        -#%a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
-        %a(href=href)
-          = "#{index}. #{pname}"
-      %h5
-        - btype  = StyleColor[pstyle] || 'secondary'
-        - sclass = "small badge badge-#{btype}"
-        %div(class=sclass)= sentry[:performer]
-        %div(class=sclass)= sentry[:pstyle]
-        %div(class=sclass)= sentry[:play_key]
-        - soundfile = nil
-        - if sentry[:href]
-          - sname = sentry[:href].split('/')[5]
-          - soundfile = "#{sname}.mp3"
-          - start, stop = 0, 90
-        - if soundfile && test(?s, "audio/intro-#{soundfile}")
-          .pull-right
-      %p.small.text-muted= (sentry[:preview] || "")[0..100]
-    - ptarget = "pad_#{index}"
-    .col-md-4.intro-header(id=ptarget)
-    .col-md-4
-      %h5
-        - if !params[:publish] && (value = sentry[:sound])
-          - pstring = value.to_s.gsub('/', '+')
-          %a(class=sclass href='#' onclick="return send_patch('#{pstring}', '##{ptarget}')")= value
-        .pull-right
-          %div(class=sclass)= sentry[:pstyle]
-          %div(class=sclass)= sentry[:play_key]
-          %div(class=sclass)= sentry[:performer]
-
-      .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
-      - if soundfile && test(?s, "audio/intro-#{soundfile}")
-        - ['intro', 'solo'].each do |segment|
-          - next unless test(?s, "audio/#{segment}-#{soundfile}")
-          .pull-right
-            = "#{segment.capitalize}[#{sentry[:skey]}]"
-            %audio.pull-right(controls loop)
-              %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
-            - if value = sentry[:play_link]
-              %a(href=value target='play_link')
-                %i.fa.fa-music
+- index = 0
+#accordion(role="tablist" aria-multiselectable=true)
+- ord_list.each_with_index do |asection, sec_no|
+  - sec_name  = "section_#{sec_no+1}"
+  - csec_name = "csection_#{sec_no+1}"
+  .card
+    .card-header.intro-header(role="tab" id=sec_name)
+      %h4.mb-0
+        %a(data-toggle="collapse" data-parent="#accordion" href="##{csec_name}" aria-expanded="true" aria-controls=csec_name)= asection['name']
+    - col_class = (sec_no == 0) ? "collapse show" : "collapse"
+    .collapse.show(id=csec_name role="tabpanel" aria-labelledby=sec_name)
+      .card-block
+        - asection['list'].each do |aname|
+          - sentry = song_store[aname]
+          - next unless sentry
+          - index += 1
+          - tags = sentry[:tags] || []
+          - rowclass = tags.include?('backup') ? 'backup-song' : ''
+          - next if (params[:publish] && tags.include?('private'))
+          - tags     = sentry[:tags] || []
+          - rowclass = tags.include?('backup') ? 'backup-song' : ''
+          - (sentry[:performer] || "").split(/\s*,\s*/).each do |aperf|
+            - rowclass += " perf_#{performers.index(aperf)}"
+          - rowclass += " sty_#{(sentry[:pstyle] || '').downcase}"
+          %a(name="s#{index}")
+          %div(class="row prow #{rowclass}")
+            = partial(:_show_song, locals:{sentry:sentry, index:index})
 
 - content_for :javascript do
   :javascript
@@ -103,10 +77,41 @@
     };
 
     $(document).ready(function() {
-      $(document).on('click', '[data-toggle="lightbox"]',
-        function(event) {
-          event.preventDefault();
-          $(this).ekkoLightbox();
-        });
-      $('[data-toggle="tooltip"]').tooltip({"html":true}); 
+      $('.a-tooltip').tooltip({"html":true}); 
+      $('.sty_sel').change(function () {
+        if (this.checked) {
+          if (this.value == "All") {
+            $('.prow').show();
+            $('.sty_sel').prop('checked', true);
+          } else {
+            $('.' + this.value).show();
+          }
+        } else {
+          if (this.value == "All") {
+            $('.prow').hide();
+            $('.sty_sel').prop('checked', false);
+          } else {
+            $('.' + this.value).hide();
+          }
+        }
+        console.log(this);
+      });
+      $('.perf_sel').change(function () {
+        if (this.checked) {
+          if (this.value == "All") {
+            $('.prow').show();
+            $('.perf_sel').prop('checked', true);
+          } else {
+            $('.' + this.value).show();
+          }
+        } else {
+          if (this.value == "All") {
+            $('.prow').hide();
+            $('.perf_sel').prop('checked', false);
+          } else {
+            $('.' + this.value).hide();
+          }
+        }
+        console.log(this);
+      });
     });

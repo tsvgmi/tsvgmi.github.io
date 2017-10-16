@@ -1,0 +1,51 @@
+.col-md-6
+  - pname  = sentry[:pname] || sentry[:name]
+  - pstyle = (sentry[:pstyle] || '').downcase
+  - href   = sentry[:href]
+  %h4
+    -#%a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
+    %a.a-tooltip(href=href target='hac' title="View lyric: #{pname}")= "#{index}. #{pname}"
+  .sname= sentry[:sname]
+  %h5
+    - lyric_id = "lyric_#{index}"
+    - btype    = StyleColor[pstyle] || 'secondary'
+    - sclass   = "small badge badge-#{btype}"
+    %div(class=sclass)= sentry[:performer]
+    %div(class=sclass)= pstyle.capitalize
+    %div(class=sclass)= sentry[:play_key]
+    - soundfile = nil
+    - if sentry[:href]
+      - sname = sentry[:href].split('/')[5]
+      - soundfile = "#{sname}.mp3"
+      - start, stop = 0, 90
+    - if soundfile && test(?s, "audio/intro-#{soundfile}")
+      .pull-right
+  %p.small.text-muted= (sentry[:preview] || "")[0..100]
+- ptarget = "pad_#{index}"
+.col-md-2.small(id=ptarget)
+.col-md-4
+  - noteid = "note_#{index}"
+  %h5
+    - if !params[:publish] && (value = sentry[:sound])
+      - pstring = value.to_s.gsub('/', '+')
+      %a.a-tooltip(class=sclass href='#' onclick="return send_patch('#{pstring}', '##{ptarget}')" title="Download patch")= value
+    .pull-right
+      %div(class=sclass)= pstyle.capitalize
+      %div(class=sclass)= sentry[:play_key]
+      %a.a-tooltip(class=sclass data-toggle="collapse" href="##{noteid}" aria-expanded="false" aria-controls=noteid title='Play details')
+        - if sentry[:perfnote]
+          %i.fa.fa-level-down
+        = sentry[:performer]
+
+  .collapse(id=noteid)
+    .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
+  - if soundfile && test(?s, "audio/intro-#{soundfile}")
+    - ['intro', 'solo'].each do |segment|
+      - next unless test(?s, "audio/#{segment}-#{soundfile}")
+      .pull-right
+        = "#{segment.capitalize}[T#{sentry[:skey]}]"
+        %audio.pull-right(controls loop)
+          %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
+        - if value = sentry[:play_link]
+          %a.a-tooltip(href=value target='play_link' title="Listen to full song: #{sentry[:name]}")
+            %i.fa.fa-music
