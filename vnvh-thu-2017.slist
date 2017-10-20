@@ -71,7 +71,7 @@
   :artist:    Bằng Kiều
   :play_key:  Dm
   :play_link: https://www.youtube.com/watch?v=Xg2V2YC6X4s
-  :href:      https://hopamchuan.com/song/1963/bai-khong-ten-cuoi-cung/
+  :href:      https://hopamchuan.com/song/1963/bai-khong-ten-cuoi-cung/thienv
   :pstyle:    Boston
   :performer: Thanh Chi
   :name:      Bài Không Tên Cuối Cùng
@@ -199,7 +199,7 @@
   :artist:    Hồng Ngọc, Đàm Vĩnh Hưng
   :play_key:  Dm
   :play_link: https://www.youtube.com/watch?v=tmY1NN7Vn1w
-  :href:      https://hopamchuan.com/song/664/dau-tinh-sau/
+  :href:      https://hopamchuan.com/song/664/dau-tinh-sau/thienv
   :performer: Kim-Dung
   :pstyle:    Slow
   :name:      Dấu Tình Sầu
@@ -215,7 +215,7 @@
 - !ruby/object:Hash
   :artist: Lệ Quyên
   :play_key:  Em
-  :href: https://hopamchuan.com/song/2248/han-mac-tu/
+  :href: https://hopamchuan.com/song/2248/han-mac-tu/thienv
   :play_link: https://www.youtube.com/watch?v=q6iTa9BhF9Q
   :pstyle:  rhumba
   :performer: Duy Linh
