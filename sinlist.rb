@@ -55,9 +55,6 @@ end
 
 get '/show_lyric' do
   url   = params[:url]
-  #lfile = "data/" + url.gsub('/', '#')
-  #unless test(?s, lfile)
-  #content = Net::HTTP.get(URI.parse(url))
   lyric_info(url).to_json
 end
 

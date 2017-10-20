@@ -97,7 +97,7 @@
 - !ruby/object:Hash
   :artist:    Tuấn Ngọc, Bằng Kiều
   :play_key:  Cm
-  :href:      https://hopamchuan.com/song/3950/ban-tinh-cuoi/
+  :href:      https://hopamchuan.com/song/3950/ban-tinh-cuoi/thienv
   :play_link: https://www.youtube.com/watch?v=hdKhE1aMRwY
   :pstyle:    slow
   :performer: Duy Linh
@@ -277,7 +277,7 @@
 - !ruby/object:Hash
   :artist:    Nguyễn Hưng
   :play_key:  Gm
-  :href:      https://hopamchuan.com/song/12122/huong/
+  :href:      https://hopamchuan.com/song/12122/huong/thienv
   :play_link: https://www.youtube.com/watch?v=iZZPqG3t6ro
   :pstyle:    Twist
   :performer: Dzuy Ngo
@@ -293,7 +293,7 @@
   :artist:    Như Quỳnh
   :play_key:  Am
   :play_link: https://www.youtube.com/watch?v=D0bB0O1DbVs
-  :href:      https://hopamchuan.com/song/11810/lenh-denh-phan-buon/
+  :href:      https://hopamchuan.com/song/11810/lenh-denh-phan-buon/thienv
   :pstyle:    Rhumba
   :performer: Yen Phương
   :name:      Lênh Đênh Phận Buồn
@@ -404,7 +404,7 @@
 
 - !ruby/object:Hash
   :artist: Quang Dũng
-  :href: https://hopamchuan.com/song/7454/mot-minh-quang-dung/
+  :href: https://hopamchuan.com/song/7454/mot-minh-quang-dung/thienv
   :play_link: https://www.youtube.com/watch?v=VD6bde5Qllk
   :performer: Anh Thu
   :name: Một Mình - Quang Dũng
@@ -578,7 +578,7 @@
 - !ruby/object:Hash
   :artist:    Lâm Nhật Tiến, Nguyên Khang
   :play_key:  Dm
-  :href:      https://hopamchuan.com/song/4002/se-hon-bao-gio-het/
+  :href:      https://hopamchuan.com/song/4002/se-hon-bao-gio-het/thienv
   :play_link: https://www.youtube.com/watch?v=XzYBbaiOGvc
   :pstyle:    Chachacha
   :play_key:  Dm
@@ -921,7 +921,7 @@
 
 - !ruby/object:Hash
   :artist: Don Hồ, Ngọc Huệ
-  :href: https://hopamchuan.com/song/3458/mua-thu-yeu-duong/
+  :href: https://hopamchuan.com/song/3458/mua-thu-yeu-duong/thienv
   :play_link: https://www.youtube.com/watch?v=n5OQmVQA5QE
   :name: Mùa Thu Yêu Đương
   :preview: Anh [D]muốn đôi [Em]ta mãi như người [D]tình Vui [Bm]đời hẹn [G]hò Khi

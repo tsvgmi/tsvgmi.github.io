@@ -40,32 +40,26 @@
             %span.small= astyle
 
 - index = 0
-#accordion(role="tablist" aria-multiselectable=true)
 - ord_list.each_with_index do |asection, sec_no|
   - sec_name  = "section_#{sec_no+1}"
   - csec_name = "csection_#{sec_no+1}"
-  .card
-    .card-header.intro-header(role="tab" id=sec_name)
-      %h4.mb-0
-        %a(data-toggle="collapse" data-parent="#accordion" href="##{csec_name}" aria-expanded="true" aria-controls=csec_name)= asection['name']
-    - col_class = (sec_no == 0) ? "collapse show" : "collapse"
-    .collapse.show(id=csec_name role="tabpanel" aria-labelledby=sec_name)
-      .card-block
-        - asection['list'].each do |aname|
-          - sentry = song_store[aname]
-          - next unless sentry
-          - index += 1
-          - tags = sentry[:tags] || []
-          - rowclass = tags.include?('backup') ? 'backup-song' : ''
-          - next if (params[:publish] && tags.include?('private'))
-          - tags     = sentry[:tags] || []
-          - rowclass = tags.include?('backup') ? 'backup-song' : ''
-          - (sentry[:performer] || "").split(/\s*,\s*/).each do |aperf|
-            - rowclass += " perf_#{performers.index(aperf)}"
-          - rowclass += " sty_#{(sentry[:pstyle] || '').downcase}"
-          %a(name="s#{index}")
-          %div(class="row prow #{rowclass}")
-            = partial(:_show_song, locals:{sentry:sentry, index:index})
+  %h4
+    %a(href="##{csec_name}")= asection['name']
+    - asection['list'].each do |aname|
+      - sentry = song_store[aname]
+      - next unless sentry
+      - index += 1
+      - tags = sentry[:tags] || []
+      - rowclass = tags.include?('backup') ? 'backup-song' : ''
+      - next if (params[:publish] && tags.include?('private'))
+      - tags     = sentry[:tags] || []
+      - rowclass = tags.include?('backup') ? 'backup-song' : ''
+      - (sentry[:performer] || "").split(/\s*,\s*/).each do |aperf|
+        - rowclass += " perf_#{performers.index(aperf)}"
+      - rowclass += " sty_#{(sentry[:pstyle] || '').downcase}"
+      %a(name="s#{index}")
+      %div(class="row prow #{rowclass}")
+        = partial(:_show_song, locals:{sentry:sentry, index:index})
 
 - content_for :javascript do
   :javascript
