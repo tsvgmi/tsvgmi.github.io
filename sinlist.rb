@@ -7,6 +7,7 @@ require 'sinatra/partial'
 require 'yaml'
 require 'net/http'
 require 'core'
+require Dir.pwd + '/bin/dbmodels'
 
 #set :bind, '0.0.0.0'
 
@@ -20,35 +21,36 @@ end
 
 get '/program/:event' do |event|
   ord_list   = YAML.load_file("#{event}.order")
-  song_store = load_songs(event)
+  song_store = load_songs(ord_list)
   performers = []
   styles     = []
   ord_list.each_with_index do |asection, sec_no|
     asection['list'].each do |aname|
+      aname, asinger = aname.split(',')
       sentry = song_store[aname]
       next unless sentry
-      if sentry[:performer]
-        performers += sentry[:performer].split(/\s*,\s*/)
+      #Plog.dump_info(sentry:sentry.keys)
+      if sentry[:singer]
+        performers += sentry[:singer].force_encoding('UTF-8').split(/\s*,\s*/)
       end
-      if sentry[:pstyle]
-        styles << sentry[:pstyle].downcase
+      if sentry[:style]
+        styles << sentry[:style].downcase
       end
     end
   end
   performers = performers.sort.uniq
   styles     = styles.sort.uniq
+  Plog.dump_info(performers:performers, styles:styles)
   haml :program, locals: {ord_list:ord_list, song_store:song_store,
                           performers:performers, styles:styles}
 end
 
-get '/knockout/:event' do |event|
-  ord_list   = YAML.load_file("#{event}.order")
-  song_store = load_songs(event)
-  haml :knockout, locals: {ord_list:ord_list, song_store:song_store}
-end
-
 get '/send_patch/:pstring' do |pstring|
   command = "bk50set.rb apply_midi #{pstring}"
+  if key = params[:key]
+    command += " --key #{key}" unless key.empty?
+  end
+  Plog.info(command)
   presult = JSON.parse(`#{command}`)
   haml :patch_info, locals: {presult:presult}, layout:nil
 end
@@ -59,11 +61,34 @@ get '/show_lyric' do
 end
 
 helpers do
-  def load_songs(event)
-    plist = YAML.load_file("#{event}.slist").each do |e|
-      e[:sname] = e[:href] ? e[:href].split('/')[5] : e[:name].downcase
-            end
-    Hash[plist.map{|e| [e[:sname], e]}]
+  def load_songs(ord_list)
+    songs = []
+    ord_list.each do |lpart|
+      songs    += lpart['list'].map{|se| se.split(',')[0]}
+    end
+    #Plog.dump_info(songs:songs)
+    song_list   = Hash[Song.where(name_k:songs).as_hash(:name_k).
+                       map{|k, v| [k, v.to_hash]}]
+    sound_list  = Hash[Sound.where(name_k:songs).as_hash(:name_k, nil).
+                       map{|k, v| [k, v.to_hash]}]
+
+    ord_list.each do |lpart|
+      lpart['list'].each do |sse|
+        name_k, singer = sse.split(',')
+        rec = nil
+        rec = Singer.first(name_k:name_k, singer:singer) if singer
+        rec ||= Singer.first(name_k:name_k)
+        if rec && song_list[name_k]
+          song_list[name_k].update(rec.to_hash)
+        end
+      end
+    end
+
+    song_list.each do |k, v|
+      v.update(sound_list[k]) if sound_list[k]
+    end
+    Plog.dump_info(song_list:song_list, _ofmt:'Y')
+    song_list
   end
 
   def lyric_info(url)

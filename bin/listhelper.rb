@@ -121,6 +121,21 @@ class ListHelper
       p2list = Hash[plist.map{|e| [e[:sname], e]}]
       order_list.map{|e| p2list[e]}
     end
+
+    def create_db
+       require 'sequel'
+
+       dbase = Sequel.connect('mysql://playlist:play123@localhost/Playlist')
+    end
+
+    def load_to_db(slist_file)
+       require 'sequel'
+
+       dbase = Sequel.connect('mysql://playlist:play123@localhost/Playlist')
+       YAML.load_file(slist_file).each do |se|
+         dbase[:songs].insert(record)
+       end
+    end
   end
 end
 

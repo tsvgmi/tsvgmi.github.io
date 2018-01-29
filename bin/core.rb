@@ -683,13 +683,16 @@ end
 require 'logger'
 class PLogger < Logger
   Format2 = "%s %s - [%s] %s\n"
+  @@_slevel = nil
+  @@_clevel = 0
   def format_message(severity, timestamp, progname, msg)
     # Look like this changes from diff versions.  So we need to detect
-    unless @__slevel
-      @__slevel = caller.index{|r| r =~ /`method_missing/} + 1
+    unless @@_slevel
+      # 2 if go through dump_info.  Will fix later
+      @@_slevel = caller.index{|r| r =~ /`method_missing/} + 2
     end
-    @__slevel ||= 6
-    script = caller[@__slevel].sub(/:in .*$/, '').sub(/^.*\//, '')
+    slevel = (@@_slevel || 6) + @@_clevel
+    script = caller[slevel].sub(/:in .*$/, '').sub(/^.*\//, '')
     if timestamp.respond_to?(:strftime)
       Format2 % [severity[0..0], timestamp.strftime("%y/%m/%d %T"), script, msg]
     else

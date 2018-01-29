@@ -1,51 +1,52 @@
 .col-md-6
-  - pname  = sentry[:pname] || sentry[:name]
-  - pstyle = (sentry[:pstyle] || '').downcase
-  - href   = sentry[:href]
+  - pname  = (sentry[:pname] || sentry[:name]).force_encoding('UTF-8')
+  - pstyle = (sentry[:style] || '').downcase
+  - href   = sentry[:lyric_url]
   %h4
-    -#%a(href=href data-toggle="lightbox" data-type="url" data-width="1400" data-height="850")
-    %a.a-tooltip(href=href target='hac' title="View lyric: #{pname}")= "#{index}. #{pname}"
+    %a.a-tooltip(href=href target='hac' title="View lyric")= "#{index}. #{pname}"
   .sname= sentry[:sname]
   %h5
     - lyric_id = "lyric_#{index}"
     - btype    = StyleColor[pstyle] || 'secondary'
     - sclass   = "small badge badge-#{btype}"
-    %div(class=sclass)= sentry[:performer]
+    %div(class=sclass)= sentry[:singer]
     %div(class=sclass)= pstyle.capitalize
-    %div(class=sclass)= sentry[:play_key]
+    %div(class=sclass)= sentry[:key]
     - soundfile = nil
-    - if sentry[:href]
-      - sname = sentry[:href].split('/')[5]
+    - if sentry[:lyric_url]
+      - sname     = sentry[:name_k]
       - soundfile = "#{sname}.mp3"
       - start, stop = 0, 90
     - if soundfile && test(?s, "audio/intro-#{soundfile}")
       .pull-right
-  %p.small.text-muted= (sentry[:preview] || "")[0..100]
+  %p.small.text-muted= (sentry[:preview] || "")[0..100].force_encoding('UTF-8')
 - ptarget = "pad_#{index}"
-.col-md-2.small(id=ptarget)
-.col-md-4
-  - noteid = "note_#{index}"
-  %h5
-    - if !params[:publish] && (value = sentry[:sound])
-      - pstring = value.to_s.gsub('/', '+')
-      %a.a-tooltip(class=sclass href='#' onclick="return send_patch('#{pstring}', '##{ptarget}')" title="Download patch")= value
-    .pull-right
-      %div(class=sclass)= pstyle.capitalize
-      %div(class=sclass)= sentry[:play_key]
-      %a.a-tooltip(class=sclass data-toggle="collapse" href="##{noteid}" aria-expanded="false" aria-controls=noteid title='Play details')
-        - if sentry[:perfnote]
-          %i.fa.fa-level-down
-        = sentry[:performer]
 
-  .collapse(id=noteid)
-    .text-muted.small= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
+.col-md-3
+  - if !params[:publish] && (value = sentry[:bk3_set])
+    - pstring = value.to_s.gsub('/', '+')
+    - pkey    = sentry[:key]
+    %a.a-tooltip(class=sclass href='#' onclick="return send_patch('#{pstring}', '#{pkey}', '##{ptarget}')" title="Download patch")= value
+  - if value = sentry[:play_url]
+    - value.split(',').each do |aurl|
+      %a.a-tooltip(href=aurl target='play_link' title="Listen to full song")
+        %i.fa.fa-music
   - if soundfile && test(?s, "audio/intro-#{soundfile}")
-    - ['intro', 'solo'].each do |segment|
+    - ['intro', 'solo', 'p0', 'p1', 'p2', 'p3', 'p4'].each do |segment|
       - next unless test(?s, "audio/#{segment}-#{soundfile}")
-      .pull-right
-        = "#{segment.capitalize}[T#{sentry[:skey]}]"
-        %audio.pull-right(controls loop)
-          %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
-        - if value = sentry[:play_link]
-          %a.a-tooltip(href=value target='play_link' title="Listen to full song: #{sentry[:name]}")
-            %i.fa.fa-music
+      .small #{segment.capitalize}[T#{sentry[:skey]}]
+      %audio.pull-right(controls loop)
+        %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
+
+.col-md-3
+  - noteid = "note_#{index}"
+  %div(class=sclass)= pstyle.capitalize
+  %div(class=sclass)= sentry[:key]
+  %a.a-tooltip(class=sclass data-toggle="collapse" href="##{noteid}" aria-expanded="false" aria-controls=noteid title='Play details')
+    - if sentry[:perfnote]
+      %i.fa.fa-level-down
+    = sentry[:singer]
+  .collapse(id=noteid)
+    .text-muted.vsmall= (sentry[:perfnote] || '').gsub(/\n/, "<br/>")
+  %div.vsmall(id=ptarget)
+

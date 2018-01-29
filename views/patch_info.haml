@@ -1,0 +1,6 @@
+- if presult['upper'] && presult['upper'].size > 0
+  .small.text-muted= (presult['upper'] || []).map{|r| r['name']}.join(', ')
+- if presult['lower'] && presult['lower'].size > 0
+  .text-muted.small= (presult['lower'] || []).map{|r| r['name']}.join(', ')
+- if presult['rhymth']
+  .text-muted.small= (presult['rhymth'] || []).map{|r| r['name']}.join(', ')

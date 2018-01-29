@@ -46,7 +46,9 @@
   %h4
     %a(href="##{csec_name}")= asection['name']
     - asection['list'].each do |aname|
+      - aname, asinger = aname.split(',')
       - sentry = song_store[aname]
+      -# Plog.dump_info(sentry:sentry)
       - next unless sentry
       - index += 1
       - tags = sentry[:tags] || []
@@ -54,17 +56,17 @@
       - next if (params[:publish] && tags.include?('private'))
       - tags     = sentry[:tags] || []
       - rowclass = tags.include?('backup') ? 'backup-song' : ''
-      - (sentry[:performer] || "").split(/\s*,\s*/).each do |aperf|
+      - (sentry[:singer] || "").force_encoding('UTF-8').split(/\s*,\s*/).each do |aperf|
         - rowclass += " perf_#{performers.index(aperf)}"
-      - rowclass += " sty_#{(sentry[:pstyle] || '').downcase}"
+      - rowclass += " sty_#{(sentry[:style] || '').downcase}"
       %a(name="s#{index}")
       %div(class="row prow #{rowclass}")
         = partial(:_show_song, locals:{sentry:sentry, index:index})
 
 - content_for :javascript do
   :javascript
-    function send_patch(pstring, target) {
-      jQuery.get("/send_patch/" + pstring, function(data) {
+    function send_patch(pstring, pkey, target) {
+      jQuery.get("/send_patch/" + pstring + "?key=" + pkey, function(data) {
         $(target).html(data);
       });
       return false;
