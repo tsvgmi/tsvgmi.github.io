@@ -44,6 +44,17 @@ class Dbm
   extendCli __FILE__
 
   class << self
+    def load_order_to_db(order_file)
+      YAML.load_file(order_file).each do |agroup|
+        agroup['list'].each do |entry|
+          name_k, singer, key = entry.split(',')
+          keys   = {name_k:name_k, singer:singer}
+          values = {key:key}
+          dbrec  = Singer.create_or_update(keys, values)
+        end
+      end
+    end
+
     def load_to_db(slist_file)
       Singer.strict_param_setting = false
       YAML.load_file(slist_file).each do |se|

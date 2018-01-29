@@ -82,13 +82,16 @@ class ListHelper
   extendCli __FILE__
 
   class << self
-    def download_from_youtube(url, ofile=nil)
+    def youtube_dl(url, ofile=nil)
       if ofile && test(?s, ofile)
         return false
       end
       command = "youtube-dl --extract-audio --audio-format mp3"
-      command += " -o #{ofile}" if ofile
+      command += " -o '#{ofile}.%(ext)s'" if ofile
       system "#{command} '#{url}'"
+      if ofile
+        system "audio/sliceit #{ofile}.mp3 0 180"
+      end
       true
     end
 
@@ -99,7 +102,7 @@ class ListHelper
       }.each do |e|
         sname   = e[:href].split('/')[5]
         ofile = "audio/#{sname}.mp3"
-        if download_from_youtube(e[:play_link], ofile)
+        if youtube_dl(e[:play_link], ofile)
           Plog.info "Downloading for #{e[:name]}"
         end
       end
