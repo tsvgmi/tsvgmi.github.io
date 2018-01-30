@@ -16,6 +16,10 @@ Sequel::Model.db = Sequel.connect('mysql://playlist:play123@localhost/Playlist')
 module DbUtils
   def create_or_update(keys, values)
     if dbrec = first(keys)
+      # Don't update nil value
+      values.each do |vk, vv|
+        values.delete(vk) unless vv
+      end
       dbrec.update(values)
       dbrec.save
     else
