@@ -139,6 +139,22 @@ class ListHelper
          dbase[:songs].insert(record)
        end
     end
+
+    def transpose_chord(key, offset)
+      "[#{key}+#{offset}]"
+    end
+
+    def transpose_song(sfile, offset)
+      offset = offset.to_i
+      lyric = YAML.load_file(sfile)[:lyric]
+      lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
+        tchord = transpose_chord(chord, offset)
+        puts "T:#{text}, C:#{chord}, TC:#{tchord}"
+      end
+      lyric = lyric.gsub(/\[[^\]]+\]/m, '')
+      puts lyric
+      true
+    end
   end
 end
 

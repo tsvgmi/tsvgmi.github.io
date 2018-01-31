@@ -87,7 +87,14 @@ helpers do
     song_list.each do |k, v|
       v.update(sound_list[k]) if sound_list[k]
     end
-    Plog.dump_info(song_list:song_list, _ofmt:'Y')
+    Plog.dump_info(song_list:song_list)
+    song_list.each do |sname, sentry|
+      sfile = Dir.glob("/Users/tvuong/myprofile/thienv/*::#{sname}.yml")[0]
+      if sfile
+        sentry[:lyric] = YAML.load_file(sfile)[:lyric]
+        Plog.dump_info(sname:sname, sfile:sfile, lyric:sentry[:lyric])
+      end
+    end
     song_list
   end
 
