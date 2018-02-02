@@ -20,7 +20,7 @@
       - start, stop = 0, 90
     - if soundfile && test(?s, "audio/intro-#{soundfile}")
       .pull-right
-  %pre(style='font-size:80%')= (sentry[:perfnote] || "").force_encoding('UTF-8')
+  %pre(style='font-size:60%')= (sentry[:perfnote] || "").force_encoding('UTF-8')
   - if false && lyric = sentry[:lyric]
     - lyric = lyric.split("\n").map{|l| l + "<br/>"}.join("\n")
     %p.lyric= lyric.force_encoding('UTF-8')
