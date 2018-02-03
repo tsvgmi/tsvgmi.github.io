@@ -153,7 +153,6 @@ class ListHelper
         end
         bofs = KeyPos.index{|k| bkey =~ /^#{k}$/}
         if bofs
-          Plog.dump_info(bofs:bofs, offset:offset)
           tkey  = KeyPos[(bofs+offset) % 12]
           tkeys = tkey.split('|')
           output << (options[:flat] ? tkeys[-1]+mod : tkeys[0]+mod)
