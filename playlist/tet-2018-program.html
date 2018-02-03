@@ -35,14 +35,25 @@
   .prow {
     border-bottom: 1px solid #888;
   }
-  .lyric {
-    font-size: 80%;
-    line-height: 2;
+  @media (min-width: 1024px) {
+    .lyric {
+      font-size: 80%;
+      line-height: 2;
+      column-count: 2;
+      text-align: center;
+    }
   }
   .chord {
     color: #220;
     background-color: #ddf;
     baseline-shift: super;
+  }
+  @media (max-width: 1024px) {
+    .lyric {
+      font-size: 80%;
+      line-height: 2;
+      column-count 1;
+    }
   }
 </style>
 <a aria-controls='filters' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#filters'>Filters</a>
@@ -154,32 +165,30 @@
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_1' style='column-count:1; text-align:center'>
-<p class='text-primary lyric'>1. Gió chiều thầm  <span class=chord>[F7]</span>vương bao nhớ  <span class=chord>[Bb]</span>nhung  <span class=chord>[Gm]</span> <br/>
-Người yêu thoáng  <span class=chord>[C]</span>qua trong giấc  <span class=chord>[Am]</span>mộng <br/>
- <span class=chord>[Dm]</span>Vui nguồn sống  <span class=chord>[Gm]</span>mơ  <span class=chord>[Bb]</span>những ngày mong  <span class=chord>[C]</span>chờ <br/>
- <span class=chord>[Gm]</span>Trách ai  <span class=chord>[C]</span>đành tâm hững  <span class=chord>[F]</span>hờ  <span class=chord>[Gm][C]</span> <br/>
+<div class='col-md-12 collapse' id='lyric_1'>
+<p class='text-primary lyric'>1. Gió chiều  <span class=chord>[F]</span>thầm vương bao nhớ  <span class=chord>[Bbmaj7]</span>nhung <br/>
+Người yêu thoáng  <span class=chord>[Am7]</span>qua trong giấc  <span class=chord>[F]</span>mộng <br/>
+ <span class=chord>[Dm]</span>Vui nguồn sống  <span class=chord>[Gm]</span>mơ  <span class=chord>[Abdim]</span>những ngày mong  <span class=chord>[Am]</span>chờ <br/>
+ <span class=chord>[Bbmaj7]</span>Trách ai đành  <span class=chord>[C]</span>tâm hững  <span class=chord>[F]</span>hờ  <span class=chord>[C]</span> <br/>
  <br/>
-2. Mối tình đầu  <span class=chord>[F7]</span>xuân ai thấu  <span class=chord>[Bb]</span>chăng  <span class=chord>[Gm]</span> <br/>
-Lòng tha thiết  <span class=chord>[C]</span>vương theo tiếng  <span class=chord>[Am]</span>đàn <br/>
- <span class=chord>[Dm]</span>Mơ đời ái  <span class=chord>[Gm]</span>ân  <span class=chord>[Bb]</span>những ngày phong  <span class=chord>[C]</span>trần <br/>
-Sống trong mộng đẹp ngày  <span class=chord>[F]</span>xuân   <span class=chord>[Bb][F]</span> <br/>
+2. Mối tình  <span class=chord>[F]</span>đầu xuân ai thấu  <span class=chord>[Bbmaj7]</span>chăng <br/>
+Lòng tha thiết  <span class=chord>[Am7]</span>vương theo tiếng  <span class=chord>[F]</span>đàn <br/>
+ <span class=chord>[Dm]</span>Mơ đời ái  <span class=chord>[Gm]</span>ân  <span class=chord>[Abdim]</span>những ngày phong  <span class=chord>[Am]</span>trần <br/>
+ <span class=chord>[Bbmaj7]</span>Sống trong mộng  <span class=chord>[C]</span>đẹp ngày  <span class=chord>[F]</span>xuân <br/>
  <br/>
-ĐK: Ngây  <span class=chord>[F7]</span>thơ giáng  <span class=chord>[Bb]</span>huyền đến trong  <span class=chord>[Am]</span>mơ <br/>
-Lòng anh bớt  <span class=chord>[Dm]</span>sầu  <span class=chord>[F]</span> <br/>
-Mộng vàng phút  <span class=chord>[G]</span>tan theo gió  <span class=chord>[Bb]</span>chiều <br/>
- <span class=chord>[Gm]</span>Biết em về  <span class=chord>[C]</span>đâu  <span class=chord>[Gm][C]</span> <br/>
+ĐK: Ngây thơ giáng  <span class=chord>[Bbmaj7]</span>huyền đến trong  <span class=chord>[Am7]</span>mơ <br/>
+Lòng anh bớt  <span class=chord>[Fmaj7]</span>sầu <br/>
+ <span class=chord>[Dm]</span>Mộng vàng phút  <span class=chord>[Gm]</span>tan theo gió  <span class=chord>[Bbmaj7]</span>chiều <br/>
+Biết em về  <span class=chord>[C]</span>đâu  <span class=chord>[Gm][C]</span> <br/>
  <br/>
-3. Hãy trả lời  <span class=chord>[F7]</span>lòng anh mấy  <span class=chord>[Bb]</span>câu  <span class=chord>[Gm]</span> <br/>
-Tình duyên với  <span class=chord>[C]</span>em trong kiếp  <span class=chord>[Am]</span>nào <br/>
- <span class=chord>[Dm]</span>Xuân còn thắm  <span class=chord>[Gm]</span>tươi  <span class=chord>[Bb]</span>anh còn mong  <span class=chord>[C]</span>chờ <br/>
- <span class=chord>[Gm]</span>Ái ân kẻo  <span class=chord>[C]</span>tàn ngày  <span class=chord>[F]</span>mơ <br/>
+3. Hãy trả lời  <span class=chord>[F]</span>lòng anh mấy  <span class=chord>[Bbmaj7]</span>câu <br/>
+Tình duyên với  <span class=chord>[Am7]</span>em trong kiếp  <span class=chord>[F]</span>nào <br/>
+ <span class=chord>[Dm]</span>Xuân còn thắm  <span class=chord>[Gm]</span>tươi  <span class=chord>[Abdim]</span>anh còn mong  <span class=chord>[Am]</span>chờ <br/>
+ <span class=chord>[Bbmaj7]</span>Ái ân kẻo  <span class=chord>[C]</span>tàn ngày  <span class=chord>[F]</span>mơ <br/>
  <br/>
-(Giang tấu) (1) (2) (DK) (3) <br/>
- <span class=chord>[Dm]</span>Xuân còn thắm  <span class=chord>[Gm]</span>tươi  <span class=chord>[Bb]</span>anh còn mong  <span class=chord>[C]</span>chờ <br/>
- <span class=chord>[Gm]</span>Ái ân kẻo  <span class=chord>[C]</span>tàn ngày  <span class=chord>[F]</span>mơ <br/></p>
-</div>
+(Giang Tau) (2) (DK) (3) <br/>
+ <span class=chord>[Dm]</span>Xuân còn thắm  <span class=chord>[Gm]</span>tươi  <span class=chord>[Abdim]</span>anh còn mong  <span class=chord>[Am]</span>chờ <br/>
+ <span class=chord>[Bbmaj7]</span>Ái ân kẻo  <span class=chord>[C]</span>tàn ngày  <span class=chord>[F]</span>mơ <br/></p>
 </div>
 </div>
 
@@ -227,8 +236,7 @@ Tình duyên với  <span class=chord>[C]</span>em trong kiếp  <span class=cho
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_2' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_2'>
 <p class='text-primary lyric'>Một mai qua cơn  <span class=chord>[Am]</span>mê, xa cuộc đời bềnh  <span class=chord>[G]</span>bồng <br/>
 Tôi lại về bên  <span class=chord>[Am]</span>em, ngày gió mưa không  <span class=chord>[G]</span>còn <br/>
 Nên  <span class=chord>[Am]</span>đường dài thật  <span class=chord>[F]</span>dài, ta  <span class=chord>[Em]</span>mặc tình rong  <span class=chord>[G]</span>chơi  <span class=chord>[Em]</span> <br/>
@@ -251,7 +259,6 @@ Trái yêu thương đầy  <span class=chord>[G]</span>cành, hái  <span class
  <br/>
 * Tôi sẽ ươm thật  <span class=chord>[F]</span>nhiều <br/>
 Trái yêu thương đầy  <span class=chord>[G]</span>cành, hái  <span class=chord>[F]</span>đem cho mọi  <span class=chord>[Am]</span>người <br/></p>
-</div>
 </div>
 </div>
 
@@ -295,8 +302,7 @@ Trái yêu thương đầy  <span class=chord>[G]</span>cành, hái  <span class
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_3' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_3'>
 <p class='text-primary lyric'>1. Ngày  <span class=chord>[Fm]</span>đó trên chiếc cầu, em nhớ  <span class=chord>[Bbm]</span>chăng. <br/>
 Một  <span class=chord>[Eb]</span>chiếc áo  <span class=chord>[C7]</span>dài , màu trắng  <span class=chord>[Fm]</span>xinh xinh . <br/>
 Một nụ  <span class=chord>[Eb7]</span>cười , mời anh đưa em vào  <span class=chord>[Abmaj7]</span>đời. <br/>
@@ -327,7 +333,6 @@ Và anh  <span class=chord>[Dbmaj7]</span>mơ, tới những  <span class=chord>
  <br/>
  <span class=chord>[Fm]</span>Em ơi, em ơi ngày  <span class=chord>[Bbm]</span>yêu đó <br/>
 Xa em anh  <span class=chord>[C7]</span>mơ tình  <span class=chord>[Fm]</span>xưa. <br/></p>
-</div>
 </div>
 </div>
 
@@ -375,8 +380,7 @@ Xa em anh  <span class=chord>[C7]</span>mơ tình  <span class=chord>[Fm]</span>
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_4' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_4'>
 <p class='text-primary lyric'>1.  <span class=chord>[Cm]</span>Mây, sao còn bay  mãi không quay về  <span class=chord>[G7]</span>đây <br/>
 Sao còn lờ lững che ngang rừng  <span class=chord>[Cm]</span>cây <br/>
 Sao còn hờ hững với tôi từng  <span class=chord>[D7]</span>giây  <span class=chord>[Fm7]</span> <br/>
@@ -403,7 +407,6 @@ Khi dòng nước  <span class=chord>[G]</span>mắt chưa hoen vào  <span clas
 Mây còn ngơ  ngác lang thang về  <span class=chord>[Cm]</span>đâu <br/>
 Xin dừng chân nói với nhau một  <span class=chord>[D7]</span>câu  <span class=chord>[Fm7]</span> <br/>
 Xin đừng câm  <span class=chord>[G]</span>nín vơi nhau dài  <span class=chord>[Cm]</span>lâu <br/></p>
-</div>
 </div>
 </div>
 
@@ -443,8 +446,7 @@ Xin đừng câm  <span class=chord>[G]</span>nín vơi nhau dài  <span class=c
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_5' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_5'>
 <p class='text-primary lyric'> <span class=chord>[Cm]</span>Chuyện một tình yêu anh họa sĩ <br/>
 Gửi trong tranh vẽ những nỗi  <span class=chord>[Gsus4]</span>buồn <br/>
  <span class=chord>[G7]</span>Lòng anh thầm yêu nàng ca sĩ  <span class=chord>[Gsus4]</span> <br/>
@@ -472,7 +474,6 @@ Ain người mnag đến những hoa  <span class=chord>[Gsus4]</span>hồng <b
 Chờ em danh  <span class=chord>[G7]</span>đứng dưới hiên  <span class=chord>[Cm]</span>buồn <br/>
  <br/>
 (DK) (DK) (DK - fade out) <br/></p>
-</div>
 </div>
 </div>
 
@@ -512,32 +513,30 @@ Chờ em danh  <span class=chord>[G7]</span>đứng dưới hiên  <span class=c
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_6' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_6'>
 <p class='text-primary lyric'> <span class=chord>[D]</span>Xuân vừa về trên bãi cỏ  <span class=chord>[Bm]</span>non <br/>
- <span class=chord>[Gmaj7]</span>Gió xuân đưa lá vàng  <span class=chord>[D]</span>xuôi nguồn  <span class=chord>[F#]</span> <br/>
+ <span class=chord>[Gmaj7]</span>Gió xuân đưa lá vàng  <span class=chord>[D]</span>xuôi nguồn  <span class=chord>[F#m]</span> <br/>
  <span class=chord>[Bm]</span>Hoa cười cùng tia  <span class=chord>[G]</span>nắng vàng  <span class=chord>[Em]</span>son <br/>
  <span class=chord>[A7]</span>Lũ ong lên  <span class=chord>[G]</span>đường cánh tung  <span class=chord>[D]</span>ròn  <span class=chord>[Em][A]</span> <br/>
  <br/>
  <span class=chord>[D]</span>Hoa chẳng yêu lũ bướm lả  <span class=chord>[Bm]</span>lơi <br/>
- <span class=chord>[Gmaj7]</span>Muốn yêu anh vác  <span class=chord>[G]</span>cầy trên  <span class=chord>[D]</span>đồi  <span class=chord>[F#]</span> <br/>
+ <span class=chord>[Gmaj7]</span>Muốn yêu anh vác  <span class=chord>[G]</span>cầy trên  <span class=chord>[D]</span>đồi  <span class=chord>[F#m]</span> <br/>
  <span class=chord>[Bm]</span>Hay là yêu chiến  <span class=chord>[G]</span>sĩ ngàn  <span class=chord>[Em]</span>nơi <br/>
  <span class=chord>[A7]</span>Thấy hoa tươi cuời bỗng thương  <span class=chord>[G]</span>đời  <span class=chord>[D]</span> <br/>
 . <br/>
 DK.  <span class=chord>[Bm]</span>Xuân!  <span class=chord>[F#]</span>Hoa còn tươi  <span class=chord>[G]</span>mãi <br/>
-Hoa vì nhân  <span class=chord>[Em]</span>thế biết sum  <span class=chord>[F#]</span>vầy cuộc  <span class=chord>[C]</span>vui  <span class=chord>[B7]</span> <br/>
+Hoa vì nhân  <span class=chord>[Em]</span>thế biết sum  <span class=chord>[F#m]</span>vầy cuộc  <span class=chord>[C]</span>vui  <span class=chord>[B7]</span> <br/>
  <span class=chord>[Em]</span>Xuân! Hoa nở vì  <span class=chord>[Bm]</span>ai <br/>
 Tay nhịp bàn  <span class=chord>[G]</span>tay cùng đắp xây ngày  <span class=chord>[A7]</span>mai <br/>
  <br/>
 3.  <span class=chord>[D]</span>Có một chàng thi sĩ miền  <span class=chord>[Bm]</span>quê <br/>
- <span class=chord>[G]</span>Ngắt bông hoa biếu người  <span class=chord>[D]</span>xuân thì  <span class=chord>[F#]</span> <br/>
+ <span class=chord>[G]</span>Ngắt bông hoa biếu người  <span class=chord>[D]</span>xuân thì  <span class=chord>[F#m]</span> <br/>
  <span class=chord>[Bm]</span>Có một đàn em  <span class=chord>[G]</span>bé ngoài  <span class=chord>[Em]</span>đê <br/>
  <span class=chord>[A7]</span>Hát câu i tờ đón xuân  <span class=chord>[D]</span>về <br/>
  <br/>
 (Giang Tau) (2) (DK) (3) (Len 1/2 tone) (3) <br/>
 . <br/>
  <br/></p>
-</div>
 </div>
 </div>
 
@@ -581,8 +580,7 @@ Tay nhịp bàn  <span class=chord>[G]</span>tay cùng đắp xây ngày  <span 
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_7' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_7'>
 <p class='text-primary lyric'>Cứ mỗi lần  <span class=chord>[Am]</span>hoa mai vàng trước ngõ <br/>
 là em thôi mong nhớ  <span class=chord>[Dm6]</span>xuân này chàng có  <span class=chord>[E7]</span>về <br/>
 Hỏi hoa hoa chẳng  <span class=chord>[Am]</span>nói, hỏi mây mây lặng  <span class=chord>[Dm]</span>đứng <br/>
@@ -610,7 +608,6 @@ Anh sẽ  <span class=chord>[Am]</span>về khi không còn tiếng súng <br/>
 trời xanh cao tiếng  <span class=chord>[Dm6]</span>hát, chim trổi nhạc đón  <span class=chord>[E7]</span>mừng <br/>
 Để hoa  <span class=chord>[Am]</span>xuân lại thắm để môi em lại <span class=chord>[Dm]</span>ấm <br/>
 cho áo mới yêu  <span class=chord>[F]</span>đời cho  <span class=chord>[E]</span>tiếng sáo thêm  <span class=chord>[Am]</span>vui <br/></p>
-</div>
 </div>
 </div>
 
@@ -654,8 +651,7 @@ cho áo mới yêu  <span class=chord>[F]</span>đời cho  <span class=chord>[E
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_8' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_8'>
 <p class='text-primary lyric'>1. Mẹ Việt  <span class=chord>[Gm]</span>Nam mắt ngời sáng  <span class=chord>[Bb]</span>quắt <br/>
 Nghe đâu đây  <span class=chord>[F]</span>tiếng vọng hòa  <span class=chord>[Gm]</span>bình <br/>
 Lệ mừng  <span class=chord>[Gm]</span>nhòa đôi mắt long  <span class=chord>[Eb]</span>lanh <br/>
@@ -681,7 +677,6 @@ Ta thương  <span class=chord>[Dm7]</span>nhau giữ trọn tình  <span class=
 Dù mình  <span class=chord>[Gm]</span>nghèo người đời khen  <span class=chord>[Eb]</span>chê <br/>
 Ta thương  <span class=chord>[Dm7]</span>nhau giữ trọn tình  <span class=chord>[Gm]</span>quê. <br/>
 (Out) <br/></p>
-</div>
 </div>
 </div>
 
@@ -721,8 +716,7 @@ Ta thương  <span class=chord>[Dm7]</span>nhau giữ trọn tình  <span class=
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_9' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_9'>
 <p class='text-primary lyric'>1. Cầm tay nhau bước  <span class=chord>[Dm7]</span>trong giao  <span class=chord>[G]</span>thừa <br/>
 Đón  <span class=chord>[Em7]</span>xuân đang  <span class=chord>[Am]</span>về với tình  <span class=chord>[Fmaj7]</span>yêu  <span class=chord>[Am7]</span>trái đất  <span class=chord>[G]</span>này <br/>
  <span class=chord>[Dm7]</span>Ta cùng bao  <span class=chord>[G]</span>người  <span class=chord>[Em7]</span>nhìn nhau ánh mắt  <span class=chord>[Am]</span>hân hoan <br/>
@@ -753,7 +747,6 @@ Dù qua bao tháng  <span class=chord>[Dm7]</span>năm dài  <span class=chord>[
 Tình người không phôi  <span class=chord>[C]</span>phai. <br/>
  <br/>
 (Len 1/2 tone) (DK) <br/></p>
-</div>
 </div>
 </div>
 
@@ -793,8 +786,7 @@ Tình người không phôi  <span class=chord>[C]</span>phai. <br/>
 </div>
 </div>
 <div class='row prow'>
-<div class='col-md-12'>
-<div class='collapse' id='lyric_10' style='column-count:1; text-align:center'>
+<div class='col-md-12 collapse' id='lyric_10'>
 <p class='text-primary lyric'>1. Tôi yêu quê  <span class=chord>[G]</span>tôi  <span class=chord>[Bm]</span>xanh xanh lũy  <span class=chord>[G]</span>tre <br/>
  <span class=chord>[C]</span>Quê hương tuổi  <span class=chord>[E]</span>thơ  <span class=chord>[Am]</span>đi qua đời  <span class=chord>[D]</span>tôi <br/>
 Đường làng quanh  <span class=chord>[C]</span>co sông Thu êm  <span class=chord>[Am]</span>đềm <br/>
@@ -824,12 +816,11 @@ Ngày ấy đâu  <span class=chord>[G]</span>rồi ngày ấy đâu  <span clas
 Ngày ấy đâu  <span class=chord>[C]</span>rồi ngày  <span class=chord>[D7]</span>ấy đâu  <span class=chord>[G]</span>rồi <br/></p>
 </div>
 </div>
-</div>
 
 </h4>
 
 <footer>
-<div class='small text-muted'>2018-02-03 01:31:24 -0800</div>
+<div class='small text-muted'>2018-02-03 02:04:55 -0800</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>

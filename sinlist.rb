@@ -10,7 +10,7 @@ require 'core'
 require 'listhelper'
 require Dir.pwd + '/bin/dbmodels'
 
-#set :bind, '0.0.0.0'
+set :bind, '0.0.0.0'
 
 get '/' do
   redirect "/program/vnhv-thu-2017"
@@ -56,11 +56,6 @@ get '/send_patch/:pstring' do |pstring|
   haml :patch_info, locals: {presult:presult}, layout:nil
 end
 
-get '/show_lyric' do
-  url   = params[:url]
-  lyric_info(url).to_json
-end
-
 helpers do
   def load_songs(ord_list)
     songs = []
@@ -92,46 +87,14 @@ helpers do
     end
     #Plog.dump_info(song_list:song_list)
     song_list.each do |sname, sentry|
-      sfile = Dir.glob("/Users/tvuong/myprofile/thienv/*::#{sname}.yml")[0]
-      if sfile
-        flat = sentry[:kofs] =~ /f$/
-        kofs = sentry[:kofs].to_i
-        sentry[:lyric] = ListHelper.transpose_song(sfile, kofs, flat:flat)
-        #Plog.dump_info(sname:sname, sfile:sfile, lyric:sentry[:lyric])
-      end
+      path = (sentry[:lyric_url] || '').split('/')
+      sno, song, user = path[-3], path[-2], path[-1]
+      Plog.dump_info(sentry:sentry)
+      sfile = "/Users/tvuong/myprofile/#{user}/#{sno}::#{sname}.yml"
+      flat = sentry[:kofs] =~ /f$/
+      kofs = sentry[:kofs].to_i
+      sentry[:lyric] = ListHelper.transpose_song(sfile, kofs, flat:flat)
     end
     song_list
-  end
-
-  def lyric_info(url)
-    Plog.info("Extract lyrics from #{url}")
-    lfile = "data/#{url.sub(/\/$/, '').gsub('/', '#')}"
-    if test(?s, lfile)
-      return YAML.load_file(lfile)
-    else
-      page   = get_page(url)
-    end
-    lyric  = page.css('.chord_lyric_line').map{|r| r.text.strip}.join("\n").
-              strip.gsub(/ \]/, ']')
-    artist = page.css('.perform-singer-list').map {|r| r.text.strip}
-    ret = {
-      title:  page.css('#song-title').text.strip,
-      artist: artist.join(', '),
-      lyric:  lyric,
-    }
-    File.open(lfile, "w") do |fod|
-      fod.puts ret.to_yaml
-    end
-    ret
-  end
-
-  def get_page(url)
-    require 'open-uri'
-    require 'nokogiri'
-
-    fid  = open(url)
-    page = Nokogiri::HTML(fid.read)
-    fid.close
-    page
   end
 end

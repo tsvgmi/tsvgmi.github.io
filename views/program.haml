@@ -16,14 +16,25 @@
   .prow {
     border-bottom: 1px solid #888;
   }
-  .lyric {
-    font-size: 80%;
-    line-height: 2;
+  @media (min-width: 1024px) {
+    .lyric {
+      font-size: 80%;
+      line-height: 2;
+      column-count: 2;
+      text-align: center;
+    }
   }
   .chord {
     color: #220;
     background-color: #ddf;
     baseline-shift: super;
+  }
+  @media (max-width: 1024px) {
+    .lyric {
+      font-size: 80%;
+      line-height: 2;
+      column-count 1;
+    }
   }
 
 - StyleColor = {'bebop'=>'success', 'bolero'=>'warning', 'boston'=>'info', 'chacha'=>'danger', 'chachacha'=>'danger', 'fox'=>'success', 'newwave'=>'danger', 'pop'=>'success', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
