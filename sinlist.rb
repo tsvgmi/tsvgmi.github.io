@@ -88,12 +88,18 @@ helpers do
     #Plog.dump_info(song_list:song_list)
     song_list.each do |sname, sentry|
       path = (sentry[:lyric_url] || '').split('/')
-      sno, song, user = path[-3], path[-2], path[-1]
-      Plog.dump_info(sentry:sentry)
-      sfile = "/Users/tvuong/myprofile/#{user}/#{sno}::#{sname}.yml"
-      flat = sentry[:kofs] =~ /f$/
-      kofs = sentry[:kofs].to_i
-      sentry[:lyric] = ListHelper.transpose_song(sfile, kofs, flat:flat)
+      if path.size >= 7
+        sno, song, user = path[-3], path[-2], path[-1]
+        sfile = "/Users/tvuong/myprofile/#{user}/#{sno}::#{sname}.yml"
+        if test(?s, sfile)
+          flat = sentry[:kofs] =~ /f$/
+          kofs = sentry[:kofs].to_i
+          Plog.info "Transposing #{sfile}"
+          sentry[:lyric] = ListHelper.transpose_song(sfile, kofs, flat:flat)
+        else
+          Plog.error("#{sfile} not found - source: #{sentry[:lyric_url]}")
+        end
+      end
     end
     song_list
   end

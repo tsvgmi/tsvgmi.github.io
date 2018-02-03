@@ -36,11 +36,11 @@
         %a.a-tooltip(href=aurl target='play_link' title="Listen to full song")
           %i.fa.fa-music
     - if soundfile && test(?s, "audio/intro-#{soundfile}")
-      - ['intro', 'solo', 'p0', 'p1', 'p2', 'p3', 'p4'].each do |segment|
-        - next unless test(?s, "audio/#{segment}-#{soundfile}")
+      - Dir.glob("audio/*-#{soundfile}").select{|f| test(?s, f)}.each do |afile|
+        - segment = File.basename(afile).split('-')[0]
         .small #{segment.capitalize}[T#{sentry[:skey]}]
         %audio.pull-right(controls loop)
-          %source(src="/audio/#{segment}-#{soundfile}" type="audio/mpeg")
+          %source(src="/#{afile}" type="audio/mpeg")
 
   .col-md-3
     - noteid = "note_#{index}"
