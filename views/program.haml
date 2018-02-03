@@ -18,7 +18,12 @@
   }
   .lyric {
     font-size: 80%;
-    line-height: 1.8;
+    line-height: 2;
+  }
+  .chord {
+    color: #220;
+    background-color: #ddf;
+    baseline-shift: super;
   }
 
 - StyleColor = {'bebop'=>'success', 'bolero'=>'warning', 'boston'=>'info', 'chacha'=>'danger', 'chachacha'=>'danger', 'fox'=>'success', 'newwave'=>'danger', 'pop'=>'success', 'rumba'=>'warning', 'rhumba'=>'warning', 'slow'=>'warning', 'tango'=>'success', 'techno'=>'danger', 'twist'=>'danger', 'waltz'=>'info'}
@@ -45,6 +50,7 @@
 
 - index = 0
 - ord_list.each_with_index do |asection, sec_no|
+  - next unless asection['list']
   - sec_name  = "section_#{sec_no+1}"
   - csec_name = "csection_#{sec_no+1}"
   %h4
@@ -64,8 +70,7 @@
         - rowclass += " perf_#{performers.index(aperf)}"
       - rowclass += " sty_#{(sentry[:style] || '').downcase}"
       %a(name="s#{index}")
-      %div(class="row prow #{rowclass}")
-        = partial(:_show_song, locals:{sentry:sentry, index:index})
+      = partial(:_show_song, locals:{sentry:sentry, index:index})
 
 - content_for :javascript do
   :javascript

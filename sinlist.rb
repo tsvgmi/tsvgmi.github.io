@@ -7,6 +7,7 @@ require 'sinatra/partial'
 require 'yaml'
 require 'net/http'
 require 'core'
+require 'listhelper'
 require Dir.pwd + '/bin/dbmodels'
 
 #set :bind, '0.0.0.0'
@@ -25,7 +26,7 @@ get '/program/:event' do |event|
   performers = []
   styles     = []
   ord_list.each_with_index do |asection, sec_no|
-    asection['list'].each do |aname|
+    (asection['list'] || []).each do |aname|
       aname, asinger = aname.split(',')
       sentry = song_store[aname]
       next unless sentry
@@ -64,7 +65,7 @@ helpers do
   def load_songs(ord_list)
     songs = []
     ord_list.each do |lpart|
-      songs    += lpart['list'].map{|se| se.split(',')[0]}
+      songs    += (lpart['list'] || []).map{|se| se.split(',')[0]}
     end
     #Plog.dump_info(songs:songs)
     song_list   = Hash[Song.where(name_k:songs).as_hash(:name_k).
@@ -74,11 +75,12 @@ helpers do
     #Plog.dump_info(song_list:song_list)
 
     ord_list.each do |lpart|
-      lpart['list'].each do |sse|
-        name_k, singer, key, style, tempo = sse.split(',')
+      (lpart['list'] || []).each do |sse|
+        name_k, singer, key, style, tempo, kofs = sse.split(',')
         #Plog.dump_info(sse:sse, key:key, style:style)
         if song_list[name_k]
-          song_list[name_k].update(singer:singer, key:key, style:style, tempo:tempo)
+          song_list[name_k].update(singer:singer, key:key, style:style,
+                                   tempo:tempo, kofs:kofs)
         else
           Plog.error("#{name_k} not found in song list")
         end
@@ -92,7 +94,9 @@ helpers do
     song_list.each do |sname, sentry|
       sfile = Dir.glob("/Users/tvuong/myprofile/thienv/*::#{sname}.yml")[0]
       if sfile
-        sentry[:lyric] = YAML.load_file(sfile)[:lyric]
+        flat = sentry[:kofs] =~ /f$/
+        kofs = sentry[:kofs].to_i
+        sentry[:lyric] = ListHelper.transpose_song(sfile, kofs, flat:flat)
         #Plog.dump_info(sname:sname, sfile:sfile, lyric:sentry[:lyric])
       end
     end

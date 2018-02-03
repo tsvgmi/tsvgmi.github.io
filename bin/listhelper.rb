@@ -140,20 +140,38 @@ class ListHelper
        end
     end
 
-    def transpose_chord(key, offset)
-      "[#{key}+#{offset}]"
+    KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
+    def transpose_mkey(keys, offset, options={})
+      output = []
+      keys.split.each do |key|
+        if key[1] =~ /[#b]/
+          bkey = key[0..1]
+          mod  = key[2..-1].strip
+        else
+          bkey = key[0]
+          mod  = key[1..-1].strip
+        end
+        bofs = KeyPos.index{|k| bkey =~ /^#{k}$/}
+        tkey = KeyPos[(bofs+offset) % 12] + mod
+        #"[#{key}+#{offset}(#{bkey},#{mod},#{bofs},#{tkey})]"
+        tkeys = tkey.split('|')
+        output << (options[:flat] ? tkeys[-1] : tkeys[0])
+      end
+      output.compact.join('][')
     end
 
-    def transpose_song(sfile, offset)
+    def transpose_song(sfile, offset, options={})
       offset = offset.to_i
       lyric = YAML.load_file(sfile)[:lyric]
+      output = ""
       lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
-        tchord = transpose_chord(chord, offset)
-        puts "T:#{text}, C:#{chord}, TC:#{tchord}"
+        tchord = transpose_mkey(chord, offset, options)
+        #puts "T:#{text}, C:#{chord}, TC:#{tchord}"
+        output += "#{text} <span class=chord>[#{tchord}]</span>"
       end
-      lyric = lyric.gsub(/\[[^\]]+\]/m, '')
-      puts lyric
-      true
+      last_span = lyric.sub(/^.*\]/m, '')
+      output += last_span
+      output
     end
   end
 end
@@ -162,6 +180,7 @@ if (__FILE__ == $0)
   ListHelper.handleCli(
     ['--auth',         '-a', 1],
     ['--check_lyrics', '-k', 0],
+    ['--flat',         '-F', 0],
     ['--limit',        '-l', 1],
     ['--ofile',        '-o', 1],
     ['--exclude_user', '-x', 1],
