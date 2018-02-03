@@ -152,10 +152,15 @@ class ListHelper
           mod  = key[1..-1].strip
         end
         bofs = KeyPos.index{|k| bkey =~ /^#{k}$/}
-        tkey = KeyPos[(bofs+offset) % 12] + mod
-        #"[#{key}+#{offset}(#{bkey},#{mod},#{bofs},#{tkey})]"
-        tkeys = tkey.split('|')
-        output << (options[:flat] ? tkeys[-1] : tkeys[0])
+        if bofs
+          Plog.dump_info(bofs:bofs, offset:offset)
+          tkey  = KeyPos[(bofs+offset) % 12]
+          tkeys = tkey.split('|')
+          output << (options[:flat] ? tkeys[-1]+mod : tkeys[0]+mod)
+        else
+          Plog.error("Does not know how to transpose #{key}")
+          output << key
+        end
       end
       output.compact.join('][')
     end

@@ -6,7 +6,7 @@
     - lyric_id = "lyric_#{index}"
     - btype    = StyleColor[pstyle] || 'secondary'
     - sclass   = "small badge badge-#{btype}"
-    %h2
+    %h4
       %a.a-tooltip(href=href target='hac' title="View lyric")= "#{index}. #{pname}"
       %a.a-tooltip(data-toggle="collapse" href="##{lyric_id}" aria-expanded="false" aria-controls=lyric_id title='Toggle Lyric')
         %i.fa.fa-level-down
@@ -51,7 +51,7 @@
 
 .row.prow
   .col-md-12
-    .collapse(id=lyric_id style='column-count:2; text-align:center')
+    .collapse(id=lyric_id style='column-count:1; text-align:center')
       - if lyric = sentry[:lyric]
         - lyric = lyric.split("\n").map{|l| l + "<br/>"}.join("\n")
         %p.text-primary.lyric= lyric.force_encoding('UTF-8')
