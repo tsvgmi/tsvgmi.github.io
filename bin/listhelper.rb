@@ -90,7 +90,7 @@ class ListHelper
       command += " -o '#{ofile}.%(ext)s'" if ofile
       system "#{command} '#{url}'"
       if ofile
-        system "audio/sliceit #{ofile}.mp3 0 180"
+        exec "audio/sliceit #{ofile}.mp3 0 180"
       end
       true
     end
