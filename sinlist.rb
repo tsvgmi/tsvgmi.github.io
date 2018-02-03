@@ -40,7 +40,7 @@ get '/program/:event' do |event|
   end
   performers = performers.sort.uniq
   styles     = styles.sort.uniq
-  Plog.dump_info(performers:performers, styles:styles)
+  #Plog.dump_info(performers:performers, styles:styles)
   haml :program, locals: {ord_list:ord_list, song_store:song_store,
                           performers:performers, styles:styles}
 end
@@ -71,15 +71,16 @@ helpers do
                        map{|k, v| [k, v.to_hash]}]
     sound_list  = Hash[Sound.where(name_k:songs).as_hash(:name_k, nil).
                        map{|k, v| [k, v.to_hash]}]
+    #Plog.dump_info(song_list:song_list)
 
     ord_list.each do |lpart|
       lpart['list'].each do |sse|
-        name_k, singer = sse.split(',')
-        rec = nil
-        rec = Singer.first(name_k:name_k, singer:singer) if singer
-        rec ||= Singer.first(name_k:name_k)
-        if rec && song_list[name_k]
-          song_list[name_k].update(rec.to_hash)
+        name_k, singer, key, style = sse.split(',')
+        #Plog.dump_info(sse:sse, key:key, style:style)
+        if song_list[name_k]
+          song_list[name_k].update({singer:singer, key:key, style:style})
+        else
+          Plog.error("#{name_k} not found in song list")
         end
       end
     end
@@ -87,12 +88,12 @@ helpers do
     song_list.each do |k, v|
       v.update(sound_list[k]) if sound_list[k]
     end
-    Plog.dump_info(song_list:song_list)
+    #Plog.dump_info(song_list:song_list)
     song_list.each do |sname, sentry|
       sfile = Dir.glob("/Users/tvuong/myprofile/thienv/*::#{sname}.yml")[0]
       if sfile
         sentry[:lyric] = YAML.load_file(sfile)[:lyric]
-        Plog.dump_info(sname:sname, sfile:sfile, lyric:sentry[:lyric])
+        #Plog.dump_info(sname:sname, sfile:sfile, lyric:sentry[:lyric])
       end
     end
     song_list
@@ -129,5 +130,4 @@ helpers do
     fid.close
     page
   end
-
 end
