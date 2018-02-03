@@ -75,10 +75,10 @@ helpers do
 
     ord_list.each do |lpart|
       lpart['list'].each do |sse|
-        name_k, singer, key, style = sse.split(',')
+        name_k, singer, key, style, tempo = sse.split(',')
         #Plog.dump_info(sse:sse, key:key, style:style)
         if song_list[name_k]
-          song_list[name_k].update({singer:singer, key:key, style:style})
+          song_list[name_k].update(singer:singer, key:key, style:style, tempo:tempo)
         else
           Plog.error("#{name_k} not found in song list")
         end
