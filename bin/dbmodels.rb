@@ -64,6 +64,7 @@ class Dbm
       YAML.load_file(slist_file).each do |se|
         name_k = se[:name_k]
         name_k ||= (se[:href] || '').split('/')[5]
+        p name_k, se
         next unless name_k
         keys   = {name_k: name_k}
         values = {
