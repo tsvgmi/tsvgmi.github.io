@@ -1,13 +1,15 @@
-song=$1
+songf=$1
 start=$2
 stop=$3
+song=$4
+[ "$song" ] || song=${songf##*/}
 tmpf=$$.mp3
 while true; do
   [ "$start" ] || start=0
   [ "$stop" ] || stop=120
   let duration=$stop-$start
   set -x
-  ffmpeg -i $song -ss $start -t $duration -qscale:a 8 $tmpf
+  ffmpeg -i $songf -ss $start -t $duration -qscale:a 8 $tmpf
   set +x
   play $tmpf
 
