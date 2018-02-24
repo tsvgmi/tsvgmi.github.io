@@ -65,7 +65,6 @@
     - asection['list'].each do |aname|
       - aname, asinger = aname.split(',')
       - sentry = song_store[aname]
-      -# Plog.dump_info(sentry:sentry)
       - next unless sentry
       - index += 1
       - tags = sentry[:tags] || []
@@ -78,6 +77,7 @@
       - rowclass += " sty_#{(sentry[:style] || '').downcase}"
       %a(name="s#{index}")
       %div(class=rowclass)
+        - Plog.dump_info(sentry:sentry.keys)
         = partial(:_show_song, locals:{sentry:sentry, index:index})
 
 - content_for :javascript do

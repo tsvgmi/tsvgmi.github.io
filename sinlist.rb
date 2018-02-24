@@ -22,7 +22,8 @@ end
 
 get '/program/:event' do |event|
   ord_list   = YAML.load_file("#{event}.order")
-  song_store = load_songs(ord_list)
+  song_list  = YAML.load_file("#{event}.slist")
+  song_store = load_songs(ord_list, song_list)
   performers = []
   styles     = []
   ord_list.each_with_index do |asection, sec_no|
@@ -57,18 +58,19 @@ get '/send_patch/:pstring' do |pstring|
 end
 
 helpers do
-  def load_songs(ord_list)
+  def load_songs(ord_list, song_flist)
     songs = []
     ord_list.each do |lpart|
-      songs    += (lpart['list'] || []).map{|se| se.split(',')[0]}
+      songs += (lpart['list'] || []).map{|se| se.split(',')[0]}
     end
+
     #Plog.dump_info(songs:songs)
     song_list   = Hash[Song.where(name_k:songs).as_hash(:name_k).
                        map{|k, v| [k, v.to_hash]}]
     sound_list  = Hash[Sound.where(name_k:songs).as_hash(:name_k, nil).
                        map{|k, v| [k, v.to_hash]}]
     #Plog.dump_info(song_list:song_list)
-
+    
     ord_list.each do |lpart|
       (lpart['list'] || []).each do |sse|
         name_k, singer, key, style, tempo, kofs = sse.split(',')
@@ -91,14 +93,17 @@ helpers do
       Plog.dump_info(path:path)
       if path.size >= 6
         sno, song, user = path[4], path[5], path[6]
-        user ||= 'thienv'
-        sfile = "/Users/tvuong/myprofile/#{user}/#{sno}::#{sname}.yml"
+        if user
+          sfile = "/Users/tvuong/myprofile/#{user}/#{sno}::#{sname}.yml"
+        else
+          sfile = Dir.glob("/Users/tvuong/myprofile/*/#{sno}::#{sname}.yml")[0]
+        end
         Plog.dump_info(sfile:sfile)
-        if test(?s, sfile)
+        if sfile && test(?s, sfile)
           flat = sentry[:kofs] =~ /f$/
           kofs = sentry[:kofs].to_i
           Plog.info "Transposing #{sfile}"
-          sentry[:lyric] = ListHelper.transpose_song(sfile, kofs, flat:flat)
+          sentry.update(ListHelper.transpose_song(sfile, kofs, flat:flat))
         else
           Plog.error("#{sfile} not found - source: #{sentry[:lyric_url]}")
         end

@@ -95,7 +95,7 @@ class ListHelper
       true
     end
 
-    def download_all_files(sl_file)
+    def download_youtube_files(sl_file)
       slist = SongStore.new(sl_file)
       slist.songs.select {|e|
         e[:play_link] && e[:href] && e[:play_link] =~ /youtube/
@@ -165,9 +165,10 @@ class ListHelper
     end
 
     def transpose_song(sfile, offset, options={})
-      offset = offset.to_i
-      lyric = YAML.load_file(sfile)[:lyric]
-      output = ""
+      offset   = offset.to_i
+      cur_song = YAML.load_file(sfile)
+      lyric    = cur_song[:lyric]
+      output   = ""
       lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
         tchord = transpose_mkey(chord, offset, options)
         #puts "T:#{text}, C:#{chord}, TC:#{tchord}"
@@ -175,7 +176,8 @@ class ListHelper
       end
       last_span = lyric.sub(/^.*\]/m, '')
       output += last_span
-      output
+      cur_song[:lyric] = output
+      cur_song
     end
 
     def _replace_with_local_lyric(href)
@@ -239,7 +241,6 @@ class ListHelper
       end
     end
   end
-
 end
 
 if (__FILE__ == $0)

@@ -31,7 +31,7 @@
       - pstring = value.to_s.gsub('/', '+')
       - pkey    = sentry[:key]
       %a.a-tooltip(class=sclass href='#' onclick="return send_patch('#{pstring}', '#{pkey}', '##{ptarget}')" title="Download patch")= value
-    - if value = sentry[:play_url]
+    - if value = sentry[:play_url] || sentry[:perf_link]
       - value.split(',').each do |aurl|
         %a.a-tooltip(href=aurl target='play_link' title="Listen to full song")
           %i.fa.fa-music
