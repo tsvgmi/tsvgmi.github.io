@@ -6,7 +6,7 @@
 # $Id$
 #---------------------------------------------------------------------------
 #++
-require File.dirname(__FILE__) + "/../etc/toolenv"
+require_relative "../etc/toolenv"
 require 'nokogiri'
 require 'yaml'
 require 'cgi'
@@ -177,7 +177,69 @@ class ListHelper
       output += last_span
       output
     end
+
+    def _replace_with_local_lyric(href)
+      hrefs = href.split('/')
+
+      if hrefs.size == 6
+        sno, sname, suser = hrefs[4], hrefs[5], hrefs[6]
+        # Replace with my version
+        lfiles = Dir.glob("/Users/tvuong/myprofile/*/#{sno}::#{sname}.yml")
+        if lfiles.size > 0
+          luser = lfiles[0].split('/')[4]
+          href  = href.sub(/\/$/, '') + "/#{luser}"
+        end
+      end
+      [sname, href]
+    end
+
+    def build_slist(url, list_name=nil)
+      $: << '/Users/tvuong/myprofile/bin'
+      require '/Users/tvuong/bin/hacauto'
+
+      list_name ||= File.basename(url)
+      pl_songs = HacSource.playlist(url, getOption)
+      sl_file  = "#{list_name}.slist"
+
+      songs = {}
+      if test(?s, sl_file)
+        YAML.load_file(sl_file).each do |asong|
+          sname, asong[:href] = _replace_with_local_lyric(asong[:href])
+          songs[sname] = asong
+        end
+      end
+      pl_songs.each do |asong|
+        sname, asong[:href] = _replace_with_local_lyric(asong[:href])
+        songs[sname] ||= asong
+      end
+      Plog.info "Updating #{sl_file}"
+      File.open(sl_file, "w") do |fod|
+        fod.puts songs.values.to_yaml
+      end
+
+      ord_file = "#{list_name}.order"
+      ord_list = []
+      if test(?s, ord_file)
+        cur_ord = YAML.load_file(ord_file)[0]
+        cur_list = cur_ord['list'].map do |asong|
+          asong.split(',')[0]
+        end
+        new_songs = songs.keys - cur_list
+        Plog.info "Adding #{new_songs}"
+        cur_ord['list'] += new_songs
+      else
+        cur_ord = {
+          'name' => 'All',
+          'list' => songs.keys
+        }
+      end
+      Plog.info "Updating #{ord_file}"
+      File.open(ord_file, "w") do |fod|
+        fod.puts [cur_ord].to_yaml
+      end
+    end
   end
+
 end
 
 if (__FILE__ == $0)

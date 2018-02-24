@@ -6,7 +6,7 @@
 # $Id$
 #---------------------------------------------------------------------------
 #++
-require File.dirname(__FILE__) + "/../etc/toolenv"
+require_relative "../etc/toolenv"
 require 'sequel'
 require 'yaml'
 require 'core'

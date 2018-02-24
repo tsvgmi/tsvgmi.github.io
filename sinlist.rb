@@ -87,10 +87,13 @@ helpers do
     end
     #Plog.dump_info(song_list:song_list)
     song_list.each do |sname, sentry|
-      path = (sentry[:lyric_url] || '').split('/')
-      if path.size >= 7
-        sno, song, user = path[-3], path[-2], path[-1]
+      path = (sentry[:lyric_url] || sentry[:href] || '').split('/')
+      Plog.dump_info(path:path)
+      if path.size >= 6
+        sno, song, user = path[4], path[5], path[6]
+        user ||= 'thienv'
         sfile = "/Users/tvuong/myprofile/#{user}/#{sno}::#{sname}.yml"
+        Plog.dump_info(sfile:sfile)
         if test(?s, sfile)
           flat = sentry[:kofs] =~ /f$/
           kofs = sentry[:kofs].to_i

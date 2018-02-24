@@ -45,16 +45,12 @@
     .col-md-6
       %h4 Performers
       %form
-        %input.small.perf_sel(type="checkbox" value="All" checked)
-          %span.small All
         - performers.each_with_index do |aperf, index|
           %input.small.perf_sel(type="checkbox" value="perf_#{index}" checked)
             %span.small= aperf
     .col-md-6
       %h4 Styles
       %form
-        %input.small.sty_sel(type="checkbox" value="All" checked)
-          %span.small All
         - styles.each do |astyle|
           %input.small.sty_sel(type="checkbox" value="sty_#{astyle}" checked)
             %span.small= astyle
@@ -81,7 +77,8 @@
         - rowclass += " perf_#{performers.index(aperf)}"
       - rowclass += " sty_#{(sentry[:style] || '').downcase}"
       %a(name="s#{index}")
-      = partial(:_show_song, locals:{sentry:sentry, index:index})
+      %div(class=rowclass)
+        = partial(:_show_song, locals:{sentry:sentry, index:index})
 
 - content_for :javascript do
   :javascript
@@ -96,37 +93,17 @@
       $('.a-tooltip').tooltip({"html":true}); 
       $('.sty_sel').change(function () {
         if (this.checked) {
-          if (this.value == "All") {
-            $('.prow').show();
-            $('.sty_sel').prop('checked', true);
-          } else {
-            $('.' + this.value).show();
-          }
+          $('.' + this.value).show();
         } else {
-          if (this.value == "All") {
-            $('.prow').hide();
-            $('.sty_sel').prop('checked', false);
-          } else {
-            $('.' + this.value).hide();
-          }
+          $('.' + this.value).hide();
         }
         console.log(this);
       });
       $('.perf_sel').change(function () {
         if (this.checked) {
-          if (this.value == "All") {
-            $('.prow').show();
-            $('.perf_sel').prop('checked', true);
-          } else {
-            $('.' + this.value).show();
-          }
+          $('.' + this.value).show();
         } else {
-          if (this.value == "All") {
-            $('.prow').hide();
-            $('.perf_sel').prop('checked', false);
-          } else {
-            $('.' + this.value).hide();
-          }
+          $('.' + this.value).hide();
         }
         console.log(this);
       });
