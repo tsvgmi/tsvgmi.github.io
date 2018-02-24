@@ -1,25 +1,26 @@
 ---
 - name: All
   list:
+  - speak-softly-love,instrument,Am,slow
   - a-time-for-us,instrument,Am,Boston
-  - bon-mau-ao,mai-huong,F,Chacha,,3f
-  - buoc-tinh-hong,mai-huong,?,Bebop
-  - canh-thiep-dau-xuan,mai-huong,?,Chacha
-  - don-vang-chieu-xuan,mai-huong,D,Chacha,,7
-  - giot-mua-tren-la,instrument,C,Valse
-  - hay-cho-toi,thuy-dung,Cm,Chacha,,3
-  - hoa-soan-ben-them-cu,mai-huong,D,Rumba
-  - hoa-xuan,thuy-dung,D,SlowRock
-  - khuc-giao-mua,thien,C,Chacha,,5
-  - mien-trung-trong-toi,thuy-dung,D#m,SlowRock,,5
-  - mong-chieu-xuan,yen-phuong,G,Rumba
-  - mua-xuan-cua-me,yen-phuong,G,Bolero
   - niem-khuc-cuoi,instrument,C,Boston
   - rieng-mot-goc-troi,instrument,Am,Boston,,5
-  - speak-softly-love,instrument,Am,slow
+  - giot-mua-tren-la,instrument,C,Valse
+  - don-vang-chieu-xuan,mai-huong,D,Chacha,,7
+  - canh-thiep-dau-xuan,mai-huong,?,Chacha
+  - hoa-soan-ben-them-cu,mai-huong,D,Rumba
+  - buoc-tinh-hong,mai-huong,?,Bebop
+  - bon-mau-ao,mai-huong,F,Chacha,,3f
+  - hay-cho-toi,thuy-dung,Cm,Chacha,,3
+  - hoa-xuan,thuy-dung,D,SlowRock
+  - mien-trung-trong-toi,thuy-dung,D#m,SlowRock,,5
   - xin-thoi-gian-ngung-troi,thuy-dung,Dm,Bolero
-  - hoa-co-mua-xuan,tu-anh,D,Bebop
+  - mua-xuan-cua-me,yen-phuong,G,Bolero
+  - mong-chieu-xuan,yen-phuong,G,Rumba
+  - quang-ngai-trong-toi,nghiep-bui,D,Ballad
+  - ly-ruou-mung,hop-ca,C,Valse
   - nang-co-con-xuan,yen-phuong
   - xuan-va-tuoi-tre,thien,C,Valse
+  - khuc-giao-mua,thien,C,Chacha,,5
   - tinh-hoai-huong,thien,D,Ballad
-  - quang-ngai-trong-toi,nghiep-bui,D,Ballad
+  - hoa-co-mua-xuan,tu-anh,D,Bebop
