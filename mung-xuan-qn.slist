@@ -1,41 +1,51 @@
 ---
 - :name: Niệm Khúc Cuối
-  :href: https://hopamchuan.com/song/557/niem-khuc-cuoi/
+  :href: https://hopamchuan.com/song/557/niem-khuc-cuoi/unknown
   :artist: Đàm Vĩnh Hưng, Khánh Du
   :preview: Dù cho mưa tôi xin đưa em đến cuối cuộc đời Dù cho mây hay cho bão tố
     có kéo qua [
-- :name: Quãng Ngãi Trong Tôi
-  :href: https://hopamchuan.com/song/13651/quang-ngai-trong-toi/thienv
-  :artist: Thụy Vân
-  :preview: Quảng Ngãi quê  mình trăm mến ngàn  thương  Bao đời còn  đây La Hà Thạch  Trận
-    S
+- :name: Miền Trung trong tôi
+  :href: https://hopamchuan.com/song/15408/mien-trung-trong-toi/thienv
+  :artist: Cao Thái Sơn
+  :preview: 1. Miền Trung quê  tôi đất cằn sỏi đá Miền Trung quê  tôi bốn mùa hối
+    hả Miền Trung quê
 - :name: A Time For Us
-  :href: https://hopamchuan.com/song/2763/a-time-for-us/
+  :href: https://hopamchuan.com/song/2763/a-time-for-us/unknown
   :artist: Andy Williams
   :preview: " A time for  us someday there'll  be When chains are  torn By courage
     \ born of"
   :play_link: https://www.youtube.com/watch?v=EVxbq0quyXs
 - :name: Cánh Thiệp Đầu Xuân
-  :href: https://hopamchuan.com/song/4723/canh-thiep-dau-xuan/
+  :href: https://hopamchuan.com/song/4723/canh-thiep-dau-xuan/unknown
   :artist: Như Quỳnh
   :preview: Capo 1 Hoa lá nở thắm đẹp làn môi hồng Xuân đến rồi đây nào ai biết không
     Mang n
 - :name: Giọt Mưa Trên Lá
-  :href: https://hopamchuan.com/song/5233/giot-mua-tren-la/
+  :href: https://hopamchuan.com/song/5233/giot-mua-tren-la/unknown
   :artist: Lê Thụ, Khánh Ly
   :preview: Giọt mưa trên lá nước mắt mẹ già Lã chã đầm đìa trên xác con lạnh giá
     Gi
 - :name: Speak Softly Love
-  :href: https://hopamchuan.com/song/6294/speak-softly-love/
+  :href: https://hopamchuan.com/song/6294/speak-softly-love/unknown
   :artist: Andy Williams
   :preview: Tình như thoáng mây tình đến cùng ta âm thầm không ngờ Tình như cánh hoa
     tình chiếm hồn
   :play_link: https://www.youtube.com/watch?v=IkWvibti4H0
 - :name: Hoa Soan Bên Thềm Cũ
-  :href: https://hopamchuan.com/song/11002/hoa-soan-ben-them-cu/
+  :href: https://hopamchuan.com/song/11002/hoa-soan-ben-them-cu/unknown
   :artist: Hiền Thục
   :preview: " Khi nắng nhẹ vương trên lưng đồi  Xa vắng miền quê bao  năm rồi  Về
     gặp "
+- :name: Ly Rượu Mừng
+  :href: https://hopamchuan.com/song/2230/ly-ruou-mung/unknown
+  :artist: Various Artists
+  :preview: Capo 2 Ngày xuân nâng chén ta chúc nơi nơi Mừng anh nông phu vui lúa thơm
+    hơi Ngư
+- :name: Để Nhớ Một Thời Ta Đã Yêu
+  :href: https://hopamchuan.com/song/1777/de-nho-mot-thoi-ta-da-yeu/aococtay
+  :artist: Bằng Kiều, Lệ Quyên
+  :preview: Hạnh phúc trong tầm với đã không còn tới khi vắng em trong đời Tìm đến
+    chân trời mới
 - :name: Riêng Một Góc Trời
   :href: https://hopamchuan.com/song/198/rieng-mot-goc-troi/thienv
   :artist: Bằng Kiều, Tuấn Ngọc
@@ -56,12 +66,6 @@
   :artist: Mỹ Linh, Bằng Kiều
   :preview: " Này là cỏ non rất mềm  Này mùa xuân rất hiền  Này là hoa rất  thơm  Này
     là giọt"
-  :play_link: https://www.youtube.com/watch?v=BJi8TNMgjvM
-- :name: Ly Rượu Mừng
-  :href: https://hopamchuan.com/song/2230/ly-ruou-mung/
-  :artist: Various Artists
-  :preview: Capo 2 Ngày xuân nâng chén ta chúc nơi nơi Mừng anh nông phu vui lúa thơm
-    hơi Ngư
 - :name: Hãy Cho Tôi
   :href: https://hopamchuan.com/song/4621/hay-cho-toi/thienv
   :artist: Nguyễn Hùng
@@ -86,6 +90,11 @@
   :artist: Nghi Văn
   :preview: Này đây bước chân xin tìm đến người Này đây cánh tay xin chào đón người
     Này đây
+- :name: Những tâm hồn cô đơn (Tâm hồn cô đơn)
+  :href: https://hopamchuan.com/song/5238/nhung-tam-hon-co-don-tam-hon-co-don/thienv
+  :artist: Tuấn Vũ, Nguyễn Hồng Ân
+  :preview: " Đời không như ước mơ lòng người Cuộc  đời xô đẩy mình đến rã  rời Còn
+    lại  gì, ng"
 - :name: Hoa Xuân
   :href: https://hopamchuan.com/song/5377/hoa-xuan/thienv
   :artist: Khánh Ly
@@ -105,6 +114,11 @@
   :artist: Quang Lê, Ý Lan
   :preview: Quê hương tôi, có con sông đào xinh xắn Nước tuôn trên đồng vuông vắn
     Lúa thơm cho đ
+- :name: Ừ Thì Thôi
+  :href: https://hopamchuan.com/song/10579/u-thi-thoi/
+  :artist: Như Quỳnh
+  :preview: Đêm dài quá  dài giấc ngủ chờ  ai Mà sao không  đến cứ đong đưa  hoài
+    trên ngọn tìn
 - :name: Bốn Màu Áo
   :href: https://hopamchuan.com/song/12329/bon-mau-ao/thienv
   :artist: Như Quỳnh, Loan Châu, Trúc Lam, Trúc Linh, Bảo Hân, Lynda Trang Đài, Yến
@@ -116,7 +130,6 @@
   :artist: Thụy Vân
   :preview: Quảng Ngãi quê  mình trăm mến ngàn  thương  Bao đời còn  đây La Hà Thạch  Trận
     S
-  :play_link: https://www.youtube.com/watch?v=6VAERlS8FM4
 - :name: Miền Trung trong tôi
   :href: https://hopamchuan.com/song/15408/mien-trung-trong-toi/thienv
   :artist: Cao Thái Sơn
