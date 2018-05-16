@@ -775,7 +775,11 @@ class Plog
     end
 
     def dump_info(obj)
-      Plog.info(obj.inspect)
+      if obj[:_ofmt] == 'Y'
+        Plog.info(obj.to_yaml)
+      else
+        Plog.info(obj.inspect)
+      end
     end
 
     def method_missing(symbol, *args)

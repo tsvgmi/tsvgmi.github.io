@@ -23,16 +23,6 @@ module HtmlRes
     page
   end
 
-  KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
-  # Attach play note to the like star
-  def key_offset(base_key, new_key)
-    base_key = base_key.sub(/m$/, '')
-    new_key  = new_key.sub(/m$/, '')
-    #Plog.info({base_key:base_key, new_key:new_key}.inspect)
-    offset = KeyPos.index{|f| new_key =~ /^#{f}$/} - KeyPos.index{|f| base_key =~ /^#{f}$/}
-    offset += 12 if offset < 0
-    offset
-  end
 end
 
 class SongStore
@@ -155,7 +145,11 @@ class ListHelper
         if bofs
           tkey  = KeyPos[(bofs+offset) % 12]
           tkeys = tkey.split('|')
-          output << (options[:flat] ? tkeys[-1]+mod : tkeys[0]+mod)
+          if options[:flat]
+            output << tkeys[-1]+mod
+          else
+            output << tkeys[0]+mod
+          end
         else
           Plog.error("Does not know how to transpose #{key}")
           output << key
@@ -164,19 +158,29 @@ class ListHelper
       output.compact.join('][')
     end
 
-    def transpose_song(sfile, offset, options={})
+    FlatKeys = %w(Dm F Bbm Db Cm Eb Ebm Gb Fm Ab Gm Bb)
+    def transpose_lyric(lyric, offset, options={})
+      if tokey = options[:tokey]
+        if FlatKeys.include?(tokey)
+          options[:flat] = true
+        end
+      end
       offset   = offset.to_i
-      cur_song = YAML.load_file(sfile)
-      lyric    = cur_song[:lyric]
       output   = ""
+      #Plog.dump_info(offset:offset, options:options)
       lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
         tchord = transpose_mkey(chord, offset, options)
-        #puts "T:#{text}, C:#{chord}, TC:#{tchord}"
-        output += "#{text} <span class=chord>[#{tchord}]</span>"
+        output += "#{text}<span class=chord>[#{tchord}]</span>"
       end
       last_span = lyric.sub(/^.*\]/m, '')
       output += last_span
-      cur_song[:lyric] = output
+      output
+    end
+
+    def transpose_song(sfile, offset, options={})
+      offset   = offset.to_i
+      cur_song = YAML.load_file(sfile)
+      cur_song[:lyric] = transpose_lyric(cur_song[:lyric], offset, options)
       cur_song
     end
 

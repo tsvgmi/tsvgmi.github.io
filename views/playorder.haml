@@ -1,0 +1,23 @@
+%h2
+  Performance Order List -
+  - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}/#{list_info[:title]}"
+  %a(href=link target='hopamchuan')= "#{list_info[:title]}"
+  = "(#{list_info['username']})"
+
+.row
+  .col-md-8
+    - order_content = File.read(order_file)
+    %form(action="/playorder" method="post")
+      %input(type="hidden" name="list_id" value="#{list_info[:id]}")
+      %label(for="slink") Playlist Order
+      %textarea.form-control#slink(name="slink" rows=20)
+        = order_content
+      .pull-right
+        %button.btn.btn-sm.btn-warning(type="submit" name="Reset" value=true)  Reset
+        %button.btn.btn-sm.btn-primary(type="submit" name="Update" value=true) Update
+  .col-md-4
+    %p
+      Order the list on the left to your preference and enter details
+      on each line using the following format
+    %p
+      song_id, title (ascii), version, singer, singer_key, style, tempo

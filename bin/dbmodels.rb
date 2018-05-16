@@ -11,7 +11,7 @@ require 'sequel'
 require 'yaml'
 require 'core'
 
-Sequel::Model.db = Sequel.connect('mysql://playlist:play123@localhost/Playlist')
+Sequel::Model.db = Sequel.connect('mysql://playlist:playlistpasswd@127.0.0.1/Playlist')
 
 module DbUtils
   def create_or_update(keys, values)
