@@ -15,7 +15,7 @@ HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@tvuong-aws.colo29zuu6u
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
 
 get '/' do
-  redirect "/program/vnhv-thu-2017"
+  "Hello Nothing"
 end
 
 get '/fragment_upload/:user_name/:song_id/:song_name' do |user_name, song_id, song_name|
