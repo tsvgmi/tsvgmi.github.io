@@ -11,7 +11,8 @@ require 'listhelper'
 require Dir.pwd + '/bin/dbmodels'
 
 set :bind, '0.0.0.0'
-HAC_DB = Sequel.connect('mysql://playlist:playlistpasswd@127.0.0.1/hopamchuan')
+HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com/hopamchuan')
+#HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
 
 get '/' do
   redirect "/program/vnhv-thu-2017"
