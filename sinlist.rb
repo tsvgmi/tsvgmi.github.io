@@ -11,7 +11,7 @@ require 'listhelper'
 require Dir.pwd + '/bin/dbmodels'
 
 set :bind, '0.0.0.0'
-db_url = 'mysql2://playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com')
+db_url = 'mysql2://playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com'
 HAC_DB = Sequel.connect("#{db_url}/hopamchuan")
 Sequel::Model.db = Sequel.connect('#{db_url}/Playlist')
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
