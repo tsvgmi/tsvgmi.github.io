@@ -11,7 +11,8 @@ require 'listhelper'
 require 'sequel'
 
 set :bind, '0.0.0.0'
-ENV['DB_URL'] ||= 'playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com'
+#ENV['DB_URL'] ||= 'playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com'
+ENV['DB_URL'] ||= 'playlist:playlistpasswd@127.0.0.1'
 db_url = "mysql2://#{ENV['DB_URL']}"
 
 HAC_DB           = Sequel.connect("#{db_url}/hopamchuan")
