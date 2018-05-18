@@ -24,6 +24,10 @@ get '/' do
   "Hello Nothing"
 end
 
+get '/what' do
+  "Hello what"
+end
+
 get '/fragment_upload/:user_name/:song_id/:song_name' do |user_name, song_id, song_name|
   locals = params.dup
   haml :fragment_upload, locals:locals
