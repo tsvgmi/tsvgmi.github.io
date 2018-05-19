@@ -9,9 +9,9 @@
 6159,lang du (l' aventura),,Thong,Dm,Valse,
 6160,chi rieng minh ta (love potion number 9),,Thong,Am,,
 6161,mot thoi da xa,,yen-phuong,Em,Slow,
-6162,mua chieu,,Thuy Dung,Am,Slow,
+6162,mua chieu,,Thuy Dung,Am,Slow Rock,60
 6164,mua thu yeu duong,,Vanessa,C,Pop,
 6165,quen di tinh yeu cu,,Mai Huong,Am,Fox Trot,
-6166,se hon bao gio het,,Thuy Dung,Am,Techno,
-6167,trai tim con trinh,,Thuy Dung,Fm,Rhumba,
+6166,se hon bao gio het,,Thuy Dung,Am,Chacha,120
+6167,trai tim con trinh,,Thuy Dung,Fm,Rhumba,85
 6168,unchained melody,,Thien Huong,C,Slow,
