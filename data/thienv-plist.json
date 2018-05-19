@@ -43,5 +43,35 @@
     "instrument": "Piano, String",
     "key": "Am",
     "intro": "123 [Dm]76+3 [G7]2342 -(754[Cmaj7]655) [Am]123 [Dm7]76+3 [E7]+(234432[Fmaj7]231 [Dm7]231 [E7]12)7 [Am]1\n"
+  },
+  "giang-ngoc": {
+    "instrument": "String, Viola",
+    "key": "Am",
+    "intro": "+3[Am]5 989[B7]4 [Dm]94 878[A]3 [Am]83878[Dm]2 +(34[E]5 45[B7]6 56[E7]7\r\n+3[Am]5 989[B7]4 [Dm]94 878[A]3 [Am]83878[Dm]4 34[E]5 45[B7]6 7 [Am]8"
+  },
+  "ha-noi-mua-vang-nhung-con-mua": {
+    "instrument": "Polysynth (Plus/P2)",
+    "key": "Am",
+    "intro": "[Am]1232 [F]1232 [Am]1232 [E7]712-7 4321\r\n[Am]1232 [F]1232 [Am]1232 [E7]712-7 432[Am]1"
+  },
+  "hai-phuong-troi-cach-biet": {
+    "instrument": "String, Accordeon, Flute",
+    "key": "C",
+    "intro": "[C]3 32[A7]3456[Dm]544 2 [G]212345[C]433 [Am]-(6567)1234[Dm]54-6 421[G]-7-(7672657[C]1)"
+  },
+  "mot-thoi-da-xa": {
+    "instrument": "Distortion",
+    "key": "Am",
+    "intro": "-512|[Am]323 -(5|[Dm]56434 -4234343|[G7]4 -77|[C]6545 [A7]145|[Dm]6543[G]4 -634|[C]54[Bb]31[F]3  -623|[Dm]4321[B7]3 123|[Esus4]321[E7]2 |"
+  },
+  "quen-di-tinh-yeu-cu": {
+    "instrument": "Soft Brass, Sax",
+    "key": "Am",
+    "intro": "45[Am]+3 98 567[Dm]6 45[Bm7b5]+(43[E7]2-732[Am]1)"
+  },
+  "lang-du-(l'-aventura)": {
+    "instrument": "Marimba, Organ, Fantasia, Brass",
+    "key": "C",
+    "intro": "1 5 8 5"
   }
 }
