@@ -17,10 +17,10 @@ ENV['DB_HAC'] ||= 'thienv:hBQufu5wegkK2Cay@13.250.100.224/hac_local'
 #ENV['DB_HAC'] ||= 'playlist:playlistpasswd@127.0.0.1/hopamchuan'
 
 HAC_DB           = Sequel.connect("mysql2://#{ENV['DB_HAC']}")
-Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
+#Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
 
-require Dir.pwd + '/bin/dbmodels'
+#require Dir.pwd + '/bin/dbmodels'
 
 get '/' do
   "Hello Nothing"
