@@ -133,7 +133,7 @@ class ListHelper
     KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
     def transpose_mkey(keys, offset, options={})
       output = []
-      keys.split.each do |key|
+      keys.split('/').each do |key|
         if key[1] =~ /[#b]/
           bkey = key[0..1]
           mod  = key[2..-1].strip
@@ -155,7 +155,7 @@ class ListHelper
           output << key
         end
       end
-      output.compact.join('][')
+      output.compact.join('/')
     end
 
     FlatKeys = %w(Dm F Bbm Db Cm Eb Ebm Gb Fm Ab Gm Bb)
@@ -170,7 +170,7 @@ class ListHelper
       #Plog.dump_info(offset:offset, options:options)
       lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
         tchord = transpose_mkey(chord, offset, options)
-        output += "#{text}<span class=chord>[#{tchord}]</span>"
+        output += "#{text}<span class=\"chord\">#{tchord}</span>"
       end
       last_span = lyric.sub(/^.*\]/m, '')
       output += last_span

@@ -13,7 +13,7 @@
       %textarea.form-control#slink(name="slink" rows=20)
         = order_content
       .pull-right
-        %button.btn.btn-sm.btn-warning(type="submit" name="Reset" value=true)  Reset
+        %button.btn.btn-sm.btn-warning(type="submit" name="Reset" value=true onclick="return confirm('OK to reset the list to original? ')")  Reset
         %button.btn.btn-sm.btn-primary(type="submit" name="Update" value=true) Update
   .col-md-4
     %p

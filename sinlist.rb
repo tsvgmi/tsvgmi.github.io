@@ -12,11 +12,12 @@ require 'sequel'
 
 set :bind, '0.0.0.0'
 #ENV['DB_URL'] ||= 'playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com'
-ENV['DB_URL'] ||= 'playlist:playlistpasswd@127.0.0.1'
-db_url = "mysql2://#{ENV['DB_URL']}"
+ENV['DB_MY']  ||= 'playlist:playlistpasswd@127.0.0.1/Playlist'
+ENV['DB_HAC'] ||= 'thienv:hBQufu5wegkK2Cay@13.250.100.224/hac_local'
+#ENV['DB_HAC'] ||= 'playlist:playlistpasswd@127.0.0.1/hopamchuan'
 
-HAC_DB           = Sequel.connect("#{db_url}/hopamchuan")
-Sequel::Model.db = Sequel.connect("#{db_url}/Playlist")
+HAC_DB           = Sequel.connect("mysql2://#{ENV['DB_HAC']}")
+Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
 
 require Dir.pwd + '/bin/dbmodels'
@@ -189,9 +190,13 @@ get '/perflist/:user' do |user|
   artist_set = HAC_DB[sql_artists, song_ids].map{|r| r}.group_by {|r| r[:song_id]}
   #Plog.dump_info(artist_set:artist_set, song_ids:song_ids)
 
-  haml :perflist, locals: {list_info:list_info, song_list:song_list,
+  plist_file      = "#{user}.plist"
+  perf_info       = test(?f, plist_file) ? YAML.load_file(plist_file) : {}
+  singer_profiles = YAML.load_file('singer-profile.yml')
+  haml :perflist, locals: {list_info:list_info, song_list:song_list, user:user,
                            order_list:order_list, artist_set:artist_set,
-                           playlists:playlists}
+                           playlists:playlists, perf_info:perf_info,
+                           singer_profiles:singer_profiles}
 end
 
 get '/program/:event' do |event|

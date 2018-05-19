@@ -1,3 +1,31 @@
+:css
+  @media (min-width: 1024px) {
+    .lyric {
+      line-height: 1.5;
+      column-count: 2;
+      text-align: center;
+    }
+  }
+  .chord {
+    color: #4aa;
+    vertical-align: 15px;
+    display: inline-block;
+    font-weight: 400;
+    max-width: 15px;
+    cursor: pointer;
+    font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+  }
+  hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 50%;
+    border-width: 3px;
+  }
+  .simage {
+    position: absolute;
+    opacity:  0.3;
+  }
+
 .row
   .col-md-9
     %h2
@@ -17,7 +45,6 @@
 %table.table.table-condensed.table-bordered.table-striped
   %thead
     %tr
-      %th ID
       %th Song Name
       %th Poster
       %th Singer
@@ -32,7 +59,6 @@
       - else
         - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}"
       %tr
-        %td= sinfo[:song_id]
         %td
           .pull-right= sinfo[:song_key]
           %h4
@@ -45,19 +71,33 @@
                 = "#{r[:artist]} (#{r[:key]})"
         %td= sinfo[:username] || sinfo[:main_user]
         %td
-          = oinfo[:singer]
+          - singer = oinfo[:singer]
+          = singer
           .pull-right= oinfo[:singer_key]
         %td
+          %a(href="/song-style/#{user}/#{list_info[:id]}/#{sname}" target='song_edit')
+            %i.fa.fa-edit
           = oinfo[:style]
           .pull-right= oinfo[:tempo]
       %tr
-        %td
         %td(colspan=3)
-          - lyric = sinfo[:lyric].gsub(/\n/, '<br>')
-          %pre
-            - offset = key_offset(sinfo[:song_key], oinfo[:singer_key])
-            = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
-        %td
+          - if sprofile = singer_profiles[singer]
+            %img.simage(src="http://graph.facebook.com/#{sprofile[:fbid]}/picture?type=normal")
+          - lyric = sinfo[:lyric]
+          - offset = key_offset(sinfo[:song_key], oinfo[:singer_key])
+          - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
+          - tlyric = tlyric.sub(/^.*==/m, '')
+          .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
+        %td(width="20%")
+          - if perf_note = perf_info[sname]
+            %p= perf_note[:instrument].join(', ')
+            %p
+              - intro = perf_note[:intro]
+              - if intro
+                - offset = key_offset(perf_note[:key], oinfo[:singer_key])
+                = tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key])
+
+          %hr/
           %a(href="/fragment_upload/#{list_info['username']}/#{sinfo[:song_id]}/#{sname}" target='upload' title='Upload music fragment')
             %i.fa.fa-upload
           - %w(intro p0 p1 solo out).each do |segment|
