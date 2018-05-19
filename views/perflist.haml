@@ -4,6 +4,7 @@
       line-height: 1.5;
       column-count: 2;
       text-align: center;
+      font-size: 120%;
     }
   }
   .chord {
@@ -24,6 +25,31 @@
   .simage {
     position: absolute;
     opacity:  0.3;
+  }
+  .perf-note {
+    font-size: 90%;
+    font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+    background-color: #ffe;
+  }
+  audio:hover, audio:focus, audio:active {
+    -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+    -moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+    box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  audio {
+    -webkit-transition:all 0.5s linear;
+    -moz-transition:all 0.5s linear;
+    -o-transition:all 0.5s linear;
+    transition:all 0.5s linear;
+    -moz-box-shadow: 2px 2px 4px 0px #006773;
+    -webkit-box-shadow:  2px 2px 4px 0px #006773;
+    box-shadow: 2px 2px 4px 0px #006773;
+    -moz-border-radius:7px 7px 7px 7px ;
+    -webkit-border-radius:7px 7px 7px 7px ;
+    border-radius:7px 7px 7px 7px ;
   }
 
 .row
@@ -46,7 +72,7 @@
   %thead
     %tr
       %th Song Name
-      %th Poster
+      %th Artist(s)
       %th Singer
       %th Style
   %tbody
@@ -60,22 +86,23 @@
         - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}"
       %tr
         %td
-          .pull-right= sinfo[:song_key]
           %h4
             %a(href=link target='hopamchuan')= sinfo[:song_name]
+        %td
           - if aset = artist_set[sinfo[:song_id]]
-            - aset.each do |r|
-              - if link = r[:link]
-                %a(href=link target='playsong')= "#{r[:artist]} (#{r[:key]})"
-              - else
-                = "#{r[:artist]} (#{r[:key]})"
-        %td= sinfo[:username] || sinfo[:main_user]
+            %ul.list-unstyled
+              - aset.each do |r|
+                %li
+                  - if link = r[:link]
+                    %a(href=link target='playsong')= "#{r[:artist]} (#{r[:key]})"
+                  - else
+                    = "#{r[:artist]} (#{r[:key]})"
         %td
           - singer = oinfo[:singer]
           = singer
           .pull-right= oinfo[:singer_key]
         %td
-          %a(href="/song-style/#{user}/#{list_info[:id]}/#{sname}" target='song_edit')
+          %a(href="/song-style/#{user}/#{sinfo[:song_id]}/#{sname}" target='song_edit')
             %i.fa.fa-edit
           = oinfo[:style]
           .pull-right= oinfo[:tempo]
@@ -88,9 +115,9 @@
           - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
           - tlyric = tlyric.sub(/^.*==/m, '')
           .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
-        %td(width="20%")
+        %td.perf-note(width="20%")
           - if perf_note = perf_info[sname]
-            %p= perf_note[:instrument].join(', ')
+            %p= perf_note[:instrument]
             %p
               - intro = perf_note[:intro]
               - if intro

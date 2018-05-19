@@ -35,6 +35,27 @@ get '/fragment_upload/:user_name/:song_id/:song_name' do |user_name, song_id, so
   haml :fragment_upload, locals:locals
 end
 
+post '/song-style' do
+  user      = params[:user]
+  song_id   = params[:song_id]
+  song_name = params[:song_name]
+  Plog.dump_info(params:params)
+  pnote     = PlayNote.new(user)
+  uperf_info = {instrument:params[:instrument], key:params[:key], intro:params[:intro]}
+  pnote.replace(song_name, uperf_info)
+  redirect "/song-style/#{user}/#{song_id}/#{song_name}"
+end
+
+get '/song-style/:user/:song_id/:song_name' do |user, song_id, song_name|
+  uperf_info = PlayNote.new(user)[song_name] || {}
+  song_id    = song_id.to_i
+  song_info  = get_song_infos([song_id])[song_id]
+  locals     = {user:user, song_id:song_id, song_name:song_name,
+                uperf_info:uperf_info, song_info:song_info}
+  Plog.dump_info(locals:locals)
+  haml :song_style, locals:locals
+end
+
 get '/list/:event' do |event|
   haml :list, locals: {event: event}, layout:nil
 end
@@ -180,18 +201,10 @@ get '/perflist/:user' do |user|
     oinfo[:order] || 9999
   }
 
-  song_ids = song_list.map{|r| r[:song_id]}
-  sql_artists = "select sp.id as perf_id, sp.song_id, sp.key, sp.link,
-                 group_concat(ar.name) as artist from tbl_songs_singers as ss
-                 join tbl_artists as ar on (ss.artist_id = ar.id)
-                 join tbl_songs_performs as sp on (sp.song_id = ss.song_id)
-                 where ss.song_id in ? group by perf_id"
+  song_ids   = song_list.map{|r| r[:song_id]}
+  artist_set = get_song_infos(song_ids)
 
-  artist_set = HAC_DB[sql_artists, song_ids].map{|r| r}.group_by {|r| r[:song_id]}
-  #Plog.dump_info(artist_set:artist_set, song_ids:song_ids)
-
-  plist_file      = "#{user}.plist"
-  perf_info       = test(?f, plist_file) ? YAML.load_file(plist_file) : {}
+  perf_info       = PlayNote.new(user)
   singer_profiles = YAML.load_file('singer-profile.yml')
   haml :perflist, locals: {list_info:list_info, song_list:song_list, user:user,
                            order_list:order_list, artist_set:artist_set,
@@ -312,5 +325,45 @@ helpers do
     offset = new_offset - base_offset
     offset += 12 if offset < 0
     offset
+  end
+
+  def get_song_infos(song_ids)
+    sql = "select ar.name as artist, ar.name_ascii, sp.key, sp.link, so.id
+      as song_id,so._title, so._title_ascii from tbl_performs_singers as ps
+      join tbl_artists as ar on (ar.id=ps.singer_id)
+      join tbl_songs_performs as sp on (sp.id=ps.perform_id)
+      join tbl_songs as so on (so.id=sp.song_id)
+      where sp.song_id in ?"
+    HAC_DB[sql, song_ids].map{|r| r}.group_by {|r| r[:song_id]}
+  end
+end
+
+class PlayNote
+  attr_reader :info
+
+  def initialize(user)
+    @plist_file = "data/#{user}-plist.json"
+    @info       = test(?f, @plist_file) ?
+      JSON.parse(File.read(@plist_file), symbolize_names:true) : {}
+    Plog.dump_info(info:@info)
+  end
+
+  def [](song_name)
+    res = @info[song_name.to_sym]
+    Plog.dump_info(song_name:song_name, res:res)
+    res
+  end
+
+  def replace(song_name, entry)
+    require 'tempfile'
+    require 'fileutils'
+
+    @info[song_name.to_sym] = entry
+
+    # Safer write
+    tmpf = Tempfile.new("plist")
+    tmpf.puts JSON.pretty_generate(@info)
+    tmpf.close
+    FileUtils.move(tmpf.path, @plist_file, verbose:true, force:true)
   end
 end
