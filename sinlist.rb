@@ -61,34 +61,27 @@ get '/list/:event' do |event|
 end
 
 get '/playorder/:listname' do |listname|
-  order_file = listname + "-order.txt"
   list_info  = HAC_DB[:tbl_playlists].first(id:listname.to_i)
   list_info.update(JSON.parse(list_info[:_post_user])) if list_info[:_post_user]
-  if params[:reset] || !test(?f, order_file)
-    sqlmain = "select sp.song_id, sp.playlist_id, s._title_ascii as song_ascii
-         from tbl_songs_playlists as sp
-         join tbl_songs as s on (sp.song_id = s.id) where sp.playlist_id=?"
-    song_list = HAC_DB[sqlmain, listname].map {|r| [r[:song_id], r[:song_ascii]]}
-    Plog.dump_info(song_list:song_list)
-    File.open(order_file, "w") do |fod|
-      song_list.each do |song_id, title|
-        fod.puts "#{song_id},#{title},,,,,"
-      end
-    end
+
+  play_order = PlayOrder.new(listname)
+  if params[:reset]
+    play_order.create_file
+  elsif params[:refresh]
+    play_order.refresh_file
   end
-  haml :playorder, locals:{order_file:order_file, list_info:list_info}
+  haml :playorder, locals:{play_order:play_order, list_info:list_info}
 end
 
 post '/playorder' do
-  Plog.dump_info(params:params)
+  #Plog.dump_info(params:params)
   list_id = params[:list_id]
   if params[:Reset]
     redirect "/playorder/#{list_id}?reset=true"
+  elsif params[:Refresh]
+    redirect "/playorder/#{list_id}?refresh=true"
   else
-    order_file = list_id + "-order.txt"
-    File.open(order_file, "w") do |fod|
-      fod.puts params[:slink]
-    end
+    PlayOrder.new(list_id).write_file(params[:slink])
     redirect "/playorder/#{list_id}"
   end
 end
@@ -97,13 +90,13 @@ get '/perflist/:user' do |user|
   if user =~ /^\d+$/
     sql_pl = "select u.id,u.username,p.* from tbl_users as u
            join tbl_playlists as p on (p.user_id=u.id)
-           where u.id=? and _total_song_count>0
+           where u.id=? and _total_song_count>0 and p.delete_date is null
            order by create_date desc limit 30"
     playlists = HAC_DB[sql_pl, user.to_i].map {|r| r}
   else
     sql_pl = "select u.id,u.username,p.* from tbl_users as u
            join tbl_playlists as p on (p.user_id=u.id)
-           where username=? and _total_song_count>0
+           where username=? and _total_song_count>0 and p.delete_date is null
            order by create_date desc limit 30"
     playlists = HAC_DB[sql_pl, user].map {|r| r}
   end
@@ -124,7 +117,8 @@ get '/perflist/:user' do |user|
 
   sqlmain = "select sp.song_id, sp.playlist_id, p.title as list_name,
          s._title as song_name, s._title_ascii as song_ascii, s._key as song_key,
-         s._lyric as lyric, s._singers as singers, u.username as main_user
+         s._lyric as lyric, s._singers as singers, s._authors as authors,
+         u.username as main_user
          from tbl_songs_playlists as sp
          join tbl_playlists as p on (sp.playlist_id = p.id)
          join tbl_songs as s on (sp.song_id = s.id)
@@ -139,29 +133,7 @@ get '/perflist/:user' do |user|
          left join tbl_users as u on (u.id = sr.user_id) where playlist_id=?"
   list_info  = HAC_DB[:tbl_playlists].first(id:listno.to_i)
   list_info.update(JSON.parse(list_info[:_post_user])) if list_info[:_post_user]
-  order_file = "#{listno}-order.txt"
-  order_list = {}
-  if test(?f, order_file)
-    lno = 0
-    Plog.info(msg:"Loading #{order_file}")
-    order_list = File.read(order_file).split("\n").map do |r|
-      song_id, title, version, singer, skey, style, tempo = r.split(',')
-      song_id = song_id.to_i
-      rec = {
-        song_id:    song_id,
-        title:      title,
-        version:    (version && !version.empty?) ? version : nil,
-        singer:     singer,
-        singer_key: skey,
-        style:      style,
-        tempo:      tempo,
-        order:      lno,
-      }
-      lno += 1
-      [song_id, rec]
-    end
-    order_list = Hash[order_list]
-  end
+  order_list       = PlayOrder.new(listno).content_str
   all_versions_set = {}
   HAC_DB[sqlall, listno].each do |r|
     key = "#{r[:song_ascii]}.#{r[:username]}"
@@ -345,12 +317,10 @@ class PlayNote
     @plist_file = "data/#{user}-plist.json"
     @info       = test(?f, @plist_file) ?
       JSON.parse(File.read(@plist_file), symbolize_names:true) : {}
-    Plog.dump_info(info:@info)
   end
 
   def [](song_name)
     res = @info[song_name.to_sym]
-    Plog.dump_info(song_name:song_name, res:res)
     res
   end
 
@@ -365,5 +335,83 @@ class PlayNote
     tmpf.puts JSON.pretty_generate(@info)
     tmpf.close
     FileUtils.move(tmpf.path, @plist_file, verbose:true, force:true)
+  end
+end
+
+class PlayOrder
+  def initialize(list_id)
+    @list_id    = list_id.to_i
+    @order_file = "data/#{list_id}.order"
+  end
+
+  def song_list_from_db
+    sql = "select sp.song_id, sp.playlist_id, s._title_ascii as song_ascii
+         from tbl_songs_playlists as sp
+         join tbl_songs as s on (sp.song_id = s.id) where sp.playlist_id=?"
+    res = HAC_DB[sql, @list_id].map {|r| [r[:song_id], r[:song_ascii]]}
+    Plog.dump_info(res:res)
+    res
+  end
+
+  def create_file
+    output = song_list_from_db.map do |song_id, title|
+      "#{song_id},#{title},,,,,"
+    end
+    write_file(output.join("\n"))
+  end
+
+  def content
+    test(?f, @order_file) ? File.read(@order_file) : ''
+  end
+
+  def content_str
+    unless test(?f, @order_file)
+      return {}
+    end
+    lno = 0
+    Plog.info(msg:"Loading #{@order_file}")
+    order_list = File.read(@order_file).split("\n").map do |r|
+      song_id, title, version, singer, skey, style, tempo = r.split(',')
+      song_id = song_id.to_i
+      rec = {
+        song_id:    song_id,
+        title:      title,
+        version:    (version && !version.empty?) ? version : nil,
+        singer:     singer,
+        singer_key: skey,
+        style:      style,
+        tempo:      tempo,
+        order:      lno,
+      }
+      lno += 1
+      [song_id, rec]
+    end
+    Hash[order_list]
+  end
+
+  def refresh_file
+    song_list = song_list_from_db.group_by{|r| r[0]}
+    Plog.dump_info(song_list:song_list)
+    wset      = {}
+    output    = []
+    if test(?f, @order_file)
+      File.read(@order_file).split("\n").each do |l|
+        sno, _title, _version, singer, skey, _remain   = l.split(',', 6)
+        if song_list[sno.to_i]
+          output << l
+          song_list.delete(sno.to_i)
+        end
+      end
+    end
+    output += song_list.map do |sid, recs|
+      "#{sid},#{recs[0][1]},,,,,"
+    end
+    write_file(output.join("\n"))
+  end
+
+  def write_file(new_content)
+    File.open(@order_file, "w") do |fod|
+      fod.puts new_content
+    end
   end
 end

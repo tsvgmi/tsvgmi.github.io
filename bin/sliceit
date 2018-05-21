@@ -9,7 +9,7 @@ while true; do
   [ "$stop" ] || stop=120
   let duration=$stop-$start
   set -x
-  ffmpeg -i $songf -ss $start -t $duration -qscale:a 8 $tmpf
+  ffmpeg -i "$songf" -ss $start -t $duration -qscale:a 8 $tmpf
   set +x
   play $tmpf
 

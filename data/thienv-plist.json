@@ -5,9 +5,9 @@
     "intro": "|[Dm]155 |[Em7b5]662 [A7]445 |[Dm]155 |[Em7b5]662 [A7]445\n"
   },
   "trai-tim-con-trinh": {
-    "instrument": "Sax, Piano",
+    "instrument": "Sax, Piano, Mandolin, Clarinet, Acoustic Guitar",
     "key": "Am",
-    "intro": "[Am]3231-5 [Em]9 98[Gm6]98975 [Dm]6 +(145[Bbmaj7]65651 [Am]54541 [B7]2 234[E7]5)\n"
+    "intro": "[Am]3231-5 [Em]9 98[Gm6]98975 [Dm]6 +(145[Bbmaj7]65651 [Am]54541 [B7]2 234[E7]5)\r\n\r\n1 - DK - 2 - Solo - DK - 2 - (Repeat last 2 lines) - Slow & Out\r\n"
   },
   "mua-chieu": {
     "instrument": "Orchestra-String",
@@ -73,5 +73,15 @@
     "instrument": "Marimba, Organ, Fantasia, Brass",
     "key": "C",
     "intro": "1 5 8 5"
+  },
+  "buon-khong-em": {
+    "instrument": "Guitar Acoustic",
+    "key": "Am",
+    "intro": "[Dm] [Am] [F] [Dm] [G] [Cmaj7] [G] [Em] [A] \r\n[Am] [Bm7b5] [E] [Am] [Bm7b5] [E] [Am] "
+  },
+  "lk-vet-thu-tren-lung-ngua-hoang---toi-dua-em-sang-song": {
+    "instrument": "Brass, Xylophone",
+    "key": "Am",
+    "intro": "[Am]132-(7[Em]5 575)32(-75) [Am]132-7 [Am] [C] 11111 33333\r\n[Am]132-(7[Em]5 575)32(-75) [Am]132-7 [Am] [C] [Dm] [Am] 11111 33333 44 431"
   }
 }

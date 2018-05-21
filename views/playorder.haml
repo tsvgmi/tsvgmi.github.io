@@ -6,15 +6,15 @@
 
 .row
   .col-md-8
-    - order_content = File.read(order_file)
     %form(action="/playorder" method="post")
       %input(type="hidden" name="list_id" value="#{list_info[:id]}")
       %label(for="slink") Playlist Order
       %textarea.form-control#slink(name="slink" rows=20)
-        = order_content
+        = play_order.content
       .pull-right
         %button.btn.btn-sm.btn-warning(type="submit" name="Reset" value=true onclick="return confirm('OK to reset the list to original? ')")  Reset
         %button.btn.btn-sm.btn-primary(type="submit" name="Update" value=true) Update
+        %button.btn.btn-sm.btn-primary(type="submit" name="Refresh" value=true) Refresh
   .col-md-4
     %p
       Order the list on the left to your preference and enter details

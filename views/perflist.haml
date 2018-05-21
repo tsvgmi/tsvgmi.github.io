@@ -9,9 +9,10 @@
   }
   .chord {
     color: #4aa;
-    vertical-align: 15px;
+    vertical-align: 20px;
     display: inline-block;
     font-weight: 400;
+    font-size: 80%;
     max-width: 15px;
     cursor: pointer;
     font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
@@ -58,7 +59,7 @@
       List:
       %a(href="/playorder/#{list_info[:id]}" target='list_edit')
         %i.fa.fa-edit
-      - link = "https://test.hopamchuan.com/playlist/v/#{list_info[:id]}/#{list_info[:title]}"
+      - link = "https://test.hopamchuan.com/playlist/v/#{list_info[:id]}"
       %a(href=link target='hopamchuan')= "#{list_info[:title]}"
       = "(#{list_info['username']})"
   .col-md-3
@@ -78,7 +79,7 @@
   %tbody
     - song_list.each do |sinfo|
       - oinfo   = order_list[sinfo[:song_id]] || {}
-      - sname   = sinfo[:song_ascii].gsub(/ /, '-')
+      - sname   = sinfo[:song_ascii].gsub(/[ ']/, '-')
       - version = sinfo[:username]
       - if version && !version.empty?
         - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}/#{version}"
@@ -88,6 +89,7 @@
         %td
           %h4
             %a(href=link target='hopamchuan')= sinfo[:song_name]
+          = JSON.parse(sinfo[:authors]).map {|r| r['name']}.join(', ')
         %td
           - if aset = artist_set[sinfo[:song_id]]
             %ul.list-unstyled
@@ -122,8 +124,8 @@
               - intro = perf_note[:intro]
               - if intro
                 - offset = key_offset(perf_note[:key], oinfo[:singer_key])
-                = tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key])
-
+                - tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key])
+                = tlyric.gsub(/\n/, '<br>')
           %hr/
           %a(href="/fragment_upload/#{list_info['username']}/#{sinfo[:song_id]}/#{sname}" target='upload' title='Upload music fragment')
             %i.fa.fa-upload
