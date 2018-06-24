@@ -81,6 +81,7 @@
         = partial(:_show_song, locals:{sentry:sentry, index:index})
 
 - content_for :javascript do
+  %script(src="https://www.youtube.com/iframe_api")
   :javascript
     function send_patch(pstring, pkey, target) {
       jQuery.get("/send_patch/" + pstring + "?key=" + pkey, function(data) {

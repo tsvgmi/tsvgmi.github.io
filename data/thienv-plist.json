@@ -83,5 +83,10 @@
     "instrument": "Brass, Xylophone",
     "key": "Am",
     "intro": "[Am]132-(7[Em]5 575)32(-75) [Am]132-7 [Am] [C] 11111 33333\r\n[Am]132-(7[Em]5 575)32(-75) [Am]132-7 [Am] [C] [Dm] [Am] 11111 33333 44 431"
+  },
+  "canh-hong-phai": {
+    "instrument": "Synth (Echo)",
+    "key": "",
+    "intro": "Intro like music"
   }
 }

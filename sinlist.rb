@@ -12,11 +12,12 @@ require 'sequel'
 
 set :bind, '0.0.0.0'
 #ENV['DB_URL'] ||= 'playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com'
-ENV['DB_MY']  ||= 'playlist:playlistpasswd@127.0.0.1/Playlist'
-ENV['DB_HAC'] ||= 'thienv:hBQufu5wegkK2Cay@13.250.100.224/hac_local'
+#ENV['DB_MY']  ||= 'playlist:playlistpasswd@127.0.0.1/Playlist'
 #ENV['DB_HAC'] ||= 'playlist:playlistpasswd@127.0.0.1/hopamchuan'
 
-HAC_DB           = Sequel.connect("mysql2://#{ENV['DB_HAC']}")
+HAC_DB           = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/hac_local')
+HAC_DB2          = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/playlist')
+
 #Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
 
@@ -26,8 +27,12 @@ get '/' do
   "Hello Nothing"
 end
 
-get '/what' do
-  "Hello what"
+get '/testyou' do
+  haml :testyou
+end
+
+get '/test2' do
+  haml :test2
 end
 
 get '/fragment_upload/:user_name/:song_id/:song_name' do |user_name, song_id, song_name|
@@ -42,7 +47,7 @@ post '/song-style' do
   Plog.dump_info(params:params)
   pnote     = PlayNote.new(user)
   uperf_info = {instrument:params[:instrument], key:params[:key], intro:params[:intro]}
-  pnote.replace(song_name, uperf_info)
+  pnote.replace(song_id, song_name, uperf_info)
   redirect "/song-style/#{user}/#{song_id}/#{song_name}"
 end
 
@@ -324,7 +329,7 @@ class PlayNote
     res
   end
 
-  def replace(song_name, entry)
+  def replace(song_id, song_name, entry)
     require 'tempfile'
     require 'fileutils'
 
@@ -334,6 +339,7 @@ class PlayNote
     tmpf = Tempfile.new("plist")
     tmpf.puts JSON.pretty_generate(@info)
     tmpf.close
+    HAC_DB2[:tbl_songs].first(id:song_id).update()
     FileUtils.move(tmpf.path, @plist_file, verbose:true, force:true)
   end
 end
@@ -371,7 +377,7 @@ class PlayOrder
     lno = 0
     Plog.info(msg:"Loading #{@order_file}")
     order_list = File.read(@order_file).split("\n").map do |r|
-      song_id, title, version, singer, skey, style, tempo = r.split(',')
+      song_id, title, version, singer, skey, style, tempo, ytvid, ytstart, ytend = r.split(',')
       song_id = song_id.to_i
       rec = {
         song_id:    song_id,
@@ -382,6 +388,9 @@ class PlayOrder
         style:      style,
         tempo:      tempo,
         order:      lno,
+        ytvid:      ytvid,
+        ytstart:    ytstart ? ytstart.to_i : nil,
+        ytend:      ytend ? ytend.to_i : nil,
       }
       lno += 1
       [song_id, rec]

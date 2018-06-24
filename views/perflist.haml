@@ -69,6 +69,7 @@
           - selected = params[:listno].to_i == plinfo[:id]
           %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:title][0..39]} [#{plinfo[:_total_song_count]}]"
 
+- videos = []
 %table.table.table-condensed.table-bordered.table-striped
   %thead
     %tr
@@ -77,18 +78,24 @@
       %th Singer
       %th Style
   %tbody
-    - song_list.each do |sinfo|
+    - song_list.each_with_index do |sinfo, row_no|
       - oinfo   = order_list[sinfo[:song_id]] || {}
+      - Plog.dump_info(oinfo:oinfo)
       - sname   = sinfo[:song_ascii].gsub(/[ ']/, '-')
       - version = sinfo[:username]
       - if version && !version.empty?
         - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}/#{version}"
       - else
         - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}"
+      - lyric_id = "row_#{row_no}"
       %tr
         %td
           %h4
+            %a.a-tooltip(data-toggle="collapse" href="##{lyric_id}" aria-expanded="false" aria-controls=lyric_id title='Toggle Lyric')
+              %i.fa.fa-search
             %a(href=link target='hopamchuan')= sinfo[:song_name]
+            %a.pull-right.a-tooltip(data-toggle="collapse" href="##{lyric_id}" aria-expanded="false" aria-controls=lyric_id title='Toggle Lyric')
+              %i.fa.fa-search
           = JSON.parse(sinfo[:authors]).map {|r| r['name']}.join(', ')
         %td
           - if aset = artist_set[sinfo[:song_id]]
@@ -108,7 +115,7 @@
             %i.fa.fa-edit
           = oinfo[:style]
           .pull-right= oinfo[:tempo]
-      %tr
+      %tr.collapse(id=lyric_id)
         %td(colspan=3)
           - if sprofile = singer_profiles[singer]
             %img.simage(src="http://graph.facebook.com/#{sprofile[:fbid]}/picture?type=normal")
@@ -127,11 +134,57 @@
                 - tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key])
                 = tlyric.gsub(/\n/, '<br>')
           %hr/
-          %a(href="/fragment_upload/#{list_info['username']}/#{sinfo[:song_id]}/#{sname}" target='upload' title='Upload music fragment')
-            %i.fa.fa-upload
-          - %w(intro p0 p1 solo out).each do |segment|
-            - sfile = "audio/#{list_info['username']}/#{segment}-#{sname}.mp3"
-            - next unless test(?f, sfile)
-            %audio(controls loop)
-              - spath = "/#{sfile}"
-              %source(src=spath)
+          - if oinfo[:ytvid]
+            - vid = 'v_' + sname
+            %div(id=vid)
+              For youtube video #{vid}
+              - videos << {vid:vid, video:oinfo[:ytvid], start:oinfo[:ytstart], end:oinfo[:ytend]}
+          - else
+            %a(href="/fragment_upload/#{list_info['username']}/#{sinfo[:song_id]}/#{sname}" target='upload' title='Upload music fragment')
+              %i.fa.fa-upload
+            - %w(intro p0 p1 solo out).each do |segment|
+              - sfile = "audio/#{list_info['username']}/#{segment}-#{sname}.mp3"
+              - next unless test(?f, sfile)
+              %audio(controls loop)
+                - spath = "/#{sfile}"
+                %source(src=spath)
+
+- content_for :javascript do
+  %script(src="https://www.youtube.com/iframe_api")
+  :javascript
+    $(document).ready(function() {
+      $('.a-tooltip').tooltip({"html":true}); 
+    });
+
+    var videos     = #{videos.to_json};
+    var cur_player = null;
+    function onYouTubeIframeAPIReady() {
+      for (var i = 0; i < videos.length; i++) {
+        var cur_video = videos[i];
+        console.log(cur_video);
+        var avideo    = cur_video['video'];
+        var vid       = cur_video['vid'];
+        var start = cur_video['start']; var end = cur_video['end'];
+        var player = new YT.Player(vid, {
+          height: '100',
+          width:  '150',
+          playerVars: {autoplay:0, start:start, end:end},
+          videoId: avideo,
+          events: {
+            'onStateChange': function(event){
+              var mplayer = event.target
+              if (event.data == 0) {
+                avideo = mplayer.b.b['videoId']
+                console.log(mplayer.b.b);
+                console.log('Restarting ' + avideo);
+                mplayer.seekTo(start);
+                //if (cur_player) {
+                  //cur_player.stopVideo();
+                //}
+                cur_player = mplayer.playVideo();
+              }
+            }
+          }
+        });
+      }
+    }
