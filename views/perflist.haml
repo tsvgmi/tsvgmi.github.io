@@ -161,7 +161,6 @@
     function onYouTubeIframeAPIReady() {
       for (var i = 0; i < videos.length; i++) {
         var cur_video = videos[i];
-        console.log(cur_video);
         var avideo    = cur_video['video'];
         var vid       = cur_video['vid'];
         var start = cur_video['start']; var end = cur_video['end'];
@@ -174,13 +173,11 @@
             'onStateChange': function(event){
               var mplayer = event.target
               if (event.data == 0) {
-                avideo = mplayer.b.b['videoId']
-                console.log(mplayer.b.b);
-                console.log('Restarting ' + avideo);
+                mdata  = mplayer.b.b;
+                start  = mdata['playerVars']['start'];
+                //console.log(mdata);
+                console.log('Restarting ' + mdata['videoId'] + ' ' + start);
                 mplayer.seekTo(start);
-                //if (cur_player) {
-                  //cur_player.stopVideo();
-                //}
                 cur_player = mplayer.playVideo();
               }
             }
