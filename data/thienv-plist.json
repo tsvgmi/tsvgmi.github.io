@@ -93,5 +93,10 @@
     "instrument": "[Flute]",
     "key": "C",
     "intro": "[C]345 3[Am]983665 1[F]65143 2[G]5 "
+  },
+  "mot-mai-em-di": {
+    "instrument": "Guitar Sustain",
+    "key": "Dm",
+    "intro": "[Dm]333[C]2342[Bb]1[C] [Dm] 333[C]2345[Bb]8 [C]7854"
   }
 }
