@@ -135,10 +135,11 @@
                 = tlyric.gsub(/\n/, '<br>')
           %hr/
           - if oinfo[:ytvid]
-            - vid = 'v_' + sname
-            %div(id=vid)
-              For youtube video #{vid}
-              - videos << {vid:vid, video:oinfo[:ytvid], start:oinfo[:ytstart], end:oinfo[:ytend]}
+            -# For youtube video #{sname}
+            - oinfo[:ytoffset].each_slice(2) do |ytstart, ytend|
+              - vid = "v_#{sname}_#{ytstart}"
+              %div(id=vid)
+              - videos << {vid:vid, video:oinfo[:ytvid], start:ytstart.to_i, end:ytend.to_i}
           - else
             %a(href="/fragment_upload/#{list_info['username']}/#{sinfo[:song_id]}/#{sname}" target='upload' title='Upload music fragment')
               %i.fa.fa-upload

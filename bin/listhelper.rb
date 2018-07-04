@@ -160,7 +160,9 @@ class ListHelper
 
     FlatKeys = %w(Dm F Bbm Db Cm Eb Ebm Gb Fm Ab Gm Bb)
     def transpose_lyric(lyric, offset, options={})
+      # Target key
       if tokey = options[:tokey]
+        # Special rule.  If target key is flat, all mod should use flat
         if FlatKeys.include?(tokey)
           options[:flat] = true
         end
@@ -168,8 +170,10 @@ class ListHelper
       offset   = offset.to_i
       output   = ""
       #Plog.dump_info(offset:offset, options:options)
+      # Pick out the chords notation, transpose anre replace it back
       lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
         tchord = transpose_mkey(chord, offset, options)
+        # Adding span only for my usecase for now.
         output += "#{text}<span class=\"chord\">#{tchord}</span>"
       end
       last_span = lyric.sub(/^.*\]/m, '')

@@ -339,7 +339,7 @@ class PlayNote
     tmpf = Tempfile.new("plist")
     tmpf.puts JSON.pretty_generate(@info)
     tmpf.close
-    HAC_DB2[:tbl_songs].first(id:song_id).update()
+    #HAC_DB2[:tbl_songs].first(id:song_id).update()
     FileUtils.move(tmpf.path, @plist_file, verbose:true, force:true)
   end
 end
@@ -377,7 +377,9 @@ class PlayOrder
     lno = 0
     Plog.info(msg:"Loading #{@order_file}")
     order_list = File.read(@order_file).split("\n").map do |r|
-      song_id, title, version, singer, skey, style, tempo, ytvid, ytstart, ytend = r.split(',')
+      sinfo, vinfo = r.split('/')
+      song_id, title, version, singer, skey, style, tempo = sinfo.split(',')
+      ytvid, *ytoffset = (vinfo || '').split(',')
       song_id = song_id.to_i
       rec = {
         song_id:    song_id,
@@ -389,8 +391,7 @@ class PlayOrder
         tempo:      tempo,
         order:      lno,
         ytvid:      ytvid,
-        ytstart:    ytstart ? ytstart.to_i : nil,
-        ytend:      ytend ? ytend.to_i : nil,
+        ytoffset:   ytoffset,
       }
       lno += 1
       [song_id, rec]

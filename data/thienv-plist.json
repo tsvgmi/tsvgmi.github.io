@@ -88,5 +88,10 @@
     "instrument": "Synth (Echo)",
     "key": "",
     "intro": "Intro like music"
+  },
+  "de-gio-dua-vao-quen-lang": {
+    "instrument": "[Flute]",
+    "key": "C",
+    "intro": "[C]345 3[Am]983665 1[F]65143 2[G]5 "
   }
 }
