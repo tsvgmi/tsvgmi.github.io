@@ -77,7 +77,7 @@
   "buon-khong-em": {
     "instrument": "Guitar Acoustic",
     "key": "Am",
-    "intro": "[Dm] [Am] [F] [Dm] [G] [Cmaj7] [G] [Em] [A] \r\n[Am] [Bm7b5] [E] [Am] [Bm7b5] [E] [Am] "
+    "intro": "[Dm] ... [Am] ... [F] ...[Dm] ...[G] ...[Cmaj7] ...[G] ...[Em] ...[A] \r\n[Am] ...[Bm7b5] ...[E] ...[Am] ...[Bm7b5] ...[E] ...[Am] "
   },
   "lk-vet-thu-tren-lung-ngua-hoang---toi-dua-em-sang-song": {
     "instrument": "Brass, Xylophone",
@@ -98,5 +98,10 @@
     "instrument": "Guitar Sustain",
     "key": "Dm",
     "intro": "[Dm]333[C]2342[Bb]1[C] [Dm] 333[C]2345[Bb]8 [C]7854"
+  },
+  "60-nam-cuoc-doi": {
+    "instrument": "Jazz Piano",
+    "key": "",
+    "intro": ""
   }
 }
