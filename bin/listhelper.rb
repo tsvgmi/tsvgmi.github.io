@@ -130,10 +130,14 @@ class ListHelper
        end
     end
 
+    # 12 elemement list of key and alternate notation.  Use '|'
+    # between alternate notation so it could be matched with regexp
     KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
     def transpose_mkey(keys, offset, options={})
       output = []
+      # Incase key is specified as chord/bass.  We transpose both
       keys.split('/').each do |key|
+        # Extract base key and mod (sharp/flat)
         if key[1] =~ /[#b]/
           bkey = key[0..1]
           mod  = key[2..-1].strip
@@ -141,10 +145,13 @@ class ListHelper
           bkey = key[0]
           mod  = key[1..-1].strip
         end
+        # Order of key (0-11)
         bofs = KeyPos.index{|k| bkey =~ /^#{k}$/}
         if bofs
+          # Calculate target key
           tkey  = KeyPos[(bofs+offset) % 12]
-          tkeys = tkey.split('|')
+          # Select alternate notations (sharp or flat)
+          tkeys = tkey. split('|')
           if options[:flat]
             output << tkeys[-1]+mod
           else
@@ -158,17 +165,20 @@ class ListHelper
       output.compact.join('/')
     end
 
+    # List of base keys using flat notation
     FlatKeys = %w(Dm F Bbm Db Cm Eb Ebm Gb Fm Ab Gm Bb)
+    # Transpose a lyric stream for # of offset semitones
     def transpose_lyric(lyric, offset, options={})
-      # Target key
-      if tokey = options[:tokey]
-        # Special rule.  If target key is flat, all mod should use flat
-        if FlatKeys.include?(tokey)
-          options[:flat] = true
-        end
-      end
-      offset   = offset.to_i
-      output   = ""
+      # Target key.  Need to know since this control whethere
+      # to use flat or sharp
+      to_basechord = options[:fromkey] ?
+        target_chord(options[:fromkey], offset) :
+        to_basechord = options[:tokey]
+
+      # Special rule.  If target key uses flat notation, all mod should use flat
+      options[:flat] = to_basechord && FlatKeys.include?(to_basechord)
+      offset         = offset.to_i
+      output         = ""
       #Plog.dump_info(offset:offset, options:options)
       # Pick out the chords notation, transpose anre replace it back
       lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
@@ -179,6 +189,19 @@ class ListHelper
       last_span = lyric.sub(/^.*\]/m, '')
       output += last_span
       output
+    end
+
+    MajorChords = %w(A Bb B C Db D Eb E F F# G Ab)
+    MinorChords = %w(Am Bbm Bm Cm Dbm Dm Ebm Em Fm Gbm Gm Abm)
+    def target_chord(base_chord, offset)
+      if coffset = MajorChords.index(base_chord)
+        return MajorChords[(coffset + offset) % 12]
+      elsif coffset = MinorChords.index(base_chord)
+        return MinorChords[(coffset + offset) % 12]
+      else
+        Plog.error("Unknown chord to locate target: #{base_chord}")
+        return base_chord
+      end
     end
 
     def transpose_song(sfile, offset, options={})
