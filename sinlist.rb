@@ -9,6 +9,7 @@ require 'net/http'
 require 'core'
 require 'listhelper'
 require 'sequel'
+require_relative '../hacauto/bin/hac-nhac'
 
 set :bind, '0.0.0.0'
 #ENV['DB_URL'] ||= 'playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com'
@@ -20,20 +21,6 @@ HAC_DB2          = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.2
 
 #Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
-
-#require Dir.pwd + '/bin/dbmodels'
-
-get '/' do
-  "Hello Nothing"
-end
-
-get '/testyou' do
-  haml :testyou
-end
-
-get '/test2' do
-  haml :test2
-end
 
 get '/fragment_upload/:user_name/:song_id/:song_name' do |user_name, song_id, song_name|
   locals = params.dup
@@ -65,17 +52,14 @@ get '/list/:event' do |event|
   haml :list, locals: {event: event}, layout:nil
 end
 
-get '/playorder/:listname' do |listname|
-  list_info  = HAC_DB[:tbl_playlists].first(id:listname.to_i)
-  list_info.update(JSON.parse(list_info[:_post_user])) if list_info[:_post_user]
-
-  play_order = PlayOrder.new(listname)
+get '/playorder/:listno' do |listno|
+  play_order = PlayOrder.new(listno)
   if params[:reset]
     play_order.create_file
   elsif params[:refresh]
     play_order.refresh_file
   end
-  haml :playorder, locals:{play_order:play_order, list_info:list_info}
+  haml :playorder, locals:{play_order:play_order}
 end
 
 post '/playorder' do
@@ -92,91 +76,22 @@ post '/playorder' do
 end
 
 get '/perflist/:user' do |user|
-  if user =~ /^\d+$/
-    sql_pl = "select u.id,u.username,p.* from tbl_users as u
-           join tbl_playlists as p on (p.user_id=u.id)
-           where u.id=? and _total_song_count>0 and p.delete_date is null
-           order by create_date desc limit 30"
-    playlists = HAC_DB[sql_pl, user.to_i].map {|r| r}
-  else
-    sql_pl = "select u.id,u.username,p.* from tbl_users as u
-           join tbl_playlists as p on (p.user_id=u.id)
-           where username=? and _total_song_count>0 and p.delete_date is null
-           order by create_date desc limit 30"
-    playlists = HAC_DB[sql_pl, user].map {|r| r}
-  end
+  playlists = PlayList.for_user(user)
   if playlists.size <= 0
     return [403, "No playlists found for user #{user}"]
   end
+
   if listno = params[:listno]
     listno = listno.to_i
-    if false
-      all_listno = playlists.map{|r| r[:id]}
-      unless all_listno.include?(listno)
-        raise "Playlist #{listno} does not belong to user #{user}"
-      end
-    end
   else
     listno = playlists[0][:id]
   end
+  list_info  = playlists.select{|r| r[:id] == listno}.first
+  play_order = PlayOrder.new(listno)
+  order_list = Hash[play_order.content_str]
+  song_list  = play_order.fetch_songs
 
-  sqlmain = "select sp.song_id, sp.playlist_id, p.title as list_name,
-         s._title as song_name, s._title_ascii as song_ascii, s._key as song_key,
-         s._lyric as lyric, s._singers as singers, s._authors as authors,
-         u.username as main_user
-         from tbl_songs_playlists as sp
-         join tbl_playlists as p on (sp.playlist_id = p.id)
-         join tbl_songs as s on (sp.song_id = s.id)
-         join tbl_users as u on (u.id = s.post_user_id)
-         where p.id=?"
-  sqlall = "select sp.song_id, sp.playlist_id, p.title as list_name, s._title as song_name,
-         s._title_ascii as song_ascii, sr.key as song_key, sr.lyric, u.username
-         from tbl_songs_playlists as sp 
-         join tbl_playlists as p on (sp.playlist_id = p.id)
-         join tbl_songs as s on (sp.song_id = s.id)
-         join tbl_songs_contributes as sr on (sr.song_id = sp.song_id)
-         left join tbl_users as u on (u.id = sr.user_id) where playlist_id=?"
-  list_info  = HAC_DB[:tbl_playlists].first(id:listno.to_i)
-  list_info.update(JSON.parse(list_info[:_post_user])) if list_info[:_post_user]
-  order_list       = PlayOrder.new(listno).content_str
-  all_versions_set = {}
-  HAC_DB[sqlall, listno].each do |r|
-    key = "#{r[:song_ascii]}.#{r[:username]}"
-    all_versions_set[key] = r
-  end
-  #Plog.dump_info(all_keys:all_versions_set.keys)
-  song_list = HAC_DB[sqlmain, listno].map do |r|
-    oinfo = order_list[r[:song_id]] || {}
-    if version = oinfo[:version]
-      key = "#{r[:song_ascii]}.#{version}"
-      Plog.info("Checking #{key}")
-      if ainfo = all_versions_set[key]
-        Plog.dump_info(msg:'Replacing main version', ainfo:ainfo)
-        r.update({
-          song_key: ainfo[:song_key],
-          lyric:    ainfo[:lyric],
-          username: ainfo[:username],
-        })
-        unless r[:song_key]
-          # Override version, but version does not have key
-          if r[:lyric] =~ /\[([^\]]+)\]/
-            song_key = $1
-            r[:song_key] = song_key
-          end
-        end
-      end
-    else
-      # If default, I don't rely on DB field.  Calculate from lyric
-      if r[:lyric] =~ /\[([^\]]+)\]/
-        song_key = $1
-        r[:song_key] = song_key
-      end
-    end
-    r
-  end.sort_by {|r|
-    oinfo = order_list[r[:song_id]] || {}
-    oinfo[:order] || 9999
-  }
+  #Plog.dump_info(list_info:list_info, song_list:song_list[0..5], _ofmt:'Y')
 
   song_ids   = song_list.map{|r| r[:song_id]}
   artist_set = get_song_infos(song_ids)
@@ -344,33 +259,112 @@ class PlayNote
   end
 end
 
-class PlayOrder
-  def initialize(list_id)
-    @list_id    = list_id.to_i
-    @order_file = "data/#{list_id}.order"
+class PlayList
+  HAC_URL = "https://hopamchuan.com"
+
+  def initialize(list_info)
+    if list_info.is_a?(Hash)
+      listno    = list_info[:id]
+      @save_list = list_info.clone
+    else
+      listno    = list_info.to_i
+      @save_list = {id: listno}
+    end
+    @list_id = listno
   end
 
-  def song_list_from_db
-    sql = "select sp.song_id, sp.playlist_id, s._title_ascii as song_ascii
-         from tbl_songs_playlists as sp
-         join tbl_songs as s on (sp.song_id = s.id) where sp.playlist_id=?"
-    res = HAC_DB[sql, @list_id].map {|r| [r[:song_id], r[:song_ascii]]}
-    Plog.dump_info(res:res)
-    res
+  def fetch(fetch_new=false)
+    cfile = "data/list_content-#{@list_id}.yml"
+    if !fetch_new && test(?s, cfile)
+      @save_list = YAML.load_file(cfile)
+    else
+      @save_list[:content] = HacSource.new.playlist("#{HAC_URL}/playlist/v/#{@list_id}")
+      File.open(cfile, "w") do |fod|
+        fod.puts @save_list.to_yaml
+      end
+      @save_list
+    end
+    @save_list
+  end
+
+  def self.for_user(user)
+    cfile = "data/list_for_user-#{user}.yml"
+    if test(?s, cfile)
+      ulist = YAML.load_file(cfile)
+    else
+      ulist = HacSource.new.list_for_user("#{HAC_URL}/profile/playlists/#{user}")
+      File.open(cfile, "w") do |fod|
+        fod.puts ulist.to_yaml
+      end
+      ulist
+    end
+  end
+end
+
+class PlayOrder
+  attr_reader :playlist, :content_str
+
+  def self.hac_song_info(url)
+    sf = url.split('/')
+    sid, sname, version = sf[4], sf[5], sf[6]
+    cfile = "data/song:#{sid}:#{version}:#{sname}"
+
+    if test(?s, cfile)
+      sinfo = YAML.load_file(cfile)
+    else
+      sinfo = HacSource.new.lyric_info(url)
+      File.open(cfile, "w") do |fod|
+        fod.puts sinfo.to_yaml
+      end
+      sinfo
+    end
+    sinfo
+  end
+
+  def initialize(list_info)
+    @list_id    = list_info.is_a?(Hash) ? list_info[:id] : list_info.to_i
+    @order_file = "data/#{@list_id}.order"
+    @playlist   = PlayList.new(list_info)
+    if test(?f, @order_file)
+      @content_str = _content_str
+    else
+      create_file
+    end
   end
 
   def create_file
-    output = song_list_from_db.map do |song_id, title|
-      "#{song_id},#{title},,,,,"
+    output = @playlist.fetch[:content].map do |r|
+      fs = r[:href].split('/')
+      "#{r[:song_id]},#{fs[5]},,,,,"
     end
     write_file(output.join("\n"))
+  end
+
+  def fetch_song_list
+    qorder = @content_str.map{|r| r[0]}
+    @playlist.fetch[:content].sort_by do |asong|
+      qorder.index(asong[:song_id])
+    end
+  end
+
+  def fetch_songs
+    order_list = Hash[@content_str]
+    fetch_song_list.map do |asong|
+      oinfo = order_list[asong[:song_id]]
+      url   = asong[:href].sub(/\/*$/, '')
+      #Plog.dump_info(url:url)
+      if oinfo[:version] && !oinfo[:version].empty?
+        url += "/#{oinfo[:version]}"
+      end
+      asong.update(self.class.hac_song_info(url))
+    end
   end
 
   def content
     test(?f, @order_file) ? File.read(@order_file) : ''
   end
 
-  def content_str
+  def _content_str
     unless test(?f, @order_file)
       return {}
     end
@@ -396,12 +390,11 @@ class PlayOrder
       lno += 1
       [song_id, rec]
     end
-    Hash[order_list]
+    order_list
   end
 
   def refresh_file
-    song_list = song_list_from_db.group_by{|r| r[0]}
-    Plog.dump_info(song_list:song_list)
+    song_list = @playlist.fetch(true)[:content].group_by {|r| r[:song_id]}
     wset      = {}
     output    = []
     if test(?f, @order_file)
@@ -414,7 +407,8 @@ class PlayOrder
       end
     end
     output += song_list.map do |sid, recs|
-      "#{sid},#{recs[0][1]},,,,,"
+      sname = recs[0][:href].split('/')[5]
+      "#{sid},#{sname},,,,,"
     end
     write_file(output.join("\n"))
   end
@@ -423,5 +417,6 @@ class PlayOrder
     File.open(@order_file, "w") do |fod|
       fod.puts new_content
     end
+    @content_str = _content_str
   end
 end

@@ -60,14 +60,14 @@
       %a(href="/playorder/#{list_info[:id]}" target='list_edit')
         %i.fa.fa-edit
       - link = "https://test.hopamchuan.com/playlist/v/#{list_info[:id]}"
-      %a(href=link target='hopamchuan')= "#{list_info[:title]}"
+      %a(href=link target='hopamchuan')= "#{list_info[:name]}"
       = "(#{list_info['username']})"
   .col-md-3
     %form
       %select.form-control(name="listno" onchange="this.form.submit()")
         - playlists.each do |plinfo|
           - selected = params[:listno].to_i == plinfo[:id]
-          %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:title][0..39]} [#{plinfo[:_total_song_count]}]"
+          %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:name][0..39]} [#{plinfo[:_total_song_count]}]"
 
 - videos = []
 %table.table.table-condensed.table-bordered.table-striped
@@ -80,32 +80,23 @@
   %tbody
     - song_list.each_with_index do |sinfo, row_no|
       - oinfo   = order_list[sinfo[:song_id]] || {}
-      - Plog.dump_info(oinfo:oinfo)
-      - sname   = sinfo[:song_ascii].gsub(/[ ']/, '-')
-      - version = sinfo[:username]
+      -# Plog.dump_info(sinfo:sinfo, oinfo:oinfo)
+      - sname   = sinfo[:name].gsub(/[ ']/, '-')
+      - version = oinfo[:version]
+      - link = sinfo[:href]
       - if version && !version.empty?
-        - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}/#{version}"
-      - else
-        - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}"
+        - link += "/#{version}"
       - lyric_id = "row_#{row_no}"
       %tr
         %td
           %h4
             %a.a-tooltip(data-toggle="collapse" href="##{lyric_id}" aria-expanded="false" aria-controls=lyric_id title='Toggle Lyric')
               %i.fa.fa-search
-            %a(href=link target='hopamchuan')= sinfo[:song_name]
+            %a(href=link target='hopamchuan')= sinfo[:name]
             %a.pull-right.a-tooltip(data-toggle="collapse" href="##{lyric_id}" aria-expanded="false" aria-controls=lyric_id title='Toggle Lyric')
               %i.fa.fa-search
-          = JSON.parse(sinfo[:authors]).map {|r| r['name']}.join(', ')
-        %td
-          - if aset = artist_set[sinfo[:song_id]]
-            %ul.list-unstyled
-              - aset.each do |r|
-                %li
-                  - if link = r[:link]
-                    %a(href=link target='playsong')= "#{r[:artist]} (#{r[:key]})"
-                  - else
-                    = "#{r[:artist]} (#{r[:key]})"
+          = sinfo[:author]
+        %td= sinfo[:artist]
         %td
           - singer = oinfo[:singer]
           = singer

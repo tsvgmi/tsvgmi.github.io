@@ -1,7 +1,8 @@
+- list_info = play_order.playlist.fetch
 %h2
   Performance Order List -
-  - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}/#{list_info[:title]}"
-  %a(href=link target='hopamchuan')= "#{list_info[:title]}"
+  - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}/#{list_info[:name]}"
+  %a(href=link target='hopamchuan')= "#{list_info[:name]}"
   = "(#{list_info['username']})"
 
 .row
