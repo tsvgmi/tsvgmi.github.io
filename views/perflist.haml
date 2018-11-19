@@ -141,6 +141,7 @@
                 - spath = "/#{sfile}"
                 %source(src=spath)
 
+-#= videos.inspect
 - content_for :javascript do
   %script(src="https://www.youtube.com/iframe_api")
   :javascript
@@ -156,7 +157,7 @@
         var avideo    = cur_video['video'];
         var vid       = cur_video['vid'];
         var start = cur_video['start']; var end = cur_video['end'];
-        var player = new YT.Player(vid, {
+        var player    = new YT.Player(vid, {
           height: '100',
           width:  '150',
           playerVars: {autoplay:0, start:start, end:end},
@@ -167,7 +168,7 @@
               if (event.data == 0) {
                 mdata  = mplayer.b.b;
                 start  = mdata['playerVars']['start'];
-                //console.log(mdata);
+                console.log(mdata);
                 console.log('Restarting ' + mdata['videoId'] + ' ' + start);
                 mplayer.seekTo(start);
                 cur_player = mplayer.playVideo();

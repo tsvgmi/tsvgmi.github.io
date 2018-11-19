@@ -22,6 +22,19 @@ HAC_DB2          = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.2
 #Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
 
+
+before do
+  response.headers['Access-Control-Allow-Origin'] = '*'
+end
+  
+# routes...
+options "*" do
+  response.headers["Allow"] = "GET, POST, OPTIONS"
+  response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
+  response.headers["Access-Control-Allow-Origin"] = "*"
+  200
+end
+
 get '/fragment_upload/:user_name/:song_id/:song_name' do |user_name, song_id, song_name|
   locals = params.dup
   haml :fragment_upload, locals:locals
