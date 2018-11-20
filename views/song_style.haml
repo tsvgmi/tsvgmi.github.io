@@ -21,14 +21,14 @@
   }
 
 - instrument = uperf_info[:instrument] || []
-%h2= song_info[0][:_title]
+
+%h2= song_info[:title]
 %ul.list-inline
-  - song_info.each do |r|
-    %li.list-inline-item
-      - if link = r[:link]
-        %a(href=link target='playsong')= "#{r[:artist]} (#{r[:key]})"
-      - else
-        = "#{r[:artist]} (#{r[:key]})"
+  %li.list-inline-item
+    - if link = song_info[:link]
+      %a(href=link target='playsong')= "#{song_info[:artist]} (#{song_info[:key]})"
+    - else
+      = "#{song_info[:artist]} (#{song_info[:song_key]})"
 %form(action="/song-style" method="post")
   %input(type='hidden' name='user' value=user)
   %input(type='hidden' name='song_id' value=song_id)

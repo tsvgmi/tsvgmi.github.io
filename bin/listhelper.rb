@@ -179,12 +179,13 @@ class ListHelper
       options[:flat] = to_basechord && FlatKeys.include?(to_basechord)
       offset         = offset.to_i
       output         = ""
+      cclass         = options[:cclass] || 'chord'
       #Plog.dump_info(offset:offset, options:options)
       # Pick out the chords notation, transpose anre replace it back
       lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
         tchord = transpose_mkey(chord, offset, options)
         # Adding span only for my usecase for now.
-        output += "#{text}<span class=\"chord\">#{tchord}</span>"
+        output += "#{text}<span class=\"#{cclass}\">#{tchord}</span>"
       end
       last_span = lyric.sub(/^.*\]/m, '')
       output += last_span

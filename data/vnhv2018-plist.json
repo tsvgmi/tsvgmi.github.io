@@ -1,0 +1,167 @@
+{
+  "se-hon-bao-gio-het": {
+    "instrument": "Brass, Bass, Guitar",
+    "key": "Dm",
+    "intro": "|[Dm]155 |[Em7b5]662 [A7]445 |[Dm]155 |[Em7b5]662 [A7]445\n"
+  },
+  "trai-tim-con-trinh": {
+    "instrument": "Sax, Piano, Mandolin, Clarinet, Acoustic Guitar",
+    "key": "Am",
+    "intro": "[Am]3231-5 [Em]9 98[Gm6]98975 [Dm]6 +(145[Bbmaj7]65651 [Am]54541 [B7]2 234[E7]5)\r\n\r\n1 - DK - 2 - Solo - DK - 2 - (Repeat last 2 lines) - Slow & Out\r\n"
+  },
+  "mua-chieu": {
+    "instrument": "Orchestra-String",
+    "key": "Dm",
+    "intro": "123 243[Dm]5 (543 321) 123154[Gm]6 (876 654) 456486[Dm]5 [Dm/C]34 [Bb]53654 [A7]432653[Dm]1 (21[Gm]1 21[Dm]1)\n"
+  },
+  "mua-thu-yeu-duong": {
+    "instrument": "Piano, Fantasia Distortion",
+    "key": "C",
+    "intro": "((( [Dm] [G] [C] [C] ))) x 2\n<br>Fantasia: [Dm]652652[G] [C]531531 [Dm]642642[G] [C]531531\n<br>Distortion: -(568[Dm]969) [G]-(569[C]865) -(568[Dm]969)6[G]52 5[C]3 \n-(568[Dm]969) [G]-(569[C]865) -(568[Dm]969)6[G]52 -5-62[C]1\n"
+  },
+  "chuyen-thuong-tinh-the-thoi": {
+    "instrument": "Synth",
+    "key": "Dm",
+    "intro": "((( 555[Dm]5511 555[C]44-(77) 44[Am7]444-(55) 222-([Dm]8878 ))) x 2\n"
+  },
+  "khuc-tinh-nong": {
+    "instrument": "Distortion, Piano, Brass",
+    "key": "Dm",
+    "intro": "Base: [Dm]1 131[A7]-7 245[Dm]1 321[A7]-7\n<br>Distortion: 1 543431 5434318 +(12321)78 755 (Same bass line) x 2\n"
+  },
+  "hay-cho-toi": {
+    "instrument": "Distort Synth, Yell, Cowbell",
+    "key": "Dm",
+    "intro": "5654565[Dm]1 5654568[Gm]4 4543456[A7]2 6543234[A7]5 5654565[Dm]1 5654568[Gm]4 4543456[A7]2 6543232[Dm]1\n<br>Mid: 135 -724665 -725 12345 135 -724665 -725 12345 468 86488553 123246 5458\n<br>Out: 135 -724665 -725 1111\n"
+  },
+  "canh-buom-xa-xua": {
+    "instrument": "Voice(Ah), Piano, Fantasie",
+    "key": "C",
+    "intro": "3|[Dm]4343|[F]48 2|[C]32[Am]323|[Em]7 1|[Dm]2121|[G]2652|[C]3 |[A7]\r\n3|[Dm]4343|[F]48 2|[C]32[Am]32|[Em]37 1|[Dm]2121|[G]26 652|[C]1\r\n"
+  },
+  "dem-dinh-menh": {
+    "instrument": "Piano, String",
+    "key": "Am",
+    "intro": "123 [Dm]76+3 [G7]2342 -(754[Cmaj7]655) [Am]123 [Dm7]76+3 [E7]+(234432[Fmaj7]231 [Dm7]231 [E7]12)7 [Am]1\n"
+  },
+  "giang-ngoc": {
+    "instrument": "String, Viola",
+    "key": "Am",
+    "intro": "+3[Am]5 989[B7]4 [Dm]94 878[A]3 [Am]83878[Dm]2 +(34[E]5 45[B7]6 56[E7]7\r\n+3[Am]5 989[B7]4 [Dm]94 878[A]3 [Am]83878[Dm]4 34[E]5 45[B7]6 7 [Am]8"
+  },
+  "ha-noi-mua-vang-nhung-con-mua": {
+    "instrument": "Polysynth (Plus/P2)",
+    "key": "Am",
+    "intro": "[Am]1232 [F]1232 [Am]1232 [E7]712-7 4321\r\n[Am]1232 [F]1232 [Am]1232 [E7]712-7 432[Am]1"
+  },
+  "hai-phuong-troi-cach-biet": {
+    "instrument": "String, Accordeon, Flute",
+    "key": "C",
+    "intro": "[C]3 32[A7]3456[Dm]544 2 [G]212345[C]433 [Am]-(6567)1234[Dm]54-6 421[G]-7-(7672657[C]1)"
+  },
+  "mot-thoi-da-xa": {
+    "instrument": "Distortion",
+    "key": "Am",
+    "intro": "-512|[Am]323 -(5|[Dm]56434 -4234343|[G7]4 -77|[C]6545 [A7]145|[Dm]6543[G]4 -634|[C]54[Bb]31[F]3  -623|[Dm]4321[B7]3 123|[Esus4]321[E7]2 |"
+  },
+  "quen-di-tinh-yeu-cu": {
+    "instrument": "Soft Brass, Sax",
+    "key": "Am",
+    "intro": "45[Am]+3 98 567[Dm]6 45[Bm7b5]+(43[E7]2-732[Am]1)"
+  },
+  "lang-du-(l'-aventura)": {
+    "instrument": "Marimba, Organ, Fantasia, Brass",
+    "key": "C",
+    "intro": "1 5 8 5"
+  },
+  "buon-khong-em": {
+    "instrument": "Guitar Acoustic",
+    "key": "Am",
+    "intro": "[Dm] ... [Am] ... [F] ...[Dm] ...[G] ...[Cmaj7] ...[G] ...[Em] ...[A] \r\n[Am] ...[Bm7b5] ...[E] ...[Am] ...[Bm7b5] ...[E] ...[Am] "
+  },
+  "lk-vet-thu-tren-lung-ngua-hoang---toi-dua-em-sang-song": {
+    "instrument": "Brass, Xylophone",
+    "key": "Am",
+    "intro": "[Am]132-(7[Em]5 575)32(-75) [Am]132-7 [Am] [C] 11111 33333\r\n[Am]132-(7[Em]5 575)32(-75) [Am]132-7 [Am] [C] [Dm] [Am] 11111 33333 44 431"
+  },
+  "canh-hong-phai": {
+    "instrument": "Synth (Echo)",
+    "key": "Am",
+    "intro": "Intro like music\r\n[Am] [C] [E7] [Am]"
+  },
+  "de-gio-dua-vao-quen-lang": {
+    "instrument": "[Flute]",
+    "key": "C",
+    "intro": "[C]345 3[Am]983665 1[F]65143 2[G]5 "
+  },
+  "mot-mai-em-di": {
+    "instrument": "Guitar Sustain",
+    "key": "Dm",
+    "intro": "[Dm]333[C]2342[Bb]1[C] [Dm] 333[C]2345[Bb]8 [C]7854"
+  },
+  "60-nam-cuoc-doi": {
+    "instrument": "Jazz Piano",
+    "key": "",
+    "intro": ""
+  },
+  "bo-vo": {
+    "instrument": "Guitar, Piano",
+    "key": "Em",
+    "intro": "[Em] [Em] [Em] [Em] [Am] [Am] [D] [C] [B] [Em] [Em]"
+  },
+  "tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien": {
+    "instrument": "Accordeon, Staccato, String, Guitar",
+    "key": "Dm",
+    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\n"
+  },
+  "yeu-nhau-di-besame-mucho": {
+    "instrument": "Trumpet",
+    "key": "Dm",
+    "intro": "[Gm6] [Dm] [A] [Dm]\r\n[Gm6] [Dm] [A] [Dm]"
+  },
+  "phien-da-sau": {
+    "instrument": "String, Piano",
+    "key": "Am",
+    "intro": "[Am] [B7] [Dm7] [E7]\r\n[Am] [B7] [E7] [Am]"
+  },
+  "diem-xua": {
+    "instrument": "String",
+    "key": "Am",
+    "intro": "[Dm/F] [Am/E] [E] [Am]\r\n[Dm/F] [Am/E] [E] [Am]"
+  },
+  "lai-gan-hon-anh-lai-gan-ben-anh": {
+    "instrument": "Piano, String",
+    "key": "Am",
+    "intro": "[Am] [Dm] [G] [C] [F] [Dm] [E] [E]\r\n[Am] [Dm] [G] [C] [F] [Dm] [Esus4] [E]"
+  },
+  "nao-biet-nao-hay": {
+    "instrument": "Brass, Trumpet",
+    "key": "Am",
+    "intro": "[Dm] [Am] [E] [Am]\r\n"
+  },
+  "nguoi-hay-quen-em-di": {
+    "instrument": "Guitar",
+    "key": "Dm",
+    "intro": "[Dm7] [Gm7] [C7] [Fmaj7] [Bbmaj7] [Gm7] [Asus4] [A]"
+  },
+  "bong-chieu-ta": {
+    "instrument": "Violin Orchestra",
+    "key": "Dm",
+    "intro": "[Dm] [Gm] [E] [A]\r\n[Dm] [Gm] [A] [Dm]"
+  },
+  "du-am-mua-giang-sinh": {
+    "instrument": "String",
+    "key": "C",
+    "intro": "[C]-[E] [Am]-[A] [Dm]-[C] [D] [G]"
+  },
+  "tuyet-roi": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "[Gm] [Dm] [E7] [A]"
+  },
+  "ben-nhau-dem-nay": {
+    "instrument": "Piano, Dist Guitar",
+    "key": "Dm",
+    "intro": "Piano: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\nDist Guitar: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]"
+  }
+}

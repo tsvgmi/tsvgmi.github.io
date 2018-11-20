@@ -28,7 +28,7 @@
     opacity:  0.3;
   }
   .perf-note {
-    font-size: 90%;
+    font-size: 120%;
     font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
     background-color: #ffe;
   }
@@ -70,6 +70,7 @@
           %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:name][0..39]} [#{plinfo[:_total_song_count]}]"
 
 - videos = []
+- Plog.dump_info(perf_info:perf_info)
 %table.table.table-condensed.table-bordered.table-striped
   %thead
     %tr
@@ -80,8 +81,9 @@
   %tbody
     - song_list.each_with_index do |sinfo, row_no|
       - oinfo   = order_list[sinfo[:song_id]] || {}
+      - hs      = sinfo[:href].split('/')
       -# Plog.dump_info(sinfo:sinfo, oinfo:oinfo)
-      - sname   = sinfo[:name].gsub(/[ ']/, '-')
+      - sname   = hs[5]
       - version = oinfo[:version]
       - link = sinfo[:href]
       - if version && !version.empty?
@@ -116,13 +118,14 @@
           - tlyric = tlyric.sub(/^.*==/m, '')
           .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
         %td.perf-note(width="20%")
+          - Plog.dump_info(sname:sname, perf_note:perf_info[sname])
           - if perf_note = perf_info[sname]
             %p= perf_note[:instrument]
             %p
               - intro = perf_note[:intro]
               - if intro
                 - offset = key_offset(perf_note[:key], oinfo[:singer_key])
-                - tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key])
+                - tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key], cclass:'chord_intro')
                 = tlyric.gsub(/\n/, '<br>')
           %hr/
           - if oinfo[:ytvid]

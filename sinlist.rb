@@ -16,8 +16,10 @@ set :bind, '0.0.0.0'
 #ENV['DB_MY']  ||= 'playlist:playlistpasswd@127.0.0.1/Playlist'
 #ENV['DB_HAC'] ||= 'playlist:playlistpasswd@127.0.0.1/hopamchuan'
 
+if false
 HAC_DB           = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/hac_local')
 HAC_DB2          = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/playlist')
+end
 
 #Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
@@ -41,10 +43,10 @@ get '/fragment_upload/:user_name/:song_id/:song_name' do |user_name, song_id, so
 end
 
 post '/song-style' do
+  Plog.dump_info(params:params)
   user      = params[:user]
   song_id   = params[:song_id]
   song_name = params[:song_name]
-  Plog.dump_info(params:params)
   pnote     = PlayNote.new(user)
   uperf_info = {instrument:params[:instrument], key:params[:key], intro:params[:intro]}
   pnote.replace(song_id, song_name, uperf_info)
@@ -54,7 +56,7 @@ end
 get '/song-style/:user/:song_id/:song_name' do |user, song_id, song_name|
   uperf_info = PlayNote.new(user)[song_name] || {}
   song_id    = song_id.to_i
-  song_info  = get_song_infos([song_id])[song_id]
+  song_info  = SongInfo.new(song_id).content
   locals     = {user:user, song_id:song_id, song_name:song_name,
                 uperf_info:uperf_info, song_info:song_info}
   Plog.dump_info(locals:locals)
@@ -106,13 +108,10 @@ get '/perflist/:user' do |user|
 
   #Plog.dump_info(list_info:list_info, song_list:song_list[0..5], _ofmt:'Y')
 
-  song_ids   = song_list.map{|r| r[:song_id]}
-  artist_set = get_song_infos(song_ids)
-
   perf_info       = PlayNote.new(user)
   singer_profiles = YAML.load_file('singer-profile.yml')
   haml :perflist, locals: {list_info:list_info, song_list:song_list, user:user,
-                           order_list:order_list, artist_set:artist_set,
+                           order_list:order_list, 
                            playlists:playlists, perf_info:perf_info,
                            singer_profiles:singer_profiles}
 end
@@ -267,7 +266,7 @@ class PlayNote
     tmpf = Tempfile.new("plist")
     tmpf.puts JSON.pretty_generate(@info)
     tmpf.close
-    #HAC_DB2[:tbl_songs].first(id:song_id).update()
+    Plog.dump_info(ofile:@plist_file, info:@info)
     FileUtils.move(tmpf.path, @plist_file, verbose:true, force:true)
   end
 end
@@ -431,5 +430,25 @@ class PlayOrder
       fod.puts new_content
     end
     @content_str = _content_str
+  end
+end
+
+class SongInfo
+  attr_reader :content
+
+  def initialize(song_id, version=nil)
+    if version
+      fptn = "data/song:#{song_id}:#{version}:*"
+    else
+      fptn = "data/song:#{song_id}:{,*}:*"
+    end
+    sfile = Dir.glob(fptn)[0]
+    Plog.dump_info(sfile:sfile)
+    if !test(?s, sfile)
+      Plog.dump_error(msg:'File not found', sfile:sfile)
+      @content = {}
+    else
+      @content = YAML.load_file(sfile)
+    end
   end
 end
