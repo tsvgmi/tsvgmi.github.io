@@ -155,7 +155,7 @@
     "intro": "[C]-[E] [Am]-[A] [Dm]-[C] [D] [G]"
   },
   "tuyet-roi": {
-    "instrument": "[]",
+    "instrument": "Guitar",
     "key": "Dm",
     "intro": "[Gm] [Dm] [E7] [A]"
   },
@@ -163,5 +163,70 @@
     "instrument": "Piano, Dist Guitar",
     "key": "Dm",
     "intro": "Piano: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\nDist Guitar: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]"
+  },
+  "tuyet-roi-mua-he": {
+    "instrument": "Guitar",
+    "key": "Dm",
+    "intro": "[Dm] [Dm] [Gm] [Gm] [Em7b5] [A7] [Dm] [Gm]-[A7] [Dm] [Dm] [Gm] [Gm] [Em7b5] [A7] [Bb] [A7]"
+  },
+  "california-dreamin": {
+    "instrument": "Guitar",
+    "key": "Dm",
+    "intro": "[A7] [Dm]"
+  },
+  "beautiful-sunday": {
+    "instrument": "Rock&Roll Guitar",
+    "key": "C",
+    "intro": "[C]"
+  },
+  "you-re-a-woman-you-re-a-woman-i-m-a-man": {
+    "instrument": "Synth, Harmonica",
+    "key": "Dm",
+    "intro": "[Dm] [Gm] [C] [Dm] [D] [Gm] [C] [Dm]\r\nSolo: [Dm] [Dm] [G] [G] [Dm] [Dm] [G] [G]"
+  },
+  "nhung-buoc-chan-am-tham": {
+    "instrument": "Piano",
+    "key": "Dm",
+    "intro": "[Dm] [A] [Dm] [A] [Dm]\r\n[Dm] [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]"
+  },
+  "oh-carol": {
+    "instrument": "Voice",
+    "key": "G",
+    "intro": "[G] [Em] [Am] [D]"
+  },
+  "con-chut-gi-de-nho": {
+    "instrument": "Picolo, String",
+    "key": "C",
+    "intro": "[C] [Fm6] [G] [E]-[Am] [G]-[F]"
+  },
+  "em-oi-ha-noi-pho": {
+    "instrument": "Piano",
+    "key": "Am",
+    "intro": "[Am] [Dm6] [F] [E7]"
+  },
+  "mo-khuc-tuong-phung": {
+    "instrument": "Bass, Sax",
+    "key": "Dm",
+    "intro": "[Dm] [C] [Bb] [A] [Dm] [C] [Bb] [A]\r\nSax: [Dm] [C] [Bb] [A] [Dm] [C] [Bb] [A] [Dm]"
+  },
+  "do-that-to-me-one-more-time": {
+    "instrument": "Guitar",
+    "key": "C",
+    "intro": "[C] [Am] [F] [G] [C] [Am] [F] [G]"
+  },
+  "mot-minh": {
+    "instrument": "Violin, Guitar, Flute",
+    "key": "Am",
+    "intro": "[Am] [C] [Dm] [Am] [F] [Dm]-[G] [C] [C] [Dm] [Am] [Bm7b5]-[E7] [Am]"
+  },
+  "trai-tim-ben-le": {
+    "instrument": "Grunge Guitar",
+    "key": "Am",
+    "intro": "[Am] [G] [F] [E] [Am] [G] [F] [E]"
+  },
+  "mong-chieu-xuan": {
+    "instrument": "Guitar, String, Sax",
+    "key": "C",
+    "intro": "Guitar: [C] [C] [Am] [Am] [Dm] [Em] [Em] [G]\r\nSax: [F] [F] [Em] [Em] [Dm] [G] [C] [F] [C]"
   }
 }
