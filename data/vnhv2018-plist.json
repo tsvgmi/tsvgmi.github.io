@@ -112,32 +112,32 @@
   "tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien": {
     "instrument": "Accordeon, Staccato, String, Guitar",
     "key": "Dm",
-    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\n"
+    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\n565458 543454375434 43465432\r\n585742 474543 365432 65452431 5678\r\n"
   },
   "yeu-nhau-di-besame-mucho": {
     "instrument": "Trumpet",
     "key": "Dm",
-    "intro": "[Gm6] [Dm] [A] [Dm]\r\n[Gm6] [Dm] [A] [Dm]"
+    "intro": "[Gm6] [Dm] [A] [Dm]\r\n[Gm6] [Dm] [A] [Dm]\r\n135-986 986985 9757777678"
   },
   "phien-da-sau": {
     "instrument": "String, Piano",
     "key": "Am",
-    "intro": "[Am] [B7] [Dm7] [E7]\r\n[Am] [B7] [E7] [Am]"
+    "intro": "[Am] [B7] [Dm7] [E7]\r\n[Am] [B7] [E7] [Am]\r\n+35 96 +(123)4 765\r\n+35 96 887 998 (4431 4431)"
   },
   "diem-xua": {
     "instrument": "String",
     "key": "Am",
-    "intro": "[Dm/F] [Am/E] [E] [Am]\r\n[Dm/F] [Am/E] [E] [Am]"
+    "intro": "[Dm/F] [Am/E] [E] [Am]\r\n[Dm/F] [Am/E] [E] [Am]\r\n6146145135135-72613513513\r\n6146135135135-722321"
   },
   "lai-gan-hon-anh-lai-gan-ben-anh": {
     "instrument": "Piano, String",
     "key": "Am",
-    "intro": "[Am] [Dm] [G] [C] [F] [Dm] [E] [E]\r\n[Am] [Dm] [G] [C] [F] [Dm] [Esus4] [E]"
+    "intro": "[Am] [Dm] [G] [C] [F] [Dm] [E] [E]\r\n[Am] [Dm] [G] [C] [F] [Dm] [Esus4] [E]\r\n+(323)56+(543 212)45+(432 1)7834+(3211-7246579)\r\n+(323)56+(543 212)45+(432 1)7834+(3211)7"
   },
   "nao-biet-nao-hay": {
     "instrument": "Brass, Trumpet",
     "key": "Am",
-    "intro": "[Dm] [Am] [E] [Am]\r\n"
+    "intro": "[Dm] [Am] [E] [Am]\r\n6 6(65456) 5 5(54345) 5 (65432) 321\r\n"
   },
   "nguoi-hay-quen-em-di": {
     "instrument": "Guitar",
@@ -147,27 +147,27 @@
   "bong-chieu-ta": {
     "instrument": "Violin Orchestra",
     "key": "Dm",
-    "intro": "[Dm] [Gm] [E] [A]\r\n[Dm] [Gm] [A] [Dm]"
+    "intro": "[Dm] [Gm] [E] [A]\r\n[Dm] [Gm] [A] [Dm]\r\n354535453 4656564564 465646564 7789754\r\n354535453 465646564 79756778"
   },
   "du-am-mua-giang-sinh": {
     "instrument": "String",
     "key": "C",
-    "intro": "[C]-[E] [Am]-[A] [Dm]-[C] [D] [G]"
+    "intro": "[C]-[E] [Am]-[A] [Dm]-[C] [D] [G]\r\n-5433 322 3211 -6544 -5433 -5322 1-61232 22 225"
   },
   "tuyet-roi": {
     "instrument": "Guitar",
     "key": "Dm",
-    "intro": "[Gm] [Dm] [E7] [A]"
+    "intro": "[Gm] [Dm] [E7] [A]\r\n35985766 46983655 13653544 67845645 (8887)"
   },
   "ben-nhau-dem-nay": {
     "instrument": "Piano, Dist Guitar",
     "key": "Dm",
-    "intro": "Piano: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\nDist Guitar: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]"
+    "intro": "Piano: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\nDist Guitar: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\n1321342217 7327465543 1321342217 7327 46545\r\n55543452 44432321 5858552 444432 112365"
   },
   "tuyet-roi-mua-he": {
     "instrument": "Guitar",
     "key": "Dm",
-    "intro": "[Dm] [Dm] [Gm] [Gm] [Em7b5] [A7] [Dm] [Gm]-[A7] [Dm] [Dm] [Gm] [Gm] [Em7b5] [A7] [Bb] [A7]"
+    "intro": "[Dm] [Dm] [Gm] [Gm] [Em7b5] [A7] [Dm] [Gm]-[A7] [Dm] [Dm] [Gm] [Gm] [Em7b5] [A7] [Bb] [A7]\r\n-5233 4321-(7786) 5564 32 -712233 -712443 -7123455561 -654 -532 -5233 432"
   },
   "california-dreamin": {
     "instrument": "Guitar",
@@ -197,17 +197,17 @@
   "con-chut-gi-de-nho": {
     "instrument": "Picolo, String",
     "key": "C",
-    "intro": "[C] [Fm6] [G] [E]-[Am] [G]-[F]"
+    "intro": "[C] [Fm6] [G] [E]-[Am] [G]-[F]\r\n331 442 5575 4321 -(76)"
   },
   "em-oi-ha-noi-pho": {
     "instrument": "Piano",
     "key": "Am",
-    "intro": "[Am] [Dm6] [F] [E7]"
+    "intro": "[Am] [Dm6] [F] [E7]\r\n+35+(423) +25+(312)\r\n83978 664425"
   },
   "mo-khuc-tuong-phung": {
     "instrument": "Bass, Sax",
     "key": "Dm",
-    "intro": "[Dm] [C] [Bb] [A] [Dm] [C] [Bb] [A]\r\nSax: [Dm] [C] [Bb] [A] [Dm] [C] [Bb] [A] [Dm]"
+    "intro": "Bass: [Dm] [C] [Bb] [A] [Dm] [C] [Bb] [A]\r\nSax: [Dm] [C] [Bb] [A] [Dm] [C] [Bb] [A] [Dm]\r\n123217 89876 78765 724321 24321\r\n123217 89876 78765  254321\r\n"
   },
   "do-that-to-me-one-more-time": {
     "instrument": "Guitar",
@@ -217,16 +217,31 @@
   "mot-minh": {
     "instrument": "Violin, Guitar, Flute",
     "key": "Am",
-    "intro": "[Am] [C] [Dm] [Am] [F] [Dm]-[G] [C] [C] [Dm] [Am] [Bm7b5]-[E7] [Am]"
+    "intro": "[Am] [C] [Dm] [Am] [F] [Dm]-[G] [C] [C] [Dm] [Am] [Bm7b5]-[E7] [Am]\r\n1234587 4568+31 5+(134)\r\n1356 325 564 453 342 231"
   },
   "trai-tim-ben-le": {
     "instrument": "Grunge Guitar",
     "key": "Am",
-    "intro": "[Am] [G] [F] [E] [Am] [G] [F] [E]"
+    "intro": "[Am] [G] [F] [E] [Am] [G] [F] [E]\r\n55156165 277277286+3 1881881+(213) 257 289 29+(3) 2+(34) 2+5 2+6"
   },
   "mong-chieu-xuan": {
     "instrument": "Guitar, String, Sax",
     "key": "C",
-    "intro": "Guitar: [C] [C] [Am] [Am] [Dm] [Em] [Em] [G]\r\nSax: [F] [F] [Em] [Em] [Dm] [G] [C] [F] [C]"
+    "intro": "Guitar: [C] [C] [Am] [Am] [Dm] [Em] [Em] [G]\r\nSax: [F] [F] [Em] [Em] [Dm] [G] [C] [F] [C]\r\n51235875 512357988 8678+(23544) 68+(433) 568+(321)6789\r\n11216+1(14) +(54321)7353 +(4321)7249 987543-71"
+  },
+  "nguoi-tinh-mua-dong": {
+    "instrument": "Piano",
+    "key": "",
+    "intro": "7+(1254) 75+(32) 4387 25+(25) "
+  },
+  "lai-nho-nguoi-yeu": {
+    "instrument": "Guitar, Bell",
+    "key": "Am",
+    "intro": "[C] [G] [Am] [F] [C] [G] [C]\r\n[C] [G] [Am] [F] [C] [G] [Am]\r\n4321312] [43213] [16] [432134532] [123\r\n4321312] [4321356] [4321345432] [56\r\n"
+  },
+  "say": {
+    "instrument": "Guitar Distortion, Synth",
+    "key": "Am",
+    "intro": "[Am] [C] [D] [Am] [Am] [C] [D] [Am]\r\n888787] [666545] [888783] [31344] [5431"
   }
 }

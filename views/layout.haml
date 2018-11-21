@@ -15,8 +15,16 @@
       .vsmall {
         font-size: 60%;
       }
+      .notice {
+        width: 50%;
+        text-align: center;
+        border: 4px solid #ccc;
+        background-color: #ffc;
+      }
     
   %body
+    %center.notice#flash
+      = flash[:notice]
     .container-fluid
       = yield
       %footer

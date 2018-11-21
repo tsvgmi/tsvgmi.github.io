@@ -4,6 +4,7 @@ require 'sinatra'
 require 'sinatra/content_for'
 require 'sinatra/reloader'
 require 'sinatra/partial'
+require 'sinatra/flash'
 require 'yaml'
 require 'net/http'
 require 'core'
@@ -24,11 +25,12 @@ end
 #Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
 
+enable :sessions
 
 before do
   response.headers['Access-Control-Allow-Origin'] = '*'
 end
-  
+
 # routes...
 options "*" do
   response.headers["Allow"] = "GET, POST, OPTIONS"
@@ -43,13 +45,14 @@ get '/fragment_upload/:user_name/:song_id/:song_name' do |user_name, song_id, so
 end
 
 post '/song-style' do
-  Plog.dump_info(params:params)
+  #Plog.dump_info(params:params)
   user      = params[:user]
   song_id   = params[:song_id]
   song_name = params[:song_name]
   pnote     = PlayNote.new(user)
   uperf_info = {instrument:params[:instrument], key:params[:key], intro:params[:intro]}
   pnote.replace(song_id, song_name, uperf_info)
+  flash[:notice] = "Style for #{song_name} replaced"
   redirect "/song-style/#{user}/#{song_id}/#{song_name}"
 end
 
@@ -59,7 +62,7 @@ get '/song-style/:user/:song_id/:song_name' do |user, song_id, song_name|
   song_info  = SongInfo.new(song_id).content
   locals     = {user:user, song_id:song_id, song_name:song_name,
                 uperf_info:uperf_info, song_info:song_info}
-  Plog.dump_info(locals:locals)
+  #Plog.dump_info(locals:locals)
   haml :song_style, locals:locals
 end
 
@@ -266,7 +269,7 @@ class PlayNote
     tmpf = Tempfile.new("plist")
     tmpf.puts JSON.pretty_generate(@info)
     tmpf.close
-    Plog.dump_info(ofile:@plist_file, info:@info)
+    #Plog.dump_info(ofile:@plist_file, info:@info)
     FileUtils.move(tmpf.path, @plist_file, verbose:true, force:true)
   end
 end
@@ -443,7 +446,7 @@ class SongInfo
       fptn = "data/song:#{song_id}:{,*}:*"
     end
     sfile = Dir.glob(fptn)[0]
-    Plog.dump_info(sfile:sfile)
+    #Plog.dump_info(sfile:sfile)
     if !test(?s, sfile)
       Plog.dump_error(msg:'File not found', sfile:sfile)
       @content = {}
