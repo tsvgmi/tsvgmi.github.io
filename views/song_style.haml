@@ -21,6 +21,9 @@
   }
 
 - instrument = uperf_info[:instrument] || []
+- ytvideo    = uperf_info[:ytvideo] || ""
+- ytoffset   = uperf_info[:ytoffset] || ""
+- videos     = []
 
 %h2= song_info[:title]
 %ul.list-inline
@@ -33,22 +36,71 @@
   %input(type='hidden' name='user' value=user)
   %input(type='hidden' name='song_id' value=song_id)
   %input(type='hidden' name='song_name' value=song_name)
-  .form-group
-    %label(for='instrument') Instrument(s)
-    %input.form-control#instrument(type='text' name='instrument' value="#{instrument}")
-  .form-group
-    %label(for='key') Key
-    %input.form-control#key(type='text' name='key' value="#{uperf_info[:key]}")
-  .form-group
-    %label(for='intro') Other Notes (Intro/Out/Solo)
-    %textarea.form-control#intro(name='intro' rows=5)
-      = uperf_info[:intro]
+  .row
+    .col
+      .form-group
+        %label(for='instrument') Instrument(s)
+        %input.form-control#instrument(type='text' name='instrument' value="#{instrument}")
+    .col
+      .form-group
+        %label(for='ytvideo') Youtube ID, Start, Stop, ...
+        %input.form-control#instrument(type='text' name='ytvideo' value="#{ytvideo}")
+  .row
+    .col
+      .form-group
+        %label(for='key') Key
+        %input.form-control#key(type='text' name='key' value="#{uperf_info[:key]}")
+    .col
+      .form-group
+        %label(for='key') Video Key
+        %input.form-control#key(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
+  .row
+    .col
+      .form-group
+        %label(for='intro') Other Notes (Intro/Out/Solo)
+        %textarea.form-control#intro(name='intro' rows=5)
+          = uperf_info[:intro]
+    .col
+      - if ytvideo && !ytvideo.empty?
+        - video, *ytoffset = ytvideo.split(',')
+        - ytoffset.each_slice(2) do |ytstart, ytend|
+          - vid = "video_#{ytstart}"
+          %div(id=vid)
+          - videos << {vid:vid, video:video, start:ytstart.to_i, end:ytend.to_i}
+
   .pull-right
     %button.btn.btn-sm.btn-primary(type="submit" name="Update" value=true) Update
 
-- %w(intro p0 p1 solo out).each do |segment|
-  - sfile = "audio/#{user}/#{segment}-#{song_name}.mp3"
-  - next unless test(?f, sfile)
-  %audio(controls loop)
-    - spath = "/#{sfile}"
-    %source(src=spath)
+- Plog.dump_info(videos:videos)
+- content_for :javascript do
+  %script(src="https://www.youtube.com/iframe_api")
+  :javascript
+    var videos     = #{videos.to_json};
+    var cur_player = null;
+    function onYouTubeIframeAPIReady() {
+      for (var i = 0; i < videos.length; i++) {
+        var cur_video = videos[i];
+        var avideo    = cur_video['video'];
+        var vid       = cur_video['vid'];
+        var start = cur_video['start']; var end = cur_video['end'];
+        var player    = new YT.Player(vid, {
+          height: '140',
+          width:  '210',
+          playerVars: {autoplay:0, start:start, end:end},
+          videoId: avideo,
+          events: {
+            'onStateChange': function(event){
+              var mplayer = event.target
+              if (event.data == 0) {
+                mdata  = mplayer.b.b;
+                start  = mdata['playerVars']['start'];
+                console.log(mdata);
+                console.log('Restarting ' + mdata['videoId'] + ' ' + start);
+                mplayer.seekTo(start);
+                cur_player = mplayer.playVideo();
+              }
+            }
+          }
+        });
+      }
+    }

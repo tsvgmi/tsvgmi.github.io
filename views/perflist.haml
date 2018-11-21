@@ -106,14 +106,25 @@
   %div.collapse(id=lyric_id)
     .row
       -# Plog.dump_info(sname:sname, perf_note:perf_info[sname])
-      - if oinfo[:ytvid]
+      - perf_note = perf_info[sname] || {}
+      - if perf_note[:ytvideo] && !perf_note[:ytvideo].empty?
+        - video, *ytoffset = perf_note[:ytvideo].split(',')
+      - elsif oinfo[:ytvid]
+        - video, ytoffset = oinfo[:ytvid], oinfo[:ytoffset]
+      - if video
         .col-6
           -# For youtube video #{sname}
-          - oinfo[:ytoffset].each_slice(2) do |ytstart, ytend|
+          - ytoffset.each_slice(2) do |ytstart, ytend|
             - vid = "v_#{sname}_#{ytstart}"
             %div(id=vid)
-            - videos << {vid:vid, video:oinfo[:ytvid], start:ytstart.to_i, end:ytend.to_i}
-      - if perf_note = perf_info[sname]
+            - videos << {vid:vid, video:video, start:ytstart.to_i, end:ytend.to_i}
+          - if perf_note[:vidkey]
+            - offset = key_offset(perf_note[:vidkey], oinfo[:singer_key])
+            - if offset >= 5
+              - offset -= 12
+            - Plog.dump_info(vidkey:perf_note[:vidkey], singer_key:oinfo[:singer_key])
+            .pull-right Transpose: #{offset*(-1)}
+      - unless perf_note.empty?
         .col-2
           = perf_note[:instrument]
         .col-4

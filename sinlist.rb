@@ -50,7 +50,11 @@ post '/song-style' do
   song_id   = params[:song_id]
   song_name = params[:song_name]
   pnote     = PlayNote.new(user)
-  uperf_info = {instrument:params[:instrument], key:params[:key], intro:params[:intro]}
+  uperf_info = {
+    instrument:params[:instrument], key:params[:key],
+    intro:params[:intro], ytvideo:params[:ytvideo],
+    vidkey:params[:vidkey],
+  }
   pnote.replace(song_id, song_name, uperf_info)
   flash[:notice] = "Style for #{song_name} replaced"
   redirect "/song-style/#{user}/#{song_id}/#{song_name}"
@@ -117,33 +121,6 @@ get '/perflist/:user' do |user|
                            order_list:order_list, 
                            playlists:playlists, perf_info:perf_info,
                            singer_profiles:singer_profiles}
-end
-
-get '/program/:event' do |event|
-  ord_list   = YAML.load_file("#{event}.order")
-  song_list  = YAML.load_file("#{event}.slist")
-  song_store = load_songs(ord_list, song_list)
-  performers = []
-  styles     = []
-  ord_list.each_with_index do |asection, sec_no|
-    (asection['list'] || []).each do |aname|
-      aname, asinger = aname.split(',')
-      sentry = song_store[aname]
-      next unless sentry
-      #Plog.dump_info(sentry:sentry.keys)
-      if sentry[:singer]
-        performers += sentry[:singer].force_encoding('UTF-8').split(/\s*,\s*/)
-      end
-      if sentry[:style]
-        styles << sentry[:style].downcase
-      end
-    end
-  end
-  performers = performers.sort.uniq
-  styles     = styles.sort.uniq
-  #Plog.dump_info(performers:performers, styles:styles)
-  haml :program, locals: {ord_list:ord_list, song_store:song_store,
-                          performers:performers, styles:styles}
 end
 
 get '/send_patch/:pstring' do |pstring|
