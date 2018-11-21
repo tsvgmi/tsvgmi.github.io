@@ -200,20 +200,23 @@
   "california-dreamin": {
     "instrument": "Guitar",
     "key": "Dm",
+    "intro": "[A7] [Dm]",
     "ytvideo": "dN3GbF9Bx6E,0,9",
-    "intro": "[A7] [Dm]"
+    "vidkey": "C#m"
   },
   "beautiful-sunday": {
     "instrument": "Rock&Roll Guitar",
     "key": "C",
+    "intro": "[C]",
     "ytvideo": "MJwDgBb00LM,0,8",
-    "intro": "[C]"
+    "vidkey": "D"
   },
   "you-re-a-woman-you-re-a-woman-i-m-a-man": {
     "instrument": "Synth, Harmonica",
     "key": "Dm",
+    "intro": "[Dm] [Gm] [C] [Dm] [D] [Gm] [C] [Dm]\r\nSolo: [Dm] [Dm] [G] [G] [Dm] [Dm] [G] [G]",
     "ytvideo": "x8cIcXDR8ts,0,32",
-    "intro": "[Dm] [Gm] [C] [Dm] [D] [Gm] [C] [Dm]\r\nSolo: [Dm] [Dm] [G] [G] [Dm] [Dm] [G] [G]"
+    "vidkey": "Cm"
   },
   "nhung-buoc-chan-am-tham": {
     "instrument": "Piano",
@@ -224,8 +227,9 @@
   "oh-carol": {
     "instrument": "Voice",
     "key": "G",
+    "intro": "[G] [Em] [Am] [D]",
     "ytvideo": "4XHe6dSngt0,0,15",
-    "intro": "[G] [Em] [Am] [D]"
+    "vidkey": "B"
   },
   "con-chut-gi-de-nho": {
     "instrument": "Picolo, String",
@@ -251,8 +255,9 @@
   "do-that-to-me-one-more-time": {
     "instrument": "Guitar",
     "key": "C",
+    "intro": "[C] [Am] [F] [G] [C] [Am] [F] [G]",
     "ytvideo": "fRbGWa8x-DA,0,22",
-    "intro": "[C] [Am] [F] [G] [C] [Am] [F] [G]"
+    "vidkey": "C"
   },
   "mot-minh": {
     "instrument": "Violin, Guitar, Flute",
