@@ -107,16 +107,16 @@
     .row
       -# Plog.dump_info(sname:sname, perf_note:perf_info[sname])
       - if oinfo[:ytvid]
-        .col
+        .col-6
           -# For youtube video #{sname}
           - oinfo[:ytoffset].each_slice(2) do |ytstart, ytend|
             - vid = "v_#{sname}_#{ytstart}"
             %div(id=vid)
             - videos << {vid:vid, video:oinfo[:ytvid], start:ytstart.to_i, end:ytend.to_i}
       - if perf_note = perf_info[sname]
-        .col
+        .col-2
           = perf_note[:instrument]
-        .col
+        .col-4
           - intro = perf_note[:intro]
           - if intro
             - offset = key_offset(perf_note[:key], oinfo[:singer_key])
@@ -147,8 +147,8 @@
         var vid       = cur_video['vid'];
         var start = cur_video['start']; var end = cur_video['end'];
         var player    = new YT.Player(vid, {
-          height: '150',
-          width:  '300',
+          height: '140',
+          width:  '210',
           playerVars: {autoplay:0, start:start, end:end},
           videoId: avideo,
           events: {
