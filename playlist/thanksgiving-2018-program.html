@@ -14,9 +14,18 @@
   .vsmall {
     font-size: 60%;
   }
+  .notice {
+    width: 50%;
+    text-align: center;
+    border: 4px solid #ccc;
+    background-color: #ffc;
+  }
 </style>
 </head>
 <body>
+<center class='notice' id='flash'>
+
+</center>
 <div class='container-fluid'>
 <style>
   @media (min-width: 1024px) {
@@ -51,6 +60,11 @@
     font-size: 120%;
     font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
     background-color: #ffe;
+  }
+  .song_header {
+    margin-top: 1em;
+    border-top: 6px solid #888;
+    border-bottom: 1px solid #ccc;
   }
   audio:hover, audio:focus, audio:active {
     -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
@@ -93,44 +107,45 @@ List:
 </form>
 </div>
 </div>
-<table class='table table-condensed table-bordered table-striped'>
-<thead>
-<tr>
-<th>Song Name</th>
-<th>Artist(s)</th>
-<th>Singer</th>
-<th>Style</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_0' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_0' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/22950/california-dreamin/' target='hopamchuan'>California Dreamin</a>
-<a aria-controls='row_0' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_0' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_0' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_0' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 N/A
-</td>
-<td>The Mamas & The Papas</td>
-<td>
+</div>
+<div class='col md'>
+The Mamas & The Papas
+</div>
+<div class='col md'>
 thong
 <div class='pull-right'>Am</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/22950/california-dreamin' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 bebop
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_0'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_0'>
+<div class='row'>
+<div class='col'>
+<div id='v_california-dreamin_0'></div>
+</div>
+<div class='col'>
+Guitar
+</div>
+<div class='col'>
+<span class="chord_intro">E7</span> <span class="chord_intro">Am</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Verse 1: <br/>
 All the leaves are<span class="chord">Am</span>brown <span class="chord">GF</span>and the <span class="chord">G</span>sky is <span class="chord">Esus4</span>gray <span class="chord">E</span> <br/>
 <span class="chord">F</span>I've been for a <span class="chord">C</span>walk<span class="chord">E</span> <span class="chord">Am</span>on a <span class="chord">F</span>winter's<span class="chord">Esus4</span>day <span class="chord">E</span> <br/>
@@ -157,44 +172,49 @@ Outro: <br/>
 <span class="chord">Am</span>Califo<span class="chord">G</span>rnia <span class="chord">F</span>dreamin' on <span class="chord">G</span>such a winter's <span class="chord">Am</span>day <br/>
 <span class="chord">Am</span>Califo<span class="chord">G</span>rnia <span class="chord">F</span>dreamin' on <span class="chord">G</span>such a winter's <span class="chord">Am</span>day <br/>
 <span class="chord">Am</span>Califo<span class="chord">G</span>rnia <span class="chord">F</span>dreamin' on <span class="chord">G</span>such a winter's <span class="chord">F</span>day <span class="chord">Am</span> </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Guitar</p>
-<p>
-<span class="chord_intro">E7</span> <span class="chord_intro">Am</span>
-</p>
-<hr>
-<div id='v_california-dreamin_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_1' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_1' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/22949/bo-vo/' target='hopamchuan'>Bơ Vơ</a>
-<a aria-controls='row_1' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_1' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_1' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_1' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Hoàng Trọng
-</td>
-<td>Lệ Thu</td>
-<td>
+</div>
+<div class='col md'>
+Lệ Thu
+</div>
+<div class='col md'>
 thuy-dung
 <div class='pull-right'>Em</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/22949/bo-vo' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 paso
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_1'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_1'>
+<div class='row'>
+<div class='col'>
+<div id='v_bo-vo_0'></div>
+<div id='v_bo-vo_245'></div>
+</div>
+<div class='col'>
+Guitar, Piano
+</div>
+<div class='col'>
+<span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Am</span> <span class="chord_intro">Am</span> <span class="chord_intro">D</span> <span class="chord_intro">C</span> <span class="chord_intro">B</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'><span class="chord">Em</span>“Nhìn ánh sao rơi trong trời đêm <br/>
 Nhặt cánh hoa rơi bên thềm <span class="chord">Am</span>xưa <br/>
 <span class="chord">D7</span>Người yêu khuất xa khi chiều <span class="chord">G</span>ấy <br/>
@@ -214,44 +234,49 @@ Hết <span class="chord">Am</span>rồi kỷ <span class="chord">B7</span>niệ
 Tình dở dang rồi ôi biệt <span class="chord">Am</span>ly <br/>
 <span class="chord">D7</span>Người đâu đến đây trong chiều <span class="chord">G</span>ấy <br/>
 <span class="chord">B7</span>Ðể sầu để nhớ rồi người <span class="chord">Em</span>đi </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Guitar, Piano</p>
-<p>
-<span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Am</span> <span class="chord_intro">Am</span> <span class="chord_intro">D</span> <span class="chord_intro">C</span> <span class="chord_intro">B</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span>
-</p>
-<hr>
-<div id='v_bo-vo_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_2' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_2' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/3022/tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien//thienv' target='hopamchuan'>Tình Cho Không Biếu Không (L'amour C'est Pour Rien)</a>
-<a aria-controls='row_2' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_2' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_2' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_2' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Phạm Duy
-</td>
-<td>Khánh Ly, Elvis Phương</td>
-<td>
+</div>
+<div class='col md'>
+Khánh Ly, Elvis Phương
+</div>
+<div class='col md'>
 thong
 <div class='pull-right'>Dm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/3022/tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 tango
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_2'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_2'>
+<div class='row'>
+<div class='col'>
+<div id='v_tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien_0'></div>
+<div id='v_tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien_244'></div>
+</div>
+<div class='col'>
+Accordeon, Staccato, String, Guitar
+</div>
+<div class='col'>
+<span class="chord_intro">Dm</span> <span class="chord_intro">C</span> <span class="chord_intro">Bb</span> <span class="chord_intro">A</span><br><span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">F</span> <span class="chord_intro">Bb</span> <span class="chord_intro">Gm</span> <span class="chord_intro">A</span> <span class="chord_intro">Dm</span><br>565458 543454375434 43465432<br>585742 474543 365432 65452431 5678<br>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Comme une salaman<span class="chord">Dm</span>dre, <span class="chord">G</span>l'amour est merveil<span class="chord">Cmaj7</span>leux <br/>
 <span class="chord">F</span>Et renait de ses <span class="chord">E</span>cendres comme l'oiseau de <span class="chord">Am</span>feu, <br/>
 nul ne peut le con<span class="chord">Dm</span>traindre <br/>
@@ -294,46 +319,50 @@ Tình cho không, biếu <span class="chord">F</span>không <br/>
 L'amour, c'est pour <span class="chord">E7</span>rien <br/>
 L'amour, c'est pour <span class="chord">Am</span>rien <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Accordeon, Staccato, String, Guitar</p>
-<p>
-<span class="chord_intro">Dm</span> <span class="chord_intro">C</span> <span class="chord_intro">Bb</span> <span class="chord_intro">A</span><br><span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">F</span> <span class="chord_intro">Bb</span> <span class="chord_intro">Gm</span> <span class="chord_intro">A</span> <span class="chord_intro">Dm</span><br>
-</p>
-<hr>
-<div id='v_tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_3' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_3' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/767/beautiful-sunday/' target='hopamchuan'>Beautiful Sunday</a>
-<a aria-controls='row_3' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_3' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_3' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_3' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Daniel Boone                                    
                                 ,                                     
                                         Rod McQueen
-</td>
-<td>Daniel Boone</td>
-<td>
+</div>
+<div class='col md'>
+Daniel Boone
+</div>
+<div class='col md'>
 loc
 <div class='pull-right'>C</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/767/beautiful-sunday' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 bebop
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_3'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_3'>
+<div class='row'>
+<div class='col'>
+<div id='v_beautiful-sunday_0'></div>
+</div>
+<div class='col'>
+Rock&Roll Guitar
+</div>
+<div class='col'>
+<span class="chord_intro">C</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'><span class="chord">C</span>Sunday morning up with the lark <br/>
 I think I’ll take a walk in the park <br/>
 <span class="chord">F</span>Hey, hey <span class="chord">G</span>hey, it’s a beautiful <span class="chord">C</span>day <br/>
@@ -363,45 +392,48 @@ Said that you <span class="chord">E7</span>love me <br/>
 Oh, <span class="chord">G</span>my, my, <span class="chord">A</span>my its a beautiful <span class="chord">D</span>day. <br/>
  <br/>
 (Fade out) </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Rock&Roll Guitar</p>
-<p>
-<span class="chord_intro">C</span>
-</p>
-<hr>
-<div id='v_beautiful-sunday_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_4' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_4' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/531/yeu-nhau-di-besame-mucho/' target='hopamchuan'>Yêu Nhau Đi (Besame Mucho)</a>
-<a aria-controls='row_4' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_4' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_4' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_4' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 N/A
-</td>
-<td>Dalida, Quang Dũng</td>
-<td>
+</div>
+<div class='col md'>
+Dalida, Quang Dũng
+</div>
+<div class='col md'>
 thanh-liem
 <div class='pull-right'>Cm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/531/yeu-nhau-di-besame-mucho' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 chacha
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_4'>
-<td colspan='3'>
-<img class='simage' src='http://graph.facebook.com/1306851400/picture?type=normal'>
+</div>
+</div>
+<div class='collapse' id='row_4'>
+<div class='row'>
+<div class='col'>
+<div id='v_yeu-nhau-di-besame-mucho_0'></div>
+</div>
+<div class='col'>
+Trumpet
+</div>
+<div class='col'>
+<span class="chord_intro">Fm6</span> <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span><br><span class="chord_intro">Fm6</span> <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span><br>135-986 986985 9757777678
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>1. <span class="chord">Cm</span>Yêu nhau đi, đời đâu có <span class="chord">C7</span>nghĩa <span class="chord">Fm</span>chi <br/>
 Yêu nhau đi <span class="chord">G</span>ta lo chi <span class="chord">Ab</span>cho đôi mi <span class="chord">G</span>thêm phai úa màu <br/>
 <span class="chord">C7</span>Ta yêu nhau cớ sao em âu <span class="chord">Fm</span>sầu? <br/>
@@ -441,44 +473,48 @@ Yo ya estaré <span class="chord">G</span>lejos muy lejos de <span class="chord"
 Como si <span class="chord">G</span>fuera esta <span class="chord">Ab</span>noche la <span class="chord">G</span>última vez. <br/>
 <span class="chord">C7</span>Bésame, bésame mu – <span class="chord">Fm</span>cho <br/>
 <span class="chord">Cm</span>Que tengo miedo a per- <span class="chord">Ab</span>derte per- <span class="chord">G</span>derte des- <span class="chord">Cm</span>pués </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Trumpet</p>
-<p>
-<span class="chord_intro">Fm6</span> <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span><br><span class="chord_intro">Fm6</span> <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span>
-</p>
-<hr>
-<div id='v_yeu-nhau-di-besame-mucho_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_5' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_5' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/986/phien-da-sau/' target='hopamchuan'>Phiến Đá Sầu</a>
-<a aria-controls='row_5' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_5' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_5' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_5' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Diệu Hương
-</td>
-<td>Quang Dũng</td>
-<td>
+</div>
+<div class='col md'>
+Quang Dũng
+</div>
+<div class='col md'>
 thanh
 <div class='pull-right'>Am</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/986/phien-da-sau' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 slow-surf
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_5'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_5'>
+<div class='row'>
+<div class='col'>
+<div id='v_phien-da-sau_16'></div>
+</div>
+<div class='col'>
+String, Piano
+</div>
+<div class='col'>
+<span class="chord_intro">Am</span> <span class="chord_intro">B7</span> <span class="chord_intro">Dm7</span> <span class="chord_intro">E7</span><br><span class="chord_intro">Am</span> <span class="chord_intro">B7</span> <span class="chord_intro">E7</span> <span class="chord_intro">Am</span><br>+35 96 +(123)4 765<br>+35 96 887 998 (4431 4431)
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Capo 1 <br/>
 Mai em xa rời <span class="chord">Am</span>tôi còn ai cùng đi giữa <span class="chord">Dm</span>đời <br/>
 Mênh <span class="chord">G</span>mông đây là <span class="chord">E7</span>đâu là biển vắng đêm <span class="chord">Am</span>sâu <br/>
@@ -496,45 +532,48 @@ Em vô tình làm <span class="chord">Am</span>sao hồn tôi giờ đây úa <s
 Trong <span class="chord">G</span>đêm thâu gọi <span class="chord">E7</span>tên lòng càng vắng xa <span class="chord">Am</span>thêm <br/>
 Tôi hôm nay là ai thà như một phiến đá <span class="chord">Dm</span>nằm <br/>
 Trăm <span class="chord">G</span>năm như ngàn <span class="chord">E7</span>năm người cùng đá bâng <span class="chord">Am</span>khuâng. </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>String, Piano</p>
-<p>
-<span class="chord_intro">Am</span> <span class="chord_intro">B7</span> <span class="chord_intro">Dm7</span> <span class="chord_intro">E7</span><br><span class="chord_intro">Am</span> <span class="chord_intro">B7</span> <span class="chord_intro">E7</span> <span class="chord_intro">Am</span>
-</p>
-<hr>
-<div id='v_phien-da-sau_16'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_6' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_6' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/1197/nguoi-tinh-mua-dong//thienv' target='hopamchuan'>Người Tình Mùa Đông</a>
-<a aria-controls='row_6' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_6' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_6' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_6' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Nhạc ngoại
-</td>
-<td>Như Quỳnh, Hà Anh Tuấn, Hà Vân</td>
-<td>
+</div>
+<div class='col md'>
+Như Quỳnh, Hà Anh Tuấn, Hà Vân
+</div>
+<div class='col md'>
 yen-phuong
 <div class='pull-right'>C</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/1197/nguoi-tinh-mua-dong' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 chacha
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_6'>
-<td colspan='3'>
-<img class='simage' src='http://graph.facebook.com/100001658274869/picture?type=normal'>
+</div>
+</div>
+<div class='collapse' id='row_6'>
+<div class='row'>
+<div class='col'>
+<div id='v_nguoi-tinh-mua-dong_6'></div>
+</div>
+<div class='col'>
+Piano
+</div>
+<div class='col'>
+7+(1254) 75+(32) 4387 25+(25) 
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>1. Đường vào <span class="chord">C</span>tim em ôi băng <span class="chord">Em</span>giá <br/>
 Trời mùa <span class="chord">Am</span>đông mây vẫn hay đi <span class="chord">Em</span>về <br/>
 Vẫn <span class="chord">Dm</span>mưa mưa rơi trên đường thầm <span class="chord">Am</span>thì <br/>
@@ -563,40 +602,48 @@ Hỡi <span class="chord">Em</span>ơi, trái tim mùa <span class="chord">Am</s
  <br/>
 (1) (2) (DK) (3) (DK) (3) <br/>
 <span class="chord">Dm</span> <span class="chord">Am</span> <span class="chord">G</span> <span class="chord">Am</span> <span class="chord">Dm</span> <span class="chord">Am</span> <span class="chord">G</span> <span class="chord">Am</span> </div>
-</td>
-<td class='perf-note' width='20%'>
-<hr>
-<div id='v_nguoi-tinh-mua-dong_6'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_7' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_7' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/301/diem-xua//thienv' target='hopamchuan'>Diễm Xưa</a>
-<a aria-controls='row_7' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_7' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_7' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_7' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Trịnh Công Sơn
-</td>
-<td>Hồng Nhung, Khánh Ly</td>
-<td>
+</div>
+<div class='col md'>
+Hồng Nhung, Khánh Ly
+</div>
+<div class='col md'>
 dieu-huyen
 <div class='pull-right'>Am</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/301/diem-xua' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 slow
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_7'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_7'>
+<div class='row'>
+<div class='col'>
+<div id='v_diem-xua_0'></div>
+</div>
+<div class='col'>
+String
+</div>
+<div class='col'>
+<span class="chord_intro">Dm/F</span> <span class="chord_intro">Am/E</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span><br><span class="chord_intro">Dm/F</span> <span class="chord_intro">Am/E</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span><br>6146145135135-72613513513<br>6146135135135-722321
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Mưa vẫn mưa bay trên tầng tháp <span class="chord">Am</span>cổ <br/>
 Dài tay em <span class="chord">A7</span>mấy thuở mắt xanh <span class="chord">Dm</span>xao <br/>
 Nghe lá thu <span class="chord">Am</span>mưa reo mòn gót <span class="chord">Bm7b5</span>nhỏ <br/>
@@ -622,44 +669,48 @@ Mưa vẫn hay mưa cho đời biển <span class="chord">Am</span>động <br/
 Làm sao em <span class="chord">A7</span>biết bia đá không <span class="chord">Dm</span>đau <br/>
 Xin hãy cho <span class="chord">Am</span>mưa qua miền đất <span class="chord">Bm7b5</span>rộng <br/>
 <span class="chord">E7</span>Ngày sau sỏi đá cũng cần có <span class="chord">Am</span>nhau.) </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>String</p>
-<p>
-<span class="chord_intro">Dm/F</span> <span class="chord_intro">Am/E</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span><br><span class="chord_intro">Dm/F</span> <span class="chord_intro">Am/E</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span>
-</p>
-<hr>
-<div id='v_diem-xua_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_8' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_8' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/1447/lai-gan-hon-anh-lai-gan-ben-anh//hanpham' target='hopamchuan'>Lại Gần Hôn Anh (Lại Gần Bên Anh)</a>
-<a aria-controls='row_8' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_8' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_8' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_8' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Minh Phúc
-</td>
-<td>Bằng Kiều</td>
-<td>
+</div>
+<div class='col md'>
+Bằng Kiều
+</div>
+<div class='col md'>
 mai-huong
 <div class='pull-right'>Dm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/1447/lai-gan-hon-anh-lai-gan-ben-anh' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 bebop
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_8'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_8'>
+<div class='row'>
+<div class='col'>
+<div id='v_lai-gan-hon-anh-lai-gan-ben-anh_23'></div>
+</div>
+<div class='col'>
+Piano, String
+</div>
+<div class='col'>
+<span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">F</span> <span class="chord_intro">Bb</span> <span class="chord_intro">Gm</span> <span class="chord_intro">A</span> <span class="chord_intro">A</span><br><span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">F</span> <span class="chord_intro">Bb</span> <span class="chord_intro">Gm</span> <span class="chord_intro">Asus4</span> <span class="chord_intro">A</span><br>+(323)56+(543 212)45+(432 1)7834+(3211-7246579)<br>+(323)56+(543 212)45+(432 1)7834+(3211)7
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'> <br/>
 1. Lại <span class="chord">Dm</span>đây bên anh em <span class="chord">Dm7</span>hỡi <br/>
 Trước khi xa anh đêm nay lại <span class="chord">Gm</span>gần bên anh <br/>
@@ -695,44 +746,48 @@ Bao nhiêu lời <span class="chord">Gm</span>nồng quyến luyến <br/>
 Sẽ <span class="chord">C</span>thấy không lâu em ơi <br/>
 Đôi ta đành <span class="chord">F</span>phải quên nhau <br/>
 Rồi <span class="chord">Gm</span>lòng đớn <span class="chord">A7</span>đau. </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Piano, String</p>
-<p>
-<span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">F</span> <span class="chord_intro">Bb</span> <span class="chord_intro">Gm</span> <span class="chord_intro">A</span> <span class="chord_intro">A</span><br><span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">F</span> <span class="chord_intro">Bb</span> <span class="chord_intro">Gm</span> <span class="chord_intro">Asus4</span> <span class="chord_intro">A</span>
-</p>
-<hr>
-<div id='v_lai-gan-hon-anh-lai-gan-ben-anh_23'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_9' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_9' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/2735/nao-biet-nao-hay/' target='hopamchuan'>Nào Biết Nào Hay</a>
-<a aria-controls='row_9' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_9' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_9' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_9' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 N/A
-</td>
-<td>Hương Thủy, Ngọc Huệ</td>
-<td>
+</div>
+<div class='col md'>
+Hương Thủy, Ngọc Huệ
+</div>
+<div class='col md'>
 michelle
 <div class='pull-right'>Dm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/2735/nao-biet-nao-hay' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 chacha
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_9'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_9'>
+<div class='row'>
+<div class='col'>
+<div id='v_nao-biet-nao-hay_0'></div>
+</div>
+<div class='col'>
+Brass, Trumpet
+</div>
+<div class='col'>
+<span class="chord_intro">Gm</span> <span class="chord_intro">Dm</span> <span class="chord_intro">A</span> <span class="chord_intro">Dm</span><br>6 6(65456) 5 5(54345) 5 (65432) 321<br>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>1. Ngày xưa quen em anh <span class="chord">Dm</span>nói rằng <br/>
 Nào <span class="chord">Gm</span>có một mối tình <span class="chord">Dm</span>trên đời <br/>
 Hạnh <span class="chord">Gm</span>phúc bằng mối tình <span class="chord">Dm</span>chúng mình <br/>
@@ -767,44 +822,48 @@ Tình yêu không xanh như <span class="chord">Dm</span>áng trời <br/>
 Ngày <span class="chord">Gm</span>đêm tình nghĩa ngọt <span class="chord">Dm</span>muôn lời <br/>
 Tình <span class="chord">Gm</span>đắng vào lúc tình <span class="chord">Dm</span>cuối thời <br/>
 Nào biết, nào <span class="chord">A</span>hay, tình <span class="chord">Dm</span>ơi </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Brass, Trumpet</p>
-<p>
-<span class="chord_intro">Gm</span> <span class="chord_intro">Dm</span> <span class="chord_intro">A</span> <span class="chord_intro">Dm</span><br>
-</p>
-<hr>
-<div id='v_nao-biet-nao-hay_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_10' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_10' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/15388/nguoi-hay-quen-em-di//thienv' target='hopamchuan'>Người Hãy Quên Em đi</a>
-<a aria-controls='row_10' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_10' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_10' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_10' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Khắc Hưng
-</td>
-<td>Mỹ Tâm, Vũ Hà</td>
-<td>
+</div>
+<div class='col md'>
+Mỹ Tâm, Vũ Hà
+</div>
+<div class='col md'>
 vanessa
 <div class='pull-right'>Dm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/15388/nguoi-hay-quen-em-di' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 techno
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_10'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_10'>
+<div class='row'>
+<div class='col'>
+<div id='v_nguoi-hay-quen-em-di_0'></div>
+</div>
+<div class='col'>
+Guitar
+</div>
+<div class='col'>
+<span class="chord_intro">Dm7</span> <span class="chord_intro">Gm7</span> <span class="chord_intro">C7</span> <span class="chord_intro">Fmaj7</span> <span class="chord_intro">Bbmaj7</span> <span class="chord_intro">Gm7</span> <span class="chord_intro">Asus4</span> <span class="chord_intro">A</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>1. Người yêu <span class="chord">Dm</span>hỡi, dù gì <span class="chord">Gm</span>cùng xa nhau <span class="chord">C</span>rồi <br/>
 Ngày nào <span class="chord">Fmaj7</span>chiếc hôn bao đêm <span class="chord">Bb</span>rã rời <br/>
 Giờ đã <span class="chord">Gm6</span>hết rồi, chẳng <span class="chord">A</span>còn hơi ấm trên đầu <span class="chord">A7</span>môi... <br/>
@@ -852,44 +911,48 @@ Vậy coi như mình <span class="chord">Gbmaj7</span>kết thúc êm <span clas
 Tình yêu như là <span class="chord">Abm7</span>gió thoảng qua <span class="chord">Fdim</span>thềm... <br/>
 Người hãy quên em <span class="chord">Ebm</span>đi... <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Guitar</p>
-<p>
-<span class="chord_intro">Dm7</span> <span class="chord_intro">Gm7</span> <span class="chord_intro">C7</span> <span class="chord_intro">Fmaj7</span> <span class="chord_intro">Bbmaj7</span> <span class="chord_intro">Gm7</span> <span class="chord_intro">Asus4</span> <span class="chord_intro">A</span>
-</p>
-<hr>
-<div id='v_nguoi-hay-quen-em-di_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_11' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_11' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/11080/bong-chieu-ta/' target='hopamchuan'>Bóng Chiều Tà</a>
-<a aria-controls='row_11' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_11' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_11' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_11' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Nhật Bằng
-</td>
-<td>Quang Dũng, Khánh Ly</td>
-<td>
+</div>
+<div class='col md'>
+Quang Dũng, Khánh Ly
+</div>
+<div class='col md'>
 thuy-dung
 <div class='pull-right'>Dm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/11080/bong-chieu-ta' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 tango
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_11'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_11'>
+<div class='row'>
+<div class='col'>
+<div id='v_bong-chieu-ta_0'></div>
+</div>
+<div class='col'>
+Violin Orchestra
+</div>
+<div class='col'>
+<span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">E</span> <span class="chord_intro">A</span><br><span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">A</span> <span class="chord_intro">Dm</span><br>354535453 4656564564 465646564 7789754<br>354535453 465646564 79756778
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'> <br/>
 Chiều ơi <span class="chord">Dm</span>về đâu <br/>
 Chiều đi lòng <span class="chord">D7</span>nhớ bao nỗi u <span class="chord">Gm</span>sầu <br/>
@@ -911,44 +974,48 @@ Nhớ ngày còn <span class="chord">Dm</span>thơ <br/>
 <span class="chord">D7</span>Vai kề vai trong tiếng <span class="chord">Gm</span>tơ <br/>
 Tuy xa vắng ta vẫn <span class="chord">A7</span>mong chờ <br/>
 Chiều sao hờ hững lạnh lùng <span class="chord">Dm</span>thờ ơ. </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Violin Orchestra</p>
-<p>
-<span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">E</span> <span class="chord_intro">A</span><br><span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">A</span> <span class="chord_intro">Dm</span>
-</p>
-<hr>
-<div id='v_bong-chieu-ta_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_12' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_12' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/4001/du-am-mua-giang-sinh/' target='hopamchuan'>Dư Âm Mùa Giáng Sinh</a>
-<a aria-controls='row_12' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_12' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_12' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_12' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Ngân Giang
-</td>
-<td>Tuấn Vũ</td>
-<td>
+</div>
+<div class='col md'>
+Tuấn Vũ
+</div>
+<div class='col md'>
 dieu-huyen
 <div class='pull-right'>D</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/4001/du-am-mua-giang-sinh' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 slow
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_12'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_12'>
+<div class='row'>
+<div class='col'>
+<div id='v_du-am-mua-giang-sinh_0'></div>
+</div>
+<div class='col'>
+String
+</div>
+<div class='col'>
+<span class="chord_intro">D</span>-<span class="chord_intro">F#</span> <span class="chord_intro">Bm</span>-<span class="chord_intro">B</span> <span class="chord_intro">Em</span>-<span class="chord_intro">D</span> <span class="chord_intro">E</span> <span class="chord_intro">A</span><br>-5433 322 3211 -6544 -5433 -5322 1-61232 22 225
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Bài hát đêm đông chạnh lòng tôi nhớ <span class="chord">D</span>nhiều <br/>
 Tà áo  Noel thướt tha trong chiều  nào <span class="chord">D#dimAm</span> <br/>
 Dập <span class="chord">A</span>dìu trên đường đi <span class="chord">D</span>lễ <br/>
@@ -973,44 +1040,48 @@ Gởi <span class="chord">A</span>về cho người biên <span class="chord">D<
 Chiến <span class="chord">B7</span>đấu xông pha địa <span class="chord">Em</span>đầu <br/>
 Một <span class="chord">A</span>dư âm mùa giáng <span class="chord">D</span>sinh.  <span class="chord">G</span> <span class="chord">D</span> <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>String</p>
-<p>
-<span class="chord_intro">D</span>-<span class="chord_intro">F#</span> <span class="chord_intro">Bm</span>-<span class="chord_intro">B</span> <span class="chord_intro">Em</span>-<span class="chord_intro">D</span> <span class="chord_intro">E</span> <span class="chord_intro">A</span>
-</p>
-<hr>
-<div id='v_du-am-mua-giang-sinh_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_13' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_13' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/22957/you-re-a-woman-you-re-a-woman-i-m-a-man/' target='hopamchuan'>You're A Woman (You're A Woman, I'm A Man)</a>
-<a aria-controls='row_13' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_13' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_13' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_13' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 N/A
-</td>
-<td>Bad Boys Blue</td>
-<td>
+</div>
+<div class='col md'>
+Bad Boys Blue
+</div>
+<div class='col md'>
 michelle
 <div class='pull-right'>Dm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/22957/you-re-a-woman-you-re-a-woman-i-m-a-man' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 new-wave
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_13'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_13'>
+<div class='row'>
+<div class='col'>
+<div id='v_you-re-a-woman-you-re-a-woman-i-m-a-man_0'></div>
+</div>
+<div class='col'>
+Synth, Harmonica
+</div>
+<div class='col'>
+<span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">Dm</span> <span class="chord_intro">D</span> <span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">Dm</span><br>Solo: <span class="chord_intro">Dm</span> <span class="chord_intro">Dm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Dm</span> <span class="chord_intro">Dm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Verse 1: <br/>
 <span class="chord">Dm</span>Tonight, <span class="chord">C</span>there be no darkness <span class="chord">Dm</span>tonight <span class="chord">Am</span> <br/>
 <span class="chord">Dm</span>Hold tight, <span class="chord">C</span>let your lovelight shine <span class="chord">Dm</span>bright<span class="chord">Am</span> <br/>
@@ -1037,44 +1108,48 @@ Verse 2: <br/>
 <span class="chord">Dm</span>And take, <span class="chord">C</span>take all of my sweet caress <span class="chord">Dm</span> <span class="chord">Am</span> <br/>
 <span class="chord">Bb</span>You've got all of me, It can't go <span class="chord">F</span>wrong if you agree <br/>
 <span class="chord">Bb</span>Soon two hearts will <span class="chord">Gm</span>beat in <span class="chord">Asus4</span>extasy <span class="chord">A</span> </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Synth, Harmonica</p>
-<p>
-<span class="chord_intro">Dm</span> <span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">Dm</span> <span class="chord_intro">D</span> <span class="chord_intro">Gm</span> <span class="chord_intro">C</span> <span class="chord_intro">Dm</span><br>Solo: <span class="chord_intro">Dm</span> <span class="chord_intro">Dm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Dm</span> <span class="chord_intro">Dm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span>
-</p>
-<hr>
-<div id='v_you-re-a-woman-you-re-a-woman-i-m-a-man_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_14' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_14' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/1508/nhung-buoc-chan-am-tham/' target='hopamchuan'>Những Bước Chân Âm Thầm</a>
-<a aria-controls='row_14' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_14' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_14' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_14' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Y Vân
-</td>
-<td>Chế Linh, Mắt Ngọc, Mỹ Tâm</td>
-<td>
+</div>
+<div class='col md'>
+Chế Linh, Mắt Ngọc, Mỹ Tâm
+</div>
+<div class='col md'>
 loc
 <div class='pull-right'>Am</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/1508/nhung-buoc-chan-am-tham' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 chacha
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_14'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_14'>
+<div class='row'>
+<div class='col'>
+<div id='v_nhung-buoc-chan-am-tham_0'></div>
+</div>
+<div class='col'>
+Piano
+</div>
+<div class='col'>
+<span class="chord_intro">Am</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span><br><span class="chord_intro">Am</span> <span class="chord_intro">Am</span> <span class="chord_intro">E</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span> <span class="chord_intro">Am</span> <span class="chord_intro">E</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Từng <span class="chord">Am</span>bước từng bước <span class="chord">Am</span>thầm <br/>
 Hoa <span class="chord">Am</span>vòng rừng tuyết <span class="chord">G</span>trắng <br/>
 Rặng <span class="chord">C</span>thông già lặng <span class="chord">F</span>câm <br/>
@@ -1097,45 +1172,48 @@ Tuổi <span class="chord">C</span>xuân buồn lặng <span class="chord">F</sp
 Ðời <span class="chord">E</span>biết ai thương <span class="chord">Am</span>mình..... <br/>
 Cm G G Cm Cm Bb Bb Ab Ab G … <br/>
 G G# A Bb B (bass only) </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Piano</p>
-<p>
-<span class="chord_intro">Am</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span><br><span class="chord_intro">Am</span> <span class="chord_intro">Am</span> <span class="chord_intro">E</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span> <span class="chord_intro">Am</span> <span class="chord_intro">E</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span>
-</p>
-<hr>
-<div id='v_nhung-buoc-chan-am-tham_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_15' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_15' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/3383/tuyet-roi/' target='hopamchuan'>Tuyết Rơi</a>
-<a aria-controls='row_15' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_15' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_15' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_15' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Phạm Duy
-</td>
-<td>Elvis Phương, Ngọc Lan</td>
-<td>
+</div>
+<div class='col md'>
+Elvis Phương, Ngọc Lan
+</div>
+<div class='col md'>
 yen-phuong
 <div class='pull-right'>Dm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/3383/tuyet-roi' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 rhumba
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_15'>
-<td colspan='3'>
-<img class='simage' src='http://graph.facebook.com/100001658274869/picture?type=normal'>
+</div>
+</div>
+<div class='collapse' id='row_15'>
+<div class='row'>
+<div class='col'>
+<div id='v_tuyet-roi_15'></div>
+</div>
+<div class='col'>
+Guitar
+</div>
+<div class='col'>
+<span class="chord_intro">Gm</span> <span class="chord_intro">Dm</span> <span class="chord_intro">E7</span> <span class="chord_intro">A</span><br>35985766 46983655 13653544 67845645 (8887)
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Tone gốc A#m: Capo 1 <br/>
 Ngoài kia tuyết <span class="chord">Dm</span>rơi đầy <br/>
 Anh không đến bên em chiều <span class="chord">Gm</span>nay <br/>
@@ -1243,46 +1321,50 @@ Shiroi yuki <span class="chord">A7</span>ga, tada furu baka-<span class="chord">
 <span class="chord">Gm</span>Ra ra <span class="chord">F</span>ra ra ra <span class="chord">A7</span>ra ra ra <span class="chord">Dm</span>ra <br/>
 ムムム・・・ <br/>
 <span class="chord">Gm</span>Mu mu <span class="chord">F</span>mu ... </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Guitar</p>
-<p>
-<span class="chord_intro">Gm</span> <span class="chord_intro">Dm</span> <span class="chord_intro">E7</span> <span class="chord_intro">A</span>
-</p>
-<hr>
-<div id='v_tuyet-roi_15'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_16' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_16' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/21517/oh-carol/' target='hopamchuan'>Oh! Carol</a>
-<a aria-controls='row_16' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_16' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_16' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_16' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Howard Greenfield                                    
                                 ,                                     
                                         Neil Sedaka
-</td>
-<td>Neil Sedaka</td>
-<td>
+</div>
+<div class='col md'>
+Neil Sedaka
+</div>
+<div class='col md'>
 mai-huong
 <div class='pull-right'>D</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/21517/oh-carol' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 bebop
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_16'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_16'>
+<div class='row'>
+<div class='col'>
+<div id='v_oh-carol_0'></div>
+</div>
+<div class='col'>
+Voice
+</div>
+<div class='col'>
+<span class="chord_intro">D</span> <span class="chord_intro">Bm</span> <span class="chord_intro">Em</span> <span class="chord_intro">A</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'> <br/>
 Oh! <span class="chord">D</span>Carol I am but a <span class="chord">Bm</span>fool <br/>
 Darlin' I <span class="chord">Em</span>love you tho' you treat me <span class="chord">A7</span>cruel <br/>
@@ -1296,45 +1378,48 @@ Don't ever <span class="chord">Em</span>leave me say you'll never <span class="c
 <span class="chord">A7</span>I will always want you for my <span class="chord">D</span>sweet heart <br/>
 No matter what you <span class="chord">Bm</span>do <br/>
 Oh <span class="chord">Em</span>Carol <span class="chord">A7</span>I'm so in love with <span class="chord">D</span>you <span class="chord">G</span> <span class="chord">D</span> </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Voice</p>
-<p>
-<span class="chord_intro">D</span> <span class="chord_intro">Bm</span> <span class="chord_intro">Em</span> <span class="chord_intro">A</span>
-</p>
-<hr>
-<div id='v_oh-carol_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_17' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_17' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/4168/ben-nhau-dem-nay/' target='hopamchuan'>Bên Nhau Đêm Nay</a>
-<a aria-controls='row_17' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_17' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_17' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_17' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Nhạc Anh
-</td>
-<td>Don Hồ, Lưu Ánh Loan</td>
-<td>
+</div>
+<div class='col md'>
+Don Hồ, Lưu Ánh Loan
+</div>
+<div class='col md'>
 thanh-liem
 <div class='pull-right'>Cm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/4168/ben-nhau-dem-nay' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 chacha
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_17'>
-<td colspan='3'>
-<img class='simage' src='http://graph.facebook.com/1306851400/picture?type=normal'>
+</div>
+</div>
+<div class='collapse' id='row_17'>
+<div class='row'>
+<div class='col'>
+<div id='v_ben-nhau-dem-nay_0'></div>
+</div>
+<div class='col'>
+Piano, Dist Guitar
+</div>
+<div class='col'>
+Piano: <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span> <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span><br>Dist Guitar: <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span> <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span><br>1321342217 7327465543 1321342217 7327 46545<br>55543452 44432321 5858552 444432 112365
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Capo 4 <br/>
  <br/>
 <span class="chord">Cm</span>..Chiều hoàng hôn buông xuống mái tóc em như <span class="chord">G7</span>nhung huyền <br/>
@@ -1357,44 +1442,42 @@ Nhìn em trong khóe mắt ước muốn được số<span class="chord">Fm</sp
 <span class="chord">Cm</span>..Dancing all night ánh sáng đêm ôi <span class="chord">Fm</span>muôn ngàn màu <br/>
 <span class="chord">G7</span>..Dancing all night ấm với anh vòng <span class="chord">Cm</span>tay ân tình <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Piano, Dist Guitar</p>
-<p>
-Piano: <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span> <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span><br>Dist Guitar: <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span> <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Cm</span>
-</p>
-<hr>
-<div id='v_ben-nhau-dem-nay_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_18' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_18' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/22/noi-tinh-yeu-bat-dau//thienv' target='hopamchuan'>Nơi Tình Yêu Bắt Đầu</a>
-<a aria-controls='row_18' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_18' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_18' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_18' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Tiến Minh
-</td>
-<td>Bằng Kiều, Lam Anh</td>
-<td>
+</div>
+<div class='col md'>
+Bằng Kiều, Lam Anh
+</div>
+<div class='col md'>
 vanessa
 <div class='pull-right'>Gm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/22/noi-tinh-yeu-bat-dau' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 techno
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_18'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_18'>
+<div class='row'>
+<div class='col'>
+<div id='v_noi-tinh-yeu-bat-dau_0'></div>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>1. <span class="chord">Gm</span>Ta quen nhau đã <span class="chord">Ebmaj7</span>bao lâu rồi, hỡi <span class="chord">F</span>đêm đêm có hay <br/>
 <span class="chord">Eb</span>Mà giọt buồn hoài <span class="chord">F</span>vương trên môi mặn <span class="chord">Bbmaj7</span>đắng <br/>
 <span class="chord">Ebmaj7</span>Ta quen nhau đã bao lâu rồi, hỡi <span class="chord">Dm</span>đêm sao vẫn <span class="chord">Gm</span>mãi đêm dài <br/>
@@ -1413,40 +1496,48 @@ Và thời gian ơi xin <span class="chord">Gb</span>hãy ngừng chốn <span c
 Một vòng tay anh khao <span class="chord">Gb</span>khát một giấc <span class="chord">Ab</span>mơ, anh <span class="chord">Fm</span>đã yêu em người <span class="chord">Bbm</span>ơi. <br/>
  <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<hr>
-<div id='v_noi-tinh-yeu-bat-dau_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_19' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_19' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/1969/con-chut-gi-de-nho/' target='hopamchuan'>Còn Chút Gì Để Nhớ</a>
-<a aria-controls='row_19' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_19' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_19' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_19' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Phạm Duy
-</td>
-<td>Elvis Phương</td>
-<td>
+</div>
+<div class='col md'>
+Elvis Phương
+</div>
+<div class='col md'>
 gia-cau
 <div class='pull-right'>A</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/1969/con-chut-gi-de-nho' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 slow
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_19'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_19'>
+<div class='row'>
+<div class='col'>
+<div id='v_con-chut-gi-de-nho_14'></div>
+</div>
+<div class='col'>
+Picolo, String
+</div>
+<div class='col'>
+<span class="chord_intro">A</span> <span class="chord_intro">Dm6</span> <span class="chord_intro">E</span> <span class="chord_intro">C#</span>-<span class="chord_intro">F#m</span> <span class="chord_intro">E</span>-<span class="chord_intro">D</span><br>331 442 5575 4321 -(76)
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Capo 2 <br/>
 Phố núi cao <span class="chord">A</span>cao phố núi đầy sương <br/>
 Phố núi cây <span class="chord">D</span>xanh trời thấp thật <span class="chord">A</span>buồn <br/>
@@ -1472,44 +1563,48 @@ Xin cảm <span class="chord">Em</span>ơn một mái tóc <span class="chord">C
 Mai xa <span class="chord">F</span>lắc trên đồn biên <span class="chord">Dm</span>giới <br/>
 Còn một chút <span class="chord">G7</span>gì để nhớ để <span class="chord">C</span>quên <br/>
 Còn một chút <span class="chord">G7</span>gì để nhớ để <span class="chord">C</span>quên </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Picolo, String</p>
-<p>
-<span class="chord_intro">A</span> <span class="chord_intro">Dm6</span> <span class="chord_intro">E</span> <span class="chord_intro">C#</span>-<span class="chord_intro">F#m</span> <span class="chord_intro">E</span>-<span class="chord_intro">D</span>
-</p>
-<hr>
-<div id='v_con-chut-gi-de-nho_14'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_20' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_20' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/7055/canh-hong-phai//thienv' target='hopamchuan'>Cánh Hồng Phai</a>
-<a aria-controls='row_20' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_20' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_20' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_20' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Dương Khắc Linh
-</td>
-<td>Trấn Thành, Hoàng Yến Chibi</td>
-<td>
+</div>
+<div class='col md'>
+Trấn Thành, Hoàng Yến Chibi
+</div>
+<div class='col md'>
 thien
 <div class='pull-right'>Am</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/7055/canh-hong-phai' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 bebop
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_20'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_20'>
+<div class='row'>
+<div class='col'>
+<div id='v_canh-hong-phai_0'></div>
+</div>
+<div class='col'>
+Synth (Echo)
+</div>
+<div class='col'>
+Intro like music<br><span class="chord_intro">Am</span> <span class="chord_intro">C</span> <span class="chord_intro">E7</span> <span class="chord_intro">Am</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Nàng như một <span class="chord">Am</span>đóa hồng <span class="chord">Dm</span>phai <br/>
 Hương sắc héo <span class="chord">G</span>hon theo những ngày <span class="chord">Cmaj7</span>dài <br/>
 Cuộc tình đi <span class="chord">Fmaj7</span>qua trong em, <br/>
@@ -1571,44 +1666,48 @@ Cánh hoa <span class="chord">F#maj7</span>tàn, dưới chân <span class="chor
 Là cả tuổi <span class="chord">F7</span>xuân mang theo mối tình <span class="chord">F</span> <br/>
 Nàng khóc cho <span class="chord">A#m</span>mình <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Synth (Echo)</p>
-<p>
-Intro like music<br><span class="chord_intro">Am</span> <span class="chord_intro">C</span> <span class="chord_intro">E7</span> <span class="chord_intro">Am</span>
-</p>
-<hr>
-<div id='v_canh-hong-phai_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_21' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_21' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/7219/em-oi-ha-noi-pho//thienv' target='hopamchuan'>Em Ơi Hà Nội Phố</a>
-<a aria-controls='row_21' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_21' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_21' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_21' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Phú Quang
-</td>
-<td>Bằng Kiều</td>
-<td>
+</div>
+<div class='col md'>
+Bằng Kiều
+</div>
+<div class='col md'>
 phi-phan
 <div class='pull-right'>Cm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/7219/em-oi-ha-noi-pho' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 slow
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_21'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_21'>
+<div class='row'>
+<div class='col'>
+<div id='v_em-oi-ha-noi-pho_71'></div>
+</div>
+<div class='col'>
+Piano
+</div>
+<div class='col'>
+<span class="chord_intro">Cm</span> <span class="chord_intro">Fm6</span> <span class="chord_intro">Ab</span> <span class="chord_intro">G7</span><br>+35+(423) +25+(312)<br>83978 664425
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Em <span class="chord">Cm</span>ơi, Hà Nội <span class="chord">Fm</span>phố <br/>
 Ta còn em mùi hoàng <span class="chord">Fm</span>lan <br/>
 Ta còn em mùi hoa <span class="chord">Cm</span>sữa <br/>
@@ -1646,44 +1745,48 @@ Con đường <span class="chord">Cm</span>vắng rì rào cơn mưa <span class
 Ai đó chờ <span class="chord">Ab</span>ai  tóc <span class="chord">G7</span>xõa vai <span class="chord">Cm</span>mềm. <br/>
  <br/>
 <span class="chord">Cm</span> <span class="chord">Fm</span> <span class="chord">G7</span> <span class="chord">Cm</span> </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Piano</p>
-<p>
-<span class="chord_intro">Cm</span> <span class="chord_intro">Fm6</span> <span class="chord_intro">Ab</span> <span class="chord_intro">G7</span>
-</p>
-<hr>
-<div id='v_em-oi-ha-noi-pho_71'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_22' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_22' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/16741/mo-khuc-tuong-phung/' target='hopamchuan'>Mơ khúc tương phùng</a>
-<a aria-controls='row_22' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_22' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_22' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_22' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Lam Minh
-</td>
-<td>Tam Ca Áo Trắng</td>
-<td>
+</div>
+<div class='col md'>
+Tam Ca Áo Trắng
+</div>
+<div class='col md'>
 christina-phan
 <div class='pull-right'>Am</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/16741/mo-khuc-tuong-phung' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 paso
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_22'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_22'>
+<div class='row'>
+<div class='col'>
+<div id='v_mo-khuc-tuong-phung_0'></div>
+</div>
+<div class='col'>
+Bass, Sax
+</div>
+<div class='col'>
+Bass: <span class="chord_intro">Am</span> <span class="chord_intro">G</span> <span class="chord_intro">F</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span> <span class="chord_intro">G</span> <span class="chord_intro">F</span> <span class="chord_intro">E</span><br>Sax: <span class="chord_intro">Am</span> <span class="chord_intro">G</span> <span class="chord_intro">F</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span> <span class="chord_intro">G</span> <span class="chord_intro">F</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span><br>123217 89876 78765 724321 24321<br>123217 89876 78765  254321<br>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'><span class="chord">Am</span>Mối tình ta dở dang <span class="chord">G</span>bởi ai <br/>
 Ước nguyền như thế nhưng <span class="chord">F</span>chóng phai <br/>
 <span class="chord">Dm</span>Duyên tình hờ hững sống <span class="chord">E7</span>đời buồn khổ <br/>
@@ -1704,44 +1807,48 @@ Mặc không <span class="chord">E7</span>gian mặc cuộc sống ra thế <spa
 Cùng nhau <span class="chord">A7</span>ta có thể mơ những ngày <span class="chord">D</span>sáng <br/>
 Say <span class="chord">D#dim</span>đắm trong <span class="chord">E</span>câu ca  <span class="chord">C#m</span>mơ màng <br/>
 Ta <span class="chord">F#</span>hát theo <span class="chord">Bm</span>cung đàn của <span class="chord">E7</span>giấc mộng <span class="chord">A</span>vàng. <span class="chord">E</span> <span class="chord">A</span> </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Bass, Sax</p>
-<p>
-<span class="chord_intro">Am</span> <span class="chord_intro">G</span> <span class="chord_intro">F</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span> <span class="chord_intro">G</span> <span class="chord_intro">F</span> <span class="chord_intro">E</span><br>Sax: <span class="chord_intro">Am</span> <span class="chord_intro">G</span> <span class="chord_intro">F</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span> <span class="chord_intro">G</span> <span class="chord_intro">F</span> <span class="chord_intro">E</span> <span class="chord_intro">Am</span>
-</p>
-<hr>
-<div id='v_mo-khuc-tuong-phung_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_23' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_23' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/23269/do-that-to-me-one-more-time/' target='hopamchuan'>Do That To Me One More Time</a>
-<a aria-controls='row_23' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_23' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_23' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_23' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 N/A
-</td>
-<td>Captain & Tennille</td>
-<td>
+</div>
+<div class='col md'>
+Captain & Tennille
+</div>
+<div class='col md'>
 christina-phan
 <div class='pull-right'>C</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/23269/do-that-to-me-one-more-time' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 rhumba
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_23'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_23'>
+<div class='row'>
+<div class='col'>
+<div id='v_do-that-to-me-one-more-time_0'></div>
+</div>
+<div class='col'>
+Guitar
+</div>
+<div class='col'>
+<span class="chord_intro">C</span> <span class="chord_intro">Am</span> <span class="chord_intro">F</span> <span class="chord_intro">G</span> <span class="chord_intro">C</span> <span class="chord_intro">Am</span> <span class="chord_intro">F</span> <span class="chord_intro">G</span>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'><span class="chord">C</span>Do that to me one more <span class="chord">Am</span>time <br/>
 Once is never <span class="chord">F</span>enough with a man like <span class="chord">G</span>you <br/>
 <span class="chord">C</span>Do that to me one more <span class="chord">Am</span>time <br/>
@@ -1780,44 +1887,48 @@ One more <span class="chord">D</span>time <br/>
 One more <span class="chord">D</span>time <br/>
 (Do it a<span class="chord">G</span>gain) <br/>
 One more <span class="chord">D</span>time </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Guitar</p>
-<p>
-<span class="chord_intro">C</span> <span class="chord_intro">Am</span> <span class="chord_intro">F</span> <span class="chord_intro">G</span> <span class="chord_intro">C</span> <span class="chord_intro">Am</span> <span class="chord_intro">F</span> <span class="chord_intro">G</span>
-</p>
-<hr>
-<div id='v_do-that-to-me-one-more-time_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_24' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_24' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/5941/mot-minh/' target='hopamchuan'>Một Mình</a>
-<a aria-controls='row_24' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_24' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_24' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_24' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Lam Phương
-</td>
-<td>Trần Thái Hòa, Quang Dũng</td>
-<td>
+</div>
+<div class='col md'>
+Trần Thái Hòa, Quang Dũng
+</div>
+<div class='col md'>
 phi-phan
 <div class='pull-right'>Em</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/5941/mot-minh' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 boston
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_24'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_24'>
+<div class='row'>
+<div class='col'>
+<div id='v_mot-minh_0'></div>
+</div>
+<div class='col'>
+Violin, Guitar, Flute
+</div>
+<div class='col'>
+<span class="chord_intro">Em</span> <span class="chord_intro">G</span> <span class="chord_intro">Am</span> <span class="chord_intro">Em</span> <span class="chord_intro">C</span> <span class="chord_intro">Am</span>-<span class="chord_intro">D</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Am</span> <span class="chord_intro">Em</span> <span class="chord_intro">F#m7b5</span>-<span class="chord_intro">B7</span> <span class="chord_intro">Em</span><br>1234587 4568+31 5+(134)<br>1356 325 564 453 342 231
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'> <br/>
 1. Sớm mai thức <span class="chord">Em</span>giấc, nhìn quanh một <span class="chord">G</span>mình <br/>
 Ngoài hiên nắng lóe, đàn chim giật <span class="chord">Em</span>mình <br/>
@@ -1837,44 +1948,48 @@ Tình cờ gặp <span class="chord">D</span>nhau, ngỡ ngàng nhìn <span clas
 3. Sáng trưa khuya tối, nhìn quanh một <span class="chord">G</span>mình <br/>
 Đường quen không tới, tìm nhau ngại <span class="chord">Em</span>ngùng <br/>
 Chỉ vì đời <span class="chord">D</span>mình, chưa có bình <span class="chord">Em</span>minh <span class="chord">D</span> <span class="chord">Em</span> </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Violin, Guitar, Flute</p>
-<p>
-<span class="chord_intro">Em</span> <span class="chord_intro">G</span> <span class="chord_intro">Am</span> <span class="chord_intro">Em</span> <span class="chord_intro">C</span> <span class="chord_intro">Am</span>-<span class="chord_intro">D</span> <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Am</span> <span class="chord_intro">Em</span> <span class="chord_intro">F#m7b5</span>-<span class="chord_intro">B7</span> <span class="chord_intro">Em</span>
-</p>
-<hr>
-<div id='v_mot-minh_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_25' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_25' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/1138/trai-tim-ben-le//thienv' target='hopamchuan'>Trái Tim Bên Lề</a>
-<a aria-controls='row_25' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_25' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_25' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_25' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Phạm Khải Tuấn
-</td>
-<td>Bằng Kiều</td>
-<td>
+</div>
+<div class='col md'>
+Bằng Kiều
+</div>
+<div class='col md'>
 phi-phan
 <div class='pull-right'>Em</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/1138/trai-tim-ben-le' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 techno
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_25'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_25'>
+<div class='row'>
+<div class='col'>
+<div id='v_trai-tim-ben-le_39'></div>
+</div>
+<div class='col'>
+Grunge Guitar
+</div>
+<div class='col'>
+<span class="chord_intro">Em</span> <span class="chord_intro">D</span> <span class="chord_intro">C</span> <span class="chord_intro">B</span> <span class="chord_intro">Em</span> <span class="chord_intro">D</span> <span class="chord_intro">C</span> <span class="chord_intro">B</span><br>55156165 277277286+3 1881881+(213) 257 289 29+(3) 2+(34) 2+5 2+6
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'><span class="chord">Em</span>Em, đã biết bao ngày bên <span class="chord">Am7</span>em <br/>
 Là anh <span class="chord">Em</span>đã có bấy nhiêu ngày <span class="chord">B7</span>yêu em. <span class="chord">E7</span> <br/>
 Nhưng em <span class="chord">Am</span>vẫn ngây <span class="chord">D</span>thơ không biết tình <span class="chord">Gmaj7</span>anh, <br/>
@@ -1897,44 +2012,42 @@ Tình yêu anh <span class="chord">Am7</span>đã trao <span class="chord">D</sp
 Một trái <span class="chord">Am7</span>tim bên lề rất <span class="chord">B7</span>đau <br/>
 Vì biết <span class="chord">Em</span>em chẳng <span class="chord">D</span>hề biết <span class="chord">C#dim</span>đâu <br/>
 Tình yêu <span class="chord">C</span>anh <span class="chord">B7</span>đã cho em <span class="chord">Em</span>rồi. </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Grunge Guitar</p>
-<p>
-<span class="chord_intro">Em</span> <span class="chord_intro">D</span> <span class="chord_intro">C</span> <span class="chord_intro">B</span> <span class="chord_intro">Em</span> <span class="chord_intro">D</span> <span class="chord_intro">C</span> <span class="chord_intro">B</span>
-</p>
-<hr>
-<div id='v_trai-tim-ben-le_39'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_26' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_26' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/7019/trai-tim-tinh-si/' target='hopamchuan'>Trai Tim Tinh Si</a>
-<a aria-controls='row_26' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_26' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_26' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_26' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Vũ Quốc Việt
-</td>
-<td>Đàm Vĩnh Hưng</td>
-<td>
+</div>
+<div class='col md'>
+Đàm Vĩnh Hưng
+</div>
+<div class='col md'>
 
 <div class='pull-right'></div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/7019/trai-tim-tinh-si' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_26'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_26'>
+<div class='row'>
+<div class='col'>
+<div id='v_trai-tim-tinh-si_1'></div>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'><span class="chord">Dm</span>Ta đi tìm một trái <span class="chord">F</span>tim <br/>
 Hỡi trái tim yêu nay về <span class="chord">Dm</span>đâu (rồi) <br/>
 Ta đi tìm người năm <span class="chord">C</span>tháng <br/>
@@ -1965,40 +2078,48 @@ Dẫu cho người <span class="chord">A#</span>xưa cuốn trong trời <span c
 Dẫu cho đời <span class="chord">C</span>kia cuốn ta về <span class="chord">Am</span>đâu <br/>
 Lòng ta <span class="chord">C</span>vẫn mãi yêu <span class="chord">Dm</span>người <br/>
 Ho ho ho, ho ho ho, ho ho <span class="chord">Dm</span>ho </div>
-</td>
-<td class='perf-note' width='20%'>
-<hr>
-<div id='v_trai-tim-tinh-si_1'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_27' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_27' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/1252/mong-chieu-xuan/' target='hopamchuan'>Mộng Chiều Xuân</a>
-<a aria-controls='row_27' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_27' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_27' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_27' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Ngọc Bích
-</td>
-<td>Như Quỳnh, Hồ Hoàng Yến</td>
-<td>
+</div>
+<div class='col md'>
+Như Quỳnh, Hồ Hoàng Yến
+</div>
+<div class='col md'>
 christina-phan
 <div class='pull-right'>G</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/1252/mong-chieu-xuan' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 tango
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_27'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_27'>
+<div class='row'>
+<div class='col'>
+<div id='v_mong-chieu-xuan_0'></div>
+</div>
+<div class='col'>
+Guitar, String, Sax
+</div>
+<div class='col'>
+Guitar: <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Am</span> <span class="chord_intro">Bm</span> <span class="chord_intro">Bm</span> <span class="chord_intro">D</span><br>Sax: <span class="chord_intro">C</span> <span class="chord_intro">C</span> <span class="chord_intro">Bm</span> <span class="chord_intro">Bm</span> <span class="chord_intro">Am</span> <span class="chord_intro">D</span> <span class="chord_intro">G</span> <span class="chord_intro">C</span> <span class="chord_intro">G</span><br>51235875 512357988 8678+(23544) 68+(433) 568+(321)6789<br>11216+1(14) +(54321)7353 +(4321)7249 987543-71
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'> <br/>
 1. Gió chiều thầm vương bao nhớ <span class="chord">G</span>nhung <span class="chord">Em</span> <br/>
 Người yêu thoáng <span class="chord">A</span>qua trong giấc <span class="chord">D</span>mộng <br/>
@@ -2020,44 +2141,48 @@ Tình duyên với <span class="chord">A</span>em trong kiếp <span class="chor
 <span class="chord">Bm</span>Xuân còn thắm <span class="chord">E</span>tươi anh còn mong <span class="chord">A</span>chờ <br/>
 Ái ân kẻo tàn ngày <span class="chord">D</span>mơ <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Guitar, String, Sax</p>
-<p>
-Guitar: <span class="chord_intro">G</span> <span class="chord_intro">G</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Am</span> <span class="chord_intro">Bm</span> <span class="chord_intro">Bm</span> <span class="chord_intro">D</span><br>Sax: <span class="chord_intro">C</span> <span class="chord_intro">C</span> <span class="chord_intro">Bm</span> <span class="chord_intro">Bm</span> <span class="chord_intro">Am</span> <span class="chord_intro">D</span> <span class="chord_intro">G</span> <span class="chord_intro">C</span> <span class="chord_intro">G</span>
-</p>
-<hr>
-<div id='v_mong-chieu-xuan_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_28' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_28' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/427/tuyet-roi-mua-he/' target='hopamchuan'>Tuyết Rơi Mùa Hè</a>
-<a aria-controls='row_28' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_28' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_28' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_28' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Trần Lê Quỳnh
-</td>
-<td>Hà Anh Tuấn, Quang Dũng</td>
-<td>
+</div>
+<div class='col md'>
+Hà Anh Tuấn, Quang Dũng
+</div>
+<div class='col md'>
 thien
 <div class='pull-right'>Fm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/427/tuyet-roi-mua-he' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 slow
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_28'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_28'>
+<div class='row'>
+<div class='col'>
+<div id='v_tuyet-roi-mua-he_0'></div>
+</div>
+<div class='col'>
+Guitar
+</div>
+<div class='col'>
+<span class="chord_intro">Fm</span> <span class="chord_intro">Fm</span> <span class="chord_intro">Bbm</span> <span class="chord_intro">Bbm</span> <span class="chord_intro">Gm7b5</span> <span class="chord_intro">C7</span> <span class="chord_intro">Fm</span> <span class="chord_intro">Bbm</span>-<span class="chord_intro">C7</span> <span class="chord_intro">Fm</span> <span class="chord_intro">Fm</span> <span class="chord_intro">Bbm</span> <span class="chord_intro">Bbm</span> <span class="chord_intro">Gm7b5</span> <span class="chord_intro">C7</span> <span class="chord_intro">Db</span> <span class="chord_intro">C7</span><br>-5233 4321-(7786) 5564 32 -712233 -712443 -7123455561 -654 -532 -5233 432
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Nếu anh gặp <span class="chord">Fm</span>em từ đầu, có lẽ đã <span class="chord">Bbm</span>không ai qua bể dâu <br/>
 Nếu anh được <span class="chord">Eb</span>sống từ đầu, vẫn muốn bên <span class="chord">Ab</span>em như thời thơ <span class="chord">C7</span>ấu <br/>
 Nếu mai rời <span class="chord">Fm</span>xa nhìn lại, trong giấc mơ <span class="chord">Bbm</span>anh, em sẽ hiện ra <br/>
@@ -2072,44 +2197,39 @@ Vì ngày em <span class="chord">Ab</span>đến là ngày tuyết <span class="
 Bầu trời lấp <span class="chord">Db</span>lánh, những <span class="chord">Eb</span>cánh hoa  như sao tỏa <span class="chord">Ab</span>bay <span class="chord">C7</span> <br/>
 Và dù anh <span class="chord">Ab</span>có trẻ lại vẫn <span class="chord">Eb</span>nguyên lời thề <br/>
 Vì màu nơ <span class="chord">Bbm</span>trắng em <span class="chord">C7</span>cài là hoa tuyết không <span class="chord">Fm</span>tàn. </div>
-</td>
-<td class='perf-note' width='20%'>
-<p>Guitar</p>
-<p>
-<span class="chord_intro">Fm</span> <span class="chord_intro">Fm</span> <span class="chord_intro">Bbm</span> <span class="chord_intro">Bbm</span> <span class="chord_intro">Gm7b5</span> <span class="chord_intro">C7</span> <span class="chord_intro">Fm</span> <span class="chord_intro">Bbm</span>-<span class="chord_intro">C7</span> <span class="chord_intro">Fm</span> <span class="chord_intro">Fm</span> <span class="chord_intro">Bbm</span> <span class="chord_intro">Bbm</span> <span class="chord_intro">Gm7b5</span> <span class="chord_intro">C7</span> <span class="chord_intro">Db</span> <span class="chord_intro">C7</span>
-</p>
-<hr>
-<div id='v_tuyet-roi-mua-he_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_29' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_29' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/5235/chi-rieng-minh-ta-love-potion-number-9//thienv' target='hopamchuan'>Chỉ Riêng Mình Ta (Love Potion Number 9)</a>
-<a aria-controls='row_29' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_29' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_29' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_29' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Nhạc ngoại
-</td>
-<td>Nguyễn Hưng, The Searchers</td>
-<td>
+</div>
+<div class='col md'>
+Nguyễn Hưng, The Searchers
+</div>
+<div class='col md'>
 
 <div class='pull-right'></div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/5235/chi-rieng-minh-ta-love-potion-number-9' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_29'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_29'>
+<div class='row'>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'><span class="chord">Am</span>I took my troubles down to <span class="chord">Dm</span>Madame Ruth <br/>
 <span class="chord">Am</span>You know that gypsy with the <span class="chord">Dm</span>gold capped tooth <br/>
 <span class="chord">C</span>She's got a pad down on Thirty-Fourth and <span class="chord">Am</span>Vine <br/>
@@ -2137,42 +2257,39 @@ I <span class="chord">E7</span>held my nose, I closed my eyes, I took a drink <
 <span class="chord">C</span>But when I kissed a cop down on Thirty-Fourth and <span class="chord">Am</span>Vine <br/>
 <span class="chord">Dm</span>He broke my little bottles of <span class="chord">E7</span>Love Potion Number <span class="chord">Am</span>Nine <br/>
 <span class="chord">Dm</span>Love Potion Number <span class="chord">Am</span>Nine, love <span class="chord">Dm</span>otion Number <span class="chord">Am</span>Nine ... </div>
-</td>
-<td class='perf-note' width='20%'>
-<hr>
-<a href='/fragment_upload//5235/chi-rieng-minh-ta-love-potion-number-9' target='upload' title='Upload music fragment'>
-<i class='fa fa-upload'></i>
-</a>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_30' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_30' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/4422/biet-bao-gio-tro-lai/' target='hopamchuan'>Biết Bao Giờ Trở Lại</a>
-<a aria-controls='row_30' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_30' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_30' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_30' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Ngô Thụy Miên
-</td>
-<td>Trần Thái Hòa, Nguyên Khang</td>
-<td>
+</div>
+<div class='col md'>
+Trần Thái Hòa, Nguyên Khang
+</div>
+<div class='col md'>
 
 <div class='pull-right'></div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/4422/biet-bao-gio-tro-lai' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_30'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_30'>
+<div class='row'>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>1. Tôi đã | <span class="chord">Dm</span>đi, tôi vẫn đi mãi biết bao |giờ trở lại <br/>
 ..Sài Gòn | <span class="chord">Gm</span>ơi, sao <span class="chord">C</span>em còn mãi trong | <span class="chord">Fmaj7</span>tim tôi <br/>
 ..Ôi những con | <span class="chord">Em7b5</span>đường ngày <span class="chord">A</span>nào còn nghe lá | <span class="chord">Dm</span>rơi <span class="chord">C</span> <br/>
@@ -2201,42 +2318,48 @@ Nụ <span class="chord">A#</span>cười về trên nét | <span class="chord">
 ..Cho tiếng hát | <span class="chord">Fm7b5</span>buồn ngày <span class="chord">A#</span>nào nhịp vang |phố <span class="chord">D#m</span>vui <span class="chord">C#</span> <br/>
 Nụ <span class="chord">B</span>cười về trên nét | <span class="chord">F</span>môi hạnh <span class="chord">A#</span>phúc tôi, một |góc <span class="chord">D#m</span>trời. <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<hr>
-<a href='/fragment_upload//4422/biet-bao-gio-tro-lai' target='upload' title='Upload music fragment'>
-<i class='fa fa-upload'></i>
-</a>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_31' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_31' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/9460/lai-nho-nguoi-yeu//thienv' target='hopamchuan'>Lại Nhớ Người Yêu</a>
-<a aria-controls='row_31' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_31' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_31' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_31' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Giao Tiên
-</td>
-<td>Đan Nguyên</td>
-<td>
+</div>
+<div class='col md'>
+Đan Nguyên
+</div>
+<div class='col md'>
 dino-huy
 <div class='pull-right'>Dm</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/9460/lai-nho-nguoi-yeu' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 ballad
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_31'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_31'>
+<div class='row'>
+<div class='col'>
+<div id='v_lai-nho-nguoi-yeu_0'></div>
+</div>
+<div class='col'>
+Guitar, Bell
+</div>
+<div class='col'>
+<span class="chord_intro">F</span> <span class="chord_intro">C</span> <span class="chord_intro">Dm</span> <span class="chord_intro">Bb</span> <span class="chord_intro">F</span> <span class="chord_intro">C</span> <span class="chord_intro">F</span><br><span class="chord_intro">F</span> <span class="chord_intro">C</span> <span class="chord_intro">Dm</span> <span class="chord_intro">Bb</span> <span class="chord_intro">F</span> <span class="chord_intro">C</span> <span class="chord_intro">Dm</span><br>4321312] <span class="chord_intro">43213</span> <span class="chord_intro">16</span> <span class="chord_intro">432134532</span> <span class="chord_intro">123<br>4321312</span> <span class="chord_intro">4321356</span> <span class="chord_intro">4321345432</span> [56<br>
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Vì sao anh nhớ em thế |<span class="chord">Dm</span>này | <br/>
 Thương nhớ đong <span class="chord">C</span>đầy trong lòng |<span class="chord">F</span>mắt | <br/>
 <span class="chord">Dm</span>Buổi chiều còn gặp nhau |<span class="chord">Gm</span>đây <br/>
@@ -2262,42 +2385,50 @@ Trên lối đi <span class="chord">C</span>về không còn |<span class="chord
 <span class="chord">Dm</span>Trọn đời mình kề bên |<span class="chord">Gm</span>nhau <br/>
 Tình yêu thêm sắc thêm |<span class="chord">Bb</span>màu <br/>
 Không còn <span class="chord">A7</span>lo thương nhớ người |<span class="chord">Dm</span>yêu. <span class="chord">Gm</span>|<span class="chord">Dm</span> </div>
-</td>
-<td class='perf-note' width='20%'>
-<hr>
-<div id='v_lai-nho-nguoi-yeu_0'></div>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+</div>
+</div>
+<div class='row song_header'>
+<div class='col-6'>
 <h4>
-<a aria-controls='row_32' aria-expanded='false' class='a-tooltip' data-toggle='collapse' href='#row_32' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
 <a href='https://hopamchuan.com/song/17501/say/' target='hopamchuan'>Say</a>
-<a aria-controls='row_32' aria-expanded='false' class='pull-right a-tooltip' data-toggle='collapse' href='#row_32' title='Toggle Lyric'>
-<i class='fa fa-search'></i>
-</a>
+<button aria-controls='row_32' aria-expanded='false' class='pull-right btn btn-primary' data-toggle='collapse' href='#row_32' role='button' type='button'>
+Toggle Lyric
+</button>
 </h4>
 Y Vũ                                    
                                 ,                                     
                                         Giao Tiên
-</td>
-<td>Quốc Khanh, Đan Nguyên</td>
-<td>
+</div>
+<div class='col md'>
+Quốc Khanh, Đan Nguyên
+</div>
+<div class='col md'>
 dino-huy
 <div class='pull-right'>Am</div>
-</td>
-<td>
+</div>
+<div class='col md'>
 <a href='/song-style/vnhv2018/17501/say' target='song_edit'>
 <i class='fa fa-edit'></i>
 </a>
 twist
 <div class='pull-right'></div>
-</td>
-</tr>
-<tr class='collapse' id='row_32'>
-<td colspan='3'>
+</div>
+</div>
+<div class='collapse' id='row_32'>
+<div class='row'>
+<div class='col'>
+<div id='v_say_126'></div>
+</div>
+<div class='col'>
+Guitar Distortion, Synth
+</div>
+<div class='col'>
+<span class="chord_intro">Am</span> <span class="chord_intro">C</span> <span class="chord_intro">D</span> <span class="chord_intro">Am</span> <span class="chord_intro">Am</span> <span class="chord_intro">C</span> <span class="chord_intro">D</span> <span class="chord_intro">Am</span><br>888787] <span class="chord_intro">666545</span> <span class="chord_intro">888783</span> <span class="chord_intro">31344</span> [5431
+</div>
+</div>
+<div class='row'>
+<div class='col'>
 <div class='lyric'>Uống rượu mà <span class="chord">Am</span>không say thì nào hay <span class="chord">F</span> <span class="chord">G</span> <br/>
 Uống rượu mà <span class="chord">Am</span>không say thì nào mê <span class="chord">F</span> <span class="chord">G</span> <br/>
 Xin mời anh <span class="chord">Dm</span>nâng ly cùng tôi <br/>
@@ -2327,17 +2458,12 @@ Má hồng dù <span class="chord">Dm</span>phai trong vòng tay <br/>
 <span class="chord">E</span>Uống đi uống cho thêm yêu <span class="chord">Am</span>đời <br/>
  <br/>
  </div>
-</td>
-<td class='perf-note' width='20%'>
-<hr>
-<div id='v_say_126'></div>
-</td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+</div>
 
 <footer>
-<div class='small text-muted publish_date'>2018-11-20 03:30:03 -0800</div>
+<div class='small text-muted publish_date'>2018-11-20 20:47:13 -0800</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -2350,7 +2476,7 @@ Má hồng dù <span class="chord">Dm</span>phai trong vòng tay <br/>
     $('.a-tooltip').tooltip({"html":true}); 
   });
   
-  var videos     = [{"vid":"v_california-dreamin_0","video":"dN3GbF9Bx6E","start":0,"end":9},{"vid":"v_bo-vo_0","video":"QSShXaEqtA0","start":0,"end":18},{"vid":"v_tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien_0","video":"l-2NpfZFr7o","start":0,"end":24},{"vid":"v_beautiful-sunday_0","video":"MJwDgBb00LM","start":0,"end":8},{"vid":"v_yeu-nhau-di-besame-mucho_0","video":"fgEeBqnB2So","start":0,"end":21},{"vid":"v_phien-da-sau_16","video":"QBy7-04-vfU","start":16,"end":50},{"vid":"v_nguoi-tinh-mua-dong_6","video":"enWquTrqYTc","start":6,"end":21},{"vid":"v_diem-xua_0","video":"n-wyVoW9Fbg","start":0,"end":17},{"vid":"v_lai-gan-hon-anh-lai-gan-ben-anh_23","video":"Mdx0RcJZjww","start":23,"end":48},{"vid":"v_nao-biet-nao-hay_0","video":"IeD5fIK0g44","start":0,"end":14},{"vid":"v_nguoi-hay-quen-em-di_0","video":"BoXJqkwIa9c","start":0,"end":16},{"vid":"v_bong-chieu-ta_0","video":"AH6-R_D2Q5c","start":0,"end":18},{"vid":"v_du-am-mua-giang-sinh_0","video":"ZykXe_SB0JY","start":0,"end":22},{"vid":"v_you-re-a-woman-you-re-a-woman-i-m-a-man_0","video":"x8cIcXDR8ts","start":0,"end":32},{"vid":"v_nhung-buoc-chan-am-tham_0","video":"AP5zyfKuD2g","start":0,"end":27},{"vid":"v_tuyet-roi_15","video":"a8xFGqtiARg","start":15,"end":37},{"vid":"v_oh-carol_0","video":"4XHe6dSngt0","start":0,"end":15},{"vid":"v_ben-nhau-dem-nay_0","video":"B24sfq_seF0","start":0,"end":31},{"vid":"v_noi-tinh-yeu-bat-dau_0","video":"6i1qqXifYRo","start":0,"end":300},{"vid":"v_con-chut-gi-de-nho_14","video":"-HycOZ-rZAo","start":14,"end":36},{"vid":"v_canh-hong-phai_0","video":"kfH16-5-PZA","start":0,"end":300},{"vid":"v_em-oi-ha-noi-pho_71","video":"gRw8veVcWCA","start":71,"end":102},{"vid":"v_mo-khuc-tuong-phung_0","video":"mhKj-tsptNg","start":0,"end":40},{"vid":"v_do-that-to-me-one-more-time_0","video":"fRbGWa8x-DA","start":0,"end":22},{"vid":"v_mot-minh_0","video":"VD6bde5Qllk","start":0,"end":43},{"vid":"v_trai-tim-ben-le_39","video":"v4kiz80Zw0s","start":39,"end":70},{"vid":"v_trai-tim-tinh-si_1","video":"MyIMSvtz6KI","start":1,"end":30},{"vid":"v_mong-chieu-xuan_0","video":"jTlQ3MdXLaQ","start":0,"end":39},{"vid":"v_tuyet-roi-mua-he_0","video":"AGBK5WHblsE","start":0,"end":31},{"vid":"v_lai-nho-nguoi-yeu_0","video":"J3vqR9BEkYc","start":0,"end":31},{"vid":"v_say_126","video":"YTp9gDO5zeU","start":126,"end":142}];
+  var videos     = [{"vid":"v_california-dreamin_0","video":"dN3GbF9Bx6E","start":0,"end":9},{"vid":"v_bo-vo_0","video":"QSShXaEqtA0","start":0,"end":18},{"vid":"v_bo-vo_245","video":"QSShXaEqtA0","start":245,"end":260},{"vid":"v_tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien_0","video":"l-2NpfZFr7o","start":0,"end":24},{"vid":"v_tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien_244","video":"l-2NpfZFr7o","start":244,"end":254},{"vid":"v_beautiful-sunday_0","video":"MJwDgBb00LM","start":0,"end":8},{"vid":"v_yeu-nhau-di-besame-mucho_0","video":"fgEeBqnB2So","start":0,"end":21},{"vid":"v_phien-da-sau_16","video":"QBy7-04-vfU","start":16,"end":50},{"vid":"v_nguoi-tinh-mua-dong_6","video":"enWquTrqYTc","start":6,"end":21},{"vid":"v_diem-xua_0","video":"n-wyVoW9Fbg","start":0,"end":17},{"vid":"v_lai-gan-hon-anh-lai-gan-ben-anh_23","video":"Mdx0RcJZjww","start":23,"end":48},{"vid":"v_nao-biet-nao-hay_0","video":"IeD5fIK0g44","start":0,"end":14},{"vid":"v_nguoi-hay-quen-em-di_0","video":"BoXJqkwIa9c","start":0,"end":16},{"vid":"v_bong-chieu-ta_0","video":"AH6-R_D2Q5c","start":0,"end":18},{"vid":"v_du-am-mua-giang-sinh_0","video":"ZykXe_SB0JY","start":0,"end":22},{"vid":"v_you-re-a-woman-you-re-a-woman-i-m-a-man_0","video":"x8cIcXDR8ts","start":0,"end":32},{"vid":"v_nhung-buoc-chan-am-tham_0","video":"AP5zyfKuD2g","start":0,"end":27},{"vid":"v_tuyet-roi_15","video":"a8xFGqtiARg","start":15,"end":37},{"vid":"v_oh-carol_0","video":"4XHe6dSngt0","start":0,"end":15},{"vid":"v_ben-nhau-dem-nay_0","video":"B24sfq_seF0","start":0,"end":31},{"vid":"v_noi-tinh-yeu-bat-dau_0","video":"6i1qqXifYRo","start":0,"end":300},{"vid":"v_con-chut-gi-de-nho_14","video":"-HycOZ-rZAo","start":14,"end":36},{"vid":"v_canh-hong-phai_0","video":"kfH16-5-PZA","start":0,"end":300},{"vid":"v_em-oi-ha-noi-pho_71","video":"gRw8veVcWCA","start":71,"end":102},{"vid":"v_mo-khuc-tuong-phung_0","video":"mhKj-tsptNg","start":0,"end":40},{"vid":"v_do-that-to-me-one-more-time_0","video":"fRbGWa8x-DA","start":0,"end":22},{"vid":"v_mot-minh_0","video":"VD6bde5Qllk","start":0,"end":43},{"vid":"v_trai-tim-ben-le_39","video":"v4kiz80Zw0s","start":39,"end":70},{"vid":"v_trai-tim-tinh-si_1","video":"MyIMSvtz6KI","start":1,"end":30},{"vid":"v_mong-chieu-xuan_0","video":"jTlQ3MdXLaQ","start":0,"end":39},{"vid":"v_tuyet-roi-mua-he_0","video":"AGBK5WHblsE","start":0,"end":31},{"vid":"v_lai-nho-nguoi-yeu_0","video":"J3vqR9BEkYc","start":0,"end":31},{"vid":"v_say_126","video":"YTp9gDO5zeU","start":126,"end":142}];
   var cur_player = null;
   function onYouTubeIframeAPIReady() {
     for (var i = 0; i < videos.length; i++) {
@@ -2359,8 +2485,8 @@ Má hồng dù <span class="chord">Dm</span>phai trong vòng tay <br/>
       var vid       = cur_video['vid'];
       var start = cur_video['start']; var end = cur_video['end'];
       var player    = new YT.Player(vid, {
-        height: '100',
-        width:  '150',
+        height: '150',
+        width:  '300',
         playerVars: {autoplay:0, start:start, end:end},
         videoId: avideo,
         events: {
