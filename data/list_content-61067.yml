@@ -1,0 +1,23 @@
+--- !ruby/object:Hash
+:content:
+- !ruby/object:Hash
+  :artist: Vũ
+  :href: https://hopamchuan.com/song/8889/la-lung/
+  :name: Lạ Lùng
+  :preview: Kìa màn đêm hiu hắt , Mang tên em quay về trong ký ức , Của anh qua thời
+  :song_id: 8889
+- !ruby/object:Hash
+  :artist: Thái Vũ
+  :href: https://hopamchuan.com/song/6749/phut-ban-dau/
+  :name: Phút Ban Đầu
+  :preview: 'Lời 1: Có ô cửa sổ nhỏ, lay hồn ai qua đây, Có giấc mơ là lạ, chạm vào
+    trong'
+  :song_id: 6749
+- !ruby/object:Hash
+  :artist: Thái Vũ
+  :href: https://hopamchuan.com/song/7347/dong-kiem-em/
+  :name: Đông Kiếm Em
+  :preview: Tôi hát cho màu xanh mãi xanh, cho một người lặng im biết yêu Và tôi viết
+    cho mùa
+  :song_id: 7347
+:id: 61067

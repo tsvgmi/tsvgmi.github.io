@@ -1,0 +1,232 @@
+--- !ruby/object:Hash
+:content:
+- !ruby/object:Hash
+  :artist: Như Quỳnh, Hà Anh Tuấn, Hà Vân
+  :href: https://hopamchuan.com/song/1197/nguoi-tinh-mua-dong/
+  :name: Người Tình Mùa Đông
+  :preview: Đường vào  tim em ôi băng  giá Trời mùa  đông mây vẫn hay đi  về Vẫn  mưa
+    mưa
+  :song_id: 1197
+- !ruby/object:Hash
+  :artist: Bằng Kiều, Lam Anh
+  :href: https://hopamchuan.com/song/22/noi-tinh-yeu-bat-dau/
+  :name: Nơi Tình Yêu Bắt Đầu
+  :preview: 1. Ta quen nhau đã bao lâu rồi, hỡi đêm đêm có hay Mà giọt buồn hoài vương
+    trên môi
+  :song_id: 22
+- !ruby/object:Hash
+  :artist: Bằng Kiều
+  :href: https://hopamchuan.com/song/1138/trai-tim-ben-le/
+  :name: Trái Tim Bên Lề
+  :preview: Em, đã biết bao ngày bên em Là anh đã có bấy nhiêu ngày yêu em. Nhưng
+    em vẫn ngâ
+  :song_id: 1138
+- !ruby/object:Hash
+  :artist: Hồng Nhung, Khánh Ly
+  :href: https://hopamchuan.com/song/301/diem-xua/
+  :name: Diễm Xưa
+  :preview: Mưa vẫn mưa bay trên tầng tháp cổ Dài tay em mấy thuở mắt xanh xao Nghe
+    lá thu [Am
+  :song_id: 301
+- !ruby/object:Hash
+  :artist: Mỹ Tâm, Vũ Hà
+  :href: https://hopamchuan.com/song/15388/nguoi-hay-quen-em-di/
+  :name: Người Hãy Quên Em đi
+  :preview: 1. Người yêu hỡi, dù gì cùng xa nhau rồi Ngày nào chiếc hôn bao đêm rã
+    rời Giờ đ
+  :song_id: 15388
+- !ruby/object:Hash
+  :artist: Hà Anh Tuấn, Quang Dũng
+  :href: https://hopamchuan.com/song/427/tuyet-roi-mua-he/
+  :name: Tuyết Rơi Mùa Hè
+  :preview: Nếu anh gặp  em từ đầu, có lẽ đã  không ai qua bể dâu Nếu anh được  sống
+    từ đầu, vẫn mu
+  :song_id: 427
+- !ruby/object:Hash
+  :artist: Đan Nguyên
+  :href: https://hopamchuan.com/song/9460/lai-nho-nguoi-yeu/
+  :name: Lại Nhớ Người Yêu
+  :preview: Vì sao anh nhớ em thế |này | Thương nhớ đong đầy trong lòng |mắt | Buổi
+    chiều còn gặ
+  :song_id: 9460
+- !ruby/object:Hash
+  :artist: Bằng Kiều
+  :href: https://hopamchuan.com/song/1447/lai-gan-hon-anh-lai-gan-ben-anh/
+  :name: Lại Gần Hôn Anh (Lại Gần Bên Anh)
+  :preview: 1. Lại đây bên anh em hỡi Trước khi xa anh đêm nay lại gần bên anh Vẫn
+    biết đôi ta
+  :song_id: 1447
+- !ruby/object:Hash
+  :artist: Trấn Thành , Hoàng Yến Chibi
+  :href: https://hopamchuan.com/song/7055/canh-hong-phai/
+  :name: Cánh Hồng Phai
+  :preview: Nàng như một đóa hồng phai Hương sắc héo hon theo những ngày dài Cuộc
+    tình đi qua
+  :song_id: 7055
+- !ruby/object:Hash
+  :artist: Khánh Ly, Elvis Phương
+  :href: https://hopamchuan.com/song/3022/tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien/
+  :name: Tình Cho Không Biếu Không (L'amour C'est Pour Rien)
+  :preview: 1.  Ngon như là trái  táo chín  Thơm như vườn hoa  kín  Mong manh như
+    dây tơ
+  :song_id: 3022
+- !ruby/object:Hash
+  :artist: Bằng Kiều
+  :href: https://hopamchuan.com/song/7219/em-oi-ha-noi-pho/
+  :name: Em Ơi Hà Nội Phố
+  :preview: 'Tone gốc C#m: capo 4 Em  ơi, Hà Nội  phố Ta còn em mùi hoàng  lan Ta
+    còn  em mùi h'
+  :song_id: 7219
+- !ruby/object:Hash
+  :artist: Don Hồ, Lưu Ánh Loan
+  :href: https://hopamchuan.com/song/4168/ben-nhau-dem-nay/
+  :name: Bên Nhau Đêm Nay
+  :preview: Capo 4 ..Chiều hoàng hôn buông xuống mái tóc em như nhung huyền Đôi môi
+    em thiết tha
+  :song_id: 4168
+- !ruby/object:Hash
+  :artist: Nguyễn Hưng, The Searchers
+  :href: https://hopamchuan.com/song/5235/chi-rieng-minh-ta-love-potion-number-9/
+  :name: Chỉ Riêng Mình Ta (Love Potion Number 9)
+  :preview: Mỗi sáng thức giấc vẫn thấy chỉ riêng mình ta Tiếng hót thánh thót của
+    những chú c
+  :song_id: 5235
+- !ruby/object:Hash
+  :artist: Dalida, Quang Dũng
+  :href: https://hopamchuan.com/song/531/yeu-nhau-di-besame-mucho/
+  :name: Yêu Nhau Đi (Besame Mucho)
+  :preview: 1. Yêu nhau đi, đời đâu có nghĩa chi Yêu nhau đi ta lo chi cho đôi mi
+    thêm ph
+  :song_id: 531
+- !ruby/object:Hash
+  :artist: Elvis Phương, Ngọc Lan
+  :href: https://hopamchuan.com/song/3383/tuyet-roi/
+  :name: Tuyết Rơi
+  :preview: 'Tone gốc A#m: Capo 1 Ngoài kia tuyết rơi đầy Anh không đến bên em chiều
+    nay Ngoài kia t'
+  :song_id: 3383
+- !ruby/object:Hash
+  :artist: Quang Dũng
+  :href: https://hopamchuan.com/song/986/phien-da-sau/
+  :name: Phiến Đá Sầu
+  :preview: Capo 1 Mai em xa rời tôi còn ai cùng đi giữa đời Mênh mông đây là đâu
+    là biển vắng đê
+  :song_id: 986
+- !ruby/object:Hash
+  :artist: Tuấn Vũ
+  :href: https://hopamchuan.com/song/4001/du-am-mua-giang-sinh/
+  :name: Dư Âm Mùa Giáng Sinh
+  :preview: Bài hát đêm đông chạnh lòng tôi nhớ  nhiều Tà áo Noel thướt tha trong
+    chiều nào  D
+  :song_id: 4001
+- !ruby/object:Hash
+  :artist: Trần Thái Hòa, Nguyên Khang
+  :href: https://hopamchuan.com/song/4422/biet-bao-gio-tro-lai/
+  :name: Biết Bao Giờ Trở Lại
+  :preview: 1. Tôi đã | đi, tôi vẫn đi mãi biết bao |giờ trở lại ..Sài Gòn | ơi, sao
+    em còn mãi tron
+  :song_id: 4422
+- !ruby/object:Hash
+  :artist: Như Quỳnh, Hồ Hoàng Yến
+  :href: https://hopamchuan.com/song/1252/mong-chieu-xuan/
+  :name: Mộng Chiều Xuân
+  :preview: '1. Gió chiều thầm vương bao nhớ  nhung  Người yêu thoáng  qua trong giấc  mộng '
+  :song_id: 1252
+- !ruby/object:Hash
+  :artist: Chế Linh, Mắt Ngọc, Mỹ Tâm
+  :href: https://hopamchuan.com/song/1508/nhung-buoc-chan-am-tham/
+  :name: Những Bước Chân Âm Thầm
+  :preview: Từng bước từng bước thầm Hoa vòng rừng tuyết trắng Rặng thông già lặng
+    câm
+  :song_id: 1508
+- !ruby/object:Hash
+  :artist: Daniel Boone
+  :href: https://hopamchuan.com/song/767/beautiful-sunday/
+  :name: Beautiful Sunday
+  :preview: Sunday morning up with the lark I think I’ll take a walk in the park Hey,
+    hey hey, it’s
+  :song_id: 767
+- !ruby/object:Hash
+  :artist: Elvis Phương
+  :href: https://hopamchuan.com/song/1969/con-chut-gi-de-nho/
+  :name: Còn Chút Gì Để Nhớ
+  :preview: Capo 2 Phố núi cao cao phố núi đầy sương Phố núi cây xanh trời thấp thật
+    buồn Anh khách [A
+  :song_id: 1969
+- !ruby/object:Hash
+  :artist: Hương Thủy, Ngọc Huệ
+  :href: https://hopamchuan.com/song/2735/nao-biet-nao-hay/
+  :name: Nào Biết Nào Hay
+  :preview: 1. Ngày xưa quen em anh  nói rằng Nào  có một mối tình  trên đời Hạnh  phúc
+    bằng m
+  :song_id: 2735
+- !ruby/object:Hash
+  :artist: Trần Thái Hòa, Quang Dũng
+  :href: https://hopamchuan.com/song/5941/mot-minh/
+  :name: Một Mình
+  :preview: 1. Sớm mai thức  giấc, nhìn quanh một  mình Ngoài hiên nắng lóe, đàn chim
+    giật  mình
+  :song_id: 5941
+- !ruby/object:Hash
+  :artist: Đàm Vĩnh Hưng
+  :href: https://hopamchuan.com/song/7019/trai-tim-tinh-si/
+  :name: Trai Tim Tinh Si
+  :preview: " Ta đi tìm một trái  tim Hỡi trái tim yêu nay về  đâu (rồi) Ta đi tìm
+    người năm  t"
+  :song_id: 7019
+- !ruby/object:Hash
+  :artist: Đan Nguyên, Quốc Khanh
+  :href: https://hopamchuan.com/song/17501/say/
+  :name: Say
+  :preview: Uống rượu mà  không say thì nào hay   Uống rượu mà  không say thì nào
+    mê   Xin
+  :song_id: 17501
+- !ruby/object:Hash
+  :artist: Quang Dũng, Khánh Ly
+  :href: https://hopamchuan.com/song/11080/bong-chieu-ta/
+  :name: Bóng Chiều Tà
+  :preview: Chiều ơi về đâu Chiều đi lòng nhớ bao nỗi u sầu Chiều sương im lắng buồn
+    Mờ xa
+  :song_id: 11080
+- !ruby/object:Hash
+  :artist: Tam Ca Áo Trắng
+  :href: https://hopamchuan.com/song/16741/mo-khuc-tuong-phung/
+  :name: Mơ khúc tương phùng
+  :preview: " Mối tình ta dở dang  bởi ai Ước nguyền như thế nhưng  chóng phai  Duyên
+    tình hờ hữn"
+  :song_id: 16741
+- !ruby/object:Hash
+  :artist: Neil Sedaka
+  :href: https://hopamchuan.com/song/21517/oh-carol/
+  :name: Oh! Carol
+  :preview: Oh! Carol I am but a fool Darlin' I love you tho' you treat me cruel You
+    hurt m
+  :song_id: 21517
+- !ruby/object:Hash
+  :artist: Lệ Thu
+  :href: https://hopamchuan.com/song/22949/bo-vo/
+  :name: Bơ Vơ
+  :preview: "“Nhìn ánh sao rơi trong trời đêm Nhặt cánh hoa rơi bên thềm xưa Người
+    yêu khuất xa k"
+  :song_id: 22949
+- !ruby/object:Hash
+  :artist: The Mamas & The Papas
+  :href: https://hopamchuan.com/song/22950/california-dreamin/
+  :name: California Dreamin
+  :preview: 'Verse 1: All the leaves are brown  and the sky is gray  I''ve been for'
+  :song_id: 22950
+- !ruby/object:Hash
+  :artist: Bad Boys Blue
+  :href: https://hopamchuan.com/song/22957/you-re-a-woman-you-re-a-woman-i-m-a-man/
+  :name: You're A Woman (You're A Woman, I'm A Man)
+  :preview: 'Verse 1: Tonight, there be no darkness tonight  Hold tight, let your
+    lo'
+  :song_id: 22957
+- !ruby/object:Hash
+  :artist: Captain & Tennille
+  :href: https://hopamchuan.com/song/23269/do-that-to-me-one-more-time/
+  :name: Do That To Me One More Time
+  :preview: Do that to me one more time Once is never enough with a man like you Do
+    that to
+  :song_id: 23269
+:id: 61478

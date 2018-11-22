@@ -23,6 +23,8 @@
 - instrument = uperf_info[:instrument] || []
 - ytvideo    = uperf_info[:ytvideo] || ""
 - ytoffset   = uperf_info[:ytoffset] || ""
+- smule      = uperf_info[:smule] || ""
+- smkey      = uperf_info[:smkey] || ""
 - videos     = []
 
 %h2= song_info[:title]
@@ -37,39 +39,43 @@
   %input(type='hidden' name='song_id' value=song_id)
   %input(type='hidden' name='song_name' value=song_name)
   .row
-    .col
+    .col-6
       .form-group
         %label(for='instrument') Instrument(s)
         %input.form-control#instrument(type='text' name='instrument' value="#{instrument}")
-    .col
-      .form-group
-        %label(for='ytvideo') Youtube ID, Start, Stop, ...
-        %input.form-control#instrument(type='text' name='ytvideo' value="#{ytvideo}")
-  .row
-    .col
       .form-group
         %label(for='key') Key
         %input.form-control#key(type='text' name='key' value="#{uperf_info[:key]}")
-    .col
-      .form-group
-        %label(for='key') Video Key
-        %input.form-control#key(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
-  .row
-    .col
       .form-group
         %label(for='intro') Other Notes (Intro/Out/Solo)
         %textarea.form-control#intro(name='intro' rows=5)
           = uperf_info[:intro]
-    .col
+    .col-6
+      .form-group
+        %label(for='ytvideo') Youtube ID, Start, Stop, ...
+        %input.form-control#ytvideo(type='text' name='ytvideo' value="#{ytvideo}")
+      .form-group
+        %label(for='vidkey') Video Key (Youtube)
+        %input.form-control#vidkey(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
       - if ytvideo && !ytvideo.empty?
         - video, *ytoffset = ytvideo.split(',')
         - ytoffset.each_slice(2) do |ytstart, ytend|
           - vid = "video_#{ytstart}"
           %div(id=vid)
           - videos << {vid:vid, video:video, start:ytstart.to_i, end:ytend.to_i}
+    .col-6
+      .form-group
+        %label(for='ytvideo') Smule Record
+        %input.form-control#smule(type='text' name='smule' value="#{smule}")
+      .form-group
+        %label(for='smkey') Video Key (Smule)
+        %input.form-control#smkey(type='text' name='smkey' value="#{uperf_info[:smkey]}")
+        - if smule && !smule.empty?
+          %iframe(frameborder="0" width="100%" height="125" src="https://www.smule.com/recording/#{smule}/frame")
 
   .pull-right
     %button.btn.btn-sm.btn-primary(type="submit" name="Update" value=true) Update
+
 
 - Plog.dump_info(videos:videos)
 - content_for :javascript do
@@ -85,7 +91,7 @@
         var start = cur_video['start']; var end = cur_video['end'];
         var player    = new YT.Player(vid, {
           height: '140',
-          width:  '210',
+          width:  '100%',
           playerVars: {autoplay:0, start:start, end:end},
           videoId: avideo,
           events: {

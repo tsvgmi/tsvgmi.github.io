@@ -64,7 +64,7 @@
       List:
       %a(href="/playorder/#{list_info[:id]}" target='list_edit')
         %i.fa.fa-edit
-      - link = "https://test.hopamchuan.com/playlist/v/#{list_info[:id]}"
+      - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}"
       %a(href=link target='hopamchuan')= "#{list_info[:name]}"
       = "(#{list_info['username']})"
   .col-md-3
@@ -87,11 +87,12 @@
   - lyric_id = "row_#{row_no}"
   .row.song_header
     .col-6
-      %h4
+      %button.pull-right.btn.btn-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
+        Toggle Lyric
+      .pull-right= "#{sinfo[:author]}&nbsp;"
+      %h5
+        = "#{row_no}."
         %a(href=link target='hopamchuan')= sinfo[:name]
-        %button.pull-right.btn.btn-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
-          Toggle Lyric
-      = sinfo[:author]
     .col.md
       = sinfo[:artist]
     .col.md

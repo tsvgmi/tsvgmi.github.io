@@ -109,9 +109,11 @@
   "bo-vo": {
     "instrument": "Guitar, Piano",
     "key": "Em",
-    "intro": "[Em] [Em] [Em] [Em] [Am] [Am] [D] [C] [B] [Em] [Em]",
+    "intro": "[Em] [Em] [Em] [Em] [Am] [Am] [D] [C] [B] [Em] [Em]\r\n56545 5678765 5678756 6787654 34323 2321",
     "ytvideo": "QSShXaEqtA0,0,18",
-    "vidkey": "Em"
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": ""
   },
   "tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien": {
     "instrument": "Accordeon, Staccato, String, Guitar",
@@ -151,9 +153,11 @@
   "nao-biet-nao-hay": {
     "instrument": "Brass, Trumpet",
     "key": "Am",
-    "intro": "[Dm] [Am] [E] [Am]\r\n6 6(65456) 5 5(54345) 5 (65432) 321\r\n",
+    "intro": "[Dm] [Am] [E] [Am]\r\n(Drum 4 khuông) /6 6(65456) /5 5(54345) /5 (65432) /321\r\n",
     "ytvideo": "IeD5fIK0g44,0,14",
-    "vidkey": "Bm"
+    "vidkey": "Bm",
+    "smkey": "",
+    "smule": ""
   },
   "nguoi-hay-quen-em-di": {
     "instrument": "Guitar",
@@ -181,7 +185,9 @@
     "key": "Dm",
     "intro": "[Gm] [Dm] [E7] [A]\r\n35985766 46983655 13653544 67845645 (8887)",
     "ytvideo": "a8xFGqtiARg,15,37",
-    "vidkey": "Em"
+    "vidkey": "Em",
+    "smkey": "Em",
+    "smule": "nhac-phap-loi-viet-tuy%E1%BA%BFt-r%C6%A1i/1516783818_2624448862"
   },
   "ben-nhau-dem-nay": {
     "instrument": "Piano, Dist Guitar",
@@ -290,9 +296,11 @@
   "lai-nho-nguoi-yeu": {
     "instrument": "Guitar, Bell",
     "key": "Am",
-    "intro": "[C] [G] [Am] [F] [C] [G] [C]\r\n[C] [G] [Am] [F] [C] [G] [Am]\r\n4321312] [43213] [16] [432134532] [123\r\n4321312] [4321356] [4321345432] [56\r\n",
+    "intro": "[C] [G] [Am] [F] [C] [G] [C]\r\n[C] [G] [Am] [F] [C] [G] [Am]\r\nSolo in Major [C]\r\n4321312 43213 16 432134532 123\r\n4321312 4321356 4321345432 56\r\n",
     "ytvideo": "J3vqR9BEkYc,0,31",
-    "vidkey": "Am"
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
   },
   "say": {
     "instrument": "Guitar Distortion, Synth",
@@ -328,5 +336,275 @@
     "intro": "",
     "ytvideo": "7rXhXLsNJL8,0,300",
     "vidkey": "Am"
+  },
+  "mua-thu-khong-tro-lai": {
+    "instrument": "Piano, String",
+    "key": "",
+    "intro": "",
+    "ytvideo": "SCmKG-XcrJs,0,11",
+    "vidkey": "D",
+    "smkey": "",
+    "smule": ""
+  },
+  "tuong-niem": {
+    "instrument": "String, Piano",
+    "key": "",
+    "intro": "",
+    "ytvideo": "hedWgzepm14,8,36",
+    "vidkey": "Bbm",
+    "smkey": "",
+    "smule": ""
+  },
+  "cho-em-quen-tuoi-ngoc": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "x4jBS1cWEt4,7,35",
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": ""
+  },
+  "khong-con-mua-thu": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "cMmWnOLhTGE,4,31",
+    "vidkey": "F",
+    "smkey": "",
+    "smule": ""
+  },
+  "rock-around-the-clock": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "wWgYSoShIPM,0,300",
+    "vidkey": "A",
+    "smkey": "",
+    "smule": ""
+  },
+  "thi-tham-mua-xuan": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "4k2KsvTpx24,2,17",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": ""
+  },
+  "mong-lanh": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "IkzjdXk5TH4,2,27",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
+  },
+  "tango-di-vang": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "3ZcPF4OTNeg,1,17",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": ""
+  },
+  "khong-bao-gio-quen-anh": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "4f83RFMZVoU,0,25",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": ""
+  },
+  "ngay-do": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "V2ITNNRO2AY,0,20",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
+  },
+  "gui-ve-em": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "C4UP_-hxLAg,0,24",
+    "vidkey": "A",
+    "smkey": "",
+    "smule": ""
+  },
+  "tien-dua": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "Jcd_vaPMyqU,0,23",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
+  },
+  "xin-hay-roi-xa": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "IZrLiNagTHU,0,35",
+    "vidkey": "Bbm",
+    "smkey": "",
+    "smule": ""
+  },
+  "linh-hon-tuong-da": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "X8yCxIzwDrY,0,18",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
+  },
+  "ha-trang": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "hU1n91tc2Cc,0,32",
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": ""
+  },
+  "neu-tinh-em-con-day-si-l-amour-existe-encore": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "AqvHlrZfcN4,4,300",
+    "vidkey": "D",
+    "smkey": "",
+    "smule": ""
+  },
+  "quen-nhau-tren-duong-ve": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "i0d9tkeyC94,5,32",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": ""
+  },
+  "xin-con-goi-ten-nhau": {
+    "instrument": "Trumpet, Strring",
+    "key": "",
+    "intro": "",
+    "ytvideo": "YxH4Io2QAQo,3,32",
+    "vidkey": "Fm",
+    "smkey": "",
+    "smule": ""
+  },
+  "niem-khuc-cuoi": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "YveOGKpFFlY,10,30",
+    "vidkey": "D",
+    "smkey": "",
+    "smule": ""
+  },
+  "dong-song": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "VFKiBEH7WWE,6,24",
+    "vidkey": "G",
+    "smkey": "",
+    "smule": ""
+  },
+  "mua-thu-la-bay": {
+    "instrument": "Sax",
+    "key": "",
+    "intro": "",
+    "ytvideo": "x1mMIU1OIfw,0,25",
+    "vidkey": "D",
+    "smkey": "",
+    "smule": ""
+  },
+  "autumn-leaves": {
+    "instrument": "String, Piano",
+    "key": "",
+    "intro": "",
+    "ytvideo": "TZ0cPnOilHs,0,300",
+    "vidkey": "C#m",
+    "smkey": "",
+    "smule": ""
+  },
+  "quynh-huong": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "qALXqlSmdIk,0,32",
+    "vidkey": "D",
+    "smkey": "",
+    "smule": ""
+  },
+  "tinh-thu-cua-linh": {
+    "instrument": "Guitar, Whistle",
+    "key": "",
+    "intro": "",
+    "ytvideo": "uOd3KaSraj0,0,18",
+    "vidkey": "Eb",
+    "smkey": "",
+    "smule": ""
+  },
+  "mua-dong-cua-anh": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "z_o5AEit3a4,0,24",
+    "vidkey": "E",
+    "smkey": "",
+    "smule": ""
+  },
+  "hay-tra-loi-em": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "3w59vpfGOCA,2,61",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
+  },
+  "mai-tim-nhau": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "7CgvDSqXGgk,1,30",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
+  },
+  "bien-tinh": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "zs3D2h_VTtM,1,15",
+    "vidkey": "F",
+    "smkey": "",
+    "smule": ""
+  },
+  "vu-khuc-paris-paris-tu-m-as-pris-dans-tes-bras": {
+    "instrument": "Flute, Accordeon, String",
+    "key": "",
+    "intro": "",
+    "ytvideo": "pLqeJYzNfuI,0,19",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
+  },
+  "chuyen-tinh-yeu": {
+    "instrument": "String, D50",
+    "key": "",
+    "intro": "",
+    "ytvideo": "B2g-9dbDfdI,0,21",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
   }
 }

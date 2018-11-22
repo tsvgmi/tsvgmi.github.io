@@ -20,9 +20,9 @@
       - sname   = sinfo[:song_ascii].gsub(/ /, '-')
       - version = sinfo[:username]
       - if version && !version.empty?
-        - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}/#{version}"
+        - link = "https://hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}/#{version}"
       - else
-        - link = "https://test.hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}"
+        - link = "https://hopamchuan.com/song/#{sinfo[:song_id]}/#{sname}"
       %tr
         %td= sinfo[:song_id]
         %td

@@ -53,7 +53,8 @@ post '/song-style' do
   uperf_info = {
     instrument:params[:instrument], key:params[:key],
     intro:params[:intro], ytvideo:params[:ytvideo],
-    vidkey:params[:vidkey],
+    vidkey:params[:vidkey], smkey:params[:smkey],
+    smule:params[:smule],
   }
   pnote.replace(song_id, song_name, uperf_info)
   flash[:notice] = "Style for #{song_name} replaced"
@@ -299,7 +300,7 @@ class PlayOrder
   def self.hac_song_info(url)
     sf = url.split('/')
     sid, sname, version = sf[4], sf[5], sf[6]
-    cfile = "data/song:#{sid}:#{version}:#{sname}"
+    cfile = "data/SONGS/song:#{sid}:#{version}:#{sname}"
 
     if test(?s, cfile)
       sinfo = YAML.load_file(cfile)
@@ -418,9 +419,9 @@ class SongInfo
 
   def initialize(song_id, version=nil)
     if version
-      fptn = "data/song:#{song_id}:#{version}:*"
+      fptn = "data/SONGS/song:#{song_id}:#{version}:*"
     else
-      fptn = "data/song:#{song_id}:{,*}:*"
+      fptn = "data/SONGS/song:#{song_id}:{,*}:*"
     end
     sfile = Dir.glob(fptn)[0]
     #Plog.dump_info(sfile:sfile)
