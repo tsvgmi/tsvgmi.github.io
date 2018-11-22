@@ -35,7 +35,7 @@
   .song_header {
     margin-top: 1em;
     border-top: 6px solid #888;
-    border-bottom: 1px solid #ccc;
+    background-color: #ffe;
   }
   audio:hover, audio:focus, audio:active {
     -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
@@ -144,6 +144,7 @@
         - lyric = sinfo[:lyric]
         - offset = key_offset(sinfo[:song_key], oinfo[:singer_key])
         -# Plog.dump_info(offset:offset, song_key:sinfo[:song_key], singer_key:oinfo[:singer_key])
+        - lyric  = lyric.sub(/>>>>>.*$/mo, '').sub(/^.*<<<<</mo, '')
         - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
         - tlyric = tlyric.sub(/^.*==/m, '')
         .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
