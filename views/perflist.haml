@@ -58,23 +58,27 @@
     border-radius:7px 7px 7px 7px ;
   }
 
+- viewmode = params[:viewmode] && !params[:viewmode].empty?
 .row
   .col-md-9
     %h2
       List:
-      %a(href="/playorder/#{list_info[:id]}" target='list_edit')
-        %i.fa.fa-edit
+      - unless viewmode
+        %a(href="/playorder/#{list_info[:id]}" target='list_edit')
+          %i.fa.fa-edit
       - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}"
       %a(href=link target='hopamchuan')= "#{list_info[:name]}"
-      = "(#{list_info['username']})"
   .col-md-3
     %form
+      %input(type='hidden' name='viewmode' value=viewmode)
       %select.form-control(name="listno" onchange="this.form.submit()")
-        - playlists.each do |plinfo|
+        - playlists.sort_by{|r| r[:name]}.each do |plinfo|
+          - Plog.dump_info(plinfo:plinfo)
           - selected = params[:listno].to_i == plinfo[:id]
-          %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:name][0..39]} [#{plinfo[:_total_song_count]}]"
+          %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:id]}. #{plinfo[:name][0..39]} [#{plinfo[:song_count]}]"
 
-- videos = []
+- videos   = []
+- Plog.dump_info(params:params)
 -# Plog.dump_info(perf_info:perf_info)
 - song_list.each_with_index do |sinfo, row_no|
   - oinfo   = order_list[sinfo[:song_id]] || {}
@@ -100,8 +104,9 @@
       = singer
       .pull-right= oinfo[:singer_key]
     .col.md
-      %a(href="/song-style/#{user}/#{sinfo[:song_id]}/#{sname}" target='song_edit')
-        %i.fa.fa-edit
+      - unless viewmode
+        %a(href="/song-style/#{user}/#{sinfo[:song_id]}/#{sname}" target='song_edit')
+          %i.fa.fa-edit
       = oinfo[:style]
       .pull-right= oinfo[:tempo]
   %div.collapse(id=lyric_id)
@@ -138,7 +143,7 @@
       .col
         - lyric = sinfo[:lyric]
         - offset = key_offset(sinfo[:song_key], oinfo[:singer_key])
-        - Plog.dump_info(offset:offset, song_key:sinfo[:song_key], singer_key:oinfo[:singer_key])
+        -# Plog.dump_info(offset:offset, song_key:sinfo[:song_key], singer_key:oinfo[:singer_key])
         - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
         - tlyric = tlyric.sub(/^.*==/m, '')
         .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
