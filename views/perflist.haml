@@ -92,11 +92,11 @@
   .row.song_header
     .col-6
       %button.pull-right.btn.btn-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
-        Toggle Lyric
-      .pull-right= "#{sinfo[:author]}&nbsp;"
+        Lyric
       %h5
         = "#{row_no}."
         %a(href=link target='hopamchuan')= sinfo[:name]
+      = "#{sinfo[:author]}&nbsp;"
     .col.md
       = sinfo[:artist]
     .col.md
