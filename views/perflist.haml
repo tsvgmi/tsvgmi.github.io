@@ -69,13 +69,19 @@
       - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}"
       %a(href=link target='hopamchuan')= "#{list_info[:name]}"
   .col-md-3
-    %form
+    %form(action='get')
       %input(type='hidden' name='viewmode' value=viewmode)
-      %select.form-control(name="listno" onchange="this.form.submit()")
-        - playlists.sort_by{|r| r[:name]}.each do |plinfo|
-          - Plog.dump_info(plinfo:plinfo)
-          - selected = params[:listno].to_i == plinfo[:id]
-          %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:id]}. #{plinfo[:name][0..39]} [#{plinfo[:song_count]}]"
+      - if viewmode
+        - files = Dir.glob("playlist/*-program.html")
+        %select.form-control#page_select(name="listno" onchange="load_page_from('page_select')")
+          - files.each do |file|
+            - bfile = File.basename(file).sub(/\.html$/, '')
+            %option= bfile
+      - else
+        %select.form-control(name="listno" onchange="this.form.submit()")
+          - playlists.sort_by{|r| r[:name]}.each do |plinfo|
+            - selected = params[:listno].to_i == plinfo[:id]
+            %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:id]}. #{plinfo[:name][0..39]} [#{plinfo[:song_count]}]"
 
 - videos   = []
 - Plog.dump_info(params:params)
@@ -188,4 +194,12 @@
           }
         });
       }
+    }
+
+    function load_page_from(sid) {
+      var elem     = document.getElementById(sid);
+      var selected = elem.options[elem.selectedIndex];
+      console.log(selected.value);
+      var new_path = '/playlist/' + selected.value + '.html';
+      document.location.href = new_path;
     }

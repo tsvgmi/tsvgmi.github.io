@@ -91,18 +91,19 @@
 <div class='col-md-9'>
 <h2>
 List:
-<a href='/playorder/61047' target='list_edit'>
-<i class='fa fa-edit'></i>
-</a>
 <a href='https://hopamchuan.com/playlist/v/61047' target='hopamchuan'>VNHV 12/2018</a>
 </h2>
 </div>
 <div class='col-md-3'>
-<form>
-<input name='viewmode' type='hidden'>
-<select class='form-control' name='listno' onchange='this.form.submit()'>
-<option value='61478'>61478. Thanksgiving '18 [33]</option>
-<option selected value='61047'>61047. VNHV 12/2018 [56]</option>
+<form action='get'>
+<input name='viewmode' type='hidden' value>
+<select class='form-control' id='page_select' name='listno' onchange='load_page_from(&#39;page_select&#39;)'>
+<option>ht-rhumba-program</option>
+<option>mung-xuan-qn-program</option>
+<option>vnhv-thu-2017-program</option>
+<option>tet-2018-program</option>
+<option>thanksgiving-2018-program</option>
+<option>vnhv-12-2018-program</option>
 </select>
 </form>
 </div>
@@ -126,9 +127,6 @@ thanh-liem
 <div class='pull-right'>Cm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/531/yeu-nhau-di-besame-mucho' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 chacha
 <div class='pull-right'></div>
 </div>
@@ -190,9 +188,6 @@ thanh-liem
 <div class='pull-right'>Cm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/4168/ben-nhau-dem-nay' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 chacha
 <div class='pull-right'></div>
 </div>
@@ -260,9 +255,6 @@ yen-phuong
 <div class='pull-right'>C</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1197/nguoi-tinh-mua-dong' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 chacha
 <div class='pull-right'></div>
 </div>
@@ -336,9 +328,6 @@ loc
 <div class='pull-right'>Am</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1508/nhung-buoc-chan-am-tham' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 chacha
 <div class='pull-right'></div>
 </div>
@@ -401,9 +390,6 @@ thuy-dung
 <div class='pull-right'>Em</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/22949/bo-vo' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 paso
 <div class='pull-right'></div>
 </div>
@@ -468,9 +454,6 @@ mai-nguyen
 <div class='pull-right'>C</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1444/mua-thu-khong-tro-lai' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 valse
 <div class='pull-right'></div>
 </div>
@@ -539,9 +522,6 @@ duy-linh
 <div class='pull-right'>Cm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/6678/tuong-niem' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 boston
 <div class='pull-right'></div>
 </div>
@@ -611,9 +591,6 @@ anh-thu
 <div class='pull-right'>Bm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1666/cho-em-quen-tuoi-ngoc' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 boston
 <div class='pull-right'></div>
 </div>
@@ -679,9 +656,6 @@ thy-nga
 <div class='pull-right'>F</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/2830/khong-con-mua-thu' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 boston
 <div class='pull-right'></div>
 </div>
@@ -745,9 +719,6 @@ loc
 <div class='pull-right'>C</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/767/beautiful-sunday' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 bebop
 <div class='pull-right'></div>
 </div>
@@ -822,9 +793,6 @@ mai-huong
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1447/lai-gan-hon-anh-lai-gan-ben-anh' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 bebop
 <div class='pull-right'></div>
 </div>
@@ -905,9 +873,6 @@ thong
 <div class='pull-right'>Am</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/22950/california-dreamin' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 bebop
 <div class='pull-right'></div>
 </div>
@@ -979,9 +944,6 @@ quan-c
 <div class='pull-right'>Am</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/22951/rock-around-the-clock' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 twist
 <div class='pull-right'></div>
 </div>
@@ -1067,9 +1029,6 @@ dinno-huy
 <div class='pull-right'>Am</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/17501/say' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 twist
 <div class='pull-right'></div>
 </div>
@@ -1144,9 +1103,6 @@ quan-c
 <div class='pull-right'>Cm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/374/thi-tham-mua-xuan' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 techno
 <div class='pull-right'></div>
 </div>
@@ -1207,9 +1163,6 @@ vanessa
 <div class='pull-right'>Gm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/22/noi-tinh-yeu-bat-dau' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 techno
 <div class='pull-right'></div>
 </div>
@@ -1273,9 +1226,6 @@ vanessa
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/15388/nguoi-hay-quen-em-di' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 techno
 <div class='pull-right'></div>
 </div>
@@ -1359,9 +1309,6 @@ thuy-dung
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/11080/bong-chieu-ta' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 tango
 <div class='pull-right'></div>
 </div>
@@ -1428,9 +1375,6 @@ thong
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/3022/tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 tango
 <div class='pull-right'></div>
 </div>
@@ -1518,9 +1462,6 @@ anh-thu
 <div class='pull-right'>Em</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/10908/mong-lanh' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 tango
 <div class='pull-right'></div>
 </div>
@@ -1598,9 +1539,6 @@ mai-kha
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/2681/tango-di-vang' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 tango
 <div class='pull-right'></div>
 </div>
@@ -1675,9 +1613,6 @@ duy-linh
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/3998/khong-bao-gio-quen-anh' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 rhumba
 <div class='pull-right'></div>
 </div>
@@ -1754,9 +1689,6 @@ minh
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/8576/ngay-do' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 rhumba
 <div class='pull-right'></div>
 </div>
@@ -1837,9 +1769,6 @@ yen-phuong
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/3383/tuyet-roi' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 rhumba
 <div class='pull-right'></div>
 </div>
@@ -1915,9 +1844,6 @@ mai
 <div class='pull-right'></div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/703/gui-ve-em' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 
 <div class='pull-right'></div>
 </div>
@@ -1984,9 +1910,6 @@ lien
 <div class='pull-right'>Cm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/13415/tien-dua' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 rhumba
 <div class='pull-right'></div>
 </div>
@@ -2057,9 +1980,6 @@ thanh-liem
 <div class='pull-right'>Bm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1737/xin-hay-roi-xa' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 rhumba
 <div class='pull-right'></div>
 </div>
@@ -2135,9 +2055,6 @@ duy-linh
 <div class='pull-right'>Cm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/210/linh-hon-tuong-da' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow
 <div class='pull-right'></div>
 </div>
@@ -2210,9 +2127,6 @@ minh
 <div class='pull-right'>Em</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/213/ha-trang' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow
 <div class='pull-right'></div>
 </div>
@@ -2298,9 +2212,6 @@ dinno-huy
 <div class='pull-right'>ballad</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/13474/neu-tinh-em-con-day-si-l-amour-existe-encore' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 
 <div class='pull-right'></div>
 </div>
@@ -2379,9 +2290,6 @@ dieu-huyen
 <div class='pull-right'>D</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/4001/du-am-mua-giang-sinh' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow
 <div class='pull-right'></div>
 </div>
@@ -2451,9 +2359,6 @@ dieu-huyen
 <div class='pull-right'>Am</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/301/diem-xua' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow
 <div class='pull-right'></div>
 </div>
@@ -2526,9 +2431,6 @@ quan-c
 <div class='pull-right'>Ebm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/19883/lady' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow
 <div class='pull-right'></div>
 </div>
@@ -2581,9 +2483,6 @@ lien
 <div class='pull-right'>Gm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1026/xin-con-goi-ten-nhau' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow
 <div class='pull-right'></div>
 </div>
@@ -2653,9 +2552,6 @@ michelle
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/2735/nao-biet-nao-hay' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 chacha
 <div class='pull-right'></div>
 </div>
@@ -2735,9 +2631,6 @@ michelle
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/22957/you-re-a-woman-you-re-a-woman-i-m-a-man' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 new-wave
 <div class='pull-right'></div>
 </div>
@@ -2809,9 +2702,6 @@ thuy-dung
 <div class='pull-right'>Em</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/12148/quen-nhau-tren-duong-ve' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow-rock
 <div class='pull-right'></div>
 </div>
@@ -2885,9 +2775,6 @@ emily-vu
 <div class='pull-right'>C</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/872/let-it-be' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow-rock
 <div class='pull-right'></div>
 </div>
@@ -2963,9 +2850,6 @@ emily-vu
 <div class='pull-right'>F#</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/997/hey-jude' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow-rock
 <div class='pull-right'></div>
 </div>
@@ -3033,9 +2917,6 @@ duong-vu
 <div class='pull-right'>C</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/557/niem-khuc-cuoi' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 boston
 <div class='pull-right'></div>
 </div>
@@ -3109,9 +2990,6 @@ duong-vu
 <div class='pull-right'>F</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1981/dong-song' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow-surf
 <div class='pull-right'></div>
 </div>
@@ -3175,9 +3053,6 @@ lynn-ngo
 <div class='pull-right'>E</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/1576/mua-thu-la-bay' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 bolero
 <div class='pull-right'>75</div>
 </div>
@@ -3254,9 +3129,6 @@ lynn-ngo
 <div class='pull-right'>Am</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/22806/autumn-leaves' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 rhumba
 <div class='pull-right'>90</div>
 </div>
@@ -3324,9 +3196,6 @@ nu
 <div class='pull-right'>C</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/190/quynh-huong' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 chacha
 <div class='pull-right'></div>
 </div>
@@ -3388,9 +3257,6 @@ nu
 <div class='pull-right'>A</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/909/mua-dong-cua-anh' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 rhumba
 <div class='pull-right'></div>
 </div>
@@ -3459,9 +3325,6 @@ lam
 <div class='pull-right'>D</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/3058/tinh-thu-cua-linh' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 chacha
 <div class='pull-right'></div>
 </div>
@@ -3527,9 +3390,6 @@ thanh
 <div class='pull-right'>Am</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/986/phien-da-sau' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 slow-surf
 <div class='pull-right'></div>
 </div>
@@ -3592,9 +3452,6 @@ minh
 <div class='pull-right'></div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/667/hay-tra-loi-em' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 
 <div class='pull-right'></div>
 </div>
@@ -3662,9 +3519,6 @@ minh
 <div class='pull-right'></div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/23165/mai-tim-nhau' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 
 <div class='pull-right'></div>
 </div>
@@ -3735,9 +3589,6 @@ the-loan
 <div class='pull-right'>D</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/2740/bien-tinh' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 rhumba
 <div class='pull-right'></div>
 </div>
@@ -3808,9 +3659,6 @@ the-loan
 <div class='pull-right'>Am</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/18577/vu-khuc-paris-paris-tu-m-as-pris-dans-tes-bras' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 valse
 <div class='pull-right'></div>
 </div>
@@ -3939,9 +3787,6 @@ dinno-huy
 <div class='pull-right'>Dm</div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/9460/lai-nho-nguoi-yeu' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 ballad
 <div class='pull-right'></div>
 </div>
@@ -4012,9 +3857,6 @@ Bằng Kiều
 <div class='pull-right'></div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/46/chuyen-tinh-yeu' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 
 <div class='pull-right'></div>
 </div>
@@ -4081,9 +3923,6 @@ Ngọc Lan
 <div class='pull-right'></div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/13000/net-son-buon' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 
 <div class='pull-right'></div>
 </div>
@@ -4136,9 +3975,6 @@ Engelbert Humperdinck
 <div class='pull-right'></div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/22954/love-me-with-all-of-your-heart' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 
 <div class='pull-right'></div>
 </div>
@@ -4210,9 +4046,6 @@ Vũ Khanh
 <div class='pull-right'></div>
 </div>
 <div class='col md'>
-<a href='/song-style/vnhv2018/22953/gia-biet-tinh-em' target='song_edit'>
-<i class='fa fa-edit'></i>
-</a>
 
 <div class='pull-right'></div>
 </div>
@@ -4252,7 +4085,7 @@ Làm sao <span class="chord">Bm7b5</span>mưa xoá đi <span class="chord">C</sp
 </div>
 
 <footer>
-<div class='small text-muted publish_date'>2018-11-22 19:56:14 -0800</div>
+<div class='small text-muted publish_date'>2018-11-23 00:25:39 -0800</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -4293,6 +4126,14 @@ Làm sao <span class="chord">Bm7b5</span>mưa xoá đi <span class="chord">C</sp
         }
       });
     }
+  }
+  
+  function load_page_from(sid) {
+    var elem     = document.getElementById(sid);
+    var selected = elem.options[elem.selectedIndex];
+    console.log(selected.value);
+    var new_path = '/playlist/' + selected.value + '.html';
+    document.location.href = new_path;
   }
 </script>
 
