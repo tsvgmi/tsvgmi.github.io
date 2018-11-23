@@ -69,7 +69,7 @@
       - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}"
       %a(href=link target='hopamchuan')= "#{list_info[:name]}"
   .col-md-3
-    %form(action='get')
+    %form
       %input(type='hidden' name='viewmode' value=viewmode)
       - if viewmode
         - files = Dir.glob("playlist/*-program.html")
