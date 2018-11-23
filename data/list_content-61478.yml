@@ -102,15 +102,15 @@
   :artist: Elvis Phương, Ngọc Lan
   :href: https://hopamchuan.com/song/3383/tuyet-roi/
   :name: Tuyết Rơi
-  :preview: 'Tone gốc A#m: Capo 1 Ngoài kia tuyết rơi đầy Anh không đến bên em chiều
-    nay Ngoài kia t'
+  :preview: "<<< Ngoài kia tuyết rơi đầy Anh không đến bên em chiều nay Ngoài kia
+    tuyết rơi rơi"
   :song_id: 3383
 - !ruby/object:Hash
   :artist: Quang Dũng
   :href: https://hopamchuan.com/song/986/phien-da-sau/
   :name: Phiến Đá Sầu
-  :preview: Capo 1 Mai em xa rời tôi còn ai cùng đi giữa đời Mênh mông đây là đâu
-    là biển vắng đê
+  :preview: 1. Mai em xa rời tôi còn ai cùng đi giữa đời Mênh mông đây là đâu là biển
+    vắng đêm [
   :song_id: 986
 - !ruby/object:Hash
   :artist: Tuấn Vũ
@@ -139,6 +139,13 @@
   :preview: Từng bước từng bước thầm Hoa vòng rừng tuyết trắng Rặng thông già lặng
     câm
   :song_id: 1508
+- !ruby/object:Hash
+  :artist: Tuấn Ngọc
+  :href: https://hopamchuan.com/song/4896/em-co-nho-can-nha-xua/
+  :name: Em Có Nhớ Căn Nhà Xưa
+  :preview: Em có nhớ căn nhà xưa bên khu vườn cải . Nơi những sớm mai nằm nghe nắng
+    giòn tr
+  :song_id: 4896
 - !ruby/object:Hash
   :artist: Daniel Boone
   :href: https://hopamchuan.com/song/767/beautiful-sunday/

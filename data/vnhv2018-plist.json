@@ -118,7 +118,7 @@
   "tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien": {
     "instrument": "Accordeon, Staccato, String, Guitar",
     "key": "Dm",
-    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\nString: 565458 543454375434 43465432\r\nDGuitar: 585742 474543 365432 65452431 5678\r\n",
+    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\nString: 5#55#458 543454#3475432 3432365432\r\nDGuitar: 585742 474543 365432 65452431 5678\r\n",
     "ytvideo": "l-2NpfZFr7o,0,24",
     "vidkey": "F#m",
     "smkey": "",
@@ -134,9 +134,11 @@
   "phien-da-sau": {
     "instrument": "String, Piano",
     "key": "Am",
-    "intro": "[Am] [B7] [Dm7] [E7]\r\n[Am] [B7] [E7] [Am]\r\n+35 96 +(123)4 765\r\n+35 96 887 998 (4431 4431)",
+    "intro": "[Am] [B7] [Dm7] [E7]\r\n[Am] [B7] [E7] [Am]\r\n+35 9#6 +(123)4 765\r\n+35 9#6 887 998 (4431 4431)",
     "ytvideo": "QBy7-04-vfU,16,50",
-    "vidkey": "Abm"
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": ""
   },
   "diem-xua": {
     "instrument": "String",
@@ -257,8 +259,10 @@
     "instrument": "Bass, Sax",
     "key": "Dm",
     "intro": "Bass: [Dm] [C] [Bb] [A] [Dm] [C] [Bb] [A]\r\nSax: [Dm] [C] [Bb] [A] [Dm] [C] [Bb] [A] [Dm]\r\n123217 89876 78765 724321 24321\r\n123217 89876 78765  254321\r\n",
-    "ytvideo": "mhKj-tsptNg,0,40",
-    "vidkey": "Am"
+    "ytvideo": "mhKj-tsptNg,0,41",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
   },
   "do-that-to-me-one-more-time": {
     "instrument": "Guitar",
@@ -606,6 +610,15 @@
     "intro": "",
     "ytvideo": "B2g-9dbDfdI,0,21",
     "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
+  },
+  "em-co-nho-can-nha-xua": {
+    "instrument": "Oboe, String",
+    "key": "Dm",
+    "intro": "[Dm] [F] [Am7]-[Bb] [A7] [Gm]-[C] [F] [Gm]-[A] [Dm] [Gm6]-[A] [Dm]\r\nIntro/Mid/Out: 564531345 55345312 56458 88745 534 53231\r\n(5345321)\r\n",
+    "ytvideo": "qbe7FTH9zts,0,41",
+    "vidkey": "Dm",
     "smkey": "",
     "smule": ""
   }
