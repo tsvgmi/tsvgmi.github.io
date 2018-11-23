@@ -36,6 +36,13 @@
     rời Giờ đ
   :song_id: 15388
 - !ruby/object:Hash
+  :artist: Đồng Lan, An Nhiên, Trần Tiến, Võ Hạ Trâm
+  :href: https://hopamchuan.com/song/4218/me-toi/
+  :name: Mẹ Tôi
+  :preview: 1. Mẹ  ơi con đã già  rồi con ngồi nhớ  mẹ khóc như trẻ  con Mẹ  ơi con
+    đã già [
+  :song_id: 4218
+- !ruby/object:Hash
   :artist: Hà Anh Tuấn, Quang Dũng
   :href: https://hopamchuan.com/song/427/tuyet-roi-mua-he/
   :name: Tuyết Rơi Mùa Hè

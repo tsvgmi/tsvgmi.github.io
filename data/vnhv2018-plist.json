@@ -325,9 +325,11 @@
   "trai-tim-tinh-si": {
     "instrument": "Synth",
     "key": "Dm",
-    "intro": "[Dm] [G] [Dm] [G] [Dm] [G] [Bb] [A]\r\n[Dm] [Dm] [A] [Dm] [Dm] [Dm] [A] [Dm]\r\n1151 13141531 11571 13141531 131224378\r\nDistortion: 117143 131543431 115143 131543438",
+    "intro": "[Dm] [G] [Dm] [G] [Dm] [G] [Bb] [A]\r\n[Dm] [Dm] [A] [Dm] [Dm] [Dm] [A] [Dm]\r\n115711 13143531 115718  / 115711 13141531 131224378\r\nDistortion: 117143 131543431 115143 131543438",
     "ytvideo": "MyIMSvtz6KI,1,30",
-    "vidkey": "F#m"
+    "vidkey": "F#m",
+    "smkey": "",
+    "smule": ""
   },
   "biet-bao-gio-tro-lai": {
     "instrument": "String",
@@ -619,6 +621,15 @@
     "intro": "[Dm] [F] [Am7]-[Bb] [A7] [Gm]-[C] [F] [Gm]-[A] [Dm] [Gm6]-[A] [Dm]\r\nIntro/Mid/Out: 564531345 55345312 56458 88745 534 53231\r\n(5345321)\r\n",
     "ytvideo": "qbe7FTH9zts,0,41",
     "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
+  },
+  "me-toi": {
+    "instrument": "Piano, Violin",
+    "key": "Dm",
+    "intro": "Dm Dm G - Dm Dm G -\r\nBb C Dm Dm Bb C Dm Dm\r\n-51584 (54) -51584 (565454)\r\n12321-(75 57)12321-71",
+    "ytvideo": "izqn6j2ZHBM,0,41",
+    "vidkey": "Bm",
     "smkey": "",
     "smule": ""
   }
