@@ -118,9 +118,11 @@
   "tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien": {
     "instrument": "Accordeon, Staccato, String, Guitar",
     "key": "Dm",
-    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\n565458 543454375434 43465432\r\n585742 474543 365432 65452431 5678\r\n",
+    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\nString: 565458 543454375434 43465432\r\nDGuitar: 585742 474543 365432 65452431 5678\r\n",
     "ytvideo": "l-2NpfZFr7o,0,24",
-    "vidkey": "F#m"
+    "vidkey": "F#m",
+    "smkey": "",
+    "smule": ""
   },
   "yeu-nhau-di-besame-mucho": {
     "instrument": "Trumpet",

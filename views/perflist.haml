@@ -129,7 +129,10 @@
             - if offset >= 5
               - offset -= 12
             - Plog.dump_info(vidkey:perf_note[:vidkey], singer_key:oinfo[:singer_key])
-            .pull-right Transpose: #{offset*(-1)}
+            .pull-right
+              Video Key: #{perf_note[:vidkey]}
+              %br/
+              Transpose: #{offset*(-1)}
       - unless perf_note.empty?
         .col-2
           = perf_note[:instrument]
