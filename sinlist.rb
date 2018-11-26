@@ -369,9 +369,9 @@ class PlayOrder
     lno = 0
     Plog.info(msg:"Loading #{@order_file}")
     order_list = File.read(@order_file).split("\n").map do |r|
-      sinfo, vinfo = r.split('/')
-      song_id, title, version, singer, skey, style, tempo = sinfo.split(',')
-      ytvid, *ytoffset = (vinfo || '').split(',')
+      sinfo, _vinfo = r.split('/')
+      song_id, title, version, singer, skey, style, tempo, lead =
+        sinfo.split(',')
       song_id = song_id.to_i
       rec = {
         song_id:    song_id,
@@ -381,9 +381,8 @@ class PlayOrder
         singer_key: skey,
         style:      style,
         tempo:      tempo,
+        lead:       lead,
         order:      lno,
-        ytvid:      ytvid,
-        ytoffset:   ytoffset,
       }
       lno += 1
       [song_id, rec]

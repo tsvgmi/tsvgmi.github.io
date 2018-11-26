@@ -105,9 +105,11 @@
     .col.md
       = sinfo[:artist]
     .col.md
-      - singer = oinfo[:singer]
-      = singer
+      = oinfo[:singer]
       .pull-right= oinfo[:singer_key]
+      - if oinfo[:lead]
+        %br/
+        = "(#{oinfo[:lead]})"
     .col.md
       - unless viewmode
         %a(href="/song-style/#{user}/#{sinfo[:song_id]}/#{sname}" target='song_edit')
@@ -120,8 +122,6 @@
       - perf_note = perf_info[sname] || {}
       - if perf_note[:ytvideo] && !perf_note[:ytvideo].empty?
         - video, *ytoffset = perf_note[:ytvideo].split(',')
-      - elsif oinfo[:ytvid]
-        - video, ytoffset = oinfo[:ytvid], oinfo[:ytoffset]
       - if video
         .col-6
           -# For youtube video #{sname}
