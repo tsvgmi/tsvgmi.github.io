@@ -1,10 +1,16 @@
 ---
 - !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61801/vnhv-thu-2017
+  :id: 61801
+  :name: VNHV - Thu 2017
+  :sname: 61801/vnhv-thu-2017
+  :song_count: 51
+- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/61478/thanksgiving-18
   :id: 61478
   :name: Thanksgiving '18
   :sname: 61478/thanksgiving-18
-  :song_count: 33
+  :song_count: 35
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/61047/vnhv-12-2018
   :id: 61047

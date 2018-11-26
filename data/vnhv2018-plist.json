@@ -118,7 +118,7 @@
   "tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien": {
     "instrument": "Accordeon, Staccato, String, Guitar",
     "key": "Dm",
-    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\nString: 5#55#458 543454#3475432 3432365432\r\nDGuitar: 585742 474543 365432 65452431 5678\r\n",
+    "intro": "[Dm] [C] [Bb] [A]\r\n[Gm] [C] [F] [Bb] [Gm] [A] [Dm]\r\nString: 565#458 543454#3475432 3432365432\r\nDGuitar: 585742 474543 365432 65452431 5678\r\n",
     "ytvideo": "l-2NpfZFr7o,0,24",
     "vidkey": "F#m",
     "smkey": "",
@@ -134,7 +134,7 @@
   "phien-da-sau": {
     "instrument": "String, Piano",
     "key": "Am",
-    "intro": "[Am] [B7] [Dm7] [E7]\r\n[Am] [B7] [E7] [Am]\r\n+35 9#6 +(123)4 765\r\n+35 9#6 887 998 (4431 4431)",
+    "intro": "[Am] [B7] [Dm7] [E7]\r\n[Am] [B7] [E7] [Am]\r\n+3~5 9~#6 +(123)4 765\r\n+3~5 9~#6 887 998 (4431 4431)",
     "ytvideo": "QBy7-04-vfU,16,50",
     "vidkey": "Abm",
     "smkey": "",
@@ -166,9 +166,11 @@
   "nguoi-hay-quen-em-di": {
     "instrument": "Guitar",
     "key": "Dm",
-    "intro": "[Dm7] [Gm7] [C7] [Fmaj7] [Bbmaj7] [Gm7] [Asus4] [A]",
-    "ytvideo": "BoXJqkwIa9c,0,16",
-    "vidkey": "Dm"
+    "intro": "[Dm7] [Gm7] [C7] [Fmaj7] [Bbmaj7] [Gm7] [Asus4] [A]\r\nSolo: 1x8 measure, 4x4 measures, 1x8 measures\r\n8 measures: [Dm7] [Gm7] [C7] [Fmaj7] [Bbmaj7] [Gm7] [Asus4] [A]\r\n4 measures: [Dm] [Gm7] [A] [Dm]\r\n1st measure: 333746 33217 44272 32357 333724 33412 44312\r\n4 measures: 333746 33417 443123 323\r\n2nd 8 measures: 1+376 656754 325 545643 684 47565 325",
+    "ytvideo": "BoXJqkwIa9c,0,16,79,140",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
   },
   "bong-chieu-ta": {
     "instrument": "Violin Orchestra",
@@ -231,8 +233,11 @@
   "nhung-buoc-chan-am-tham": {
     "instrument": "Piano",
     "key": "Dm",
-    "ytvideo": "AP5zyfKuD2g,0,27",
-    "intro": "[Dm] [A] [Dm] [A] [Dm]\r\n[Dm] [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]"
+    "intro": "[Dm] [A] [Dm] [A]\r\n[Dm] [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\nBrass: /1 /12 /21 /5/5/5\r\nPiano: 567555 56755432 56755 543 56755 432 /1/1/1/1",
+    "ytvideo": "GkNrN_wpvQ0,2,26",
+    "vidkey": "",
+    "smkey": "",
+    "smule": ""
   },
   "oh-carol": {
     "instrument": "Voice",
@@ -311,9 +316,11 @@
   "say": {
     "instrument": "Guitar Distortion, Synth",
     "key": "Am",
-    "intro": "[Am] [C] [D] [Am] [Am] [C] [D] [Am]\r\n888787] [666545] [888783] [31344] [5431",
+    "intro": "[Am] [C] [D] [Am] [Am] [C] [D] [Am]\r\n888787 #666545 88878+(3 31344 #4431 /1/1/1/1)",
     "ytvideo": "YTp9gDO5zeU,126,142",
-    "vidkey": "Am"
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
   },
   "noi-tinh-yeu-bat-dau": {
     "instrument": "Synth",
@@ -347,8 +354,8 @@
   },
   "mua-thu-khong-tro-lai": {
     "instrument": "Piano, String",
-    "key": "",
-    "intro": "",
+    "key": "C",
+    "intro": "Hold chord",
     "ytvideo": "SCmKG-XcrJs,0,11",
     "vidkey": "D",
     "smkey": "",
@@ -356,26 +363,26 @@
   },
   "tuong-niem": {
     "instrument": "String, Piano",
-    "key": "",
-    "intro": "",
+    "key": "Am",
+    "intro": "[Am] [E] [E] [Am] [F] [G] [Em] [Am-G] [Am]\r\n+315 3+399 9752988 +315 3+399 985 2988 +(3271)\r\n\r\n",
     "ytvideo": "hedWgzepm14,8,36",
     "vidkey": "Bbm",
     "smkey": "",
     "smule": ""
   },
   "cho-em-quen-tuoi-ngoc": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "String",
+    "key": "Dm",
+    "intro": "[Dm] [C] [Bb] [F] [Gm] [Dm] [Em7b5] [A] [Dm]\r\nString: +359 58 37 36 15 124332 1",
     "ytvideo": "x4jBS1cWEt4,7,35",
     "vidkey": "Em",
     "smkey": "",
     "smule": ""
   },
   "khong-con-mua-thu": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Flute, String",
+    "key": "C",
+    "intro": "C Am F G Dm Am F G G\r\nFlute: 5#458 9658 1266 5125 \r\nString: 5699 99+(31) 865125 Flute: (56125)",
     "ytvideo": "cMmWnOLhTGE,4,31",
     "vidkey": "F",
     "smkey": "",
@@ -391,27 +398,27 @@
     "smule": ""
   },
   "thi-tham-mua-xuan": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "4k2KsvTpx24,2,17",
+    "instrument": "Xylophone",
+    "key": "Am",
+    "intro": "[Am] [Am] [G] [G] [Am] [Am] [G] [G]\r\n878 878 47+3974 47+3974\r\n878 878 47+3974 47+3974",
+    "ytvideo": "11jiyNI5cro,0,14",
     "vidkey": "Cm",
     "smkey": "",
     "smule": ""
   },
   "mong-lanh": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Guitar, Brass",
+    "key": "Am",
+    "intro": "[Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [F7] [E7] [F7] [E7]\r\n531531 56425432 53153156765 53153156425432 333 22 2 333 2",
     "ytvideo": "IkzjdXk5TH4,2,27",
     "vidkey": "Am",
     "smkey": "",
     "smule": ""
   },
   "tango-di-vang": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Orchestra, String",
+    "key": "Am",
+    "intro": "[Dm] [Am] [E7] [Am] [Dm] [Am] [E7] [Am]\r\nHorn: 65456// 54345// 432342345 \r\nString: 65456 654345 543234 5321",
     "ytvideo": "3ZcPF4OTNeg,1,17",
     "vidkey": "Cm",
     "smkey": "",
@@ -419,71 +426,71 @@
   },
   "khong-bao-gio-quen-anh": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Am",
+    "intro": "Am D-Am D Am C E Am-Dm Am\r\n858438 858#654 1-5134 34#65431\r\n+(113)5 434585388 (13534545431)",
     "ytvideo": "4f83RFMZVoU,0,25",
     "vidkey": "Abm",
     "smkey": "",
     "smule": ""
   },
   "ngay-do": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "V2ITNNRO2AY,0,20",
+    "instrument": "Guitar, String",
+    "key": "Dm",
+    "intro": "[Dm] [Gm] [C] [F] [Dm] [A7] [A7] [Dm]\r\n-55555654 -4444543  -(55)333432 -(55)222321",
+    "ytvideo": "oJe1mCdfsSE,0,22",
     "vidkey": "Dm",
     "smkey": "",
     "smule": ""
   },
   "gui-ve-em": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Violin, Guitar",
+    "key": "C",
+    "intro": "C Am Em D#aug Dm G7 F-G C F C\r\n2358 798 9853 5#44 687 7898798 (14321)",
     "ytvideo": "C4UP_-hxLAg,0,24",
     "vidkey": "A",
     "smkey": "",
     "smule": ""
   },
   "tien-dua": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Synth, String",
+    "key": "Am",
+    "intro": "[G] [Am] [G] [Am] [Dm] [Am-G] [Am-G] [Am]\r\n-5312 -4978 -5312 -4978 -55343-71 32-71 32-71 ",
     "ytvideo": "Jcd_vaPMyqU,0,23",
     "vidkey": "Dm",
     "smkey": "",
     "smule": ""
   },
   "xin-hay-roi-xa": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Sax, Guitar, String",
+    "key": "Am",
+    "intro": "[Am] [Am] [Dm] [Dm] [Bm7b5] [E7] [Am] [A7] [Dm] [E7] [Am]\r\nSax/Guitar: 123-5 (123-5) 123-6 (123-6) 1234 432 -7125 \r\nGuitar/Sax: #3456 432 45-71 (54321 /1)",
     "ytvideo": "IZrLiNagTHU,0,35",
     "vidkey": "Bbm",
     "smkey": "",
     "smule": ""
   },
   "linh-hon-tuong-da": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Sax, Orchestra, Brass",
+    "key": "Am",
+    "intro": "Am Dm F G-Em Am Am\r\nGuitar/String: 57531 (888758) 13154 (444314)\r\nSax: 1345 854 2171 17143313544146554578",
     "ytvideo": "X8yCxIzwDrY,0,18",
     "vidkey": "Am",
     "smkey": "",
     "smule": ""
   },
   "ha-trang": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "hU1n91tc2Cc,0,32",
-    "vidkey": "Em",
+    "instrument": "String",
+    "key": "Am",
+    "intro": "[Am] [Dm] [E7]\r\n[Am] [Dm] [Am/C] [Dm]-[E] [F] [F-E7]\r\n1512321512321 5576 2265 25234325234325\r\n3 1234568 65458 123456-(78978) (5125434323123215)",
+    "ytvideo": "SQzdLxXmR1o,0,35",
+    "vidkey": "Am",
     "smkey": "",
     "smule": ""
   },
   "neu-tinh-em-con-day-si-l-amour-existe-encore": {
-    "instrument": "[]",
+    "instrument": "Organ",
     "key": "",
-    "intro": "",
+    "intro": "Same as music",
     "ytvideo": "AqvHlrZfcN4,4,300",
     "vidkey": "D",
     "smkey": "",
@@ -499,9 +506,9 @@
     "smule": ""
   },
   "xin-con-goi-ten-nhau": {
-    "instrument": "Trumpet, Strring",
-    "key": "",
-    "intro": "",
+    "instrument": "Sax, Strring",
+    "key": "Dm",
+    "intro": "Dm Dm D7 Gm C F Bb Gm A Bb A Dm Gm Bb-A Dm\r\nSax: 13589 85178656 64-6675 31-5564 32-543 32-5231 \r\nString: 123 321 456 654 +(6521)",
     "ytvideo": "YxH4Io2QAQo,3,32",
     "vidkey": "Fm",
     "smkey": "",
@@ -517,9 +524,9 @@
     "smule": ""
   },
   "dong-song": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Violin, Piano",
+    "key": "C",
+    "intro": "[C] [G] [Am] [F]-[G] [C]\r\n3 455 54323 3678 787 88",
     "ytvideo": "VFKiBEH7WWE,6,24",
     "vidkey": "G",
     "smkey": "",
@@ -527,8 +534,8 @@
   },
   "mua-thu-la-bay": {
     "instrument": "Sax",
-    "key": "",
-    "intro": "",
+    "key": "C",
+    "intro": "[C] [Am] [F] [Dm] [Am-Bb] [G] [C-F] [C]\r\n-(56)321765 33221877 -(67)15321312 -55321721",
     "ytvideo": "x1mMIU1OIfw,0,25",
     "vidkey": "D",
     "smkey": "",
@@ -546,7 +553,7 @@
   "quynh-huong": {
     "instrument": "[]",
     "key": "",
-    "intro": "",
+    "intro": "C Am Dm G C Am Dm G C ////\r\nF G Em Am Dm G C G\r\n8 786 34348 887523 46521 -(5686)123221 ////\r\n6646787 5535676 4434565 788 8765 /",
     "ytvideo": "qALXqlSmdIk,0,32",
     "vidkey": "D",
     "smkey": "",
@@ -554,8 +561,8 @@
   },
   "tinh-thu-cua-linh": {
     "instrument": "Guitar, Whistle",
-    "key": "",
-    "intro": "",
+    "key": "C",
+    "intro": "[C] [G] [G] [C] [C] [G] [G] [C]\r\n(3-53-53-5 432 2-52-52-525 321) x 2",
     "ytvideo": "uOd3KaSraj0,0,18",
     "vidkey": "Eb",
     "smkey": "",
@@ -563,9 +570,9 @@
   },
   "mua-dong-cua-anh": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "z_o5AEit3a4,0,24",
+    "key": "C",
+    "intro": "[C] [Em] [Gm]-[A7] [Dm] [Fm]-[Bb] [C] [D7] [G] [G]\r\n(~) 13537 56b793#16 5456+(213) 32#46+(3212) (+5~5)",
+    "ytvideo": "GFQmK7xRslA,0,24",
     "vidkey": "E",
     "smkey": "",
     "smule": ""
@@ -574,15 +581,15 @@
     "instrument": "[]",
     "key": "",
     "intro": "",
-    "ytvideo": "3w59vpfGOCA,2,61",
+    "ytvideo": "h3qldjA4n2s,2,61",
     "vidkey": "Dm",
     "smkey": "",
     "smule": ""
   },
   "mai-tim-nhau": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Bầu, Tranh",
+    "key": "Dm",
+    "intro": "[Dm] [Bb]-[Am] [Dm] [Dm] [Gm]-[C] [F]-[A] [Dm]-[C]-[Am] [Dm]\r\nBau: +(13)53458 5534-5531 13-714584 46785 5345-531 \r\nTranh: 5+(1242178)",
     "ytvideo": "7CgvDSqXGgk,1,30",
     "vidkey": "Dm",
     "smkey": "",
@@ -590,8 +597,8 @@
   },
   "bien-tinh": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "D",
+    "intro": "[G] [Bm] [C] [D-Eb] [D]\r\n6568 6535 6531 21685 b6b6b65",
     "ytvideo": "zs3D2h_VTtM,1,15",
     "vidkey": "F",
     "smkey": "",
@@ -608,9 +615,9 @@
   },
   "chuyen-tinh-yeu": {
     "instrument": "String, D50",
-    "key": "",
-    "intro": "",
-    "ytvideo": "B2g-9dbDfdI,0,21",
+    "key": "Am",
+    "intro": "Dm G C F Dm E Am A Dm G C F Dm E Am\r\n6564-776 5453-665 4342-554345 187 \r\n6564-776 5453-665 4342-5231  ",
+    "ytvideo": "B2g-9dbDfdI,0,22",
     "vidkey": "Am",
     "smkey": "",
     "smule": ""
@@ -630,6 +637,24 @@
     "intro": "Dm Dm G - Dm Dm G -\r\nBb C Dm Dm Bb C Dm Dm\r\n-51584 (54) -51584 (565454)\r\n12321-(75 57)12321-71",
     "ytvideo": "izqn6j2ZHBM,0,41",
     "vidkey": "Bm",
+    "smkey": "",
+    "smule": ""
+  },
+  "lady": {
+    "instrument": "Piano",
+    "key": "Dm",
+    "intro": "[Dm]\r\n158595+35 (858) 158595+35 (858)",
+    "ytvideo": "ZbgzJecVbSQ,0,8",
+    "vidkey": "Ebm",
+    "smkey": "",
+    "smule": ""
+  },
+  "rieng-mot-goc-troi": {
+    "instrument": "Piano",
+    "key": "Dm",
+    "intro": "[Dm] [Dm] [A] [D7] [Gm] [Gm] [Asus4] [A] [Dm] [Dm]\r\n123 1233 21378988 56766 56766 545 (-5~5)",
+    "ytvideo": "nyFeo45st1A,0,26",
+    "vidkey": "C#m",
     "smkey": "",
     "smule": ""
   }

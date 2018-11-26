@@ -1,6 +1,6 @@
 %h2
   List:
-  %a(href="/playorder/#{list_info[:id]}")
+  %a(href="/playorder/#{user}/#{list_info[:id]}")
     %i.fa.fa-edit
   - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}/#{list_info[:title]}"
   %a(href=link target='hopamchuan')= "#{list_info[:title]}"

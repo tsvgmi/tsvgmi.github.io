@@ -1,0 +1,397 @@
+--- !ruby/object:Hash
+:content:
+- !ruby/object:Hash
+  :artist: Đan Nguyên
+  :href: https://hopamchuan.com/song/4726/dap-mo-cuoc-tinh/
+  :name: Đắp Mộ Cuộc Tình
+  :preview: 1. Say giấc mộng ban  đầu yêu  người thủa mới đôi  mươi em  đang độ trăng  tròn
+  :song_id: 4726
+- !ruby/object:Hash
+  :artist: Bằng Kiều, Lệ Quyên
+  :href: https://hopamchuan.com/song/1777/de-nho-mot-thoi-ta-da-yeu/
+  :name: Để Nhớ Một Thời Ta Đã Yêu
+  :preview: Hạnh phúc trong tầm với đã không còn tới khi vắng em trong đời Tìm đến
+    chân trời mới
+  :song_id: 1777
+- !ruby/object:Hash
+  :artist: Duy Quang, Dương Hồng Loan
+  :href: https://hopamchuan.com/song/4547/vung-la-me-bay/
+  :name: Vùng Lá Me Bay
+  :preview: Nhìn lá me  bay nhớ kỷ  niệm hai chúng  mình Ngày đó quen  nhau vương
+    chút  tình
+  :song_id: 4547
+- !ruby/object:Hash
+  :artist: Khắc Việt
+  :href: https://hopamchuan.com/song/1797/anh-khac-hay-em-khac/
+  :name: Anh Khác Hay Em Khác
+  :preview: 'Có  phải em hết yêu anh  rồi Em  hãy nói đi người  ơi  Anh vô tâm, hay
+    là '
+  :song_id: 1797
+- !ruby/object:Hash
+  :artist: Đan Nguyên
+  :href: https://hopamchuan.com/song/9460/lai-nho-nguoi-yeu/
+  :name: Lại Nhớ Người Yêu
+  :preview: Vì sao anh nhớ em thế |này | Thương nhớ đong đầy trong lòng |mắt | Buổi
+    chiều còn gặ
+  :song_id: 9460
+- !ruby/object:Hash
+  :artist: Đàm Vĩnh Hưng
+  :href: https://hopamchuan.com/song/371/bien-can/
+  :name: Biển Cạn
+  :preview: Tone  1. Có người từ lâu nhớ thương biển Ngày xưa biển xanh không như
+    bây giờ biể
+  :song_id: 371
+- !ruby/object:Hash
+  :artist: Lệ Quyên
+  :href: https://hopamchuan.com/song/909/mua-dong-cua-anh/
+  :name: Mùa Đông Của Anh
+  :preview: Ngày nào anh yêu em , anh đã quen trong cay đắng tuyệt vời  Ngày nào em
+    yêu anh, em hẳ
+  :song_id: 909
+- !ruby/object:Hash
+  :artist: Thu Minh
+  :href: https://hopamchuan.com/song/981/60-nam-cuoc-doi/
+  :name: 60 Năm Cuộc Đời
+  :preview: Em ơi có bao nhiêu? Sáu mươi năm cuộc đời Hai mươi năm đầu, sung sướng
+    không bao lâu
+  :song_id: 981
+- !ruby/object:Hash
+  :artist: Vy Oanh
+  :href: https://hopamchuan.com/song/4039/dong-xanh/
+  :name: Đồng Xanh
+  :preview: Đồng xanh gió ru êm. Và mây nâng bước chân em về. Từ khi có anh bên em
+    đời em nh
+  :song_id: 4039
+- !ruby/object:Hash
+  :artist: Lê Hiếu, Phương Vy, Ngọc Lan
+  :href: https://hopamchuan.com/song/1222/yeu-em-dai-lau/
+  :name: Yêu Em Dài Lâu
+  :preview: 1. Em như cơn gió thu bay  bay nhè nhẹ Đưa anh đi tìm vần  thơ Qua công
+    viên lá rơi trên [D
+  :song_id: 1222
+- !ruby/object:Hash
+  :artist: Bằng Kiều, Tuấn Ngọc, Châu Khải Phong
+  :href: https://hopamchuan.com/song/3950/ban-tinh-cuoi/
+  :name: Bản Tình Cuối
+  :preview: Mưa có rơi và nắng có phai Trên cuộc tình yêu em ngày nào Ta đã yêu và
+    ta đã
+  :song_id: 3950
+- !ruby/object:Hash
+  :artist: Lý Hải
+  :href: https://hopamchuan.com/song/3583/ben-thuong-hai/
+  :name: Bến Thượng Hải
+  :preview: Biển sóng đạt dào, trùng dương lớp lớp trôi đi về chốn nao Đời như những
+    cơn són
+  :song_id: 3583
+- !ruby/object:Hash
+  :artist: Lệ Quyên, Mai Thiên Vân
+  :href: https://hopamchuan.com/song/2248/han-mac-tu/
+  :name: Hàn Mặc Tử
+  :preview: 'Ngậm thơ: Ai mua trăng tôi bán trăng cho Trăng nằm im trên cành liễu
+    đợi chờ Ai'
+  :song_id: 2248
+- !ruby/object:Hash
+  :artist: Lệ Quyên
+  :href: https://hopamchuan.com/song/667/hay-tra-loi-em/
+  :name: Hãy Trả Lời Em
+  :preview: Em hỏi anh có bao giờ con sông kia thôi ngừng trôi Anh trả lời em rằng
+    một ngày
+  :song_id: 667
+- !ruby/object:Hash
+  :artist: Hồng Ngọc, Đàm Vĩnh Hưng, Ngọc Lan
+  :href: https://hopamchuan.com/song/664/dau-tinh-sau/
+  :name: Dấu Tình Sầu
+  :preview: 'Chiều còn vương nắng để gió đi tìm   Vết bước chân em qua bao nhiêu lần '
+  :song_id: 664
+- !ruby/object:Hash
+  :artist: Khánh Ly, Elvis Phương
+  :href: https://hopamchuan.com/song/3022/tinh-cho-khong-bieu-khong-l-amour-c-est-pour-rien/
+  :name: Tình Cho Không Biếu Không (L'amour C'est Pour Rien)
+  :preview: 1.  Ngon như là trái  táo chín  Thơm như vườn hoa  kín  Mong manh như
+    dây tơ
+  :song_id: 3022
+- !ruby/object:Hash
+  :artist: Bằng Kiều
+  :href: https://hopamchuan.com/song/1963/bai-khong-ten-cuoi-cung/
+  :name: Bài Không Tên Cuối Cùng
+  :preview: 1. Nhớ em  nhiều nhưng chẳng nói Nói ra  nhiều cũng vậy  thôi Ôi đớn  đau
+    đã nhiều
+  :song_id: 1963
+- !ruby/object:Hash
+  :artist: The Beatles
+  :href: https://hopamchuan.com/song/872/let-it-be/
+  :name: Let It Be
+  :preview: "(Intro)           (Verse 1) When I find myself in times of tro"
+  :song_id: 872
+- !ruby/object:Hash
+  :artist: Kiều Nga
+  :href: https://hopamchuan.com/song/1241/dung-buoc-giang-ho/
+  :name: Dừng Bước Giang Hồ
+  :preview: Chiều nay sương gió lữ khách dừng bên quán xưa Mơ màng nghe tiếng chuông
+    chiều, vương về
+  :song_id: 1241
+- !ruby/object:Hash
+  :artist: Lê Thụ, Mỹ Tâm
+  :href: https://hopamchuan.com/song/1230/duong-xua/
+  :name: Đường Xưa
+  :preview: Bước trên đường về em thương nhớ anh âm thầm Nhớ bao hẹn thề xưa êm ấm
+    Nhữn
+  :song_id: 1230
+- !ruby/object:Hash
+  :artist: Tuấn Vũ, Hà Thanh Xuân, Quốc Khanh
+  :href: https://hopamchuan.com/song/2624/tinh-la-soi-to/
+  :name: Tình Là Sợi Tơ
+  :preview: Tiếng khóc không vơi được nỗi sầu đâu em Nước mắt không đem lại chuỗi
+    ngày ấm êm Đừng
+  :song_id: 2624
+- !ruby/object:Hash
+  :artist: Tuấn Vũ, Ngọc Lan
+  :href: https://hopamchuan.com/song/3431/ngan-cach/
+  :name: Ngăn Cách
+  :preview: Yêu nhau trong cuộc đời, mơ duyên tình dài gắn bó đôi lời Ta quen nhau
+    một ngà
+  :song_id: 3431
+- !ruby/object:Hash
+  :artist: Eric Clapton
+  :href: https://hopamchuan.com/song/2704/wonderful-tonight/
+  :name: Wonderful Tonight
+  :preview: "    It's late in the evening; She's wondering what clothes to wear. ["
+  :song_id: 2704
+- !ruby/object:Hash
+  :artist: Lê Thụ
+  :href: https://hopamchuan.com/song/3462/mua-thu-chet/
+  :name: Mùa Thu Chết
+  :preview: 'Ta ngắt đi một cụm hoa thạch thảo Em nhớ cho : Mùa Thu đã chết rồi Mùa
+    Thu đã chế'
+  :song_id: 3462
+- !ruby/object:Hash
+  :artist: Khánh Hà, Tuấn Ngọc
+  :href: https://hopamchuan.com/song/1198/bay-ngay-doi-mong/
+  :name: Bảy Ngày Đợi Mong
+  :preview: Anh hẹn em cuối tuần Chờ anh nơi cuối phố Biết anh thích màu trời Em đã
+    bồi
+  :song_id: 1198
+- !ruby/object:Hash
+  :artist: Don Hồ, Ngọc Huệ
+  :href: https://hopamchuan.com/song/3458/mua-thu-yeu-duong/
+  :name: Mùa Thu Yêu Đương
+  :preview: Anh muốn đôi ta  mãi như người tình Vui đời hẹn hò Khi trên dòng suối,
+    K
+  :song_id: 3458
+- !ruby/object:Hash
+  :artist: Hà Thanh Xuân, Y Phụng
+  :href: https://hopamchuan.com/song/2343/thien-duong-ai-an/
+  :name: Thiên Đường Ái Ân
+  :preview: Đường nào vào thiên đàng ái ân Là đường vào nhịp thở lâng-lâng Mùa Xuân
+    đang đi t
+  :song_id: 2343
+- !ruby/object:Hash
+  :artist: Ngọc Lan, Phạm Quỳnh Anh, Hoàng Kim
+  :href: https://hopamchuan.com/song/1666/cho-em-quen-tuoi-ngoc/
+  :name: Cho Em Quên Tuổi Ngọc
+  :preview: Cho em quên cơn mộng ảo xa xôi thơ ngây ngày nào Em quên được phút trong
+    tay mưa ba
+  :song_id: 1666
+- !ruby/object:Hash
+  :artist: Khánh Ly
+  :href: https://hopamchuan.com/song/3419/canh-buom-xa-xua/
+  :name: Cánh Buồm Xa Xưa
+  :preview: Vi vu đồi thông reo xao xác lá chiều nay thu về Em ơi cánh buồm ngay xưa
+    c
+  :song_id: 3419
+- !ruby/object:Hash
+  :artist: Nguyên Khang, Lâm Nhật Tiến
+  :href: https://hopamchuan.com/song/4002/se-hon-bao-gio-het/
+  :name: Sẽ Hơn Bao Giờ Hết
+  :preview: "|Đang có em chiều nay| |Mà đã nhớ em ngày |mai |Yêu nhau ngất ngây đêm
+    |nay Trọn |[Gau"
+  :song_id: 4002
+- !ruby/object:Hash
+  :artist: Lưu Bích, Vy Oanh
+  :href: https://hopamchuan.com/song/4882/trai-tim-lam-lo/
+  :name: Trái Tim Lầm Lỡ
+  :preview: Chiều về lạnh cơn gió Hạnh phúc rét mướt như mùa đông Thềm hoa đâu con
+    bướm xư
+  :song_id: 4882
+- !ruby/object:Hash
+  :artist: Tuấn Vũ, Nguyễn Hồng Ân
+  :href: https://hopamchuan.com/song/5238/nhung-tam-hon-co-don-tam-hon-co-don/
+  :name: Những tâm hồn cô đơn (Tâm hồn cô đơn)
+  :preview: " Đời không như ước mơ lòng người Cuộc  đời xô đẩy mình đến rã  rời Còn
+    lại  gì, ng"
+  :song_id: 5238
+- !ruby/object:Hash
+  :artist: Quang Lê, Tâm Đoan
+  :href: https://hopamchuan.com/song/3487/nhat-ky-cua-hai-dua-minh/
+  :name: Nhật Ký Của Hai Đứa Mình
+  :preview: Thức trắng đêm nay ghép lại nhật ký của hai đứa mình Đường yêu anh bước
+    chân
+  :song_id: 3487
+- !ruby/object:Hash
+  :artist: Hồng Ngọc
+  :href: https://hopamchuan.com/song/799/chuyen-thuong-tinh-the-thoi/
+  :name: Chuyện Thường Tình Thế Thôi
+  :preview: Cuộc tình ngày nào đã trao cho anh , giờ chỉ còn trong đớn đau Cuộc tình
+    ngày nào đ
+  :song_id: 799
+- !ruby/object:Hash
+  :artist: Quốc Đại
+  :href: https://hopamchuan.com/song/5218/ve-duoi-mai-nha/
+  :name: Về Dưới Mái Nhà
+  :preview: Người  ơi, mau về đây,  về bên bếp  hồng tay cầm tay  Cười lên chan  chứa
+    tươi làn
+  :song_id: 5218
+- !ruby/object:Hash
+  :artist: Kim Anh
+  :href: https://hopamchuan.com/song/1683/ben-nhau-ngay-vui/
+  :name: Bên Nhau Ngày Vui
+  :preview: "| 4/4 | Surf Lấy tông, nốt:Một(Re)sớm(Si)tan(Sol)chuông(Sol) Một sớm
+    tan chuông tà áo trắng [A7"
+  :song_id: 1683
+- !ruby/object:Hash
+  :artist: Trần Thái Hòa, Quang Dũng
+  :href: https://hopamchuan.com/song/5941/mot-minh/
+  :name: Một Mình
+  :preview: 1. Sớm mai thức  giấc, nhìn quanh một  mình Ngoài hiên nắng lóe, đàn chim
+    giật  mình
+  :song_id: 5941
+- !ruby/object:Hash
+  :artist: Khánh Ly
+  :href: https://hopamchuan.com/song/3523/hinh-anh-mot-buoi-chieu/
+  :name: Hình Ảnh Một Buổi Chiều
+  :preview: Đàn chim tung cánh xa khuất mờ Chiều thu lưu luyến màu thương nhớ. Nhớ
+    mái đầu ai nhuộm nắn
+  :song_id: 3523
+- !ruby/object:Hash
+  :artist: Đức Huy
+  :href: https://hopamchuan.com/song/6278/xin-mot-ngay-mai-co-nhau/
+  :name: Xin Một Ngày Mai Có Nhau
+  :preview: 'Tone gốc E: Capo 4 Còn lại đây một buổi chiều ướt cơn mưa Còn lại đây
+    sương mù đường vắng'
+  :song_id: 6278
+- !ruby/object:Hash
+  :artist: Thu Phương
+  :href: https://hopamchuan.com/song/5939/co-nho-dem-nao/
+  :name: Có Nhớ Đêm Nào
+  :preview: Có nhớ đêm  nào? Về chung với nhau nơi này Tìm đến hòa khúc sum  vầy Tình
+    xuân ngất
+  :song_id: 5939
+- !ruby/object:Hash
+  :artist: Kim Tước
+  :href: https://hopamchuan.com/song/5056/xa-que-huong/
+  :name: Xa Quê Hương
+  :preview: 1. Chiều buồn mênh mông xa quê thân yêu Khi bước chân đi trên bến chia
+    ly Áng mâ
+  :song_id: 5056
+- !ruby/object:Hash
+  :artist: Tuấn Ngọc, Trần Thái Hòa
+  :href: https://hopamchuan.com/song/6859/o-noi-nao-em-con-nho/
+  :name: Ở Nơi Nào Em Còn Nhớ
+  :preview: Từ em  đi mùa xuân lặng  lẽ cánh hoa  u sầu Từ em đi hạ thêm buồn  vắng
+    nắng mưa [
+  :song_id: 6859
+- !ruby/object:Hash
+  :artist: Ánh Tuyết
+  :href: https://hopamchuan.com/song/5973/ben-xuan/
+  :name: Bến Xuân
+  :preview: Nhà  tôi bên chiếc cầu soi  nước Em đến  tôi  một  lần Bao lũ chim  rừng
+    họp
+  :song_id: 5973
+- !ruby/object:Hash
+  :artist: Tuấn Vũ
+  :href: https://hopamchuan.com/song/7439/gia-tu-dem-mua/
+  :name: Giã Từ Đêm Mưa
+  :preview: Ðêm khuya mưa rơi rơi trên đường vắng  Ðôi chân lang thang tâm tư trầm
+    l
+  :song_id: 7439
+- !ruby/object:Hash
+  :artist: Patty Ryan
+  :href: https://hopamchuan.com/song/7027/you-re-my-love-you-re-my-life/
+  :name: You're My Love You're My Life
+  :preview: 1.  Since you were an angel  from the sky,  you fill my fanta- sy The
+    way you look t
+  :song_id: 7027
+- !ruby/object:Hash
+  :artist: Ngọc Lan
+  :href: https://hopamchuan.com/song/11725/xin-thoi-gian-ngung-troi/
+  :name: Xin thời gian ngừng trôi
+  :preview: Rượu nồng cạn chén bên người Tình ái ấm nồng chứa chan  Mong thời gian
+    thô
+  :song_id: 11725
+- !ruby/object:Hash
+  :artist: Quang Dũng
+  :href: https://hopamchuan.com/song/12253/han-tinh-trong-mua/
+  :name: Hận tình trong mưa
+  :preview: 1. Người tình đi xa tít nơi chân trời Trời thì u tối, mùa đông đang đi
+    tới ngày thì d
+  :song_id: 12253
+- !ruby/object:Hash
+  :artist: Y Vân, Trish Thùy Trang
+  :href: https://hopamchuan.com/song/7021/tinh-linh/
+  :name: Tình Lính
+  :preview: Anh là lính đa  tình tình non sông rất nặng  Tình hải hồ ôm  mộng tình
+    vũ trụ ngát  xa
+  :song_id: 7021
+- !ruby/object:Hash
+  :artist: Như Quỳnh
+  :href: https://hopamchuan.com/song/11810/lenh-denh-phan-buon/
+  :name: Lênh Đênh Phận Buồn
+  :preview: 1. Bạn bè gặp nhau cứ |hỏi đã lâu không |còn trông thấy em tươi nụ |cười
+    | Rằng tạ
+  :song_id: 11810
+- !ruby/object:Hash
+  :artist: Tuấn Ngọc
+  :href: https://hopamchuan.com/song/8302/tinh-vong/
+  :name: Tình Vọng
+  :preview: 'Tone gốc Bm: Capo 2 Ôi như mộng du hồn ta đang thoát đi tìm em Trong
+    cơn dịu êm tình đư'
+  :song_id: 8302
+- !ruby/object:Hash
+  :artist: Khánh Hà
+  :href: https://hopamchuan.com/song/11625/mua-he-dep-nhat/
+  :name: Mùa Hè Đẹp Nhất
+  :preview: 1. Chiều trên phố vắng ray rứt tiếng mưa buồn rơi Ngày qua rất vội mây
+    xám g
+  :song_id: 11625
+- !ruby/object:Hash
+  :artist: Quang Hà, Mắt Ngọc
+  :href: https://hopamchuan.com/song/12229/xin-danh-tron-cho-em/
+  :name: Xin dành trọn cho em
+  :preview: 'ĐK:  Xin dành  trọn cho em Ngàn  muôn chiếc hôn nồng  say  Xin ghì  chặt
+    vai'
+  :song_id: 12229
+- !ruby/object:Hash
+  :artist: Nguyễn Hưng
+  :href: https://hopamchuan.com/song/12122/huong/
+  :name: Hương
+  :preview: " Hương anh gọi tên em Trong ngút ngàn nỗi  nhớ  Gọi tên em gọi mãi khôn
+    \ nguôi"
+  :song_id: 12122
+- !ruby/object:Hash
+  :artist: Thanh Lan
+  :href: https://hopamchuan.com/song/11624/song-nuoc-biec/
+  :name: Sông Nước Biếc
+  :preview: 1. Một dòng sông sâu cuồn cuộn sóng trôi về nơi đâu Gió đưa buồm nâu mang
+    tâm h
+  :song_id: 11624
+- !ruby/object:Hash
+  :artist: Thế Sơn
+  :href: https://hopamchuan.com/song/12121/sau-lang/
+  :name: Sầu Lắng
+  :preview: Chiều lắng nắng trên đường đã tắt Vài chiếc lá khô vàng rơi Đời vắng bóng
+    em buồn [B
+  :song_id: 12121
+- !ruby/object:Hash
+  :artist: Chubby Checker
+  :href: https://hopamchuan.com/song/13678/let-s-twist-again/
+  :name: Let's twist again
+  :preview: 'Speak: Come on everybody! Clap your hands! All you looking good! I''m
+    gonna sing my song It won''t t'
+  :song_id: 13678
+- !ruby/object:Hash
+  :artist: Elvis Phương, Jean Francois Michael
+  :href: https://hopamchuan.com/song/13474/neu-tinh-em-con-day-si-l-amour-existe-encore/
+  :name: Nếu Tình Em Còn Đây (Si L'amour Existe Encore)
+  :preview: Si l'amour existe encore  Il ressemble à ton corps Si l'amour existe encore
+  :song_id: 13474
+:id: 61801

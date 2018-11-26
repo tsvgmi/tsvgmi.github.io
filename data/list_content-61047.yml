@@ -36,6 +36,12 @@
     có kéo qua [
   :song_id: 557
 - !ruby/object:Hash
+  :artist: Tuấn Ngọc, Bằng Kiều
+  :href: https://hopamchuan.com/song/198/rieng-mot-goc-troi/
+  :name: Riêng Một Góc Trời
+  :preview: Tình yêu như nắng, nắng đưa em về, bên dòng suối mơ  Nhẹ vương theo g
+  :song_id: 198
+- !ruby/object:Hash
   :artist: Hồng Nhung, Khánh Hà
   :href: https://hopamchuan.com/song/213/ha-trang/
   :name: Hạ Trắng
@@ -171,8 +177,8 @@
   :artist: Elvis Phương, Ngọc Lan
   :href: https://hopamchuan.com/song/3383/tuyet-roi/
   :name: Tuyết Rơi
-  :preview: 'Tone gốc A#m: Capo 1 Ngoài kia tuyết rơi đầy Anh không đến bên em chiều
-    nay Ngoài kia t'
+  :preview: "<<< Ngoài kia tuyết rơi đầy Anh không đến bên em chiều nay Ngoài kia
+    tuyết rơi rơi"
   :song_id: 3383
 - !ruby/object:Hash
   :artist: The Beatles
@@ -286,7 +292,7 @@
     mê   Xin
   :song_id: 17501
 - !ruby/object:Hash
-  :artist: Ngọc Hạ
+  :artist: Ngọc Hạ, Hoàng Nhung
   :href: https://hopamchuan.com/song/10908/mong-lanh/
   :name: Mộng Lành
   :preview: Ánh Xuân về tràn dâng  nắng mới Tơ trời mừng say gió  tới Ngàn  đóa hoa
@@ -327,6 +333,13 @@
     l
   :song_id: 18577
 - !ruby/object:Hash
+  :artist: Neil Sedaka
+  :href: https://hopamchuan.com/song/21517/oh-carol/
+  :name: Oh! Carol
+  :preview: Oh! Carol I am but a fool Darlin' I love you tho' you treat me cruel You
+    hurt m
+  :song_id: 21517
+- !ruby/object:Hash
   :artist: Kenny Rogers
   :href: https://hopamchuan.com/song/19883/lady/
   :name: Lady
@@ -347,18 +360,18 @@
     yêu khuất xa k"
   :song_id: 22949
 - !ruby/object:Hash
-  :artist: The Mamas & The Papas
-  :href: https://hopamchuan.com/song/22950/california-dreamin/
-  :name: California Dreamin
-  :preview: 'Verse 1: All the leaves are brown  and the sky is gray  I''ve been for'
-  :song_id: 22950
-- !ruby/object:Hash
   :artist: Bad Boys Blue
   :href: https://hopamchuan.com/song/22957/you-re-a-woman-you-re-a-woman-i-m-a-man/
   :name: You're A Woman (You're A Woman, I'm A Man)
   :preview: 'Verse 1: Tonight, there be no darkness tonight  Hold tight, let your
     lo'
   :song_id: 22957
+- !ruby/object:Hash
+  :artist: The Mamas & The Papas
+  :href: https://hopamchuan.com/song/22950/california-dreamin/
+  :name: California Dreamin
+  :preview: 'Verse 1: All the leaves are brown  and the sky is gray  I''ve been for'
+  :song_id: 22950
 - !ruby/object:Hash
   :artist: Thiên Quang, Quỳnh Trang
   :href: https://hopamchuan.com/song/23165/mai-tim-nhau/

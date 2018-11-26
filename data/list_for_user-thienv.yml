@@ -1,5 +1,23 @@
 ---
 - !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61780/ht-chachacha
+  :id: 61780
+  :name: HT - Chachacha
+  :sname: 61780/ht-chachacha
+  :song_count: 10
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61775/co-don-la-dieu-em-da-chon
+  :id: 61775
+  :name: Cô Đơn Là Điều Em Đã Chọn
+  :sname: 61775/co-don-la-dieu-em-da-chon
+  :song_count: 18
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61761/giac-mo-co-anh
+  :id: 61761
+  :name: Giấc Mơ Có Anh
+  :sname: 61761/giac-mo-co-anh
+  :song_count: 7
+- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/61650/ve-mai-truong
   :id: 61650
   :name: Về Mái Trường
@@ -17,12 +35,6 @@
   :name: Quê Em Miền Tây
   :sname: 61475/que-em-mien-tay
   :song_count: 13
-- !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/61454/di-vang-nhat-nhoa
-  :id: 61454
-  :name: Dĩ Vãng Nhạt Nhòa
-  :sname: 61454/di-vang-nhat-nhoa
-  :song_count: 9
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/61453/nhung-ngay-diu-em
   :id: 61453
@@ -48,12 +60,6 @@
   :sname: 61303/dung-lo-co-anh-day
   :song_count: 22
 - !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/60984/anh-phien-qua-em-di-day
-  :id: 60984
-  :name: Anh Phiền Quá Em Đi Đây
-  :sname: 60984/anh-phien-qua-em-di-day
-  :song_count: 6
-- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/60340/best-cover
   :id: 60340
   :name: Best Cover
@@ -71,12 +77,6 @@
   :name: Chuyện Tôi
   :sname: 60320/chuyen-toi
   :song_count: 25
-- !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/60255/ha-noi-giac-mo-toi
-  :id: 60255
-  :name: Ha Noi Giac Mo Toi
-  :sname: 60255/ha-noi-giac-mo-toi
-  :song_count: 7
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/60042/em-di-tren-co-non
   :id: 60042
@@ -113,12 +113,6 @@
   :name: Lê Hiếu
   :sname: 59681/le-hieu
   :song_count: 30
-- !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/59614/hon-viet
-  :id: 59614
-  :name: Hồn Việt
-  :sname: 59614/hon-viet
-  :song_count: 8
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/59522/mua-lang-man
   :id: 59522
@@ -204,23 +198,11 @@
   :sname: 59118/cho-nhung-ngay-co-don
   :song_count: 13
 - !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/59117/mua-viet-tinh-ca
-  :id: 59117
-  :name: Mùa Viết Tình Ca
-  :sname: 59117/mua-viet-tinh-ca
-  :song_count: 6
-- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/59066/em-trong-mat-toi
   :id: 59066
   :name: Em Trong Mắt Tôi
   :sname: 59066/em-trong-mat-toi
   :song_count: 10
-- !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/59037/chuyen-cua-mua
-  :id: 59037
-  :name: Chuyện Của Mưa
-  :sname: 59037/chuyen-cua-mua
-  :song_count: 9
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/59011/cu-xa-mua-thu
   :id: 59011
@@ -305,12 +287,6 @@
   :name: Tôi Nhớ Mùa Thu Ấy
   :sname: 58551/toi-nho-mua-thu-ay
   :song_count: 10
-- !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/58550/nhung-ngay-voi-va
-  :id: 58550
-  :name: Những Ngày Vội Vã
-  :sname: 58550/nhung-ngay-voi-va
-  :song_count: 8
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/58548/lam-nguoi-yeu-anh-nhe
   :id: 58548
@@ -420,18 +396,6 @@
   :sname: 58018/thuong-nhau-de-do
   :song_count: 16
 - !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/57921/cung-anh
-  :id: 57921
-  :name: Cùng Anh
-  :sname: 57921/cung-anh
-  :song_count: 9
-- !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/57888/tha-thinh-de-thuong-2018
-  :id: 57888
-  :name: Thả Thính Dễ Thương 2018
-  :sname: 57888/tha-thinh-de-thuong-2018
-  :song_count: 9
-- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/57837/khi-minh-o-chung-nha
   :id: 57837
   :name: Khi Mình Ở Chung Nhà
@@ -528,12 +492,6 @@
   :sname: 57269/nhac-vang-hai-ngoai
   :song_count: 20
 - !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/57268/thoi-quen-mai-khong-tu-bo
-  :id: 57268
-  :name: Thói Quen Mãi Không Từ Bỏ
-  :sname: 57268/thoi-quen-mai-khong-tu-bo
-  :song_count: 7
-- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/56828/that-tinh
   :id: 56828
   :name: Thất Tình
@@ -546,23 +504,11 @@
   :sname: 56802/dia-dang-3
   :song_count: 11
 - !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/56801/lenh-denh-phan-buon
-  :id: 56801
-  :name: Lênh Đênh Phận Buồn
-  :sname: 56801/lenh-denh-phan-buon
-  :song_count: 9
-- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/56800/nguoi-em-sau-mong
   :id: 56800
   :name: Người Em Sầu Mộng
   :sname: 56800/nguoi-em-sau-mong
   :song_count: 10
-- !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/56784/nay-em-oi-thoi-dung-buon
-  :id: 56784
-  :name: Này Em Ơi, Thôi Đừng Buồn
-  :sname: 56784/nay-em-oi-thoi-dung-buon
-  :song_count: 7
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/56751/yeu-di-dung-so
   :id: 56751
@@ -636,12 +582,6 @@
   :sname: 55913/nhung-ngay-mua
   :song_count: 34
 - !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/55912/se-hon-bao-gio-het
-  :id: 55912
-  :name: Sẽ Hơn Bao Giờ Hết
-  :sname: 55912/se-hon-bao-gio-het
-  :song_count: 8
-- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/55725/bolero-tuoi-hoc-tro
   :id: 55725
   :name: Bolero Tuổi Học Trò
@@ -665,12 +605,6 @@
   :name: Tình Khúc Buồn
   :sname: 55570/tinh-khuc-buon
   :song_count: 14
-- !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/55543/nhu-mua-he-nam-ay
-  :id: 55543
-  :name: Như Mùa Hè Năm Ấy
-  :sname: 55543/nhu-mua-he-nam-ay
-  :song_count: 8
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/55498/pop-ballad
   :id: 55498

@@ -75,31 +75,36 @@ get '/list/:event' do |event|
   haml :list, locals: {event: event}, layout:nil
 end
 
-get '/playorder/:listno' do |listno|
+get '/playorder/:user/:listno' do |user, listno|
+  playlists  = PlayList.for_user(user)
+  list_info  = playlists.find{|r| r[:id] == listno.to_i}
   play_order = PlayOrder.new(listno)
+  #Plog.dump_info(playlists:playlists, list_info:list_info)
   if params[:reset]
     play_order.create_file
   elsif params[:refresh]
     play_order.refresh_file
   end
-  haml :playorder, locals:{play_order:play_order}
+  haml :playorder, locals:{play_order:play_order, list_info:list_info}
 end
 
 post '/playorder' do
   #Plog.dump_info(params:params)
   list_id = params[:list_id]
+  user    = params[:user]
   if params[:Reset]
-    redirect "/playorder/#{list_id}?reset=true"
+    redirect "/playorder/#{user}/#{list_id}?reset=true"
   elsif params[:Refresh]
-    redirect "/playorder/#{list_id}?refresh=true"
+    redirect "/playorder/#{user}/#{list_id}?refresh=true"
   else
     PlayOrder.new(list_id).write_file(params[:slink])
-    redirect "/playorder/#{list_id}"
+    redirect "/playorder/#{user}/#{list_id}"
   end
 end
 
 get '/perflist/:user' do |user|
-  playlists = PlayList.for_user(user)
+  reload = params[:reload].to_i
+  playlists = PlayList.for_user(user, reload == 2)
   if playlists.size <= 0
     return [403, "No playlists found for user #{user}"]
   end
@@ -117,11 +122,9 @@ get '/perflist/:user' do |user|
   #Plog.dump_info(list_info:list_info, song_list:song_list[0..5], _ofmt:'Y')
 
   perf_info       = PlayNote.new(user)
-  singer_profiles = YAML.load_file('singer-profile.yml')
   haml :perflist, locals: {list_info:list_info, song_list:song_list, user:user,
                            order_list:order_list, 
-                           playlists:playlists, perf_info:perf_info,
-                           singer_profiles:singer_profiles}
+                           playlists:playlists, perf_info:perf_info}
 end
 
 get '/send_patch/:pstring' do |pstring|
@@ -280,9 +283,9 @@ class PlayList
     @save_list
   end
 
-  def self.for_user(user)
+  def self.for_user(user, reload=false)
     cfile = "data/list_for_user-#{user}.yml"
-    if test(?s, cfile)
+    if !reload && test(?s, cfile)
       ulist = YAML.load_file(cfile)
     else
       ulist = HacSource.new.list_for_user("#{HAC_URL}/profile/playlists/#{user}")
@@ -335,7 +338,9 @@ class PlayOrder
 
   def fetch_song_list
     qorder = @content_str.map{|r| r[0]}
-    @playlist.fetch[:content].sort_by do |asong|
+    @playlist.fetch[:content].select do |asong|
+      qorder.include?(asong[:song_id])
+    end.sort_by do |asong|
       qorder.index(asong[:song_id])
     end
   end
