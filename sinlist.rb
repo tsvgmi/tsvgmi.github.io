@@ -330,6 +330,7 @@ class PlayOrder
 
   def create_file
     output = @playlist.fetch[:content].map do |r|
+      Plog.dump_info(r:r)
       fs = r[:href].split('/')
       "#{r[:song_id]},#{fs[5]},,,,,"
     end
@@ -366,12 +367,13 @@ class PlayOrder
     unless test(?f, @order_file)
       return {}
     end
-    lno = 0
+    lno        = 0
+    order_list = []
     Plog.info(msg:"Loading #{@order_file}")
-    order_list = File.read(@order_file).split("\n").map do |r|
-      sinfo, _vinfo = r.split('/')
+    File.read(@order_file).split("\n").each do |r|
       song_id, title, version, singer, skey, style, tempo, lead =
-        sinfo.split(',')
+        r.split(',')
+      next unless title
       song_id = song_id.to_i
       rec = {
         song_id:    song_id,
@@ -385,8 +387,9 @@ class PlayOrder
         order:      lno,
       }
       lno += 1
-      [song_id, rec]
+      order_list << [song_id, rec]
     end
+    #Plog.dump_info(order_list:order_list)
     order_list
   end
 
