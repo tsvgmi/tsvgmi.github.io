@@ -134,7 +134,7 @@
   "phien-da-sau": {
     "instrument": "String, Piano",
     "key": "Am",
-    "intro": "[Am] [Am] [D] [Dm] [Am] [Am] [D] [Dm]\r\n[G] [C] [Dm]-[E7] [Am]\r\n3331 3331 4441 4441\r\n3331 3331 4441 4441\r\n4334-7 -53223-5 -(487785) 231\r\nOut: Same as intro",
+    "intro": "[Am] [Am] [D] [Dm] [Am] [Am] [D] [Dm]\r\n[G] [C] [Dm]-[E7] [Am]\r\n3331 3331 4441 4441\r\n3331 3331 4441 4441\r\n4334-7 -53223-5 -(487785) 231\r\nSolo:\r\n[Am] [Am] [Am] [Am] [Fm] [Fm] [Ab] [Eb] [Db] [Db] [Gm7b5] [C]-[E] [Am] [Am7/G] [D] [Dm]-[E] [Am]\r\nOut: Same as intro",
     "ytvideo": "R45deIDXYnc,0,43",
     "vidkey": "Am",
     "smkey": "",
