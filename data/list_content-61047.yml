@@ -98,6 +98,13 @@
     môi  mềm Em
   :song_id: 2830
 - !ruby/object:Hash
+  :artist: Trấn Thành , Hoàng Yến Chibi
+  :href: https://hopamchuan.com/song/7055/canh-hong-phai/
+  :name: Cánh Hồng Phai
+  :preview: Nàng như một đóa hồng phai Hương sắc héo hon theo những ngày dài Cuộc
+    tình đi qua
+  :song_id: 7055
+- !ruby/object:Hash
   :artist: Cẩm Ly, Ngọc Trọng, Lưu Ánh Loan
   :href: https://hopamchuan.com/song/3998/khong-bao-gio-quen-anh/
   :name: Không Bao Giờ Quên Anh
@@ -208,6 +215,13 @@
   :preview: Bài hát đêm đông chạnh lòng tôi nhớ  nhiều Tà áo Noel thướt tha trong
     chiều nào  D
   :song_id: 4001
+- !ruby/object:Hash
+  :artist: Hà Anh Tuấn, Đình Bảo
+  :href: https://hopamchuan.com/song/9592/tuyet-roi-mua-he/
+  :name: Tuyết Rơi Mùa Hè
+  :preview: Nếu anh gặp em từ đầu, có lẽ đã không ai qua bể dâu Nếu anh được sống
+    từ đầu, vẫn muốn b
+  :song_id: 9592
 - !ruby/object:Hash
   :artist: Ngọc Lan, Phạm Quỳnh Anh, Hoàng Kim
   :href: https://hopamchuan.com/song/1666/cho-em-quen-tuoi-ngoc/
@@ -326,19 +340,19 @@
   :preview: Si l'amour existe encore  Il ressemble à ton corps Si l'amour existe encore
   :song_id: 13474
 - !ruby/object:Hash
-  :artist: Thanh Lan
-  :href: https://hopamchuan.com/song/18577/vu-khuc-paris-paris-tu-m-as-pris-dans-tes-bras/
-  :name: Vũ khúc Paris (Paris Tu M'as Pris Dans Tes Bras)
-  :preview: 1. Đường  khuya một mình có  tôi Lạc  loài một kẻ đơn  côi Lẻ loi và lạnh
-    l
-  :song_id: 18577
-- !ruby/object:Hash
   :artist: Neil Sedaka
   :href: https://hopamchuan.com/song/21517/oh-carol/
   :name: Oh! Carol
   :preview: Oh! Carol I am but a fool Darlin' I love you tho' you treat me cruel You
     hurt m
   :song_id: 21517
+- !ruby/object:Hash
+  :artist: Thanh Lan
+  :href: https://hopamchuan.com/song/18577/vu-khuc-paris-paris-tu-m-as-pris-dans-tes-bras/
+  :name: Vũ khúc Paris (Paris Tu M'as Pris Dans Tes Bras)
+  :preview: 1. Đường  khuya một mình có  tôi Lạc  loài một kẻ đơn  côi Lẻ loi và lạnh
+    l
+  :song_id: 18577
 - !ruby/object:Hash
   :artist: Kenny Rogers
   :href: https://hopamchuan.com/song/19883/lady/
