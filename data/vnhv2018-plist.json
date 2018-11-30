@@ -143,9 +143,11 @@
   "diem-xua": {
     "instrument": "String",
     "key": "Am",
-    "intro": "[Dm/F] [Am/E] [E] [Am]\r\n[Dm/F] [Am/E] [E] [Am]\r\n6146145135135-72613513513\r\n6146135135135-722321",
+    "intro": "[Dm/F] [Am/E] [E] [Am]\r\n[Dm/F] [Am/E] [E] [Am]\r\n6146145135135-726-72513513\r\n6146145135135-722321",
     "ytvideo": "n-wyVoW9Fbg,0,17",
-    "vidkey": "Am"
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": ""
   },
   "lai-gan-hon-anh-lai-gan-ben-anh": {
     "instrument": "Piano, String",
@@ -182,9 +184,11 @@
   "du-am-mua-giang-sinh": {
     "instrument": "String",
     "key": "C",
-    "intro": "[C]-[E] [Am]-[A] [Dm]-[C] [D] [G]\r\n-5433 322 3211 -6544 -5433 -5322 1-61232 22 225",
+    "intro": "[C]-[E] [Am]-[A] [Dm]-[C] [D] [G]\r\n-5433 322 3211 -6544 -5433 -5322 1-61232 /2/2 /2/2/5",
     "ytvideo": "ZykXe_SB0JY,0,22",
-    "vidkey": "G"
+    "vidkey": "G",
+    "smkey": "",
+    "smule": ""
   },
   "tuyet-roi": {
     "instrument": "Guitar",
@@ -373,7 +377,7 @@
   "cho-em-quen-tuoi-ngoc": {
     "instrument": "String",
     "key": "Dm",
-    "intro": "[Dm] [C] [Bb] [F] [Gm] [Dm] [Em7b5] [A] [Dm]\r\nString: +359 58 37 36 15 124332 1",
+    "intro": "[Dm] [C] [Bb] [F] [Gm] [Dm] [Em7b5] [A] [Dm]\r\nString: +3 59 58 37 36 15 124332 1",
     "ytvideo": "x4jBS1cWEt4,7,35",
     "vidkey": "Em",
     "smkey": "",
@@ -409,7 +413,7 @@
   "mong-lanh": {
     "instrument": "Guitar, Brass",
     "key": "Am",
-    "intro": "[Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [F7] [E7] [F7] [E7]\r\n531531 56425432 53153156765 53153156425432 333 22 2 333 2",
+    "intro": "[Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [F7] [E7] [F7] [E7]\r\n531531 56425432 5315315676543 53153156425432 /3/3 /3 /2/2 /2 /3/3/3 /2",
     "ytvideo": "IkzjdXk5TH4,2,27",
     "vidkey": "Am",
     "smkey": "",
@@ -418,7 +422,7 @@
   "tango-di-vang": {
     "instrument": "Orchestra, String",
     "key": "Am",
-    "intro": "[Dm] [Am] [E7] [Am] [Dm] [Am] [E7] [Am]\r\nHorn: 65456// 54345// 432342345 \r\nString: 65456 654345 543234 5321",
+    "intro": "[Dm] [Am] [E7] [Am] [Dm] [Am] [E7] [Am]\r\nIntro+Mid+Out:\r\n  Horn: 65456// 54345// 432342345 (7654)\r\n  String: 65456 654345 543234 5321\r\n",
     "ytvideo": "3ZcPF4OTNeg,1,17",
     "vidkey": "Cm",
     "smkey": "",
@@ -490,7 +494,7 @@
   "neu-tinh-em-con-day-si-l-amour-existe-encore": {
     "instrument": "Organ",
     "key": "",
-    "intro": "Same as music",
+    "intro": "In: Same as music\r\nOut: Same as music",
     "ytvideo": "AqvHlrZfcN4,4,300",
     "vidkey": "D",
     "smkey": "",
@@ -543,9 +547,9 @@
   },
   "autumn-leaves": {
     "instrument": "String, Piano",
-    "key": "",
-    "intro": "",
-    "ytvideo": "TZ0cPnOilHs,0,300",
+    "key": "Am",
+    "intro": "[Dm7] [G7] [C]-[Cmaj7/B] [Am]-[Am7/G] [F7] [E7] [Am]-[D] [Am]\r\nIntro: As 1st part of lyric (soft)",
+    "ytvideo": "xXBNlApwh0c,0,26",
     "vidkey": "C#m",
     "smkey": "",
     "smule": ""
@@ -589,8 +593,8 @@
   "mai-tim-nhau": {
     "instrument": "Bầu, Tranh",
     "key": "Dm",
-    "intro": "[Dm] [Bb]-[Am] [Dm] [Dm] [Gm]-[C] [F]-[A] [Dm]-[C]-[Am] [Dm]\r\nBau: +(13)53458 5534-5531 13-714584 46785 5345-531 \r\nTranh: 5+(1242178)",
-    "ytvideo": "7CgvDSqXGgk,1,30",
+    "intro": "[Dm] [Bb]-[Am] [Dm] [Dm] [Gm]-[C] [F]-[A] [Dm]-[C]-[Am] [Dm]\r\nBau: +(13)53458 55345-531 13-714584 46785 5345-531 \r\nTranh: 5+(12421)78\r\nOut: 8 8751584 4685  452458",
+    "ytvideo": "7CgvDSqXGgk,1,30,270,281",
     "vidkey": "Dm",
     "smkey": "",
     "smule": ""
@@ -641,7 +645,7 @@
     "smule": ""
   },
   "lady": {
-    "instrument": "Piano",
+    "instrument": "Piano, Harp",
     "key": "Dm",
     "intro": "[Dm]\r\n158595+35 (858) 158595+35 (858)",
     "ytvideo": "ZbgzJecVbSQ,0,8",

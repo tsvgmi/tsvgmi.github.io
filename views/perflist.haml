@@ -84,8 +84,11 @@
             - selected = params[:listno].to_i == plinfo[:id]
             %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:id]}. #{plinfo[:name][0..39]} [#{plinfo[:song_count]}]"
 
+- if ptn = params[:ptn]
+  - ptn = /#{ptn}/io
 - videos   = []
-- song_list.each_with_index do |sinfo, row_no|
+- row_no   = 0
+- song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
   - hs      = sinfo[:href].split('/')
   - sname   = hs[5]
@@ -94,12 +97,15 @@
   - if version && !version.empty?
     - link += "/#{version}"
   - lyric_id = "row_#{row_no}"
+  - if ptn
+    - next unless "#{oinfo[:lead]}.#{oinfo[:singer]}" =~ ptn
+  - row_no += 1
   .row.song_header
     .col-6
       %button.pull-right.btn.btn-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
         Lyric
       %h5
-        = "#{row_no+1}."
+        = "#{row_no}."
         %a(href=link target='hopamchuan')= sinfo[:name]
       = "#{sinfo[:author]}&nbsp;"
     .col.md

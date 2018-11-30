@@ -117,9 +117,9 @@ get '/perflist/:user' do |user|
   list_info  = playlists.select{|r| r[:id] == listno}.first
   play_order = PlayOrder.new(listno)
   order_list = Hash[play_order.content_str]
+  #Plog.dump_info(order_list:order_list, _ofmt:'Y')
   song_list  = play_order.fetch_songs
 
-  #Plog.dump_info(list_info:list_info, song_list:song_list[0..5], _ofmt:'Y')
 
   perf_info       = PlayNote.new(user)
   haml :perflist, locals: {list_info:list_info, song_list:song_list, user:user,
@@ -317,7 +317,7 @@ class PlayOrder
     sinfo
   end
 
-  def initialize(list_info)
+  def initialize(list_info, options={})
     @list_id    = list_info.is_a?(Hash) ? list_info[:id] : list_info.to_i
     @order_file = "data/#{@list_id}.order"
     @playlist   = PlayList.new(list_info)
