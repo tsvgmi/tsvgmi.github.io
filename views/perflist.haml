@@ -124,7 +124,7 @@
       .pull-right= oinfo[:tempo]
   %div.collapse(id=lyric_id)
     .row
-      -# Plog.dump_info(sname:sname, perf_note:perf_info[sname])
+      - Plog.dump_info(sname:sname)
       - perf_note = perf_info[sname] || {}
       - if perf_note[:ytvideo] && !perf_note[:ytvideo].empty?
         - video, *ytoffset = perf_note[:ytvideo].split(',')
