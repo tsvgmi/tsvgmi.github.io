@@ -304,8 +304,8 @@
   "nguoi-tinh-mua-dong": {
     "instrument": "Piano",
     "key": "C",
-    "intro": "7+(1254) 75+(32) 4387 25+(25) ",
-    "ytvideo": "enWquTrqYTc,6,21",
+    "intro": "7+(1254) 75+(32) 4387 25+(25) \r\nMid: 998656 565323 998656 56 67 78 12 23 45\r\n1235 1234 1235 1234\r\nOut: 998656 87656 998656 87656",
+    "ytvideo": "enWquTrqYTc,6,21,94,123",
     "vidkey": "C",
     "smkey": "",
     "smule": ""
@@ -417,8 +417,8 @@
   "mong-lanh": {
     "instrument": "Guitar, Brass",
     "key": "Am",
-    "intro": "[Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [F7] [E7] [F7] [E7]\r\n53153156 425432 5315315 676543 5315315 6425432 /3/3 /3 /2/2 /2 /3/3/3 /2",
-    "ytvideo": "IkzjdXk5TH4,2,27",
+    "intro": "[Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [Am] [Bm7b5]-[E] [F7] [E7] [F7] [E7]\r\n53153156 425432 5315315 676543 5315315 6425432 /3/3 /3 /2/2 /2 /3/3/3 /2\r\nOut: [Bm7b5] [E] [C7] [B7] [C7] [B7] [C7] [B7] [Em]\r\n2468987 777 32 123432 342 31 /1",
+    "ytvideo": "IkzjdXk5TH4,2,27,215,232",
     "vidkey": "Am",
     "smkey": "",
     "smule": ""
@@ -663,6 +663,15 @@
     "intro": "[Dm] [Dm] [A] [D7] [Gm] [Gm] [Asus4] [A] [Dm] [Dm]\r\n123 1233 21378988 56766 56766 545 (-5~5)",
     "ytvideo": "nyFeo45st1A,0,26",
     "vidkey": "C#m",
+    "smkey": "",
+    "smule": ""
+  },
+  "nhung-tam-hon-co-don-tam-hon-co-don": {
+    "instrument": "Brass",
+    "key": "Am",
+    "intro": "[Dm7] [G] [Cmaj7] [Fmaj7] [Bm7b5] [E] [Am]\r\n+(3 1324)7 97(213)6 868795 7899+321 /",
+    "ytvideo": "poPNeK4-JSc,2,21",
+    "vidkey": "Cm",
     "smkey": "",
     "smule": ""
   }

@@ -130,7 +130,6 @@
         - video, *ytoffset = perf_note[:ytvideo].split(',')
       - if video
         .col-6
-          -# For youtube video #{sname}
           - ytoffset.each_slice(2) do |ytstart, ytend|
             - vid = "v_#{sname}_#{ytstart}"
             %div(id=vid)
@@ -139,7 +138,6 @@
             - offset = key_offset(perf_note[:vidkey], oinfo[:singer_key])
             - if offset >= 5
               - offset -= 12
-            -# Plog.dump_info(vidkey:perf_note[:vidkey], singer_key:oinfo[:singer_key])
             .pull-right
               Video Key: #{perf_note[:vidkey]}
               %br/
