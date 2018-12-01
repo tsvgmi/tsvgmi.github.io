@@ -195,7 +195,7 @@
     Remember to'
   :song_id: 997
 - !ruby/object:Hash
-  :artist: Quang Dũng
+  :artist: Quang Dũng, Tuấn Ngọc
   :href: https://hopamchuan.com/song/986/phien-da-sau/
   :name: Phiến Đá Sầu
   :preview: 1. Mai em xa rời tôi còn ai cùng đi giữa đời Mênh mông đây là đâu là biển
@@ -236,6 +236,13 @@
   :preview: Từng bước từng bước thầm Hoa vòng rừng tuyết trắng Rặng thông già lặng
     câm
   :song_id: 1508
+- !ruby/object:Hash
+  :artist: Tuấn Vũ, Nguyễn Hồng Ân
+  :href: https://hopamchuan.com/song/5238/nhung-tam-hon-co-don-tam-hon-co-don/
+  :name: Những tâm hồn cô đơn (Tâm hồn cô đơn)
+  :preview: " Đời không như ước mơ lòng người Cuộc  đời xô đẩy mình đến rã  rời Còn
+    lại  gì, ng"
+  :song_id: 5238
 - !ruby/object:Hash
   :artist: Daniel Boone
   :href: https://hopamchuan.com/song/767/beautiful-sunday/

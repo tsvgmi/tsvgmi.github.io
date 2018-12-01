@@ -377,7 +377,7 @@ class PlayOrder
     Plog.info(msg:"Loading #{@order_file}")
     File.read(@order_file).split("\n").each do |r|
       song_id, title, version, singer, skey, style, tempo, lead =
-        r.split(',')
+        r.chomp.split(',')
       next unless title
       song_id = song_id.to_i
       rec = {
