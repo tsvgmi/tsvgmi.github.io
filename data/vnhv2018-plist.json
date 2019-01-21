@@ -27,7 +27,11 @@
   "khuc-tinh-nong": {
     "instrument": "Distortion, Piano, Brass",
     "key": "Dm",
-    "intro": "Base: [Dm]1 131[A7]-7 245[Dm]1 321[A7]-7\n<br>Distortion: 1 543431 5434318 +(12321)78 755 (Same bass line) x 2\n"
+    "intro": "Base: [Dm]1 131[A7]-7 245[Dm]1 321[A7]-7\r\n<br>Distortion: 1 543431 5434318 +(12321)78 755 (Same bass line) x 2\r\n",
+    "ytvideo": "3QCY-aTROIk,6,33",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": ""
   },
   "hay-cho-toi": {
     "instrument": "Distort Synth, Yell, Cowbell",
@@ -672,6 +676,87 @@
     "intro": "[Dm7] [G] [Cmaj7] [Fmaj7] [Bm7b5] [E] [Am]\r\n+(3 1324)7 97(213)6 868795 7899+321 /",
     "ytvideo": "poPNeK4-JSc,2,21",
     "vidkey": "Cm",
+    "smkey": "",
+    "smule": ""
+  },
+  "vung-troi-binh-yen": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "0VJQVTlARhw,0,300",
+    "vidkey": "Gm",
+    "smkey": "",
+    "smule": ""
+  },
+  "sai-gon-dep-lam": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "jg_4Q_4MUc4,10,60",
+    "vidkey": "F",
+    "smkey": "",
+    "smule": ""
+  },
+  "quy-nhon-menh-mang-niem-nho": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "sMyqOEB7m0Y,0,33",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
+  },
+  "cam-on": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "yKCyXrFinh0,0,10",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
+  },
+  "don-xuan": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "lRC1mw6037k,0,38",
+    "vidkey": "C",
+    "smkey": "",
+    "smule": ""
+  },
+  "hoang-vang": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "3TybGjnzY5s,0,23",
+    "vidkey": "C#m",
+    "smkey": "",
+    "smule": ""
+  },
+  "nhu-van-con-day": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "4j3qiOkxg9U,24,42",
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": ""
+  },
+  "que-huong-tuoi-tho-toi": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "NI1Jh4CCjv4,0,36",
+    "vidkey": "G",
+    "smkey": "",
+    "smule": ""
+  },
+  "em-con-nho-mua-xuan": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "fRBg8RDrHUg,0,20",
+    "vidkey": "F#",
     "smkey": "",
     "smule": ""
   }
