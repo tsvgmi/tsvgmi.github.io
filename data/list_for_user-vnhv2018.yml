@@ -1,10 +1,16 @@
 ---
 - !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63482/tet-2019-sr
+  :id: 63482
+  :name: Tet 2019 - SR
+  :sname: 63482/tet-2019-sr
+  :song_count: 23
+- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/61801/vnhv-thu-2017
   :id: 61801
   :name: VNHV - Thu 2017
   :sname: 61801/vnhv-thu-2017
-  :song_count: 51
+  :song_count: 57
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/61478/thanksgiving-18
   :id: 61478
@@ -16,4 +22,4 @@
   :id: 61047
   :name: VNHV 12/2018
   :sname: 61047/vnhv-12-2018
-  :song_count: 56
+  :song_count: 61

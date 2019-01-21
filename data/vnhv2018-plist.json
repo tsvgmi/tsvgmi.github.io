@@ -381,7 +381,7 @@
   "cho-em-quen-tuoi-ngoc": {
     "instrument": "String",
     "key": "Dm",
-    "intro": "[Dm] [C] [Bb] [F] [Gm] [Dm] [Em7b5] [A] [Dm]\r\nString: +3 59 58 37 36 15 124332 1",
+    "intro": "[Dm] [Am/C] [Bb] [F] [Gm] [Dm] [Em7b5] [A] [Dm]\r\nString: +3 59 58 37 36 15 124332 1",
     "ytvideo": "x4jBS1cWEt4,7,35",
     "vidkey": "Em",
     "smkey": "",
@@ -534,7 +534,7 @@
   "dong-song": {
     "instrument": "Violin, Piano",
     "key": "C",
-    "intro": "[C] [G] [Am] [F]-[G] [C]\r\n3 455 54323 3678 787 88",
+    "intro": "[C] [G] [Am] [F]-[G] [Csus4]-[C]\r\n3 455 54323 3678 787 88",
     "ytvideo": "VFKiBEH7WWE,6,24",
     "vidkey": "G",
     "smkey": "",
