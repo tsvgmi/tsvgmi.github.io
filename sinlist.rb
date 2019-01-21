@@ -337,7 +337,7 @@ class PlayOrder
     output = @playlist.fetch[:content].map do |r|
       Plog.dump_info(r:r)
       fs = r[:href].split('/')
-      "#{r[:song_id]},#{fs[5]},,,,,"
+      "#{r[:song_id]},#{fs[5]},,,,,,"
     end
     write_file(output.join("\n"))
   end
