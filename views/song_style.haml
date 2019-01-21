@@ -58,15 +58,16 @@
         %label(for='vidkey') Video Key (Youtube)
         %input.form-control#vidkey(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
       - if ytvideo && !ytvideo.empty?
-        - video, *ytoffset = ytvideo.split(',')
-        - ytoffset.each_slice(2) do |ytstart, ytend|
-          - vid = "video_#{ytstart}_#{ytend}"
-          - Plog.info(start:ytstart, end:ytend, vid:vid)
-          %div(id=vid)
-          - videos << {vid:vid, video:video, start:ytstart.to_i, end:ytend.to_i}
+        - ytvideo.split('|').each do |svideo|
+          - video, *ytoffset = svideo.split(',')
+          - ytoffset.each_slice(2) do |ytstart, ytend|
+            - vid = "video_#{ytstart}_#{ytend}"
+            - Plog.info(start:ytstart, end:ytend, vid:vid)
+            %div(id=vid)
+            - videos << {vid:vid, video:video, start:ytstart.to_i, end:ytend.to_i}
     .col-6
       .form-group
-        %label(for='ytvideo') Smule Record
+        %label(for='smvideo') Smule Record
         %input.form-control#smule(type='text' name='smule' value="#{smule}")
       .form-group
         %label(for='smkey') Video Key (Smule)

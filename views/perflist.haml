@@ -126,22 +126,28 @@
     .row
       - Plog.dump_info(sname:sname)
       - perf_note = perf_info[sname] || {}
+      - yvideos = []
       - if perf_note[:ytvideo] && !perf_note[:ytvideo].empty?
-        - video, *ytoffset = perf_note[:ytvideo].split(',')
-      - if video
+        - yvideos = perf_note[:ytvideo].split('|')
+        - vidkeys = perf_note[:vidkey].split('|')
+      - if yvideos.size > 0
         .col-6
-          - ytoffset.each_slice(2) do |ytstart, ytend|
-            - vid = "v_#{sname}_#{ytstart}"
-            %div(id=vid)
-            - videos << {vid:vid, video:video, start:ytstart.to_i, end:ytend.to_i}
-          - if perf_note[:vidkey]
-            - offset = key_offset(perf_note[:vidkey], oinfo[:singer_key])
-            - if offset >= 5
-              - offset -= 12
-            .pull-right
-              Video Key: #{perf_note[:vidkey]}
-              %br/
-              Transpose: #{offset*(-1)}
+          - yvideos.zip(vidkeys).each do |ytvideo, vidkey|
+            - video, *ytoffset = ytvideo.split(',')
+            - Plog.dump_info(video:video, ytoffset:ytoffset)
+            - if video
+              - ytoffset.each_slice(2) do |ytstart, ytend|
+                - vid = "v_#{video}_#{ytstart}"
+                %div(id=vid)
+                - videos << {vid:vid, video:video, start:ytstart.to_i, end:ytend.to_i}
+              - if vidkey
+                - offset = key_offset(vidkey, oinfo[:singer_key])
+                - if offset >= 5
+                  - offset -= 12
+                .pull-right
+                  Video Key: #{vidkey}
+                  %br/
+                  Transpose: #{offset*(-1)}
       - unless perf_note.empty?
         .col-2
           = perf_note[:instrument]
