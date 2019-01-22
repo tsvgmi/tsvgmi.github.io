@@ -60,7 +60,11 @@
   "ha-noi-mua-vang-nhung-con-mua": {
     "instrument": "Polysynth (Plus/P2)",
     "key": "Am",
-    "intro": "[Am]1232 [F]1232 [Am]1232 [E7]712-7 4321\r\n[Am]1232 [F]1232 [Am]1232 [E7]712-7 432[Am]1"
+    "intro": "[Am]1232 [F]1232 [Am]1232 [E7]712-7 4321\r\n[Am]1232 [F]1232 [Am]1232 [E7]712-7 432[Am]1",
+    "ytvideo": "YVD5MCSdHOc,0,31",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": ""
   },
   "hai-phuong-troi-cach-biet": {
     "instrument": "String, Accordeon, Flute",
@@ -808,6 +812,15 @@
     "intro": "",
     "ytvideo": "aHYICTWlPnU,0,28",
     "vidkey": "Gm",
+    "smkey": "",
+    "smule": ""
+  },
+  "mua-xuan-cua-me": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "8_3X4EvajXM,0,36",
+    "vidkey": "Bb",
     "smkey": "",
     "smule": ""
   }
