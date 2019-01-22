@@ -2,7 +2,11 @@
   "se-hon-bao-gio-het": {
     "instrument": "Brass, Bass, Guitar",
     "key": "Dm",
-    "intro": "|[Dm]155 |[Em7b5]662 [A7]445 |[Dm]155 |[Em7b5]662 [A7]445\n"
+    "intro": "|[Dm]155 |[Em7b5]662 [A7]445 |[Dm]155 |[Em7b5]662 [A7]445\r\n",
+    "ytvideo": "1-iD9Mk_YF0,0,13",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": ""
   },
   "trai-tim-con-trinh": {
     "instrument": "Sax, Piano, Mandolin, Clarinet, Acoustic Guitar",
@@ -786,6 +790,24 @@
     "intro": "",
     "ytvideo": "vGJTaP6anOU,0,8",
     "vidkey": "D",
+    "smkey": "",
+    "smule": ""
+  },
+  "don-vang-chieu-xuan": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "ZptOcM7nugg,0,23",
+    "vidkey": "A",
+    "smkey": "",
+    "smule": ""
+  },
+  "xuan-yeu-thuong": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "aHYICTWlPnU,0,28",
+    "vidkey": "Gm",
     "smkey": "",
     "smule": ""
   }
