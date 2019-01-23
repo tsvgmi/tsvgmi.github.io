@@ -310,8 +310,8 @@
     "instrument": "Guitar, String, Sax",
     "key": "C",
     "intro": "Guitar: [C] [C] [Am] [Am] [Dm] [Em] [Em] [G]\r\nSax: [F] [F] [Em] [Em] [Dm] [G] [C] [F] [C]\r\n51235875 512357988 8678+(23544) 68+(433) 568+(321)6789\r\n11216+1(14) +(54321)7353 +(4321)7249 987543-71",
-    "ytvideo": "jTlQ3MdXLaQ,0,39|CxRtHlsUWoM,0,21",
-    "vidkey": "A|F#",
+    "ytvideo": "jTlQ3MdXLaQ,0,39|CxRtHlsUWoM,0,21|mZQv1lIDYbU,118,162",
+    "vidkey": "A|F#|F",
     "smkey": "",
     "smule": ""
   },
@@ -820,6 +820,33 @@
     "key": "",
     "intro": "",
     "ytvideo": "8_3X4EvajXM,0,36",
+    "vidkey": "Bb",
+    "smkey": "",
+    "smule": ""
+  },
+  "hoa-xuan": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "DDKXymoaOxg,0,39",
+    "vidkey": "G",
+    "smkey": "",
+    "smule": ""
+  },
+  "mua-hoa-anh-dao": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "hxmWwjn9o-c,10,30",
+    "vidkey": "F#m",
+    "smkey": "",
+    "smule": ""
+  },
+  "cho-dong": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "AKJ8j1CtG4I,0,17",
     "vidkey": "Bb",
     "smkey": "",
     "smule": ""
