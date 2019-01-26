@@ -709,9 +709,9 @@
   },
   "quy-nhon-menh-mang-niem-nho": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "sMyqOEB7m0Y,0,33",
+    "key": "Dm",
+    "intro": "[Dm] [Bb] [Gm] [Eb]-[A]\r\n[Dm] [Bb] [Gm] [A] [Dm]\r\n5125321 6126321 4 654685\r\n5125321 6126321 432 15 458",
+    "ytvideo": "sMyqOEB7m0Y,1,33",
     "vidkey": "Dm",
     "smkey": "",
     "smule": ""
@@ -745,10 +745,10 @@
   },
   "nhu-van-con-day": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Dm",
+    "intro": "[Dm] [Gm] [C] [F] [Bb] [Gm] [Asus4] [A7]\r\n123 21876 132 65 678 7654 56887 - 5432",
     "ytvideo": "4j3qiOkxg9U,24,42",
-    "vidkey": "Em",
+    "vidkey": "C#m",
     "smkey": "",
     "smule": ""
   },
@@ -844,8 +844,8 @@
   },
   "cho-dong": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "C",
+    "intro": "[C] [Em] [F] [A7] [Dm] [Fm] [G] [F] [F#dim] [G]\r\n17165 32376 65654 45689865 (234 434/4 345)",
     "ytvideo": "AKJ8j1CtG4I,0,17",
     "vidkey": "Bb",
     "smkey": "",
