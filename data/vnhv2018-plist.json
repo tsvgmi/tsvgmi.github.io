@@ -691,8 +691,8 @@
   },
   "vung-troi-binh-yen": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Dm",
+    "intro": "[Dm] [Bb] [Gm] [Am] [Dm] [Bb] [Gm] [Am]\r\n([Dm]) x 8 ",
     "ytvideo": "0VJQVTlARhw,0,300",
     "vidkey": "Gm",
     "smkey": "",
@@ -700,9 +700,9 @@
   },
   "sai-gon-dep-lam": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "jg_4Q_4MUc4,10,60",
+    "key": "C",
+    "intro": "[F] [Em] [Dm]-[G] [C]\r\n[F] [Em] [Dm]-[G] [G] [G] [G]\r\n[C] [C#dim] [Dm] [G] [C] [C] [C] [C]\r\n[C] [C#dim] [Dm] [G] [C] [C] [C] [C]\r\nVoice: 8686 (1468) 7575 (7246) 6464 (572465)\r\n345 8686 (1468876) 7575 (6246654) \r\n5724432 5724432 5724432 55443322 5544332\r\n6565657 6565651 6565657 65465656568 8 88\r\n",
+    "ytvideo": "jg_4Q_4MUc4,10,61",
     "vidkey": "F",
     "smkey": "",
     "smule": ""
@@ -718,8 +718,8 @@
   },
   "cam-on": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Dm",
+    "intro": "[Dm] [Am] [Gm] [Dm]\r\n88778 77557 44334 578",
     "ytvideo": "yKCyXrFinh0,0,10",
     "vidkey": "Dm",
     "smkey": "",
@@ -727,8 +727,8 @@
   },
   "don-xuan": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "C",
+    "intro": "[C] [C] [Dm]-[Em]-[F]-[F#]-[G]\r\n[C] [C] [Dm]-[Em]-[F]-[F#]-[G] [G] [G] [G] [G]\r\n11223 (8565) 11223 (8565) 23445 \r\n11223 (8565) 11223 (8565) 23445 5667 7789\r\n54523 54523 5 5658",
     "ytvideo": "lRC1mw6037k,0,38",
     "vidkey": "C",
     "smkey": "",
@@ -736,9 +736,9 @@
   },
   "hoang-vang": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "3TybGjnzY5s,0,23",
+    "key": "Dm",
+    "intro": "[Dm] [Bb] [Dm] [Bb] [Dm] [Bb] [Dm] [Bb] [Dm]\r\n5 6 5 6 51236 51236\r\n51236123 51236123",
+    "ytvideo": "3TybGjnzY5s,0,25",
     "vidkey": "C#m",
     "smkey": "",
     "smule": ""
@@ -781,8 +781,8 @@
   },
   "hoa-soan-ben-them-cu": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "C",
+    "intro": "Keyboard / (Keyboard+Bass) -\r\n[Dm] [G] [C] [C] [Dm] [C] [Dm]-[Em]-[F]-[G]-[C]\r\n(Keyboard/Bass) 1356 562456 2456 561356\r\n1345 562456 2456 561\r\n(Trumpet) 135764 7764 135763 7753\r\n135764 13753 2345 3456 456798\r\n",
     "ytvideo": "_OJVLRFulrE,0,34",
     "vidkey": "C#",
     "smkey": "",
@@ -790,8 +790,8 @@
   },
   "can-t-help-falling-in-love-with-you": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "C",
+    "intro": "Chord intro\r\n[C] [G] [C] [C]\r\n",
     "ytvideo": "vGJTaP6anOU,0,8",
     "vidkey": "D",
     "smkey": "",
@@ -808,8 +808,8 @@
   },
   "xuan-yeu-thuong": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Dm",
+    "intro": "[Dm]-[C] [Dm]-[C] [Dm]\r\n[Dm]-[C] [Dm]-[C] [Dm]\r\n[Dm] [Dm] [C] [C] [Bb] [A] [Dm] [Dm]\r\n111177111 177111 177111\r\n1321 7987 6876 1321",
     "ytvideo": "aHYICTWlPnU,0,28",
     "vidkey": "Gm",
     "smkey": "",
@@ -817,8 +817,8 @@
   },
   "mua-xuan-cua-me": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "G",
+    "intro": "[G] [D] [Em]-[A] [D]\r\n[G] [D] [Em]-[A] [D]\r\n[Cmaj7] [A7] [D] [Cmaj7]-[D] [G]-[D] [G]\r\nString: 5565 5565\r\nTranh: ~132168985\r\nString: 5565 5565\r\nString: ~132123565\r\nCo: 51235321362 25632151, Tranh:  1256251",
     "ytvideo": "8_3X4EvajXM,0,36",
     "vidkey": "Bb",
     "smkey": "",
@@ -826,8 +826,8 @@
   },
   "hoa-xuan": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "G",
+    "intro": "[G] [Am] [D] [G]\r\n[G] [Am] [D] [G] [C] [D]\r\n+3156+(33 55432)\r\n+274599 +(445323) x 2 (Piano then String)\r\n654 565",
     "ytvideo": "DDKXymoaOxg,0,39",
     "vidkey": "G",
     "smkey": "",
@@ -835,8 +835,8 @@
   },
   "mua-hoa-anh-dao": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Dm",
+    "intro": "[Dmadd9] (Hold)\r\n[Dm] [Gm] [Dm] [Gm] \r\n(1 56) 98685 (1 56) 98685",
     "ytvideo": "hxmWwjn9o-c,10,30",
     "vidkey": "F#m",
     "smkey": "",
@@ -848,6 +848,15 @@
     "intro": "",
     "ytvideo": "AKJ8j1CtG4I,0,17",
     "vidkey": "Bb",
+    "smkey": "",
+    "smule": ""
+  },
+  "ly-ruou-mung": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[G] [C] [G] [G] [Abdim] [Am] [D7] [G]\r\n[G] [C] [G] [G] [Abdim] [Am] [G] [C]\r\n[C] [Am] [Em] [G] [G] [Dm]-[G] [C]-[G] [C]\r\n5789  5123 52345 55434 4323 3212\r\n5789 5123 52345  553434 4323 2178\r\n8555 633 5222 56532321758\r\n",
+    "ytvideo": "qaltRkQEtdg,12,41",
+    "vidkey": "D",
     "smkey": "",
     "smule": ""
   }
