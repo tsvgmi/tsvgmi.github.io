@@ -90,6 +90,8 @@
 - row_no   = 0
 - song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
+  - next if oinfo[:singer].start_with?('-')
+  - Plog.dump_info(oinfo:oinfo)
   - hs      = sinfo[:href].split('/')
   - sname   = hs[5]
   - version = oinfo[:version]

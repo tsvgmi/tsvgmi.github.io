@@ -859,5 +859,67 @@
     "vidkey": "D",
     "smkey": "",
     "smule": ""
+  },
+  "tinh-khuc-mua-xuan": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[C]-[A7] [Dm] [G] [C]\r\n[C]-[A7] [Dm] [G] [C]\r\n-55433 -55442 -66544-(65)3\r\n-55433 -55442 -6654-(678)",
+    "ytvideo": "FmfCxfG2T4Y,0,34",
+    "vidkey": "F#",
+    "smkey": "",
+    "smule": ""
+  },
+  "canh-thiep-dau-xuan": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[C] [C] [Dm] [Em] [Am] [Dm] [G] [C]\r\nTranh: ~35123 -(569865) ~46124 246785 \r\n~35123 35-712 242465 245321 ~35321",
+    "ytvideo": "gPqByrOJiek,0,24",
+    "vidkey": "C#",
+    "smkey": "",
+    "smule": ""
+  },
+  "tinh-xuan": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "",
+    "vidkey": "",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "A",
+    "nct": "28BdwDQYIl"
+  },
+  "co-nho-dem-nao": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "[Dm]\r\n1 33211  / -533211 / 33211 ",
+    "ytvideo": "Zi2t4wVidlc,55,69",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "thoi-dung-chiem-bao": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "[Dm] [Am] [Gm] [Dm] [Dm] [Am] [Gm]-[Em7b5] [Asus4]-[A]\r\n[Dm] [Am] [Gm] [Dm] [Dm]-[C] [Bb] [Gm] [A]\r\n3215142 8764687 3215154 4567765\r\n3215142 8764698 3215154 766 545",
+    "ytvideo": "f8UJ1SIjaNk,0,30",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "chan-tinh": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [A7] [Dm] [Dm] [F]-[G] [C] [Em]-[F]-[E7] [Am]\r\n213 43215 76655854 324 43215 76887678",
+    "ytvideo": "UKYCAqb_QhE,0,29",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }

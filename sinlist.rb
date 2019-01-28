@@ -52,9 +52,10 @@ post '/song-style' do
   pnote     = PlayNote.new(user)
   uperf_info = {
     instrument:params[:instrument], key:params[:key],
-    intro:params[:intro], ytvideo:params[:ytvideo],
-    vidkey:params[:vidkey], smkey:params[:smkey],
-    smule:params[:smule],
+    intro:params[:intro],
+    ytvideo:params[:ytvideo], vidkey:params[:vidkey],
+    smkey:params[:smkey],     smule:params[:smule],
+    nctkey:params[:nctkey],   nct:params[:nct],
   }
   pnote.replace(song_id, song_name, uperf_info)
   flash[:notice] = "Style for #{song_name} replaced"
@@ -114,14 +115,12 @@ get '/perflist/:user' do |user|
   else
     listno = playlists[0][:id]
   end
+
   list_info  = playlists.select{|r| r[:id] == listno}.first
   play_order = PlayOrder.new(listno)
   order_list = Hash[play_order.content_str]
-  #Plog.dump_info(order_list:order_list, _ofmt:'Y')
   song_list  = play_order.fetch_songs
-
-
-  perf_info       = PlayNote.new(user)
+  perf_info  = PlayNote.new(user)
   haml :perflist, locals: {list_info:list_info, song_list:song_list, user:user,
                            order_list:order_list, 
                            playlists:playlists, perf_info:perf_info}
