@@ -803,12 +803,14 @@
   },
   "don-vang-chieu-xuan": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "ZptOcM7nugg,0,23",
-    "vidkey": "A",
+    "key": "D",
+    "intro": "\r\n---\r\n[D] [Em] [D] [Em] [D]\r\n123634 651 23634 651",
+    "ytvideo": "ZptOcM7nugg,0,23|jFrV0b1kFOc,2,16",
+    "vidkey": "A|E",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "xuan-yeu-thuong": {
     "instrument": "[]",
