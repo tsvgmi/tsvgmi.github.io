@@ -719,11 +719,13 @@
   "cam-on": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "[Dm] [Am] [Gm] [Dm]\r\n88778 77557 44334 578",
+    "intro": "[Dm] [Am] [Gm] [Dm]\r\n88778 (1875) 77557 (1754) 44334 (45-71) 4578",
     "ytvideo": "yKCyXrFinh0,0,10",
     "vidkey": "Dm",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "don-xuan": {
     "instrument": "[]",
