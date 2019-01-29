@@ -2,11 +2,13 @@
   "se-hon-bao-gio-het": {
     "instrument": "Brass, Bass, Guitar",
     "key": "Dm",
-    "intro": "|[Dm]155 |[Em7b5]662 [A7]445 |[Dm]155 |[Em7b5]662 [A7]445\r\n",
+    "intro": "[Dm] [Em7b5]-[A] [Dm] [Em7b5]-[A] [Dm] [Em7b5]-[A]\r\n155 662445 155 662445 155662445\r\n",
     "ytvideo": "1-iD9Mk_YF0,0,13",
     "vidkey": "Dm",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "trai-tim-con-trinh": {
     "instrument": "Sax, Piano, Mandolin, Clarinet, Acoustic Guitar",
@@ -692,11 +694,13 @@
   "vung-troi-binh-yen": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "[Dm] [Bb] [Gm] [Am] [Dm] [Bb] [Gm] [Am]\r\n([Dm]) x 8 ",
+    "intro": "[Dm] [Bb] [Gm] [A] [Dm] [Bb] [Gm] [A]\r\n([Dm]) x 8 ",
     "ytvideo": "0VJQVTlARhw,0,300",
     "vidkey": "Gm",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "sai-gon-dep-lam": {
     "instrument": "[]",
@@ -710,11 +714,13 @@
   "quy-nhon-menh-mang-niem-nho": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "[Dm] [Bb] [Gm] [Eb]-[A]\r\n[Dm] [Bb] [Gm] [A] [Dm]\r\n5125321 6126321 4 654685\r\n5125321 6126321 432 15 458",
+    "intro": "[Dm] [Bb] [Gm]-[Eb] [A]\r\n[Dm] [Bb] [Gm]-[A] [Dm]\r\n-5125321 -6126321 -(4 654)685\r\n-5125321 -6126321 432 15 458",
     "ytvideo": "sMyqOEB7m0Y,1,33",
     "vidkey": "Dm",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "cam-on": {
     "instrument": "[]",
