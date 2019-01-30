@@ -33,11 +33,13 @@
   "khuc-tinh-nong": {
     "instrument": "Distortion, Piano, Brass",
     "key": "Dm",
-    "intro": "Base: [Dm]1 131[A7]-7 245[Dm]1 321[A7]-7\r\n<br>Distortion: 1 543431 5434318 +(12321)78 755 (Same bass line) x 2\r\n",
+    "intro": "[Dm] [A7] [Dm] [A7]\r\n1 131-7 2451 321-7\r\n1 131-7 2451 321-7\r\n",
     "ytvideo": "3QCY-aTROIk,6,33",
     "vidkey": "Cm",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "hay-cho-toi": {
     "instrument": "Distort Synth, Yell, Cowbell",
@@ -695,7 +697,7 @@
     "instrument": "[]",
     "key": "Dm",
     "intro": "[Dm] [Bb] [Gm] [A] [Dm] [Bb] [Gm] [A]\r\n([Dm]) x 8 ",
-    "ytvideo": "0VJQVTlARhw,0,300",
+    "ytvideo": "0VJQVTlARhw,0,30",
     "vidkey": "Gm",
     "smkey": "",
     "smule": "",
@@ -792,11 +794,13 @@
   "hoa-soan-ben-them-cu": {
     "instrument": "[]",
     "key": "C",
-    "intro": "Keyboard / (Keyboard+Bass) -\r\n[Dm] [G] [C] [C] [Dm] [C] [Dm]-[Em]-[F]-[G]-[C]\r\n(Keyboard/Bass) 1356 562456 2456 561356\r\n1345 562456 2456 561\r\n(Trumpet) 135764 7764 135763 7753\r\n135764 13753 2345 3456 456798\r\n",
+    "intro": "Keyboard / (Keyboard+Bass) -\r\n[Dm] [G] [C] [C] [Dm] [C] [Dm]-[Em]-[F]-[G]-[C]\r\n(Keyboard/Bass) +(13)56 56+(24)56 +(24)56 56+(13)56\r\n+(13)56 56+(24)56 +(24)56 561\r\n(Trumpet) +135764 7764 135763 7753\r\n135764 13753 2345 3456 456798\r\n",
     "ytvideo": "_OJVLRFulrE,0,34",
     "vidkey": "C#",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "can-t-help-falling-in-love-with-you": {
     "instrument": "[]",
@@ -808,9 +812,9 @@
     "smule": ""
   },
   "don-vang-chieu-xuan": {
-    "instrument": "[]",
+    "instrument": "Brass",
     "key": "D",
-    "intro": "\r\n---\r\n[D] [Em] [D] [Em] [D]\r\n123634 651 23634 651",
+    "intro": "---\r\n[D] [Em] [D] [Em] [D]\r\n123634 651 23634 651",
     "ytvideo": "ZptOcM7nugg,0,23|jFrV0b1kFOc,2,16",
     "vidkey": "A|E",
     "smkey": "",
@@ -830,11 +834,13 @@
   "mua-xuan-cua-me": {
     "instrument": "[]",
     "key": "G",
-    "intro": "[G] [D] [Em]-[A] [D]\r\n[G] [D] [Em]-[A] [D]\r\n[Cmaj7] [A7] [D] [Cmaj7]-[D] [G]-[D] [G]\r\nString: 5565 5565\r\nTranh: ~132168985\r\nString: 5565 5565\r\nString: ~132123565\r\nCo: 51235321362 25632151, Tranh:  1256251",
+    "intro": "[G] [D] [Em]-[A] [D]\r\n[G] [D] [Em]-[A] [D]\r\n[Cmaj7] [A7] [D] [Cmaj7]-[D] [G]-[D] [G]\r\nString: 5565 5565\r\nTranh: ~+(1321)68985\r\nString: 5565 5565\r\nString: ~+(132123565)\r\nCo: -512353213-62 -(256)32151, Tranh:  1256251",
     "ytvideo": "8_3X4EvajXM,0,36",
     "vidkey": "Bb",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "hoa-xuan": {
     "instrument": "[]",
@@ -917,7 +923,7 @@
   "thoi-dung-chiem-bao": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "[Dm] [Am] [Gm] [Dm] [Dm] [Am] [Gm]-[Em7b5] [Asus4]-[A]\r\n[Dm] [Am] [Gm] [Dm] [Dm]-[C] [Bb] [Gm] [A]\r\n3215142 8764687 3215154 4567765\r\n3215142 8764698 3215154 766 545",
+    "intro": "[Dm] [Am] [Gm] [Dm] [Dm] [Am] [Gm]-[Em7b5] [Asus4]-[A]\r\n[Dm] [Am] [Gm] [Dm] [Dm]-[C] [Bb] [Gm] [A]\r\n+(321)5142 8764687 +(321)5154 4567765\r\n+(321)5142 8764698 +(321)5154 766 545",
     "ytvideo": "f8UJ1SIjaNk,0,30",
     "vidkey": "Cm",
     "smkey": "",
@@ -928,9 +934,31 @@
   "chan-tinh": {
     "instrument": "[]",
     "key": "Am",
-    "intro": "[Am] [A7] [Dm] [Dm] [F]-[G] [C] [Em]-[F]-[E7] [Am]\r\n213 43215 76655854 324 43215 76887678",
+    "intro": "[Am] [A7] [Dm]-[Dm/C#] [Dm] [F]-[G] [C] [Em]-[F]-[E7] [Am]\r\n213 43215 76655854 324 43215 76887678",
     "ytvideo": "UKYCAqb_QhE,0,29",
     "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "diep-khuc-mua-xuan": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Dm] [G] [C] [F] [Dm] [E] [Am]\r\n[Dm] [G] [C] [F] [Dm] [E] [Am]\r\nPiano: 56543234 65432123 54321-7124345\r\nSynth: 56543234 65432123 54321-7123231",
+    "ytvideo": "CxOF7rsEL1k,0,24",
+    "vidkey": "C#m",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "hay-ve-voi-em-hay-ve-voi-anh": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "[Dm] [Gm] [Bb] [A] [Dm]\r\n21-5 -5*55543-6 -6123 -5432 1-721",
+    "ytvideo": "t38kJQoGhmQ,0,14",
+    "vidkey": "Gm",
     "smkey": "",
     "smule": "",
     "nctkey": "",
