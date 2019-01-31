@@ -854,11 +854,13 @@
   "mua-hoa-anh-dao": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "[Dmadd9] (Hold)\r\n[Dm] [Gm] [Dm] [Gm] \r\n(1 56) 98685 (1 56) 98685",
+    "intro": "[Dmadd9] (Hold)\r\n[Dm] [Gm] [Dm] [Gm] \r\n(1 556) 98685 (1 556) 98685",
     "ytvideo": "hxmWwjn9o-c,10,30",
     "vidkey": "F#m",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "cho-dong": {
     "instrument": "[]",
@@ -956,7 +958,7 @@
   "hay-ve-voi-em-hay-ve-voi-anh": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "[Dm] [Gm] [Bb] [A] [Dm]\r\n21-5 -5*55543-6 -6123 -5432 1-721",
+    "intro": "[Dm] [Gm] [Bb] [A] [Dm]\r\n21-5 -5*55543-6 -6123 -6432 1-721",
     "ytvideo": "t38kJQoGhmQ,0,14",
     "vidkey": "Gm",
     "smkey": "",
