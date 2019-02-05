@@ -927,7 +927,7 @@
   "thoi-dung-chiem-bao": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "--- Slow\r\n[Dm] [Am] [Gm] [Dm] [Dm] [Am] [Gm]-[Em7b5] [Asus4]-[A]\r\n[Dm] [Am] [Gm] [Dm] [Dm]-[C] [Bb] [Gm] [A]\r\n+(321)5142 8764687 +(321)5154 4567765\r\n+(321)5142 8764698 +(321)5154 766 545\r\n--- Techno\r\n(DK)\r\n1#1 1#1 1#1 1#1 - 1#1 1#1 1#1 1#1\r\n\r\n\r\n",
+    "intro": "--- Slow\r\n[Dm] [Am] [Gm] [Dm] [Dm] [Am] [Gm]-[Em7b5] [Asus4]-[A]\r\n[Dm] [Am] [Gm] [Dm] [Dm]-[C] [Bb] [Gm] [A]\r\n+(321)5142 8764687 +(321)5154 4567765\r\n+(321)5142 8764698 +(321)5154 766 545\r\n--- Techno\r\n(DK)\r\n[Dm] [Gm] [C] [F] [Bb] [Gm] [Em7b5]-[A] [Dm]\r\n1#1 1#1 1#1 1#1 - 1#1 1#1 1#1 1#1\r\n\r\n\r\n",
     "ytvideo": "GfO0uXnWXOU,0,60|f8UJ1SIjaNk,0,30",
     "vidkey": "Dm|Cm",
     "smkey": "",
@@ -960,9 +960,20 @@
   "hay-ve-voi-em-hay-ve-voi-anh": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "--- Slow\r\n[Dm] [Gm] [Bb] [A] [Dm]\r\n21-5 -5*55543-6 -6123 -6432 1-721\r\n--- Techno (same as DK)\r\n[Dm] [Dm] [Bb] [C] [Gm] [Gm] [Bb] [A] [A] [Dm] [Dm]\r\n",
+    "intro": "--- Slow\r\n[Dm] [Gm] [Bb] [A] [Dm]\r\n21-5 -5*55543-6 -6123 -6432 1-721\r\n--- Techno (same as DK)\r\n[Dm] [Dm] [Bb] [C] [Gm] [Gm] [Bb] [A] [A] [Dm] [Dm]\r\n[Dm] x 4\r\n(Drum Intro)",
     "ytvideo": "oSLJ-06Nzcw,2,39|t38kJQoGhmQ,0,14",
-    "vidkey": "Dm|Gm",
+    "vidkey": "F#m|Gm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "xuan-ca": {
+    "instrument": "Flute, String",
+    "key": "G",
+    "intro": "[G] [G] [G] [G]\r\n[C]-[Cm6] [G] [C]-[Cm6] [G]\r\n5854345 5854345 5854345 5854341\r\n8888988 8888988",
+    "ytvideo": "-11eT3Q6bGk,6,27",
+    "vidkey": "G",
     "smkey": "",
     "smule": "",
     "nctkey": "",
