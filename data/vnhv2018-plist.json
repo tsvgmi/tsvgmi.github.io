@@ -823,13 +823,15 @@
     "nct": ""
   },
   "xuan-yeu-thuong": {
-    "instrument": "[]",
+    "instrument": "String Hit, Horn",
     "key": "Dm",
-    "intro": "[Dm]-[C] [Dm]-[C] [Dm]\r\n[Dm]-[C] [Dm]-[C] [Dm]\r\n[Dm] [Dm] [C] [C] [Bb] [A] [Dm] [Dm]\r\n111177111 177111 177111\r\n1321 7987 6876 1321",
+    "intro": "String Hit: [Dm]-[C] [Dm]-[C] [Dm]\r\n[Dm]-[C] [Dm]-[C] [Dm]\r\nHorn: [Dm] [Dm] [C] [C] [Bb] [A] [Dm] [Dm]\r\n111177111 177111 177111\r\n1321 7987 6876 1321",
     "ytvideo": "aHYICTWlPnU,0,28",
     "vidkey": "Gm",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "mua-xuan-cua-me": {
     "instrument": "[]",
