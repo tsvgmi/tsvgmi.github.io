@@ -694,7 +694,7 @@
     "smule": ""
   },
   "vung-troi-binh-yen": {
-    "instrument": "[]",
+    "instrument": "Synth,  Sweep",
     "key": "Dm",
     "intro": "[Dm] [Bb] [Gm] [A] [Dm] [Bb] [Gm] [A]\r\n([Dm]) x 8 ",
     "ytvideo": "0VJQVTlARhw,0,30",
@@ -971,7 +971,7 @@
   "xuan-ca": {
     "instrument": "Flute, String",
     "key": "G",
-    "intro": "[G] [G] [G] [G]\r\n[C]-[Cm6] [G] [C]-[Cm6] [G]\r\n5854345 5854345 5854345 5854341\r\n8888988 8888988",
+    "intro": "[G] [G] [G] [G]\r\n[G]-[Cm6] [G] [G]-[Cm6] [G]\r\n5854345 5854345 5854345 5854341\r\n8888988 8888988",
     "ytvideo": "-11eT3Q6bGk,6,27",
     "vidkey": "G",
     "smkey": "",
