@@ -900,11 +900,13 @@
   "canh-thiep-dau-xuan": {
     "instrument": "[]",
     "key": "C",
-    "intro": "[C] [C] [Dm] [Em] [Am] [Dm] [G] [C]\r\nTranh: ~35123 -(569865) ~46124 246785 \r\n~35123 35-712 242465 245321 ~35321",
+    "intro": "[C] [C] [Dm] [Em] [Am] [Dm] [G] [C] /\r\nTranh: ~35123 -(569865) ~46124 246785 \r\n~35123 35-712 242465 245321 ~35321",
     "ytvideo": "gPqByrOJiek,0,24",
     "vidkey": "C#",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "tinh-xuan": {
     "instrument": "[]",

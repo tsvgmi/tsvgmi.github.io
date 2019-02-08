@@ -11,9 +11,11 @@
 9159,don-vang-chieu-xuan,thienv,mai-huong,E,Rhumba,,thien
 6974,xuan-nay-con-ve-me-o-dau,thienv,liem,C,Bolero,,huy
 10481,tinh-xuan,,thanh,G,Chacha,,thanh
-5661,xuan-ca,thienv,huy,C,Bebop,,huy/thien
+5661,xuan-ca,thienv,huy,C,Bebop,,cau
 2377,mua-hoa-anh-dao,,thuy-dung,Am,Bolero,,huy
 5127,em-con-nho-mua-xuan,,thuy-hang,G,Slow,,huy
+1207,hay-ve-voi-em-hay-ve-voi-anh,,ngoc-lien,Em,,,thien
+2863,thoi-dung-chiem-bao,,ngoc-lien,Am,,,thien
 592,va-toi-cung-yeu-em,,loc,A,Bebob,,cau
 3785,mua-xuan-cua-me,vnhv2018,yen-phuong,G,Bolero,,thien
 4002,se-hon-bao-gio-het,thienv,michelle,Dm,Chacha,,thien
@@ -25,8 +27,6 @@
 6083,cho-dong,thienv,huy,C,Slow,,thien
 5377,hoa-xuan,thienv,thuy-dung,D,Slow-Rock,,thien
 2775,que-huong-tuoi-tho-toi,thienv,thuy-hang,G,Slow,,cau
-1207,hay-ve-voi-em-hay-ve-voi-anh,,ngoc-lien,Em,,,thien
-2863,thoi-dung-chiem-bao,,ngoc-lien,Am,,,thien
 
 3014,tinh-khuc-mua-xuan,,-ngoc-lien,Dm,,
 2269,nhu-van-con-day,thienv,-ngoc-tram,Em,Slow,,cau/thien
