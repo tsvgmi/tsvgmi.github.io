@@ -766,12 +766,14 @@
   },
   "que-huong-tuoi-tho-toi": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "G",
+    "intro": "[G] [Bm] [C] [D]",
     "ytvideo": "NI1Jh4CCjv4,0,36",
     "vidkey": "G",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "em-con-nho-mua-xuan": {
     "instrument": "[]",
@@ -784,12 +786,14 @@
   },
   "ly-cafe-cuoi-cung": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Dm",
+    "intro": "[Dm] [C] [Bb] [A7] [Dm]",
     "ytvideo": "KLugnESP7ak,425,445",
     "vidkey": "Bm",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "hoa-soan-ben-them-cu": {
     "instrument": "[]",
@@ -971,7 +975,7 @@
   "xuan-ca": {
     "instrument": "Flute, String",
     "key": "G",
-    "intro": "[G] [G] [G] [G]\r\n[G]-[Cm6] [G] [G]-[Cm6] [G]\r\n5854345 5854345 5854345 5854341\r\n8888988 8888988",
+    "intro": "Cau Intro: [C] [F] [G] [C] [F] [G] \r\n---\r\n[G] [G] [G] [G]\r\n[G]-[Cm6] [G] [G]-[Cm6] [G]\r\n5854345 5854345 5854345 5854341\r\n8888988 8888988\r\n",
     "ytvideo": "-11eT3Q6bGk,6,27",
     "vidkey": "G",
     "smkey": "",
