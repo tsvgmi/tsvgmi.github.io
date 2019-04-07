@@ -136,9 +136,36 @@ get '/send_patch/:pstring' do |pstring|
   haml :patch_info, locals: {presult:presult}, layout:nil
 end
 
-
 get '/poke/:command' do |command|
   `#{command} 2>&1`
+end
+
+get '/smremove/:user/:sid' do |user, sid|
+  SmContent.new(user).remove(sid)
+  redirect "/smulelist/#{user}"
+end
+
+get '/smulelist/:user' do |user|
+  content = []
+  singer  = (params[:singer] || "").split
+  singers = {}
+  records = SmContent.new(user).content
+  records.each do |sid, r|
+    if singer.size > 0
+      next unless (r[:record_by] & singer).size > 0
+    end
+    if params[:title] && r[:title] != params[:title]
+      next
+    end
+    content << r
+    r[:record_by].each do |asinger|
+      singers[asinger] ||= {count:0, listens:0, loves:0}
+      singers[asinger][:count] += 1
+      singers[asinger][:listens] += r[:listens]
+      singers[asinger][:loves] += r[:loves]
+    end
+  end
+  haml :smulelist, locals: {user:user, content:content, singers:singers}
 end
 
 helpers do
@@ -227,6 +254,58 @@ helpers do
       join tbl_songs as so on (so.id=sp.song_id)
       where sp.song_id in ?"
     HAC_DB[sql, song_ids].map{|r| r}.group_by {|r| r[:song_id]}
+  end
+end
+
+class SmContent
+  attr_reader :content
+
+  def initialize(user)
+    @user   = user
+    cfile   = nil
+    ["/Volumes/Voice/SMULE/content-#{@user}.yml",
+     "#{ENV['HOME']}/content-#{@user}.yml"].each do |afile|
+      if test(?r, afile)
+        cfile = afile
+        break
+      end
+    end
+
+    unless cfile
+      raise "Cannot locate content file to load for #{user}"
+    end
+    @content = YAML.load_file(cfile)
+    @content.each do |href, r|
+      case v = r[:since]
+      when /hr?$/
+        r[:sincev] = v.to_i
+      when /d$/
+        r[:sincev] = v.to_i * 24
+      when /mo$/
+        r[:sincev] = v.to_i * 24 * 30
+      when /yr$/
+        r[:sincev] = v.to_i * 24 * 365
+      end
+      r[:sid] ||= File.basename(r[:href])
+    end
+  end
+
+  def remove(sid)
+    unless @content[sid]
+      Plog.info("Cannot locate #{sid} - #{@content.size}")
+      return true
+    end
+    @content.delete(sid)
+    ["/Volumes/Voice/SMULE/content-#{@user}.yml",
+     "#{ENV['HOME']}/content-#{@user}.yml"].each do |afile|
+      if test(?f, afile)
+        Plog.info("Updating #{afile}")
+        File.open(afile, 'w') do |fod|
+          fod.puts @content.to_yaml
+        end
+      end
+    end
+    true
   end
 end
 

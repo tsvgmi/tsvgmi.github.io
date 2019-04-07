@@ -33,7 +33,7 @@
   "khuc-tinh-nong": {
     "instrument": "Distortion, Piano, Brass",
     "key": "Dm",
-    "intro": "[Dm] [A7] [Dm] [A7]\r\n1 131-7 2451 321-7\r\n1 131-7 2451 321-7\r\n",
+    "intro": "[Dm] [A7] [Dm] [A7]\r\n1 131-7 2451 321-7\r\n1 131-7 2451 321-7\r\nOut: Same as in.  Dằng 4",
     "ytvideo": "3QCY-aTROIk,6,33",
     "vidkey": "Cm",
     "smkey": "",
@@ -829,7 +829,7 @@
   "xuan-yeu-thuong": {
     "instrument": "String Hit, Horn",
     "key": "Dm",
-    "intro": "String Hit: [Dm]-[C] [Dm]-[C] [Dm]\r\n[Dm]-[C] [Dm]-[C] [Dm]\r\nHorn: [Dm] [Dm] [C] [C] [Bb] [A] [Dm] [Dm]\r\n111177111 177111 177111\r\n1321 7987 6876 1321",
+    "intro": "String Hit: [Dm]-[C] [Dm]-[C] [Dm]\r\n[Dm]-[C] [Dm]-[C] [Dm]\r\nHorn: [Dm] [Dm] [C] [C] [Bb] [A] [Dm] [Dm]\r\n111177111 177111 177111\r\n111177111 177111 177111\r\n1321 7987 6876 1321",
     "ytvideo": "aHYICTWlPnU,0,28",
     "vidkey": "Gm",
     "smkey": "",

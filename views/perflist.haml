@@ -89,6 +89,7 @@
 - videos   = []
 - row_no   = 0
 - song_list.each do |sinfo|
+  - row_no += 1
   - oinfo   = order_list[sinfo[:song_id]] || {}
   - next if (oinfo[:singer] || "").start_with?('-')
   - hs      = sinfo[:href].split('/')
@@ -100,7 +101,6 @@
   - lyric_id = "row_#{row_no}"
   - if ptn
     - next unless "#{oinfo[:lead]}.#{oinfo[:singer]}" =~ ptn
-  - row_no += 1
   .row.song_header
     .col-6
       %button.pull-right.btn.btn-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)

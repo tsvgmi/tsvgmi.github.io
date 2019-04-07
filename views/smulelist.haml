@@ -1,0 +1,71 @@
+.row
+  .col-lg-8
+    %table.cell-border.display#main_table
+      %thead
+        %tr
+          %th Title
+          %th Record_By
+          %th Listens
+          %th Loves
+          %th Since
+          %th Updated
+      %tbody
+        - content.each do |arow|
+          - avatar = arow[:avatar]
+          - atitle = arow[:title].encode("UTF-8", invalid: :replace, undef: :replace, replace: '-')
+          %tr
+            %td.small
+              - href = 'https://www.smule.com' + arow[:href]
+              %img(src=avatar height=30 width=30)
+              %a(href="/smulelist/#{user}?title=#{arow[:title]}")
+                %i.fa.fa-search
+              %a(href="/smremove/#{user}/#{arow[:sid]}")
+                %i.fa.fa-trash
+              - if arow[:isfav]
+                %i.fa.fa-star.text-primary
+              - else
+                %i.fa.fa-star.invisible
+              %a(href=href target='smule')
+                = arow[:title]
+            %td.small
+              - arow[:record_by].sort.each do |singer|
+                %a(href="/smulelist/#{user}?singer=#{singer}")
+                  %i.fa.fa-search
+                %a(href="https://www.smule.com/#{singer}" target='smule')= singer
+                <br>
+            %td.dt-right.small= arow[:listens]
+            %td.dt-right.small= arow[:loves]
+            %td.dt-right.small(data-sort="#{arow[:sincev]}")= arow[:since]
+            %td.small= arow[:updated_at] ? arow[:updated_at].strftime('%Y-%m-%d') : nil
+
+  .col-lg-4
+    %table.cell-border.display#singer_table
+      %thead
+        %tr
+          %th Record_By
+          %th Count
+          %th Listens
+          %th Loves
+      %tbody
+        - singers.each do |singer, stats|
+          %tr
+            %td.small
+              - href = "/smulelist/#{user}?singer=#{singer}"
+              %a(href=href)= singer
+            %td.dt-right.small= stats[:count]
+            %td.dt-right.small= stats[:listens]
+            %td.dt-right.small= stats[:loves]
+
+- content_for :javascript do
+  :javascript
+    $(function() {
+      $('#main_table').DataTable({
+        "order": [[ 4, "asc" ]],
+        "pageLength": 100
+      });
+      $('#singer_table').DataTable({
+        "order": [[ 1, "desc" ]],
+        "pageLength": 100
+      });
+    });
+
