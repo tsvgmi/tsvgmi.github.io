@@ -1,5 +1,179 @@
 ---
 - !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/65854/gdpt-6-2019
+  :id: 65854
+  :name: GDPT 6-2019
+  :sname: 65854/gdpt-6-2019
+  :song_count: 29
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/64438/cho-mot-tieng-yeu
+  :id: 64438
+  :name: Chờ Một Tiếng Yêu
+  :sname: 64438/cho-mot-tieng-yeu
+  :song_count: 6
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/64180/tinh-ca-valentine
+  :id: 64180
+  :name: Tình Ca Valentine
+  :sname: 64180/tinh-ca-valentine
+  :song_count: 21
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/64114/acoustic
+  :id: 64114
+  :name: Acoustic
+  :sname: 64114/acoustic
+  :song_count: 15
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/64113/tinh-yeu-da-den-voi-ta
+  :id: 64113
+  :name: Tình Yêu Đã Đến Với Ta
+  :sname: 64113/tinh-yeu-da-den-voi-ta
+  :song_count: 14
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63950/tet-nay-vui-qua-dung-khong-ca-nha
+  :id: 63950
+  :name: Tết Này Vui Quá Đúng Không Cả Nhà
+  :sname: 63950/tet-nay-vui-qua-dung-khong-ca-nha
+  :song_count: 19
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63949/nhac-khuc-mua-xuan
+  :id: 63949
+  :name: Nhạc Khúc Mùa Xuân
+  :sname: 63949/nhac-khuc-mua-xuan
+  :song_count: 12
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63948/tru-tinh-xuan-hay-nhat
+  :id: 63948
+  :name: Trữ Tình Xuân Hay Nhất
+  :sname: 63948/tru-tinh-xuan-hay-nhat
+  :song_count: 11
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63947/anh-li-xi-em-di
+  :id: 63947
+  :name: Anh Lì Xì Em Đi
+  :sname: 63947/anh-li-xi-em-di
+  :song_count: 13
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63946/mung-2-ron-rang
+  :id: 63946
+  :name: Mùng 2 Rộn Ràng
+  :sname: 63946/mung-2-ron-rang
+  :song_count: 15
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63945/nhac-xuan-2019
+  :id: 63945
+  :name: Nhạc Xuân 2019
+  :sname: 63945/nhac-xuan-2019
+  :song_count: 30
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63923/tet-nay-vui-qua-dung-khong-ca-nha
+  :id: 63923
+  :name: Tết Này Vui Quá Đúng Không Cả Nhà
+  :sname: 63923/tet-nay-vui-qua-dung-khong-ca-nha
+  :song_count: 19
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63922/nhu-hoa-mua-xuan
+  :id: 63922
+  :name: Như Hoa Mùa Xuân
+  :sname: 63922/nhu-hoa-mua-xuan
+  :song_count: 13
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63921/van-su-nhu-y
+  :id: 63921
+  :name: Vạn Sự Như Ý
+  :sname: 63921/van-su-nhu-y
+  :song_count: 14
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63920/nhac-xuan-tru-tinh
+  :id: 63920
+  :name: Nhạc Xuân Trữ Tình
+  :sname: 63920/nhac-xuan-tru-tinh
+  :song_count: 28
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63919/vui-nhu-tet
+  :id: 63919
+  :name: Vui Như Tết
+  :sname: 63919/vui-nhu-tet
+  :song_count: 14
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63918/mot-nam-moi-binh-an
+  :id: 63918
+  :name: Một Năm Mới Bình An
+  :sname: 63918/mot-nam-moi-binh-an
+  :song_count: 30
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63830/xuan-va-tuoi-tre
+  :id: 63830
+  :name: Xuân Và Tuổi Trẻ
+  :sname: 63830/xuan-va-tuoi-tre
+  :song_count: 11
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63703/cho-dong
+  :id: 63703
+  :name: Chờ Đông
+  :sname: 63703/cho-dong
+  :song_count: 10
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63611/goi-ten-mua-xuan
+  :id: 63611
+  :name: Gọi Tên Mùa Xuân
+  :sname: 63611/goi-ten-mua-xuan
+  :song_count: 25
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/63544/nuoc-mat-khong-mau
+  :id: 63544
+  :name: Nước Mắt Không Màu
+  :sname: 63544/nuoc-mat-khong-mau
+  :song_count: 13
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/62239/du-sao-di-nua-toi-van-yeu-em
+  :id: 62239
+  :name: Dù Sao Đi Nữa Tôi Vẫn Yêu Em
+  :sname: 62239/du-sao-di-nua-toi-van-yeu-em
+  :song_count: 15
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/62169/yeu-nhu-thang-dien
+  :id: 62169
+  :name: Yêu Như Thằng Điên
+  :sname: 62169/yeu-nhu-thang-dien
+  :song_count: 17
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/62091/viet-nam-co-len
+  :id: 62091
+  :name: Việt Nam Cố Lên
+  :sname: 62091/viet-nam-co-len
+  :song_count: 14
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61991/chuyen-tinh-luot-qua
+  :id: 61991
+  :name: Chuyện Tình Lướt Qua
+  :sname: 61991/chuyen-tinh-luot-qua
+  :song_count: 11
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61990/buon-khong-em
+  :id: 61990
+  :name: Buồn Không Em
+  :sname: 61990/buon-khong-em
+  :song_count: 17
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61989/ta-ke-nhau-nghe
+  :id: 61989
+  :name: Ta Kể Nhau Nghe
+  :sname: 61989/ta-ke-nhau-nghe
+  :song_count: 18
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61931/mua-dong-co-don
+  :id: 61931
+  :name: Mùa Đông Cô Đơn
+  :sname: 61931/mua-dong-co-don
+  :song_count: 16
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/61929/that-kho-de-co-anh
+  :id: 61929
+  :name: Thật Khó Để Có Anh
+  :sname: 61929/that-kho-de-co-anh
+  :song_count: 13
+- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/61780/ht-chachacha
   :id: 61780
   :name: HT - Chachacha
@@ -766,7 +940,7 @@
   :id: 53157
   :name: VNHV - MXQN - 2018
   :sname: 53157/vnhv-mxqn-2018
-  :song_count: 26
+  :song_count: 25
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/51944/christmas-2017
   :id: 51944

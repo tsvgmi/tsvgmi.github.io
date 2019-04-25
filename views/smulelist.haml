@@ -1,3 +1,11 @@
+:css
+  .savatar {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+  .uavatar {
+    clip-path: circle(15px at center);
+  }
+
 .row
   .col-lg-8
     %table.cell-border.display#main_table
@@ -16,7 +24,7 @@
           %tr
             %td.small
               - href = 'https://www.smule.com' + arow[:href]
-              %img(src=avatar height=30 width=30)
+              %img.savatar(src=avatar height=30 width=30)
               %a(href="/smulelist/#{user}?title=#{arow[:title]}")
                 %i.fa.fa-search
               %a(href="/smremove/#{user}/#{arow[:sid]}")
@@ -31,7 +39,7 @@
               - arow[:record_by].sort.each do |singer|
                 %a(href="/smulelist/#{user}?singer=#{singer}")
                   %i.fa.fa-search
-                %a(href="https://www.smule.com/#{singer}" target='smule')= singer
+                  %a(href="https://www.smule.com/#{singer}" target='smule')= singer[0..9]
                 <br>
             %td.dt-right.small= arow[:listens]
             %td.dt-right.small= arow[:loves]
@@ -50,9 +58,21 @@
         - singers.each do |singer, stats|
           %tr
             %td.small
+              - if avatar = uavatars[singer]
+                %a(href="https://www.smule.com/#{singer}" target='smule')
+                  %img.uavatar(src=avatar height=30 width=30)
+              - if follows[:followings].include?(singer)
+                %i.fa.fa-heart
+              - else
+                %i.fa.fa-heart.invisible
+              - if follows[:followers].include?(singer)
+                %i.fa.fa-running
+              - else
+                %i.fa.fa-running.invisible
               - href = "/smulelist/#{user}?singer=#{singer}"
               %a(href=href)= singer
-            %td.dt-right.small= stats[:count]
+            %td.dt-right.small
+              = stats[:count]
             %td.dt-right.small= stats[:listens]
             %td.dt-right.small= stats[:loves]
 

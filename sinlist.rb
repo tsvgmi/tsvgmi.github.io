@@ -146,10 +146,11 @@ get '/smremove/:user/:sid' do |user, sid|
 end
 
 get '/smulelist/:user' do |user|
-  content = []
-  singer  = (params[:singer] || "").split
-  singers = {}
-  records = SmContent.new(user).content
+  content   = []
+  singer    = (params[:singer] || "").split
+  singers   = {}
+  smcontent = SmContent.new(user)
+  records   = smcontent.content
   records.each do |sid, r|
     if singer.size > 0
       next unless (r[:record_by] & singer).size > 0
@@ -165,7 +166,17 @@ get '/smulelist/:user' do |user|
       singers[asinger][:loves] += r[:loves]
     end
   end
-  haml :smulelist, locals: {user:user, content:content, singers:singers}
+  uavatars = {}
+  [:followers, :followings].each do |ablock|
+    smcontent.follows[ablock].each do |user, e|
+      uavatars[user] = e[:avatar]
+    end
+  end
+  Plog.dump_info(fers:smcontent.follows[:followers].size,
+                 fings:smcontent.follows[:followings].size,
+                 usize:uavatars.size)
+  haml :smulelist, locals: {user:user, content:content, singers:singers,
+                            follows:smcontent.follows, uavatars:uavatars}
 end
 
 helpers do
@@ -258,7 +269,7 @@ helpers do
 end
 
 class SmContent
-  attr_reader :content
+  attr_reader :content, :follows
 
   def initialize(user)
     @user   = user
@@ -277,6 +288,8 @@ class SmContent
     @content = YAML.load_file(cfile)
     @content.each do |href, r|
       case v = r[:since]
+      when /min?$/
+        r[:sincev] = v.to_i / 60.0
       when /hr?$/
         r[:sincev] = v.to_i
       when /d$/
@@ -287,6 +300,20 @@ class SmContent
         r[:sincev] = v.to_i * 24 * 365
       end
       r[:sid] ||= File.basename(r[:href])
+    end
+
+    cfile = nil
+    ["/Volumes/Voice/SMULE/follows-#{@user}.yml",
+     "#{ENV['HOME']}/follows-#{@user}.yml"].each do |afile|
+      if test(?r, afile)
+        cfile = afile
+        break
+      end
+    end
+    if cfile
+      @follows = YAML.load_file(cfile)
+    else
+      @follows = {followers:[], followings:[]}
     end
   end
 

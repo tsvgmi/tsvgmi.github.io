@@ -37,7 +37,13 @@
   "canh-buom-xa-xua": {
     "instrument": "Voice(Ah), Piano, Fantasie",
     "key": "C",
-    "intro": "3|[Dm]4343|[F]48 2|[C]32[Am]323|[Em]7 1|[Dm]2121|[G]2652|[C]3 |[A7]\r\n3|[Dm]4343|[F]48 2|[C]32[Am]32|[Em]37 1|[Dm]2121|[G]26 652|[C]1\r\n"
+    "intro": "3|[Dm]4343|[F]48 2|[C]32[Am]323|[Em]7 1|[Dm]2121|[G]2652|[C]3 |[A7]\r\n3|[Dm]4343|[F]48 2|[C]32[Am]32|[Em]37 1|[Dm]2121|[G]26 652|[C]1\r\n",
+    "ytvideo": "BCkAAL-WgHE,0,300",
+    "vidkey": "Eb",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "dem-dinh-menh": {
     "instrument": "Piano, String",
@@ -130,5 +136,82 @@
     "vidkey": "Gm",
     "smkey": "",
     "smule": ""
+  },
+  "giac-mong-vien-du": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "",
+    "ytvideo": "vdt9kt1KEJg,0,300",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "touch-by-touch": {
+    "instrument": "[]",
+    "key": "Cm",
+    "intro": "",
+    "ytvideo": "FIBRLJcrFFQ,0,300",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "hush-hush": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "",
+    "ytvideo": "3BBsF7VIQyo,0,300",
+    "vidkey": "Bbm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "quando-quando-quando": {
+    "instrument": "[]",
+    "key": "A",
+    "intro": "",
+    "ytvideo": "lXX1Oq7lGE4,0,300",
+    "vidkey": "A",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "sway": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "",
+    "ytvideo": "a90tZJHBklk,0,300",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "tinh-vao-thu": {
+    "instrument": "[]",
+    "key": "Bm",
+    "intro": "",
+    "ytvideo": "Rf-7qrKS5_s,0,300",
+    "vidkey": "Bbm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "sau-dong": {
+    "instrument": "[]",
+    "key": "Gm",
+    "intro": "",
+    "ytvideo": "U0-fLIFdKW8,0,300",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
