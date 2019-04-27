@@ -12,6 +12,7 @@
       %thead
         %tr
           %th Title
+          %th Favs
           %th Record_By
           %th Listens
           %th Loves
@@ -29,12 +30,13 @@
                 %i.fa.fa-search
               %a(href="/smremove/#{user}/#{arow[:sid]}")
                 %i.fa.fa-trash
+              %a(href=href target='smule')
+                = arow[:title]
+            %td.small(data-sort="#{arow[:isfav] ? 1 : 0}")
               - if arow[:isfav]
                 %i.fa.fa-star.text-primary
               - else
                 %i.fa.fa-star.invisible
-              %a(href=href target='smule')
-                = arow[:title]
             %td.small
               - arow[:record_by].sort.each do |singer|
                 %a(href="/smulelist/#{user}?singer=#{singer}")

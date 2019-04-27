@@ -112,7 +112,7 @@
     .col.md
       = sinfo[:artist]
     .col.md
-      = oinfo[:singer].gsub(/\//, ', ')
+      = (oinfo[:singer] || '').gsub(/\//, ', ')
       .pull-right= oinfo[:singer_key]
       - if oinfo[:lead]
         %br/

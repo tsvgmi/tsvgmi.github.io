@@ -984,5 +984,126 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "ve-day-em": {
+    "instrument": "Synth, Sweep",
+    "key": "Am",
+    "intro": "[Am] [F] [G] [Am]\r\n3323 12311-71 2212 -(7758878)",
+    "ytvideo": "XacCs8TdZTQ,22,38",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "de-cho-em-khoc-vali-tinh-yeu-ost": {
+    "instrument": "Shaku, Sweep",
+    "key": "Dm",
+    "intro": "Dm Am Bb-C F Dm Am Bb-C Dm\r\n1 552 551 -7-5 431 552 751 21",
+    "ytvideo": "Ijdh8D5aLks,15,43",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "dau-co-loi-lam": {
+    "instrument": "Piano, Distortion",
+    "key": "G",
+    "intro": "[G] [C] [Bm] [Em] [Am] [D] [G]\r\n+(23) 56 53598 4348878\r\n",
+    "ytvideo": "ulaqLUkkQF4,0,15",
+    "vidkey": "Bb",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "dem-nay-em-thay-co-don-tonight-s-so-cold": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "[D] [D] [Em] [Em] [A] [A] [D] [D]\r\n-51243213 -51243212 2233445 22344321",
+    "ytvideo": "eX_8jHUZUtk,0,21",
+    "vidkey": "D",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "khi-xua-ta-be-bang-bang": {
+    "instrument": "Violin, Guitar Accoustic",
+    "key": "Am",
+    "intro": "[Am] [Dm] [E] [Am]\r\n513543 614654 5-52654321 13576",
+    "ytvideo": "cK0FEW4rMYo,15,29",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "words-don-t-come-easy": {
+    "instrument": "Guitar",
+    "key": "",
+    "intro": "[C] [Am] [Dm] [G] [Gm] [A] [Dm] [G] [C] [F]-[G]\r\n1 2334 1-7 -(765)52~2 234-(67 78998)",
+    "ytvideo": "t4o3QIxaqIU,0,25",
+    "vidkey": "C",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "xom-dem": {
+    "instrument": "Picolo",
+    "key": "Am",
+    "intro": "[Am] [Dm] [Bm7b5]-[E] [Am] [Am] [Dm] [Bm7b5]-[E] [Am]\r\n5985 5546648 887895\r\n5+395 55456648  878+3958",
+    "ytvideo": "WT6K1JSk3lE,0,24",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "bien-can": {
+    "instrument": "Piano, String",
+    "key": "Am",
+    "intro": "[Bm7b5]-[E] [Am]-[G]-[F] [F]-[G] [Em]-[Am] [Dm]-[Bm7b5] [E]\r\n5659 5658 12342 -71243 -6-712342",
+    "ytvideo": "ee9vR7N4_T4,0,24",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "nhung-ngay-tho-mong": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "[Am] [Dm] [G] [C] [Bm7b5] [E] [Dm] [Am] [Bb] [Bm7b5]-[E] [Am]\r\n123 33211 33432 121-7-5 -(567876545)\r\n-7256 4865 5654 5342 45698",
+    "ytvideo": "tvGAxWj6__0,129,164",
+    "vidkey": "Gm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "giac-mo-sa-mac-un-amour-de-vacances": {
+    "instrument": "Guitar",
+    "key": "Am",
+    "intro": "[Am] [F] [Am] [Dm] [G] [C] [F] [Bm7b5]-[E] [Am]\r\n54323 12345 4326 78765 123 232 231",
+    "ytvideo": "eGYTlEemOME,0,23",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "thoi-ta-xa-nhau-adieu-sois-heureuse": {
+    "instrument": "Guitar",
+    "key": "G",
+    "intro": "[G]\r\n15+3858 23231 5+3858 23231",
+    "ytvideo": "SGLBDliLeEY,0,7",
+    "vidkey": "G",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
