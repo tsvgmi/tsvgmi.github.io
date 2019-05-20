@@ -57,7 +57,8 @@
           %th Listens
           %th Loves
       %tbody
-        - singers.each do |singer, stats|
+        - singers.each do |stats|
+          - singer = stats[:name]
           %tr
             %td.small
               - if avatar = uavatars[singer]

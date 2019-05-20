@@ -75,7 +75,7 @@
         - files = Dir.glob("playlist/*-program.html")
         %select.form-control#page_select(name="listno" onchange="load_page_from('page_select')")
           %option ---
-          - files.each do |file|
+          - files.sort.each do |file|
             - bfile = File.basename(file).sub(/\.html$/, '')
             %option= bfile
       - else

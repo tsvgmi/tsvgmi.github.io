@@ -160,12 +160,16 @@ get '/smulelist/:user' do |user|
     end
     content << r
     r[:record_by].each do |asinger|
-      singers[asinger] ||= {count:0, listens:0, loves:0}
+      singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0}
       singers[asinger][:count] += 1
       singers[asinger][:listens] += r[:listens]
       singers[asinger][:loves] += r[:loves]
     end
   end
+  # Front end will also do sort, but we do on backend so content would
+  # not change during initial display
+  content = content.sort_by {|r| r[:sincev].to_f }
+  singers = singers.values.sort_by {|r| r[:count]}.reverse
   uavatars = {}
   [:followers, :followings].each do |ablock|
     smcontent.follows[ablock].each do |user, e|
@@ -322,6 +326,7 @@ class SmContent
       Plog.info("Cannot locate #{sid} - #{@content.size}")
       return true
     end
+    Plog.info("Deleting #{sid}")
     @content.delete(sid)
     ["/Volumes/Voice/SMULE/content-#{@user}.yml",
      "#{ENV['HOME']}/content-#{@user}.yml"].each do |afile|
