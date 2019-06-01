@@ -17,6 +17,8 @@ set :bind, '0.0.0.0'
 #ENV['DB_MY']  ||= 'playlist:playlistpasswd@127.0.0.1/Playlist'
 #ENV['DB_HAC'] ||= 'playlist:playlistpasswd@127.0.0.1/hopamchuan'
 
+DB = Sequel.connect('sqlite://sinlist.db')
+
 if false
 HAC_DB           = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/hac_local')
 HAC_DB2          = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/playlist')
@@ -70,6 +72,14 @@ get '/song-style/:user/:song_id/:song_name' do |user, song_id, song_name|
                 uperf_info:uperf_info, song_info:song_info}
   #Plog.dump_info(locals:locals)
   haml :song_style, locals:locals
+end
+
+get '/play-here' do
+  ofile = params[:ofile]
+  Plog.dump_info(ofile:ofile)
+  if test(?f, ofile)
+    system("open \"#{ofile}\"")
+  end
 end
 
 get '/list/:event' do |event|
@@ -171,10 +181,8 @@ get '/smulelist/:user' do |user|
   content = content.sort_by {|r| r[:sincev].to_f }
   singers = singers.values.sort_by {|r| r[:count]}.reverse
   uavatars = {}
-  [:followers, :followings].each do |ablock|
-    smcontent.follows[ablock].each do |user, e|
-      uavatars[user] = e[:avatar]
-    end
+  smcontent.follows[:fothers].each do |user, e|
+    uavatars[user] = e[:avatar]
   end
   Plog.dump_info(fers:smcontent.follows[:followers].size,
                  fings:smcontent.follows[:followings].size,
@@ -184,60 +192,6 @@ get '/smulelist/:user' do |user|
 end
 
 helpers do
-  def load_songs(ord_list, song_flist)
-    songs = []
-    ord_list.each do |lpart|
-      songs += (lpart['list'] || []).map{|se| se.split(',')[0]}
-    end
-
-    #Plog.dump_info(songs:songs)
-    song_list   = Hash[Song.where(name_k:songs).as_hash(:name_k).
-                       map{|k, v| [k, v.to_hash]}]
-    sound_list  = Hash[Sound.where(name_k:songs).as_hash(:name_k, nil).
-                       map{|k, v| [k, v.to_hash]}]
-    #Plog.dump_info(song_list:song_list)
-    
-    ord_list.each do |lpart|
-      (lpart['list'] || []).each do |sse|
-        name_k, singer, key, style, tempo, kofs = sse.split(',')
-        #Plog.dump_info(sse:sse, key:key, style:style)
-        if song_list[name_k]
-          song_list[name_k].update(singer:singer, key:key, style:style,
-                                   tempo:tempo, kofs:kofs)
-        else
-          Plog.error("#{name_k} not found in song list")
-        end
-      end
-    end
-
-    song_list.each do |k, v|
-      v.update(sound_list[k]) if sound_list[k]
-    end
-    #Plog.dump_info(song_list:song_list)
-    song_list.each do |sname, sentry|
-      path = (sentry[:lyric_url] || sentry[:href] || '').split('/')
-      Plog.dump_info(path:path)
-      if path.size >= 6
-        sno, song, user = path[4], path[5], path[6]
-        if user
-          sfile = "/Users/tvuong/myprofile/#{user}/#{sno}::#{sname}.yml"
-        else
-          sfile = Dir.glob("/Users/tvuong/myprofile/*/#{sno}::#{sname}.yml")[0]
-        end
-        Plog.dump_info(sfile:sfile)
-        if sfile && test(?s, sfile)
-          flat = sentry[:kofs] =~ /f$/
-          kofs = sentry[:kofs].to_i
-          Plog.info "Transposing #{sfile}"
-          sentry.update(ListHelper.transpose_song(sfile, kofs, flat:flat))
-        else
-          Plog.error("#{sfile} not found - source: #{sentry[:lyric_url]}")
-        end
-      end
-    end
-    song_list
-  end
-
   KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
   # Attach play note to the like star
   def key_offset(base_key, new_key)
@@ -259,16 +213,6 @@ helpers do
     offset = new_offset - base_offset
     offset += 12 if offset < 0
     offset
-  end
-
-  def get_song_infos(song_ids)
-    sql = "select ar.name as artist, ar.name_ascii, sp.key, sp.link, so.id
-      as song_id,so._title, so._title_ascii from tbl_performs_singers as ps
-      join tbl_artists as ar on (ar.id=ps.singer_id)
-      join tbl_songs_performs as sp on (sp.id=ps.perform_id)
-      join tbl_songs as so on (so.id=sp.song_id)
-      where sp.song_id in ?"
-    HAC_DB[sql, song_ids].map{|r| r}.group_by {|r| r[:song_id]}
   end
 end
 
@@ -292,7 +236,7 @@ class SmContent
     @content = YAML.load_file(cfile)
     @content.each do |href, r|
       case v = r[:since]
-      when /min?$/
+      when /(min|m)$/
         r[:sincev] = v.to_i / 60.0
       when /hr?$/
         r[:sincev] = v.to_i

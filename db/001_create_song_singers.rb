@@ -1,5 +1,5 @@
 Sequel.migration do
-  up do
+  change do
    create_table :songs do
      primary_key :id
      String :name,     null:false
@@ -21,10 +21,5 @@ Sequel.migration do
      unique      [:name_k, :singer]
      foreign_key :song_id, :songs
    end
-  end
-  
-  down do
-   dbase.drop_table? :singers
-   dbase.drop_table? :songs
   end
 end
