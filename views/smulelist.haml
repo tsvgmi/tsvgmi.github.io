@@ -17,7 +17,7 @@
           %th Listens
           %th Loves
           %th Since
-          %th Updated
+          %th Recorded
       %tbody
         - content.each do |arow|
           - avatar = arow[:avatar]
@@ -31,14 +31,14 @@
               - url = "/smremove/#{user}/#{arow[:sid]}"
               %a(href="#" onclick="return smdelete('#{url}', '#{arow[:title]}')")
                 %i.fa.fa-trash
-              - ofile = arow[:sfile] || arow[:ofile] || ""
-              - url   = "/play-here?ofile=#{CGI.escape(ofile)}"
-              - if test(?f, ofile)
+              - ofile = arow[:sfile] || arow[:ofile]
+              - if ofile
+                - url   = "/play-here?ofile=#{CGI.escape(ofile)}"
                 %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{url}'); return false;")
                   %i.fa.fa-play
               - else
-                - Plog.warn(title:arow[:title], ofile:ofile)
-                %i.fa.fa-play
+                - Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
+                %i.fa.fa-play.invisible
               %a(href=href target='smule')
                 = arow[:title]
             %td.small(data-sort="#{arow[:isfav] ? 1 : 0}")
@@ -92,7 +92,7 @@
   :javascript
     $(function() {
       $('#main_table').DataTable({
-        "order": [[ 5, "asc" ]],
+        "order": [[ 6, "desc" ]],
         "pageLength": 100
       });
       $('#singer_table').DataTable({
