@@ -171,24 +171,20 @@ get '/smulelist/:user' do |user|
     content << r
     r[:record_by].each do |asinger|
       singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0}
-      singers[asinger][:count] += 1
-      singers[asinger][:listens] += r[:listens]
-      singers[asinger][:loves] += r[:loves]
+      singers[asinger][:count]   += 1
+      singers[asinger][:listens] += (r[:listens] || 0)
+      singers[asinger][:loves]   += r[:loves]
     end
   end
   # Front end will also do sort, but we do on backend so content would
   # not change during initial display
   content = content.sort_by {|r| r[:sincev].to_f }
   singers = singers.values.sort_by {|r| r[:count]}.reverse
-  uavatars = {}
-  smcontent.follows[:fothers].each do |user, e|
-    uavatars[user] = e[:avatar]
-  end
-  Plog.dump_info(fers:smcontent.follows[:followers].size,
-                 fings:smcontent.follows[:followings].size,
-                 usize:uavatars.size)
+  Plog.dump_info(all_singers:smcontent.singers.size)
   haml :smulelist, locals: {user:user, content:content, singers:singers,
-                            follows:smcontent.follows, uavatars:uavatars}
+                            all_singers:smcontent.singers,
+                            join_me:smcontent.join_me,
+                            i_join:smcontent.i_join}
 end
 
 helpers do
@@ -217,11 +213,13 @@ helpers do
 end
 
 class SmContent
-  attr_reader :content, :follows
+  attr_reader :content, :singers, :join_me, :i_join
 
   def initialize(user)
-    @user   = user
-    cfile   = nil
+    @user    = user
+    @join_me = {}
+    @i_join  = {}
+    cfile    = nil
     ["/Volumes/Voice/SMULE/content-#{@user}.yml",
      "#{ENV['HOME']}/content-#{@user}.yml"].each do |afile|
       if test(?r, afile)
@@ -248,20 +246,25 @@ class SmContent
         r[:sincev] = v.to_i * 24 * 365
       end
       r[:sid] ||= File.basename(r[:href])
-    end
-
-    cfile = nil
-    ["/Volumes/Voice/SMULE/follows-#{@user}.yml",
-     "#{ENV['HOME']}/follows-#{@user}.yml"].each do |afile|
-      if test(?r, afile)
-        cfile = afile
-        break
+      if r[:record_by][0] == user
+        other = r[:record_by][1]
+        @join_me[other] ||= 0
+        @join_me[other] += 1
+      end
+      if r[:record_by][1] == user
+        other = r[:record_by][0]
+        @i_join[other] ||= 0
+        @i_join[other] += 1
       end
     end
-    if cfile
-      @follows = YAML.load_file(cfile)
-    else
-      @follows = {followers:[], followings:[]}
+
+    @singers = {}
+    ["/Volumes/Voice/SMULE/singers.yml",
+     "#{ENV['HOME']}/singers.yml"].each do |afile|
+      if test(?r, afile)
+        @singers = YAML.load_file(afile)
+        break
+      end
     end
   end
 

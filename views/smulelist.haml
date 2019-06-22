@@ -16,7 +16,6 @@
           %th Record_By
           %th Listens
           %th Loves
-          %th Since
           %th Recorded
       %tbody
         - content.each do |arow|
@@ -54,7 +53,6 @@
                 <br>
             %td.dt-right.small= arow[:listens]
             %td.dt-right.small= arow[:loves]
-            %td.dt-right.small(data-sort="#{arow[:sincev]}")= arow[:since]
             %td.small= arow[:created] ? arow[:created].strftime('%Y-%m-%d') : nil
 
   .col-lg-4
@@ -68,19 +66,22 @@
       %tbody
         - singers.each do |stats|
           - singer = stats[:name]
+          - sinfo  = all_singers[singer] || {}
           %tr
             %td.small
-              - if avatar = uavatars[singer]
+              - if avatar = sinfo[:avatar]
                 %a(href="https://www.smule.com/#{singer}" target='smule')
                   %img.uavatar(src=avatar height=30 width=30)
-              - if follows[:followings].include?(singer)
+              - if sinfo[:following]
                 %i.fa.fa-heart
               - else
                 %i.fa.fa-heart.invisible
-              - if follows[:followers].include?(singer)
+              %span.small= i_join[singer]
+              - if sinfo[:follower]
                 %i.fa.fa-running
               - else
                 %i.fa.fa-running.invisible
+              %span.small= join_me[singer]
               - href = "/smulelist/#{user}?singer=#{singer}"
               %a(href=href)= singer
             %td.dt-right.small
@@ -92,7 +93,7 @@
   :javascript
     $(function() {
       $('#main_table').DataTable({
-        "order": [[ 6, "desc" ]],
+        "order": [[ 5, "desc" ]],
         "pageLength": 100
       });
       $('#singer_table').DataTable({

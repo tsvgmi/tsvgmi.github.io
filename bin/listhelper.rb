@@ -227,6 +227,33 @@ class ListHelper
       [sname, href]
     end
 
+    def fill_slist(file)
+      wset = {}
+      Dir.glob("data/*.order").each do |afile|
+        File.read(afile).split("\n").each do |aline|
+          key, *values = aline.chomp.sub(/,+$/, '').split(',')
+          #Plog.dump_info(afile:afile, key:key, values:values)
+          if values.size >= 3
+            wset[key] ||= []
+            wset[key] << values
+            #Plog.dump_info(afile:afile, key:key, values:values)
+          end
+        end
+      end
+      #exit
+      File.read(file).split("\n").each do |aline|
+        key, *values = aline.chomp.sub(/,+$/, '').split(',')
+        if !wset[key] || (values.size >= 3)
+          puts aline
+          next
+        end
+        wset[key].uniq.each do |wvals|
+          puts "#{key},#{wvals.join(',')}"
+        end
+      end
+      true
+    end
+
     def build_slist(url, list_name=nil)
       $: << '/Users/tvuong/myprofile/bin'
       require '/Users/tvuong/bin/hacauto'
