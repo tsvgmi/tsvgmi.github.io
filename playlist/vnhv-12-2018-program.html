@@ -3212,7 +3212,7 @@ Một vòng tay anh khao <span class="chord">G#</span>khát một giấc <span c
 </div>
 
 <footer>
-<div class='small text-muted publish_date'>2019-06-22 14:30:41 -0700</div>
+<div class='small text-muted publish_date'>2019-06-22 19:17:30 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -3238,7 +3238,8 @@ Một vòng tay anh khao <span class="chord">G#</span>khát một giấc <span c
       var player    = new YT.Player(vid, {
         height: '140',
         width:  '210',
-        playerVars: {autoplay:0, start:start, end:end},
+        playerVars: {autoplay:0, start:start, end:end,
+                     origin:'https://www.youtube.com'},
         videoId: avideo,
         events: {
           'onStateChange': function(event){

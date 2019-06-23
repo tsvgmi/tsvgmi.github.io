@@ -1233,7 +1233,7 @@ I <span class="chord">Gm</span>love you more and more each <span class="chord">C
 </div>
 
 <footer>
-<div class='small text-muted publish_date'>2019-06-22 14:30:42 -0700</div>
+<div class='small text-muted publish_date'>2019-06-22 19:17:31 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -1259,7 +1259,8 @@ I <span class="chord">Gm</span>love you more and more each <span class="chord">C
       var player    = new YT.Player(vid, {
         height: '140',
         width:  '210',
-        playerVars: {autoplay:0, start:start, end:end},
+        playerVars: {autoplay:0, start:start, end:end,
+                     origin:'https://www.youtube.com'},
         videoId: avideo,
         events: {
           'onStateChange': function(event){

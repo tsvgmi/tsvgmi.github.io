@@ -790,12 +790,18 @@ Video Key: Gm
 <br>
 Transpose: 3
 </div>
+<div id='v_F6bfkwKe0Ic_0'></div>
+<div class='pull-right'>
+Video Key: Ebm
+<br>
+Transpose: -1
+</div>
 </div>
 <div class='col-2'>
 []
 </div>
 <div class='col-4'>
-<span class="chord_intro">Am</span> <span class="chord_intro">Dm</span> <span class="chord_intro">G</span> <span class="chord_intro">C</span> <span class="chord_intro">Bm7b5</span> <span class="chord_intro">E</span> <span class="chord_intro">Dm</span> <span class="chord_intro">Am</span> <span class="chord_intro">A#</span> <span class="chord_intro">Bm7b5</span>-<span class="chord_intro">E</span> <span class="chord_intro">Am</span><br>123 33211 33432 121-7-5 -(567876545)<br>-7256 4865 5654 5342 45698
+Intro - Nhat Ha:<br><span class="chord_intro">Em</span> <span class="chord_intro">Am</span> <span class="chord_intro">D</span> <span class="chord_intro">G</span> <span class="chord_intro">F#m7b5</span> <span class="chord_intro">B</span> <span class="chord_intro">Am</span> <span class="chord_intro">Em</span> <span class="chord_intro">F</span> <span class="chord_intro">F#m7b5</span>-<span class="chord_intro">B</span> <span class="chord_intro">Em</span><br>123 33211 33432 121-7-5 -(567876545)<br>-7256 4865 5654 5342 45698<br><br>Intro: Thanh Thuy<br><span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span> <span class="chord_intro">Em</span><br>858 851 858 851 
 </div>
 </div>
 <div class='row'>
@@ -1114,7 +1120,7 @@ Qui t'em <span class="chord">D#7</span>mène, aujour <span class="chord">G#</spa
 </div>
 
 <footer>
-<div class='small text-muted publish_date'>2019-06-22 14:30:42 -0700</div>
+<div class='small text-muted publish_date'>2019-06-22 19:17:31 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -1129,7 +1135,7 @@ Qui t'em <span class="chord">D#7</span>mène, aujour <span class="chord">G#</spa
     $('.a-tooltip').tooltip({"html":true}); 
   });
   
-  var videos     = [{"vid":"v_XacCs8TdZTQ_22","video":"XacCs8TdZTQ","start":22,"end":38},{"vid":"v_Ijdh8D5aLks_15","video":"Ijdh8D5aLks","start":15,"end":43},{"vid":"v_ulaqLUkkQF4_0","video":"ulaqLUkkQF4","start":0,"end":15},{"vid":"v_eX_8jHUZUtk_0","video":"eX_8jHUZUtk","start":0,"end":21},{"vid":"v_cK0FEW4rMYo_15","video":"cK0FEW4rMYo","start":15,"end":29},{"vid":"v_t4o3QIxaqIU_0","video":"t4o3QIxaqIU","start":0,"end":25},{"vid":"v_WT6K1JSk3lE_0","video":"WT6K1JSk3lE","start":0,"end":24},{"vid":"v_ee9vR7N4_T4_0","video":"ee9vR7N4_T4","start":0,"end":24},{"vid":"v_tvGAxWj6__0_129","video":"tvGAxWj6__0","start":129,"end":164},{"vid":"v_eGYTlEemOME_0","video":"eGYTlEemOME","start":0,"end":23},{"vid":"v_3TybGjnzY5s_0","video":"3TybGjnzY5s","start":0,"end":25},{"vid":"v_SGLBDliLeEY_0","video":"SGLBDliLeEY","start":0,"end":7}];
+  var videos     = [{"vid":"v_XacCs8TdZTQ_22","video":"XacCs8TdZTQ","start":22,"end":38},{"vid":"v_Ijdh8D5aLks_15","video":"Ijdh8D5aLks","start":15,"end":43},{"vid":"v_ulaqLUkkQF4_0","video":"ulaqLUkkQF4","start":0,"end":15},{"vid":"v_eX_8jHUZUtk_0","video":"eX_8jHUZUtk","start":0,"end":21},{"vid":"v_cK0FEW4rMYo_15","video":"cK0FEW4rMYo","start":15,"end":29},{"vid":"v_t4o3QIxaqIU_0","video":"t4o3QIxaqIU","start":0,"end":25},{"vid":"v_WT6K1JSk3lE_0","video":"WT6K1JSk3lE","start":0,"end":24},{"vid":"v_ee9vR7N4_T4_0","video":"ee9vR7N4_T4","start":0,"end":24},{"vid":"v_tvGAxWj6__0_129","video":"tvGAxWj6__0","start":129,"end":164},{"vid":"v_F6bfkwKe0Ic_0","video":"F6bfkwKe0Ic","start":0,"end":18},{"vid":"v_eGYTlEemOME_0","video":"eGYTlEemOME","start":0,"end":23},{"vid":"v_3TybGjnzY5s_0","video":"3TybGjnzY5s","start":0,"end":25},{"vid":"v_SGLBDliLeEY_0","video":"SGLBDliLeEY","start":0,"end":7}];
   var cur_player = null;
   function onYouTubeIframeAPIReady() {
     for (var i = 0; i < videos.length; i++) {
@@ -1140,7 +1146,8 @@ Qui t'em <span class="chord">D#7</span>mène, aujour <span class="chord">G#</spa
       var player    = new YT.Player(vid, {
         height: '140',
         width:  '210',
-        playerVars: {autoplay:0, start:start, end:end},
+        playerVars: {autoplay:0, start:start, end:end,
+                     origin:'https://www.youtube.com'},
         videoId: avideo,
         events: {
           'onStateChange': function(event){
