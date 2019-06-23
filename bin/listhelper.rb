@@ -240,13 +240,14 @@ class ListHelper
           end
         end
       end
-      #exit
+      handled = {}
       File.read(file).split("\n").each do |aline|
         key, *values = aline.chomp.sub(/,+$/, '').split(',')
-        if !wset[key] || (values.size >= 3)
+        if handled[key] || !wset[key] || (values.size >= 3)
           puts aline
           next
         end
+        handled[key] = true
         wset[key].uniq.each do |wvals|
           puts "#{key},#{wvals.join(',')}"
         end

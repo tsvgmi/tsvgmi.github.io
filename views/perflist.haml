@@ -186,7 +186,8 @@
         var player    = new YT.Player(vid, {
           height: '140',
           width:  '210',
-          playerVars: {autoplay:0, start:start, end:end},
+          playerVars: {autoplay:0, start:start, end:end,
+                       origin:'https://www.youtube.com'},
           videoId: avideo,
           events: {
             'onStateChange': function(event){

@@ -390,11 +390,35 @@ class PlayOrder
     end
   end
 
+  def self.all_references
+    wset = {}
+    Dir.glob("data/*.order").each do |afile|
+      File.read(afile).split("\n").each do |aline|
+        key, *values = aline.chomp.sub(/,+$/, '').split(',')
+        #Plog.dump_info(afile:afile, key:key, values:values)
+        if values.size >= 3
+          wset[key.to_i] ||= []
+          wset[key.to_i] << "#{key},#{values.join(',')}"
+          #Plog.dump_info(afile:afile, key:key, values:values)
+        end
+      end
+    end
+    wset
+  end
+
   def create_file
-    output = @playlist.fetch[:content].map do |r|
+    test(?f, @order_file) && File.delete(@order_file)
+    wset   = self.class.all_references
+    Plog.dump_info(wset:wset.keys)
+    output = []
+    @playlist.fetch[:content].sort_by{|r| r[:name]}.each do |r|
       Plog.dump_info(r:r)
       fs = r[:href].split('/')
-      "#{r[:song_id]},#{fs[5]},,,,,,"
+      if wset[r[:song_id]]
+        output.concat(wset[r[:song_id]])
+      else
+        output << "#{r[:song_id]},#{fs[5]},,,,,,"
+      end
     end
     write_file(output.join("\n"))
   end

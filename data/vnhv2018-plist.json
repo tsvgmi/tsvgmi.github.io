@@ -375,8 +375,12 @@
     "instrument": "Guitar",
     "key": "",
     "intro": "",
-    "ytvideo": "7rXhXLsNJL8,0,300",
-    "vidkey": "Am"
+    "ytvideo": "Nt7htnE1s4o,0,300",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "mua-thu-khong-tro-lai": {
     "instrument": "Piano, String",
@@ -1075,8 +1079,8 @@
   },
   "nhung-ngay-tho-mong": {
     "instrument": "[]",
-    "key": "",
-    "intro": "[Am] [Dm] [G] [C] [Bm7b5] [E] [Dm] [Am] [Bb] [Bm7b5]-[E] [Am]\r\n123 33211 33432 121-7-5 -(567876545)\r\n-7256 4865 5654 5342 45698",
+    "key": "Am",
+    "intro": "Intro - Nhat Ha:\r\n[Am] [Dm] [G] [C] [Bm7b5] [E] [Dm] [Am] [Bb] [Bm7b5]-[E] [Am]\r\n123 33211 33432 121-7-5 -(567876545)\r\n-7256 4865 5654 5342 45698\r\n\r\nIntro: Thanh Thuy\r\n[Am] [Am] [Am] [Am]\r\n858 851 858 851 ",
     "ytvideo": "tvGAxWj6__0,129,164|F6bfkwKe0Ic,0,18",
     "vidkey": "Gm|Ebm",
     "smkey": "",
@@ -1185,10 +1189,32 @@
   },
   "anh-trang-le-loi-anh-trang-hieu-long-em": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
-    "ytvideo": "xoc4rVY-F4U,0,23",
+    "key": "C",
+    "intro": "[C] [Am] [D] [G]\r\n[Am] [F] [D]-[G] [C]\r\n~5565535 6889868 689+39+3865\r\n321 11 32111 232-6-7121\r\n",
+    "ytvideo": "kFb56XBt6Ls,7,31",
     "vidkey": "Bb",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "bai-tango-cho-rieng-em": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Dm] [Dm] [Am] [Am] [E7] [E7] [Am]-[E7] [Am]\r\n-5-6 ...6 4568785 3457654 2345321 324651",
+    "ytvideo": "XZZp65hYtUs,0,17",
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "de-nho-mot-thoi-ta-da-yeu": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Dm] [E7/G#] [Gm] [Dm] [Am/C] [F] [E]\r\n3211 4332 4332 345 65544 54433 4333 42 5",
+    "ytvideo": "SdlhF96q_zE,4,31",
+    "vidkey": "Ebm",
     "smkey": "",
     "smule": "",
     "nctkey": "",

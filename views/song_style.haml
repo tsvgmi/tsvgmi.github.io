@@ -102,11 +102,13 @@
         var cur_video = videos[i];
         var avideo    = cur_video['video'];
         var vid       = cur_video['vid'];
-        var start = cur_video['start']; var end = cur_video['end'];
+        var start     = cur_video['start'];
+        var end       = cur_video['end'];
         var player    = new YT.Player(vid, {
           height: '140',
           width:  '100%',
-          playerVars: {autoplay:0, start:start, end:end},
+          playerVars: {"autoplay":0, "start":start, "end":end,
+                       "origin":"https://www.youtube.com"},
           videoId: avideo,
           events: {
             'onStateChange': function(event){
