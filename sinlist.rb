@@ -115,6 +115,7 @@ end
 
 get '/perflist/:user' do |user|
   reload = params[:reload].to_i
+  Plog.dump_info(params:params, reload:reload)
   playlists = PlayList.for_user(user, reload == 2)
   if playlists.size <= 0
     return [403, "No playlists found for user #{user}"]
