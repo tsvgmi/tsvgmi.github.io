@@ -10,6 +10,7 @@ require 'net/http'
 require 'core'
 require 'listhelper'
 require 'sequel'
+require 'better_errors'
 require_relative '../hacauto/bin/hac-nhac'
 
 set :bind, '0.0.0.0'
@@ -28,6 +29,11 @@ end
 #HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
 
 enable :sessions
+
+configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = __dir__
+end
 
 before do
   response.headers['Access-Control-Allow-Origin'] = '*'
@@ -186,6 +192,24 @@ get '/smulelist/:user' do |user|
                             all_singers:smcontent.singers,
                             join_me:smcontent.join_me,
                             i_join:smcontent.i_join}
+end
+
+get '/smulegroup/:user' do |user|
+  content   = []
+  singer    = (params[:singer] || "").split
+  smcontent = SmContent.new(user)
+  records   = smcontent.content
+  records.each do |sid, r|
+    if singer.size > 0
+      next unless (r[:record_by] & singer).size > 0
+    end
+    if params[:title] && r[:title] != params[:title]
+      next
+    end
+    content << r
+  end
+  scontent = content.group_by{|r| r[:title].downcase.sub(/\s*\(.*$/, '')}
+  haml :smulegroup, locals: {user:user, scontent:scontent}
 end
 
 helpers do

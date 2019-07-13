@@ -1,0 +1,62 @@
+:css
+  .savatar {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+  .uavatar {
+    clip-path: circle(15px at center);
+  }
+
+.row
+  .col-lg-12
+    %table.cell-border.display#main_table
+      %thead
+        %tr
+          %th Title
+          %th Record_By
+          %th Listens
+          %th Loves
+      %tbody
+        - scontent.keys.sort.each do |title|
+          - slist = scontent[title]
+          - arow   = slist[0]
+          - avatar = arow[:avatar]
+          - atitle = arow[:title].encode("UTF-8", invalid: :replace, undef: :replace, replace: '-')
+          %tr
+            %td.small
+              - href = 'https://www.smule.com' + arow[:href]
+              %img.savatar(src=avatar height=30 width=30)
+              = arow[:title]
+            %td.small
+              - worklist = []
+              - slist.each do |aperf|
+                - rec_str = aperf[:record_by].select{|r| !r.include?(user)}.join('+')
+                - next if rec_str.empty?
+                - ofile = arow[:sfile] || arow[:ofile]
+                - worklist << [rec_str, aperf, ofile]
+              - worklist.sort_by{|w| w[0].downcase.gsub(/^_+/, '')}.each do |rec_str, aperf, ofile|
+                %span.col-lg-3
+                  - if ofile
+                    - lurl   = "/play-here?ofile=#{CGI.escape(ofile)}"
+                    %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{lurl}'); return false;")
+                      %i.fa.fa-play
+                  - else
+                    - Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
+                    %i.fa.fa-play.invisible
+                  - href = 'https://www.smule.com' + aperf[:href]
+                  %a(href=href target='smule' title="#{aperf[:created]}")= rec_str
+            %td.dt-right.small
+              = slist.inject(0){|sum,x| sum + x[:listens] }
+            %td.dt-right.small
+              = slist.inject(0){|sum,x| sum + x[:loves] }
+
+- content_for :javascript do
+  :javascript
+    $(function() {
+      $('#main_table').dataTable({
+        "columnDefs": [
+          {"width": "35%", "targets": 0}
+        ],
+        "order": [[ 0, "asc" ]],
+        "pageLength": 100
+      });
+    });
