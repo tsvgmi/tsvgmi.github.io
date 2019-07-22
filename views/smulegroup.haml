@@ -29,12 +29,16 @@
             %td.small
               - worklist = []
               - slist.each do |aperf|
-                - rec_str = aperf[:record_by].select{|r| !r.include?(user)}.join('+')
-                - next if rec_str.empty?
+                - rec_str = aperf[:record_by].find{|r| r != user}
+                - next if !rec_str || rec_str.empty?
                 - ofile = arow[:sfile] || arow[:ofile]
-                - worklist << [rec_str, aperf, ofile]
-              - worklist.sort_by{|w| w[0].downcase.gsub(/^_+/, '')}.each do |rec_str, aperf, ofile|
+                - sinfo = all_singers[rec_str] || {}
+                - worklist << [rec_str, aperf, ofile, sinfo]
+              - worklist.sort_by{|w| w[1][:created]}.reverse.each do |rec_str, aperf, ofile, sinfo|
                 %span.col-lg-3
+                  - if avatar = sinfo[:avatar]
+                    %a(href="https://www.smule.com/#{sinfo[:name]}" target='smule')
+                      %img.uavatar(src=avatar height=30 width=30 title=rec_str)
                   - if ofile
                     - lurl   = "/play-here?ofile=#{CGI.escape(ofile)}"
                     %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{lurl}'); return false;")
@@ -43,7 +47,7 @@
                     - Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
                     %i.fa.fa-play.invisible
                   - href = 'https://www.smule.com' + aperf[:href]
-                  %a(href=href target='smule' title="#{aperf[:created]}")= rec_str
+                  %a(href=href target='smule' title="#{aperf[:created]}")= rec_str[0..7]
             %td.dt-right.small
               = slist.inject(0){|sum,x| sum + x[:listens] }
             %td.dt-right.small

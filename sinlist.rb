@@ -209,7 +209,8 @@ get '/smulegroup/:user' do |user|
     content << r
   end
   scontent = content.group_by{|r| r[:title].downcase.sub(/\s*\(.*$/, '')}
-  haml :smulegroup, locals: {user:user, scontent:scontent}
+  haml :smulegroup, locals: {user:user, scontent:scontent,
+                            all_singers:smcontent.singers}
 end
 
 helpers do
@@ -519,7 +520,12 @@ class PlayOrder
     end
     output += song_list.map do |sid, recs|
       sname = recs[0][:href].split('/')[5]
-      "#{sid},#{sname},,,,,"
+      if Dir.glob("thienv/#{sid}:*").size > 0
+        version = 'thienv'
+      else
+        version = ''
+      end
+      "#{sid},#{sname},#{version},,,,"
     end
     write_file(output.join("\n"))
   end
