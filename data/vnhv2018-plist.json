@@ -1156,8 +1156,8 @@
   },
   "dan-trong-dem-vang": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Am",
+    "intro": "===\r\n[Am] [Am]\r\n[Am] [Am] [G] [G] [F] [F] [E] [A]\r\n123156545 345654345434 3276 1234323 112343212 2171\r\n",
     "ytvideo": "G6RquQOLa5Y,0,22|fVbmc4skbgM,0,29",
     "vidkey": "Gm|Am",
     "smkey": "",
@@ -1223,7 +1223,7 @@
   "lk-ngo-thuy-mien-ngoc-anh-quang-dung": {
     "instrument": "[]",
     "key": "",
-    "intro": "",
+    "intro": "Intro: 123 432 123 6545  5~-5\r\nIntro #2:  12345421\r\nIntro #3: 5321 -5 311 -5433 1544 321 -712",
     "ytvideo": "7dFRYgcsMHo,3,24,195,211",
     "vidkey": "Gm",
     "smkey": "",
@@ -1281,6 +1281,17 @@
     "intro": "[Em]-[D] [C]-[B] [Em]-[D] [C]-[B]\r\n[Am] [Em] [Am] [B]\r\n8578 7 6367 5 85787 63565\r\n1~5 6546 7a65434 654325 565 5654325",
     "ytvideo": "DXA9YAs2Lfs,0,25",
     "vidkey": "Em",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "bai-tinh-ca-cho-em": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Amadd9]\r\n[Am] [Am] [Bb] [Dm]-[G] [Am]-[G]-[F] [Bm7b5]-[E] [E]\r\n5655 13576 23465 529 58+(354) 8+(64) 61245 -5 5",
+    "ytvideo": "BeCarZWV6Ik,0,30",
+    "vidkey": "Am",
     "smkey": "",
     "smule": "",
     "nctkey": "",
