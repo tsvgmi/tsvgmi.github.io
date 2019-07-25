@@ -88,7 +88,7 @@
   - ptn = /#{ptn}/io
 - videos   = []
 - row_no   = 0
-- song_list.each do |sinfo|
+- song_list.sort_by{|s| s[:href].split('/')[5]}.each do |sinfo|
   - row_no += 1
   - oinfo   = order_list[sinfo[:song_id]] || {}
   - next if (oinfo[:singer] || "").start_with?('-')
