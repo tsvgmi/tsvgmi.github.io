@@ -493,11 +493,13 @@
   "xin-hay-roi-xa": {
     "instrument": "Sax, Guitar, String",
     "key": "Am",
-    "intro": "[Am] [Am] [Dm] [Dm] [Bm7b5] [E7] [Am] [A7] [Dm] [E7] [Am]\r\nSax/Guitar: 123-5 (123-5) 123-6 (123-6) 1234 432 -7125 \r\nGuitar/Sax: #3456 432 45-71 (54321 /1)",
-    "ytvideo": "IZrLiNagTHU,0,35",
-    "vidkey": "Bbm",
+    "intro": "[Am] [Dm] [Bm7b5]-[E] [Am]\r\n[Gm] [A7] [Dm] [Bm7b5]-[E7] [Am]\r\n123-5 123-6 (32-6) 1234 32 -712-5 (32-5)\r\n5679 87 4576 678+4 32 2321",
+    "ytvideo": "DZagFCA9uu8,0,35",
+    "vidkey": "Gbm",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "linh-hon-tuong-da": {
     "instrument": "Sax, Orchestra, Brass",
