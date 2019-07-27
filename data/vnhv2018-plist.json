@@ -1005,7 +1005,7 @@
   "de-cho-em-khoc-vali-tinh-yeu-ost": {
     "instrument": "Shaku, Sweep",
     "key": "Dm",
-    "intro": "Dm Am Bb-C F Dm Am Bb-C Dm\r\n1 552 551 -7-5 431 552 751 21",
+    "intro": "Dm Am Bb-C F Dm Am Bb-C Dm\r\n(18) 1 552 551 -7-5 431 552 751 21",
     "ytvideo": "Ijdh8D5aLks,15,43",
     "vidkey": "Dm",
     "smkey": "",
@@ -1071,7 +1071,7 @@
   "bien-can": {
     "instrument": "Piano, String",
     "key": "Am",
-    "intro": "[Bm7b5]-[E] [Am]-[G]-[F] [F]-[G] [Em]-[Am] [Dm]-[Bm7b5] [E]\r\n5659 5658 12342 -71243 -6-712342",
+    "intro": "[Bm7b5]-[E] [Am]-[G]-[F] [F]-[G] [Em]-[Am] [Dm]-[A] [E]\r\n5659 5658 12342 -71243 -6-712342",
     "ytvideo": "ee9vR7N4_T4,0,24",
     "vidkey": "Cm",
     "smkey": "",
