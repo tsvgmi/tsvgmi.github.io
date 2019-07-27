@@ -1298,5 +1298,104 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "vu-nu-than-gay-la-cumparsita": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[E] [Am]\r\n[Dm] [Dm] [Am] [Am] [E] [E] [Am]-[E] [Am]\r\n123] [4878] [7878] [87823321] [4] [432] [217] [432171\r\n",
+    "ytvideo": "dV2iWZ21vFQ,5,31",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "let-s-twist-again": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "eh8eb_ACLl8,0,300",
+    "vidkey": "",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "trieu-doa-hoa-hong": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "XyzYvZzDqaw,0,24",
+    "vidkey": "G#m",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "jump-in-my-car": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Dm] [G] [C] [Am] [Dm] [G] [C]\r\n1856 (1856) -7745 (-7745) 1856 -7745 (-7745)",
+    "ytvideo": "9sUmwfraH28,0,16",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "nua-trai-tim-yeu-nguoi": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Bm7b5] [E7] [Am] [A7] [Dm] [Bm7b5]-[E] [Am]\r\n+(32)5 762 652 345\r\n1358 53 1764 -6246 52431",
+    "ytvideo": "KFU6JoRDVWU,0,30",
+    "vidkey": "Bm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "anh-muon-em-song-sao": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "1133227755 33227711 33227755 33227711 x 4",
+    "ytvideo": "mE9DUuPdlJY,1,35",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "muoi-nam-tinh-cu": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Bm7b5]-[E] [Am]-[A] [Dm] [Am] [Bm7b5]-[E] [Am]-[Dm] [Am]\r\nSame as Nhac",
+    "ytvideo": "2puh5zEv19E,0,33",
+    "vidkey": "Gm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "khuc-ca-mua-he": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "Nhu Diep Kuc",
+    "ytvideo": "s2EgU_PBxrI,0,27",
+    "vidkey": "C",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "xuan-va-tuoi-tre": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "Nhu Diep Khuc",
+    "ytvideo": "SZclkJvvMGI,0,22",
+    "vidkey": "Eb",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
