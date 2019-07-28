@@ -107,6 +107,8 @@
     .col-6
       %button.pull-right.btn.btn-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
         Lyric
+      %button.pull-right.btn.btn-primary(type='button' role='button' onclick='close_all_lyrics();')
+        Close All
       %h5
         = "#{row_no}."
         %a(href=link target='hopamchuan')= sinfo[:name]
@@ -214,4 +216,8 @@
       console.log(selected.value);
       var new_path = '/playlist/' + selected.value + '.html';
       document.location.href = new_path;
+    }
+    
+    function close_all_lyrics() {
+      $('.collapse').collapse('hide');
     }
