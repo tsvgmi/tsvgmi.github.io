@@ -1179,9 +1179,9 @@
     "nct": ""
   },
   "mo-ve-noi-xa-lam": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Piano, String",
+    "key": "Am",
+    "intro": "[Am] [F] [Dm] [E] [F] [Dm] [Esus4] [E]\r\n5 4 3 23 5 7654 345 87636 876536",
     "ytvideo": "2FC52uqF7YY,0,31",
     "vidkey": "Am",
     "smkey": "",
@@ -1393,6 +1393,39 @@
     "intro": "Nhu Diep Khuc",
     "ytvideo": "SZclkJvvMGI,0,22",
     "vidkey": "Eb",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "yeu-va-mo": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[C] [Cmaj7] [C7] [F] [Dm] [G] [C] [C]\r\n3 3453 321 123-6 22342 21-71 1-(65)1",
+    "ytvideo": "82yrlfBsz-M,15,33",
+    "vidkey": "C",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "black-magic-woman": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "wyQUCYl-ocs,0,44,70,84",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "love-me-with-all-of-your-heart": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[C] [Em] [F] [G]\r\n8 +(233) 7 6 45678+(232)",
+    "ytvideo": "buMcwyztOp0,0,13",
+    "vidkey": "C#",
     "smkey": "",
     "smule": "",
     "nctkey": "",
