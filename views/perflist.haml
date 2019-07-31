@@ -141,6 +141,10 @@
       - if perf_note[:ytvideo] && !perf_note[:ytvideo].empty?
         - yvideos = perf_note[:ytvideo].split('|')
         - vidkeys = perf_note[:vidkey].split('|')
+      - if oinfo[:solo_idx] && yvideos.size > 0
+        - solo_sel = oinfo[:solo_idx].split('/').map{|f| f.to_i}
+        - yvideos = yvideos.values_at(*solo_sel).compact
+        - vidkeys = vidkeys.values_at(*solo_sel).compact
       - if yvideos.size > 0
         .col-6
           - yvideos.zip(vidkeys).each do |ytvideo, vidkey|

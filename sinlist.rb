@@ -443,7 +443,7 @@ class PlayOrder
       if wset[r[:song_id]]
         output.concat(wset[r[:song_id]])
       else
-        output << "#{r[:song_id]},#{fs[5]},,,,,,"
+        output << "#{r[:song_id]},#{fs[5]},,,,,,,"
       end
     end
     write_file(output.join("\n"))
@@ -483,7 +483,7 @@ class PlayOrder
     order_list = []
     Plog.info(msg:"Loading #{@order_file}")
     File.read(@order_file).split("\n").each do |r|
-      song_id, title, version, singer, skey, style, tempo, lead =
+      song_id, title, version, singer, skey, style, tempo, lead, solo_idx =
         r.chomp.split(',')
       next unless title
       song_id = song_id.to_i
@@ -497,6 +497,7 @@ class PlayOrder
         tempo:      tempo,
         lead:       lead,
         order:      lno,
+        solo_idx:   solo_idx
       }
       lno += 1
       order_list << [song_id, rec]
