@@ -175,7 +175,7 @@
       - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
       - tlyric = tlyric.sub(/^.*==/m, '')
       .col
-        - if params[:lyirc_clue]
+        - if params[:lyric_clue]
           .lyric2
             - tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').split("\n").each do |l|
               - words = l.split

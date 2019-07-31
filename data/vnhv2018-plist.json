@@ -493,7 +493,7 @@
   "xin-hay-roi-xa": {
     "instrument": "Sax, Guitar, String",
     "key": "Am",
-    "intro": "[Am] [Dm] [Bm7b5]-[E] [Am]\r\n[Gm] [A7] [Dm] [Bm7b5]-[E7] [Am]\r\n123-5 123-6 (32-6) 1234 32 -712-5 (32-5)\r\n5679 87 4576 678+4 32 2321",
+    "intro": "| [Dm] | [Bm7b5]-[E] | [Am]\r\n| [Gm] | [A7] | [Dm] | [Bm7b5]-[E7] | [Am]\r\n123-5 123-6 (32-6) 1234 32 -712-5 (32-5)\r\n5679 87 4576 678+4 32 2321",
     "ytvideo": "DZagFCA9uu8,0,35",
     "vidkey": "Gbm",
     "smkey": "",
@@ -1203,7 +1203,7 @@
   "bai-tango-cho-rieng-em": {
     "instrument": "[]",
     "key": "Am",
-    "intro": "[Dm] [Dm] [Am] [Am] [E7] [E7] [Am]-[E7] [Am]\r\n-5-6 ...6 4568785 3457654 2345321 324651\r\n==\r\n[Am] [Am] [E] [E] [Am] [Am] [E] [E] [Am] \r\n155565 155565 255565 255565 \r\n155565 155565 255565 255565 855565321",
+    "intro": "| [Dm] | [Dm] | [Am] | [Am] | [E7] | [E7] | [Am]-[E7] | [Am]\r\n-5-6 ...6 4568785 3457654 2345321 324651\r\n==\r\n| [Am] | [Am] | [E] | [E] | [Am] | [Am] | [E] | [E] | [Am] | \r\n155565 155565 255565 255565 \r\n155565 155565 255565 255565 855565321",
     "ytvideo": "XZZp65hYtUs,0,17|5UmgsTCKCzg,17,41",
     "vidkey": "Em|Fm",
     "smkey": "",
