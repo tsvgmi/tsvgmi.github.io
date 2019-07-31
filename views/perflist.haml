@@ -175,13 +175,16 @@
       - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
       - tlyric = tlyric.sub(/^.*==/m, '')
       .col
-        .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
-        .lyric2
-          - tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').split("\n").each do |l|
-            - words = l.split
-            %br/
-            %span= "#{words[0..2].join(' ')}"
-            %span.invisible= "--- #{(words[3..-1] || []).join(' ')}"
+        - if params[:lyirc_clue]
+          .lyric2
+            - tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').split("\n").each do |l|
+              - words = l.split
+              %br/
+              %span= "#{words[0..2].join(' ')}"
+              %span.invisible= "--- #{(words[3..-1] || []).join(' ')}"
+        - else
+          .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
+        
 
 -#= videos.inspect
 - content_for :javascript do
