@@ -73,7 +73,13 @@
   "hai-phuong-troi-cach-biet": {
     "instrument": "String, Accordeon, Flute",
     "key": "C",
-    "intro": "[C]3 32[A7]3456[Dm]544 2 [G]212345[C]433 [Am]-(6567)1234[Dm]54-6 421[G]-7-(7672657[C]1)"
+    "intro": "| [F] | [Em]-[A] | [Dm]-[G] | [C] | [F] | [Em] | [Dm]-[G] | [C]\r\n6 7656876 5654876  4543465 4332345 \r\n67656 8987675 4543465-721",
+    "ytvideo": "mZPsMcMVFPs,16,33",
+    "vidkey": "G",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "mot-thoi-da-xa": {
     "instrument": "Distortion",
