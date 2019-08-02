@@ -43,6 +43,12 @@
     border-top: 6px solid #888;
     background-color: #ffe;
   }
+  .lightshow {
+    color: yellow;
+  }
+  .lightshow:hover {
+    color: red;
+  }
   audio:hover, audio:focus, audio:active {
     -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
     -moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
@@ -137,10 +143,12 @@
     .row
       -# Plog.dump_info(sname:sname)
       - perf_note = perf_info[sname] || {}
-      - yvideos = []
+      - yvideos   = []
       - if perf_note[:ytvideo] && !perf_note[:ytvideo].empty?
         - yvideos = perf_note[:ytvideo].split('|')
         - vidkeys = perf_note[:vidkey].split('|')
+      -# If there is one or more solo index specified.  Use it since same song 
+      -# could be played in multiple styles
       - if oinfo[:solo_idx] && yvideos.size > 0
         - solo_sel = oinfo[:solo_idx].split('/').map{|f| f.to_i}
         - yvideos = yvideos.values_at(*solo_sel).compact
@@ -182,10 +190,11 @@
         - if params[:lyric_clue]
           .lyric2
             - tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').split("\n").each do |l|
-              - words = l.split
+              - words = l.gsub(/<span.*?<\/span>/, '').split
               %br/
+              -# Plog.dump_info(words:words)
               %span= "#{words[0..2].join(' ')}"
-              %span.invisible= "--- #{(words[3..-1] || []).join(' ')}"
+              %span.lightshow= "#{(words[3..-1] || []).join(' ')}"
         - else
           .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
         
