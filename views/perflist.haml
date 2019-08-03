@@ -103,9 +103,10 @@
 - if params[:sort].to_i > 0
   - song_list = song_list.sort_by{|s| s[:href].split('/')[5]}
 - song_list.each do |sinfo|
-  - row_no += 1
   - oinfo   = order_list[sinfo[:song_id]] || {}
+  - next unless oinfo[:active]
   - next if (oinfo[:singer] || "").start_with?('-')
+  - row_no += 1
   - hs      = sinfo[:href].split('/')
   - sname   = hs[5]
   - version = oinfo[:version]

@@ -487,6 +487,12 @@ class PlayOrder
         r.chomp.split(',')
       next unless title
       song_id = song_id.to_i
+      if song_id < 0
+        song_id = -1 * song_id
+        active  = false
+      else
+        active = true
+      end
       rec = {
         song_id:    song_id,
         title:      title,
@@ -497,7 +503,8 @@ class PlayOrder
         tempo:      tempo,
         lead:       lead,
         order:      lno,
-        solo_idx:   solo_idx
+        solo_idx:   solo_idx,
+        active:     active,
       }
       lno += 1
       order_list << [song_id, rec]
@@ -513,9 +520,9 @@ class PlayOrder
     if test(?f, @order_file)
       File.read(@order_file).split("\n").each do |l|
         sno, _title, _version, singer, skey, _remain   = l.split(',', 6)
-        if song_list[sno.to_i]
+        if song_list[sno.to_i.abs]
           output << l
-          song_list.delete(sno.to_i)
+          song_list.delete(sno.to_i.abs)
         end
       end
     end
