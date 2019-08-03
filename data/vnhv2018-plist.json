@@ -28,7 +28,13 @@
   "chuyen-thuong-tinh-the-thoi": {
     "instrument": "Synth",
     "key": "Dm",
-    "intro": "((( 555[Dm]5511 555[C]44-(77) 44[Am7]444-(55) 222-([Dm]8878 ))) x 2\n"
+    "intro": "| [Dm] | [C] | [Dm] | [Cm]-[D7] | [Gm]-[C] | [F] | [Bb]-[C] | [Dm]\r\n12345 12354 12345 123547\r\n1717656 1716545 5123 432 321\r\n",
+    "ytvideo": "6TDgzopQljI,0,31",
+    "vidkey": "C#m",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "khuc-tinh-nong": {
     "instrument": "Distortion, Piano, Brass",
@@ -500,8 +506,8 @@
     "instrument": "Sax, Guitar, String",
     "key": "Am",
     "intro": "| [Dm] | [Bm7b5]-[E] | [Am]\r\n| [Gm] | [A7] | [Dm] | [Bm7b5]-[E7] | [Am]\r\n123-5 123-6 (32-6) 1234 32 -712-5 (32-5)\r\n5679 87 4576 678+4 32 2321",
-    "ytvideo": "DZagFCA9uu8,0,35",
-    "vidkey": "Gbm",
+    "ytvideo": "qur24MjNLME,0,36|cjLUKQwWTN0,6,39",
+    "vidkey": "Bbm|Bm",
     "smkey": "",
     "smule": "",
     "nctkey": "",
@@ -1439,10 +1445,21 @@
   },
   "delilah": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "Am",
+    "intro": "Amadd9 ",
     "ytvideo": "2FCiyeyuF0g,0,9",
     "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "tinh-yeu-nhu-bong-may": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "| [C] | [G]-[Am] | [Em]-[F] | [G]\r\n3 323465 3678+3 +46789",
+    "ytvideo": "pCfMCg5AeqM,0,18",
+    "vidkey": "C|C",
     "smkey": "",
     "smule": "",
     "nctkey": "",
