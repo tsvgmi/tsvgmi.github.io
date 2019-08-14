@@ -505,7 +505,7 @@
   "xin-hay-roi-xa": {
     "instrument": "Sax, Guitar, String",
     "key": "Am",
-    "intro": "| [Dm] | [Bm7b5]-[E] | [Am]\r\n| [Gm] | [A7] | [Dm] | [Bm7b5]-[E7] | [Am]\r\n123-5 123-6 (32-6) 1234 32 -712-5 (32-5)\r\n5679 87 4576 678+4 32 2321",
+    "intro": "| [E] | [Am] | \r\n| [Gm] | [A7] | [Dm] | [Bm7b5]-[E7] | [Am]\r\n123-5 123-6 (32-6) 1234 32 -712-5 (32-5)\r\n5679 87 4576 678+4 32 2321",
     "ytvideo": "qur24MjNLME,0,36|cjLUKQwWTN0,6,39",
     "vidkey": "Bbm|Bm",
     "smkey": "",
@@ -1127,7 +1127,7 @@
   "vi-ngot-doi-moi": {
     "instrument": "[]",
     "key": "",
-    "intro": "",
+    "intro": "Same as DK (2 cau)\r\n323 243-6 315546",
     "ytvideo": "RFYtfpjLwsk,0,28|lVrBHFyC2b0,0,35",
     "vidkey": "Em|Em",
     "smkey": "",

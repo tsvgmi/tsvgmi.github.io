@@ -236,6 +236,21 @@ helpers do
     offset += 12 if offset < 0
     offset
   end
+  
+  # For flashcard - memorize.
+  def clean_and_split(lyric, position)
+    result = []
+    lyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').split("\n").each do |l|
+      words = l.gsub(/<span.*?<\/span>/, '').split.
+                map{|w| w.sub(/\([^\)]*\)/, '')}.
+                reject{|w| w.empty?}
+      position += 1 if words[0].include?(':')
+      span1 = "#{words[0..position-1].join(' ')}"
+      span2 = "#{(words[position..-1] || []).join(' ')}"
+      result << [span1, span2]
+    end
+    result
+  end
 end
 
 class SmContent
