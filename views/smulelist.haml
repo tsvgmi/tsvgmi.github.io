@@ -40,9 +40,11 @@
                 %i.fa.fa-play.invisible
               %a(href=href target='smule')
                 = arow[:title]
-            %td.small(data-sort="#{arow[:isfav] ? 1 : 0}")
+            %td.small(data-sort="#{arow[:isfav] ? 2 : (arow[:oldfav] ? 1 : 0)}")
               - if arow[:isfav]
                 %i.fa.fa-star.text-primary
+              - elsif arow[:oldfav]
+                %i.fa.fa-star.text-secondary
               - else
                 %i.fa.fa-star.invisible
             %td.small
@@ -59,7 +61,7 @@
     %table.cell-border.display#singer_table
       %thead
         %tr
-          %th Record_By
+          %th Record With
           %th Count
           %th Listens
           %th Loves
@@ -70,7 +72,7 @@
           %tr
             %td.small
               - if avatar = sinfo[:avatar]
-                %a(href="https://www.smule.com/#{singer}" target='smule')
+                %a(href="https://www.smule.com/#{singer}" target='smule' title="#{singer} on Smule")
                   %img.uavatar(src=avatar height=30 width=30)
               - if sinfo[:following]
                 %i.fa.fa-heart
@@ -82,8 +84,14 @@
               - else
                 %i.fa.fa-running.invisible
               %span.small= join_me[singer]
+              %br/
+              - href = "https://sing.salon/insights/?user=#{singer}"
+              %a(href=href target='sing_salon' title='Sing Salon')
+                %i.fa.fa-hotel
               - href = "/smulelist/#{user}?singer=#{singer}"
-              %a(href=href)= singer
+              %a.small(href=href)= singer
+
+              
             %td.dt-right.small
               = stats[:count]
             %td.dt-right.small= stats[:listens]
