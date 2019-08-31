@@ -1,10 +1,22 @@
 ---
 - !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/70118/labor-party-2910
+  :id: 70118
+  :name: Labor Party 2910
+  :sname: 70118/labor-party-2910
+  :song_count: 23
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/69740/vnhv-12-2019
+  :id: 69740
+  :name: VNHV 12/2019
+  :sname: 69740/vnhv-12-2019
+  :song_count: 2
+- !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/67622/vnhv-6-2019
   :id: 67622
   :name: VNHV 6/2019
   :sname: 67622/vnhv-6-2019
-  :song_count: 35
+  :song_count: 48
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/65907/vhhv-4-2019
   :id: 65907
