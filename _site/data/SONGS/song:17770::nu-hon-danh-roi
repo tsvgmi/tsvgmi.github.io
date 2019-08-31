@@ -1,0 +1,38 @@
+--- !ruby/object:Hash
+:artist: Hoàng Yến Chibi
+:author: Đức Trí
+:genre: Nhạc Phim
+:lnote: |-
+  Tông gốc Cm, capo 3 
+  [Am] [Em] [F] [G] 
+   
+  Cách rải chậm: Bass - 3 - (21) - 3 hoặc Bass - 4 - (32) - 
+  4 rồi chuyển hợp âm khác, vẫn rải tiếp tục như vậy. (4 nốt đơn) 
+  Cách rải nhanh (dùng cho đoạn 2 và điệp khúc - 8 nốt móc đơn): 
+  + Đối với các hợp âm dây bass ở dây 5 (Am, C) thì rải 5-4-3-4-2-3-4-3 
+  + Đối với các hợp âm dây bass ở dây 6 (F, Em, G, E) thì rải 6-5-4-3-2-3-4-3 
+  + Đối với hợp âm D thì rải 4-3-2-3-1-2-3-2 
+  Đoạn điệp khúc chỉ rải 4 nốt móc đơn là chuyển hợp âm (trừ 
+  hợp âm C - chỉ riêng em thôi và 3 câu cuối D - nên đêm hờ 
+  hững trôi ... đau lòng quá rải đủ nhịp) 
+:lyric: |-
+  [Am]Em đánh [Em]rơi nụ hôn [F]đầu sau lưng [C]anh 
+  [Am]Em đánh [Em]rơi tình yêu [F]đầu sau lưng [C]anh 
+  Và [Dm]anh đâu biết và em [Dm]chưa dám 
+  Nên [F]thế là vụt [G]mất nhau một [F]đời 
+   
+  [Am]Em lỡ [Em]mang nỗi [F]buồn khi yêu [C]anh 
+  [Am]Em nát [Em]tan cõi [F]lòng nên mong [C]anh 
+  Nụ [Dm]hôn chưa dám vòng tay [Dm]chưa ấm 
+  Nên [F]thế là lạnh [G]giá em một [Am]đời [Am] 
+   
+  [Am]Yêu người nhưng em [F]giữ cho [C]riêng em thôi 
+  [Am]Yêu người em ngu [Dm]ngốc khóc [G]riêng em [C]thôi 
+  [Am]Hay vì em chưa [F]biết biết [G]yêu ai bao [C]giờ 
+  Biết [E]thương ai bao [Am]giờ 
+  Nên [D]đêm hờ hững trôi 
+  [Dm]Anh hờ hững xa 
+  [E]Đau lòng quá 
+:perf_link: https://www.youtube.com/watch?v=ssLJ4f9pyVM
+:song_key: Am
+:title: Nụ Hôn Đánh Rơi
