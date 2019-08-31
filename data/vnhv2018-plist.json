@@ -1640,5 +1640,38 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "can-t-take-my-eyes-off-you": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[C] [C] [C] [C]\r\n#443 #443\r\n2 2 217123217123 2 217123\r\n",
+    "ytvideo": "UXYjQa_osMI,13,32",
+    "vidkey": "E",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "killing-me-softly": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "Am Dm G C Am D7 G F C F Bb A",
+    "ytvideo": "a97SyvqSvA8,0,33",
+    "vidkey": "B",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "smooth-operator": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "[Dm] [Dm] [Dm] [Dm]\r\n1234578978 12345789+(312)78 1234578978 +(123#44312)75",
+    "ytvideo": "Q6ghON4xTgI,5,25",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
