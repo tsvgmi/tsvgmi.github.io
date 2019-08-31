@@ -1607,5 +1607,38 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "tinh-nong-chay-over-and-over": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "[Am] [Am] [Am] [E] [E] [E] [E] [Am]\r\n[Am] [Am] [Am] [E] [E] [E] [E] [Am]\r\n545321-5 5432 454217-5 4321\r\n545321-5 5434 4545654 6545",
+    "ytvideo": "k_MAlsabSYE,0,23",
+    "vidkey": "",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "dung-pha-vo-an-tinh": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Dm] [G]-[G7] [C]-[E] [Am] [Dm] [E] [F]-[Em] [Am]\r\n5+3 56549 9874654345 5+(2332123144323425 312)758\r\n",
+    "ytvideo": "az3Tr6pzYOo,0,21",
+    "vidkey": "F#m",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "doi-thong": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am]-[F] [C]-[Dm] [Am]-[E] [F]-[C] [Am]-[F] [Am]-[E] [Em]-[E] [Am]-[E]\r\n5658 5654 4547 4543 3436 3432 23452321",
+    "ytvideo": "FhrtqppCdhg,0,32",
+    "vidkey": "Bm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
