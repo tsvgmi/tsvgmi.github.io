@@ -1563,5 +1563,49 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "em-ve-nao-co-hay": {
+    "instrument": "Guitar, Sax",
+    "key": "Am",
+    "intro": "[Am] [F] [Dm]-[Bm7b5] [E]\r\nGuitar: 33221 -51233221 \r\nSax: -5~5 5316 54 65",
+    "ytvideo": "G5phP0Z-JO0,2,18",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "bay-gio-thang-may": {
+    "instrument": "",
+    "key": "C",
+    "intro": "[Cmaj7] [Fmaj7] [Cmaj7] [Fmaj7]\r\n[Cmaj7] [Cmaj7] [Am7] [Am7] [Dm7] [Fm]-[G] [C]-[G]\r\n(35)78735 (12345)78735 354348 4348 98",
+    "ytvideo": "CinE6sKTY_w,0,39",
+    "vidkey": "C",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "coi-vang": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "E7 E7 F E7 E7\r\n-712345535 856757656 654434 745675545",
+    "ytvideo": "3gctqkOGYYg,0,36,1:54,2:08",
+    "vidkey": "C#m",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "niem-thuong-nho-nostalgie": {
+    "instrument": "String",
+    "key": "Am",
+    "intro": "E7 Am E7 Am\r\n-5214364-7 -51-721651 -5214365-7 -5654321-71",
+    "ytvideo": "ZoX-F36lBDs,0,19",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
