@@ -63,6 +63,10 @@
         - ytvideo.split('|').each do |svideo|
           - video, *ytoffset = svideo.split(',')
           - ytoffset.each_slice(2) do |ytstart, ytend|
+            - if ytstart =~ /:/
+              - ytstart = $`.to_i*60 + $'.to_i
+            - if ytend =~ /:/
+              - ytend   = $`.to_i*60 + $'.to_i
             - vid = "video_#{ytstart}_#{ytend}"
             - Plog.info(start:ytstart, end:ytend, vid:vid)
             %div(id=vid)

@@ -1464,5 +1464,71 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "hoang-vu": {
+    "instrument": "Elect Guitar (Dist) - Brass",
+    "key": "Am",
+    "intro": "[Am] [E] [E] [Am]\r\n[Dm] [C] [Bb] [E]-[F]-[E]\r\n555 65 555 65 \r\n666 765 434 325 65545",
+    "ytvideo": "D7xU_vpCo9M,1,19",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "thien-duong-ai-an-thien-dang-ai-an": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "[Em] [C7]-[B7] [Em] [C7]-[B7] [Em] [C7]-[B7]\r\n[Am] [Bm] [C] [D] [E] [B]\r\n154 468+35 975 156 46+36\r\n4 5 6 7 8 5 5 55",
+    "ytvideo": "dxvxNaofJJc,0,27",
+    "vidkey": "E",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "neu-em-duoc-lua-chon": {
+    "instrument": "Violin",
+    "key": "Am",
+    "intro": "[Am] [Dm7] [G7] [Cmaj7] [Fmaj7] [Dm7] [E7] [Am]\r\n-53211233-66 4432342-55 -(887678844 545)2211",
+    "ytvideo": "Mv35mgGD-_8,3,28",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "ao-lua-ha-dong": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "[Dm7] [G] [Dm7] [G] [Dm7] [G] [Dm7] [G] ...\r\n1212 9712 1212 \r\n13454131 -71 313454 313454313 -57123 313454\r\n(Mid 16 measures Dm7+G)",
+    "ytvideo": "4t0jbcwzjG8,0,35,2:55,3:30",
+    "vidkey": "Ebm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "tinh-la-gi": {
+    "instrument": "Elec Guitar",
+    "key": "Am",
+    "intro": "[Am]",
+    "ytvideo": "VMbkfCG6yC8,3,12",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "xot-xa": {
+    "instrument": "Acc Guitar + String",
+    "key": "",
+    "intro": "[Dm] [E7] [Am] [Am] [Bm7b5] [E7] [Am] [Am]\r\n-(565) 544 234321-5 -(565)562 23432-51",
+    "ytvideo": "mhmbQdiimJo,0,23",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
