@@ -1530,5 +1530,38 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "sau-dong": {
+    "instrument": "Trumpet",
+    "key": "Am",
+    "intro": "[Am] [E/G#] [E/G#] [Am] [Am] [E/G#] [E/G#] [Am]-[A7]\r\n[Dm] [Dm] [Am] [Am] [E] [E] [Em]-[A7]\r\n[Dm] [Dm] [Am] [Am] [E] [E] [Am] [Dm]-[E]\r\n1365 317265 2465317265 (x2)\r\n135546 45654435 34543324 234345\r\n135546 45654435 34543324 234321",
+    "ytvideo": "7dWP08VNTb4,0,47",
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "nguoi-yeu-ly-tuong": {
+    "instrument": "Bass, Brass, Synth",
+    "key": "Am",
+    "intro": "[Am] ...\r\nBass line, Synth Line, Brass Line\r\n111173 -711175 (brass) 111173 -711175",
+    "ytvideo": "xs4RehhJaYc,0,16",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "chiec-la-mua-dong": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] x 12\r\n33236 33233 333236 333236 332333",
+    "ytvideo": "Cfh5OCaYwac,0,42",
+    "vidkey": "Bm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
