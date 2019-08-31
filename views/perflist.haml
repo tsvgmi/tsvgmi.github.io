@@ -117,10 +117,13 @@
   - lyric_id = "row_#{row_no}"
   - if ptn
     - next unless "#{oinfo[:lead]}.#{oinfo[:singer]}" =~ ptn
+  - perf_note = perf_info[sname] || {}
   .row.song_header
     .col-6
       %button.pull-right.btn.btn-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
         Lyric
+        - if perf_note[:ytvideo] && !perf_note[:ytvideo].empty?
+          %i.fa.fa-music
       %button.pull-right.btn.btn-primary(type='button' role='button' onclick='close_all_lyrics();')
         Close All
       %h5
@@ -144,7 +147,6 @@
   %div.collapse(id=lyric_id)
     .row
       -# Plog.dump_info(sname:sname)
-      - perf_note = perf_info[sname] || {}
       - yvideos   = []
       - if perf_note[:ytvideo] && !perf_note[:ytvideo].empty?
         - yvideos = perf_note[:ytvideo].split('|')

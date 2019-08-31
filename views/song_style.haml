@@ -41,6 +41,7 @@
   %input(type='hidden' name='song_id' value=song_id)
   %input(type='hidden' name='song_name' value=song_name)
   .row
+    - has_video = ytvideo && !ytvideo.empty?
     .col-6
       .form-group
         %label(for='instrument') Instrument(s)
@@ -59,7 +60,7 @@
       .form-group
         %label(for='vidkey') Video Key (Youtube)
         %input.form-control#vidkey(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
-      - if ytvideo && !ytvideo.empty?
+      - if has_video
         - ytvideo.split('|').each do |svideo|
           - video, *ytoffset = svideo.split(',')
           - ytoffset.each_slice(2) do |ytstart, ytend|
