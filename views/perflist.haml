@@ -103,6 +103,9 @@
 - row_no   = 0
 - if params[:sort].to_i > 0
   - song_list = song_list.sort_by{|s| s[:href].split('/')[5]}
+- if (limit = params[:limit].to_i) > 0
+  - song_list = song_list[0..limit-1]
+
 - song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
   - next unless oinfo[:active]
@@ -154,6 +157,7 @@
             - new_videos = vidinfos.videos
             - videos.concat(new_videos)
             - new_videos.each do |vinfo|
+              -# Plog.dump_info(vinfo:vinfo, oinfo:oinfo)
               %div.col-4(id="#{vinfo[:vid]}")
               - if vinfo[:key]
                 - offset = key_offset(vinfo[:key], oinfo[:singer_key], true)
@@ -161,6 +165,10 @@
                   VKey: #{vinfo[:key]}
                   %br/
                   Trans: #{offset*(-1)}
+                  %br/
+                  - href = "/dl-transpose/#{vinfo[:video]}?song_id=#{oinfo[:song_id]}&title=#{oinfo[:title]}&offset=#{offset}&start=#{vinfo[:start]}"
+                  %a(href='#' onclick="jQuery.ajax('#{href}'); return false" title='Download transposed')
+                    %i.fa.fa-download
       - unless perf_note.empty?
         .col-2
           = perf_note[:instrument]

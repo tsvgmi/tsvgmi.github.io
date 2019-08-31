@@ -213,7 +213,43 @@ get '/smulegroup/:user' do |user|
                             all_singers:smcontent.singers}
 end
 
+get '/dl-transpose/:video' do |video|
+  offset = params[:offset].to_i
+  download_transpose(video, offset, params)
+end
+
 helpers do
+  def download_transpose(video, offset, options)
+    require 'tempfile'
+
+    Plog.dump_info(options:options)
+    url   = "https://www.youtube.com/watch?v=#{video}"
+    odir  = options[:odir]  || 'data/MP3'
+    ofile = options[:title] || '%(title)s-%(creator)s-%(release_date)s'
+    ofile = "#{odir}/#{ofile}=#{video}=#{offset}"
+    if test(?s, "#{ofile}.mp3")
+      Plog.info("#{ofile}.mp3 already exist.  Skip download")
+      return
+    end
+    tmpf  = Tempfile.new('youtube')
+    ofmt  = "#{ofile}-pre.%(ext)s"
+    command = "youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail"
+    command += " -o '#{ofmt}' '#{url}'"
+    system "set -x; #{command}"
+
+    start = options[:start].to_i
+    if (offset != 0) || (start > 0)
+      command = "sox #{ofile}-pre.mp3 #{ofile}.mp3"
+      command += " pitch #{offset}00" if offset != 0
+      command += " trim #{options[:start]}" if start > 0
+      command += "; rm -f #{ofile}-pre.mp3"
+    else
+      command = "mv #{ofile}-pre.mp3 #{ofile}.mp3"
+    end
+    system "set -x; #{command}"
+  end
+
+
   KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
   # Attach play note to the like star
   def key_offset(base_key, new_key, closer=false)
@@ -236,7 +272,7 @@ helpers do
     offset += 12 if offset < 0
     # Keep offfset close for vis
     if closer
-      offset -= 12 if offset >= 5
+      offset -= 12 if offset >= 6
     end
     offset
   end
@@ -439,6 +475,7 @@ class PlayOrder
     wset = {}
     Dir.glob("data/*.order").each do |afile|
       File.read(afile).split("\n").each do |aline|
+        next if aline =~ /^\s*#/
         key, *values = aline.chomp.sub(/,+$/, '').split(',')
         #Plog.dump_info(afile:afile, key:key, values:values)
         if values.size >= 3
@@ -501,7 +538,7 @@ class PlayOrder
     lno        = 0
     order_list = []
     Plog.info(msg:"Loading #{@order_file}")
-    File.read(@order_file).split("\n").each do |r|
+    read_file.each do |r|
       song_id, title, version, singer, skey, style, tempo, lead, solo_idx =
         r.chomp.split(',')
       next unless title
@@ -536,13 +573,11 @@ class PlayOrder
     song_list = @playlist.fetch(true)[:content].group_by {|r| r[:song_id]}
     wset      = {}
     output    = []
-    if test(?f, @order_file)
-      File.read(@order_file).split("\n").each do |l|
-        sno, _title, _version, singer, skey, _remain   = l.split(',', 6)
-        if song_list[sno.to_i.abs]
-          output << l
-          song_list.delete(sno.to_i.abs)
-        end
+    read_file.each do |l|
+      sno, _title, _version, singer, skey, _remain   = l.split(',', 6)
+      if song_list[sno.to_i.abs]
+        output << l
+        song_list.delete(sno.to_i.abs)
       end
     end
     output += song_list.map do |sid, recs|
@@ -557,8 +592,17 @@ class PlayOrder
     write_file(output.join("\n"))
   end
 
+  def read_file
+    if test(?f, @order_file)
+      File.read(@order_file).split("\n").select {|l| l !~ /^\s*#/}
+    else
+      []
+    end
+  end
+
   def write_file(new_content)
     File.open(@order_file, "w") do |fod|
+      fod.puts "# song_id,title,version,singer,skey,style,tempo,lead,solo_idx"
       fod.puts new_content
     end
     @content_str = _content_str
