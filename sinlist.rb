@@ -216,7 +216,7 @@ end
 helpers do
   KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
   # Attach play note to the like star
-  def key_offset(base_key, new_key)
+  def key_offset(base_key, new_key, closer=false)
     if !base_key || !new_key
       Plog.dump_info(msg:'No key', base_key:base_key, new_key:new_key)
       return 0
@@ -234,6 +234,10 @@ helpers do
     end
     offset = new_offset - base_offset
     offset += 12 if offset < 0
+    # Keep offfset close for vis
+    if closer
+      offset -= 12 if offset >= 5
+    end
     offset
   end
   
@@ -577,6 +581,49 @@ class SongInfo
       @content = {}
     else
       @content = YAML.load_file(sfile)
+    end
+  end
+end
+
+class VideoInfo
+  attr_reader :videos, :yk_videos
+
+  def initialize(vstring, kstring=nil)
+    yvideos = (vstring || "").split('|')
+    vidkeys = (kstring || "").split('|')
+    @yk_videos = yvideos.zip(vidkeys)
+    check_videos
+  end
+
+  # Select set is "1/2/3"
+  # If there is one or more solo index specified.  Use it since same song 
+  # could be played in multiple styles
+  def select_set(solo_idx)
+    if solo_idx && @yk_videos.size > 0
+      solo_sel  = solo_idx.split('/').map{|f| f.to_i}
+      @yk_videos  = @yk_videos.values_at(*solo_sel).compact
+      check_videos
+    end
+    @yk_videos
+  end
+
+  def check_videos
+    @videos  = []
+    @yk_videos.each do |svideo, skey|
+      video, *ytoffset = svideo.split(',')
+      ytoffset.each_slice(2) do |ytstart, ytend|
+        if ytstart =~ /:/
+          ytstart = $`.to_i*60 + $'.to_i
+        end
+        if ytend =~ /:/
+          ytend   = $`.to_i*60 + $'.to_i
+        end
+        vid = "video_#{ytstart}_#{ytend}"
+        @videos << {
+          vid:   vid, video: video,
+          start: ytstart.to_i, end: ytend.to_i, key: skey
+        }
+      end
     end
   end
 end

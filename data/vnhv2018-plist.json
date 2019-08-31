@@ -1534,7 +1534,7 @@
   "sau-dong": {
     "instrument": "Trumpet",
     "key": "Am",
-    "intro": "[Am] [E/G#] [E/G#] [Am] [Am] [E/G#] [E/G#] [Am]-[A7]\r\n[Dm] [Dm] [Am] [Am] [E] [E] [Em]-[A7]\r\n[Dm] [Dm] [Am] [Am] [E] [E] [Am] [Dm]-[E]\r\n1365 317265 2465317265 (x2)\r\n135546 45654435 34543324 234345\r\n135546 45654435 34543324 234321",
+    "intro": "[Am] [E/G#] [E/G#] [Am] [Am] [E/G#] [E/G#] [Am]-[A7]\r\n[Dm] [Dm] [Am] [Am] [E] [E] [Em]-[A7]\r\n[Dm] [Dm] [Am] [Am] [E] [E] [Am] [Dm]-[E]\r\n1365 317265 2465317265 (x2)\r\n1#35546 45654435 34543324 234345\r\n1#35546 45654435 34543324 234321  (444#45)",
     "ytvideo": "7dWP08VNTb4,0,47",
     "vidkey": "Em",
     "smkey": "",
@@ -1586,17 +1586,6 @@
     "nctkey": "",
     "nct": ""
   },
-  "coi-vang": {
-    "instrument": "[]",
-    "key": "Am",
-    "intro": "E7 E7 F E7 E7\r\n-712345535 856757656 654434 745675545",
-    "ytvideo": "3gctqkOGYYg,0,36,1:54,2:08",
-    "vidkey": "C#m",
-    "smkey": "",
-    "smule": "",
-    "nctkey": "",
-    "nct": ""
-  },
   "niem-thuong-nho-nostalgie": {
     "instrument": "String",
     "key": "Am",
@@ -1636,6 +1625,17 @@
     "intro": "[Am]-[F] [C]-[Dm] [Am]-[E] [F]-[C] [Am]-[F] [Am]-[E] [Em]-[E] [Am]-[E]\r\n5658 5654 4547 4543 3436 3432 23452321",
     "ytvideo": "FhrtqppCdhg,0,32",
     "vidkey": "Bm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "doi-em-trong-mo": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "E7 E7 F E7 E7\r\n-712345535 856757656 654434 745675545",
+    "ytvideo": "3gctqkOGYYg,0,36,1:54,2:08",
+    "vidkey": "C#m",
     "smkey": "",
     "smule": "",
     "nctkey": "",

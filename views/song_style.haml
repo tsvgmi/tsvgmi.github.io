@@ -41,7 +41,6 @@
   %input(type='hidden' name='song_id' value=song_id)
   %input(type='hidden' name='song_name' value=song_name)
   .row
-    - has_video = ytvideo && !ytvideo.empty?
     .col-6
       .form-group
         %label(for='instrument') Instrument(s)
@@ -60,18 +59,9 @@
       .form-group
         %label(for='vidkey') Video Key (Youtube)
         %input.form-control#vidkey(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
-      - if has_video
-        - ytvideo.split('|').each do |svideo|
-          - video, *ytoffset = svideo.split(',')
-          - ytoffset.each_slice(2) do |ytstart, ytend|
-            - if ytstart =~ /:/
-              - ytstart = $`.to_i*60 + $'.to_i
-            - if ytend =~ /:/
-              - ytend   = $`.to_i*60 + $'.to_i
-            - vid = "video_#{ytstart}_#{ytend}"
-            - Plog.info(start:ytstart, end:ytend, vid:vid)
-            %div(id=vid)
-            - videos << {vid:vid, video:video, start:ytstart.to_i, end:ytend.to_i}
+      - videos = VideoInfo.new(ytvideo).videos
+      - videos.each do |vinfo|
+        %div(id="#{vinfo[:vid]}")
     .col-6
       .form-group
         %label(for='smvideo') Smule Record
