@@ -1673,5 +1673,115 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "bai-luan-vu-mua-mua-the-last-waltz": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "0CojPKKIR7U,4,11",
+    "vidkey": "D",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "biet-den-thuo-nao": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "O4QG-NFuRNs,1,32",
+    "vidkey": "Ab",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "hay-de-mua-roi": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "BXoExObL670,8,21",
+    "vidkey": "Bm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "nang-giang-tien-diana": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[C] [Am] [F] [G] [C] [Am] [F] [G]\r\n3 333121 32 3 333 121 32",
+    "ytvideo": "CZl1ZSr9yb4,0,15",
+    "vidkey": "G",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "thoi": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "Xw7C1v3hYao,2,21",
+    "vidkey": "Dm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "tinh-dep-nhu-mo": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "[Dm] [E]-[A] [Gm6]-[A] [Dm] [Aaug]\r\n358 +(3212) 469 +(4321) (8765455)",
+    "ytvideo": "FuhwdUgVjm4,0,18",
+    "vidkey": "Fm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "toi-dua-em-sang-song": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "[Dm] [Dm] [Bb] [Bb] [C] [C] [Dm] [Dm]\r\n[Dm] [Dm] [Bb] [Bb] [C] [C] [Dm] [Dm]\r\n1332277551 133224432 2243  244332 1132275\r\n3345 33455 22344 11231",
+    "ytvideo": "Y7_KON6NHJc,0,30",
+    "vidkey": "Bbm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "coi-vang": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Dm] [E] [Am] [A7] [Dm] [Bm7b5] [E7]\r\n123 2323-6 -712 -7121-5 \r\nb789 137678 456-52465",
+    "ytvideo": "0jeSQkY_qr0,1,32",
+    "vidkey": "Bm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "gia-tu-dem-mua": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [G] [F] [E] [Am] [G] [F] [E]\r\n12321-7 121-(76 78765) \r\n12321-7 121-(76 78765) ",
+    "ytvideo": "XFKpjvDBUZY,0,28",
+    "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "mot-coi-tinh-phai": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Dm] [E7] [Am] [Dm]-[G] [C] [Bm7b5]-[E7] [Am]\r\n+(123123123) 55 4 789789789 543\r\n456456456 765 789789789 +(31)",
+    "ytvideo": "h4FBVcmDFSw,0,34",
+    "vidkey": "Bbm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
