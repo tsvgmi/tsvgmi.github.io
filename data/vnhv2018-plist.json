@@ -1501,7 +1501,7 @@
   "ao-lua-ha-dong": {
     "instrument": "[]",
     "key": "Dm",
-    "intro": "[Dm7] [G] [Dm7] [G] [Dm7] [G] [Dm7] [G] ...\r\n1212 9712 1212 \r\n13454131 -71 313454 313454313 -57123 313454\r\n(Mid 16 measures Dm7+G)",
+    "intro": "[Dm7] [G] [Dm7] [G] [Dm7] [G] [Dm7] [G] ...\r\n1212 9712 1212 \r\n13454131 -71 313454 313454313 -57123 313454\r\n(Mid 16 measures [Dm7]+[G])",
     "ytvideo": "4t0jbcwzjG8,0,35,2:55,3:30",
     "vidkey": "Ebm",
     "smkey": "",
