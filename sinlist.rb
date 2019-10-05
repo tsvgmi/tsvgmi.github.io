@@ -226,7 +226,8 @@ helpers do
     url   = "https://www.youtube.com/watch?v=#{video}"
     odir  = options[:odir]  || 'data/MP3'
     ofile = options[:title] || '%(title)s-%(creator)s-%(release_date)s'
-    ofile = "#{odir}/#{ofile}=#{video}=#{offset}"
+    key   = params[:key] || offset
+    ofile = "#{odir}/#{ofile}=#{video}=#{key}"
     if test(?s, "#{ofile}.mp3")
       Plog.info("#{ofile}.mp3 already exist.  Skip download")
       return

@@ -1,10 +1,16 @@
 ---
 - !ruby/object:Hash
-  :href: https://hopamchuan.com/playlist/v/70118/labor-party-2019
+  :href: https://hopamchuan.com/playlist/v/71568/jam-10-2019
+  :id: 71568
+  :name: Jam 10/2019
+  :sname: 71568/jam-10-2019
+  :song_count: 0
+- !ruby/object:Hash
+  :href: https://hopamchuan.com/playlist/v/70118/labor-day-party-2019
   :id: 70118
-  :name: Labor Party 2019
-  :sname: 70118/labor-party-2019
-  :song_count: 23
+  :name: Labor Day Party 2019
+  :sname: 70118/labor-day-party-2019
+  :song_count: 36
 - !ruby/object:Hash
   :href: https://hopamchuan.com/playlist/v/69740/vnhv-12-2019
   :id: 69740

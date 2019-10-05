@@ -105,11 +105,13 @@
           playerVars: {"autoplay":0, "start":start, "end":end,
                        "origin":"https://www.youtube.com"},
           videoId: avideo,
+          playsinline: true,
           events: {
             'onStateChange': function(event){
               var mplayer = event.target
+              var mdata   = mplayer.b.b;
+              //console.log('Start playing...' + mdata['videoId'] + ' ' + event.data);
               if (event.data == 0) {
-                mdata  = mplayer.b.b;
                 start  = mdata['playerVars']['start'];
                 console.log(mdata);
                 console.log('Restarting ' + mdata['videoId'] + ' ' + start);
