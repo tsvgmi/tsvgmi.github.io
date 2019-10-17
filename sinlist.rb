@@ -492,12 +492,13 @@ class PlayOrder
   def create_file
     test(?f, @order_file) && File.delete(@order_file)
     wset   = self.class.all_references
-    Plog.dump_info(wset:wset.keys)
+    #Plog.dump_info(wset:wset.keys)
     output = []
     @playlist.fetch[:content].sort_by{|r| r[:name]}.each do |r|
       Plog.dump_info(r:r)
       fs = r[:href].split('/')
       if wset[r[:song_id]]
+        Plog.dump_info(previous:wset[r[:song_id]])
         output.concat(wset[r[:song_id]])
       else
         output << "#{r[:song_id]},#{fs[5]},,,,,,,"
@@ -574,6 +575,7 @@ class PlayOrder
     song_list = @playlist.fetch(true)[:content].group_by {|r| r[:song_id]}
     wset      = {}
     output    = []
+    Plog.info("Refresh data")
     read_file.each do |l|
       sno, _title, _version, singer, skey, _remain   = l.split(',', 6)
       if song_list[sno.to_i.abs]
@@ -581,14 +583,20 @@ class PlayOrder
         song_list.delete(sno.to_i.abs)
       end
     end
+    wset      = self.class.all_references
     output += song_list.map do |sid, recs|
       sname = recs[0][:href].split('/')[5]
-      if Dir.glob("thienv/#{sid}:*").size > 0
-        version = 'thienv'
+      if wset[sid]
+        Plog.dump_info(previous:wset[sid])
+        wset[sid].first
       else
-        version = ''
+        if Dir.glob("thienv/#{sid}:*").size > 0
+          version = 'thienv'
+        else
+          version = ''
+        end
+        "#{sid},#{sname},#{version},,,,"
       end
-      "#{sid},#{sname},#{version},,,,"
     end
     write_file(output.join("\n"))
   end
