@@ -254,7 +254,7 @@ helpers do
   KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
   # Attach play note to the like star
   def key_offset(base_key, new_key, closer=false)
-    if !base_key || !new_key
+    if !base_key || !new_key || base_key.empty? || new_key.empty?
       Plog.dump_info(msg:'No key', base_key:base_key, new_key:new_key)
       return 0
     end

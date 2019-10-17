@@ -171,6 +171,7 @@ class ListHelper
     def transpose_lyric(lyric, offset, options={})
       # Target key.  Need to know since this control whethere
       # to use flat or sharp
+      Plog.dump_info(lyric:lyric)
       to_basechord = options[:fromkey] ?
         target_chord(options[:fromkey], offset) :
         to_basechord = options[:tokey]
@@ -189,6 +190,8 @@ class ListHelper
       end
       last_span = lyric.sub(/^.*\]/m, '')
       output += last_span
+      output.gsub(/\|/, "<span class='#{cclass}'>|</span>")
+      Plog.dump_info(output:output)
       output
     end
 

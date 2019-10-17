@@ -158,8 +158,9 @@
             - videos.concat(new_videos)
             - new_videos.each do |vinfo|
               -# Plog.dump_info(vinfo:vinfo, oinfo:oinfo)
+              - Plog.dump_info(title:oinfo[:title])
               %div.col-4(id="#{vinfo[:vid]}")
-              - if vinfo[:key]
+              - if vinfo[:key] && !vinfo[:key].empty?
                 - offset = key_offset(vinfo[:key], oinfo[:singer_key], true)
                 .pull-right.small
                   VKey: #{vinfo[:key]}
@@ -174,7 +175,7 @@
           = perf_note[:instrument]
         .col-4
           - intro = perf_note[:intro]
-          - if intro
+          - if intro && !intro.empty?
             - offset = key_offset(perf_note[:key], oinfo[:singer_key])
             - tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key], cclass:'chord_intro')
             = tlyric.gsub(/\n/, '<br>')

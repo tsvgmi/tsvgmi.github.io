@@ -1478,7 +1478,7 @@
   },
   "thien-duong-ai-an-thien-dang-ai-an": {
     "instrument": "[]",
-    "key": "",
+    "key": "E",
     "intro": "[Em] [C7]-[B7] [Em] [C7]-[B7] [Em] [C7]-[B7]\r\n[Am] [Bm] [C] [D] [E] [B]\r\n154 468+35 975 156 46+36\r\n4 5 6 7 8 5 5 55",
     "ytvideo": "dxvxNaofJJc,0,27|wcXu7_cAPE4,0,27",
     "vidkey": "E|E",
@@ -1599,7 +1599,7 @@
   },
   "tinh-nong-chay-over-and-over": {
     "instrument": "[]",
-    "key": "",
+    "key": "Am",
     "intro": "[Am] [Am] [Am] [E] [E] [E] [E] [Am]\r\n[Am] [Am] [Am] [E] [E] [E] [E] [Am]\r\n545321-5 5432 454217-5 4321\r\n545321-5 5434 4545654 6545",
     "ytvideo": "k_MAlsabSYE,0,23",
     "vidkey": "Am",
@@ -1676,8 +1676,8 @@
   },
   "bai-luan-vu-mua-mua-the-last-waltz": {
     "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "key": "C",
+    "intro": "[C]\r\n9 8 7 6",
     "ytvideo": "0CojPKKIR7U,4,11",
     "vidkey": "D",
     "smkey": "",
@@ -1779,6 +1779,17 @@
     "intro": "[Am] [Dm] [E7] [Am] [Dm]-[G] [C] [Bm7b5]-[E7] [Am]\r\n+(123123123) 55 4 789789789 543\r\n456456456 765 789789789 +(31)",
     "ytvideo": "h4FBVcmDFSw,0,34",
     "vidkey": "Bbm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "mambo-italiano": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "U7FuXrOgk4U,22,30",
+    "vidkey": "Gm",
     "smkey": "",
     "smule": "",
     "nctkey": "",

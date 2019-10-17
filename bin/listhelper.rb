@@ -189,7 +189,7 @@ class ListHelper
       end
       last_span = lyric.sub(/^.*\]/m, '')
       output += last_span
-      output
+      output.gsub(/\|/, "<span class='#{cclass}'>|</span>")
     end
 
     MajorChords = %w(A Bb B C Db D Eb E F F# G Ab)
