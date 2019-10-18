@@ -661,7 +661,7 @@ class VideoInfo
   end
 
   def check_videos
-    @videos  = []
+    @videos = []
     @yk_videos.each do |svideo, skey|
       video, *ytoffset = svideo.split(',')
       ytoffset.each_slice(2) do |ytstart, ytend|
@@ -671,9 +671,11 @@ class VideoInfo
         if ytend =~ /:/
           ytend   = $`.to_i*60 + $'.to_i
         end
-        vid = "video_#{ytstart}_#{ytend}"
+        vid = "video_#{video.gsub(/[^a-z0-9_]/i, '')}_#{ytstart}_#{ytend}"
+        Plog.dump_info(vid:vid)
         @videos << {
-          vid:   vid, video: video,
+          vid:   vid,
+          video: video,
           start: ytstart.to_i, end: ytend.to_i, key: skey
         }
       end

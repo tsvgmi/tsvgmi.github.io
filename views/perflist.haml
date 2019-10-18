@@ -106,6 +106,7 @@
 - if (limit = params[:limit].to_i) > 0
   - song_list = song_list[0..limit-1]
 
+- item = 4
 - song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
   - next unless oinfo[:active]
