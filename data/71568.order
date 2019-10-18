@@ -1,19 +1,41 @@
 # song_id,title,version,singer,skey,style,tempo,lead,solo_idx
-13456,mambo-italiano,thienv,mai-huong,Gm,Chacha
-1575,mat-le-cho-nguoi,thienv,,,,
 28319,smooth-operator,,mai-huong,Dm,Chacha
+29292,corazoncito-bonito,,mai-huong,C,,
+13456,mambo-italiano,thienv,mai-huong,Gm,Chacha
 104,bay-gio-thang-may,,thien,A,Bossa Nova,,,0
 3781,doi-em-trong-mo,,thien,Cm,Tango/Remix
-7848,anh-con-yeu-em,thienv,,,,
-2630,neu-em-duoc-lua-chon,thienv,hoa-tau,Dm
-664,dau-tinh-sau,,kim-dung,Dm,slow
-8437,noi-dau-muon-mang,,tuan-anh,Am,Bossa Nova
+784,tieng-gio-xon-xao,,thien,Fm,Bebop,
+13332,tango-tim,thienv,,mai-kha,Dm,Tango
+1575,mat-le-cho-nguoi,thienv,,dieu-huyen,Fm,Slow
+7439,gia-tu-dem-mua,,dieu-huyen,Fm,Chacha
+664,dau-tinh-sau,,dieu-huyen,Dm,slow
 2383,hay-de-mua-roi,,gia-cau,Em,Bebop
-7439,gia-tu-dem-mua,,hoa-tau,Dm
-13332,tango-tim,thienv,,,,
 29278,mua-dong-mong-manh,,,,,
+8437,noi-dau-muon-mang,,tuan-anh,Am,Bossa Nova
+2630,neu-em-duoc-lua-chon,thienv,hoa-tau,Dm
 29279,stay-with-me-ostani,,,,,
-1228,ao-lua-ha-dong,,y-phuong,Am,Bossa Nova
-2981,silent-night,,,,,
-4464,xot-xa,,y-phuong,Am,Rhumba
 12353,hon,,,,,
+1228,ao-lua-ha-dong,,y-phuong,Am,Bossa Nova
+4464,xot-xa,,y-phuong,Am,Rhumba
+11979,tinh-yeu-tuyet-voi,,,,,
+2735,nao-biet-nao-hay,,michelle,Dm,chacha,120
+3415,que-sera-sera,,,,,
+5272,bai-tango-cho-rieng-em,,thu/mike,Gm,tango,,thien,0
+14856,chi-mot-minh-anh-thoi,thienv,,,,
+4168,ben-nhau-dem-nay,,thanh-liem,Cm,chacha,135
+29291,phai-quen-anh-thoi,,,,,
+2728,jingle-bells,,,,,
+2981,silent-night,,,,,
+5223,thoi,,mike,Cm,Chacha
+13139,mot-coi-tinh-phai,thienv,mike,Bm,Slow
+3514,mua-chieu-ky-niem,,thu&mike,G,Slow
+12229,xin-danh-tron-cho-em,,vanessa,Fm,Techno
+4792,chiec-la-mua-dong,thienv,vanessa,Bm,Techno
+2770,thu-ca,,,,,
+1690,biet-den-thuo-nao,,loc,A,Bebop
+6999,nguoi-yeu-ly-tuong,,michelle,Am,Chacha
+7019,trai-tim-tinh-si,,,,,
+2360,vang-trang-dem-troi,thienv,,,,
+6628,ghen,,anh-tuoi
+5079,hanh-phuc-lang-thang,,,,,
+24910,vi-em-con-thuong,thienv,,,,
