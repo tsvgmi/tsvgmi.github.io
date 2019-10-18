@@ -1805,5 +1805,38 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "chi-mot-minh-anh-thoi": {
+    "instrument": "String",
+    "key": "Am",
+    "intro": "[Am] [E] [Am] [G] [C] [Dm] [Am] [B7] [E] [E]\r\n565 99 5565458\r\n12177 712345\r\n5654354 4543243 3432132 16717\r\n\r\n[E] [Am] [E] [Am] [Am] [E] [Am] [E] [Am] [E]\r\n579 432 135 1765 724321\r\n579 432 135 1765 724321 5653165\r\n\r\n",
+    "ytvideo": "ItXSLHdze9k,5,49",
+    "vidkey": "Gm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "the-neverending-story": {
+    "instrument": "Synth",
+    "key": "C",
+    "intro": "[C] [Gsus4]-[G] [F6]-[F] [Am]-[G]\r\n32 21 12",
+    "ytvideo": "hXJQOnT0xAM,0,10",
+    "vidkey": "C",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "casablanca": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Am] [Am] [Am]\r\n45835243 45835243 45835243 45835243",
+    "ytvideo": "0KLDoWUbF1c,2,17",
+    "vidkey": "Bm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
