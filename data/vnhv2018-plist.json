@@ -1849,5 +1849,38 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "corazoncito-bonito": {
+    "instrument": "E-Guitar",
+    "key": "C",
+    "intro": "[Dm] [G] [C] [Am] [Dm] [G] [C]\r\n111232 32 -777121 51 111232 5544332211",
+    "ytvideo": "ZEIlconhUE8,0,16",
+    "vidkey": "C",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "mua-dong-mong-manh": {
+    "instrument": "Ac Guitar, Piano",
+    "key": "Am",
+    "intro": "[Am] [E] [Am7/G] [Am6] [F] [Am/E] [B7/F#] [E]\r\nGuitar: 51 1122334455 545855 44332321 12345 777666555 5#45#4 332132 545\r\nPiano: 51 59 5+3 5+4 5+5 5+3 58+32 +5",
+    "ytvideo": "f6PsqCsqiLc,0,28",
+    "vidkey": "Bbm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "noi-dau-muon-mang": {
+    "instrument": "Trumpet",
+    "key": "Am",
+    "intro": "[Am] [Am] [Dm] [E7] [E7] [Am]-[Dm] [Am]\r\n-5135565 -51355434 -462454 -7246521 (4231)",
+    "ytvideo": "WM7gXJG_Xys,0,28",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
