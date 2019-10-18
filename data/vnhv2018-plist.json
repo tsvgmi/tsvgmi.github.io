@@ -1697,9 +1697,9 @@
     "nct": ""
   },
   "hay-de-mua-roi": {
-    "instrument": "[]",
-    "key": "",
-    "intro": "",
+    "instrument": "Flute",
+    "key": "Am",
+    "intro": "[Am] [G] [G] [Am] [Am] [G] [G] [Am]\r\n-51544342 -4-7433231 \r\n-51544342 -4-7433231 ",
     "ytvideo": "BXoExObL670,8,21",
     "vidkey": "Bm",
     "smkey": "",
@@ -1834,6 +1834,17 @@
     "intro": "[Am] [Am] [Am] [Am]\r\n45835243 45835243 45835243 45835243",
     "ytvideo": "0KLDoWUbF1c,2,17",
     "vidkey": "Bm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "vi-em-con-thuong": {
+    "instrument": "E Guitar",
+    "key": "Am",
+    "intro": "[Dm]-[G] [Cmaj7]-[Fmaj7] [Bb]-[Bm7b5] [E]-[Am]\r\n33321765632 87654598\r\n5678 7654 234545 -71",
+    "ytvideo": "vOo9K1yhS-s,2,20",
+    "vidkey": "C#m",
     "smkey": "",
     "smule": "",
     "nctkey": "",
