@@ -232,9 +232,13 @@
   "ben-nhau-dem-nay": {
     "instrument": "Piano, Dist Guitar",
     "key": "Dm",
-    "intro": "Piano: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\nDist Guitar: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\n1321342217 7327465543 1321342217 7327 46545\r\n55543452 44432321 5858552 444432 112365",
+    "intro": "Piano: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\nDist Guitar: [Dm] [A] [A] [Dm] [Dm] [A] [A] [Dm]\r\nPiano: 1321342217 7327465543 1321342217 7327 4/6/5/4/5/\r\nGuitar: 55543452 44432321 5858552 444432 112365 5/5/",
     "ytvideo": "B24sfq_seF0,0,31",
-    "vidkey": "F#m"
+    "vidkey": "F#m",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "tuyet-roi-mua-he": {
     "instrument": "Guitar",
@@ -372,11 +376,13 @@
   "trai-tim-tinh-si": {
     "instrument": "Synth",
     "key": "Dm",
-    "intro": "[Dm] [G] [Dm] [G] [Dm] [G] [Bb] [A]\r\n[Dm] [Dm] [A] [Dm] [Dm] [Dm] [A] [Dm]\r\n115711 13143531 115718  / 115711 13141531 131224378\r\nDistortion: 117143 131543431 115143 131543438",
+    "intro": "[Dm] [G] [Dm] [G] [Dm] [G] [Bb] [A]\r\n[Dm] [Dm] [A] [Dm] [Dm] [Dm] [A] [Dm]\r\n11-5-711 13143531 11-5-718  / 11-5-711 13141531 131224378\r\nDistortion: 117143 131543431 115143 131543438",
     "ytvideo": "MyIMSvtz6KI,1,30",
     "vidkey": "F#m",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "biet-bao-gio-tro-lai": {
     "instrument": "String",
@@ -1924,6 +1930,39 @@
     "intro": "[G] [G] [G] [C] [C] [C]\r\n78987 456-71",
     "ytvideo": "CcWbZUgymkw,12,20",
     "vidkey": "A",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "mua-chieu-ky-niem": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[C] [C]-[E] [Am]-[Dm] [G7] [C] [Am]-[G] [C]-[F] [C]\r\n-5343213 -(55) -5343-713-(66 5)454323 -534321-6 -6232171 234321",
+    "ytvideo": "LSTGt0pFeEw,12,40",
+    "vidkey": "A",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "vang-trang-dem-troi": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "fWKLwbV2dLk,0,300",
+    "vidkey": "Ebm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "hanh-phuc-lang-thang": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "[Am] [E] [E] [Am]-[G] [F] [E] [Am]\r\n556655 56654 445544 45543 223322 23454321",
+    "ytvideo": "R_r1K0u0DpI,0,18",
+    "vidkey": "Am",
     "smkey": "",
     "smule": "",
     "nctkey": "",
