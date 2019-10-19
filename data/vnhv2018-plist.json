@@ -88,9 +88,15 @@
     "nct": ""
   },
   "mot-thoi-da-xa": {
-    "instrument": "Distortion",
+    "instrument": "Distortion, Orchestra",
     "key": "Am",
-    "intro": "-512|[Am]323 -(5|[Dm]56434 -4234343|[G7]4 -77|[C]6545 [A7]145|[Dm]6543[G]4 -634|[C]54[Bb]31[F]3  -623|[Dm]4321[B7]3 123|[Esus4]321[E7]2 |"
+    "intro": "-512|[Am]323 -(5|[Dm]56434 -4234343|[G7]4 -77|[C]6545 [A7]145|[Dm]6543[G]4 -634|[C]54[Bb]31[F]3  -623|[Dm]4321[B7]3 123|[Esus4]321[E7]2 |",
+    "ytvideo": "P2Q1qeWbfwg,0,36",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "quen-di-tinh-yeu-cu": {
     "instrument": "Soft Brass, Sax",
