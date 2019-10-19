@@ -187,11 +187,13 @@
   "nao-biet-nao-hay": {
     "instrument": "Brass, Trumpet",
     "key": "Am",
-    "intro": "[Dm] [Am] [E] [Am]\r\n(Drum 4 khuông) /6 6(65456) /5 5(54345) /5 (65432) /321\r\n",
-    "ytvideo": "IeD5fIK0g44,0,14",
-    "vidkey": "Bm",
+    "intro": "[Dm] [Am] [E] [Am]\r\n(Drum 4 khuông) /6 6(65456) /5 5(54345) /5 (65432) /321\r\n==\r\n[Bm7b5] [E] [Am] [Am] [Bm7b5] [E] [E] [Am]\r\n4576254 4565243 2354132 531 42-7 576#6558",
+    "ytvideo": "IeD5fIK0g44,0,14|OfWJp7OoZ-o,22,40",
+    "vidkey": "Bm|Am",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "nguoi-hay-quen-em-di": {
     "instrument": "Guitar",
@@ -1878,6 +1880,50 @@
     "intro": "[Am] [Am] [Dm] [E7] [E7] [Am]-[Dm] [Am]\r\n-5135565 -51355434 -462454 -7246521 (4231)",
     "ytvideo": "WM7gXJG_Xys,0,28",
     "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "stay-with-me-ostani": {
+    "instrument": "Ac Guitar",
+    "key": "",
+    "intro": "[Am] [Am]\r\n3 1232 -(545)",
+    "ytvideo": "sq-7sFxxlns,0,5",
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "hon": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Amadd9] [Amadd9] [Dm] [E7] [Am] [E7]\r\n-52321-5 -52321-6 -64542-7 -712 234 765",
+    "ytvideo": "PEePRXDWkQw,0,27",
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "tinh-yeu-tuyet-voi": {
+    "instrument": "Dist Guitar",
+    "key": "Am",
+    "intro": "[Am]-[G] [Am] [G] [Am] [Am]-[G] [Am] [G] [Am]\r\n[Am]-[G] [Am] [G] [Am] [Am]-[G] [Am] [G] [Am]\r\n88778 77778 88778 777+(33)78\r\n88778 77778 88778 777+(33)78",
+    "ytvideo": "R0Pb_cpn9QM,8,40",
+    "vidkey": "Fm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "que-sera-sera": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "[G] [G] [G] [C] [C] [C]\r\n78987 456-71",
+    "ytvideo": "CcWbZUgymkw,12,20",
+    "vidkey": "A",
     "smkey": "",
     "smule": "",
     "nctkey": "",
