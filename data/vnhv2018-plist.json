@@ -1973,5 +1973,27 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "suong-lanh-chieu-dong": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [Am]-[A] [Dm] [Am] [E] [F]-[E] [Am]-[Dm] [Am]\r\n5#45+32125  {-52123234345} 5#4587154  {4546}\r\n4545888 56#45999 +(23213)79458",
+    "ytvideo": "hgxKAYqWBfI,0,30",
+    "vidkey": "Abm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "bai-tho-cuoi-cung": {
+    "instrument": "Piano & String",
+    "key": "Am",
+    "intro": "[Am] [Dm] [Am] [Em7] [Dm] [Am] [F] [Em7] [Am]\r\n5 54 3 32-7\r\n-(56)16 45 -515 34-7 -51 32-71",
+    "ytvideo": "jO2P0uVTplo,6,36",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
