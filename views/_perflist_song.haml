@@ -52,9 +52,10 @@
                 %br/
                 Trans: #{offset*(-1)}
                 %br/
-                - href = "/dl-transpose/#{vinfo[:video]}?song_id=#{oinfo[:song_id]}&title=#{oinfo[:title]}&offset=#{offset}&start=#{vinfo[:start]}&key=#{oinfo[:singer_key]}"
-                %a(href='#' onclick="jQuery.ajax('#{href}'); return false" title='Download transposed')
-                  %i.fa.fa-download
+                - unless viewmode
+                  - href = "/dl-transpose/#{vinfo[:video]}?song_id=#{oinfo[:song_id]}&title=#{oinfo[:title]}&offset=#{offset}&start=#{vinfo[:start]}&key=#{oinfo[:singer_key]}"
+                  %a(href='#' onclick="jQuery.ajax('#{href}'); return false" title='Download transposed')
+                    %i.fa.fa-download
                 - href = "https://www.youtube.com/watch?v=#{vinfo[:video]}"
                 %a(href=href target='youtube')
                   %i.fab.fa-youtube
