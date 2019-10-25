@@ -13,6 +13,7 @@
         %tr
           %th Title
           %th Record_By
+          %th Tags
           %th Latest
           %th Listens
           %th Loves
@@ -46,10 +47,12 @@
                     %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{lurl}'); return false;")
                       %i.fa.fa-play
                   - else
-                    - Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
+                    -# Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
                     %i.fa.fa-play.invisible
                   - href = 'https://www.smule.com' + aperf[:href]
                   %a(href=href target='smule' title="#{aperf[:created].strftime('%Y-%m-%d')}")= rec_str[0..7]
+            %td.small
+              = (songtags[arow[:title].downcase] || []).join(', ')
             %td.small
               - cdate = ((worklist[0] || [])[1] || {})[:created]
               - if cdate

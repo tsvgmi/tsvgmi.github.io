@@ -106,7 +106,7 @@
   - song_list = song_list[0..limit-1]
 
 - singers.each do |asinger|
-  - sclass = "s_#{asinger}"
+  - sclass = "s_#{asinger.gsub(/[^a-z]/i, '')}"
   %button.btn.btn-outline-secondary.btn-sm(data-toggle="collapse" data-target=".#{sclass}" aria-expanded="true")= asinger
 
 - song_list[0..-1].each do |sinfo|
@@ -116,7 +116,7 @@
     - next unless "#{oinfo[:lead]}.#{oinfo[:singer]}" =~ ptn
   - row_no += 1
   - singer = oinfo[:singer] || 'none'
-  - sclass = "s_#{singer}"
+  - sclass = "s_#{singer.gsub(/[^a-z]/i, '')}"
   - Plog.dump_info(sclass:sclass, singer:singer, oinfo:oinfo)
   - locals = {sinfo:sinfo, oinfo:oinfo, perf_info:perf_info, row_no:row_no, viewmode:viewmode, user:user, videos:videos}
   %div(class="#{sclass} multi-collapse")

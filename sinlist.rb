@@ -25,9 +25,6 @@ HAC_DB           = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.2
 HAC_DB2          = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/playlist')
 end
 
-#Sequel::Model.db = Sequel.connect("mysql2://#{ENV['DB_MY']}")
-#HAC_DB = Sequel.connect('mysql2://playlist:playlistpasswd@127.0.0.1/hopamchuan')
-
 enable :sessions
 
 configure :development do
@@ -210,8 +207,9 @@ get '/smulegroup/:user' do |user|
     content << r
   end
   scontent = content.group_by{|r| r[:title].downcase.sub(/\s*\(.*$/, '')}
-  haml :smulegroup, locals: {user:user, scontent:scontent,
-                            all_singers:smcontent.singers}
+  haml :smulegroup, locals: {user:user,  scontent:scontent,
+                            all_singers: smcontent.singers,
+                            songtags:    smcontent.songtags}
 end
 
 get '/dl-transpose/:video' do |video|
@@ -296,7 +294,7 @@ helpers do
 end
 
 class SmContent
-  attr_reader :content, :singers, :join_me, :i_join
+  attr_reader :content, :singers, :join_me, :i_join, :songtags
 
   def initialize(user)
     @user    = user
@@ -346,6 +344,17 @@ class SmContent
      "#{ENV['HOME']}/singers.yml"].each do |afile|
       if test(?r, afile)
         @singers = YAML.load_file(afile)
+        break
+      end
+    end
+    ["/Volumes/Voice/SMULE/songtags.yml",
+     "#{ENV['HOME']}/songtags.yml"].each do |afile|
+      if test(?r, afile)
+        @songtags = {}
+        File.read(afile).split("\n").each do |aline|
+          k, v = aline.split(':::')
+          @songtags[k] = (v || "").split(',')
+        end
         break
       end
     end
