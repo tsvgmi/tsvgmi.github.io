@@ -105,11 +105,16 @@
 - if (limit = params[:limit].to_i) > 0
   - song_list = song_list[0..limit-1]
 
+-# Debug.  Reduce song range
+- if range = params[:range]
+  - rstart, rend = range.split(',')
+  - song_list = song_list[rstart.to_i..rend.to_i]
+
 - singers.each do |asinger|
   - sclass = "s_#{asinger.gsub(/[^a-z]/i, '')}"
   %button.btn.btn-outline-secondary.btn-sm(data-toggle="collapse" data-target=".#{sclass}" aria-expanded="true")= asinger
 
-- song_list[0..-1].each do |sinfo|
+- song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
   - next if !oinfo[:active] || (oinfo[:singer] || "").start_with?('-')
   - if ptn
@@ -122,45 +127,15 @@
   %div(class="#{sclass} multi-collapse")
     = partial :_perflist_song, locals:locals
 
--#= videos.inspect
+- locals = {videos:videos}
+= partial(:_youtube_play, locals:locals)
+
 - content_for :javascript do
   %script(src="https://www.youtube.com/iframe_api")
   :javascript
     $(document).ready(function() {
       $('.a-tooltip').tooltip({"html":true}); 
     });
-
-    var videos     = #{videos.to_json};
-    var cur_player = null;
-    function onYouTubeIframeAPIReady() {
-      for (var i = 0; i < videos.length; i++) {
-        var cur_video = videos[i];
-        var avideo    = cur_video['video'];
-        var vid       = cur_video['vid'];
-        var start     = cur_video['start']; 
-        var end       = cur_video['end'];
-        var player    = new YT.Player(vid, {
-          height: '140',
-          width:  '210',
-          playerVars: {autoplay:0, start:start, end:end,
-                       origin:'https://www.youtube.com'},
-          videoId: avideo,
-          events: {
-            'onStateChange': function(event){
-              var mplayer = event.target
-              if (event.data == 0) {
-                mdata  = mplayer.b.b;
-                start  = mdata['playerVars']['start'];
-                //console.log(mdata);
-                //console.log('Restarting ' + mdata['videoId'] + ' ' + start);
-                mplayer.seekTo(start);
-                cur_player = mplayer.playVideo();
-              }
-            }
-          }
-        });
-      }
-    }
 
     function load_page_from(sid) {
       var elem     = document.getElementById(sid);

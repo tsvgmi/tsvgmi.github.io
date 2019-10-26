@@ -86,40 +86,6 @@
     %button.btn.btn-sm.btn-primary(type="submit" name="Update" value=true) Update
 
 
-- Plog.dump_info(videos:videos)
-- content_for :javascript do
-  %script(src="https://www.youtube.com/iframe_api")
-  :javascript
-    var videos     = #{videos.to_json};
-    var cur_player = null;
-    function onYouTubeIframeAPIReady() {
-      for (var i = 0; i < videos.length; i++) {
-        var cur_video = videos[i];
-        var avideo    = cur_video['video'];
-        var vid       = cur_video['vid'];
-        var start     = cur_video['start'];
-        var end       = cur_video['end'];
-        var player    = new YT.Player(vid, {
-          height: '140',
-          width:  '100%',
-          playerVars: {"autoplay":0, "start":start, "end":end,
-                       "origin":"https://www.youtube.com"},
-          videoId: avideo,
-          playsinline: true,
-          events: {
-            'onStateChange': function(event){
-              var mplayer = event.target
-              var mdata   = mplayer.b.b;
-              //console.log('Start playing...' + mdata['videoId'] + ' ' + event.data);
-              if (event.data == 0) {
-                start  = mdata['playerVars']['start'];
-                console.log(mdata);
-                console.log('Restarting ' + mdata['videoId'] + ' ' + start);
-                mplayer.seekTo(start);
-                cur_player = mplayer.playVideo();
-              }
-            }
-          }
-        });
-      }
-    }
+- locals = {videos:videos}
+= partial(:_youtube_play, locals:locals)
+

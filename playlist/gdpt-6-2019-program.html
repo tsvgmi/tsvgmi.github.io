@@ -2312,8 +2312,9 @@ Lòng anh <span class="chord">F</span>mong rằng em không <span class="chord">
 
 </div>
 
+
 <footer>
-<div class='small text-muted publish_date'>2019-10-24 22:29:44 -0700</div>
+<div class='small text-muted publish_date'>2019-10-26 16:38:02 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -2325,41 +2326,66 @@ Lòng anh <span class="chord">F</span>mong rằng em không <span class="chord">
 <script src='/js/dt_remove_accent.js' type='text/javascript'></script>
 <script src='https://www.youtube.com/iframe_api'></script>
 <script>
-  $(document).ready(function() {
-    $('.a-tooltip').tooltip({"html":true}); 
-  });
-  
   var videos     = [{"vid":"video_vdt9kt1KEJg_0_300","video":"vdt9kt1KEJg","start":0,"end":300,"key":"Am"},{"vid":"video_FIBRLJcrFFQ_0_300","video":"FIBRLJcrFFQ","start":0,"end":300,"key":"Cm"},{"vid":"video_3BBsF7VIQyo_0_300","video":"3BBsF7VIQyo","start":0,"end":300,"key":"Bbm"},{"vid":"video_BCkAALWgHE_0_300","video":"BCkAAL-WgHE","start":0,"end":300,"key":"Eb"},{"vid":"video_lXX1Oq7lGE4_0_300","video":"lXX1Oq7lGE4","start":0,"end":300,"key":"A"},{"vid":"video_a90tZJHBklk_0_300","video":"a90tZJHBklk","start":0,"end":300,"key":"Dm"},{"vid":"video_Rf7qrKS5_s_0_300","video":"Rf-7qrKS5_s","start":0,"end":300,"key":"Bbm"},{"vid":"video_U0fLIFdKW8_0_300","video":"U0-fLIFdKW8","start":0,"end":300,"key":"Abm"}];
   var cur_player = null;
+  var players    = [];
+  
+  function stopAllExcept(videoId) {
+    var vid;
+    var player;
+    for (var i = 0; i < players.length; i++) {
+      player = players[i];
+      vid    = player.getVideoData().video_id;
+      if (vid != videoId) {
+        if (player.getPlayerState() == 1) {
+          console.log("Stop " + videoId + " " + vid + " " + player.getPlayerState());
+          player.stopVideo();
+        }
+      }
+    }
+  }
+  
   function onYouTubeIframeAPIReady() {
     for (var i = 0; i < videos.length; i++) {
       var cur_video = videos[i];
       var avideo    = cur_video['video'];
       var vid       = cur_video['vid'];
-      var start     = cur_video['start']; 
+      var start     = cur_video['start'];
       var end       = cur_video['end'];
       var player    = new YT.Player(vid, {
         height: '140',
-        width:  '210',
-        playerVars: {autoplay:0, start:start, end:end,
-                     origin:'https://www.youtube.com'},
+        width:  '100%',
+        playerVars: {"autoplay":0, "start":start, "end":end,
+                     "origin":"https://www.youtube.com"},
         videoId: avideo,
+        playsinline: true,
         events: {
           'onStateChange': function(event){
             var mplayer = event.target
+            var mdata   = mplayer.b.b;
             if (event.data == 0) {
-              mdata  = mplayer.b.b;
               start  = mdata['playerVars']['start'];
-              //console.log(mdata);
-              //console.log('Restarting ' + mdata['videoId'] + ' ' + start);
+              console.log(mdata);
+              console.log('Restarting ' + mdata['videoId'] + ' ' + start);
               mplayer.seekTo(start);
               cur_player = mplayer.playVideo();
+            }
+            if (event.data == 1) {
+              console.log('Start ' + mdata['videoId'] + ' ' + event.data);
+              stopAllExcept(mdata['videoId']);
             }
           }
         }
       });
+      players.push(player);
     }
   }
+</script>
+<script src='https://www.youtube.com/iframe_api'></script>
+<script>
+  $(document).ready(function() {
+    $('.a-tooltip').tooltip({"html":true}); 
+  });
   
   function load_page_from(sid) {
     var elem     = document.getElementById(sid);

@@ -854,7 +854,7 @@ Trans: 5
 Piano, String
 </div>
 <div class='col-4'>
-<span class="chord_intro">Am7b5</span>-<span class="chord_intro">D</span> <span class="chord_intro">Gm</span>-<span class="chord_intro">F</span>-<span class="chord_intro">Eb</span> <span class="chord_intro">Eb</span>-<span class="chord_intro">F</span> <span class="chord_intro">Dm</span>-<span class="chord_intro">Gm</span> <span class="chord_intro">Cm</span>-<span class="chord_intro">G</span> <span class="chord_intro">D</span><br>5659 5658 12342 -71243 -6-712342
+<span class="chord_intro">Am7b5</span>-<span class="chord_intro">D</span> <span class="chord_intro">Gm</span>-<span class="chord_intro">F</span>-<span class="chord_intro">Eb</span> <span class="chord_intro">Eb</span>-<span class="chord_intro">F</span> <span class="chord_intro">Dm</span>-<span class="chord_intro">Gm</span> <span class="chord_intro">Cm</span>-<span class="chord_intro">G</span> <span class="chord_intro">D</span><br>(Piano) 5659 5658 (String+Piano) 12342 -71243 -6-712342
 </div>
 </div>
 <div class='row'>
@@ -1300,8 +1300,9 @@ Qui t'em <span class="chord">D#7</span>mène, aujour <span class="chord">G#</spa
 
 </div>
 
+
 <footer>
-<div class='small text-muted publish_date'>2019-10-24 22:29:44 -0700</div>
+<div class='small text-muted publish_date'>2019-10-26 16:38:02 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -1313,41 +1314,66 @@ Qui t'em <span class="chord">D#7</span>mène, aujour <span class="chord">G#</spa
 <script src='/js/dt_remove_accent.js' type='text/javascript'></script>
 <script src='https://www.youtube.com/iframe_api'></script>
 <script>
-  $(document).ready(function() {
-    $('.a-tooltip').tooltip({"html":true}); 
-  });
-  
   var videos     = [{"vid":"video_XacCs8TdZTQ_22_38","video":"XacCs8TdZTQ","start":22,"end":38,"key":"Abm"},{"vid":"video_Ijdh8D5aLks_15_43","video":"Ijdh8D5aLks","start":15,"end":43,"key":"Dm"},{"vid":"video_ulaqLUkkQF4_0_15","video":"ulaqLUkkQF4","start":0,"end":15,"key":"Bb"},{"vid":"video_eX_8jHUZUtk_0_21","video":"eX_8jHUZUtk","start":0,"end":21,"key":"D"},{"vid":"video_cK0FEW4rMYo_15_29","video":"cK0FEW4rMYo","start":15,"end":29,"key":"Am"},{"vid":"video_t4o3QIxaqIU_0_25","video":"t4o3QIxaqIU","start":0,"end":25,"key":"C"},{"vid":"video_WT6K1JSk3lE_0_24","video":"WT6K1JSk3lE","start":0,"end":24,"key":"Abm"},{"vid":"video_ee9vR7N4_T4_0_24","video":"ee9vR7N4_T4","start":0,"end":24,"key":"Cm"},{"vid":"video_tvGAxWj6__0_129_164","video":"tvGAxWj6__0","start":129,"end":164,"key":"Gm"},{"vid":"video_F6bfkwKe0Ic_0_18","video":"F6bfkwKe0Ic","start":0,"end":18,"key":"Ebm"},{"vid":"video_eGYTlEemOME_0_23","video":"eGYTlEemOME","start":0,"end":23,"key":"Am"},{"vid":"video_3TybGjnzY5s_0_25","video":"3TybGjnzY5s","start":0,"end":25,"key":"C#m"},{"vid":"video_SGLBDliLeEY_0_7","video":"SGLBDliLeEY","start":0,"end":7,"key":"G"}];
   var cur_player = null;
+  var players    = [];
+  
+  function stopAllExcept(videoId) {
+    var vid;
+    var player;
+    for (var i = 0; i < players.length; i++) {
+      player = players[i];
+      vid    = player.getVideoData().video_id;
+      if (vid != videoId) {
+        if (player.getPlayerState() == 1) {
+          console.log("Stop " + videoId + " " + vid + " " + player.getPlayerState());
+          player.stopVideo();
+        }
+      }
+    }
+  }
+  
   function onYouTubeIframeAPIReady() {
     for (var i = 0; i < videos.length; i++) {
       var cur_video = videos[i];
       var avideo    = cur_video['video'];
       var vid       = cur_video['vid'];
-      var start     = cur_video['start']; 
+      var start     = cur_video['start'];
       var end       = cur_video['end'];
       var player    = new YT.Player(vid, {
         height: '140',
-        width:  '210',
-        playerVars: {autoplay:0, start:start, end:end,
-                     origin:'https://www.youtube.com'},
+        width:  '100%',
+        playerVars: {"autoplay":0, "start":start, "end":end,
+                     "origin":"https://www.youtube.com"},
         videoId: avideo,
+        playsinline: true,
         events: {
           'onStateChange': function(event){
             var mplayer = event.target
+            var mdata   = mplayer.b.b;
             if (event.data == 0) {
-              mdata  = mplayer.b.b;
               start  = mdata['playerVars']['start'];
-              //console.log(mdata);
-              //console.log('Restarting ' + mdata['videoId'] + ' ' + start);
+              console.log(mdata);
+              console.log('Restarting ' + mdata['videoId'] + ' ' + start);
               mplayer.seekTo(start);
               cur_player = mplayer.playVideo();
+            }
+            if (event.data == 1) {
+              console.log('Start ' + mdata['videoId'] + ' ' + event.data);
+              stopAllExcept(mdata['videoId']);
             }
           }
         }
       });
+      players.push(player);
     }
   }
+</script>
+<script src='https://www.youtube.com/iframe_api'></script>
+<script>
+  $(document).ready(function() {
+    $('.a-tooltip').tooltip({"html":true}); 
+  });
   
   function load_page_from(sid) {
     var elem     = document.getElementById(sid);

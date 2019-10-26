@@ -1,0 +1,57 @@
+- content_for :javascript do
+  %script(src="https://www.youtube.com/iframe_api")
+  :javascript
+    var videos     = #{videos.to_json};
+    var cur_player = null;
+    var players    = [];
+
+    function stopAllExcept(videoId) {
+      var vid;
+      var player;
+      for (var i = 0; i < players.length; i++) {
+        player = players[i];
+        vid    = player.getVideoData().video_id;
+        if (vid != videoId) {
+          if (player.getPlayerState() == 1) {
+            console.log("Stop " + videoId + " " + vid + " " + player.getPlayerState());
+            player.stopVideo();
+          }
+        }
+      }
+    }
+
+    function onYouTubeIframeAPIReady() {
+      for (var i = 0; i < videos.length; i++) {
+        var cur_video = videos[i];
+        var avideo    = cur_video['video'];
+        var vid       = cur_video['vid'];
+        var start     = cur_video['start'];
+        var end       = cur_video['end'];
+        var player    = new YT.Player(vid, {
+          height: '140',
+          width:  '100%',
+          playerVars: {"autoplay":0, "start":start, "end":end,
+                       "origin":"https://www.youtube.com"},
+          videoId: avideo,
+          playsinline: true,
+          events: {
+            'onStateChange': function(event){
+              var mplayer = event.target
+              var mdata   = mplayer.b.b;
+              if (event.data == 0) {
+                start  = mdata['playerVars']['start'];
+                console.log(mdata);
+                console.log('Restarting ' + mdata['videoId'] + ' ' + start);
+                mplayer.seekTo(start);
+                cur_player = mplayer.playVideo();
+              }
+              if (event.data == 1) {
+                console.log('Start ' + mdata['videoId'] + ' ' + event.data);
+                stopAllExcept(mdata['videoId']);
+              }
+            }
+          }
+        });
+        players.push(player);
+      }
+    }
