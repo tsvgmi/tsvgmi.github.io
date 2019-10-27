@@ -5,6 +5,15 @@
     var cur_player = null;
     var players    = [];
 
+    async function playVideoNumber(vindex, lyric_id, main_id) {
+      console.log('play video ' + vindex + ' + ' + lyric_id);
+      players[vindex].playVideo();
+      $('.collapse').collapse('hide');
+      $('#' + lyric_id).collapse('show');
+      //sleep(1);
+      $('#' + main_id)[0].scrollIntoView(true);
+    }
+
     function stopAllExcept(videoId) {
       var vid;
       var player;

@@ -4,75 +4,85 @@
 - link = sinfo[:href]
 - if version && !version.empty?
   - link += "/#{version}"
-- lyric_id = "row_#{row_no}"
+- lyric_id  = "row_#{row_no}"
+- lyric_id2 = "row_#{row_no}a"
 - perf_note = perf_info[sname] || {}
 - vidinfos  = VideoInfo.new(perf_note[:ytvideo], perf_note[:vidkey])
-.row.song_header
-  .col-6
-    %button.pull-right.btn.btn-outline-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
-      Lyric
+%div(id=lyric_id2)
+  .row.song_header
+    .col-6
+      %button.pull-right.btn.btn-outline-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
+        %i.fa.fa-align-justify
+        Lyric
+      - jcode = "close_all_lyrics();"
+      %button.pull-right.btn.btn-outline-primary(type='button' role='button' onclick='#{jcode}')
+        %i.fa.fa-times-circle
+        Close All
       - if vidinfos.videos.size > 0
-        %i.fa.fa-music
-    %button.pull-right.btn.btn-outline-primary(type='button' role='button' onclick='close_all_lyrics();')
-      Close All
-    %h5
-      = "#{row_no}."
-      %a(href=link target='hopamchuan')= sinfo[:name]
-    = "#{sinfo[:author]}&nbsp;"
-  .col.md
-    = sinfo[:artist]
-  .col.md
-    = (oinfo[:singer] || '').gsub(/\//, ', ')
-    .pull-right= oinfo[:singer_key]
-    - if oinfo[:lead]
-      %br/
-      = "(#{oinfo[:lead]})"
-  .col.md
-    - unless viewmode
-      %a(href="/song-style/#{user}/#{sinfo[:song_id]}/#{sname}" target='song_edit')
-        %i.fa.fa-edit
-    = oinfo[:style]
-    .pull-right= oinfo[:tempo]
-%div.collapse(id=lyric_id)
-  .row
-    - vidinfos.select_set(oinfo[:solo_idx])
-    - if vidinfos.yk_videos.size > 0
-      .col-6
-        .row
-          - new_videos = vidinfos.videos
-          - videos.concat(new_videos)
-          - new_videos.each do |vinfo|
-            -# Plog.dump_info(vinfo:vinfo, oinfo:oinfo)
-            - Plog.dump_info(title:oinfo[:title])
-            %div.col-4(id="#{vinfo[:vid]}")
-            - if vinfo[:key] && !vinfo[:key].empty?
-              - offset = key_offset(vinfo[:key], oinfo[:singer_key], true)
-              .pull-right.small
-                VKey: #{vinfo[:key]}
-                %br/
-                Trans: #{offset*(-1)}
-                %br/
-                - unless viewmode
-                  - href = "/dl-transpose/#{vinfo[:video]}?song_id=#{oinfo[:song_id]}&title=#{oinfo[:title]}&offset=#{offset}&start=#{vinfo[:start]}&key=#{oinfo[:singer_key]}"
-                  %a(href='#' onclick="jQuery.ajax('#{href}'); return false" title='Download transposed')
-                    %i.fa.fa-download
-                - href = "https://www.youtube.com/watch?v=#{vinfo[:video]}"
-                %a(href=href target='youtube')
-                  %i.fab.fa-youtube.fa-3x
-    - unless perf_note.empty?
-      .col-2
-        = perf_note[:instrument]
-      .col-4
-        - intro = perf_note[:intro]
-        - if intro && !intro.empty?
-          - offset = key_offset(perf_note[:key], oinfo[:singer_key])
-          - tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key], cclass:'chord_intro')
-          = tlyric.gsub(/\n/, '<br>')
-  .row
-    - lyric  = sinfo[:lyric]
-    - offset = key_offset(sinfo[:song_key], oinfo[:singer_key])
-    - lyric  = lyric.sub(/>>>>>.*$/mo, '').sub(/^.*<<<<</mo, '')
-    - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
-    - tlyric = tlyric.sub(/^.*==/m, '')
-    .col
-      .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
+        - voffset = videos.size;
+        - jcode = "playVideoNumber(#{voffset},'#{lyric_id}', '#{lyric_id2}');"
+        == <button class='pull-right btn btn-outline-primary' onclick="#{jcode}" role='button' type='button'>
+        %i.fa.fa-play-circle
+        Intro
+        == </button>
+      %h5
+        = "#{row_no}."
+        %a(href=link target='hopamchuan')= sinfo[:name]
+      = "#{sinfo[:author]}&nbsp;"
+    .col.md
+      = sinfo[:artist]
+    .col.md
+      = (oinfo[:singer] || '').gsub(/\//, ', ')
+      .pull-right= oinfo[:singer_key]
+      - if oinfo[:lead]
+        %br/
+        = "(#{oinfo[:lead]})"
+    .col.md
+      - unless viewmode
+        %a(href="/song-style/#{user}/#{sinfo[:song_id]}/#{sname}" target='song_edit')
+          %i.fa.fa-edit
+      = oinfo[:style]
+      .pull-right= oinfo[:tempo]
+  %div.collapse(id=lyric_id)
+    .row
+      - vidinfos.select_set(oinfo[:solo_idx])
+      - if vidinfos.yk_videos.size > 0
+        .col-6
+          .row
+            - new_videos = vidinfos.videos
+            - videos.concat(new_videos)
+            - new_videos.each do |vinfo|
+              -# Plog.dump_info(vinfo:vinfo, oinfo:oinfo)
+              - Plog.dump_info(title:oinfo[:title])
+              %div.col-4(id="#{vinfo[:vid]}")
+              - if vinfo[:key] && !vinfo[:key].empty?
+                - offset = key_offset(vinfo[:key], oinfo[:singer_key], true)
+                .pull-right.small
+                  VKey: #{vinfo[:key]}
+                  %br/
+                  Trans: #{offset*(-1)}
+                  %br/
+                  - unless viewmode
+                    - href = "/dl-transpose/#{vinfo[:video]}?song_id=#{oinfo[:song_id]}&title=#{oinfo[:title]}&offset=#{offset}&start=#{vinfo[:start]}&key=#{oinfo[:singer_key]}"
+                    %a(href='#' onclick="jQuery.ajax('#{href}'); return false" title='Download transposed')
+                      %i.fa.fa-download
+                  - href = "https://www.youtube.com/watch?v=#{vinfo[:video]}"
+                  %a(href=href target='youtube')
+                    %i.fab.fa-youtube.fa-3x
+      - unless perf_note.empty?
+        .col-2
+          = perf_note[:instrument]
+        .col-4
+          - intro = perf_note[:intro]
+          - if intro && !intro.empty?
+            - offset = key_offset(perf_note[:key], oinfo[:singer_key])
+            - tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key], cclass:'chord_intro')
+            = tlyric.gsub(/\n/, '<br>')
+    .row
+      - lyric  = sinfo[:lyric]
+      - offset = key_offset(sinfo[:song_key], oinfo[:singer_key])
+      - lyric  = lyric.sub(/>>>>>.*$/mo, '').sub(/^.*<<<<</mo, '')
+      - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
+      - tlyric = tlyric.sub(/^.*==/m, '')
+      .col
+        .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
