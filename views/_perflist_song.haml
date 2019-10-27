@@ -14,10 +14,6 @@
       %button.pull-right.btn.btn-outline-primary(type='button' role='button' data-toggle='collapse' href="##{lyric_id}" aria-expanded='false' aria-controls=lyric_id)
         %i.fa.fa-align-justify
         Lyric
-      - jcode = "close_all_lyrics();"
-      %button.pull-right.btn.btn-outline-primary(type='button' role='button' onclick='#{jcode}')
-        %i.fa.fa-times-circle
-        Close All
       - if vidinfos.videos.size > 0
         - voffset = videos.size;
         - jcode = "playVideoNumber(#{voffset},'#{lyric_id}', '#{lyric_id2}');"
