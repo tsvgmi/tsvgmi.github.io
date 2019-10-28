@@ -30,7 +30,8 @@ build_page data/61047.order playlist/vnhv-12-2018 vnhv2018
 build_page data/53487.order playlist/ht-rhumba thienv
 build_page data/65854.order playlist/gdpt-6-2019 thienv
 build_page data/65907.order playlist/vnhv-4-2019 vnhv2018
-build_page data/67622.order playlist/vnhv-6-2019 vnhv2018
+#build_page data/67622.order playlist/vnhv-6-2019 vnhv2018
 build_page data/67622.order playlist/vnhv-6-2019s vnhv2018 1
 build_page data/70118.order playlist/labor-party-2019s vnhv2018 1
-build_page data/71568.order playlist/vnhv-10-19-2019 vnhv2018 1
+#build_page data/71568.order playlist/vnhv-10-19-2019 vnhv2018 1
+build_page data/71568.order playlist/christmas-2019 vnhv2018 1

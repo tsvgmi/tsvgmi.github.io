@@ -8,6 +8,7 @@
 - lyric_id2 = "row_#{row_no}a"
 - perf_note = perf_info[sname] || {}
 - vidinfos  = VideoInfo.new(perf_note[:ytvideo], perf_note[:vidkey])
+
 %div(id=lyric_id2)
   .row.song_header
     .col-6
@@ -39,7 +40,7 @@
           %i.fa.fa-edit
       = oinfo[:style]
       .pull-right= oinfo[:tempo]
-  %div.collapse(id=lyric_id)
+  %div.collapse.pl_collapse(id=lyric_id)
     .row
       - vidinfos.select_set(oinfo[:solo_idx])
       - if vidinfos.yk_videos.size > 0

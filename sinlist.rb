@@ -131,7 +131,8 @@ get '/perflist/:user' do |user|
   end
 
   list_info  = playlists.select{|r| r[:id] == listno}.first
-  play_order = PlayOrder.new(listno)
+  poptions   = {range:params[:range]}
+  play_order = PlayOrder.new(listno, poptions)
   order_list = Hash[play_order.content_str]
   song_list  = play_order.fetch_songs
   singers    = play_order.singers
@@ -477,6 +478,10 @@ class PlayOrder
     @playlist   = PlayList.new(list_info)
     if test(?f, @order_file)
       @content_str = _content_str
+      if options[:range]
+        rstart, rend = options[:range].split(',')
+        @content_str = @content_str[rstart.to_i..rend.to_i]
+      end
     else
       create_file
     end

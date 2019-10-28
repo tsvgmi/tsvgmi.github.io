@@ -105,14 +105,12 @@
 - if (limit = params[:limit].to_i) > 0
   - song_list = song_list[0..limit-1]
 
--# Debug.  Reduce song range
-- if range = params[:range]
-  - rstart, rend = range.split(',')
-  - song_list = song_list[rstart.to_i..rend.to_i]
-
-- singers.each do |asinger|
+- jcode = "select_class('si_collapse', 'si_collapse')"
+== <button class='btn btn-outline-secondary btn-lg' onclick="#{jcode}">ALL</button>
+- singers.select{|s| !s.empty?}.each do |asinger|
   - sclass = "s_#{asinger.gsub(/[^a-z]/i, '')}"
-  %button.btn.btn-outline-secondary.btn-sm(data-toggle="collapse" data-target=".#{sclass}" aria-expanded="true")= asinger
+  - jcode = "select_class('#{sclass}', 'si_collapse')"
+  == <button class='btn btn-outline-secondary btn-sm' onclick="#{jcode}">#{asinger}</button>
 
 - song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
@@ -124,7 +122,7 @@
   - sclass = "s_#{singer.gsub(/[^a-z]/i, '')}"
   - Plog.dump_info(sclass:sclass, singer:singer, oinfo:oinfo)
   - locals = {sinfo:sinfo, oinfo:oinfo, perf_info:perf_info, row_no:row_no, viewmode:viewmode, user:user, videos:videos}
-  %div(class="#{sclass} multi-collapse")
+  %div(class="#{sclass} si_collapse")
     = partial :_perflist_song, locals:locals
 
 - locals = {videos:videos}
@@ -135,7 +133,14 @@
   :javascript
     $(document).ready(function() {
       $('.a-tooltip').tooltip({"html":true}); 
+      $('.si_collapse').collapse();
     });
+
+    function select_class(show_class, hide_class) {
+      console.log('show: ' + show_class + ' , hide: ' + hide_class);
+      $('.' + hide_class).collapse('hide');
+      $('.' + show_class).collapse('show');
+    }
 
     function load_page_from(sid) {
       var elem     = document.getElementById(sid);
