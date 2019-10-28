@@ -5,9 +5,12 @@
     var cur_player = null;
     var players    = [];
 
-    async function playVideoNumber(vindex, lyric_id, main_id) {
+    function playVideoNumber(lyric_id, main_id, vindex) {
       console.log('play video ' + vindex + ' + ' + lyric_id);
-      players[vindex].playVideo();
+
+      if (vindex >= 0) {
+        players[vindex].playVideo();
+      }
       $('.pl_collapse').collapse('hide');
       $('#' + lyric_id).collapse('show');
       $('#' + main_id)[0].scrollIntoView(true);

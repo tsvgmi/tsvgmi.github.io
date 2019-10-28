@@ -106,11 +106,11 @@
   - song_list = song_list[0..limit-1]
 
 - jcode = "select_class('si_collapse', 'si_collapse')"
-== <button class='btn btn-outline-secondary btn-lg' onclick="#{jcode}">ALL</button>
+<button class='btn btn-outline-secondary btn-lg' onclick="#{jcode}">ALL</button>
 - singers.select{|s| !s.empty?}.each do |asinger|
   - sclass = "s_#{asinger.gsub(/[^a-z]/i, '')}"
   - jcode = "select_class('#{sclass}', 'si_collapse')"
-  == <button class='btn btn-outline-secondary btn-sm' onclick="#{jcode}">#{asinger}</button>
+  <button class='btn btn-outline-secondary btn-sm' onclick="#{jcode}">#{asinger}</button>
 
 - song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
