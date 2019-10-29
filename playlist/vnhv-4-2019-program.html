@@ -129,22 +129,22 @@ List:
 </form>
 </div>
 </div>
-<button class='btn btn-outline-secondary btn-lg' onclick="select_class('si_collapse', 'si_collapse')">ALL</button>
-<button class='btn btn-outline-secondary btn-sm' onclick="select_class('s_Michelle', 'si_collapse')">Michelle</button>
-<button class='btn btn-outline-secondary btn-sm' onclick="select_class('s_maihuong', 'si_collapse')">mai-huong</button>
-<button class='btn btn-outline-secondary btn-sm' onclick="select_class('s_michele', 'si_collapse')">michele</button>
-<button class='btn btn-outline-secondary btn-sm' onclick="select_class('s_michelle', 'si_collapse')">michelle</button>
-<button class='btn btn-outline-secondary btn-sm' onclick="select_class('s_thien', 'si_collapse')">thien</button>
-<button class='btn btn-outline-secondary btn-sm' onclick="select_class('s_thuydung', 'si_collapse')">thuy-dung</button>
+<button class='btn btn-outline-secondary btn-lg' data-show='si_collapse' onclick='pe_collapse(this)'>All</button>
+<button class='btn btn-outline-secondary btn-sm' data-show='s_Michelle' onclick='pe_collapse(this)'>Michelle</button>
+<button class='btn btn-outline-secondary btn-sm' data-show='s_maihuong' onclick='pe_collapse(this)'>mai-huong</button>
+<button class='btn btn-outline-secondary btn-sm' data-show='s_michele' onclick='pe_collapse(this)'>michele</button>
+<button class='btn btn-outline-secondary btn-sm' data-show='s_michelle' onclick='pe_collapse(this)'>michelle</button>
+<button class='btn btn-outline-secondary btn-sm' data-show='s_thien' onclick='pe_collapse(this)'>thien</button>
+<button class='btn btn-outline-secondary btn-sm' data-show='s_thuydung' onclick='pe_collapse(this)'>thuy-dung</button>
 <div class='s_michelle si_collapse'>
 <div id='row_1a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_1', 'row_1a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_1' data-main-id='row_1a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_1', 'row_1a', 0);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_1' data-main-id='row_1a' data-vindex='0' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -224,11 +224,11 @@ Tình <span class="chord">G7</span>yêu sẽ mang ta đến gần bên <span cla
 <div id='row_2a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_2', 'row_2a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_2' data-main-id='row_2a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_2', 'row_2a', 1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_2' data-main-id='row_2a' data-vindex='1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -303,11 +303,11 @@ Một <span class="chord">F</span>lần sau cuối <span class="chord">G</span>e
 <div id='row_3a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_3', 'row_3a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_3' data-main-id='row_3a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_3', 'row_3a', 2);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_3' data-main-id='row_3a' data-vindex='2' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -381,11 +381,11 @@ Em <span class="chord">Dbdim</span>có biết <span class="chord">Cm</span>rằn
 <div id='row_4a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_4', 'row_4a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_4' data-main-id='row_4a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_4', 'row_4a', 3);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_4' data-main-id='row_4a' data-vindex='3' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -521,11 +521,11 @@ They know that <span class="chord">G</span>I still wait for <span class="chord">
 <div id='row_5a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_5', 'row_5a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_5' data-main-id='row_5a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_5', 'row_5a', 4);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_5' data-main-id='row_5a' data-vindex='4' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -633,11 +633,11 @@ Et ce bruit-là bang <span class="chord">B7</span>bang, je ne l'oublierai <span 
 <div id='row_6a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_6', 'row_6a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_6' data-main-id='row_6a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_6', 'row_6a', 5);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_6' data-main-id='row_6a' data-vindex='5' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -740,11 +740,11 @@ this is the <span class="chord">Gm</span>only <span class="chord">A</span>way fo
 <div id='row_7a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_7', 'row_7a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_7' data-main-id='row_7a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_7', 'row_7a', 6);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_7' data-main-id='row_7a' data-vindex='6' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -832,11 +832,11 @@ Vì người biết mang tình <span class="chord">D7</span>thương. <br/>
 <div id='row_8a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_8', 'row_8a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_8' data-main-id='row_8a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_8', 'row_8a', 7);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_8' data-main-id='row_8a' data-vindex='7' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -912,11 +912,11 @@ Ngàn năm nỗi <span class="chord">Cm</span>đau hóa kiếp mây <span class=
 <div id='row_9a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_9', 'row_9a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_9' data-main-id='row_9a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_9', 'row_9a', 8);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_9' data-main-id='row_9a' data-vindex='8' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -1004,11 +1004,11 @@ Tìm <span class="chord">C</span>đâu, biết tìm <span class="chord">B7</span
 <div id='row_10a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_10', 'row_10a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_10' data-main-id='row_10a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_10', 'row_10a', 10);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_10' data-main-id='row_10a' data-vindex='10' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -1128,11 +1128,11 @@ C'est un amour de vacances <br/>
 <div id='row_11a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_11', 'row_11a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_11' data-main-id='row_11a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_11', 'row_11a', 11);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_11' data-main-id='row_11a' data-vindex='11' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -1216,11 +1216,11 @@ Và <span class="chord">C</span>đêm thôi ngơ <span class="chord">B7</span>ng
 <div id='row_12a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_12', 'row_12a', -1);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_12' data-main-id='row_12a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-align-justify'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' onclick="playVideoNumber('row_12', 'row_12a', 12);" role='button' type='button'>
+<button class='pull-right btn btn-outline-primary' data-lyric-id='row_12' data-main-id='row_12a' data-vindex='12' onclick='pe_playVideo(this)' role='button' type='button'>
 <i class='fa fa-play-circle'></i>
 Intro
 </button>
@@ -1339,7 +1339,7 @@ Qui t'em <span class="chord">D#7</span>mène, aujour <span class="chord">G#</spa
 
 
 <footer>
-<div class='small text-muted publish_date'>2019-10-27 21:10:24 -0700</div>
+<div class='small text-muted publish_date'>2019-10-28 21:37:47 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -1355,7 +1355,10 @@ Qui t'em <span class="chord">D#7</span>mène, aujour <span class="chord">G#</spa
   var cur_player = null;
   var players    = [];
   
-  function playVideoNumber(lyric_id, main_id, vindex) {
+  function pe_playVideo(button) {
+    var lyric_id = button.getAttribute('data-lyric-id');
+    var main_id  = button.getAttribute('data-main-id');
+    var vindex   = button.getAttribute('data-vindex');
     console.log('play video ' + vindex + ' + ' + lyric_id);
   
     if (vindex >= 0) {
@@ -1424,9 +1427,12 @@ Qui t'em <span class="chord">D#7</span>mène, aujour <span class="chord">G#</spa
     $('.si_collapse').collapse();
   });
   
-  function select_class(show_class, hide_class) {
-    console.log('show: ' + show_class + ' , hide: ' + hide_class);
+  function pe_collapse(button) {
+    var show_class = button.getAttribute("data-show");
+    var hide_class = 'si_collapse';
+    console.log('hide: ' + hide_class);
     $('.' + hide_class).collapse('hide');
+    console.log('show: ' + show_class);
     $('.' + show_class).collapse('show');
   }
   

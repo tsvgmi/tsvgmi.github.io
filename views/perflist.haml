@@ -105,12 +105,10 @@
 - if (limit = params[:limit].to_i) > 0
   - song_list = song_list[0..limit-1]
 
-- jcode = "select_class('si_collapse', 'si_collapse')"
-<button class='btn btn-outline-secondary btn-lg' onclick="#{jcode}">ALL</button>
+%button.btn.btn-outline-secondary.btn-lg(onclick='pe_collapse(this)' data-show="si_collapse") All
 - singers.select{|s| !s.empty?}.each do |asinger|
   - sclass = "s_#{asinger.gsub(/[^a-z]/i, '')}"
-  - jcode = "select_class('#{sclass}', 'si_collapse')"
-  <button class='btn btn-outline-secondary btn-sm' onclick="#{jcode}">#{asinger}</button>
+  %button.btn.btn-outline-secondary.btn-sm(onclick='pe_collapse(this)' data-show="#{sclass}")= asinger
 
 - song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
@@ -136,9 +134,12 @@
       $('.si_collapse').collapse();
     });
 
-    function select_class(show_class, hide_class) {
-      console.log('show: ' + show_class + ' , hide: ' + hide_class);
+    function pe_collapse(button) {
+      var show_class = button.getAttribute("data-show");
+      var hide_class = 'si_collapse';
+      console.log('hide: ' + hide_class);
       $('.' + hide_class).collapse('hide');
+      console.log('show: ' + show_class);
       $('.' + show_class).collapse('show');
     }
 

@@ -5,7 +5,10 @@
     var cur_player = null;
     var players    = [];
 
-    function playVideoNumber(lyric_id, main_id, vindex) {
+    function pe_playVideo(button) {
+      var lyric_id = button.getAttribute('data-lyric-id');
+      var main_id  = button.getAttribute('data-main-id');
+      var vindex   = button.getAttribute('data-vindex');
       console.log('play video ' + vindex + ' + ' + lyric_id);
 
       if (vindex >= 0) {
