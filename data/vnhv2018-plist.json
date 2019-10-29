@@ -2054,9 +2054,42 @@
   "tango-tim": {
     "instrument": "Guitar",
     "key": "Am",
-    "intro": "",
+    "intro": "[Dm] [Dm] [Am] [Am] [E] [F] [E] [Am]\r\n66765456 66765435\r\n565432 454321 .. 321-7-5 -7124321",
     "ytvideo": "yw8wS6AVXcc,0,23",
     "vidkey": "Am",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "thu-ca": {
+    "instrument": "String",
+    "key": "Am",
+    "intro": "[Am] [G] [F] [E] [Am] [G] [F] [E]\r\n+(32123) 89+3987 9878965 654321\r\n+(123121)7 78965 54321",
+    "ytvideo": "tXBa-iBZ9pg,0,20",
+    "vidkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "dau-tinh-sau": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Bm7b5] [E7] [Am] [Am/G] [B7] [E]\r\n[Bm7b5] [E7] [Am] [Am/G] [E] [F#dim] [E]\r\n345 64 234 53 123 21-712\r\n-512345 64 234 321 32 1-71 1432",
+    "ytvideo": "OLNwvPq4cCg,0,30",
+    "vidkey": "Em",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "mat-le-cho-nguoi": {
+    "instrument": "[]",
+    "key": "Am",
+    "intro": "[Am] [E] [Dm/F] [E/G#] [Am] [Am/C] [Dm]-[G] [C]-[F] [Bm7b5] [E7]-[Am]\r\n5 56531-5 4 4542758\r\n135+3 98 2489875 3578752 2326 5231",
+    "ytvideo": "XuInKljWq5s,0,41",
+    "vidkey": "Dm",
     "smkey": "",
     "smule": "",
     "nctkey": "",
