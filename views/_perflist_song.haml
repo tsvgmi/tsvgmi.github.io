@@ -6,20 +6,26 @@
   - link += "/#{version}"
 - lyric_id  = "row_#{row_no}"
 - lyric_id2 = "row_#{row_no}a"
+- lyric_id3 = "row_#{row_no}b"
 - perf_note = perf_info[sname] || {}
 - vidinfos  = VideoInfo.new(perf_note[:ytvideo], perf_note[:vidkey])
 
 %div(id=lyric_id2)
   .row.song_header
     .col-6
-      %button.pull-right.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id="#{lyric_id}" data-main-id="#{lyric_id2}" data-vindex="-1" type='button')
-        %i.fa.fa-align-justify
+      %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex="-1" type='button')
+        %i.fa.fa-music
         Lyric
+      %button.btn.btn-outline-primary(onclick="pe_toggle_chord(this)" role='button' data-lyric-id=lyric_id type='button' role='button')
+        %i.fa.fa-microphone
       - if vidinfos.videos.size > 0
         - voffset = videos.size;
-        %button.pull-right.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id="#{lyric_id}" data-main-id="#{lyric_id2}" data-vindex="#{voffset}" type='button')
-          %i.fa.fa-play-circle
-          Intro
+        %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex=voffset type='button' title='Play intro music')
+          %i.fa.fa-headphones
+      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, -1)" role="button" data-lyric-id=lyric_id)
+        %i.fa.fa-arrow-down
+      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, 1)" role="button" data-lyric-id=lyric_id)
+        %i.fa.fa-arrow-up
       %h5
         = "#{row_no}."
         %a(href=link target='hopamchuan')= sinfo[:name]
@@ -79,4 +85,4 @@
       - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
       - tlyric = tlyric.sub(/^.*==/m, '')
       .col
-        .lyric= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
+        .lyric(id="#{lyric_id3}")= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")

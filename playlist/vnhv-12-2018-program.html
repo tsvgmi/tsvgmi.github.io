@@ -158,13 +158,21 @@ List:
 <div id='row_1a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_1' data-main-id='row_1a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_1' data-main-id='row_1a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_1' data-main-id='row_1a' data-vindex='0' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_1' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_1' data-main-id='row_1a' data-vindex='0' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_1' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_1' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 1.
@@ -211,7 +219,7 @@ Guitar
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Verse 1: <br/>
+<div class='lyric' id='row_1b'>Verse 1: <br/>
 All the leaves are<span class="chord">Am</span>brown <span class="chord">GF</span>and the <span class="chord">G</span>sky is <span class="chord">Esus4</span>gray <span class="chord">E</span> <br/>
 <span class="chord">F</span>I've been for a <span class="chord">C</span>walk<span class="chord">E</span> <span class="chord">Am</span>on a <span class="chord">F</span>winter's<span class="chord">Esus4</span>day <span class="chord">E</span> <br/>
 I'd be safe and <span class="chord">Am</span>warm <span class="chord">G</span> <span class="chord">F</span>if I <span class="chord">G</span>was in <span class="chord">Esus4</span>L.A. <span class="chord">E</span> <br/>
@@ -247,13 +255,21 @@ Outro: <br/>
 <div id='row_2a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_2' data-main-id='row_2a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_2' data-main-id='row_2a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_2' data-main-id='row_2a' data-vindex='1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_2' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_2' data-main-id='row_2a' data-vindex='1' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_2' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_2' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 2.
@@ -300,7 +316,7 @@ Guitar, Piano
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'><span class="chord">Em</span>“Nhìn ánh sao rơi trong trời đêm <br/>
+<div class='lyric' id='row_2b'><span class="chord">Em</span>“Nhìn ánh sao rơi trong trời đêm <br/>
 Nhặt cánh hoa rơi bên thềm <span class="chord">Am</span>xưa <br/>
 <span class="chord">D7</span>Người yêu khuất xa khi chiều <span class="chord">G</span>ấy <br/>
 <span class="chord">B7</span>Giờ mình tôi đứng trông sao <span class="chord">Em</span>mờ <br/>
@@ -329,13 +345,21 @@ Tình dở dang rồi ôi biệt <span class="chord">Am</span>ly <br/>
 <div id='row_3a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_3' data-main-id='row_3a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_3' data-main-id='row_3a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_3' data-main-id='row_3a' data-vindex='2' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_3' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_3' data-main-id='row_3a' data-vindex='2' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_3' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_3' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 3.
@@ -382,7 +406,7 @@ Piano
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'> <br/>
+<div class='lyric' id='row_3b'> <br/>
 Tình yêu như <span class="chord">Bm</span>nắng, nắng đưa em <span class="chord">Bm(maj7)/A#</span>về, bên dòng suối <span class="chord">Bm/A</span>mơ <span class="chord">Bm</span> <br/>
 Nhẹ vương theo <span class="chord">G</span>gió, gió mang câu <span class="chord">Bm</span>thề, <span class="chord">B7</span>xa rời chốn <span class="chord">Em</span>xưa <br/>
 Tình như lá <span class="chord">Em6</span>úa, rơi <span class="chord">Gmaj7</span>buồn, trong nỗi <span class="chord">Dmaj7</span>nhớ <br/>
@@ -414,13 +438,21 @@ Gọi tên em <span class="chord">Em</span>mãi, <span class="chord">C#dim</span
 <div id='row_4a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_4' data-main-id='row_4a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_4' data-main-id='row_4a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_4' data-main-id='row_4a' data-vindex='3' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_4' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_4' data-main-id='row_4a' data-vindex='3' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_4' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_4' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 4.
@@ -467,7 +499,7 @@ Accordeon, Staccato, String, Guitar
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Comme une salaman<span class="chord">Dm</span>dre, <span class="chord">G</span>l'amour est merveil<span class="chord">Cmaj7</span>leux <br/>
+<div class='lyric' id='row_4b'>Comme une salaman<span class="chord">Dm</span>dre, <span class="chord">G</span>l'amour est merveil<span class="chord">Cmaj7</span>leux <br/>
 <span class="chord">F</span>Et renait de ses <span class="chord">E</span>cendres comme l'oiseau de <span class="chord">Am</span>feu, <br/>
 nul ne peut le con<span class="chord">Dm</span>traindre <br/>
 <span class="chord">G7</span>Pour lui donner la <span class="chord">Cmaj7</span>vie. <span class="chord">F</span> <br/>
@@ -519,13 +551,21 @@ L'amour, c'est pour <span class="chord">Am</span>rien <br/>
 <div id='row_5a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_5' data-main-id='row_5a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_5' data-main-id='row_5a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_5' data-main-id='row_5a' data-vindex='4' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_5' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_5' data-main-id='row_5a' data-vindex='4' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_5' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_5' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 5.
@@ -574,7 +614,7 @@ Rock&Roll Guitar
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'><span class="chord">C</span>Sunday morning up with the lark <br/>
+<div class='lyric' id='row_5b'><span class="chord">C</span>Sunday morning up with the lark <br/>
 I think I’ll take a walk in the park <br/>
 <span class="chord">F</span>Hey, hey <span class="chord">G</span>hey, it’s a beautiful <span class="chord">C</span>day <br/>
 <span class="chord">C</span>I’ve got someone waiting for me <br/>
@@ -613,13 +653,21 @@ Oh, <span class="chord">G</span>my, my, <span class="chord">A</span>my its a bea
 <div id='row_6a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_6' data-main-id='row_6a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_6' data-main-id='row_6a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_6' data-main-id='row_6a' data-vindex='5' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_6' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_6' data-main-id='row_6a' data-vindex='5' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_6' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_6' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 6.
@@ -666,7 +714,7 @@ String
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Cho <span class="chord">Bm</span>em quên cơn mộng <span class="chord">B7</span>ảo xa xôi thơ ngây ngày <span class="chord">Em</span>nào <br/>
+<div class='lyric' id='row_6b'>Cho <span class="chord">Bm</span>em quên cơn mộng <span class="chord">B7</span>ảo xa xôi thơ ngây ngày <span class="chord">Em</span>nào <br/>
 Em quên được <span class="chord">A7</span>phút trong tay mưa bay dạt <span class="chord">D</span>dào <br/>
 Ðến muôn đời sau <span class="chord">Em6</span>em không còn <span class="chord">F#7</span>nhớ <br/>
 yêu thương bên nhau lần <span class="chord">Bm</span>đầu <br/>
@@ -696,13 +744,21 @@ Giấc mơ nhỏ <span class="chord">Em6</span>nhoi <br/>
 <div id='row_7a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_7' data-main-id='row_7a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_7' data-main-id='row_7a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_7' data-main-id='row_7a' data-vindex='6' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_7' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_7' data-main-id='row_7a' data-vindex='6' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_7' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_7' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 7.
@@ -749,7 +805,7 @@ C Am Em D#aug Dm G7 F-G C F C<br>2358 798 9853 5#44 687 7898798 (14321)
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Gởi về <span class="chord">F</span>anh, một cánh thư em viết bên đèn <span class="chord">Bb</span>khuya <span class="chord">Gm</span>… <br/>
+<div class='lyric' id='row_7b'>Gởi về <span class="chord">F</span>anh, một cánh thư em viết bên đèn <span class="chord">Bb</span>khuya <span class="chord">Gm</span>… <br/>
 Thời gian len <span class="chord">C</span>lén đi mãi không <span class="chord">C7</span>ngừng, đêm tối <span class="chord">F</span>mơ hồ <br/>
 Ngày anh <span class="chord">Gm</span>đi mang bao vạn <span class="chord">F</span>niềm nhớ, <br/>
 Mang biết bao ân <span class="chord">Am</span>tình, nhìn anh thấy <span class="chord">Gm</span>giận hờn, cỏ cây cung <span class="chord">F</span>u buồn <br/>
@@ -778,9 +834,18 @@ Em vẫn lạnh <span class="chord">C7</span>lùng vì <span class="chord">F</sp
 <div id='row_8a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_8' data-main-id='row_8a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_8' data-main-id='row_8a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_8' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_8' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_8' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 8.
@@ -807,7 +872,7 @@ slow-rock
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>(Intro) <br/>
+<div class='lyric' id='row_8b'>(Intro) <br/>
 <span class="chord">C</span> <span class="chord">G</span> <span class="chord">Am</span> <span class="chord">F</span> <span class="chord">C</span> <span class="chord">G</span> <br/>
 <span class="chord">F</span> <span class="chord">C</span> <span class="chord">Dm</span> <span class="chord">C</span> <br/>
 (Verse 1) <br/>
@@ -861,13 +926,21 @@ I <span class="chord">C</span>wake up to the <span class="chord">G</span>sound o
 <div id='row_9a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_9' data-main-id='row_9a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_9' data-main-id='row_9a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_9' data-main-id='row_9a' data-vindex='7' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_9' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_9' data-main-id='row_9a' data-vindex='7' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_9' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_9' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 9.
@@ -914,7 +987,7 @@ In: Same as music<br>Out: Same as music
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'> <br/>
+<div class='lyric' id='row_9b'> <br/>
 Si l'amour existe en<span class="chord">Am</span>core <span class="chord">D7</span> <br/>
 Il res<span class="chord">B7</span>semble à ton <span class="chord">Em</span>corps <br/>
 Si l'a<span class="chord">C</span>mour existe en<span class="chord">D</span>core <br/>
@@ -957,13 +1030,21 @@ Serre <span class="chord">B7</span>moi encore plus <span class="chord">Em</span>
 <div id='row_10a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_10' data-main-id='row_10a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_10' data-main-id='row_10a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_10' data-main-id='row_10a' data-vindex='8' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_10' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_10' data-main-id='row_10a' data-vindex='8' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_10' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_10' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 10.
@@ -1010,7 +1091,7 @@ Trumpet
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. <span class="chord">Cm</span>Yêu nhau đi, đời đâu có <span class="chord">C7</span>nghĩa <span class="chord">Fm</span>chi <br/>
+<div class='lyric' id='row_10b'>1. <span class="chord">Cm</span>Yêu nhau đi, đời đâu có <span class="chord">C7</span>nghĩa <span class="chord">Fm</span>chi <br/>
 Yêu nhau đi <span class="chord">G</span>ta lo chi <span class="chord">Ab</span>cho đôi mi <span class="chord">G</span>thêm phai úa màu <br/>
 <span class="chord">C7</span>Ta yêu nhau cớ sao em âu <span class="chord">Fm</span>sầu? <br/>
 <span class="chord">Cm</span>Phút giây này có bao giờ <span class="chord">Ab</span>đến với đời <span class="chord">G</span>ta hai lần <span class="chord">Cm</span>đâu. <br/>
@@ -1036,13 +1117,21 @@ Trao nhau đi <span class="chord">G</span>muôn môi hôn <span class="chord">Ab
 <div id='row_11a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_11' data-main-id='row_11a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_11' data-main-id='row_11a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_11' data-main-id='row_11a' data-vindex='9' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_11' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_11' data-main-id='row_11a' data-vindex='9' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_11' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_11' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 11.
@@ -1089,7 +1178,7 @@ String
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Tone gốc Hồng Nhung: Em <br/>
+<div class='lyric' id='row_11b'>Tone gốc Hồng Nhung: Em <br/>
 Gọi <span class="chord">Em</span>nắng! <br/>
 Trên vai em <span class="chord">Em</span>gầy <br/>
 Đường xa áo <span class="chord">Am</span>bay <br/>
@@ -1139,13 +1228,21 @@ Suốt cơn mê <span class="chord">Em</span>này... </div>
 <div id='row_12a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_12' data-main-id='row_12a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_12' data-main-id='row_12a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_12' data-main-id='row_12a' data-vindex='10' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_12' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_12' data-main-id='row_12a' data-vindex='10' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_12' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_12' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 12.
@@ -1202,7 +1299,7 @@ String, Piano
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. Mai em xa rời <span class="chord">Am</span>tôi còn ai cùng đi giữa <span class="chord">Dm6</span>đời <br/>
+<div class='lyric' id='row_12b'>1. Mai em xa rời <span class="chord">Am</span>tôi còn ai cùng đi giữa <span class="chord">Dm6</span>đời <br/>
 Mênh mông đây là <span class="chord">E7</span>đâu là biển vắng đêm <span class="chord">Am</span>sâu <br/>
 Khi em quay mặt <span class="chord">Am</span>đi lòng tôi tựa phiến đá <span class="chord">Dm6</span>sầu <br/>
 Chơ vơ trong lặng <span class="chord">E7</span>câm muộn phiền theo tháng <span class="chord">Am</span>năm. <br/>
@@ -1231,13 +1328,21 @@ Trăm năm như ngàn <span class="chord">E7</span>năm người cùng đá bân
 <div id='row_13a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_13' data-main-id='row_13a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_13' data-main-id='row_13a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_13' data-main-id='row_13a' data-vindex='12' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_13' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_13' data-main-id='row_13a' data-vindex='12' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_13' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_13' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 13.
@@ -1282,7 +1387,7 @@ Intro like music<br><span class="chord_intro">Am</span> <span class="chord_intr
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Nàng như một <span class="chord">Am</span>đóa hồng <span class="chord">Dm</span>phai <br/>
+<div class='lyric' id='row_13b'>Nàng như một <span class="chord">Am</span>đóa hồng <span class="chord">Dm</span>phai <br/>
 Hương sắc héo <span class="chord">G</span>hon theo những ngày <span class="chord">Cmaj7</span>dài <br/>
 Cuộc tình đi <span class="chord">Fmaj7</span>qua trong em, <br/>
 Mang <span class="chord">Dm</span>bao tiếc nuối trái <span class="chord">Esus4</span>tim vỡ <span class="chord">E</span>tan. <br/>
@@ -1338,13 +1443,21 @@ Nàng khóc cho <span class="chord">Fmaj7</span>mình <span class="chord">Dm</sp
 <div id='row_14a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_14' data-main-id='row_14a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_14' data-main-id='row_14a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_14' data-main-id='row_14a' data-vindex='13' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_14' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_14' data-main-id='row_14a' data-vindex='13' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_14' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_14' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 14.
@@ -1401,7 +1514,7 @@ Piano
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. Đường vào <span class="chord">C</span>tim em ôi băng <span class="chord">Em</span>giá <br/>
+<div class='lyric' id='row_14b'>1. Đường vào <span class="chord">C</span>tim em ôi băng <span class="chord">Em</span>giá <br/>
 Trời mùa <span class="chord">Am</span>đông mây vẫn hay đi <span class="chord">Em</span>về <br/>
 Vẫn <span class="chord">Dm</span>mưa mưa rơi trên đường thầm <span class="chord">Am</span>thì <br/>
 Vì <span class="chord">F</span>đâu mưa em không <span class="chord">G</span>đến <br/>
@@ -1439,13 +1552,21 @@ Hỡi <span class="chord">Em</span>ơi, trái tim mùa <span class="chord">Am</s
 <div id='row_15a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_15' data-main-id='row_15a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_15' data-main-id='row_15a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_15' data-main-id='row_15a' data-vindex='15' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_15' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_15' data-main-id='row_15a' data-vindex='15' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_15' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_15' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 15.
@@ -1492,7 +1613,7 @@ Violin, Piano
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Dòng sông <span class="chord">F</span>nay đã êm trôi <span class="chord">Gm</span> <br/>
+<div class='lyric' id='row_15b'>Dòng sông <span class="chord">F</span>nay đã êm trôi <span class="chord">Gm</span> <br/>
 Dòng sông <span class="chord">Dm</span>thay hết cuộc <span class="chord">Am</span>đời <br/>
 Cuộc đời người <span class="chord">Gm</span>như khúc <span class="chord">C</span>quanh <br/>
 Đã bao lần <span class="chord">Am</span>nếm những muộn <span class="chord">Dm</span>phiền <br/>
@@ -1520,13 +1641,21 @@ Yêu thương dòng <span class="chord">F</span>sông </div>
 <div id='row_16a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_16' data-main-id='row_16a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_16' data-main-id='row_16a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_16' data-main-id='row_16a' data-vindex='16' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_16' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_16' data-main-id='row_16a' data-vindex='16' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_16' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_16' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 16.
@@ -1575,7 +1704,7 @@ Piano, Harp
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'><span class="chord">Dm</span>Lady - I'm your <span class="chord">Gm</span>knight in shining  <span class="chord">C</span>armor - and I <span class="chord">Dm</span>love you <br/>
+<div class='lyric' id='row_16b'><span class="chord">Dm</span>Lady - I'm your <span class="chord">Gm</span>knight in shining  <span class="chord">C</span>armor - and I <span class="chord">Dm</span>love you <br/>
 You have <span class="chord">Gm</span>made me what I <span class="chord">C</span>am and --- I am <span class="chord">Dm</span>yours <br/>
 My love - there's <span class="chord">Gm</span>so many ways I <span class="chord">C</span>want to say - I <span class="chord">Dm</span>love you <br/>
 Let me <span class="chord">Gm</span>hold you in my <span class="chord">C</span>arms for --- ever <span class="chord">Dm</span>more <br/>
@@ -1606,13 +1735,21 @@ You're the <span class="chord">Bb</span>love of <span class="chord">Am7</span>my
 <div id='row_17a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_17' data-main-id='row_17a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_17' data-main-id='row_17a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_17' data-main-id='row_17a' data-vindex='17' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_17' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_17' data-main-id='row_17a' data-vindex='17' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_17' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_17' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 17.
@@ -1669,7 +1806,7 @@ Guitar, Brass
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Ánh Xuân về tràn dâng <span class="chord">Am7</span>nắng mới <br/>
+<div class='lyric' id='row_17b'>Ánh Xuân về tràn dâng <span class="chord">Am7</span>nắng mới <br/>
 Tơ trời mừng say gió <span class="chord">Dm7</span>tới <br/>
 Ngàn <span class="chord">E7</span>đóa hoa  bừng <span class="chord">Am</span>chào đời <br/>
 <span class="chord">Bm7b5</span>Từng bầy én trông đẹp mùa <span class="chord">E7</span>màng <br/>
@@ -1710,13 +1847,21 @@ Thầm <span class="chord">E7</span>ước mơ rồi <span class="chord">Am</spa
 <div id='row_18a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_18' data-main-id='row_18a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_18' data-main-id='row_18a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_18' data-main-id='row_18a' data-vindex='19' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_18' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_18' data-main-id='row_18a' data-vindex='19' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_18' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_18' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 18.
@@ -1763,7 +1908,7 @@ String
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Mưa vẫn mưa bay trên tầng tháp <span class="chord">Am</span>cổ <br/>
+<div class='lyric' id='row_18b'>Mưa vẫn mưa bay trên tầng tháp <span class="chord">Am</span>cổ <br/>
 Dài tay em <span class="chord">A7</span>mấy thuở mắt xanh <span class="chord">Dm</span>xao <br/>
 Nghe lá thu <span class="chord">Am</span>mưa reo mòn gót <span class="chord">Bm7b5</span>nhỏ <br/>
 <span class="chord">E7</span>Đường dài hun <span class="chord">Dm</span>hút cho mắt thêm <span class="chord">C</span>sâu. <span class="chord">F</span> <span class="chord">E7</span> <br/>
@@ -1798,13 +1943,21 @@ Xin hãy cho <span class="chord">Am</span>mưa qua miền đất <span class="ch
 <div id='row_19a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_19' data-main-id='row_19a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_19' data-main-id='row_19a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_19' data-main-id='row_19a' data-vindex='20' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_19' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_19' data-main-id='row_19a' data-vindex='20' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_19' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_19' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 19.
@@ -1861,7 +2014,7 @@ Bầu, Tranh
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. Hôm nay chúng mình không còn gặp <span class="chord">Dm</span>nhau <span class="chord">Bb</span> <br/>
+<div class='lyric' id='row_19b'>1. Hôm nay chúng mình không còn gặp <span class="chord">Dm</span>nhau <span class="chord">Bb</span> <br/>
 Bao đêm ngồi <span class="chord">Am</span>nhớ nhung ôi là <span class="chord">Dm</span>sầu <br/>
 Tình <span class="chord">Dm</span>buồn như lá vàng <span class="chord">Gm</span>rơi <br/>
 Còn <span class="chord">C</span>gì đâu nữa anh <span class="chord">F</span>ơi <br/>
@@ -1896,13 +2049,21 @@ Anh đi <span class="chord">A7</span>tìm biển nam trọn <span class="chord">
 <div id='row_20a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_20' data-main-id='row_20a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_20' data-main-id='row_20a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_20' data-main-id='row_20a' data-vindex='22' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_20' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_20' data-main-id='row_20a' data-vindex='22' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_20' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_20' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 20.
@@ -1949,7 +2110,7 @@ Orchestra, String
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>CAPO 3 <br/>
+<div class='lyric' id='row_20b'>CAPO 3 <br/>
 Em khóc tơ duyên bẽ <span class="chord">Dm</span>bàng <br/>
 Nằm ôm sầu nhớ mênh <span class="chord">Gm</span>mang <span class="chord">A7</span> <br/>
 Anh xót xa cho thân <span class="chord">A7</span>người <br/>
@@ -1988,13 +2149,21 @@ Và cho qua kiếp <span class="chord">Dm</span>này. </div>
 <div id='row_21a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_21' data-main-id='row_21a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_21' data-main-id='row_21a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_21' data-main-id='row_21a' data-vindex='23' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_21' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_21' data-main-id='row_21a' data-vindex='23' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_21' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_21' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 21.
@@ -2041,7 +2210,7 @@ Piano, String
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'> <br/>
+<div class='lyric' id='row_21b'> <br/>
 1. Lại <span class="chord">Dm</span>đây bên anh em <span class="chord">Dm7</span>hỡi <br/>
 Trước khi xa anh đêm nay lại <span class="chord">Gm</span>gần bên anh <br/>
 Vẫn <span class="chord">C</span>biết đôi ta chia tay <br/>
@@ -2086,13 +2255,21 @@ Rồi <span class="chord">Gm</span>lòng đớn <span class="chord">A7</span>đa
 <div id='row_22a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_22' data-main-id='row_22a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_22' data-main-id='row_22a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_22' data-main-id='row_22a' data-vindex='24' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_22' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_22' data-main-id='row_22a' data-vindex='24' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_22' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_22' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 22.
@@ -2149,7 +2326,7 @@ Brass, Trumpet
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. Ngày xưa quen em anh <span class="chord">Dm</span>nói rằng <br/>
+<div class='lyric' id='row_22b'>1. Ngày xưa quen em anh <span class="chord">Dm</span>nói rằng <br/>
 Nào <span class="chord">Gm</span>có một mối tình <span class="chord">Dm</span>trên đời <br/>
 Hạnh <span class="chord">Gm</span>phúc bằng mối tình <span class="chord">Dm</span>chúng mình <br/>
 Lời nói làm <span class="chord">A</span>mây trời <span class="chord">Dm</span>xanh <span class="chord">A</span> <br/>
@@ -2193,13 +2370,21 @@ Nào biết, nào <span class="chord">A</span>hay, tình <span class="chord">Dm<
 <div id='row_23a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_23' data-main-id='row_23a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_23' data-main-id='row_23a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_23' data-main-id='row_23a' data-vindex='26' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_23' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_23' data-main-id='row_23a' data-vindex='26' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_23' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_23' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 23.
@@ -2256,7 +2441,7 @@ Guitar
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. Người yêu <span class="chord">Bm</span>hỡi, dù gì <span class="chord">Em</span>cùng xa nhau <span class="chord">A</span>rồi <br/>
+<div class='lyric' id='row_23b'>1. Người yêu <span class="chord">Bm</span>hỡi, dù gì <span class="chord">Em</span>cùng xa nhau <span class="chord">A</span>rồi <br/>
 Ngày nào <span class="chord">Dmaj7</span>chiếc hôn bao đêm <span class="chord">G</span>rã rời <br/>
 Giờ đã <span class="chord">Em6</span>hết rồi, chẳng <span class="chord">F#</span>còn hơi ấm trên đầu <span class="chord">F#7</span>môi... <br/>
  <br/>
@@ -2304,13 +2489,21 @@ Lên 1/2 tone - <span class="chord">Cm</span> <br/>
 <div id='row_24a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_24' data-main-id='row_24a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_24' data-main-id='row_24a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_24' data-main-id='row_24a' data-vindex='28' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_24' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_24' data-main-id='row_24a' data-vindex='28' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_24' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_24' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 24.
@@ -2357,7 +2550,7 @@ C Am F G Dm Am F G G<br>Flute: 5#458 9658 1266 5125 <br>String: 5699 99+(31) 8
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'> <br/>
+<div class='lyric' id='row_24b'> <br/>
 1. Không còn mùa <span class="chord">F</span>thu, trăng rơi bên <span class="chord">Am</span>thềm <br/>
 Không còn lời <span class="chord">Dm</span>ru, mơ trên môi <span class="chord">F</span>mềm <br/>
 Em <span class="chord">Bb</span>thơ, như mùa xuân <span class="chord">Gm</span>đầu, nối dài đêm <span class="chord">C7</span>thâu <br/>
@@ -2383,9 +2576,18 @@ Chiều buông rã <span class="chord">Bb</span>rời, ru lòng thôi <span clas
 <div id='row_25a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_25' data-main-id='row_25a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_25' data-main-id='row_25a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_25' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_25' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_25' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 25.
@@ -2412,7 +2614,7 @@ slow-rock
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Verse 1:	Hey <span class="chord">F#</span>Jude don’t make it <span class="chord">C#</span>bad take a <span class="chord">C#7</span>sad song and make it <span class="chord">F#</span>better  <br/>
+<div class='lyric' id='row_25b'>Verse 1:	Hey <span class="chord">F#</span>Jude don’t make it <span class="chord">C#</span>bad take a <span class="chord">C#7</span>sad song and make it <span class="chord">F#</span>better  <br/>
 Remember<span class="chord">B</span>to let her into your <span class="chord">F#</span>heart and then you can <span class="chord">C#</span>start to make it <span class="chord">F#</span>better  <br/>
  <br/>
 Verse 2:	Hey Jude<span class="chord">F#</span>don’t be afraid<span class="chord">C#</span>you were made <span class="chord">C#7</span>to go out and get <span class="chord">F#</span>her  <br/>
@@ -2458,13 +2660,21 @@ Remember<span class="chord">B</span>to let her under your <span class="chord">F#
 <div id='row_26a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_26' data-main-id='row_26a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_26' data-main-id='row_26a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_26' data-main-id='row_26a' data-vindex='29' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_26' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_26' data-main-id='row_26a' data-vindex='29' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_26' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_26' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 26.
@@ -2509,7 +2719,7 @@ Brass
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. <span class="chord">Am6</span>Đời không như ước <span class="chord">Am7</span>mơ lòng người <br/>
+<div class='lyric' id='row_26b'>1. <span class="chord">Am6</span>Đời không như ước <span class="chord">Am7</span>mơ lòng người <br/>
 Cuộc <span class="chord">Dm7</span>đời xô đẩy mình <span class="chord">F7</span>đến rã <span class="chord">E7</span>rời <br/>
 Còn lại <span class="chord">Am</span>gì, người yêu đã <span class="chord">F</span>khuất <br/>
 Tình yêu <span class="chord">Dm7</span>đến như cơn mưa <span class="chord">Am</span>buồn <br/>
@@ -2551,13 +2761,21 @@ Lòng vẫn <span class="chord">Dm</span>nhớ gọi <span class="chord">E</span
 <div id='row_27a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_27' data-main-id='row_27a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_27' data-main-id='row_27a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_27' data-main-id='row_27a' data-vindex='30' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_27' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_27' data-main-id='row_27a' data-vindex='30' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_27' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_27' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 27.
@@ -2604,7 +2822,7 @@ Am Dm F G-Em Am Am<br>Guitar/String: 57531 (888758) 13154 (444314)<br>Sax: 134
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Trên dốc <span class="chord">Cm</span>đá tôi <span class="chord">C7</span>tình cờ quen <span class="chord">Fm</span>nàng <br/>
+<div class='lyric' id='row_27b'>Trên dốc <span class="chord">Cm</span>đá tôi <span class="chord">C7</span>tình cờ quen <span class="chord">Fm</span>nàng <br/>
 Ngồi bên <span class="chord">Eb</span>nhau gọi tên <span class="chord">Gm</span>nhau để rồi xa <span class="chord">Cm</span>nhau <br/>
 Em đã <span class="chord">Ab</span>đến và đã <span class="chord">C7</span>đến như áng <span class="chord">Fm</span>mây <br/>
 Như cánh <span class="chord">Cm</span>chim bay qua bầu <span class="chord">Eb</span>trời <br/>
@@ -2641,13 +2859,21 @@ Mong gì <span class="chord">Fm</span>gặp lại <span class="chord">G</span>l�
 <div id='row_28a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_28' data-main-id='row_28a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_28' data-main-id='row_28a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_28' data-main-id='row_28a' data-vindex='31' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_28' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_28' data-main-id='row_28a' data-vindex='31' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_28' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_28' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 28.
@@ -2694,7 +2920,7 @@ Guitar, String
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Tone gốc Fm: Capo 3 <br/>
+<div class='lyric' id='row_28b'>Tone gốc Fm: Capo 3 <br/>
  <br/>
 Ngày <span class="chord">Dm</span>đó trên chiếc cầu, em nhớ <span class="chord">Gm</span>chăng. <br/>
 Một <span class="chord">C</span>chiếc áo <span class="chord">A7</span>dài , màu trắng <span class="chord">Dm</span>xinh xinh . <br/>
@@ -2739,13 +2965,21 @@ Xa em anh <span class="chord">A7</span>mơ tình <span class="chord">Dm</span>x�
 <div id='row_29a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_29' data-main-id='row_29a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_29' data-main-id='row_29a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_29' data-main-id='row_29a' data-vindex='32' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_29' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_29' data-main-id='row_29a' data-vindex='32' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_29' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_29' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 29.
@@ -2792,7 +3026,7 @@ Violin Orchestra
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'> <br/>
+<div class='lyric' id='row_29b'> <br/>
 Chiều ơi <span class="chord">Dm</span>về đâu <br/>
 Chiều đi lòng <span class="chord">D7</span>nhớ bao nỗi u <span class="chord">Gm</span>sầu <br/>
 Chiều sương im <span class="chord">A7</span>lắng buồn <br/>
@@ -2823,13 +3057,21 @@ Chiều sao hờ hững lạnh lùng <span class="chord">Dm</span>thờ ơ. </d
 <div id='row_30a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_30' data-main-id='row_30a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_30' data-main-id='row_30a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_30' data-main-id='row_30a' data-vindex='33' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_30' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_30' data-main-id='row_30a' data-vindex='33' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_30' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_30' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 30.
@@ -2878,7 +3120,7 @@ Voice
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'> <br/>
+<div class='lyric' id='row_30b'> <br/>
 Oh! <span class="chord">D</span>Carol I am but a <span class="chord">Bm</span>fool <br/>
 Darlin' I <span class="chord">Em</span>love you tho' you treat me <span class="chord">A7</span>cruel <br/>
 You <span class="chord">D</span>hurt me and you make me <span class="chord">Bm</span>cry <br/>
@@ -2901,13 +3143,21 @@ Oh <span class="chord">Em</span>Carol <span class="chord">A7</span>I'm so in lov
 <div id='row_31a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_31' data-main-id='row_31a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_31' data-main-id='row_31a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_31' data-main-id='row_31a' data-vindex='34' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_31' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_31' data-main-id='row_31a' data-vindex='34' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_31' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_31' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 31.
@@ -2956,7 +3206,7 @@ Synth, String
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'> <br/>
+<div class='lyric' id='row_31b'> <br/>
 1. Khi em <span class="chord">Cm</span>về chừng như sang <span class="chord">Eb</span>đông <br/>
 Trời tháng <span class="chord">Fm</span>năm mà nghe lành <span class="chord">Bb</span>lạnh <br/>
 Khi em <span class="chord">Gm</span>về ngồi nghe biển <span class="chord">Dm</span>hát <br/>
@@ -2991,13 +3241,21 @@ Người ở <span class="chord">Bb</span>lại có bao giờ <span class="chord
 <div id='row_32a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_32' data-main-id='row_32a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_32' data-main-id='row_32a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_32' data-main-id='row_32a' data-vindex='35' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_32' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_32' data-main-id='row_32a' data-vindex='35' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_32' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_32' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 32.
@@ -3044,7 +3302,7 @@ String
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Bài hát đêm đông chạnh lòng tôi nhớ <span class="chord">D</span>nhiều <br/>
+<div class='lyric' id='row_32b'>Bài hát đêm đông chạnh lòng tôi nhớ <span class="chord">D</span>nhiều <br/>
 Tà áo  Noel thướt tha trong chiều  nào <span class="chord">D#dimAm</span> <br/>
 Dập <span class="chord">A</span>dìu trên đường đi <span class="chord">D</span>lễ <br/>
 Lấp <span class="chord">B7</span>lánh sao đêm tuyệt <span class="chord">Em</span>vời <br/>
@@ -3078,13 +3336,21 @@ Một <span class="chord">A</span>dư âm mùa giáng <span class="chord">D</spa
 <div id='row_33a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_33' data-main-id='row_33a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_33' data-main-id='row_33a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_33' data-main-id='row_33a' data-vindex='36' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_33' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_33' data-main-id='row_33a' data-vindex='36' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_33' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_33' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 33.
@@ -3131,7 +3397,7 @@ Trans: 0
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'><span class="chord">Dm</span>Em hỏi anh có <span class="chord">F</span>bao giờ <span class="chord">Bb</span>con sông kia thôi <span class="chord">Dm</span>ngừng trôi <br/>
+<div class='lyric' id='row_33b'><span class="chord">Dm</span>Em hỏi anh có <span class="chord">F</span>bao giờ <span class="chord">Bb</span>con sông kia thôi <span class="chord">Dm</span>ngừng trôi <br/>
 Anh trả lời em <span class="chord">F</span>rằng một <span class="chord">C</span>ngày nắng hạn sông <span class="chord">Am</span>sẽ cạn khô <br/>
 <span class="chord">Dm</span>Em hỏi anh có <span class="chord">Am</span>khi nào <span class="chord">Bb</span>đám mây kia thôi <span class="chord">Dm</span>ngừng bay <br/>
 Anh trả lời em <span class="chord">F</span>rằng <span class="chord">C</span>mây ngừng bay khi <span class="chord">Am</span>mưa đến bất <span class="chord">Dm</span>chợt. <br/>
@@ -3163,13 +3429,21 @@ Cho con tim em xót xa <span class="chord">C</span>mong chờ <br/>
 <div id='row_34a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_34' data-main-id='row_34a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_34' data-main-id='row_34a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_34' data-main-id='row_34a' data-vindex='37' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_34' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_34' data-main-id='row_34a' data-vindex='37' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_34' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_34' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 34.
@@ -3216,7 +3490,7 @@ Guitar, Synth
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'> <br/>
+<div class='lyric' id='row_34b'> <br/>
 Dù cho <span class="chord">C</span>mưa tôi xin đưa <span class="chord">G</span>em đến cuối cuộc <span class="chord">Am</span>đời <br/>
 Dù cho <span class="chord">Em</span>mây hay cho <span class="chord">F</span>bão tố có kéo qua <span class="chord">C</span>đây <span class="chord">C7</span> <br/>
 Dù có <span class="chord">F</span>gió, có gió lạnh <span class="chord">Em</span>đầy, <br/>
@@ -3254,13 +3528,21 @@ Tình <span class="chord">Fm</span>ơi dù sao đi <span class="chord">G</span>n
 <div id='row_35a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_35' data-main-id='row_35a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_35' data-main-id='row_35a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_35' data-main-id='row_35a' data-vindex='38' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_35' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_35' data-main-id='row_35a' data-vindex='38' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_35' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_35' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 35.
@@ -3307,7 +3589,7 @@ Synth, Harmonica
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Verse 1: <br/>
+<div class='lyric' id='row_35b'>Verse 1: <br/>
 <span class="chord">Dm</span>Tonight, <span class="chord">C</span>there be no darkness <span class="chord">Dm</span>tonight <span class="chord">Am</span> <br/>
 <span class="chord">Dm</span>Hold tight, <span class="chord">C</span>let your lovelight shine <span class="chord">Dm</span>bright<span class="chord">Am</span> <br/>
 <span class="chord">Bb</span>Listen to my heart and lay your <span class="chord">F</span>body next to mine <br/>
@@ -3343,13 +3625,21 @@ Verse 2: <br/>
 <div id='row_36a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_36' data-main-id='row_36a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_36' data-main-id='row_36a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_36' data-main-id='row_36a' data-vindex='39' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_36' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_36' data-main-id='row_36a' data-vindex='39' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_36' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_36' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 36.
@@ -3396,7 +3686,7 @@ Piano
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Từng <span class="chord">Am</span>bước từng bước <span class="chord">Am</span>thầm <br/>
+<div class='lyric' id='row_36b'>Từng <span class="chord">Am</span>bước từng bước <span class="chord">Am</span>thầm <br/>
 Hoa <span class="chord">Am</span>vòng rừng tuyết <span class="chord">G</span>trắng <br/>
 Rặng <span class="chord">C</span>thông già lặng <span class="chord">F</span>câm <br/>
 Em yêu gì xa <span class="chord">Dm</span>vắng <br/>
@@ -3428,13 +3718,21 @@ G G# A Bb B (bass only) </div>
 <div id='row_37a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_37' data-main-id='row_37a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_37' data-main-id='row_37a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_37' data-main-id='row_37a' data-vindex='40' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_37' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_37' data-main-id='row_37a' data-vindex='40' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_37' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_37' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 37.
@@ -3481,7 +3779,7 @@ Hold chord
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>Em ra đi mùa <span class="chord">C</span>thu, <span class="chord">G</span>mùa thu không <span class="chord">Am7</span>trở lại <span class="chord">C/G</span> <br/>
+<div class='lyric' id='row_37b'>Em ra đi mùa <span class="chord">C</span>thu, <span class="chord">G</span>mùa thu không <span class="chord">Am7</span>trở lại <span class="chord">C/G</span> <br/>
 Em ra đi mùa <span class="chord">F</span>thu, sương <span class="chord">C/E</span>mờ giăng <span class="chord">Dm</span>âm u <span class="chord">G</span> <br/>
 Em ra đi mùa <span class="chord">C</span>thu, <span class="chord">G</span>mùa thu không còn <span class="chord">Am7</span>nữa <span class="chord">C/G</span> <br/>
 Đếm lá úa mùa <span class="chord">F</span>thu, <span class="chord">G</span>đo sầu ngập <span class="chord">C</span>tim tôi <br/>
@@ -3514,13 +3812,21 @@ Em ra đi mùa <span class="chord">C</span>thu. <span class="chord">G/B</span>m�
 <div id='row_38a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_38' data-main-id='row_38a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_38' data-main-id='row_38a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_38' data-main-id='row_38a' data-vindex='41' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_38' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_38' data-main-id='row_38a' data-vindex='41' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_38' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_38' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 38.
@@ -3567,7 +3873,7 @@ Guitar
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'><br/>
+<div class='lyric' id='row_38b'><br/>
 Ngoài kia tuyết <span class="chord">Em</span>rơi đầy <br/>
 Anh không đến bên em chiều <span class="chord">Am</span>nay <br/>
 Ngoài kia tuyết <span class="chord">B7</span>rơi rơi <br/>
@@ -3607,13 +3913,21 @@ Nhớ thương bao giờ qua <span class="chord">Em</span>mau <br/>
 <div id='row_39a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_39' data-main-id='row_39a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_39' data-main-id='row_39a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_39' data-main-id='row_39a' data-vindex='42' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_39' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_39' data-main-id='row_39a' data-vindex='42' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_39' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_39' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 39.
@@ -3660,7 +3974,7 @@ Dm Dm D7 Gm C F Bb Gm A Bb A Dm Gm Bb-A Dm<br>Sax: 13589 85178656 64-6675 31-55
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. Tiếng hát bay <span class="chord">D</span>trên hàng phố <span class="chord">Gm</span>bâng khuâng, <span class="chord">Gm7</span> <span class="chord">Eb</span> <br/>
+<div class='lyric' id='row_39b'>1. Tiếng hát bay <span class="chord">D</span>trên hàng phố <span class="chord">Gm</span>bâng khuâng, <span class="chord">Gm7</span> <span class="chord">Eb</span> <br/>
 chiều đông đưa <span class="chord">G7</span>những bước chân đau <span class="chord">Cm</span>mòn. <span class="chord">Cm7</span> <span class="chord">Ab</span> <br/>
 Chợt nghe mùa <span class="chord">Gm</span>thu <span class="chord">F</span>bay trên trời <span class="chord">Eb</span>không, <br/>
 còn ai <span class="chord">Cm</span>giữa mênh mông đời <span class="chord">D7</span>mình, nỗi đau <span class="chord">Adim</span>mù lấp trên tuổi <span class="chord">D7</span>thơ. <br/>
@@ -3694,13 +4008,21 @@ còn nuôi <span class="chord">Cm</span>chút êm vui ngày <span class="chord">
 <div id='row_40a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_40' data-main-id='row_40a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_40' data-main-id='row_40a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_40' data-main-id='row_40a' data-vindex='43' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_40' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_40' data-main-id='row_40a' data-vindex='43' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_40' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_40' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 40.
@@ -3747,7 +4069,7 @@ Piano: <span class="chord_intro">Cm</span> <span class="chord_intro">G</span> <s
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'><span class="chord">Cm</span>..Chiều hoàng hôn buông xuống mái tóc em như <span class="chord">G7</span>nhung huyền<br/>
+<div class='lyric' id='row_40b'><span class="chord">Cm</span>..Chiều hoàng hôn buông xuống mái tóc em như <span class="chord">G7</span>nhung huyền<br/>
 Đôi môi em thiết tha với mắt em ngàn <span class="chord">Cm</span>sao âu yếm<br/>
 Vòng tay ai đưa lối dẫn dắt vào n<span class="chord">Fm</span>hững cơn mơ thần tiên<br/>
 <span class="chord">G7</span>...Cơn mơ ngất ngây đến với anh cùng <span class="chord">Cm</span>bao ân tình<br/>
@@ -3777,13 +4099,21 @@ Nhìn em trong khóe mắt ước muốn được số<span class="chord">Fm</sp
 <div id='row_41a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_41' data-main-id='row_41a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_41' data-main-id='row_41a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_41' data-main-id='row_41a' data-vindex='44' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_41' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_41' data-main-id='row_41a' data-vindex='44' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_41' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_41' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 41.
@@ -3829,7 +4159,7 @@ Guitar
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'><span class="chord">A</span>One, two, three o'clock, four o'clock, rock <br/>
+<div class='lyric' id='row_41b'><span class="chord">A</span>One, two, three o'clock, four o'clock, rock <br/>
 <span class="chord">A7</span>Five, six, seven o'clock, eight o'clock, rock <br/>
 <span class="chord">A</span>Nine, ten, eleven o'clock, twelve o'clock, rock <br/>
 We're gonna <span class="chord">E7</span>rock around the clock tonight. <br/>
@@ -3877,13 +4207,21 @@ We're gonna <span class="chord">E7</span>rock, gonna rock, a<span class="chord">
 <div id='row_42a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_42' data-main-id='row_42a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-align-justify'></i>
+<button class='btn btn-outline-primary' data-lyric-id='row_42' data-main-id='row_42a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='pull-right btn btn-outline-primary' data-lyric-id='row_42' data-main-id='row_42a' data-vindex='45' onclick='pe_playVideo(this)' role='button' type='button'>
-<i class='fa fa-play-circle'></i>
-Intro
+<button class='btn btn-outline-primary' data-lyric-id='row_42' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<i class='fa fa-microphone'></i>
+</button>
+<button class='btn btn-outline-primary' data-lyric-id='row_42' data-main-id='row_42a' data-vindex='45' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_42' onclick='pe_transpose(this, -1)' role='button'>
+<i class='fa fa-arrow-down'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_42' onclick='pe_transpose(this, 1)' role='button'>
+<i class='fa fa-arrow-up'></i>
 </button>
 <h5>
 42.
@@ -3929,7 +4267,7 @@ Synth
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric'>1. <span class="chord">Am</span>Ta quen nhau đã <span class="chord">Fmaj7</span>bao lâu rồi, hỡi <span class="chord">G</span>đêm đêm có hay <br/>
+<div class='lyric' id='row_42b'>1. <span class="chord">Am</span>Ta quen nhau đã <span class="chord">Fmaj7</span>bao lâu rồi, hỡi <span class="chord">G</span>đêm đêm có hay <br/>
 <span class="chord">F</span>Mà giọt buồn hoài <span class="chord">G</span>vương trên môi mặn <span class="chord">Cmaj7</span>đắng <br/>
 <span class="chord">Fmaj7</span>Ta quen nhau đã bao lâu rồi, hỡi <span class="chord">Em</span>đêm sao vẫn <span class="chord">Am</span>mãi đêm dài <br/>
 <span class="chord">F</span>Để mình ta với <span class="chord">G</span>con tim khô cằn <span class="chord">Asus4</span>giá <span class="chord">Am</span>băng. <br/>
@@ -3956,7 +4294,7 @@ Một vòng tay anh khao <span class="chord">G#</span>khát một giấc <span c
 
 
 <footer>
-<div class='small text-muted publish_date'>2019-10-28 21:51:41 -0700</div>
+<div class='small text-muted publish_date'>2019-10-29 22:38:37 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -3972,6 +4310,11 @@ Một vòng tay anh khao <span class="chord">G#</span>khát một giấc <span c
   var cur_player = null;
   var players    = [];
   
+  function pe_toggle_chord(button) {
+    var lyric_id = button.getAttribute('data-lyric-id');
+    $('#' + lyric_id + ' .chord').toggle();
+  }
+  
   function pe_playVideo(button) {
     var lyric_id = button.getAttribute('data-lyric-id');
     var main_id  = button.getAttribute('data-main-id');
@@ -3985,6 +4328,53 @@ Một vòng tay anh khao <span class="chord">G#</span>khát một giấc <span c
     $('#' + lyric_id).collapse('show');
     $('#' + main_id)[0].scrollIntoView(true);
   }
+  
+  function pe_transpose(button, offset) {
+    var lyric_id = button.getAttribute('data-lyric-id');
+    console.log('lyric: ' + lyric_id + ' offset: ' + offset);
+    var elem = document.getElementById(lyric_id);
+    var ctext;
+    $('#' + lyric_id + ' .chord').each(function(index) {
+      ctext = $(this).html();
+      console.log(index + ':' + $(this).html());
+      $(this).html(ctext + ".1");
+    })
+  }
+  
+  /*
+  function transpose_mkey(keys, offset, options) {
+    var output = [];
+    var bkey, mod;
+    # Incase key is specified as chord/bass.  We transpose both
+    keys.split('/').forEach(function(key) {
+      # Extract base key and mod (sharp/flat)
+      if (key[1].match(/[#b]/)) {
+        bkey = key.substr(0, 2);
+        mod  = key.substr(2, key.length).trim();
+      } else {
+        bkey = key[0]
+        mod  = key.substr(1, key.length).trimp();
+      }
+      # Order of key (0-11)
+      bofs = KeyPos.index{|k| bkey.match(/^#\{k}$/}
+      if bofs
+        # Calculate target key
+        tkey  = KeyPos[(bofs+offset) % 12]
+        # Select alternate notations (sharp or flat)
+        tkeys = tkey. split('|')
+        if options[:flat]
+          output << tkeys[-1]+mod
+        else
+          output << tkeys[0]+mod
+        end
+      else
+        Plog.error("Does not know how to transpose " + key);
+        output << key
+      end
+    end
+    output.compact.join('/')
+  end
+  */
   
   function stopAllExcept(videoId) {
     var vid;

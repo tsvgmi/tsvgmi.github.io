@@ -5,6 +5,11 @@
     var cur_player = null;
     var players    = [];
 
+    function pe_toggle_chord(button) {
+      var lyric_id = button.getAttribute('data-lyric-id');
+      $('#' + lyric_id + ' .chord').toggle();
+    }
+
     function pe_playVideo(button) {
       var lyric_id = button.getAttribute('data-lyric-id');
       var main_id  = button.getAttribute('data-main-id');
@@ -18,6 +23,53 @@
       $('#' + lyric_id).collapse('show');
       $('#' + main_id)[0].scrollIntoView(true);
     }
+
+    function pe_transpose(button, offset) {
+      var lyric_id = button.getAttribute('data-lyric-id');
+      console.log('lyric: ' + lyric_id + ' offset: ' + offset);
+      var elem = document.getElementById(lyric_id);
+      var ctext;
+      $('#' + lyric_id + ' .chord').each(function(index) {
+        ctext = $(this).html();
+        console.log(index + ':' + $(this).html());
+        $(this).html(ctext + ".1");
+      })
+    }
+
+    /*
+    function transpose_mkey(keys, offset, options) {
+      var output = [];
+      var bkey, mod;
+      # Incase key is specified as chord/bass.  We transpose both
+      keys.split('/').forEach(function(key) {
+        # Extract base key and mod (sharp/flat)
+        if (key[1].match(/[#b]/)) {
+          bkey = key.substr(0, 2);
+          mod  = key.substr(2, key.length).trim();
+        } else {
+          bkey = key[0]
+          mod  = key.substr(1, key.length).trimp();
+        }
+        # Order of key (0-11)
+        bofs = KeyPos.index{|k| bkey.match(/^#\{k}$/}
+        if bofs
+          # Calculate target key
+          tkey  = KeyPos[(bofs+offset) % 12]
+          # Select alternate notations (sharp or flat)
+          tkeys = tkey. split('|')
+          if options[:flat]
+            output << tkeys[-1]+mod
+          else
+            output << tkeys[0]+mod
+          end
+        else
+          Plog.error("Does not know how to transpose " + key);
+          output << key
+        end
+      end
+      output.compact.join('/')
+    end
+    */
 
     function stopAllExcept(videoId) {
       var vid;
