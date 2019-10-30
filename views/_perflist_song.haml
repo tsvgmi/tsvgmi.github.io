@@ -22,10 +22,11 @@
         - voffset = videos.size;
         %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex=voffset type='button' title='Play intro music')
           %i.fa.fa-headphones
-      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, -1)" role="button" data-lyric-id=lyric_id)
-        %i.fa.fa-arrow-down
-      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, 1)" role="button" data-lyric-id=lyric_id)
-        %i.fa.fa-arrow-up
+      - unless viewmode
+        %button.btn.btn-outline-secondary(onclick="pe_transpose(this, -1)" role="button" data-lyric-id=lyric_id)
+          %i.fa.fa-arrow-down
+        %button.btn.btn-outline-secondary(onclick="pe_transpose(this, 1)" role="button" data-lyric-id=lyric_id)
+          %i.fa.fa-arrow-up
       %h5
         = "#{row_no}."
         %a(href=link target='hopamchuan')= sinfo[:name]
