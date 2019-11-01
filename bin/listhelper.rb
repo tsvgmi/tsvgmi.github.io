@@ -149,7 +149,7 @@ class ListHelper
         bofs = KeyPos.index{|k| bkey =~ /^#{k}$/}
         if bofs
           # Calculate target key
-          tkey  = KeyPos[(bofs+offset) % 12]
+          tkey  = KeyPos[(bofs+offset+12) % 12]
           # Select alternate notations (sharp or flat)
           tkeys = tkey. split('|')
           if options[:flat]
