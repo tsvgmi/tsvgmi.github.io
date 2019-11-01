@@ -3526,7 +3526,7 @@ Verse 2: <br/>
 
 
 <footer>
-<div class='small text-muted publish_date'>2019-10-31 21:08:47 -0700</div>
+<div class='small text-muted publish_date'>2019-10-31 21:31:59 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -3565,8 +3565,7 @@ Verse 2: <br/>
                   'Fm', 'Ab', 'Gm', 'Bb'];
   function pe_transpose(button, offset) {
     var lyric_id = button.getAttribute('data-lyric-id');
-    var elem = document.getElementById(lyric_id);
-    var ctext;
+    var elem     = document.getElementById(lyric_id);
     var foptions = {};
   
     var check_flat = false
@@ -3576,11 +3575,11 @@ Verse 2: <br/>
       if (!check_flat) {
         check_flat = true;
         //  Need to strip out non chord modified
-        new_scale = split_key(new_chord);
-        if (FlatKeys.indexOf(new_scale['base']) >= 0) {
+        new_scale = new_chord.match(/^[A-G][#b]?m?/);
+        if ((new_scale != null) && (FlatKeys.indexOf(new_scale[0]) >= 0)) {
           foptions['flat'] =  true;
         }
-        console.log('checking flat key for: '+new_chord + ' - it is:' + foptions['flat']);
+        console.log('checking flat key for: '+new_chord + ' - it is:' + foptions['flat'] + ' new_scale: ' + new_scale);
       }
       $(this).html(new_chord);
     })
@@ -3597,6 +3596,7 @@ Verse 2: <br/>
     }
     return {'base':bkey, 'mod':mod};
   }
+  
   
   var KeyPos = ['A', 'A#|Bb', 'B', 'C', 'C#|Db', 'D',
                 'D#|Eb', 'E', 'F', 'F#|Gb', 'G', 'G#|Ab'];
@@ -3644,7 +3644,7 @@ Verse 2: <br/>
       vid    = player.getVideoData().video_id;
       if (vid != videoId) {
         if (player.getPlayerState() == 1) {
-          console.log("Stop " + videoId + " " + vid + " " + player.getPlayerState());
+          console.log("Stop:" + videoId + " " + vid + " status:" + player.getPlayerState());
           player.stopVideo();
         }
       }
