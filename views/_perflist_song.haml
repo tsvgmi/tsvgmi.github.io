@@ -33,6 +33,10 @@
       %h5
         = "#{row_no}."
         %a(href=link target='hopamchuan')= sinfo[:name]
+        - unless viewmode
+          - url = "/reload-song/#{oinfo[:song_id]}"
+          %a(href='#' onclick="jQuery.ajax('#{url}'); return false")
+            %i.fa.fa-redo
       = "#{sinfo[:author]}&nbsp;"
     .col.md
       = sinfo[:artist]
@@ -83,10 +87,6 @@
             - tlyric = ListHelper.transpose_lyric(intro, offset, tokey:oinfo[:singer_key], cclass:'chord_intro')
             = tlyric.gsub(/\n/, '<br>')
     .row
-      - lyric  = sinfo[:lyric]
-      - offset = key_offset(sinfo[:song_key], oinfo[:singer_key])
-      - lyric  = lyric.sub(/>>>>>.*$/mo, '').sub(/^.*<<<<</mo, '')
-      - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key], tclass:'t2lyric')
-      - tlyric = tlyric.sub(/^.*==/m, '')
       .col
-        .lyric(id="#{lyric_id3}")= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
+        - locals = {sinfo:sinfo, singer_key:oinfo[:singer_key]}
+        .lyric(id="#{lyric_id3}")= partial(:_lyric, locals:locals)

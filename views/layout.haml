@@ -1,5 +1,6 @@
 !!!
 - title ||= "Program List"
+- theme = params[:theme] || 'litera'
 %html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
   %head
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -8,7 +9,8 @@
     %meta{:content => "PlayList", :name => "Playlist - Program"}/
     %link{rel:"shortcut icon", href:"/favicon.ico?version=0", type:"image/x-icon"}
     %title= title
-    %link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
+    -#%link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
+    %link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/#{theme}/bootstrap.min.css" crossorigin="anonymous")
     %link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
 
     -#%link(rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css")

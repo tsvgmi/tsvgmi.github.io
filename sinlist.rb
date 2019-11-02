@@ -218,6 +218,12 @@ get '/dl-transpose/:video' do |video|
   download_transpose(video, offset, params)
 end
 
+get '/reload-song/:song_id' do |song_id|
+  files = Dir.glob("data/SONGS/song:#{song_id}:*")
+  Plog.dump_info(files:files)
+  FileUtils.rm(files, verbose:true)
+end
+
 helpers do
   def download_transpose(video, offset, options)
     require 'tempfile'
