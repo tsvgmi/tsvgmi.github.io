@@ -21,7 +21,10 @@
       - if vidinfos.videos.size > 0
         - voffset = videos.size;
         %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex=voffset type='button' title='Play intro music')
-          %i.fa.fa-headphones
+          %i.fa.fa-headphones.fa-fw
+      - else
+        %button.btn.btn-outline-primary.disable
+          %i.fa.fa-headphone.fa-fw
       %button.btn.btn-outline-secondary(onclick="pe_transpose(this, -1)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Transpose down 1/2 tone')
         %i.fa.fa-arrow-down
       %button.btn.btn-outline-secondary(onclick="pe_transpose(this, 1)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Transpose up 1/2 tone')
