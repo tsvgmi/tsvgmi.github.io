@@ -7,7 +7,14 @@
 
     function pe_toggle_chord(button) {
       var lyric_id = button.getAttribute('data-lyric-id');
-      $('#' + lyric_id + ' .chord').toggle();
+      var note_id  = button.getAttribute('data-note-id');
+      if (button.classList.contains('active')) {
+        $('#' + lyric_id + ' .chord').show();
+        $('#' + lyric_id + ' #' + note_id).show();
+      } else {
+        $('#' + lyric_id + ' .chord').hide();
+        $('#' + lyric_id + ' #' + note_id).hide();
+      }
     }
 
     function pe_playVideo(button) {

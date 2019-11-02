@@ -7,31 +7,31 @@
 - lyric_id  = "row_#{row_no}"
 - lyric_id2 = "row_#{row_no}a"
 - lyric_id3 = "row_#{row_no}b"
+- note_id   = "row_#{row_no}c"
 - perf_note = perf_info[sname] || {}
 - vidinfos  = VideoInfo.new(perf_note[:ytvideo], perf_note[:vidkey])
-
 %div(id=lyric_id2)
   .row.song_header
     .col-6
-      %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex="-1" type='button' title='Show lyric')
+      %button.btn.btn-sm.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex="-1" type='button' title='Show lyric')
         %i.fa.fa-music
         Lyric
-      %button.btn.btn-outline-primary(onclick="pe_toggle_chord(this)" role='button' data-lyric-id=lyric_id type='button' role='button' title='Hide chords')
+      %button.btn.btn-sm.btn-outline-primary(onclick="pe_toggle_chord(this)" role='button' data-lyric-id=lyric_id data-note-id=note_id type='button' data-toggle="button" role='button' title='Hide chords')
         %i.fa.fa-microphone
       - if vidinfos.videos.size > 0
         - voffset = videos.size;
-        %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex=voffset type='button' title='Play intro music')
+        %button.btn.btn-sm.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex=voffset type='button' title='Play intro music')
           %i.fa.fa-headphones.fa-fw
       - else
-        %button.btn.btn-outline-primary.disable
+        %button.btn.btn-sm.btn-outline-primary(disabled=true)
           %i.fa.fa-headphone.fa-fw
-      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, -1)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Transpose down 1/2 tone')
+      %button.btn.btn-sm.btn-outline-secondary(onclick="pe_transpose(this, -1)" role="button" data-lyric-id=lyric_id title='Transpose down 1/2 tone')
         %i.fa.fa-arrow-down
-      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, 1)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Transpose up 1/2 tone')
+      %button.btn.btn-sm.btn-outline-secondary(onclick="pe_transpose(this, 1)" role="button" data-lyric-id=lyric_id title='Transpose up 1/2 tone')
         %i.fa.fa-arrow-up
-      %button.btn.btn-outline-secondary(onclick="pe_font(this, 0.85)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Font small')
+      %button.btn.btn-sm.btn-outline-secondary(onclick="pe_font(this, 0.85)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Font small')
         %i.fa.fa-search-minus
-      %button.btn.btn-outline-secondary(onclick="pe_font(this, 1.2)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Font large')
+      %button.btn.btn-sm.btn-outline-secondary(onclick="pe_font(this, 1.2)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Font large')
         %i.fa.fa-search-plus
       %h5
         = "#{row_no}."
@@ -56,7 +56,7 @@
       = oinfo[:style]
       .pull-right= oinfo[:tempo]
   %div.collapse.pl_collapse(id=lyric_id)
-    .row
+    .row(id=note_id)
       - vidinfos.select_set(oinfo[:solo_idx])
       - if vidinfos.yk_videos.size > 0
         .col-6
