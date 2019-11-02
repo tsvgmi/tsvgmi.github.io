@@ -180,15 +180,16 @@ class ListHelper
       offset         = offset.to_i
       output         = ""
       cclass         = options[:cclass] || 'chord'
+      tclass         = options[:tclass] || 'none'
       #Plog.dump_info(offset:offset, options:options)
       # Pick out the chords notation, transpose anre replace it back
       lyric.scan(/([^\[]*)\[([^\]]+)\]/m).each do |text, chord|
         tchord = transpose_mkey(chord, offset, options)
         # Adding span only for my usecase for now.
-        output += "#{text}<span class=\"#{cclass}\">#{tchord}</span>"
+        output += "<span class='#{tclass}'>#{text}</span><span class=\"#{cclass}\">#{tchord}</span>"
       end
       last_span = lyric.sub(/^.*\]/m, '')
-      output += last_span
+      output += "<span class='#{tclass}'>#{last_span}</span>"
       output.gsub(/\|/, "<span class='#{cclass}'>|</span>")
     end
 

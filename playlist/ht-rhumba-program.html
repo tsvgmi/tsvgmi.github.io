@@ -135,18 +135,24 @@ List:
 <div id='row_1a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_1' data-main-id='row_1a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_1' data-main-id='row_1a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_1' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_1' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_1' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_1' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_1' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_1' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_1' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_1' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 1.
@@ -171,34 +177,34 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_1b'>1. Hạnh phúc trong tầm <span class="chord">Dm</span>với đã không còn <span class="chord">Gm7</span>tới khi vắng em trong <span class="chord">Dm</span>đời <br/>
-Tìm đến chân trời <span class="chord">Gm7</span>mới, vẫn thương một <span class="chord">C7</span>thời giờ đã xa ngàn <span class="chord">Fmaj7</span>khơi <span class="chord">A7</span> <br/>
-Ngày đó ta lầm <span class="chord">Dm</span>lỡ, bỏ mặc nhau hững <span class="chord">Gm7</span>hờ <br/>
-Để tiếng yêu rạn <span class="chord">A7</span>vỡ, rồi thời gian xóa <span class="chord">Dm</span>mờ <span class="chord">F/C</span> <br/>
-Mãi vô tình <span class="chord">Bb</span>đến bây giờ nhận <span class="chord">E</span>ra hai đứa không còn <span class="chord">A7</span>nhau <br/>
+<div class='lyric' id='row_1b'><span class='t2lyric'>1. Hạnh phúc trong tầm </span><span class="chord">Dm</span><span class='t2lyric'>với đã không còn </span><span class="chord">Gm7</span><span class='t2lyric'>tới khi vắng em trong </span><span class="chord">Dm</span><span class='t2lyric'>đời <br/>
+Tìm đến chân trời </span><span class="chord">Gm7</span><span class='t2lyric'>mới, vẫn thương một </span><span class="chord">C7</span><span class='t2lyric'>thời giờ đã xa ngàn </span><span class="chord">Fmaj7</span><span class='t2lyric'>khơi </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Ngày đó ta lầm </span><span class="chord">Dm</span><span class='t2lyric'>lỡ, bỏ mặc nhau hững </span><span class="chord">Gm7</span><span class='t2lyric'>hờ <br/>
+Để tiếng yêu rạn </span><span class="chord">A7</span><span class='t2lyric'>vỡ, rồi thời gian xóa </span><span class="chord">Dm</span><span class='t2lyric'>mờ </span><span class="chord">F/C</span><span class='t2lyric'> <br/>
+Mãi vô tình </span><span class="chord">Bb</span><span class='t2lyric'>đến bây giờ nhận </span><span class="chord">E</span><span class='t2lyric'>ra hai đứa không còn </span><span class="chord">A7</span><span class='t2lyric'>nhau <br/>
  <br/>
-2. Cuộc sống luôn vội <span class="chord">Dm</span>vã với bao nghiệt <span class="chord">Gm7</span>ngã xô cuốn ta miệt <span class="chord">Dm</span>mài <br/>
-Một bước chân trượt <span class="chord">Gm7</span>ngã, đã trôi thật <span class="chord">C7</span>dài lạc mất nhau ngày <span class="chord">Fmaj7</span>mai <span class="chord">A7</span> <br/>
-Còn mãi khung trời <span class="chord">Dm</span>đó mình gặp nhau lúc <span class="chord">Gm7</span>đầu <br/>
-Ngày tháng thơ mộng <span class="chord">A7</span>đó cùng niềm vui nỗi <span class="chord">Dm</span>sầu <span class="chord">F/C</span> <br/>
-Sẽ ghi lại <span class="chord">Bb</span>biết bao điều để <span class="chord">A7</span>nhớ một thời ta đã <span class="chord">Dm</span>yêu <span class="chord">Gm</span> <span class="chord">Dm</span> <br/>
+2. Cuộc sống luôn vội </span><span class="chord">Dm</span><span class='t2lyric'>vã với bao nghiệt </span><span class="chord">Gm7</span><span class='t2lyric'>ngã xô cuốn ta miệt </span><span class="chord">Dm</span><span class='t2lyric'>mài <br/>
+Một bước chân trượt </span><span class="chord">Gm7</span><span class='t2lyric'>ngã, đã trôi thật </span><span class="chord">C7</span><span class='t2lyric'>dài lạc mất nhau ngày </span><span class="chord">Fmaj7</span><span class='t2lyric'>mai </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Còn mãi khung trời </span><span class="chord">Dm</span><span class='t2lyric'>đó mình gặp nhau lúc </span><span class="chord">Gm7</span><span class='t2lyric'>đầu <br/>
+Ngày tháng thơ mộng </span><span class="chord">A7</span><span class='t2lyric'>đó cùng niềm vui nỗi </span><span class="chord">Dm</span><span class='t2lyric'>sầu </span><span class="chord">F/C</span><span class='t2lyric'> <br/>
+Sẽ ghi lại </span><span class="chord">Bb</span><span class='t2lyric'>biết bao điều để </span><span class="chord">A7</span><span class='t2lyric'>nhớ một thời ta đã </span><span class="chord">Dm</span><span class='t2lyric'>yêu </span><span class="chord">Gm</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
-ĐK: Thì thôi ta đã <span class="chord">Gm7</span>lỡ lìa xa bến <span class="chord">C7</span>bờ <br/>
-Đời lênh đênh sóng <span class="chord">Fmaj7</span>vỗ buồn trôi lững <span class="chord">Bbmaj7</span>lờ <br/>
-Cuộn mình trong nỗi <span class="chord">Edim7</span>nhớ cho đến bao <span class="chord">A</span>giờ <br/>
-Mình mới quên ngày <span class="chord">Dm</span>xưa <br/>
-Thì thôi ta đã <span class="chord">Gm7</span>hết chờ nhau sẽ <span class="chord">C7</span>về <br/>
-Mùa xuân nay đã <span class="chord">Fmaj7</span>chết vàng phai não <span class="chord">Bbmaj7</span>nề <br/>
-Để lại bao hối <span class="chord">Edim7</span>tiếc ghi khắc tên <span class="chord">A7</span>người <br/>
-Gọi mãi trong đêm <span class="chord">Dm</span>buồn <br/>
+ĐK: Thì thôi ta đã </span><span class="chord">Gm7</span><span class='t2lyric'>lỡ lìa xa bến </span><span class="chord">C7</span><span class='t2lyric'>bờ <br/>
+Đời lênh đênh sóng </span><span class="chord">Fmaj7</span><span class='t2lyric'>vỗ buồn trôi lững </span><span class="chord">Bbmaj7</span><span class='t2lyric'>lờ <br/>
+Cuộn mình trong nỗi </span><span class="chord">Edim7</span><span class='t2lyric'>nhớ cho đến bao </span><span class="chord">A</span><span class='t2lyric'>giờ <br/>
+Mình mới quên ngày </span><span class="chord">Dm</span><span class='t2lyric'>xưa <br/>
+Thì thôi ta đã </span><span class="chord">Gm7</span><span class='t2lyric'>hết chờ nhau sẽ </span><span class="chord">C7</span><span class='t2lyric'>về <br/>
+Mùa xuân nay đã </span><span class="chord">Fmaj7</span><span class='t2lyric'>chết vàng phai não </span><span class="chord">Bbmaj7</span><span class='t2lyric'>nề <br/>
+Để lại bao hối </span><span class="chord">Edim7</span><span class='t2lyric'>tiếc ghi khắc tên </span><span class="chord">A7</span><span class='t2lyric'>người <br/>
+Gọi mãi trong đêm </span><span class="chord">Dm</span><span class='t2lyric'>buồn <br/>
  <br/>
 (Giang Tau DK) <br/>
  <br/>
 (2) (DK) <br/>
  <br/>
-Để lại bao hối <span class="chord">Edim7</span>tiếc ghi khắc tên <span class="chord">A7</span>người <br/>
-Gọi mãi trong đêm <span class="chord">Dm</span>buồn <br/>
- </div>
+Để lại bao hối </span><span class="chord">Edim7</span><span class='t2lyric'>tiếc ghi khắc tên </span><span class="chord">A7</span><span class='t2lyric'>người <br/>
+Gọi mãi trong đêm </span><span class="chord">Dm</span><span class='t2lyric'>buồn <br/>
+ </span></div>
 </div>
 </div>
 </div>
@@ -209,18 +215,24 @@ Gọi mãi trong đêm <span class="chord">Dm</span>buồn <br/>
 <div id='row_2a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_2' data-main-id='row_2a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_2' data-main-id='row_2a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_2' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_2' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_2' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_2' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_2' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_2' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_2' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_2' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 2.
@@ -245,40 +257,40 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_2b'>1. Nếu bây <span class="chord">Dm</span>giờ được chọn lựa một lần <span class="chord">Fmaj7</span>nữa<br/>
-Thì <span class="chord">Gm7</span>chắc có lẽ <span class="chord">C7</span>vẫn yêu anh như ngày <span class="chord">Fmaj7</span>xưa<br/>
-Nếu bây <span class="chord">Bbmaj7</span>giờ được chọn lựa điều em <span class="chord">Eb</span>ước mơ<br/>
-Thì <span class="chord">Em7b5</span>em tin em vẫn mơ như em <span class="chord">A7</span>từng mơ<br/>
+<div class='lyric' id='row_2b'><span class='t2lyric'>1. Nếu bây </span><span class="chord">Dm</span><span class='t2lyric'>giờ được chọn lựa một lần </span><span class="chord">Fmaj7</span><span class='t2lyric'>nữa<br/>
+Thì </span><span class="chord">Gm7</span><span class='t2lyric'>chắc có lẽ </span><span class="chord">C7</span><span class='t2lyric'>vẫn yêu anh như ngày </span><span class="chord">Fmaj7</span><span class='t2lyric'>xưa<br/>
+Nếu bây </span><span class="chord">Bbmaj7</span><span class='t2lyric'>giờ được chọn lựa điều em </span><span class="chord">Eb</span><span class='t2lyric'>ước mơ<br/>
+Thì </span><span class="chord">Em7b5</span><span class='t2lyric'>em tin em vẫn mơ như em </span><span class="chord">A7</span><span class='t2lyric'>từng mơ<br/>
  <br/>
-2. Vẫn mơ <span class="chord">Dm</span>rằng trọn đời nay yêu anh <span class="chord">Fmaj7</span>mãi<br/>
-Dù <span class="chord">Gm7</span>có tiếp nối những <span class="chord">C7</span>đắng cay trong <span class="chord">Fmaj7</span>ngày mai<br/>
-Vẫn mơ <span class="chord">Dm</span>rằng trọn đời này em trao <span class="chord">Gm</span>đến ai<br/>
-Vì tình <span class="chord">A7</span>yêu trong em sẽ mãi không bao giờ <span class="chord">Dm</span>phai <span class="chord">Em7b5</span> <span class="chord">A7</span> <span class="chord">Dm</span><br/>
+2. Vẫn mơ </span><span class="chord">Dm</span><span class='t2lyric'>rằng trọn đời nay yêu anh </span><span class="chord">Fmaj7</span><span class='t2lyric'>mãi<br/>
+Dù </span><span class="chord">Gm7</span><span class='t2lyric'>có tiếp nối những </span><span class="chord">C7</span><span class='t2lyric'>đắng cay trong </span><span class="chord">Fmaj7</span><span class='t2lyric'>ngày mai<br/>
+Vẫn mơ </span><span class="chord">Dm</span><span class='t2lyric'>rằng trọn đời này em trao </span><span class="chord">Gm</span><span class='t2lyric'>đến ai<br/>
+Vì tình </span><span class="chord">A7</span><span class='t2lyric'>yêu trong em sẽ mãi không bao giờ </span><span class="chord">Dm</span><span class='t2lyric'>phai </span><span class="chord">Em7b5</span><span class='t2lyric'> </span><span class="chord">A7</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'><br/>
  <br/>
-DK. Bởi vì một <span class="chord">Gm</span>khi em đã yêu<br/>
-Là <span class="chord">C7</span>con tim em đã dâng trao <span class="chord">Fmaj7</span>cho tình yêu<br/>
-<span class="chord">Bbmaj7</span>Dù đường tình <span class="chord">Gm</span>yêu muôn khó khăn<br/>
-Và <span class="chord">A7</span>đôi khi em biết em không được <span class="chord">Dm</span>may mắn<br/>
-<span class="chord">D7</span>Chẳng cần bận <span class="chord">Gm7</span>tâm hay nghĩ suy<br/>
-Mình <span class="chord">C7</span>hy sinh cho ai đó sẽ được <span class="chord">Fmaj7</span>những gì<br/>
-<span class="chord">Bbmaj7</span>Đã yêu nhau thì <span class="chord">Gm</span>cứ yêu <span class="chord">Em7b5</span>đi<br/>
-Sẽ cho ta ngày <span class="chord">A</span>tháng chẳng hề phung <span class="chord">A7</span>phí<br/>
+DK. Bởi vì một </span><span class="chord">Gm</span><span class='t2lyric'>khi em đã yêu<br/>
+Là </span><span class="chord">C7</span><span class='t2lyric'>con tim em đã dâng trao </span><span class="chord">Fmaj7</span><span class='t2lyric'>cho tình yêu<br/>
+</span><span class="chord">Bbmaj7</span><span class='t2lyric'>Dù đường tình </span><span class="chord">Gm</span><span class='t2lyric'>yêu muôn khó khăn<br/>
+Và </span><span class="chord">A7</span><span class='t2lyric'>đôi khi em biết em không được </span><span class="chord">Dm</span><span class='t2lyric'>may mắn<br/>
+</span><span class="chord">D7</span><span class='t2lyric'>Chẳng cần bận </span><span class="chord">Gm7</span><span class='t2lyric'>tâm hay nghĩ suy<br/>
+Mình </span><span class="chord">C7</span><span class='t2lyric'>hy sinh cho ai đó sẽ được </span><span class="chord">Fmaj7</span><span class='t2lyric'>những gì<br/>
+</span><span class="chord">Bbmaj7</span><span class='t2lyric'>Đã yêu nhau thì </span><span class="chord">Gm</span><span class='t2lyric'>cứ yêu </span><span class="chord">Em7b5</span><span class='t2lyric'>đi<br/>
+Sẽ cho ta ngày </span><span class="chord">A</span><span class='t2lyric'>tháng chẳng hề phung </span><span class="chord">A7</span><span class='t2lyric'>phí<br/>
  <br/>
-3. Và <span class="chord">Dm</span>nếu bây giờ em đây được <span class="chord">Gm7</span>nói một lời<br/>
-<span class="chord">C7</span>Nói em còn yêu mãi <span class="chord">Fmaj7</span>một người<br/>
-Chẳng <span class="chord">Bbmaj7</span>có bao giờ em muốn chia <span class="chord">Gm</span>xa rời<br/>
-Dù ngày mai <span class="chord">Em7b5</span>tới là ngày sau <span class="chord">A7</span>cuối<br/>
+3. Và </span><span class="chord">Dm</span><span class='t2lyric'>nếu bây giờ em đây được </span><span class="chord">Gm7</span><span class='t2lyric'>nói một lời<br/>
+</span><span class="chord">C7</span><span class='t2lyric'>Nói em còn yêu mãi </span><span class="chord">Fmaj7</span><span class='t2lyric'>một người<br/>
+Chẳng </span><span class="chord">Bbmaj7</span><span class='t2lyric'>có bao giờ em muốn chia </span><span class="chord">Gm</span><span class='t2lyric'>xa rời<br/>
+Dù ngày mai </span><span class="chord">Em7b5</span><span class='t2lyric'>tới là ngày sau </span><span class="chord">A7</span><span class='t2lyric'>cuối<br/>
  <br/>
-4. Và <span class="chord">Dm</span>nếu bây giờ em đây được <span class="chord">Gm7</span>chết một lần<br/>
-<span class="chord">C7</span>Chết cho tình yêu sẽ <span class="chord">Fmaj7</span>bất tận<br/>
-Chẳng <span class="chord">Bbmaj7</span>có bao giờ em thấy <span class="chord">Gm</span>ân hận<br/>
-Chỉ cần anh <span class="chord">A7</span>biết em luôn hằng yêu <span class="chord">Dm</span>anh..<br/>
+4. Và </span><span class="chord">Dm</span><span class='t2lyric'>nếu bây giờ em đây được </span><span class="chord">Gm7</span><span class='t2lyric'>chết một lần<br/>
+</span><span class="chord">C7</span><span class='t2lyric'>Chết cho tình yêu sẽ </span><span class="chord">Fmaj7</span><span class='t2lyric'>bất tận<br/>
+Chẳng </span><span class="chord">Bbmaj7</span><span class='t2lyric'>có bao giờ em thấy </span><span class="chord">Gm</span><span class='t2lyric'>ân hận<br/>
+Chỉ cần anh </span><span class="chord">A7</span><span class='t2lyric'>biết em luôn hằng yêu </span><span class="chord">Dm</span><span class='t2lyric'>anh..<br/>
  <br/>
-<span class="chord">Dm</span> <span class="chord">Gm</span> <span class="chord">A</span> <span class="chord">Dm</span> <span class="chord">Bbm7</span>-<span class="chord">Fmj7</span> <span class="chord">Abmaj7</span> <span class="chord">Gm</span>-<span class="chord">Em7b5</span> <span class="chord">A</span> <span class="chord">Dm</span><br/>
+</span><span class="chord">Dm</span><span class='t2lyric'> </span><span class="chord">Gm</span><span class='t2lyric'> </span><span class="chord">A</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> </span><span class="chord">Bbm7</span><span class='t2lyric'>-</span><span class="chord">Fmj7</span><span class='t2lyric'> </span><span class="chord">Abmaj7</span><span class='t2lyric'> </span><span class="chord">Gm</span><span class='t2lyric'>-</span><span class="chord">Em7b5</span><span class='t2lyric'> </span><span class="chord">A</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'><br/>
  <br/>
 (DK) (3) (4)<br/>
-Chẳng <span class="chord">Bbmaj7</span>có bao giờ em thấy <span class="chord">Gm</span>ân hận<br/>
-Chỉ cần anh <span class="chord">A7</span>biết em luôn hằng yêu <span class="chord">Dm</span>anh.. <span class="chord">C</span> <span class="chord">Bb</span> <span class="chord">A7</span> <span class="chord">Dm</span></div>
+Chẳng </span><span class="chord">Bbmaj7</span><span class='t2lyric'>có bao giờ em thấy </span><span class="chord">Gm</span><span class='t2lyric'>ân hận<br/>
+Chỉ cần anh </span><span class="chord">A7</span><span class='t2lyric'>biết em luôn hằng yêu </span><span class="chord">Dm</span><span class='t2lyric'>anh.. </span><span class="chord">C</span><span class='t2lyric'> </span><span class="chord">Bb</span><span class='t2lyric'> </span><span class="chord">A7</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'></span></div>
 </div>
 </div>
 </div>
@@ -289,18 +301,24 @@ Chỉ cần anh <span class="chord">A7</span>biết em luôn hằng yêu <span c
 <div id='row_3a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_3' data-main-id='row_3a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_3' data-main-id='row_3a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_3' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_3' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_3' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_3' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_3' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_3' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_3' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_3' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 3.
@@ -325,33 +343,33 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_3b'>Ngày nào anh yêu em <span class="chord">D</span>, anh đã <span class="chord">Dmaj7</span>quen trong <span class="chord">D7</span>cay đắng <span class="chord">G</span>tuyệt vời <br/>
-Ngày nào em yêu <span class="chord">Em</span>anh, em hẳn <span class="chord">A7</span>quên với trời hạnh phúc <span class="chord">D</span>mới <span class="chord">D7</span> <br/>
-Em ơi Đông lại <span class="chord">G</span>về từ trăm năm lạnh <span class="chord">F#m</span>giá <br/>
-Tim anh như ngừng <span class="chord">B7</span>thở, từ sau ân tình <span class="chord">Em</span>đó <br/>
-Em nghe không ? Mùa <span class="chord">C</span>đông, mùa <span class="chord">A7</span>đông <br/>
+<div class='lyric' id='row_3b'><span class='t2lyric'>Ngày nào anh yêu em </span><span class="chord">D</span><span class='t2lyric'>, anh đã </span><span class="chord">Dmaj7</span><span class='t2lyric'>quen trong </span><span class="chord">D7</span><span class='t2lyric'>cay đắng </span><span class="chord">G</span><span class='t2lyric'>tuyệt vời <br/>
+Ngày nào em yêu </span><span class="chord">Em</span><span class='t2lyric'>anh, em hẳn </span><span class="chord">A7</span><span class='t2lyric'>quên với trời hạnh phúc </span><span class="chord">D</span><span class='t2lyric'>mới </span><span class="chord">D7</span><span class='t2lyric'> <br/>
+Em ơi Đông lại </span><span class="chord">G</span><span class='t2lyric'>về từ trăm năm lạnh </span><span class="chord">F#m</span><span class='t2lyric'>giá <br/>
+Tim anh như ngừng </span><span class="chord">B7</span><span class='t2lyric'>thở, từ sau ân tình </span><span class="chord">Em</span><span class='t2lyric'>đó <br/>
+Em nghe không ? Mùa </span><span class="chord">C</span><span class='t2lyric'>đông, mùa </span><span class="chord">A7</span><span class='t2lyric'>đông <br/>
  <br/>
-Ngày nào ta xa <span class="chord">D</span>nhau, anh bước <span class="chord">Dmaj7</span>sâu trong <span class="chord">D7</span>vũng tối <span class="chord">G</span>nhạt nhòa <br/>
-Từng mùa đông theo <span class="chord">Em</span>qua, anh đã <span class="chord">A7</span>quen với đường <span class="chord">D</span>đời băng <span class="chord">D7</span>giá <br/>
-Xưa hôn em một <span class="chord">G</span>lần, rồi đau thương tràn <span class="chord">F#m</span>lấp <br/>
-Anh yêu em một <span class="chord">B7</span>ngày và xa em trọn <span class="chord">Em</span>kiếp <br/>
-Nên anh yêu mùa đông, nên anh yêu mùa <span class="chord">D</span>đông, ôi <span class="chord">A</span>Mùa Đông của <span class="chord">D</span>anh <span class="chord">D7</span> <br/>
+Ngày nào ta xa </span><span class="chord">D</span><span class='t2lyric'>nhau, anh bước </span><span class="chord">Dmaj7</span><span class='t2lyric'>sâu trong </span><span class="chord">D7</span><span class='t2lyric'>vũng tối </span><span class="chord">G</span><span class='t2lyric'>nhạt nhòa <br/>
+Từng mùa đông theo </span><span class="chord">Em</span><span class='t2lyric'>qua, anh đã </span><span class="chord">A7</span><span class='t2lyric'>quen với đường </span><span class="chord">D</span><span class='t2lyric'>đời băng </span><span class="chord">D7</span><span class='t2lyric'>giá <br/>
+Xưa hôn em một </span><span class="chord">G</span><span class='t2lyric'>lần, rồi đau thương tràn </span><span class="chord">F#m</span><span class='t2lyric'>lấp <br/>
+Anh yêu em một </span><span class="chord">B7</span><span class='t2lyric'>ngày và xa em trọn </span><span class="chord">Em</span><span class='t2lyric'>kiếp <br/>
+Nên anh yêu mùa đông, nên anh yêu mùa </span><span class="chord">D</span><span class='t2lyric'>đông, ôi </span><span class="chord">A</span><span class='t2lyric'>Mùa Đông của </span><span class="chord">D</span><span class='t2lyric'>anh </span><span class="chord">D7</span><span class='t2lyric'> <br/>
  <br/>
 Điệp khúc: <br/>
-Anh chỉ là người <span class="chord">G</span>điên trong vườn hoa tình <span class="chord">F#m</span>ái. <br/>
-Anh chỉ là người <span class="chord">C</span>say bên <span class="chord">B7</span>đường em nhìn <span class="chord">Em</span>thấy <br/>
-Em đi <span class="chord">Em</span>đi, người điên không biết <span class="chord">A7</span>nhớ và người say không biết <span class="chord">D</span>buồn... <span class="chord">D7</span> <br/>
-Những cuộc tình dương <span class="chord">G</span>gian, muôn đời không nghĩa <span class="chord">F#m</span>lý <br/>
-Nhưng người vẫn tìm <span class="chord">C</span>nhau trong <span class="chord">B7</span>vòng tay tình <span class="chord">Em</span>ý <br/>
-Như đôi ta... niềm yêu xưa chỉ <span class="chord">A</span>còn một vì sao anh lẻ <span class="chord">D</span>loi. <span class="chord">G</span> <span class="chord">A</span> <br/>
+Anh chỉ là người </span><span class="chord">G</span><span class='t2lyric'>điên trong vườn hoa tình </span><span class="chord">F#m</span><span class='t2lyric'>ái. <br/>
+Anh chỉ là người </span><span class="chord">C</span><span class='t2lyric'>say bên </span><span class="chord">B7</span><span class='t2lyric'>đường em nhìn </span><span class="chord">Em</span><span class='t2lyric'>thấy <br/>
+Em đi </span><span class="chord">Em</span><span class='t2lyric'>đi, người điên không biết </span><span class="chord">A7</span><span class='t2lyric'>nhớ và người say không biết </span><span class="chord">D</span><span class='t2lyric'>buồn... </span><span class="chord">D7</span><span class='t2lyric'> <br/>
+Những cuộc tình dương </span><span class="chord">G</span><span class='t2lyric'>gian, muôn đời không nghĩa </span><span class="chord">F#m</span><span class='t2lyric'>lý <br/>
+Nhưng người vẫn tìm </span><span class="chord">C</span><span class='t2lyric'>nhau trong </span><span class="chord">B7</span><span class='t2lyric'>vòng tay tình </span><span class="chord">Em</span><span class='t2lyric'>ý <br/>
+Như đôi ta... niềm yêu xưa chỉ </span><span class="chord">A</span><span class='t2lyric'>còn một vì sao anh lẻ </span><span class="chord">D</span><span class='t2lyric'>loi. </span><span class="chord">G</span><span class='t2lyric'> </span><span class="chord">A</span><span class='t2lyric'> <br/>
  <br/>
-Trời lập đông chưa <span class="chord">D</span>em, cho lũ <span class="chord">Dmaj7</span>dơi đi <span class="chord">D7</span>tìm giấc ngủ <span class="chord">G</span>vùi <br/>
-Để mặc anh lang <span class="chord">Em</span>thang, ôm giá <span class="chord">A</span>băng ngỡ thầm người yêu <span class="chord">D</span>tới. <span class="chord">D7</span> <br/>
-Đêm chia ly em <span class="chord">G</span>về, đường khuya em bật <span class="chord">F#m</span>khóc <br/>
-Anh xa em thật <span class="chord">B7</span>rồi, làm sao quên mùi <span class="chord">Em</span>tóc <br/>
-Em hỡi em, có phải tình băng <span class="chord">A</span>giá là tình đẹp trên thế <span class="chord">D</span>gian <br/>
+Trời lập đông chưa </span><span class="chord">D</span><span class='t2lyric'>em, cho lũ </span><span class="chord">Dmaj7</span><span class='t2lyric'>dơi đi </span><span class="chord">D7</span><span class='t2lyric'>tìm giấc ngủ </span><span class="chord">G</span><span class='t2lyric'>vùi <br/>
+Để mặc anh lang </span><span class="chord">Em</span><span class='t2lyric'>thang, ôm giá </span><span class="chord">A</span><span class='t2lyric'>băng ngỡ thầm người yêu </span><span class="chord">D</span><span class='t2lyric'>tới. </span><span class="chord">D7</span><span class='t2lyric'> <br/>
+Đêm chia ly em </span><span class="chord">G</span><span class='t2lyric'>về, đường khuya em bật </span><span class="chord">F#m</span><span class='t2lyric'>khóc <br/>
+Anh xa em thật </span><span class="chord">B7</span><span class='t2lyric'>rồi, làm sao quên mùi </span><span class="chord">Em</span><span class='t2lyric'>tóc <br/>
+Em hỡi em, có phải tình băng </span><span class="chord">A</span><span class='t2lyric'>giá là tình đẹp trên thế </span><span class="chord">D</span><span class='t2lyric'>gian <br/>
  <br/>
-<span class="chord">Bsus4B</span>Em hỡi <span class="chord">Em</span>em, có phải tình băng <span class="chord">Asus4</span>giá <span class="chord">A7</span>là tình đẹp nhất trên thế <span class="chord">G</span>gian. <span class="chord">D</span> </div>
+</span><span class="chord">Bsus4B</span><span class='t2lyric'>Em hỡi </span><span class="chord">Em</span><span class='t2lyric'>em, có phải tình băng </span><span class="chord">Asus4</span><span class='t2lyric'>giá </span><span class="chord">A7</span><span class='t2lyric'>là tình đẹp nhất trên thế </span><span class="chord">G</span><span class='t2lyric'>gian. </span><span class="chord">D</span><span class='t2lyric'> </span></div>
 </div>
 </div>
 </div>
@@ -362,18 +380,24 @@ Em hỡi em, có phải tình băng <span class="chord">A</span>giá là tình �
 <div id='row_4a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_4' data-main-id='row_4a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_4' data-main-id='row_4a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_4' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_4' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_4' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_4' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_4' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_4' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_4' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_4' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 4.
@@ -398,37 +422,37 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_4b'><span class="chord">D</span>Listen to the rhythm of the <span class="chord">G</span>falling rain <br/>
-<span class="chord">D</span>Telling me just what a fool I've <span class="chord">A</span>been <br/>
-I <span class="chord">D</span>wish that it would go and let me <span class="chord">G</span>cry in vain <br/>
-And <span class="chord">D</span>let me be <span class="chord">A</span>alone <span class="chord">D</span>again <span class="chord">A</span> <br/>
+<div class='lyric' id='row_4b'><span class='t2lyric'></span><span class="chord">D</span><span class='t2lyric'>Listen to the rhythm of the </span><span class="chord">G</span><span class='t2lyric'>falling rain <br/>
+</span><span class="chord">D</span><span class='t2lyric'>Telling me just what a fool I've </span><span class="chord">A</span><span class='t2lyric'>been <br/>
+I </span><span class="chord">D</span><span class='t2lyric'>wish that it would go and let me </span><span class="chord">G</span><span class='t2lyric'>cry in vain <br/>
+And </span><span class="chord">D</span><span class='t2lyric'>let me be </span><span class="chord">A</span><span class='t2lyric'>alone </span><span class="chord">D</span><span class='t2lyric'>again </span><span class="chord">A</span><span class='t2lyric'> <br/>
  <br/>
-The <span class="chord">D</span>only girl I care about has <span class="chord">G</span>gone away <br/>
-<span class="chord">D</span>Looking for a brand new <span class="chord">A</span>start <br/>
-But <span class="chord">D</span>little does she know <br/>
-That when she <span class="chord">G</span>left that day <br/>
-<span class="chord">D</span>Along with her she <span class="chord">A</span>took my <span class="chord">D</span>heart <br/>
+The </span><span class="chord">D</span><span class='t2lyric'>only girl I care about has </span><span class="chord">G</span><span class='t2lyric'>gone away <br/>
+</span><span class="chord">D</span><span class='t2lyric'>Looking for a brand new </span><span class="chord">A</span><span class='t2lyric'>start <br/>
+But </span><span class="chord">D</span><span class='t2lyric'>little does she know <br/>
+That when she </span><span class="chord">G</span><span class='t2lyric'>left that day <br/>
+</span><span class="chord">D</span><span class='t2lyric'>Along with her she </span><span class="chord">A</span><span class='t2lyric'>took my </span><span class="chord">D</span><span class='t2lyric'>heart <br/>
  <br/>
-<span class="chord">G</span>Rain please tell me now does <span class="chord">F#m</span>that seem fair <br/>
-For <span class="chord">G</span>her to steal my heart away when <span class="chord">D</span>she don't care <br/>
-I <span class="chord">Bm</span>can't love another when my <span class="chord">Em</span>hearts some <span class="chord">A</span>where far <span class="chord">D</span>away <span class="chord">A</span> <br/>
+</span><span class="chord">G</span><span class='t2lyric'>Rain please tell me now does </span><span class="chord">F#m</span><span class='t2lyric'>that seem fair <br/>
+For </span><span class="chord">G</span><span class='t2lyric'>her to steal my heart away when </span><span class="chord">D</span><span class='t2lyric'>she don't care <br/>
+I </span><span class="chord">Bm</span><span class='t2lyric'>can't love another when my </span><span class="chord">Em</span><span class='t2lyric'>hearts some </span><span class="chord">A</span><span class='t2lyric'>where far </span><span class="chord">D</span><span class='t2lyric'>away </span><span class="chord">A</span><span class='t2lyric'> <br/>
  <br/>
-The <span class="chord">D</span>only girl I care about has <span class="chord">G</span>gone away <br/>
-<span class="chord">D</span>Looking for a brand new <span class="chord">A</span>start <br/>
-But <span class="chord">D</span>little does she know <br/>
-That when she <span class="chord">G</span>left that day <br/>
-<span class="chord">D</span>Along with her she <span class="chord">A</span>took my <span class="chord">D</span>heart <br/>
+The </span><span class="chord">D</span><span class='t2lyric'>only girl I care about has </span><span class="chord">G</span><span class='t2lyric'>gone away <br/>
+</span><span class="chord">D</span><span class='t2lyric'>Looking for a brand new </span><span class="chord">A</span><span class='t2lyric'>start <br/>
+But </span><span class="chord">D</span><span class='t2lyric'>little does she know <br/>
+That when she </span><span class="chord">G</span><span class='t2lyric'>left that day <br/>
+</span><span class="chord">D</span><span class='t2lyric'>Along with her she </span><span class="chord">A</span><span class='t2lyric'>took my </span><span class="chord">D</span><span class='t2lyric'>heart <br/>
  <br/>
-<span class="chord">G</span>Rain won't you tell her that I <span class="chord">F#m</span>love her so <br/>
-<span class="chord">G</span>Please ask the sun to set her <span class="chord">D</span>heart aglow <br/>
-<span class="chord">Bm</span>Rain in her heart and let the <span class="chord">Em</span>love we <span class="chord">A</span>knew start to <span class="chord">D</span>grow <span class="chord">A</span> <br/>
+</span><span class="chord">G</span><span class='t2lyric'>Rain won't you tell her that I </span><span class="chord">F#m</span><span class='t2lyric'>love her so <br/>
+</span><span class="chord">G</span><span class='t2lyric'>Please ask the sun to set her </span><span class="chord">D</span><span class='t2lyric'>heart aglow <br/>
+</span><span class="chord">Bm</span><span class='t2lyric'>Rain in her heart and let the </span><span class="chord">Em</span><span class='t2lyric'>love we </span><span class="chord">A</span><span class='t2lyric'>knew start to </span><span class="chord">D</span><span class='t2lyric'>grow </span><span class="chord">A</span><span class='t2lyric'> <br/>
  <br/>
-<span class="chord">D</span>Listen to the rhythm of the <span class="chord">G</span>falling rain <br/>
-<span class="chord">D</span>Telling me just what a fool I've <span class="chord">A</span>been <br/>
-I <span class="chord">D</span>wish that it would go and let me <span class="chord">G</span>cry in vain <br/>
-And <span class="chord">D</span>let me be <span class="chord">A</span>alone <span class="chord">D</span>again <span class="chord">A</span> <br/>
-Oh, <span class="chord">D</span>listen to the <span class="chord">Bm</span>falling rain, <span class="chord">D</span>Pitter pater, pitter <span class="chord">Bm</span>pater 3x <br/>
- </div>
+</span><span class="chord">D</span><span class='t2lyric'>Listen to the rhythm of the </span><span class="chord">G</span><span class='t2lyric'>falling rain <br/>
+</span><span class="chord">D</span><span class='t2lyric'>Telling me just what a fool I've </span><span class="chord">A</span><span class='t2lyric'>been <br/>
+I </span><span class="chord">D</span><span class='t2lyric'>wish that it would go and let me </span><span class="chord">G</span><span class='t2lyric'>cry in vain <br/>
+And </span><span class="chord">D</span><span class='t2lyric'>let me be </span><span class="chord">A</span><span class='t2lyric'>alone </span><span class="chord">D</span><span class='t2lyric'>again </span><span class="chord">A</span><span class='t2lyric'> <br/>
+Oh, </span><span class="chord">D</span><span class='t2lyric'>listen to the </span><span class="chord">Bm</span><span class='t2lyric'>falling rain, </span><span class="chord">D</span><span class='t2lyric'>Pitter pater, pitter </span><span class="chord">Bm</span><span class='t2lyric'>pater 3x <br/>
+ </span></div>
 </div>
 </div>
 </div>
@@ -439,18 +463,24 @@ Oh, <span class="chord">D</span>listen to the <span class="chord">Bm</span>falli
 <div id='row_5a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_5' data-main-id='row_5a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_5' data-main-id='row_5a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_5' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_5' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_5' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_5' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_5' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_5' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_5' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_5' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 5.
@@ -475,37 +505,37 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_5b'>Một ngày sống bên em sẽ <span class="chord">D</span>muôn đời <br/>
-Dẫu cho mưa rơi đá mòn <span class="chord">Bm</span>tháng năm <br/>
-Lạy trời được yêu mãi nhau <span class="chord">C</span>người ơi <span class="chord">A</span> <br/>
-Đừng mang trái ngang chia lìa <span class="chord">D</span>lứa đôi <br/>
+<div class='lyric' id='row_5b'><span class='t2lyric'>Một ngày sống bên em sẽ </span><span class="chord">D</span><span class='t2lyric'>muôn đời <br/>
+Dẫu cho mưa rơi đá mòn </span><span class="chord">Bm</span><span class='t2lyric'>tháng năm <br/>
+Lạy trời được yêu mãi nhau </span><span class="chord">C</span><span class='t2lyric'>người ơi </span><span class="chord">A</span><span class='t2lyric'> <br/>
+Đừng mang trái ngang chia lìa </span><span class="chord">D</span><span class='t2lyric'>lứa đôi <br/>
  <br/>
-ĐK: Thế gian <span class="chord">Bm</span>ơi sao nhiều cay đắng <br/>
-Tình vẫn đắm <span class="chord">Em</span>say, người cũng xa ta <span class="chord">A</span>rồi <br/>
-Ngồi ôm <span class="chord">D</span>vết thương lòng đớn đau <br/>
-Nghe nhịp tim <span class="chord">Em</span>rên siết trong đêm <span class="chord">A</span>sầu <br/>
+ĐK: Thế gian </span><span class="chord">Bm</span><span class='t2lyric'>ơi sao nhiều cay đắng <br/>
+Tình vẫn đắm </span><span class="chord">Em</span><span class='t2lyric'>say, người cũng xa ta </span><span class="chord">A</span><span class='t2lyric'>rồi <br/>
+Ngồi ôm </span><span class="chord">D</span><span class='t2lyric'>vết thương lòng đớn đau <br/>
+Nghe nhịp tim </span><span class="chord">Em</span><span class='t2lyric'>rên siết trong đêm </span><span class="chord">A</span><span class='t2lyric'>sầu <br/>
  <br/>
-Mùa thu lá bay em đã <span class="chord">D</span>đi rồi <br/>
-Vỡ tan ôi bao giấc mộng <span class="chord">Bm</span>lứa đôi <br/>
-Giờ đành lìa xa thế nhân <span class="chord">Em</span>sầu đau <span class="chord">A</span> <br/>
-Hẹn em kiếp sau ta nhìn <span class="chord">D</span>thấy nhau <br/>
+Mùa thu lá bay em đã </span><span class="chord">D</span><span class='t2lyric'>đi rồi <br/>
+Vỡ tan ôi bao giấc mộng </span><span class="chord">Bm</span><span class='t2lyric'>lứa đôi <br/>
+Giờ đành lìa xa thế nhân </span><span class="chord">Em</span><span class='t2lyric'>sầu đau </span><span class="chord">A</span><span class='t2lyric'> <br/>
+Hẹn em kiếp sau ta nhìn </span><span class="chord">D</span><span class='t2lyric'>thấy nhau <br/>
  <br/>
 <hr/>----------------- <br/>
  <br/>
-Bu zhidao wei liao <span class="chord">D</span>shenme <br/>
-You chou ta wei rao <span class="chord">Bm</span>zhuo wo <br/>
-Wo meitian dou zai <span class="chord">C</span>qi dao <span class="chord">A</span> <br/>
-Kuai gan zou ai de(di) <span class="chord">D</span>ji mo <br/>
+Bu zhidao wei liao </span><span class="chord">D</span><span class='t2lyric'>shenme <br/>
+You chou ta wei rao </span><span class="chord">Bm</span><span class='t2lyric'>zhuo wo <br/>
+Wo meitian dou zai </span><span class="chord">C</span><span class='t2lyric'>qi dao </span><span class="chord">A</span><span class='t2lyric'> <br/>
+Kuai gan zou ai de(di) </span><span class="chord">D</span><span class='t2lyric'>ji mo <br/>
  <br/>
-Chorus: Na tian <span class="chord">Bm</span>qi ni dui wo shuo <br/>
-Yong yuan <span class="chord">Em</span>de(di) ai zhuo <span class="chord">A</span>wo <br/>
-Qian <span class="chord">D</span>yan he wan yu <br/>
-Sui fu <span class="chord">Em</span>yun lue <span class="chord">A</span>guo <br/>
+Chorus: Na tian </span><span class="chord">Bm</span><span class='t2lyric'>qi ni dui wo shuo <br/>
+Yong yuan </span><span class="chord">Em</span><span class='t2lyric'>de(di) ai zhuo </span><span class="chord">A</span><span class='t2lyric'>wo <br/>
+Qian </span><span class="chord">D</span><span class='t2lyric'>yan he wan yu <br/>
+Sui fu </span><span class="chord">Em</span><span class='t2lyric'>yun lue </span><span class="chord">A</span><span class='t2lyric'>guo <br/>
  <br/>
-Bu zhidao wei liao <span class="chord">D</span>shenme <br/>
-You chou ta wei rao <span class="chord">Bm</span>zhuo wo <br/>
-Wo meitian dou zai <span class="chord">C</span>qi dao <span class="chord">A</span> <br/>
-Kuai gan zou ai de(di) <span class="chord">D</span>ji mo </div>
+Bu zhidao wei liao </span><span class="chord">D</span><span class='t2lyric'>shenme <br/>
+You chou ta wei rao </span><span class="chord">Bm</span><span class='t2lyric'>zhuo wo <br/>
+Wo meitian dou zai </span><span class="chord">C</span><span class='t2lyric'>qi dao </span><span class="chord">A</span><span class='t2lyric'> <br/>
+Kuai gan zou ai de(di) </span><span class="chord">D</span><span class='t2lyric'>ji mo </span></div>
 </div>
 </div>
 </div>
@@ -516,18 +546,24 @@ Kuai gan zou ai de(di) <span class="chord">D</span>ji mo </div>
 <div id='row_6a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_6' data-main-id='row_6a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_6' data-main-id='row_6a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_6' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_6' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_6' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_6' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_6' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_6' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_6' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_6' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 6.
@@ -552,26 +588,26 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_6b'>Qua <span class="chord">D</span>bến nước <span class="chord">Bm</span>xưa lá hoa <span class="chord">G</span>về chiều <span class="chord">A7</span>... <br/>
-Lạnh <span class="chord">D</span>lùng mềm <span class="chord">Bm</span>đưa trong nắng <span class="chord">Em</span>lưa thưa <span class="chord">A7</span>... <br/>
-Khi <span class="chord">D</span>đến cuối <span class="chord">G</span>thôn chân bước <span class="chord">D</span>không hồn... <span class="chord">D</span> <br/>
-Nhớ <span class="chord">Em</span>sao là <span class="chord">A7</span>nhớ đến người <span class="chord">A7</span>ngày thơ <span class="chord">A7</span>... <br/>
-Anh <span class="chord">D</span>nhớ trước <span class="chord">Bm</span>đây dáng em <span class="chord">G</span>gầy <span class="chord">A7</span>gầy <br/>
-Dịu <span class="chord">D</span>dàng nhìn <span class="chord">Bm</span>anh đôi mắt <span class="chord">Em</span>long <span class="chord">A7</span>lanh <br/>
-Anh <span class="chord">D</span>nhớ bước <span class="chord">G</span>em khi nắng <span class="chord">D</span>vương thềm <span class="chord">D</span>... <br/>
-Má <span class="chord">Em</span>em mầu <span class="chord">A7</span>ngà tóc thề <span class="chord">D</span>nhẹ bay <span class="chord">D</span>... <br/>
-Nay anh <span class="chord">Bm</span>về qua sân <span class="chord">Bm</span>nắng <br/>
-chạnh nhớ câu <span class="chord">Bm</span>thề tim tái <span class="chord">Em</span>tê <br/>
-chẳng biết bây <span class="chord">A7</span>giờ <br/>
-người em <span class="chord">A7</span>gái duyên ghé về <span class="chord">D</span>đâu <span class="chord">D</span>... <br/>
-Nay anh <span class="chord">Bm</span>về nương dâu <span class="chord">Bm</span>úa <br/>
-giọng hát câu <span class="chord">Bm</span>hò thôi hết <span class="chord">Em</span>đưa <br/>
-hình bóng yêu <span class="chord">A7</span>kiều <br/>
-kề hoa <span class="chord">F#m</span>tím biết đâu mà <span class="chord">G</span>tìm <span class="chord">A7</span>... <br/>
-Anh <span class="chord">D</span>nhớ xót <span class="chord">Bm</span>xa dưới tre <span class="chord">G</span>lá ngà..... <span class="chord">A7</span> <br/>
-Gợn <span class="chord">D</span>buồn nhìn <span class="chord">Bm</span>anh em nói: <span class="chord">Em</span>"Mến <span class="chord">A7</span>anh!"... <br/>
-Mây <span class="chord">D</span>lướt thướt <span class="chord">G</span>trôi khi nắng <span class="chord">D</span>vương đồi... <span class="chord">D</span> <br/>
-Nhớ <span class="chord">Em</span>em dịu <span class="chord">A7</span>hiền nắng chiều <span class="chord">D</span>ngừng <span class="chord">D</span>trôi... </div>
+<div class='lyric' id='row_6b'><span class='t2lyric'>Qua </span><span class="chord">D</span><span class='t2lyric'>bến nước </span><span class="chord">Bm</span><span class='t2lyric'>xưa lá hoa </span><span class="chord">G</span><span class='t2lyric'>về chiều </span><span class="chord">A7</span><span class='t2lyric'>... <br/>
+Lạnh </span><span class="chord">D</span><span class='t2lyric'>lùng mềm </span><span class="chord">Bm</span><span class='t2lyric'>đưa trong nắng </span><span class="chord">Em</span><span class='t2lyric'>lưa thưa </span><span class="chord">A7</span><span class='t2lyric'>... <br/>
+Khi </span><span class="chord">D</span><span class='t2lyric'>đến cuối </span><span class="chord">G</span><span class='t2lyric'>thôn chân bước </span><span class="chord">D</span><span class='t2lyric'>không hồn... </span><span class="chord">D</span><span class='t2lyric'> <br/>
+Nhớ </span><span class="chord">Em</span><span class='t2lyric'>sao là </span><span class="chord">A7</span><span class='t2lyric'>nhớ đến người </span><span class="chord">A7</span><span class='t2lyric'>ngày thơ </span><span class="chord">A7</span><span class='t2lyric'>... <br/>
+Anh </span><span class="chord">D</span><span class='t2lyric'>nhớ trước </span><span class="chord">Bm</span><span class='t2lyric'>đây dáng em </span><span class="chord">G</span><span class='t2lyric'>gầy </span><span class="chord">A7</span><span class='t2lyric'>gầy <br/>
+Dịu </span><span class="chord">D</span><span class='t2lyric'>dàng nhìn </span><span class="chord">Bm</span><span class='t2lyric'>anh đôi mắt </span><span class="chord">Em</span><span class='t2lyric'>long </span><span class="chord">A7</span><span class='t2lyric'>lanh <br/>
+Anh </span><span class="chord">D</span><span class='t2lyric'>nhớ bước </span><span class="chord">G</span><span class='t2lyric'>em khi nắng </span><span class="chord">D</span><span class='t2lyric'>vương thềm </span><span class="chord">D</span><span class='t2lyric'>... <br/>
+Má </span><span class="chord">Em</span><span class='t2lyric'>em mầu </span><span class="chord">A7</span><span class='t2lyric'>ngà tóc thề </span><span class="chord">D</span><span class='t2lyric'>nhẹ bay </span><span class="chord">D</span><span class='t2lyric'>... <br/>
+Nay anh </span><span class="chord">Bm</span><span class='t2lyric'>về qua sân </span><span class="chord">Bm</span><span class='t2lyric'>nắng <br/>
+chạnh nhớ câu </span><span class="chord">Bm</span><span class='t2lyric'>thề tim tái </span><span class="chord">Em</span><span class='t2lyric'>tê <br/>
+chẳng biết bây </span><span class="chord">A7</span><span class='t2lyric'>giờ <br/>
+người em </span><span class="chord">A7</span><span class='t2lyric'>gái duyên ghé về </span><span class="chord">D</span><span class='t2lyric'>đâu </span><span class="chord">D</span><span class='t2lyric'>... <br/>
+Nay anh </span><span class="chord">Bm</span><span class='t2lyric'>về nương dâu </span><span class="chord">Bm</span><span class='t2lyric'>úa <br/>
+giọng hát câu </span><span class="chord">Bm</span><span class='t2lyric'>hò thôi hết </span><span class="chord">Em</span><span class='t2lyric'>đưa <br/>
+hình bóng yêu </span><span class="chord">A7</span><span class='t2lyric'>kiều <br/>
+kề hoa </span><span class="chord">F#m</span><span class='t2lyric'>tím biết đâu mà </span><span class="chord">G</span><span class='t2lyric'>tìm </span><span class="chord">A7</span><span class='t2lyric'>... <br/>
+Anh </span><span class="chord">D</span><span class='t2lyric'>nhớ xót </span><span class="chord">Bm</span><span class='t2lyric'>xa dưới tre </span><span class="chord">G</span><span class='t2lyric'>lá ngà..... </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Gợn </span><span class="chord">D</span><span class='t2lyric'>buồn nhìn </span><span class="chord">Bm</span><span class='t2lyric'>anh em nói: </span><span class="chord">Em</span><span class='t2lyric'>"Mến </span><span class="chord">A7</span><span class='t2lyric'>anh!"... <br/>
+Mây </span><span class="chord">D</span><span class='t2lyric'>lướt thướt </span><span class="chord">G</span><span class='t2lyric'>trôi khi nắng </span><span class="chord">D</span><span class='t2lyric'>vương đồi... </span><span class="chord">D</span><span class='t2lyric'> <br/>
+Nhớ </span><span class="chord">Em</span><span class='t2lyric'>em dịu </span><span class="chord">A7</span><span class='t2lyric'>hiền nắng chiều </span><span class="chord">D</span><span class='t2lyric'>ngừng </span><span class="chord">D</span><span class='t2lyric'>trôi... </span></div>
 </div>
 </div>
 </div>
@@ -582,18 +618,24 @@ Nhớ <span class="chord">Em</span>em dịu <span class="chord">A7</span>hiền 
 <div id='row_7a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_7' data-main-id='row_7a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_7' data-main-id='row_7a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_7' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_7' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_7' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_7' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_7' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_7' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_7' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_7' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 7.
@@ -618,27 +660,27 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_7b'>Chuyện tình yêu đôi ta ngày <span class="chord">Dm</span>ấy tuyệt như <span class="chord">E</span>mơ <br/>
-Chuyện tình yêu đôi ta ngày <span class="chord">Am</span>ấy đẹp như <span class="chord">Fmaj7</span>thơ... <br/>
-Mình làm quen nhau trên đường <span class="chord">G</span>vắng khuya <br/>
-Dìu nhau qua bao nhiêu hè <span class="chord">F</span>phố mưa <br/>
-Ngồi ôm <span class="chord">E</span>nhau công viên lạnh giá... <br/>
-Chuyện tình yêu đôi ta ngày <span class="chord">Dm</span>ấy đầy mộng <span class="chord">E</span>mơ <br/>
-Chuyện tình yêu đôi ta ngày <span class="chord">Am</span>ấy thật kiêu <span class="chord">Fmaj7</span>sa <br/>
-Và trần gian thênh thang chỉ <span class="chord">G</span>có ta <br/>
-Mình cho nhau yêu thương rồi <span class="chord">F</span>xót xa <br/>
-Rồi chia <span class="chord">E</span>ly <span class="chord">Am</span>rồi đến phôi pha... <br/>
-Đến bây giờ anh đã là <span class="chord">Dm</span>cánh trắng chim bay sâu <span class="chord">E</span>chân trời <br/>
-Đến bây giờ em đã là <span class="chord">Am</span>bóng dáng cô liêu trong ngậm ngùi <br/>
-Đến bây <span class="chord">A7</span>giờ em vẫn buồn <span class="chord">Dm</span>nhớ... <span class="chord">G</span> <br/>
-Đến bây giờ anh xóa tình <span class="chord">Cmaj7</span>cũ... <span class="chord">Fmaj7</span> <br/>
-Đến bây giờ em hóa tượng <span class="chord">Bdim7</span>đá... <span class="chord">E</span> <br/>
-Đứng thiên thu trong mong đợi <span class="chord">E</span>chờ... <br/>
-Chuyện tình yêu đôi ta ngày <span class="chord">Dm</span>ấy giờ còn <span class="chord">E</span>đâu? <br/>
-Chuyện tình yêu đôi ta ngày <span class="chord">Am</span>ấy thành thương <span class="chord">Fmaj7</span>đau <br/>
-Một mình em lang thang đường <span class="chord">G</span>phố khuya <br/>
-Tìm anh trong công viên đầy <span class="chord">F</span>gió mưa <br/>
-Kỷ niệm <span class="chord">E</span>ơi <span class="chord">Am</span>đừng chết trong ta </div>
+<div class='lyric' id='row_7b'><span class='t2lyric'>Chuyện tình yêu đôi ta ngày </span><span class="chord">Dm</span><span class='t2lyric'>ấy tuyệt như </span><span class="chord">E</span><span class='t2lyric'>mơ <br/>
+Chuyện tình yêu đôi ta ngày </span><span class="chord">Am</span><span class='t2lyric'>ấy đẹp như </span><span class="chord">Fmaj7</span><span class='t2lyric'>thơ... <br/>
+Mình làm quen nhau trên đường </span><span class="chord">G</span><span class='t2lyric'>vắng khuya <br/>
+Dìu nhau qua bao nhiêu hè </span><span class="chord">F</span><span class='t2lyric'>phố mưa <br/>
+Ngồi ôm </span><span class="chord">E</span><span class='t2lyric'>nhau công viên lạnh giá... <br/>
+Chuyện tình yêu đôi ta ngày </span><span class="chord">Dm</span><span class='t2lyric'>ấy đầy mộng </span><span class="chord">E</span><span class='t2lyric'>mơ <br/>
+Chuyện tình yêu đôi ta ngày </span><span class="chord">Am</span><span class='t2lyric'>ấy thật kiêu </span><span class="chord">Fmaj7</span><span class='t2lyric'>sa <br/>
+Và trần gian thênh thang chỉ </span><span class="chord">G</span><span class='t2lyric'>có ta <br/>
+Mình cho nhau yêu thương rồi </span><span class="chord">F</span><span class='t2lyric'>xót xa <br/>
+Rồi chia </span><span class="chord">E</span><span class='t2lyric'>ly </span><span class="chord">Am</span><span class='t2lyric'>rồi đến phôi pha... <br/>
+Đến bây giờ anh đã là </span><span class="chord">Dm</span><span class='t2lyric'>cánh trắng chim bay sâu </span><span class="chord">E</span><span class='t2lyric'>chân trời <br/>
+Đến bây giờ em đã là </span><span class="chord">Am</span><span class='t2lyric'>bóng dáng cô liêu trong ngậm ngùi <br/>
+Đến bây </span><span class="chord">A7</span><span class='t2lyric'>giờ em vẫn buồn </span><span class="chord">Dm</span><span class='t2lyric'>nhớ... </span><span class="chord">G</span><span class='t2lyric'> <br/>
+Đến bây giờ anh xóa tình </span><span class="chord">Cmaj7</span><span class='t2lyric'>cũ... </span><span class="chord">Fmaj7</span><span class='t2lyric'> <br/>
+Đến bây giờ em hóa tượng </span><span class="chord">Bdim7</span><span class='t2lyric'>đá... </span><span class="chord">E</span><span class='t2lyric'> <br/>
+Đứng thiên thu trong mong đợi </span><span class="chord">E</span><span class='t2lyric'>chờ... <br/>
+Chuyện tình yêu đôi ta ngày </span><span class="chord">Dm</span><span class='t2lyric'>ấy giờ còn </span><span class="chord">E</span><span class='t2lyric'>đâu? <br/>
+Chuyện tình yêu đôi ta ngày </span><span class="chord">Am</span><span class='t2lyric'>ấy thành thương </span><span class="chord">Fmaj7</span><span class='t2lyric'>đau <br/>
+Một mình em lang thang đường </span><span class="chord">G</span><span class='t2lyric'>phố khuya <br/>
+Tìm anh trong công viên đầy </span><span class="chord">F</span><span class='t2lyric'>gió mưa <br/>
+Kỷ niệm </span><span class="chord">E</span><span class='t2lyric'>ơi </span><span class="chord">Am</span><span class='t2lyric'>đừng chết trong ta </span></div>
 </div>
 </div>
 </div>
@@ -649,18 +691,24 @@ Kỷ niệm <span class="chord">E</span>ơi <span class="chord">Am</span>đừng
 <div id='row_8a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_8' data-main-id='row_8a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_8' data-main-id='row_8a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_8' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_8' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_8' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_8' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_8' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_8' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_8' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_8' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 8.
@@ -685,34 +733,34 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_8b'><span class="chord">Dm</span>Chiều về lạnh cơn gió <br/>
-Hạnh <span class="chord">Gm7</span>phúc rét mướt như mùa <span class="chord">Dm</span>đông <br/>
-Thềm <span class="chord">A7</span>hoa đâu con bướm <span class="chord">Bb</span>xưa <br/>
-Người <span class="chord">Em7b5</span>yêu ơi đêm đen đã tàn <span class="chord">A7</span>chưa. <br/>
-<span class="chord">Dm</span>Chiều về lạnh mây tím <br/>
-Giọt sầu<span class="chord">Gm</span>vẫn mãi héo uá trên mi <br/>
-Lá <span class="chord">Dm</span>rơi cho cơn bão mùa <span class="chord">Em7b5</span>thu <br/>
-<span class="chord">A</span>Vội vàng xa người<span class="chord">Dm</span>. <br/>
+<div class='lyric' id='row_8b'><span class='t2lyric'></span><span class="chord">Dm</span><span class='t2lyric'>Chiều về lạnh cơn gió <br/>
+Hạnh </span><span class="chord">Gm7</span><span class='t2lyric'>phúc rét mướt như mùa </span><span class="chord">Dm</span><span class='t2lyric'>đông <br/>
+Thềm </span><span class="chord">A7</span><span class='t2lyric'>hoa đâu con bướm </span><span class="chord">Bb</span><span class='t2lyric'>xưa <br/>
+Người </span><span class="chord">Em7b5</span><span class='t2lyric'>yêu ơi đêm đen đã tàn </span><span class="chord">A7</span><span class='t2lyric'>chưa. <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Chiều về lạnh mây tím <br/>
+Giọt sầu</span><span class="chord">Gm</span><span class='t2lyric'>vẫn mãi héo uá trên mi <br/>
+Lá </span><span class="chord">Dm</span><span class='t2lyric'>rơi cho cơn bão mùa </span><span class="chord">Em7b5</span><span class='t2lyric'>thu <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Vội vàng xa người</span><span class="chord">Dm</span><span class='t2lyric'>. <br/>
  <br/>
-Một <span class="chord">Gm</span>ngày nào thuyền <span class="chord">Gmmaj7</span>tình lạc <span class="chord">Gm7</span>bến <span class="chord">Gm6</span> <br/>
-Giấc mơ không <span class="chord">Dm</span>tên sao dạt dào ngọn nến <br/>
-Vườn <span class="chord">Gm</span>hồng đào kỷ <span class="chord">Gmmaj7</span>niệm vây <span class="chord">Gm7</span>kín <br/>
-Nụ hôn tàn <span class="chord">Em7b5</span>theo tia nắng vừa <span class="chord">A7</span>sang. <br/>
+Một </span><span class="chord">Gm</span><span class='t2lyric'>ngày nào thuyền </span><span class="chord">Gmmaj7</span><span class='t2lyric'>tình lạc </span><span class="chord">Gm7</span><span class='t2lyric'>bến </span><span class="chord">Gm6</span><span class='t2lyric'> <br/>
+Giấc mơ không </span><span class="chord">Dm</span><span class='t2lyric'>tên sao dạt dào ngọn nến <br/>
+Vườn </span><span class="chord">Gm</span><span class='t2lyric'>hồng đào kỷ </span><span class="chord">Gmmaj7</span><span class='t2lyric'>niệm vây </span><span class="chord">Gm7</span><span class='t2lyric'>kín <br/>
+Nụ hôn tàn </span><span class="chord">Em7b5</span><span class='t2lyric'>theo tia nắng vừa </span><span class="chord">A7</span><span class='t2lyric'>sang. <br/>
  <br/>
 Điệp khúc: <br/>
-Hỡi trái tim lầm <span class="chord">Dm</span>lỡ <br/>
-Hãy sống trong dại <span class="chord">Gm</span>khờ <br/>
-Những ái ân rồi <span class="chord">A7</span>sẽ chìm vào thương <span class="chord">Dm</span>nhớ <br/>
-Có nỗi đau vào <span class="chord">Dm</span>vẫn hoài niệm nhân <span class="chord">Gm</span>gian <br/>
-Nước mắt đêm mồ <span class="chord">Bbmaj7</span>côi sẽ không còn <span class="chord">A7</span>mang. <br/>
-Hỡi trái tim lầm <span class="chord">Dm</span>lỡ <br/>
-Hãy xót xa một <span class="chord">Gm</span>lần <br/>
-Những giấc mơ nào <span class="chord">A7</span>cũng <br/>
-Một thời say <span class="chord">Dm</span>đắm <br/>
-Có nỗi đau nào <span class="chord">Dm</span>vẫn mịt mờ đêm <span class="chord">Gm</span>xưa <br/>
-Những khúc ca rồi <span class="chord">Bbmaj7</span>sẽ tàn <span class="chord">A7</span>giữa chiều <span class="chord">Dm</span>mơ <br/>
+Hỡi trái tim lầm </span><span class="chord">Dm</span><span class='t2lyric'>lỡ <br/>
+Hãy sống trong dại </span><span class="chord">Gm</span><span class='t2lyric'>khờ <br/>
+Những ái ân rồi </span><span class="chord">A7</span><span class='t2lyric'>sẽ chìm vào thương </span><span class="chord">Dm</span><span class='t2lyric'>nhớ <br/>
+Có nỗi đau vào </span><span class="chord">Dm</span><span class='t2lyric'>vẫn hoài niệm nhân </span><span class="chord">Gm</span><span class='t2lyric'>gian <br/>
+Nước mắt đêm mồ </span><span class="chord">Bbmaj7</span><span class='t2lyric'>côi sẽ không còn </span><span class="chord">A7</span><span class='t2lyric'>mang. <br/>
+Hỡi trái tim lầm </span><span class="chord">Dm</span><span class='t2lyric'>lỡ <br/>
+Hãy xót xa một </span><span class="chord">Gm</span><span class='t2lyric'>lần <br/>
+Những giấc mơ nào </span><span class="chord">A7</span><span class='t2lyric'>cũng <br/>
+Một thời say </span><span class="chord">Dm</span><span class='t2lyric'>đắm <br/>
+Có nỗi đau nào </span><span class="chord">Dm</span><span class='t2lyric'>vẫn mịt mờ đêm </span><span class="chord">Gm</span><span class='t2lyric'>xưa <br/>
+Những khúc ca rồi </span><span class="chord">Bbmaj7</span><span class='t2lyric'>sẽ tàn </span><span class="chord">A7</span><span class='t2lyric'>giữa chiều </span><span class="chord">Dm</span><span class='t2lyric'>mơ <br/>
  <br/>
-(Những ái ân<span class="chord">Bbmaj7</span>rồi sẽ tàn giữa<span class="chord">A7</span>chiều mơ<span class="chord">Dm</span>) </div>
+(Những ái ân</span><span class="chord">Bbmaj7</span><span class='t2lyric'>rồi sẽ tàn giữa</span><span class="chord">A7</span><span class='t2lyric'>chiều mơ</span><span class="chord">Dm</span><span class='t2lyric'>) </span></div>
 </div>
 </div>
 </div>
@@ -723,18 +771,24 @@ Những khúc ca rồi <span class="chord">Bbmaj7</span>sẽ tàn <span class="c
 <div id='row_9a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_9' data-main-id='row_9a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_9' data-main-id='row_9a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_9' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_9' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_9' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_9' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_9' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_9' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_9' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_9' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 9.
@@ -759,54 +813,54 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_9b'> <br/>
-<span class="chord">Dm</span>Vì nàng đẹp như một <span class="chord">Fmaj7</span>bông hồng <span class="chord">Gm</span> <br/>
-<span class="chord">A7</span>Nên tôi không dam yêu <span class="chord">Dm7</span>nàng <br/>
-Ôi đôi môi cười như <span class="chord">C</span>cánh lan <span class="chord">Am</span> <br/>
-Bao năm tôi khó <span class="chord">C</span>nguôi quên <br/>
+<div class='lyric' id='row_9b'><span class='t2lyric'> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Vì nàng đẹp như một </span><span class="chord">Fmaj7</span><span class='t2lyric'>bông hồng </span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Nên tôi không dam yêu </span><span class="chord">Dm7</span><span class='t2lyric'>nàng <br/>
+Ôi đôi môi cười như </span><span class="chord">C</span><span class='t2lyric'>cánh lan </span><span class="chord">Am</span><span class='t2lyric'> <br/>
+Bao năm tôi khó </span><span class="chord">C</span><span class='t2lyric'>nguôi quên <br/>
  <br/>
-<span class="chord">A</span>Nên theo cơn gió bay <span class="chord">Dm</span>qua đây <span class="chord">Gm7</span> <br/>
-<span class="chord">C</span>Như dung nhan vừa tươi <span class="chord">Fmaj7</span>mướt <span class="chord">Edim</span> <br/>
-<span class="chord">A7</span>Em vui như dáng xuân <span class="chord">Bbmaj7</span>hồng nắng <span class="chord">Gm</span> <br/>
-<span class="chord">A7</span>Tôi nghe cơn gió ru <span class="chord">Dm</span>hời <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Nên theo cơn gió bay </span><span class="chord">Dm</span><span class='t2lyric'>qua đây </span><span class="chord">Gm7</span><span class='t2lyric'> <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Như dung nhan vừa tươi </span><span class="chord">Fmaj7</span><span class='t2lyric'>mướt </span><span class="chord">Edim</span><span class='t2lyric'> <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Em vui như dáng xuân </span><span class="chord">Bbmaj7</span><span class='t2lyric'>hồng nắng </span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Tôi nghe cơn gió ru </span><span class="chord">Dm</span><span class='t2lyric'>hời <br/>
  <br/>
-<span class="chord">Dm</span>Trời lành lạnh cho mùa <span class="chord">Fmaj7</span>thu về <span class="chord">Edim</span> <br/>
-<span class="chord">A7</span>Tôi nghe tôi khóc trong <span class="chord">Dm</span>lòng <br/>
-Hôm nay đây mùa thu <span class="chord">C7</span>mới sang <br/>
-<span class="chord">Am7</span>Ôi sao xa quá xuân <span class="chord">C</span>xưa <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Trời lành lạnh cho mùa </span><span class="chord">Fmaj7</span><span class='t2lyric'>thu về </span><span class="chord">Edim</span><span class='t2lyric'> <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Tôi nghe tôi khóc trong </span><span class="chord">Dm</span><span class='t2lyric'>lòng <br/>
+Hôm nay đây mùa thu </span><span class="chord">C7</span><span class='t2lyric'>mới sang <br/>
+</span><span class="chord">Am7</span><span class='t2lyric'>Ôi sao xa quá xuân </span><span class="chord">C</span><span class='t2lyric'>xưa <br/>
  <br/>
-<span class="chord">A7</span>Trong công viên lá thôi <span class="chord">Dm</span>đong đưa <span class="chord">Gm7</span> <br/>
-<span class="chord">C</span>Tôi nghe em cười trong <span class="chord">Fmaj7</span>nắng <span class="chord">Edim</span> <br/>
-<span class="chord">A7</span>Dang tay cho gió rung <span class="chord">Bbmaj7</span>tà áo <span class="chord">Gm</span> <br/>
-<span class="chord">A7</span>Trong hơi sương em sẽ tan <span class="chord">Dm</span>nhòa <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Trong công viên lá thôi </span><span class="chord">Dm</span><span class='t2lyric'>đong đưa </span><span class="chord">Gm7</span><span class='t2lyric'> <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Tôi nghe em cười trong </span><span class="chord">Fmaj7</span><span class='t2lyric'>nắng </span><span class="chord">Edim</span><span class='t2lyric'> <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Dang tay cho gió rung </span><span class="chord">Bbmaj7</span><span class='t2lyric'>tà áo </span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Trong hơi sương em sẽ tan </span><span class="chord">Dm</span><span class='t2lyric'>nhòa <br/>
  <br/>
 (Giang Tau) <br/>
-<span class="chord">Gm</span> <span class="chord">A7</span> <span class="chord">Dm</span> <span class="chord">Bbmaj7</span> <span class="chord">Gm</span> <span class="chord">E</span> <span class="chord">A</span> <br/>
+</span><span class="chord">Gm</span><span class='t2lyric'> </span><span class="chord">A7</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> </span><span class="chord">Bbmaj7</span><span class='t2lyric'> </span><span class="chord">Gm</span><span class='t2lyric'> </span><span class="chord">E</span><span class='t2lyric'> </span><span class="chord">A</span><span class='t2lyric'> <br/>
  <br/>
-Đẹp tuyệt vời hỡi em <span class="chord">Fmaj7</span>dấu yêu <span class="chord">Gm</span> <br/>
-<span class="chord">A7</span>Nên tôi đâu dam trao <span class="chord">Dm7</span>tình <span class="chord">Gm7</span> <br/>
-<span class="chord">Dm</span>Đẹp tuyệt vời tựa như <span class="chord">C</span>đóa hoa <br/>
-<span class="chord">Am7</span>Tim tôi ngây ngất <span class="chord">C</span>si mê <br/>
+Đẹp tuyệt vời hỡi em </span><span class="chord">Fmaj7</span><span class='t2lyric'>dấu yêu </span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Nên tôi đâu dam trao </span><span class="chord">Dm7</span><span class='t2lyric'>tình </span><span class="chord">Gm7</span><span class='t2lyric'> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Đẹp tuyệt vời tựa như </span><span class="chord">C</span><span class='t2lyric'>đóa hoa <br/>
+</span><span class="chord">Am7</span><span class='t2lyric'>Tim tôi ngây ngất </span><span class="chord">C</span><span class='t2lyric'>si mê <br/>
  <br/>
-<span class="chord">A</span>Nhưng tôi không nói yêu <span class="chord">Dm</span>thương em <span class="chord">Gm7</span> <br/>
-<span class="chord">C</span>Nên tôi muôn đời sầu <span class="chord">Fmaj7</span>đau <span class="chord">Edim</span> <br/>
-<span class="chord">A</span>Như cây thông đứng trong <span class="chord">Bbmaj7</span>rừng vắng <span class="chord">Gm</span> <br/>
-<span class="chord">A</span>Em như mây trắng trên <span class="chord">Dm</span>trời <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Nhưng tôi không nói yêu </span><span class="chord">Dm</span><span class='t2lyric'>thương em </span><span class="chord">Gm7</span><span class='t2lyric'> <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Nên tôi muôn đời sầu </span><span class="chord">Fmaj7</span><span class='t2lyric'>đau </span><span class="chord">Edim</span><span class='t2lyric'> <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Như cây thông đứng trong </span><span class="chord">Bbmaj7</span><span class='t2lyric'>rừng vắng </span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Em như mây trắng trên </span><span class="chord">Dm</span><span class='t2lyric'>trời <br/>
  <br/>
 1/2 tone up <br/>
  <br/>
-<span class="chord">Ebm</span>Rồi một chiều cánh mây <span class="chord">Gbmaj7</span>khép lại <br/>
-<span class="chord">Bb7</span>Mây đang bay bỗng rơi <span class="chord">Ebm7</span>rụng <br/>
-<span class="chord">Abm7</span>Em ra đi bỏ lại sắc <span class="chord">Db</span>hương <br/>
-<span class="chord">Bbm7</span>Ôi thiên thu mãi <span class="chord">Db7</span>xa nhau <br/>
-<span class="chord">Bb7</span>Ôi đôi ta cách ngăn <span class="chord">Ebm</span>đôi nơi <span class="chord">Abm7</span> <br/>
-<span class="chord">Db</span>Em ra đi vào mù <span class="chord">Gbmaj7</span>khơi  <span class="chord">Fdim</span> <br/>
-<span class="chord">Bb7</span>Trong hơi sương áo em <span class="chord">Bmaj7</span>lộng gió <span class="chord">Abm7</span> <br/>
-<span class="chord">Bb7</span>Cho tôi thương nhớ vô <span class="chord">Ebm</span>bờ <br/>
+</span><span class="chord">Ebm</span><span class='t2lyric'>Rồi một chiều cánh mây </span><span class="chord">Gbmaj7</span><span class='t2lyric'>khép lại <br/>
+</span><span class="chord">Bb7</span><span class='t2lyric'>Mây đang bay bỗng rơi </span><span class="chord">Ebm7</span><span class='t2lyric'>rụng <br/>
+</span><span class="chord">Abm7</span><span class='t2lyric'>Em ra đi bỏ lại sắc </span><span class="chord">Db</span><span class='t2lyric'>hương <br/>
+</span><span class="chord">Bbm7</span><span class='t2lyric'>Ôi thiên thu mãi </span><span class="chord">Db7</span><span class='t2lyric'>xa nhau <br/>
+</span><span class="chord">Bb7</span><span class='t2lyric'>Ôi đôi ta cách ngăn </span><span class="chord">Ebm</span><span class='t2lyric'>đôi nơi </span><span class="chord">Abm7</span><span class='t2lyric'> <br/>
+</span><span class="chord">Db</span><span class='t2lyric'>Em ra đi vào mù </span><span class="chord">Gbmaj7</span><span class='t2lyric'>khơi  </span><span class="chord">Fdim</span><span class='t2lyric'> <br/>
+</span><span class="chord">Bb7</span><span class='t2lyric'>Trong hơi sương áo em </span><span class="chord">Bmaj7</span><span class='t2lyric'>lộng gió </span><span class="chord">Abm7</span><span class='t2lyric'> <br/>
+</span><span class="chord">Bb7</span><span class='t2lyric'>Cho tôi thương nhớ vô </span><span class="chord">Ebm</span><span class='t2lyric'>bờ <br/>
  <br/>
-<span class="chord">Bb7</span>Trong hơi sương áo em <span class="chord">Bmaj7</span>lộng gió <span class="chord">Abm7</span> <br/>
-<span class="chord">Bb7</span>Cho tôi thương nhớ vô <span class="chord">Ebm</span>bờ <br/>
- </div>
+</span><span class="chord">Bb7</span><span class='t2lyric'>Trong hơi sương áo em </span><span class="chord">Bmaj7</span><span class='t2lyric'>lộng gió </span><span class="chord">Abm7</span><span class='t2lyric'> <br/>
+</span><span class="chord">Bb7</span><span class='t2lyric'>Cho tôi thương nhớ vô </span><span class="chord">Ebm</span><span class='t2lyric'>bờ <br/>
+ </span></div>
 </div>
 </div>
 </div>
@@ -817,18 +871,24 @@ Hôm nay đây mùa thu <span class="chord">C7</span>mới sang <br/>
 <div id='row_10a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_10' data-main-id='row_10a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_10' data-main-id='row_10a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_10' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_10' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_10' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_10' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_10' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_10' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_10' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_10' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 10.
@@ -853,23 +913,23 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_10b'><span class="chord">Dm</span>Besame - besame mucho<span class="chord">Gm</span> <br/>
-<span class="chord">Cm</span>Yêu nhau đi ta lo chi cho đôi mi thêm phai úa màu<span class="chord">Am</span> <br/>
-<span class="chord">Dm</span>Ta yêu nhau... cớ sao em âu sầu?<span class="chord">Gm</span> <br/>
-<span class="chord">Dm</span>Phút giây này có bao giờ <br/>
-<span class="chord">Bb</span>Đến với đời ta hai lần đâu <span class="chord">Dm</span> <br/>
+<div class='lyric' id='row_10b'><span class='t2lyric'></span><span class="chord">Dm</span><span class='t2lyric'>Besame - besame mucho</span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">Cm</span><span class='t2lyric'>Yêu nhau đi ta lo chi cho đôi mi thêm phai úa màu</span><span class="chord">Am</span><span class='t2lyric'> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Ta yêu nhau... cớ sao em âu sầu?</span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Phút giây này có bao giờ <br/>
+</span><span class="chord">Bb</span><span class='t2lyric'>Đến với đời ta hai lần đâu </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
-<span class="chord">Dm</span>Yêu nhau đi, mình không nên tiếc chi<span class="chord">Gm</span> <br/>
-<span class="chord">Cm</span>Trao nhau đi muôn môi hôn bao đam mê trong say đắm này<span class="chord">Am</span> <br/>
-<span class="chord">D</span>Ta yêu nhau... có trăng sao trên trời<span class="chord">Gm</span> <br/>
-<span class="chord">Dm</span>Chiếu muôn ngàn ánh soi tình <br/>
-<span class="chord">Bb</span>ta bừng lên sắc hồng...<span class="chord">Dm</span> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Yêu nhau đi, mình không nên tiếc chi</span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">Cm</span><span class='t2lyric'>Trao nhau đi muôn môi hôn bao đam mê trong say đắm này</span><span class="chord">Am</span><span class='t2lyric'> <br/>
+</span><span class="chord">D</span><span class='t2lyric'>Ta yêu nhau... có trăng sao trên trời</span><span class="chord">Gm</span><span class='t2lyric'> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Chiếu muôn ngàn ánh soi tình <br/>
+</span><span class="chord">Bb</span><span class='t2lyric'>ta bừng lên sắc hồng...</span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
 ĐK <br/>
-<span class="chord">Gm</span>Nơi đây đêm nay ta cùng <span class="chord">Dm</span>vui say sưa <br/>
-Trong niềm <span class="chord">C</span>hoan ca hòa ngàn câu ân ái<span class="chord">Dm</span> <br/>
-<span class="chord">Gm</span>Yêu nhau đi em trong triền <span class="chord">Dm</span>miên bao la <br/>
-Trong hồn <span class="chord">C</span>nhiên trong đắm đuối ngất ngây<span class="chord">Dm</span> </div>
+</span><span class="chord">Gm</span><span class='t2lyric'>Nơi đây đêm nay ta cùng </span><span class="chord">Dm</span><span class='t2lyric'>vui say sưa <br/>
+Trong niềm </span><span class="chord">C</span><span class='t2lyric'>hoan ca hòa ngàn câu ân ái</span><span class="chord">Dm</span><span class='t2lyric'> <br/>
+</span><span class="chord">Gm</span><span class='t2lyric'>Yêu nhau đi em trong triền </span><span class="chord">Dm</span><span class='t2lyric'>miên bao la <br/>
+Trong hồn </span><span class="chord">C</span><span class='t2lyric'>nhiên trong đắm đuối ngất ngây</span><span class="chord">Dm</span><span class='t2lyric'> </span></div>
 </div>
 </div>
 </div>
@@ -880,18 +940,24 @@ Trong hồn <span class="chord">C</span>nhiên trong đắm đuối ngất ngây
 <div id='row_11a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_11' data-main-id='row_11a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_11' data-main-id='row_11a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_11' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_11' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_11' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_11' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_11' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_11' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_11' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_11' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 11.
@@ -916,61 +982,61 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_11b'>Anh vẫn không đổi <span class="chord">Dm</span>thay <br/>
-Anh vẫn như cũ, kẻ lãng <span class="chord">Gm</span>du trong đời em <br/>
-Anh vẫn e ấp luôn trong <span class="chord">Dm</span>trái tim <br/>
-Câu nói ân ái Ôi, biết bao <span class="chord">A7</span>tháng năm <br/>
-Em đã âu yếm dâng tặng <span class="chord">Dm</span>anh <br/>
-Anh vẫn không đổi <span class="chord">Dm</span>thay <br/>
-Anh vẫn như thế, anh vẫn <span class="chord">Gm</span>yêu như người say <br/>
-Anh vẫn giơ cánh tay ôm <span class="chord">Dm</span>em <br/>
-Anh mong ước có ngay đôi cánh <span class="chord">A7</span>chim <br/>
-Ta sẽ bay tới khung trời <span class="chord">Dm</span>xa <br/>
-Và em cũng <span class="chord">Gm</span>thế có đổi khác gì mấy <span class="chord">C</span> <br/>
-Một nàng tiên <span class="chord">F</span>nữ thân hình vẫn nhỏ bé <span class="chord">Bb</span> <br/>
-Nụ cười hôn <span class="chord">Gm</span>nhiên, môi mộng xinh còn kia <br/>
-Và hồn say <span class="chord">A7</span>đắm ta nhìn nhau như <span class="chord">Dm</span>thế <br/>
-Tình ta vẫn <span class="chord">Gm</span>thế, vẫn bừng như lửa sáng <span class="chord">C</span> <br/>
-Cuộc đời đã <span class="chord">F</span>thoáng bay, tựa gió mùa Thu <span class="chord">Bb</span> <br/>
-Tình còn nồng <span class="chord">Gm</span>thơm như loài hoa rừng mơ <br/>
-Nhạc tình còn <span class="chord">A7</span>tấu cho bền lâu tình <span class="chord">Dm</span>ta <br/>
-Anh vẫn không đổi <span class="chord">Dm</span>thay! <br/>
-Anh vẫn khao khát như mới <span class="chord">Gm</span>yêu em, đầu tiên <br/>
-Anh vẫn ve vuốt câu <span class="chord">Dm</span>thương yêu <br/>
-Câu ân ái, anh vẫn chưa quên <span class="chord">A7</span>mối duyên <br/>
-Anh đã âu yếm, dâng tặng <span class="chord">Dm</span>em! <br/>
-Anh vẫn không đổi <span class="chord">Dm</span>thay! <br/>
-Anh vẫn đi mãi, đi mãi trên <span class="chord">Gm</span>con đường xa <br/>
-Anh vẫn ao ước cho đôi <span class="chord">Dm</span>ta, tuy xa vắng <br/>
-Nhưng vẫn như trong <span class="chord">A7</span>tấc gang <br/>
-Anh sẽ thương nhớ em nghìn <span class="chord">Dm</span>năm <br/>
+<div class='lyric' id='row_11b'><span class='t2lyric'>Anh vẫn không đổi </span><span class="chord">Dm</span><span class='t2lyric'>thay <br/>
+Anh vẫn như cũ, kẻ lãng </span><span class="chord">Gm</span><span class='t2lyric'>du trong đời em <br/>
+Anh vẫn e ấp luôn trong </span><span class="chord">Dm</span><span class='t2lyric'>trái tim <br/>
+Câu nói ân ái Ôi, biết bao </span><span class="chord">A7</span><span class='t2lyric'>tháng năm <br/>
+Em đã âu yếm dâng tặng </span><span class="chord">Dm</span><span class='t2lyric'>anh <br/>
+Anh vẫn không đổi </span><span class="chord">Dm</span><span class='t2lyric'>thay <br/>
+Anh vẫn như thế, anh vẫn </span><span class="chord">Gm</span><span class='t2lyric'>yêu như người say <br/>
+Anh vẫn giơ cánh tay ôm </span><span class="chord">Dm</span><span class='t2lyric'>em <br/>
+Anh mong ước có ngay đôi cánh </span><span class="chord">A7</span><span class='t2lyric'>chim <br/>
+Ta sẽ bay tới khung trời </span><span class="chord">Dm</span><span class='t2lyric'>xa <br/>
+Và em cũng </span><span class="chord">Gm</span><span class='t2lyric'>thế có đổi khác gì mấy </span><span class="chord">C</span><span class='t2lyric'> <br/>
+Một nàng tiên </span><span class="chord">F</span><span class='t2lyric'>nữ thân hình vẫn nhỏ bé </span><span class="chord">Bb</span><span class='t2lyric'> <br/>
+Nụ cười hôn </span><span class="chord">Gm</span><span class='t2lyric'>nhiên, môi mộng xinh còn kia <br/>
+Và hồn say </span><span class="chord">A7</span><span class='t2lyric'>đắm ta nhìn nhau như </span><span class="chord">Dm</span><span class='t2lyric'>thế <br/>
+Tình ta vẫn </span><span class="chord">Gm</span><span class='t2lyric'>thế, vẫn bừng như lửa sáng </span><span class="chord">C</span><span class='t2lyric'> <br/>
+Cuộc đời đã </span><span class="chord">F</span><span class='t2lyric'>thoáng bay, tựa gió mùa Thu </span><span class="chord">Bb</span><span class='t2lyric'> <br/>
+Tình còn nồng </span><span class="chord">Gm</span><span class='t2lyric'>thơm như loài hoa rừng mơ <br/>
+Nhạc tình còn </span><span class="chord">A7</span><span class='t2lyric'>tấu cho bền lâu tình </span><span class="chord">Dm</span><span class='t2lyric'>ta <br/>
+Anh vẫn không đổi </span><span class="chord">Dm</span><span class='t2lyric'>thay! <br/>
+Anh vẫn khao khát như mới </span><span class="chord">Gm</span><span class='t2lyric'>yêu em, đầu tiên <br/>
+Anh vẫn ve vuốt câu </span><span class="chord">Dm</span><span class='t2lyric'>thương yêu <br/>
+Câu ân ái, anh vẫn chưa quên </span><span class="chord">A7</span><span class='t2lyric'>mối duyên <br/>
+Anh đã âu yếm, dâng tặng </span><span class="chord">Dm</span><span class='t2lyric'>em! <br/>
+Anh vẫn không đổi </span><span class="chord">Dm</span><span class='t2lyric'>thay! <br/>
+Anh vẫn đi mãi, đi mãi trên </span><span class="chord">Gm</span><span class='t2lyric'>con đường xa <br/>
+Anh vẫn ao ước cho đôi </span><span class="chord">Dm</span><span class='t2lyric'>ta, tuy xa vắng <br/>
+Nhưng vẫn như trong </span><span class="chord">A7</span><span class='t2lyric'>tấc gang <br/>
+Anh sẽ thương nhớ em nghìn </span><span class="chord">Dm</span><span class='t2lyric'>năm <br/>
 <hr/>---------------------------------- <br/>
-Je n'ai pas <span class="chord">Dm</span>changé <br/>
-je suis toujours ce jeune <span class="chord">Gm</span>homme étranger <br/>
-Qui te chantait des <span class="chord">Dm</span>romances <br/>
-Qui t'inventait des <span class="chord">A7</span>dimanches <br/>
-Qui te faisait <span class="chord">Dm</span>voyager <br/>
-Je n'ai pas <span class="chord">Dm</span>changé <br/>
-Je suis toujours ce <span class="chord">Gm</span>garçon un peu fou <br/>
-Mn'était pas assez <span class="chord">Dm</span>riche <br/>
-Pour <span class="chord">A7</span>t'emmener à Cor <span class="chord">Dm</span>fou <br/>
-Et toi non <span class="chord">Gm</span>plus tu n'as pas changé <span class="chord">C</span> <br/>
-Toujours le <span class="chord">F</span>même parfum léger <span class="chord">Bb</span> <br/>
-Toujours le <span class="chord">Gm</span>même petit sourire <br/>
-Qui en dit <span class="chord">A7</span>long sans vraiment le <span class="chord">Dm</span>dire <br/>
-Non toi non <span class="chord">Gm</span>plus tu n'as pas changé <span class="chord">C</span> <br/>
-J'avais en <span class="chord">F</span>vie de te proté ger <span class="chord">Bb</span> <br/>
-De te gar <span class="chord">Gm</span>der, de t'appar tenir <br/>
-J'avais <span class="chord">A7</span>envie de te reve <span class="chord">Dm</span>nir <br/>
-Je n'ai pas <span class="chord">Dm</span>changé <br/>
-je suis toujours l'apprenti <span class="chord">Gm</span>baladin <br/>
-qui t'écrivait des <span class="chord">Dm</span>poèmes <br/>
-qui commençaient par <span class="chord">A7</span>"je t'aime" <br/>
-et finissaient par<span class="chord">Dm</span>"demain". <br/>
-Je n'ai pas <span class="chord">Dm</span>Change <br/>
-je prends toujours le chemin <span class="chord">Gm</span>qui me plaît. <br/>
-Un seul chemin sur la <span class="chord">Dm</span>terre <br/>
-a réussi à me <span class="chord">A7</span>plaire celui qu'ensemble on <span class="chord">Dm</span>suivait </div>
+Je n'ai pas </span><span class="chord">Dm</span><span class='t2lyric'>changé <br/>
+je suis toujours ce jeune </span><span class="chord">Gm</span><span class='t2lyric'>homme étranger <br/>
+Qui te chantait des </span><span class="chord">Dm</span><span class='t2lyric'>romances <br/>
+Qui t'inventait des </span><span class="chord">A7</span><span class='t2lyric'>dimanches <br/>
+Qui te faisait </span><span class="chord">Dm</span><span class='t2lyric'>voyager <br/>
+Je n'ai pas </span><span class="chord">Dm</span><span class='t2lyric'>changé <br/>
+Je suis toujours ce </span><span class="chord">Gm</span><span class='t2lyric'>garçon un peu fou <br/>
+Mn'était pas assez </span><span class="chord">Dm</span><span class='t2lyric'>riche <br/>
+Pour </span><span class="chord">A7</span><span class='t2lyric'>t'emmener à Cor </span><span class="chord">Dm</span><span class='t2lyric'>fou <br/>
+Et toi non </span><span class="chord">Gm</span><span class='t2lyric'>plus tu n'as pas changé </span><span class="chord">C</span><span class='t2lyric'> <br/>
+Toujours le </span><span class="chord">F</span><span class='t2lyric'>même parfum léger </span><span class="chord">Bb</span><span class='t2lyric'> <br/>
+Toujours le </span><span class="chord">Gm</span><span class='t2lyric'>même petit sourire <br/>
+Qui en dit </span><span class="chord">A7</span><span class='t2lyric'>long sans vraiment le </span><span class="chord">Dm</span><span class='t2lyric'>dire <br/>
+Non toi non </span><span class="chord">Gm</span><span class='t2lyric'>plus tu n'as pas changé </span><span class="chord">C</span><span class='t2lyric'> <br/>
+J'avais en </span><span class="chord">F</span><span class='t2lyric'>vie de te proté ger </span><span class="chord">Bb</span><span class='t2lyric'> <br/>
+De te gar </span><span class="chord">Gm</span><span class='t2lyric'>der, de t'appar tenir <br/>
+J'avais </span><span class="chord">A7</span><span class='t2lyric'>envie de te reve </span><span class="chord">Dm</span><span class='t2lyric'>nir <br/>
+Je n'ai pas </span><span class="chord">Dm</span><span class='t2lyric'>changé <br/>
+je suis toujours l'apprenti </span><span class="chord">Gm</span><span class='t2lyric'>baladin <br/>
+qui t'écrivait des </span><span class="chord">Dm</span><span class='t2lyric'>poèmes <br/>
+qui commençaient par </span><span class="chord">A7</span><span class='t2lyric'>"je t'aime" <br/>
+et finissaient par</span><span class="chord">Dm</span><span class='t2lyric'>"demain". <br/>
+Je n'ai pas </span><span class="chord">Dm</span><span class='t2lyric'>Change <br/>
+je prends toujours le chemin </span><span class="chord">Gm</span><span class='t2lyric'>qui me plaît. <br/>
+Un seul chemin sur la </span><span class="chord">Dm</span><span class='t2lyric'>terre <br/>
+a réussi à me </span><span class="chord">A7</span><span class='t2lyric'>plaire celui qu'ensemble on </span><span class="chord">Dm</span><span class='t2lyric'>suivait </span></div>
 </div>
 </div>
 </div>
@@ -981,18 +1047,24 @@ a réussi à me <span class="chord">A7</span>plaire celui qu'ensemble on <span c
 <div id='row_12a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_12' data-main-id='row_12a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_12' data-main-id='row_12a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_12' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_12' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_12' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_12' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_12' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_12' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_12' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_12' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 12.
@@ -1017,21 +1089,21 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_12b'>Ðêm <span class="chord">Dm</span>khuya mưa <span class="chord">Dm7</span>rơi rơi trên đường <span class="chord">Gm</span>vắng <span class="chord">Gm7</span><br/>
-Ðôi <span class="chord">C</span>chân lang <span class="chord">C7</span>thang tâm tư trầm <span class="chord">F</span>lắng<br/>
-Hạt <span class="chord">A7</span>mưa réo rắt nỗi <span class="chord">Dm</span>buồn cho thế gian <span class="chord">C</span>sầu<br/>
-Thương mối duyên <span class="chord">Bb</span>đầu yêu lứa đôi <span class="chord">A</span>nghèo<br/>
-<span class="chord">G</span>Ðội <span class="chord">A</span>mưa <span class="chord">G</span>mà <span class="chord">A7</span>đi.<br/>
+<div class='lyric' id='row_12b'><span class='t2lyric'>Ðêm </span><span class="chord">Dm</span><span class='t2lyric'>khuya mưa </span><span class="chord">Dm7</span><span class='t2lyric'>rơi rơi trên đường </span><span class="chord">Gm</span><span class='t2lyric'>vắng </span><span class="chord">Gm7</span><span class='t2lyric'><br/>
+Ðôi </span><span class="chord">C</span><span class='t2lyric'>chân lang </span><span class="chord">C7</span><span class='t2lyric'>thang tâm tư trầm </span><span class="chord">F</span><span class='t2lyric'>lắng<br/>
+Hạt </span><span class="chord">A7</span><span class='t2lyric'>mưa réo rắt nỗi </span><span class="chord">Dm</span><span class='t2lyric'>buồn cho thế gian </span><span class="chord">C</span><span class='t2lyric'>sầu<br/>
+Thương mối duyên </span><span class="chord">Bb</span><span class='t2lyric'>đầu yêu lứa đôi </span><span class="chord">A</span><span class='t2lyric'>nghèo<br/>
+</span><span class="chord">G</span><span class='t2lyric'>Ðội </span><span class="chord">A</span><span class='t2lyric'>mưa </span><span class="chord">G</span><span class='t2lyric'>mà </span><span class="chord">A7</span><span class='t2lyric'>đi.<br/>
  <br/>
-Ði <span class="chord">Dm</span>trong đêm <span class="chord">Dm7</span>mưa mưa rơi tầm <span class="chord">Gm</span>tã <span class="chord">Gm7</span><br/>
-Hoang <span class="chord">C</span>mang bâng <span class="chord">C7</span>khuâng ai mong từ <span class="chord">F</span>giã<br/>
-Hạt <span class="chord">A7</span>mưa rơi ướt mi <span class="chord">Dm</span>nàng se thắt tim <span class="chord">C</span>chàng<br/>
-Giây phút ngỡ <span class="chord">Bb</span>ngàng đôi lứa thôi <span class="chord">A</span>đành<br/>
-<span class="chord">Bb</span>Giã <span class="chord">A7</span>từ đêm <span class="chord">Dm</span>mưa.<br/>
+Ði </span><span class="chord">Dm</span><span class='t2lyric'>trong đêm </span><span class="chord">Dm7</span><span class='t2lyric'>mưa mưa rơi tầm </span><span class="chord">Gm</span><span class='t2lyric'>tã </span><span class="chord">Gm7</span><span class='t2lyric'><br/>
+Hoang </span><span class="chord">C</span><span class='t2lyric'>mang bâng </span><span class="chord">C7</span><span class='t2lyric'>khuâng ai mong từ </span><span class="chord">F</span><span class='t2lyric'>giã<br/>
+Hạt </span><span class="chord">A7</span><span class='t2lyric'>mưa rơi ướt mi </span><span class="chord">Dm</span><span class='t2lyric'>nàng se thắt tim </span><span class="chord">C</span><span class='t2lyric'>chàng<br/>
+Giây phút ngỡ </span><span class="chord">Bb</span><span class='t2lyric'>ngàng đôi lứa thôi </span><span class="chord">A</span><span class='t2lyric'>đành<br/>
+</span><span class="chord">Bb</span><span class='t2lyric'>Giã </span><span class="chord">A7</span><span class='t2lyric'>từ đêm </span><span class="chord">Dm</span><span class='t2lyric'>mưa.<br/>
  <br/>
-Ơ ớ ơ ơ <span class="chord">C</span>ờ ơ ớ ơ ơ <span class="chord">Bb</span>ờ<br/>
-Ơ ớ ơ ơ <span class="chord">A</span>ờ <span class="chord">G</span>ơ <span class="chord">A</span>ơ <span class="chord">G</span>ờ <span class="chord">A7</span>ơ<br/>
-<span class="chord">Bb</span>Giã <span class="chord">A7</span>từ đêm <span class="chord">Dm</span>mưa.</div>
+Ơ ớ ơ ơ </span><span class="chord">C</span><span class='t2lyric'>ờ ơ ớ ơ ơ </span><span class="chord">Bb</span><span class='t2lyric'>ờ<br/>
+Ơ ớ ơ ơ </span><span class="chord">A</span><span class='t2lyric'>ờ </span><span class="chord">G</span><span class='t2lyric'>ơ </span><span class="chord">A</span><span class='t2lyric'>ơ </span><span class="chord">G</span><span class='t2lyric'>ờ </span><span class="chord">A7</span><span class='t2lyric'>ơ<br/>
+</span><span class="chord">Bb</span><span class='t2lyric'>Giã </span><span class="chord">A7</span><span class='t2lyric'>từ đêm </span><span class="chord">Dm</span><span class='t2lyric'>mưa.</span></div>
 </div>
 </div>
 </div>
@@ -1042,18 +1114,24 @@ Giây phút ngỡ <span class="chord">Bb</span>ngàng đôi lứa thôi <span cl
 <div id='row_13a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_13' data-main-id='row_13a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_13' data-main-id='row_13a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_13' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_13' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_13' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_13' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_13' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_13' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_13' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_13' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 13.
@@ -1078,41 +1156,41 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_13b'>Tone Dm - Capo ngăn 5 <br/>
+<div class='lyric' id='row_13b'><span class='t2lyric'>Tone Dm - Capo ngăn 5 <br/>
  <br/>
-Tombe la <span class="chord">Dm</span>neige <br/>
-Tu ne viendras pas ce <span class="chord">Gm</span>soir <br/>
-Tombe la <span class="chord">A7</span>neige <br/>
-Et mon cœur s'habille de <span class="chord">Dm</span>noir <span class="chord">D7</span> <br/>
+Tombe la </span><span class="chord">Dm</span><span class='t2lyric'>neige <br/>
+Tu ne viendras pas ce </span><span class="chord">Gm</span><span class='t2lyric'>soir <br/>
+Tombe la </span><span class="chord">A7</span><span class='t2lyric'>neige <br/>
+Et mon cœur s'habille de </span><span class="chord">Dm</span><span class='t2lyric'>noir </span><span class="chord">D7</span><span class='t2lyric'> <br/>
  <br/>
-Ce soyeux <span class="chord">Gm</span>cortège <br/>
-Tout en larmes <span class="chord">Dm</span>blanches <br/>
-L'oiseau sur la <span class="chord">A7</span>branche <br/>
-Pleure le <span class="chord">Dm</span>sortilège <br/>
+Ce soyeux </span><span class="chord">Gm</span><span class='t2lyric'>cortège <br/>
+Tout en larmes </span><span class="chord">Dm</span><span class='t2lyric'>blanches <br/>
+L'oiseau sur la </span><span class="chord">A7</span><span class='t2lyric'>branche <br/>
+Pleure le </span><span class="chord">Dm</span><span class='t2lyric'>sortilège <br/>
  <br/>
-Tu ne viendras pas ce <span class="chord">Gm</span>soir <br/>
-Me crie <span class="chord">A7</span>mon déses <span class="chord">Dm</span>poir <br/>
-Mais tombe la <span class="chord">A7</span>neige <br/>
-Impassible <span class="chord">Dm</span>manège <span class="chord">D7</span> <br/>
+Tu ne viendras pas ce </span><span class="chord">Gm</span><span class='t2lyric'>soir <br/>
+Me crie </span><span class="chord">A7</span><span class='t2lyric'>mon déses </span><span class="chord">Dm</span><span class='t2lyric'>poir <br/>
+Mais tombe la </span><span class="chord">A7</span><span class='t2lyric'>neige <br/>
+Impassible </span><span class="chord">Dm</span><span class='t2lyric'>manège </span><span class="chord">D7</span><span class='t2lyric'> <br/>
  <br/>
-<span class="chord">Gm</span>Lá là <span class="chord">F</span>la la <span class="chord">A7</span>la là la <span class="chord">Dm</span>la <br/>
-<span class="chord">Gm</span>Uhm ùhm <span class="chord">F</span>uhm hum, ùhm uhm <br/>
-<span class="chord">A7</span>huhm, ùhm uhm <span class="chord">Dm</span>uhm <br/>
+</span><span class="chord">Gm</span><span class='t2lyric'>Lá là </span><span class="chord">F</span><span class='t2lyric'>la la </span><span class="chord">A7</span><span class='t2lyric'>la là la </span><span class="chord">Dm</span><span class='t2lyric'>la <br/>
+</span><span class="chord">Gm</span><span class='t2lyric'>Uhm ùhm </span><span class="chord">F</span><span class='t2lyric'>uhm hum, ùhm uhm <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>huhm, ùhm uhm </span><span class="chord">Dm</span><span class='t2lyric'>uhm <br/>
  <br/>
-<span class="chord">Gm</span>Tombe la <span class="chord">Dm</span>neige <br/>
-Tu ne <span class="chord">F</span>viendras pas ce soir <br/>
-Tombe la neige <span class="chord">A7</span> <br/>
-Tout est blanc de désespoir <span class="chord">Dm</span> <br/>
+</span><span class="chord">Gm</span><span class='t2lyric'>Tombe la </span><span class="chord">Dm</span><span class='t2lyric'>neige <br/>
+Tu ne </span><span class="chord">F</span><span class='t2lyric'>viendras pas ce soir <br/>
+Tombe la neige </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Tout est blanc de désespoir </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
-Triste certi <span class="chord">Gm</span>tude <br/>
-Le froid et <span class="chord">Dm</span>l'absence <br/>
-Cet odieux <span class="chord">A7</span>silence <br/>
-Blanche soli <span class="chord">Dm</span>tude <br/>
+Triste certi </span><span class="chord">Gm</span><span class='t2lyric'>tude <br/>
+Le froid et </span><span class="chord">Dm</span><span class='t2lyric'>l'absence <br/>
+Cet odieux </span><span class="chord">A7</span><span class='t2lyric'>silence <br/>
+Blanche soli </span><span class="chord">Dm</span><span class='t2lyric'>tude <br/>
  <br/>
-Tu ne viendras pas ce <span class="chord">Gm</span>soir <br/>
-Me crie <span class="chord">A7</span>mon déses <span class="chord">Dm</span>poir <br/>
-Mais tombe la <span class="chord">A7</span>neige <br/>
-Impassible <span class="chord">Dm</span>manège <span class="chord">D7</span> </div>
+Tu ne viendras pas ce </span><span class="chord">Gm</span><span class='t2lyric'>soir <br/>
+Me crie </span><span class="chord">A7</span><span class='t2lyric'>mon déses </span><span class="chord">Dm</span><span class='t2lyric'>poir <br/>
+Mais tombe la </span><span class="chord">A7</span><span class='t2lyric'>neige <br/>
+Impassible </span><span class="chord">Dm</span><span class='t2lyric'>manège </span><span class="chord">D7</span><span class='t2lyric'> </span></div>
 </div>
 </div>
 </div>
@@ -1123,18 +1201,24 @@ Impassible <span class="chord">Dm</span>manège <span class="chord">D7</span> <
 <div id='row_14a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_14' data-main-id='row_14a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_14' data-main-id='row_14a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_14' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_14' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_14' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_14' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_14' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_14' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_14' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_14' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 14.
@@ -1163,28 +1247,28 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_14b'> <br/>
-<span class="chord">Dm</span>Chiều vàng nghiêng <span class="chord">Gm7</span>nắng <span class="chord">C7</span>mùa thu <span class="chord">Fmaj7</span>xa vắng <br/>
-<span class="chord">Bbmaj7</span>Chiều vàng lá <span class="chord">Bm7b5</span>úa <span class="chord">A7</span>kỷ niệm ngày <span class="chord">Dm</span>xưa. <span class="chord">Dm6</span> <br/>
-Nụ hôn nồng <span class="chord">Gm7</span>ấm <span class="chord">C7</span>một trời thương <span class="chord">Fmaj7</span>nhớ <br/>
-<span class="chord">Bbmaj7</span>Vòng tay ôm <span class="chord">Bm7b5</span>ấp <span class="chord">A7</span>ta vẫn mong <span class="chord">Dm</span>chờ <span class="chord">Gm</span> <span class="chord">Dm</span> <br/>
+<div class='lyric' id='row_14b'><span class='t2lyric'> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Chiều vàng nghiêng </span><span class="chord">Gm7</span><span class='t2lyric'>nắng </span><span class="chord">C7</span><span class='t2lyric'>mùa thu </span><span class="chord">Fmaj7</span><span class='t2lyric'>xa vắng <br/>
+</span><span class="chord">Bbmaj7</span><span class='t2lyric'>Chiều vàng lá </span><span class="chord">Bm7b5</span><span class='t2lyric'>úa </span><span class="chord">A7</span><span class='t2lyric'>kỷ niệm ngày </span><span class="chord">Dm</span><span class='t2lyric'>xưa. </span><span class="chord">Dm6</span><span class='t2lyric'> <br/>
+Nụ hôn nồng </span><span class="chord">Gm7</span><span class='t2lyric'>ấm </span><span class="chord">C7</span><span class='t2lyric'>một trời thương </span><span class="chord">Fmaj7</span><span class='t2lyric'>nhớ <br/>
+</span><span class="chord">Bbmaj7</span><span class='t2lyric'>Vòng tay ôm </span><span class="chord">Bm7b5</span><span class='t2lyric'>ấp </span><span class="chord">A7</span><span class='t2lyric'>ta vẫn mong </span><span class="chord">Dm</span><span class='t2lyric'>chờ </span><span class="chord">Gm</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
-Và thời <span class="chord">A7</span>gian ngừng trôi khi đôi mình xa <span class="chord">Dm</span>cách <br/>
-Cho lá vàng rụng <span class="chord">Gm7</span>rơi <span class="chord">C7</span>àm héo hắt môi <span class="chord">Fmaj7</span>cười <br/>
-<span class="chord">D7</span>Mùa thu <span class="chord">Gm6</span>úa lá thu rơi <span class="chord">A7</span>đầy mãi <span class="chord">Dm</span>heo mây <span class="chord">Dmmaj7Am7</span> <span class="chord">Dm6</span> <br/>
-Gợi <span class="chord">Eb</span>nhớ nhung <span class="chord">A7</span>trên dốc tình <span class="chord">Dm</span>tôi <span class="chord">Gm</span> <span class="chord">Dm</span> <br/>
+Và thời </span><span class="chord">A7</span><span class='t2lyric'>gian ngừng trôi khi đôi mình xa </span><span class="chord">Dm</span><span class='t2lyric'>cách <br/>
+Cho lá vàng rụng </span><span class="chord">Gm7</span><span class='t2lyric'>rơi </span><span class="chord">C7</span><span class='t2lyric'>àm héo hắt môi </span><span class="chord">Fmaj7</span><span class='t2lyric'>cười <br/>
+</span><span class="chord">D7</span><span class='t2lyric'>Mùa thu </span><span class="chord">Gm6</span><span class='t2lyric'>úa lá thu rơi </span><span class="chord">A7</span><span class='t2lyric'>đầy mãi </span><span class="chord">Dm</span><span class='t2lyric'>heo mây </span><span class="chord">Dmmaj7Am7</span><span class='t2lyric'> </span><span class="chord">Dm6</span><span class='t2lyric'> <br/>
+Gợi </span><span class="chord">Eb</span><span class='t2lyric'>nhớ nhung </span><span class="chord">A7</span><span class='t2lyric'>trên dốc tình </span><span class="chord">Dm</span><span class='t2lyric'>tôi </span><span class="chord">Gm</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
 <hr/>------------------- <br/>
  <br/>
-<span class="chord">Dm</span>The falling <span class="chord">Gm7</span>leaves <span class="chord">C7</span>drift by the <span class="chord">Fmaj7</span>window <br/>
-<span class="chord">Bbmaj7</span>The Autumn <span class="chord">A7</span>leaves of red and <span class="chord">Dm</span>gold <br/>
-I see your <span class="chord">Gm7</span>lips <span class="chord">C7</span>the summer <span class="chord">Fmaj7</span>kisses <br/>
-<span class="chord">Bbmaj7</span>The sun <span class="chord">Gm</span>burned <span class="chord">A7</span>hands I used to <span class="chord">Dm</span>hold <span class="chord">Gm</span> <span class="chord">Dm</span> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>The falling </span><span class="chord">Gm7</span><span class='t2lyric'>leaves </span><span class="chord">C7</span><span class='t2lyric'>drift by the </span><span class="chord">Fmaj7</span><span class='t2lyric'>window <br/>
+</span><span class="chord">Bbmaj7</span><span class='t2lyric'>The Autumn </span><span class="chord">A7</span><span class='t2lyric'>leaves of red and </span><span class="chord">Dm</span><span class='t2lyric'>gold <br/>
+I see your </span><span class="chord">Gm7</span><span class='t2lyric'>lips </span><span class="chord">C7</span><span class='t2lyric'>the summer </span><span class="chord">Fmaj7</span><span class='t2lyric'>kisses <br/>
+</span><span class="chord">Bbmaj7</span><span class='t2lyric'>The sun </span><span class="chord">Gm</span><span class='t2lyric'>burned </span><span class="chord">A7</span><span class='t2lyric'>hands I used to </span><span class="chord">Dm</span><span class='t2lyric'>hold </span><span class="chord">Gm</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
-Since you <span class="chord">A7</span>went away the days grow <span class="chord">Dm</span>long <br/>
-And soon I'll <span class="chord">Gm7</span>hear <span class="chord">C7</span>old winter's <span class="chord">Fmaj7</span>song <br/>
-<span class="chord">D7</span>But I <span class="chord">Gm6</span>miss you most of <span class="chord">A7</span>all my <span class="chord">Dm</span>darling <span class="chord">C</span> <span class="chord">Bb</span> <br/>
-When <span class="chord">Eb</span>Autumn <span class="chord">A7</span>leaves start to <span class="chord">Dm</span>fall <span class="chord">Gm</span> <span class="chord">Dm</span> </div>
+Since you </span><span class="chord">A7</span><span class='t2lyric'>went away the days grow </span><span class="chord">Dm</span><span class='t2lyric'>long <br/>
+And soon I'll </span><span class="chord">Gm7</span><span class='t2lyric'>hear </span><span class="chord">C7</span><span class='t2lyric'>old winter's </span><span class="chord">Fmaj7</span><span class='t2lyric'>song <br/>
+</span><span class="chord">D7</span><span class='t2lyric'>But I </span><span class="chord">Gm6</span><span class='t2lyric'>miss you most of </span><span class="chord">A7</span><span class='t2lyric'>all my </span><span class="chord">Dm</span><span class='t2lyric'>darling </span><span class="chord">C</span><span class='t2lyric'> </span><span class="chord">Bb</span><span class='t2lyric'> <br/>
+When </span><span class="chord">Eb</span><span class='t2lyric'>Autumn </span><span class="chord">A7</span><span class='t2lyric'>leaves start to </span><span class="chord">Dm</span><span class='t2lyric'>fall </span><span class="chord">Gm</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> </span></div>
 </div>
 </div>
 </div>
@@ -1195,21 +1279,27 @@ When <span class="chord">Eb</span>Autumn <span class="chord">A7</span>leaves sta
 <div id='row_15a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_15' data-main-id='row_15a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_15' data-main-id='row_15a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_15' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_15' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
 <button class='btn btn-outline-primary' data-lyric-id='row_15' data-main-id='row_15a' data-vindex='0' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
 <i class='fa fa-headphones'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_15' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_15' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_15' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_15' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_15' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_15' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 15.
@@ -1253,33 +1343,33 @@ Trans: 2
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_15b'> <br/>
-(1) Rồi <span class="chord">D7</span>cũng về lại phố <span class="chord">Gm</span>xưa <br/>
-<span class="chord">Gm7</span>Về trong mùa <span class="chord">Em7b5</span>thu <span class="chord">A</span>bồi hồi làn mưa lối <span class="chord">Dm</span>vắng <br/>
-Rồi <span class="chord">D7</span>cũng về lại phố <span class="chord">Gm</span>quen <br/>
-Về trong tình <span class="chord">Em7b5</span>em <span class="chord">A</span>dịu dàng, <span class="chord">Dm</span>dịu dàng <span class="chord">A</span> <br/>
+<div class='lyric' id='row_15b'><span class='t2lyric'> <br/>
+(1) Rồi </span><span class="chord">D7</span><span class='t2lyric'>cũng về lại phố </span><span class="chord">Gm</span><span class='t2lyric'>xưa <br/>
+</span><span class="chord">Gm7</span><span class='t2lyric'>Về trong mùa </span><span class="chord">Em7b5</span><span class='t2lyric'>thu </span><span class="chord">A</span><span class='t2lyric'>bồi hồi làn mưa lối </span><span class="chord">Dm</span><span class='t2lyric'>vắng <br/>
+Rồi </span><span class="chord">D7</span><span class='t2lyric'>cũng về lại phố </span><span class="chord">Gm</span><span class='t2lyric'>quen <br/>
+Về trong tình </span><span class="chord">Em7b5</span><span class='t2lyric'>em </span><span class="chord">A</span><span class='t2lyric'>dịu dàng, </span><span class="chord">Dm</span><span class='t2lyric'>dịu dàng </span><span class="chord">A</span><span class='t2lyric'> <br/>
  <br/>
-(2) Lại đi bên <span class="chord">Dm</span>em bình yên, bình <span class="chord">Gm7</span>yên <br/>
-Cơn gió <span class="chord">C</span>lang thang về chốn quê <span class="chord">Fmaj7</span>nhà <br/>
-Lại nghe con <span class="chord">Gm</span>sông <span class="chord">Gmmaj7</span>từng đêm, <span class="chord">Bb</span>từng đêm <br/>
-<span class="chord">Em7b5</span>Rì rào bên <span class="chord">C7</span>ta nỗi nhớ <span class="chord">Fmaj7</span>khơi xa <span class="chord">A</span> <br/>
+(2) Lại đi bên </span><span class="chord">Dm</span><span class='t2lyric'>em bình yên, bình </span><span class="chord">Gm7</span><span class='t2lyric'>yên <br/>
+Cơn gió </span><span class="chord">C</span><span class='t2lyric'>lang thang về chốn quê </span><span class="chord">Fmaj7</span><span class='t2lyric'>nhà <br/>
+Lại nghe con </span><span class="chord">Gm</span><span class='t2lyric'>sông </span><span class="chord">Gmmaj7</span><span class='t2lyric'>từng đêm, </span><span class="chord">Bb</span><span class='t2lyric'>từng đêm <br/>
+</span><span class="chord">Em7b5</span><span class='t2lyric'>Rì rào bên </span><span class="chord">C7</span><span class='t2lyric'>ta nỗi nhớ </span><span class="chord">Fmaj7</span><span class='t2lyric'>khơi xa </span><span class="chord">A</span><span class='t2lyric'> <br/>
  <br/>
-(3) Lại nghe yêu <span class="chord">Dm</span>thương trào dâng lòng <span class="chord">Gm7</span>ta <br/>
-Và nghe khát <span class="chord">C</span>khao trong tiếng em <span class="chord">Fmaj7</span>cười <br/>
-Dù <span class="chord">D7</span>mãi cách xa người <span class="chord">Gm</span>ơi <br/>
-Tình yêu <span class="chord">Gm6</span>này vẫn <span class="chord">Am7</span>còn mãi trong <span class="chord">Dm</span>tôi <br/>
+(3) Lại nghe yêu </span><span class="chord">Dm</span><span class='t2lyric'>thương trào dâng lòng </span><span class="chord">Gm7</span><span class='t2lyric'>ta <br/>
+Và nghe khát </span><span class="chord">C</span><span class='t2lyric'>khao trong tiếng em </span><span class="chord">Fmaj7</span><span class='t2lyric'>cười <br/>
+Dù </span><span class="chord">D7</span><span class='t2lyric'>mãi cách xa người </span><span class="chord">Gm</span><span class='t2lyric'>ơi <br/>
+Tình yêu </span><span class="chord">Gm6</span><span class='t2lyric'>này vẫn </span><span class="chord">Am7</span><span class='t2lyric'>còn mãi trong </span><span class="chord">Dm</span><span class='t2lyric'>tôi <br/>
  <br/>
 (1) (2) <br/>
  <br/>
-(4) Về đi bên <span class="chord">Dm</span>nhau cùng bao buồn <span class="chord">Gm7</span>vui <br/>
-Sau những tháng <span class="chord">C</span>năm ở chốn quê <span class="chord">Fmaj7</span>người <br/>
-Dù <span class="chord">D7</span>mãi cách xa người <span class="chord">Gm</span>ơi <br/>
-Tình yêu <span class="chord">Gm6</span>này vẫn <span class="chord">Am7</span>còn mãi trong <span class="chord">Dm</span>tôi <br/>
+(4) Về đi bên </span><span class="chord">Dm</span><span class='t2lyric'>nhau cùng bao buồn </span><span class="chord">Gm7</span><span class='t2lyric'>vui <br/>
+Sau những tháng </span><span class="chord">C</span><span class='t2lyric'>năm ở chốn quê </span><span class="chord">Fmaj7</span><span class='t2lyric'>người <br/>
+Dù </span><span class="chord">D7</span><span class='t2lyric'>mãi cách xa người </span><span class="chord">Gm</span><span class='t2lyric'>ơi <br/>
+Tình yêu </span><span class="chord">Gm6</span><span class='t2lyric'>này vẫn </span><span class="chord">Am7</span><span class='t2lyric'>còn mãi trong </span><span class="chord">Dm</span><span class='t2lyric'>tôi <br/>
  <br/>
 (1) <br/>
  <br/>
-Về trong tình <span class="chord">A</span>em dịu dàng, <span class="chord">Dm</span>dịu dàng <br/>
- </div>
+Về trong tình </span><span class="chord">A</span><span class='t2lyric'>em dịu dàng, </span><span class="chord">Dm</span><span class='t2lyric'>dịu dàng <br/>
+ </span></div>
 </div>
 </div>
 </div>
@@ -1290,18 +1380,24 @@ Về trong tình <span class="chord">A</span>em dịu dàng, <span class="chord"
 <div id='row_16a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_16' data-main-id='row_16a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_16' data-main-id='row_16a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_16' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_16' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_16' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_16' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_16' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_16' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_16' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_16' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 16.
@@ -1326,26 +1422,26 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_16b'> <br/>
-1. <span class="chord">Dm</span>Này cô bé mang kiếp <span class="chord">Gm</span>xa nhà <br/>
-<span class="chord">A</span>Rời đất nước một sớm <span class="chord">Dm</span>u buồn <br/>
-<span class="chord">C</span>Bỏ giòng <span class="chord">Gm</span>sông yêu thương thuở <span class="chord">F</span>ấy <br/>
-Bỏ con <span class="chord">A</span>đường vào làng <span class="chord">A7</span>nên thơ <br/>
+<div class='lyric' id='row_16b'><span class='t2lyric'> <br/>
+1. </span><span class="chord">Dm</span><span class='t2lyric'>Này cô bé mang kiếp </span><span class="chord">Gm</span><span class='t2lyric'>xa nhà <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Rời đất nước một sớm </span><span class="chord">Dm</span><span class='t2lyric'>u buồn <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Bỏ giòng </span><span class="chord">Gm</span><span class='t2lyric'>sông yêu thương thuở </span><span class="chord">F</span><span class='t2lyric'>ấy <br/>
+Bỏ con </span><span class="chord">A</span><span class='t2lyric'>đường vào làng </span><span class="chord">A7</span><span class='t2lyric'>nên thơ <br/>
  <br/>
-2. Và cuộc sống lang thang <span class="chord">Gm</span>xứ người <br/>
-<span class="chord">A</span>Nhiều cay đắng xót xa <span class="chord">Dm</span>giữa đời <br/>
-<span class="chord">C</span>Nào ngờ <span class="chord">Gm</span>đâu tương lai mờ <span class="chord">F</span>lối <br/>
-Đến bây <span class="chord">A7</span>giờ một mình <span class="chord">Dm</span>đơn côi <span class="chord">G</span> <span class="chord">Dm</span> <br/>
+2. Và cuộc sống lang thang </span><span class="chord">Gm</span><span class='t2lyric'>xứ người <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Nhiều cay đắng xót xa </span><span class="chord">Dm</span><span class='t2lyric'>giữa đời <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Nào ngờ </span><span class="chord">Gm</span><span class='t2lyric'>đâu tương lai mờ </span><span class="chord">F</span><span class='t2lyric'>lối <br/>
+Đến bây </span><span class="chord">A7</span><span class='t2lyric'>giờ một mình </span><span class="chord">Dm</span><span class='t2lyric'>đơn côi </span><span class="chord">G</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
-ĐK: <span class="chord">Bb</span>Nhớ thương về <span class="chord">Am</span>quê xa <br/>
-<span class="chord">A</span>Nhớ thương mẹ <span class="chord">Gm</span>cha <span class="chord">C</span>đang héo <span class="chord">Dm</span>mòn <span class="chord">D</span> <br/>
-<span class="chord">Gm</span>Tiếc thay đời <span class="chord">F</span>em nay <br/>
-<span class="chord">Dm</span>Dở dang và <span class="chord">Gm</span>bơ vơ <span class="chord">A</span>không lối <span class="chord">Dm</span>về <span class="chord">C</span> <span class="chord">Dm</span> <br/>
+ĐK: </span><span class="chord">Bb</span><span class='t2lyric'>Nhớ thương về </span><span class="chord">Am</span><span class='t2lyric'>quê xa <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Nhớ thương mẹ </span><span class="chord">Gm</span><span class='t2lyric'>cha </span><span class="chord">C</span><span class='t2lyric'>đang héo </span><span class="chord">Dm</span><span class='t2lyric'>mòn </span><span class="chord">D</span><span class='t2lyric'> <br/>
+</span><span class="chord">Gm</span><span class='t2lyric'>Tiếc thay đời </span><span class="chord">F</span><span class='t2lyric'>em nay <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Dở dang và </span><span class="chord">Gm</span><span class='t2lyric'>bơ vơ </span><span class="chord">A</span><span class='t2lyric'>không lối </span><span class="chord">Dm</span><span class='t2lyric'>về </span><span class="chord">C</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
-3. Rồi cô bé mơ ước <span class="chord">Gm</span>một ngày <br/>
-<span class="chord">A</span>Tình yêu đến trong giấc <span class="chord">Dm</span>mơ dài <br/>
-<span class="chord">C</span>Để lòng <span class="chord">Gm</span>em quên đi mật <span class="chord">F</span>đắng <br/>
-Gót chân <span class="chord">A7</span>hồng thôi hết <span class="chord">Dm</span>phiêu du <span class="chord">G</span> <span class="chord">Dm</span> </div>
+3. Rồi cô bé mơ ước </span><span class="chord">Gm</span><span class='t2lyric'>một ngày <br/>
+</span><span class="chord">A</span><span class='t2lyric'>Tình yêu đến trong giấc </span><span class="chord">Dm</span><span class='t2lyric'>mơ dài <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Để lòng </span><span class="chord">Gm</span><span class='t2lyric'>em quên đi mật </span><span class="chord">F</span><span class='t2lyric'>đắng <br/>
+Gót chân </span><span class="chord">A7</span><span class='t2lyric'>hồng thôi hết </span><span class="chord">Dm</span><span class='t2lyric'>phiêu du </span><span class="chord">G</span><span class='t2lyric'> </span><span class="chord">Dm</span><span class='t2lyric'> </span></div>
 </div>
 </div>
 </div>
@@ -1356,21 +1452,27 @@ Gót chân <span class="chord">A7</span>hồng thôi hết <span class="chord">D
 <div id='row_17a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_17' data-main-id='row_17a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_17' data-main-id='row_17a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_17' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_17' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
 <button class='btn btn-outline-primary' data-lyric-id='row_17' data-main-id='row_17a' data-vindex='1' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
 <i class='fa fa-headphones'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_17' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_17' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_17' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_17' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_17' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_17' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 17.
@@ -1414,43 +1516,43 @@ Trans: 3
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_17b'> <br/>
-1. <span class="chord">Dm</span>Nỗi nhớ đến giữa đêm <span class="chord">E7</span>thật sâu <span class="chord">A7</span> <br/>
-Em thương yêu ơi biết em <span class="chord">Dm</span>về đâu <br/>
-Có lúc muốn nói với nhau <span class="chord">Gm</span>vài câu <br/>
-<span class="chord">E7</span>Cho con tim này biết quên <span class="chord">A7</span>u sầu. <br/>
+<div class='lyric' id='row_17b'><span class='t2lyric'> <br/>
+1. </span><span class="chord">Dm</span><span class='t2lyric'>Nỗi nhớ đến giữa đêm </span><span class="chord">E7</span><span class='t2lyric'>thật sâu </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Em thương yêu ơi biết em </span><span class="chord">Dm</span><span class='t2lyric'>về đâu <br/>
+Có lúc muốn nói với nhau </span><span class="chord">Gm</span><span class='t2lyric'>vài câu <br/>
+</span><span class="chord">E7</span><span class='t2lyric'>Cho con tim này biết quên </span><span class="chord">A7</span><span class='t2lyric'>u sầu. <br/>
  <br/>
-<span class="chord">Dm</span>Còn đó thành phố mưa chiều <span class="chord">Gm6</span>vắng không <span class="chord">A7</span> <br/>
-Còn đâu mùa đông buông làn <span class="chord">Dm</span>khói sương <br/>
-Còn đó câu hát nghe lòng <span class="chord">Gm</span>vấn vương <span class="chord">C</span> <br/>
-Mà nào đâu thấy dáng người <span class="chord">Fmaj7</span>mến thương. <span class="chord">Bbmaj7</span> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Còn đó thành phố mưa chiều </span><span class="chord">Gm6</span><span class='t2lyric'>vắng không </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Còn đâu mùa đông buông làn </span><span class="chord">Dm</span><span class='t2lyric'>khói sương <br/>
+Còn đó câu hát nghe lòng </span><span class="chord">Gm</span><span class='t2lyric'>vấn vương </span><span class="chord">C</span><span class='t2lyric'> <br/>
+Mà nào đâu thấy dáng người </span><span class="chord">Fmaj7</span><span class='t2lyric'>mến thương. </span><span class="chord">Bbmaj7</span><span class='t2lyric'> <br/>
  <br/>
-Nghe những nuối tiếc dâng đầy <span class="chord">Em7b5</span>xót xa <span class="chord">A7</span> <br/>
-Thương nhớ đã có giây phút <span class="chord">Dm</span>phai nhòa <br/>
-Tôi đi tìm những ước mơ nào <span class="chord">E7</span>đã qua <span class="chord">A7</span> <br/>
-Chỉ có làn mưa theo từng <span class="chord">Dm</span>bước chân. <span class="chord">D7</span> <br/>
+Nghe những nuối tiếc dâng đầy </span><span class="chord">Em7b5</span><span class='t2lyric'>xót xa </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Thương nhớ đã có giây phút </span><span class="chord">Dm</span><span class='t2lyric'>phai nhòa <br/>
+Tôi đi tìm những ước mơ nào </span><span class="chord">E7</span><span class='t2lyric'>đã qua </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Chỉ có làn mưa theo từng </span><span class="chord">Dm</span><span class='t2lyric'>bước chân. </span><span class="chord">D7</span><span class='t2lyric'> <br/>
  <br/>
-DK: Người <span class="chord">Gm</span>hỡi <span class="chord">C</span>khi mình xa cách đôi lòng <span class="chord">Fmaj7</span>giá băng <br/>
-Em <span class="chord">Em7b5</span>đi <span class="chord">A7</span>không chút vương vấn cho nhau <span class="chord">Dm</span>một lần <br/>
-Em <span class="chord">Gm</span>đi <span class="chord">C</span>em giờ như bóng con tàu <span class="chord">Fmaj7</span>khuất xa <br/>
-Ra <span class="chord">Em7b5</span>đi <span class="chord">A7</span>mang những yêu dấu chôn sâu <span class="chord">Dm</span>trong lòng. <br/>
+DK: Người </span><span class="chord">Gm</span><span class='t2lyric'>hỡi </span><span class="chord">C</span><span class='t2lyric'>khi mình xa cách đôi lòng </span><span class="chord">Fmaj7</span><span class='t2lyric'>giá băng <br/>
+Em </span><span class="chord">Em7b5</span><span class='t2lyric'>đi </span><span class="chord">A7</span><span class='t2lyric'>không chút vương vấn cho nhau </span><span class="chord">Dm</span><span class='t2lyric'>một lần <br/>
+Em </span><span class="chord">Gm</span><span class='t2lyric'>đi </span><span class="chord">C</span><span class='t2lyric'>em giờ như bóng con tàu </span><span class="chord">Fmaj7</span><span class='t2lyric'>khuất xa <br/>
+Ra </span><span class="chord">Em7b5</span><span class='t2lyric'>đi </span><span class="chord">A7</span><span class='t2lyric'>mang những yêu dấu chôn sâu </span><span class="chord">Dm</span><span class='t2lyric'>trong lòng. <br/>
  <br/>
-Ôi những đêm dài hoài <span class="chord">E7</span>nhớ thương <span class="chord">A7</span> <br/>
-Nghe như đâu đây tiếng em <span class="chord">Dm</span>đi về. <br/>
+Ôi những đêm dài hoài </span><span class="chord">E7</span><span class='t2lyric'>nhớ thương </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Nghe như đâu đây tiếng em </span><span class="chord">Dm</span><span class='t2lyric'>đi về. <br/>
  <br/>
 (Giang Tau) <br/>
  <br/>
-2. Một phút xa cách cũng là <span class="chord">Gm</span>trăm năm <span class="chord">A7</span> <br/>
-Dù giữa nắng ấm vẫn là <span class="chord">Dm</span>bóng đêm <br/>
-Ngồi thắp nến nhớ trăm ngọn <span class="chord">Gm</span>nến xanh <span class="chord">C</span> <br/>
-Mà hình cũ vẫn còn <span class="chord">Fmaj7</span>quẩn quanh. <span class="chord">Bbmaj7</span> <br/>
+2. Một phút xa cách cũng là </span><span class="chord">Gm</span><span class='t2lyric'>trăm năm </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Dù giữa nắng ấm vẫn là </span><span class="chord">Dm</span><span class='t2lyric'>bóng đêm <br/>
+Ngồi thắp nến nhớ trăm ngọn </span><span class="chord">Gm</span><span class='t2lyric'>nến xanh </span><span class="chord">C</span><span class='t2lyric'> <br/>
+Mà hình cũ vẫn còn </span><span class="chord">Fmaj7</span><span class='t2lyric'>quẩn quanh. </span><span class="chord">Bbmaj7</span><span class='t2lyric'> <br/>
  <br/>
-Nghe những nuối tiếc dâng đầy <span class="chord">Gm</span>xót xa <span class="chord">A7</span> <br/>
-Thương nhớ đã có giấy phút <span class="chord">Dm</span>phai nhoà <br/>
-Tôi đi tìm những uớc mơ nào <span class="chord">E7</span>đã qua <span class="chord">A7</span> <br/>
-Chỉ có làn mưa theo từng <span class="chord">Dm</span>bước chân. <br/>
+Nghe những nuối tiếc dâng đầy </span><span class="chord">Gm</span><span class='t2lyric'>xót xa </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Thương nhớ đã có giấy phút </span><span class="chord">Dm</span><span class='t2lyric'>phai nhoà <br/>
+Tôi đi tìm những uớc mơ nào </span><span class="chord">E7</span><span class='t2lyric'>đã qua </span><span class="chord">A7</span><span class='t2lyric'> <br/>
+Chỉ có làn mưa theo từng </span><span class="chord">Dm</span><span class='t2lyric'>bước chân. <br/>
  <br/>
-(DK) </div>
+(DK) </span></div>
 </div>
 </div>
 </div>
@@ -1461,18 +1563,24 @@ Chỉ có làn mưa theo từng <span class="chord">Dm</span>bước chân. <br
 <div id='row_18a'>
 <div class='row song_header'>
 <div class='col-6'>
-<button class='btn btn-outline-primary' data-lyric-id='row_18' data-main-id='row_18a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_18' data-main-id='row_18a' data-vindex='-1' onclick='pe_playVideo(this)' role='button' title='Show lyric' type='button'>
 <i class='fa fa-music'></i>
 Lyric
 </button>
-<button class='btn btn-outline-primary' data-lyric-id='row_18' onclick='pe_toggle_chord(this)' role='button' type='button'>
+<button class='btn btn-outline-primary' data-lyric-id='row_18' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_18' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_18' data-toggle='tooltip' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
 </button>
-<button class='btn btn-outline-secondary' data-lyric-id='row_18' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
+<button class='btn btn-outline-secondary' data-lyric-id='row_18' data-toggle='tooltip' onclick='pe_transpose(this, 1)' role='button' title='Transpose up 1/2 tone'>
 <i class='fa fa-arrow-up'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_18' data-toggle='tooltip' onclick='pe_font(this, 0.85)' role='button' title='Font small'>
+<i class='fa fa-search-minus'></i>
+</button>
+<button class='btn btn-outline-secondary' data-lyric-id='row_18' data-toggle='tooltip' onclick='pe_font(this, 1.2)' role='button' title='Font large'>
+<i class='fa fa-search-plus'></i>
 </button>
 <h5>
 18.
@@ -1497,39 +1605,39 @@ hoa-tau
 </div>
 <div class='row'>
 <div class='col'>
-<div class='lyric' id='row_18b'><span class="chord">Dm</span>I fell in love with you watching Casa <span class="chord">Gm</span>blanca <br/>
-<span class="chord">C</span>Back row of the drive in show in the <span class="chord">F</span>flickering light <br/>
-<span class="chord">A7</span>Popcorn and cokes beneath the stars <span class="chord">Dm</span>became champagne and <span class="chord">Gm</span>caviar <br/>
-<span class="chord">C</span>Making love on a <span class="chord">C</span>long hot summers <span class="chord">Dm</span>night. <br/>
+<div class='lyric' id='row_18b'><span class='t2lyric'></span><span class="chord">Dm</span><span class='t2lyric'>I fell in love with you watching Casa </span><span class="chord">Gm</span><span class='t2lyric'>blanca <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Back row of the drive in show in the </span><span class="chord">F</span><span class='t2lyric'>flickering light <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Popcorn and cokes beneath the stars </span><span class="chord">Dm</span><span class='t2lyric'>became champagne and </span><span class="chord">Gm</span><span class='t2lyric'>caviar <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Making love on a </span><span class="chord">C</span><span class='t2lyric'>long hot summers </span><span class="chord">Dm</span><span class='t2lyric'>night. <br/>
  <br/>
-<span class="chord">Dm</span>I thought you fell in love with me watching Casa <span class="chord">Gm</span>blance <br/>
-<span class="chord">C</span>Holding hands 'neath the paddle fans in Rick's <span class="chord">F</span>Candle lit cafe <br/>
-<span class="chord">A7</span>Hiding in the shadows from the spies. <span class="chord">Dm</span>Moroccan moonlight <span class="chord">Gm</span>in your eyes <br/>
-Making <span class="chord">C</span>magic at the movies in <span class="chord">C</span>my old chevro <span class="chord">Dm</span>let. <br/>
- <br/>
-Chorus <br/>
-Oh! A <span class="chord">Gm</span>kiss is still a <span class="chord">C</span>kiss in Casa <span class="chord">F</span>blanca......<span class="chord">D7</span> <br/>
-But a <span class="chord">Gm</span>kiss is not a <span class="chord">C</span>kiss without your <span class="chord">F</span>sigh <br/>
-<span class="chord">Dm</span>Please come back to me in Casa <span class="chord">Gm</span>blanca <br/>
-<span class="chord">C</span>I love you more and more each day as time goes <span class="chord">Dm</span>by. <br/>
- <br/>
-<span class="chord">Dm</span>I guess there're many broken hearts in Casa <span class="chord">Gm</span>blanca <br/>
-<span class="chord">C</span>You know I've never really been there. so, I don't <span class="chord">F</span>know <br/>
-<span class="chord">A7</span>I guess our love story will never be seen <span class="chord">Dm</span>on the big wide <span class="chord">Gm</span>silver screen <br/>
-But it <span class="chord">C</span>hurt just as bad when I <span class="chord">Am</span>had to watch you go. <span class="chord">Dm</span> <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>I thought you fell in love with me watching Casa </span><span class="chord">Gm</span><span class='t2lyric'>blance <br/>
+</span><span class="chord">C</span><span class='t2lyric'>Holding hands 'neath the paddle fans in Rick's </span><span class="chord">F</span><span class='t2lyric'>Candle lit cafe <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>Hiding in the shadows from the spies. </span><span class="chord">Dm</span><span class='t2lyric'>Moroccan moonlight </span><span class="chord">Gm</span><span class='t2lyric'>in your eyes <br/>
+Making </span><span class="chord">C</span><span class='t2lyric'>magic at the movies in </span><span class="chord">C</span><span class='t2lyric'>my old chevro </span><span class="chord">Dm</span><span class='t2lyric'>let. <br/>
  <br/>
 Chorus <br/>
-Oh! A <span class="chord">Gm</span>kiss is still a <span class="chord">C</span>kiss in Casa <span class="chord">F</span>blanca <span class="chord">D7</span> <br/>
-But a <span class="chord">Gm</span>kiss is not a <span class="chord">C</span>kiss without your <span class="chord">F</span>sigh <br/>
-<span class="chord">Dm</span>Please come back to me in Casa <span class="chord">Gm</span>blanca <br/>
-<span class="chord">C</span>I love you more and more each <span class="chord">Am</span>day as time goes <span class="chord">Dm</span>by. <br/>
+Oh! A </span><span class="chord">Gm</span><span class='t2lyric'>kiss is still a </span><span class="chord">C</span><span class='t2lyric'>kiss in Casa </span><span class="chord">F</span><span class='t2lyric'>blanca......</span><span class="chord">D7</span><span class='t2lyric'> <br/>
+But a </span><span class="chord">Gm</span><span class='t2lyric'>kiss is not a </span><span class="chord">C</span><span class='t2lyric'>kiss without your </span><span class="chord">F</span><span class='t2lyric'>sigh <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Please come back to me in Casa </span><span class="chord">Gm</span><span class='t2lyric'>blanca <br/>
+</span><span class="chord">C</span><span class='t2lyric'>I love you more and more each day as time goes </span><span class="chord">Dm</span><span class='t2lyric'>by. <br/>
+ <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>I guess there're many broken hearts in Casa </span><span class="chord">Gm</span><span class='t2lyric'>blanca <br/>
+</span><span class="chord">C</span><span class='t2lyric'>You know I've never really been there. so, I don't </span><span class="chord">F</span><span class='t2lyric'>know <br/>
+</span><span class="chord">A7</span><span class='t2lyric'>I guess our love story will never be seen </span><span class="chord">Dm</span><span class='t2lyric'>on the big wide </span><span class="chord">Gm</span><span class='t2lyric'>silver screen <br/>
+But it </span><span class="chord">C</span><span class='t2lyric'>hurt just as bad when I </span><span class="chord">Am</span><span class='t2lyric'>had to watch you go. </span><span class="chord">Dm</span><span class='t2lyric'> <br/>
  <br/>
 Chorus <br/>
-Oh! A <span class="chord">Gm</span>kiss is still a <span class="chord">C</span>kiss in Casa <span class="chord">F</span>blanca <span class="chord">D7</span> <br/>
-But a <span class="chord">Gm</span>kiss is not a <span class="chord">C</span>kiss without your <span class="chord">F</span>sigh <br/>
-<span class="chord">Dm</span>Please come back to me in Casa <span class="chord">Gm</span>blanca <br/>
-<span class="chord">C</span>I love you more and more each <span class="chord">Am</span>day as time goes <span class="chord">Dm</span>by <br/>
-I <span class="chord">Gm</span>love you more and more each <span class="chord">C</span>day as time goes <span class="chord">Dm</span>by. </div>
+Oh! A </span><span class="chord">Gm</span><span class='t2lyric'>kiss is still a </span><span class="chord">C</span><span class='t2lyric'>kiss in Casa </span><span class="chord">F</span><span class='t2lyric'>blanca </span><span class="chord">D7</span><span class='t2lyric'> <br/>
+But a </span><span class="chord">Gm</span><span class='t2lyric'>kiss is not a </span><span class="chord">C</span><span class='t2lyric'>kiss without your </span><span class="chord">F</span><span class='t2lyric'>sigh <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Please come back to me in Casa </span><span class="chord">Gm</span><span class='t2lyric'>blanca <br/>
+</span><span class="chord">C</span><span class='t2lyric'>I love you more and more each </span><span class="chord">Am</span><span class='t2lyric'>day as time goes </span><span class="chord">Dm</span><span class='t2lyric'>by. <br/>
+ <br/>
+Chorus <br/>
+Oh! A </span><span class="chord">Gm</span><span class='t2lyric'>kiss is still a </span><span class="chord">C</span><span class='t2lyric'>kiss in Casa </span><span class="chord">F</span><span class='t2lyric'>blanca </span><span class="chord">D7</span><span class='t2lyric'> <br/>
+But a </span><span class="chord">Gm</span><span class='t2lyric'>kiss is not a </span><span class="chord">C</span><span class='t2lyric'>kiss without your </span><span class="chord">F</span><span class='t2lyric'>sigh <br/>
+</span><span class="chord">Dm</span><span class='t2lyric'>Please come back to me in Casa </span><span class="chord">Gm</span><span class='t2lyric'>blanca <br/>
+</span><span class="chord">C</span><span class='t2lyric'>I love you more and more each </span><span class="chord">Am</span><span class='t2lyric'>day as time goes </span><span class="chord">Dm</span><span class='t2lyric'>by <br/>
+I </span><span class="chord">Gm</span><span class='t2lyric'>love you more and more each </span><span class="chord">C</span><span class='t2lyric'>day as time goes </span><span class="chord">Dm</span><span class='t2lyric'>by. </span></div>
 </div>
 </div>
 </div>
@@ -1539,7 +1647,7 @@ I <span class="chord">Gm</span>love you more and more each <span class="chord">C
 
 
 <footer>
-<div class='small text-muted publish_date'>2019-10-31 21:32:00 -0700</div>
+<div class='small text-muted publish_date'>2019-11-01 23:32:21 -0700</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -1574,6 +1682,15 @@ I <span class="chord">Gm</span>love you more and more each <span class="chord">C
     $('#' + main_id)[0].scrollIntoView(true);
   }
   
+  function pe_font(button, adjustment) {
+    var lyric_id = button.getAttribute('data-lyric-id');
+    t2lyric = $('#' + lyric_id + ' .t2lyric');
+    cursize = t2lyric.css('font-size');
+    newsize = parseFloat(cursize) * adjustment;
+    console.log('cursize:' + cursize + ' newsize:' + newsize + ' adjustment:'+adjustment);
+    t2lyric.css('font-size', newsize);
+  }
+  
   var FlatKeys = ['Dm', 'F', 'Bbm', 'Db', 'Cm', 'Eb', 'Ebm', 'Gb',
                   'Fm', 'Ab', 'Gm', 'Bb'];
   function pe_transpose(button, offset) {
@@ -1585,15 +1702,19 @@ I <span class="chord">Gm</span>love you more and more each <span class="chord">C
     $('#' + lyric_id + ' .chord').each(function(index) {
       ctext = $(this).html();
       new_chord = transpose_mkey(ctext, offset, foptions);
+  
+      // First time only
       if (!check_flat) {
         check_flat = true;
-        //  Need to strip out non chord modified
+        // Need to strip out non chord modified.  Note this code
+        // require the 1st chord in the piece have to be the scale
         new_scale = new_chord.match(/^[A-G][#b]?m?/);
         if ((new_scale != null) && (FlatKeys.indexOf(new_scale[0]) >= 0)) {
           foptions['flat'] =  true;
         }
         console.log('checking flat key for: '+new_chord + ' - it is:' + foptions['flat'] + ' new_scale: ' + new_scale);
       }
+  
       $(this).html(new_chord);
     })
   }
@@ -1705,6 +1826,7 @@ I <span class="chord">Gm</span>love you more and more each <span class="chord">C
   $(document).ready(function() {
     $('.a-tooltip').tooltip({"html":true}); 
     $('.si_collapse').collapse();
+    $('button').tooltip();
   });
   
   function pe_collapse(button) {

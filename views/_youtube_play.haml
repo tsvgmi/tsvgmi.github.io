@@ -24,6 +24,15 @@
       $('#' + main_id)[0].scrollIntoView(true);
     }
 
+    function pe_font(button, adjustment) {
+      var lyric_id = button.getAttribute('data-lyric-id');
+      t2lyric = $('#' + lyric_id + ' .t2lyric');
+      cursize = t2lyric.css('font-size');
+      newsize = parseFloat(cursize) * adjustment;
+      console.log('cursize:' + cursize + ' newsize:' + newsize + ' adjustment:'+adjustment);
+      t2lyric.css('font-size', newsize);
+    }
+
     var FlatKeys = ['Dm', 'F', 'Bbm', 'Db', 'Cm', 'Eb', 'Ebm', 'Gb',
                     'Fm', 'Ab', 'Gm', 'Bb'];
     function pe_transpose(button, offset) {
@@ -35,15 +44,19 @@
       $('#' + lyric_id + ' .chord').each(function(index) {
         ctext = $(this).html();
         new_chord = transpose_mkey(ctext, offset, foptions);
+
+        // First time only
         if (!check_flat) {
           check_flat = true;
-          //  Need to strip out non chord modified
+          // Need to strip out non chord modified.  Note this code
+          // require the 1st chord in the piece have to be the scale
           new_scale = new_chord.match(/^[A-G][#b]?m?/);
           if ((new_scale != null) && (FlatKeys.indexOf(new_scale[0]) >= 0)) {
             foptions['flat'] =  true;
           }
           console.log('checking flat key for: '+new_chord + ' - it is:' + foptions['flat'] + ' new_scale: ' + new_scale);
         }
+
         $(this).html(new_chord);
       })
     }

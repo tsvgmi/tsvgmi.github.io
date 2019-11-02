@@ -13,19 +13,23 @@
 %div(id=lyric_id2)
   .row.song_header
     .col-6
-      %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex="-1" type='button')
+      %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex="-1" type='button' title='Show lyric')
         %i.fa.fa-music
         Lyric
-      %button.btn.btn-outline-primary(onclick="pe_toggle_chord(this)" role='button' data-lyric-id=lyric_id type='button' role='button')
+      %button.btn.btn-outline-primary(onclick="pe_toggle_chord(this)" role='button' data-lyric-id=lyric_id type='button' role='button' title='Hide chords')
         %i.fa.fa-microphone
       - if vidinfos.videos.size > 0
         - voffset = videos.size;
         %button.btn.btn-outline-primary(onclick="pe_playVideo(this)" role='button' data-lyric-id=lyric_id data-main-id=lyric_id2 data-vindex=voffset type='button' title='Play intro music')
           %i.fa.fa-headphones
-      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, -1)" role="button" data-lyric-id=lyric_id title='Transpose down 1/2 tone')
+      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, -1)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Transpose down 1/2 tone')
         %i.fa.fa-arrow-down
-      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, 1)" role="button" data-lyric-id=lyric_id title='Transpose up 1/2 tone')
+      %button.btn.btn-outline-secondary(onclick="pe_transpose(this, 1)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Transpose up 1/2 tone')
         %i.fa.fa-arrow-up
+      %button.btn.btn-outline-secondary(onclick="pe_font(this, 0.85)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Font small')
+        %i.fa.fa-search-minus
+      %button.btn.btn-outline-secondary(onclick="pe_font(this, 1.2)" role="button" data-lyric-id=lyric_id data-toggle="tooltip" title='Font large')
+        %i.fa.fa-search-plus
       %h5
         = "#{row_no}."
         %a(href=link target='hopamchuan')= sinfo[:name]
@@ -82,7 +86,7 @@
       - lyric  = sinfo[:lyric]
       - offset = key_offset(sinfo[:song_key], oinfo[:singer_key])
       - lyric  = lyric.sub(/>>>>>.*$/mo, '').sub(/^.*<<<<</mo, '')
-      - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key])
+      - tlyric = ListHelper.transpose_lyric(lyric, offset, tokey:oinfo[:singer_key], tclass:'t2lyric')
       - tlyric = tlyric.sub(/^.*==/m, '')
       .col
         .lyric(id="#{lyric_id3}")= tlyric.gsub(/\s*\r/, '').gsub(/^---/, '<hr/>').gsub(/\n/, "<br/>\n")
