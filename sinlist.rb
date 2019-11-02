@@ -14,16 +14,8 @@ require 'better_errors'
 require_relative '../hacauto/bin/hac-nhac'
 
 set :bind, '0.0.0.0'
-#ENV['DB_URL'] ||= 'playlist:playlistpasswd@tvuong-aws.colo29zuu6uk.us-west-2.rds.amazonaws.com'
-#ENV['DB_MY']  ||= 'playlist:playlistpasswd@127.0.0.1/Playlist'
-#ENV['DB_HAC'] ||= 'playlist:playlistpasswd@127.0.0.1/hopamchuan'
 
 DB = Sequel.connect('sqlite://sinlist.db')
-
-if false
-HAC_DB           = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/hac_local')
-HAC_DB2          = Sequel.connect('mysql2://thienv:hBQufu5wegkK2Cay@13.250.100.224/playlist')
-end
 
 enable :sessions
 
