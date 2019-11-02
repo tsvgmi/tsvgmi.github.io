@@ -3,6 +3,13 @@
 - theme = params[:theme] || 'litera'
 %html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
   %head
+    %script(async src="https://www.googletagmanager.com/gtag/js?id=UA-151394403-1")
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-151394403-1');
+
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
     %meta(charset="utf-8")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
