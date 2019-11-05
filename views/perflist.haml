@@ -123,17 +123,20 @@
   %div(class="#{sclass} si_collapse")
     = partial :_perflist_song, locals:locals
 
-- locals = {videos:videos}
-= partial(:_youtube_play, locals:locals)
+-# locals = {videos:videos}
+-#= partial(:_youtube_play, locals:locals)
 
 - content_for :javascript do
   %script(src="https://www.youtube.com/iframe_api")
+  %script(src="/js/youtube_play.js")
   :javascript
     $(document).ready(function() {
       $('.a-tooltip').tooltip({"html":true}); 
       $('.si_collapse').collapse();
       $('button').tooltip();
     });
+
+    var videos     = #{videos.to_json};
 
     function pe_collapse(button) {
       var show_class = button.getAttribute("data-show");

@@ -4494,9 +4494,8 @@ Khẽ nói yêu em </span><span class="chord">C</span><span class='t2lyric'>nhi�
 
 </div>
 
-
 <footer>
-<div class='small text-muted publish_date'>2019-11-02 21:23:13 -0700</div>
+<div class='small text-muted publish_date'>2019-11-04 20:24:57 -0800</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -4507,183 +4506,15 @@ Khẽ nói yêu em </span><span class="chord">C</span><span class='t2lyric'>nhi�
 <script src='https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.js' type='text/javascript'></script>
 <script src='/js/dt_remove_accent.js' type='text/javascript'></script>
 <script src='https://www.youtube.com/iframe_api'></script>
-<script>
-  var videos     = [{"vid":"video_mE9DUuPdlJY_1_35","video":"mE9DUuPdlJY","start":1,"end":35,"key":"Dm"},{"vid":"video_XZZp65hYtUs_0_17","video":"XZZp65hYtUs","start":0,"end":17,"key":"Em"},{"vid":"video_BeCarZWV6Ik_0_30","video":"BeCarZWV6Ik","start":0,"end":30,"key":"Am"},{"vid":"video_ee9vR7N4_T4_0_24","video":"ee9vR7N4_T4","start":0,"end":24,"key":"Cm"},{"vid":"video_wyQUCYlocs_0_44","video":"wyQUCYl-ocs","start":0,"end":44,"key":"Dm"},{"vid":"video_wyQUCYlocs_70_84","video":"wyQUCYl-ocs","start":70,"end":84,"key":"Dm"},{"vid":"video_Nt7htnE1s4o_0_300","video":"Nt7htnE1s4o","start":0,"end":300,"key":"Am"},{"vid":"video_6TDgzopQljI_0_31","video":"6TDgzopQljI","start":0,"end":31,"key":"C#m"},{"vid":"video_fVbmc4skbgM_0_29","video":"fVbmc4skbgM","start":0,"end":29,"key":"Am"},{"vid":"video_Ijdh8D5aLks_15_43","video":"Ijdh8D5aLks","start":15,"end":43,"key":"Dm"},{"vid":"video_SdlhF96q_zE_4_31","video":"SdlhF96q_zE","start":4,"end":31,"key":"Ebm"},{"vid":"video_2FCiyeyuF0g_0_9","video":"2FCiyeyuF0g","start":0,"end":9,"key":"Am"},{"vid":"video_eX_8jHUZUtk_0_21","video":"eX_8jHUZUtk","start":0,"end":21,"key":"D"},{"vid":"video_NOFxeenUPco_22_44","video":"NOFxeenUPco","start":22,"end":44,"key":"Bm"},{"vid":"video_DXA9YAs2Lfs_0_25","video":"DXA9YAs2Lfs","start":0,"end":25,"key":"Em"},{"vid":"video_f8GHKeJhw4_0_35","video":"f8GHKe-Jhw4","start":0,"end":35,"key":"Fm"},{"vid":"video_mZPsMcMVFPs_16_33","video":"mZPsMcMVFPs","start":16,"end":33,"key":"G"},{"vid":"video_9sUmwfraH28_0_16","video":"9sUmwfraH28","start":0,"end":16,"key":"Cm"},{"vid":"video_s2EgU_PBxrI_0_27","video":"s2EgU_PBxrI","start":0,"end":27,"key":"C"},{"vid":"video_eh8eb_ACLl8_0_300","video":"eh8eb_ACLl8","start":0,"end":300,"key":null},{"vid":"video_7dFRYgcsMHo_3_24","video":"7dFRYgcsMHo","start":3,"end":24,"key":"Gm"},{"vid":"video_7dFRYgcsMHo_195_211","video":"7dFRYgcsMHo","start":195,"end":211,"key":"Gm"},{"vid":"video_buMcwyztOp0_0_13","video":"buMcwyztOp0","start":0,"end":13,"key":"C#"},{"vid":"video_tvGAxWj6__0_129_164","video":"tvGAxWj6__0","start":129,"end":164,"key":"Gm"},{"vid":"video_KFU6JoRDVWU_0_30","video":"KFU6JoRDVWU","start":0,"end":30,"key":"Bm"},{"vid":"video_7dWP08VNTb4_0_47","video":"7dWP08VNTb4","start":0,"end":47,"key":"Em"},{"vid":"video_L7I08rJLQQ_0_8","video":"L7I08rJL-QQ","start":0,"end":8,"key":"Bm"},{"vid":"video_pCfMCg5AeqM_0_18","video":"pCfMCg5AeqM","start":0,"end":18,"key":"C"},{"vid":"video_XyzYvZzDqaw_0_24","video":"XyzYvZzDqaw","start":0,"end":24,"key":"G#m"},{"vid":"video_XacCs8TdZTQ_22_38","video":"XacCs8TdZTQ","start":22,"end":38,"key":"Abm"},{"vid":"video_lVrBHFyC2b0_0_35","video":"lVrBHFyC2b0","start":0,"end":35,"key":"Em"},{"vid":"video_dV2iWZ21vFQ_5_31","video":"dV2iWZ21vFQ","start":5,"end":31,"key":"Dm"},{"vid":"video_cjLUKQwWTN0_6_39","video":"cjLUKQwWTN0","start":6,"end":39,"key":"Bm"},{"vid":"video_SZclkJvvMGI_0_22","video":"SZclkJvvMGI","start":0,"end":22,"key":"Eb"},{"vid":"video_fgEeBqnB2So_0_21","video":"fgEeBqnB2So","start":0,"end":21,"key":"Am"},{"vid":"video_82yrlfBszM_15_33","video":"82yrlfBsz-M","start":15,"end":33,"key":"C"}];
-  var cur_player = null;
-  var players    = [];
-  
-  function pe_toggle_chord(button) {
-    var lyric_id = button.getAttribute('data-lyric-id');
-    var note_id  = button.getAttribute('data-note-id');
-    if (button.classList.contains('active')) {
-      $('#' + lyric_id + ' .chord').show();
-      $('#' + lyric_id + ' #' + note_id).show();
-    } else {
-      $('#' + lyric_id + ' .chord').hide();
-      $('#' + lyric_id + ' #' + note_id).hide();
-    }
-  }
-  
-  function pe_playVideo(button) {
-    var lyric_id = button.getAttribute('data-lyric-id');
-    var main_id  = button.getAttribute('data-main-id');
-    var vindex   = button.getAttribute('data-vindex');
-    console.log('play video ' + vindex + ' + ' + lyric_id);
-  
-    if (vindex >= 0) {
-      players[vindex].playVideo();
-    }
-    $('.pl_collapse').collapse('hide');
-    $('#' + lyric_id).collapse('show');
-    $('#' + main_id)[0].scrollIntoView(true);
-  }
-  
-  function pe_font(button, adjustment) {
-    var lyric_id = button.getAttribute('data-lyric-id');
-    t2lyric = $('#' + lyric_id + ' .t2lyric');
-    cursize = t2lyric.css('font-size');
-    newsize = parseFloat(cursize) * adjustment;
-    console.log('cursize:' + cursize + ' newsize:' + newsize + ' adjustment:'+adjustment);
-    t2lyric.css('font-size', newsize);
-  }
-  
-  var FlatKeys = ['Dm', 'F', 'Bbm', 'Db', 'Cm', 'Eb', 'Ebm', 'Gb',
-                  'Fm', 'Ab', 'Gm', 'Bb'];
-  function pe_transpose(button, offset) {
-    var lyric_id = button.getAttribute('data-lyric-id');
-    var elem     = document.getElementById(lyric_id);
-    var foptions = {};
-  
-    var check_flat = false
-    $('#' + lyric_id + ' .chord').each(function(index) {
-      ctext = $(this).html();
-      new_chord = transpose_mkey(ctext, offset, foptions);
-  
-      // First time only
-      if (!check_flat) {
-        check_flat = true;
-        // Need to strip out non chord modified.  Note this code
-        // require the 1st chord in the piece have to be the scale
-        new_scale = new_chord.match(/^[A-G][#b]?m?/);
-        if ((new_scale != null) && (FlatKeys.indexOf(new_scale[0]) >= 0)) {
-          foptions['flat'] =  true;
-        }
-        console.log('checking flat key for: '+new_chord + ' - it is:' + foptions['flat'] + ' new_scale: ' + new_scale);
-      }
-  
-      $(this).html(new_chord);
-    })
-  }
-  
-  // Extract base key and mod (sharp/flat)
-  function split_key(key) {
-    if ((key[1] == 'b') || (key[1] == '#')) {
-      bkey = key.substr(0, 2);
-      mod  = key.substr(2, key.length).trim();
-    } else {
-      bkey = key[0];
-      mod  = key.substr(1, key.length).trim();
-    }
-    return {'base':bkey, 'mod':mod};
-  }
-  
-  
-  var KeyPos = ['A', 'A#|Bb', 'B', 'C', 'C#|Db', 'D',
-                'D#|Eb', 'E', 'F', 'F#|Gb', 'G', 'G#|Ab'];
-  var PKeyPos = KeyPos.map(function(p) {
-    return new RegExp('^' + p + '$')
-  });
-  
-  // Transpose a single chord.  Notation is chord[/bass]
-  function transpose_mkey(keys, offset, options) {
-    var output = [];
-    var bkey, mod, bofs, tkey, tkeys;
-  
-    // Incase key is specified as chord/bass.  We transpose both
-    //console.log('keys: '+keys + ' KeyPos: ' + KeyPos + ' options:'+options);
-    keys.split('/').forEach(function(key) {
-      kset = split_key(key)
-      bofs = PKeyPos.findIndex(function(elem) {
-        return kset['base'].match(elem);
-      });
-      // Order of key (0-11)
-      //console.log('bofs:'+bofs);
-      if (bofs >= 0) {
-        // Calculate target key
-        tkey  = KeyPos[(bofs+offset+12) % 12];
-        //console.log('bofs:'+bofs+ ' offset:'+offset + ' tkey:'+tkey);
-        tkeys = tkey.split('|');
-        if (options['flat']) {
-          output.push(tkeys[tkeys.length-1]+kset['mod']);
-        } else {
-          output.push(tkeys[0]+kset['mod']);
-        }
-      } else {
-        console.log("Does not know how to transpose " + key);
-        output.push(key);
-      };
-    });
-    return output.join('/');
-  }
-  
-  function stopAllExcept(videoId) {
-    var vid;
-    var player;
-    for (var i = 0; i < players.length; i++) {
-      player = players[i];
-      vid    = player.getVideoData().video_id;
-      if (vid != videoId) {
-        if (player.getPlayerState() == 1) {
-          console.log("Stop:" + videoId + " " + vid + " status:" + player.getPlayerState());
-          player.stopVideo();
-        }
-      }
-    }
-  }
-  
-  function onYouTubeIframeAPIReady() {
-    for (var i = 0; i < videos.length; i++) {
-      var cur_video = videos[i];
-      var avideo    = cur_video['video'];
-      var vid       = cur_video['vid'];
-      var start     = cur_video['start'];
-      var end       = cur_video['end'];
-      var player    = new YT.Player(vid, {
-        height: '140',
-        width:  '100%',
-        playerVars: {"autoplay":0, "start":start, "end":end,
-                     "origin":"https://www.youtube.com"},
-        videoId: avideo,
-        playsinline: true,
-        events: {
-          'onStateChange': function(event){
-            var mplayer = event.target
-            var mdata   = mplayer.b.b;
-            if (event.data == 0) {
-              start  = mdata['playerVars']['start'];
-              console.log(mdata);
-              console.log('Restarting ' + mdata['videoId'] + ' ' + start);
-              mplayer.seekTo(start);
-              cur_player = mplayer.playVideo();
-            }
-            if (event.data == 1) {
-              console.log('Start ' + mdata['videoId'] + ' ' + event.data);
-              stopAllExcept(mdata['videoId']);
-            }
-          }
-        }
-      });
-      players.push(player);
-    }
-  }
-</script>
-<script src='https://www.youtube.com/iframe_api'></script>
+<script src='/js/youtube_play.js'></script>
 <script>
   $(document).ready(function() {
     $('.a-tooltip').tooltip({"html":true}); 
     $('.si_collapse').collapse();
     $('button').tooltip();
   });
+  
+  var videos     = [{"vid":"video_mE9DUuPdlJY_1_35","video":"mE9DUuPdlJY","start":1,"end":35,"key":"Dm"},{"vid":"video_XZZp65hYtUs_0_17","video":"XZZp65hYtUs","start":0,"end":17,"key":"Em"},{"vid":"video_BeCarZWV6Ik_0_30","video":"BeCarZWV6Ik","start":0,"end":30,"key":"Am"},{"vid":"video_ee9vR7N4_T4_0_24","video":"ee9vR7N4_T4","start":0,"end":24,"key":"Cm"},{"vid":"video_wyQUCYlocs_0_44","video":"wyQUCYl-ocs","start":0,"end":44,"key":"Dm"},{"vid":"video_wyQUCYlocs_70_84","video":"wyQUCYl-ocs","start":70,"end":84,"key":"Dm"},{"vid":"video_Nt7htnE1s4o_0_300","video":"Nt7htnE1s4o","start":0,"end":300,"key":"Am"},{"vid":"video_6TDgzopQljI_0_31","video":"6TDgzopQljI","start":0,"end":31,"key":"C#m"},{"vid":"video_fVbmc4skbgM_0_29","video":"fVbmc4skbgM","start":0,"end":29,"key":"Am"},{"vid":"video_Ijdh8D5aLks_15_43","video":"Ijdh8D5aLks","start":15,"end":43,"key":"Dm"},{"vid":"video_SdlhF96q_zE_4_31","video":"SdlhF96q_zE","start":4,"end":31,"key":"Ebm"},{"vid":"video_2FCiyeyuF0g_0_9","video":"2FCiyeyuF0g","start":0,"end":9,"key":"Am"},{"vid":"video_eX_8jHUZUtk_0_21","video":"eX_8jHUZUtk","start":0,"end":21,"key":"D"},{"vid":"video_NOFxeenUPco_22_44","video":"NOFxeenUPco","start":22,"end":44,"key":"Bm"},{"vid":"video_DXA9YAs2Lfs_0_25","video":"DXA9YAs2Lfs","start":0,"end":25,"key":"Em"},{"vid":"video_f8GHKeJhw4_0_35","video":"f8GHKe-Jhw4","start":0,"end":35,"key":"Fm"},{"vid":"video_mZPsMcMVFPs_16_33","video":"mZPsMcMVFPs","start":16,"end":33,"key":"G"},{"vid":"video_9sUmwfraH28_0_16","video":"9sUmwfraH28","start":0,"end":16,"key":"Cm"},{"vid":"video_s2EgU_PBxrI_0_27","video":"s2EgU_PBxrI","start":0,"end":27,"key":"C"},{"vid":"video_eh8eb_ACLl8_0_300","video":"eh8eb_ACLl8","start":0,"end":300,"key":null},{"vid":"video_7dFRYgcsMHo_3_24","video":"7dFRYgcsMHo","start":3,"end":24,"key":"Gm"},{"vid":"video_7dFRYgcsMHo_195_211","video":"7dFRYgcsMHo","start":195,"end":211,"key":"Gm"},{"vid":"video_buMcwyztOp0_0_13","video":"buMcwyztOp0","start":0,"end":13,"key":"C#"},{"vid":"video_tvGAxWj6__0_129_164","video":"tvGAxWj6__0","start":129,"end":164,"key":"Gm"},{"vid":"video_KFU6JoRDVWU_0_30","video":"KFU6JoRDVWU","start":0,"end":30,"key":"Bm"},{"vid":"video_7dWP08VNTb4_0_47","video":"7dWP08VNTb4","start":0,"end":47,"key":"Em"},{"vid":"video_L7I08rJLQQ_0_8","video":"L7I08rJL-QQ","start":0,"end":8,"key":"Bm"},{"vid":"video_pCfMCg5AeqM_0_18","video":"pCfMCg5AeqM","start":0,"end":18,"key":"C"},{"vid":"video_XyzYvZzDqaw_0_24","video":"XyzYvZzDqaw","start":0,"end":24,"key":"G#m"},{"vid":"video_XacCs8TdZTQ_22_38","video":"XacCs8TdZTQ","start":22,"end":38,"key":"Abm"},{"vid":"video_lVrBHFyC2b0_0_35","video":"lVrBHFyC2b0","start":0,"end":35,"key":"Em"},{"vid":"video_dV2iWZ21vFQ_5_31","video":"dV2iWZ21vFQ","start":5,"end":31,"key":"Dm"},{"vid":"video_cjLUKQwWTN0_6_39","video":"cjLUKQwWTN0","start":6,"end":39,"key":"Bm"},{"vid":"video_SZclkJvvMGI_0_22","video":"SZclkJvvMGI","start":0,"end":22,"key":"Eb"},{"vid":"video_fgEeBqnB2So_0_21","video":"fgEeBqnB2So","start":0,"end":21,"key":"Am"},{"vid":"video_82yrlfBszM_15_33","video":"82yrlfBsz-M","start":15,"end":33,"key":"C"}];
   
   function pe_collapse(button) {
     var show_class = button.getAttribute("data-show");

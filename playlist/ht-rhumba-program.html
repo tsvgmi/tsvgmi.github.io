@@ -1718,9 +1718,8 @@ I </span><span class="chord">Gm</span><span class='t2lyric'>love you more and mo
 
 </div>
 
-
 <footer>
-<div class='small text-muted publish_date'>2019-11-02 21:23:12 -0700</div>
+<div class='small text-muted publish_date'>2019-11-04 20:24:56 -0800</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -1731,183 +1730,15 @@ I </span><span class="chord">Gm</span><span class='t2lyric'>love you more and mo
 <script src='https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.js' type='text/javascript'></script>
 <script src='/js/dt_remove_accent.js' type='text/javascript'></script>
 <script src='https://www.youtube.com/iframe_api'></script>
-<script>
-  var videos     = [{"vid":"video_8540xCZXDM_0_33","video":"8-540xCZXDM","start":0,"end":33,"key":"Em"},{"vid":"video_R8WoYyL83Yk_0_300","video":"R8WoYyL83Yk","start":0,"end":300,"key":"Fm"}];
-  var cur_player = null;
-  var players    = [];
-  
-  function pe_toggle_chord(button) {
-    var lyric_id = button.getAttribute('data-lyric-id');
-    var note_id  = button.getAttribute('data-note-id');
-    if (button.classList.contains('active')) {
-      $('#' + lyric_id + ' .chord').show();
-      $('#' + lyric_id + ' #' + note_id).show();
-    } else {
-      $('#' + lyric_id + ' .chord').hide();
-      $('#' + lyric_id + ' #' + note_id).hide();
-    }
-  }
-  
-  function pe_playVideo(button) {
-    var lyric_id = button.getAttribute('data-lyric-id');
-    var main_id  = button.getAttribute('data-main-id');
-    var vindex   = button.getAttribute('data-vindex');
-    console.log('play video ' + vindex + ' + ' + lyric_id);
-  
-    if (vindex >= 0) {
-      players[vindex].playVideo();
-    }
-    $('.pl_collapse').collapse('hide');
-    $('#' + lyric_id).collapse('show');
-    $('#' + main_id)[0].scrollIntoView(true);
-  }
-  
-  function pe_font(button, adjustment) {
-    var lyric_id = button.getAttribute('data-lyric-id');
-    t2lyric = $('#' + lyric_id + ' .t2lyric');
-    cursize = t2lyric.css('font-size');
-    newsize = parseFloat(cursize) * adjustment;
-    console.log('cursize:' + cursize + ' newsize:' + newsize + ' adjustment:'+adjustment);
-    t2lyric.css('font-size', newsize);
-  }
-  
-  var FlatKeys = ['Dm', 'F', 'Bbm', 'Db', 'Cm', 'Eb', 'Ebm', 'Gb',
-                  'Fm', 'Ab', 'Gm', 'Bb'];
-  function pe_transpose(button, offset) {
-    var lyric_id = button.getAttribute('data-lyric-id');
-    var elem     = document.getElementById(lyric_id);
-    var foptions = {};
-  
-    var check_flat = false
-    $('#' + lyric_id + ' .chord').each(function(index) {
-      ctext = $(this).html();
-      new_chord = transpose_mkey(ctext, offset, foptions);
-  
-      // First time only
-      if (!check_flat) {
-        check_flat = true;
-        // Need to strip out non chord modified.  Note this code
-        // require the 1st chord in the piece have to be the scale
-        new_scale = new_chord.match(/^[A-G][#b]?m?/);
-        if ((new_scale != null) && (FlatKeys.indexOf(new_scale[0]) >= 0)) {
-          foptions['flat'] =  true;
-        }
-        console.log('checking flat key for: '+new_chord + ' - it is:' + foptions['flat'] + ' new_scale: ' + new_scale);
-      }
-  
-      $(this).html(new_chord);
-    })
-  }
-  
-  // Extract base key and mod (sharp/flat)
-  function split_key(key) {
-    if ((key[1] == 'b') || (key[1] == '#')) {
-      bkey = key.substr(0, 2);
-      mod  = key.substr(2, key.length).trim();
-    } else {
-      bkey = key[0];
-      mod  = key.substr(1, key.length).trim();
-    }
-    return {'base':bkey, 'mod':mod};
-  }
-  
-  
-  var KeyPos = ['A', 'A#|Bb', 'B', 'C', 'C#|Db', 'D',
-                'D#|Eb', 'E', 'F', 'F#|Gb', 'G', 'G#|Ab'];
-  var PKeyPos = KeyPos.map(function(p) {
-    return new RegExp('^' + p + '$')
-  });
-  
-  // Transpose a single chord.  Notation is chord[/bass]
-  function transpose_mkey(keys, offset, options) {
-    var output = [];
-    var bkey, mod, bofs, tkey, tkeys;
-  
-    // Incase key is specified as chord/bass.  We transpose both
-    //console.log('keys: '+keys + ' KeyPos: ' + KeyPos + ' options:'+options);
-    keys.split('/').forEach(function(key) {
-      kset = split_key(key)
-      bofs = PKeyPos.findIndex(function(elem) {
-        return kset['base'].match(elem);
-      });
-      // Order of key (0-11)
-      //console.log('bofs:'+bofs);
-      if (bofs >= 0) {
-        // Calculate target key
-        tkey  = KeyPos[(bofs+offset+12) % 12];
-        //console.log('bofs:'+bofs+ ' offset:'+offset + ' tkey:'+tkey);
-        tkeys = tkey.split('|');
-        if (options['flat']) {
-          output.push(tkeys[tkeys.length-1]+kset['mod']);
-        } else {
-          output.push(tkeys[0]+kset['mod']);
-        }
-      } else {
-        console.log("Does not know how to transpose " + key);
-        output.push(key);
-      };
-    });
-    return output.join('/');
-  }
-  
-  function stopAllExcept(videoId) {
-    var vid;
-    var player;
-    for (var i = 0; i < players.length; i++) {
-      player = players[i];
-      vid    = player.getVideoData().video_id;
-      if (vid != videoId) {
-        if (player.getPlayerState() == 1) {
-          console.log("Stop:" + videoId + " " + vid + " status:" + player.getPlayerState());
-          player.stopVideo();
-        }
-      }
-    }
-  }
-  
-  function onYouTubeIframeAPIReady() {
-    for (var i = 0; i < videos.length; i++) {
-      var cur_video = videos[i];
-      var avideo    = cur_video['video'];
-      var vid       = cur_video['vid'];
-      var start     = cur_video['start'];
-      var end       = cur_video['end'];
-      var player    = new YT.Player(vid, {
-        height: '140',
-        width:  '100%',
-        playerVars: {"autoplay":0, "start":start, "end":end,
-                     "origin":"https://www.youtube.com"},
-        videoId: avideo,
-        playsinline: true,
-        events: {
-          'onStateChange': function(event){
-            var mplayer = event.target
-            var mdata   = mplayer.b.b;
-            if (event.data == 0) {
-              start  = mdata['playerVars']['start'];
-              console.log(mdata);
-              console.log('Restarting ' + mdata['videoId'] + ' ' + start);
-              mplayer.seekTo(start);
-              cur_player = mplayer.playVideo();
-            }
-            if (event.data == 1) {
-              console.log('Start ' + mdata['videoId'] + ' ' + event.data);
-              stopAllExcept(mdata['videoId']);
-            }
-          }
-        }
-      });
-      players.push(player);
-    }
-  }
-</script>
-<script src='https://www.youtube.com/iframe_api'></script>
+<script src='/js/youtube_play.js'></script>
 <script>
   $(document).ready(function() {
     $('.a-tooltip').tooltip({"html":true}); 
     $('.si_collapse').collapse();
     $('button').tooltip();
   });
+  
+  var videos     = [{"vid":"video_8540xCZXDM_0_33","video":"8-540xCZXDM","start":0,"end":33,"key":"Em"},{"vid":"video_R8WoYyL83Yk_0_300","video":"R8WoYyL83Yk","start":0,"end":300,"key":"Fm"}];
   
   function pe_collapse(button) {
     var show_class = button.getAttribute("data-show");
