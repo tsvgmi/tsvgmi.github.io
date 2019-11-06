@@ -50,7 +50,7 @@
       font-size: 140%;
     }
   }
-  .chord {
+  .chord-old {
     color: #4aa;
     vertical-align: 20px;
     display: inline-block;
@@ -59,6 +59,23 @@
     max-width: 15px;
     cursor: pointer;
     font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+  }
+  .chord {
+    color: #6cc;
+    vertical-align: 10px;
+    //display: inline-block;
+    font-weight: 400;
+    font-size: 80%;
+    background-color: #ffc;
+    //max-width: 15px;
+    cursor: pointer;
+    font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+  }
+  .chord:before {
+    content:"[";
+  }
+  .chord:after {
+    content:"] ";
   }
   hr {
     margin-top: 0;
@@ -3776,7 +3793,7 @@ Verse 2: <br/>
 </div>
 
 <footer>
-<div class='small text-muted publish_date'>2019-11-06 09:29:23 -0800</div>
+<div class='small text-muted publish_date'>2019-11-06 09:43:07 -0800</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
