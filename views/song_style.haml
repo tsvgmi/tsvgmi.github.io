@@ -85,7 +85,9 @@
   .pull-right
     %button.btn.btn-sm.btn-primary(type="submit" name="Update" value=true) Update
 
-
-- locals = {videos:videos}
-= partial(:_youtube_play, locals:locals)
-
+- content_for :javascript do
+  %script(src="https://www.youtube.com/iframe_api")
+  %script(src="/js/youtube_play.js")
+  :javascript
+    var videos     = #{videos.to_json};
+  

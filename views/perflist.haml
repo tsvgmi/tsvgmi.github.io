@@ -123,9 +123,6 @@
   %div(class="#{sclass} si_collapse")
     = partial :_perflist_song, locals:locals
 
--# locals = {videos:videos}
--#= partial(:_youtube_play, locals:locals)
-
 - content_for :javascript do
   %script(src="https://www.youtube.com/iframe_api")
   %script(src="/js/youtube_play.js")
