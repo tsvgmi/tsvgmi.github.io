@@ -123,12 +123,16 @@ function stopAllExcept(videoId) {
   var player;
   for (var i = 0; i < players.length; i++) {
     player = players[i];
-    vid    = player.getVideoData().video_id;
-    if (vid != videoId) {
-      if (player.getPlayerState() == 1) {
-        console.log("Stop:" + videoId + " " + vid + " status:" + player.getPlayerState());
-        player.stopVideo();
+    if (videoId >= 0) {
+      vid    = player.getVideoData().video_id;
+      if (vid != videoId) {
+        if (player.getPlayerState() == 1) {
+          console.log("Stop:" + videoId + " " + vid + " status:" + player.getPlayerState());
+          player.stopVideo();
+        }
       }
+    } else {
+      player.stopVideo();
     }
   }
 }
