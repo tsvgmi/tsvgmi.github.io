@@ -22,6 +22,7 @@ function pe_playVideo(button) {
   var vindex   = button.getAttribute('data-vindex');
   console.log('play video ' + vindex + ' + ' + lyric_id);
 
+  console.log('vindex: ' + vindex);
   if (vindex >= 0) {
     players[vindex].playVideo();
   }
@@ -118,13 +119,14 @@ function transpose_mkey(keys, offset, options) {
   return output.join('/');
 }
 
-function stopAllExcept(videoId) {
+function stopAllExcept(videoId='') {
   var vid;
   var player;
+  console.log('Stopall except: ' + videoId);
   for (var i = 0; i < players.length; i++) {
     player = players[i];
-    if (videoId >= 0) {
-      vid    = player.getVideoData().video_id;
+    if (videoId != '') {
+      vid = player.getVideoData().video_id;
       if (vid != videoId) {
         if (player.getPlayerState() == 1) {
           console.log("Stop:" + videoId + " " + vid + " status:" + player.getPlayerState());
@@ -132,6 +134,7 @@ function stopAllExcept(videoId) {
         }
       }
     } else {
+      console.log('Stop here? ' + videoId);
       player.stopVideo();
     }
   }
@@ -163,7 +166,7 @@ function onYouTubeIframeAPIReady() {
             cur_player = mplayer.playVideo();
           }
           if (event.data == 1) {
-            console.log('Start ' + mdata['videoId'] + ' ' + event.data);
+            console.log('Start ' + mdata['videoId'] + ' event: ' + event.data);
             stopAllExcept(mdata['videoId']);
           }
         }
