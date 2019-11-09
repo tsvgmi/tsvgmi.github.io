@@ -22,6 +22,7 @@
 
 - instrument = uperf_info[:instrument] || []
 - ytvideo    = uperf_info[:ytvideo] || ""
+- ytkvideo   = uperf_info[:ytkvideo] || ""
 - ytoffset   = uperf_info[:ytoffset] || ""
 - smule      = uperf_info[:smule] || ""
 - smkey      = uperf_info[:smkey] || ""
@@ -57,7 +58,7 @@
         %label(for='ytvideo') Youtube ID, Start, Stop, ..., | ...
         %input.form-control#ytvideo(type='text' name='ytvideo' value="#{ytvideo}")
       .form-group
-        %label(for='vidkey') Video Key (Youtube)
+        %label(for='vidkey') Video Key
         %input.form-control#vidkey(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
       - videos = VideoInfo.new(ytvideo).videos
       - videos.each do |vinfo|
@@ -72,6 +73,17 @@
         - if smule && !smule.empty?
           %iframe(frameborder="0" width="100%" height="125" src="https://www.smule.com/recording/#{smule}/frame")
 
+    .col-6
+      .form-group
+        %label(for='ytkvideo') Youtube Karaoke
+        %input.form-control#nct(type='text' name='ytkvideo' value="#{ytkvideo}")
+      .form-group
+        %label(for='ytkkey') Video Key
+        %input.form-control#nctkey(type='text' name='ytkkey' value="#{uperf_info[:ytkkey]}")
+      - kvideos = VideoInfo.new(ytkvideo).videos
+      - videos.concat(kvideos)
+      - kvideos.each do |vinfo|
+        %div(id="#{vinfo[:vid]}")
     .col-6
       .form-group
         %label(for='nctvideo') NCT Record

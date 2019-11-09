@@ -50,9 +50,10 @@ post '/song-style' do
   uperf_info = {
     instrument:params[:instrument], key:params[:key],
     intro:params[:intro],
-    ytvideo:params[:ytvideo], vidkey:params[:vidkey],
-    smkey:params[:smkey],     smule:params[:smule],
-    nctkey:params[:nctkey],   nct:params[:nct],
+    ytvideo:params[:ytvideo],   vidkey:params[:vidkey],
+    ytkvideo:params[:ytkvideo], ytkkey:params[:ytkkey],
+    smkey:params[:smkey],       smule:params[:smule],
+    nctkey:params[:nctkey],     nct:params[:nct],
   }
   pnote.replace(song_id, song_name, uperf_info)
   flash[:notice] = "Style for #{song_name} replaced"

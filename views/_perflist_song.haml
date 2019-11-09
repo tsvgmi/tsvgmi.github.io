@@ -10,7 +10,14 @@
 - lyric_id3 = "row_#{row_no}b"
 - note_id   = "row_#{row_no}c"
 - perf_note = perf_info[sname] || {}
-- vidinfos  = VideoInfo.new(perf_note[:ytvideo], perf_note[:vidkey])
+- if params[:karaoke]
+  - svideos = perf_note[:ytkvideo]
+  - svideos = perf_note[:ytvideo] if (!svideos || svideos.empty?)
+  - skeys   = perf_note[:ytkkey]
+  - skeys   = perf_note[:vidkey] if (!skeys || skeys.empty?)
+  - vidinfos = VideoInfo.new(svideos, skeys)
+- else
+  - vidinfos  = VideoInfo.new(perf_note[:ytvideo], perf_note[:vidkey])
 %div(id=lyric_id2)
   .row.song_header
     .col-6
