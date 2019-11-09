@@ -646,13 +646,13 @@ class SongInfo
     else
       fptn = "data/SONGS/song:#{song_id}:{,*}:*"
     end
-    sfile = Dir.glob(fptn)[0]
-    #Plog.dump_info(sfile:sfile)
-    if !test(?s, sfile)
-      Plog.dump_error(msg:'File not found', sfile:sfile)
-      @content = {}
-    else
-      @content = YAML.load_file(sfile)
+    @content = {}
+    if sfile = Dir.glob(fptn)[0]
+      if !test(?s, sfile)
+        Plog.dump_error(msg:'File not found', sfile:sfile)
+      else
+        @content = YAML.load_file(sfile)
+      end
     end
   end
 end
