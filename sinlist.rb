@@ -109,6 +109,10 @@ post '/playorder' do
   end
 end
 
+get '/playlist' do
+  haml :playlist_index
+end
+
 get '/perflist/:user' do |user|
   reload = params[:reload].to_i
   Plog.dump_info(params:params, reload:reload)
