@@ -6,8 +6,9 @@
     clip-path: circle(15px at center);
   }
 
+- cwidth = params[:nosinger] ? 12 : 8
 .row
-  .col-lg-8
+  %div(class="col-lg-#{cwidth}")
     %table.cell-border.display#main_table
       %thead
         %tr
@@ -57,45 +58,46 @@
             %td.dt-right.small= arow[:loves]
             %td.small= arow[:created] ? arow[:created].strftime('%Y-%m-%d') : nil
 
-  .col-lg-4
-    %table.cell-border.display#singer_table
-      %thead
-        %tr
-          %th Record With
-          %th Count
-          %th Listens
-          %th Loves
-      %tbody
-        - singers.each do |stats|
-          - singer = stats[:name]
-          - sinfo  = all_singers[singer] || {}
+  - unless params[:nosinger]
+    .col-lg-4
+      %table.cell-border.display#singer_table
+        %thead
           %tr
-            %td.small
-              - if avatar = sinfo[:avatar]
-                %a(href="https://www.smule.com/#{singer}" target='smule' title="#{singer} on Smule")
-                  %img.uavatar(src=avatar height=30 width=30)
-              - if sinfo[:following]
-                %i.fa.fa-heart
-              - else
-                %i.fa.fa-heart.invisible
-              %span.small= i_join[singer]
-              - if sinfo[:follower]
-                %i.fa.fa-running
-              - else
-                %i.fa.fa-running.invisible
-              %span.small= join_me[singer]
-              %br/
-              - href = "https://sing.salon/insights/?user=#{singer}"
-              %a(href=href target='sing_salon' title='Sing Salon')
-                %i.fa.fa-hotel
-              - href = "/smulelist/#{user}?singer=#{singer}"
-              %a.small(href=href)= singer
+            %th Record With
+            %th Count
+            %th Listens
+            %th Loves
+        %tbody
+          - singers.each do |stats|
+            - singer = stats[:name]
+            - sinfo  = all_singers[singer] || {}
+            %tr
+              %td.small
+                - if avatar = sinfo[:avatar]
+                  %a(href="https://www.smule.com/#{singer}" target='smule' title="#{singer} on Smule")
+                    %img.uavatar(src=avatar height=30 width=30)
+                - if sinfo[:following]
+                  %i.fa.fa-heart
+                - else
+                  %i.fa.fa-heart.invisible
+                %span.small= i_join[singer]
+                - if sinfo[:follower]
+                  %i.fa.fa-running
+                - else
+                  %i.fa.fa-running.invisible
+                %span.small= join_me[singer]
+                %br/
+                - href = "https://sing.salon/insights/?user=#{singer}"
+                %a(href=href target='sing_salon' title='Sing Salon')
+                  %i.fa.fa-hotel
+                - href = "/smulelist/#{user}?singer=#{singer}"
+                %a.small(href=href)= singer
 
-              
-            %td.dt-right.small
-              = stats[:count]
-            %td.dt-right.small= stats[:listens]
-            %td.dt-right.small= stats[:loves]
+                
+              %td.dt-right.small
+                = stats[:count]
+              %td.dt-right.small= stats[:listens]
+              %td.dt-right.small= stats[:loves]
 
 - content_for :javascript do
   :javascript
