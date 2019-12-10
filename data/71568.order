@@ -1,31 +1,31 @@
 # song_id,title,version,singer,skey,style,tempo,lead,solo_idx
 6999,nguoi-yeu-ly-tuong,,michelle,Am,Chacha
 4464,xot-xa,,yen-phuong,Am,Rhumba
--13139,mot-coi-tinh-phai,thienv,mike,Bm,Slow
-7848,anh-con-yeu-em,thienv,thien,Fm,boston,,,1
-5939,co-nho-dem-nao,,thanh-liem,Em,Chacha,,thanh/huy,1
-2728,jingle-bells,,band,,Pasodoble,
-3099,tinh-nghia-doi-ta-chi-the-thoi,,hoa-tau,D
+7848,anh-con-yeu-em,thienv,thien,Fm,Boston,,,1
+2728,jingle-bells,,yen-phuong&mai-huong,,Pasodoble,
+3099,tinh-nghia-doi-ta-chi-the-thoi,,mai-huong,C
 29279,stay-with-me-ostani,,thien-huong,Em,Bossa Nova,
 4168,ben-nhau-dem-nay-dancing-all-night,,thuy-dung,Dm,Chacha,135
 14856,chi-mot-minh-anh-thoi,thienv,bich-hien,Cm,Tango,
-2474,sau-dong,thienv,band,,twist
+2474,sau-dong,thienv,dung-vu,Dm,Chacha
 8437,noi-dau-muon-mang,,tuan-anh,Am,Bossa Nova
 6628,ghen,thienv,phu,C,twist
-370,bai-thanh-ca-buon,thienv,,,,
+370,bai-thanh-ca-buon,thienv,,thu&mike,A,Slow
 2383,hay-de-mua-roi,thienv,gia-cau,Em,Bebop
-2630,neu-em-duoc-lua-chon,thienv,kim-anh,Gm,Rhumba
+2630,neu-em-duoc-lua-chon,thienv,kim-anh,Gm,Rhumba,60
 13332,tango-tim,thienv,mai-kha,Dm,Tango
+5939,co-nho-dem-nao,,thanh-liem,Em,Chacha,,,1
 28319,smooth-operator,,mai-huong,Dm,Chacha
 5272,bai-tango-cho-rieng-em,,thuy-dung,Gm,Tango,,thien,0
 29291,phai-quen-anh-thoi,,bich-hien,Gm,Ballade,
-11979,tinh-yeu-tuyet-voi,,yen-phuong,Fm,Rock,
-11625,mua-he-dep-nhat,thienv,thien,Bm,boston,
+11979,tinh-yeu-tuyet-voi,,yen-phuong,Em,Rock,
+11625,mua-he-dep-nhat,thienv,thien,Bm,Slow Valse,
 12353,hon,thienv,thien-huong,Em,Rhumba,
-5223,thoi,,mike,Cm,Chacha
-5546,em-muon-anh-song-sao,,thanh-liem,,techno,
+5223,thoi,,mike,Dm,Chacha
+5546,em-muon-anh-song-sao,,thanh-liem,Am,techno,
 29359,bai-tho-cuoi-cung,,thuy-dung,Dm,Boston,
 1228,ao-lua-ha-dong,,yen-phuong,Am,Chacha
+6945,tinh-da-vut-bay,thienv,tuan-anh,Am,Rhumba,
 13456,mambo-italiano,thienv,mai-huong,Gm,Chacha
 2360,vang-trang-dem-troi,thienv,michelle,Em,Techno,
 -29292,corazoncito-bonito,,mai-huong,C,,
@@ -78,4 +78,4 @@
 -7442,mua-dem-doc-hanh,,hoa-tau,Dm
 -5554,la-thu-tran-the,,,,,
 -799,chuyen-thuong-tinh-the-thoi,,michelle,Dm,rhumba
--6945,tinh-da-vut-bay,thienv,,,,
+-13139,mot-coi-tinh-phai,thienv,mike,Bm,Slow
