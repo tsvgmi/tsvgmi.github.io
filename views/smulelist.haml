@@ -49,7 +49,7 @@
               - else
                 %i.fa.fa-star.invisible
             %td.small
-              - arow[:record_by].sort.each do |singer|
+              - arow[:record_by].split(',').sort.each do |singer|
                 %a(href="/smulelist/#{user}?singer=#{singer}")
                   %i.fa.fa-search
                   %a(href="https://www.smule.com/#{singer}" target='smule')= singer[0..9]
@@ -70,7 +70,7 @@
         %tbody
           - singers.each do |stats|
             - singer = stats[:name]
-            - sinfo  = all_singers[singer] || {}
+            - sinfo  = all_singers[name:singer] || {}
             %tr
               %td.small
                 - if avatar = sinfo[:avatar]

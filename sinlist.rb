@@ -15,8 +15,6 @@ require_relative '../hacauto/bin/hac-nhac'
 
 set :bind, '0.0.0.0'
 
-DB = Sequel.connect('sqlite://sinlist.db')
-
 enable :sessions
 
 configure :development do
@@ -164,15 +162,16 @@ get '/smulelist/:user' do |user|
   singers   = {}
   smcontent = SmContent.new(user)
   records   = smcontent.content
-  records.each do |sid, r|
+  records.each do |r|
+    record_by = r[:record_by].split(',')
     if singer.size > 0
-      next unless (r[:record_by] & singer).size > 0
+      next unless (record_by & singer).size > 0
     end
     if params[:title] && r[:title] != params[:title]
       next
     end
     content << r
-    r[:record_by].each do |asinger|
+    record_by.each do |asinger|
       singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0}
       singers[asinger][:count]   += 1
       singers[asinger][:listens] += (r[:listens] || 0)
@@ -183,7 +182,7 @@ get '/smulelist/:user' do |user|
   # not change during initial display
   content = content.sort_by {|r| r[:sincev].to_f }
   singers = singers.values.sort_by {|r| r[:count]}.reverse
-  Plog.dump_info(all_singers:smcontent.singers.size)
+  Plog.dump_info(all_singers:smcontent.singers.count)
   haml :smulelist, locals: {user:user, content:content, singers:singers,
                             all_singers:smcontent.singers,
                             join_me:smcontent.join_me,
@@ -195,9 +194,10 @@ get '/smulegroup/:user' do |user|
   singer    = (params[:singer] || "").split
   smcontent = SmContent.new(user)
   records   = smcontent.content
-  records.each do |sid, r|
+  records.each do |r|
     if singer.size > 0
-      next unless (r[:record_by] & singer).size > 0
+      record_by = r[:record_by].split(',')
+      next unless (record_by & singer).size > 0
     end
     if params[:title] && r[:title] != params[:title]
       next
@@ -297,69 +297,120 @@ helpers do
   end
 end
 
+class DBCache
+  class << self
+    attr_reader :DB
+
+    def create_db_and_schemas
+      @DB = Sequel.sqlite
+      @DB.create_table :singers do
+        primary_key :id
+        String :name, unique: true, null: false
+        String :avatar
+        String :following
+        String :follower
+      end
+      @DB.create_table :songtags do
+        primary_key :id
+        String :name, unique: true, null: false
+        String :tags
+      end
+      @DB.create_table :contents do
+        primary_key :id
+        String  :sid, unique: true, null: false
+        String  :title
+        String  :avatar
+        String  :href
+        String  :record_by
+        Boolen  :is_ensemble
+        Boolen  :isfav
+        Boolen  :oldfav
+        String  :collab_url
+        String  :play_path
+        String  :parent
+        Integer :listens
+        Integer :loves
+        String  :ofile
+        String  :sfile
+        String  :since
+        Float   :sincev
+        Date    :created
+        Date    :updated_at
+      end
+      @DB
+    end
+
+    def search_file(fname)
+      ["/Volumes/Voice/SMULE/#{fname}",
+       "#{ENV['HOME']}/#{fname}"].each do |afile|
+        if test(?r, afile)
+          return afile
+        end
+      end
+      nil
+    end
+
+    def load_db_for_user(user)
+      @uloaded ||= {}
+      @DB      ||= create_db_and_schemas
+      unless @uloaded[user]
+        Plog.info("Loading db/cache for #{user}")
+        contents = @DB[:contents]
+        singers  = @DB[:singers]
+        songtags = @DB[:songtags]
+        YAML.load_file(search_file("content-#{user}.yml")).each do |sid, sinfo|
+          irec = sinfo.dup
+          irec.delete(:m4tag)
+          irec[:record_by] = irec[:record_by].join(',')
+          contents.insert(irec)
+        end
+        YAML.load_file(search_file("singers.yml")).each do |singer, sinfo|
+          irec = sinfo.dup
+          singers.insert(irec)
+        end
+        File.read(search_file("songtags.yml")).split("\n").each do |l|
+          name, tags = l.split(':::')
+          songtags.insert(name:name, tags:tags)
+        end
+        @uloaded[user] = true
+      end
+    end
+  end
+end
+
 class SmContent
-  attr_reader :content, :singers, :join_me, :i_join, :songtags
+  attr_reader :join_me, :i_join
+
+  def content
+    DBCache.DB[:contents]
+  end
+
+  def singers
+    DBCache.DB[:singers]
+  end
+
+  def songtags
+    DBCache.DB[:songtags]
+  end
 
   def initialize(user)
     @user    = user
     @join_me = {}
     @i_join  = {}
-    cfile    = nil
-    ["/Volumes/Voice/SMULE/content-#{@user}.yml",
-     "#{ENV['HOME']}/content-#{@user}.yml"].each do |afile|
-      if test(?r, afile)
-        cfile = afile
-        break
-      end
-    end
 
-    unless cfile
-      raise "Cannot locate content file to load for #{user}"
-    end
-    @content = YAML.load_file(cfile)
-    @content.each do |href, r|
-      case v = r[:since]
-      when /(min|m)$/
-        r[:sincev] = v.to_i / 60.0
-      when /hr?$/
-        r[:sincev] = v.to_i
-      when /d$/
-        r[:sincev] = v.to_i * 24
-      when /mo$/
-        r[:sincev] = v.to_i * 24 * 30
-      when /yr$/
-        r[:sincev] = v.to_i * 24 * 365
-      end
-      r[:sid] ||= File.basename(r[:href])
-      if r[:record_by][0] == user
-        other = r[:record_by][1]
+    DBCache.load_db_for_user(user)
+    DBCache.DB[:contents].where(Sequel.lit("record_by like '%#{user}%'")).
+      each do |r|
+      rby = r[:record_by].split(',')
+      if rby[0] == user
+        other = rby[1]
         @join_me[other] ||= 0
         @join_me[other] += 1
       end
-      if r[:record_by][1] == user
-        other = r[:record_by][0]
+      if rby[1] == user
+        other = rby[0]
         @i_join[other] ||= 0
         @i_join[other] += 1
-      end
-    end
-
-    @singers = {}
-    ["/Volumes/Voice/SMULE/singers.yml",
-     "#{ENV['HOME']}/singers.yml"].each do |afile|
-      if test(?r, afile)
-        @singers = YAML.load_file(afile)
-        break
-      end
-    end
-    ["/Volumes/Voice/SMULE/songtags.yml",
-     "#{ENV['HOME']}/songtags.yml"].each do |afile|
-      if test(?r, afile)
-        @songtags = {}
-        File.read(afile).split("\n").each do |aline|
-          k, v = aline.split(':::')
-          @songtags[k] = (v || "").split(',')
-        end
-        break
       end
     end
   end
@@ -706,3 +757,4 @@ class VideoInfo
     end
   end
 end
+
