@@ -136,7 +136,7 @@
   - row_no += 1
   - singer = oinfo[:singer] || 'none'
   - sclass = "s_#{singer.gsub(/[^a-z]/i, '')}"
-  - Plog.dump_info(sclass:sclass, singer:singer, oinfo:oinfo)
+  -# Plog.dump_info(sclass:sclass, singer:singer, oinfo:oinfo)
   - locals = {sinfo:sinfo, oinfo:oinfo, perf_info:perf_info, row_no:row_no, viewmode:viewmode, user:user, videos:videos}
   %div(class="#{sclass} si_collapse")
     = partial :_perflist_song, locals:locals

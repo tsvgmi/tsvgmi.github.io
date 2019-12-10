@@ -155,36 +155,21 @@ List:
 </div>
 <button class='btn btn-outline-secondary btn-lg' onclick='stopAllExcept()'>Stop Music</button>
 <button class='btn btn-outline-secondary btn-lg' data-show='si_collapse' onclick='pe_collapse(this)'>All</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_anhthu' onclick='pe_collapse(this)'>anh-thu</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_band' onclick='pe_collapse(this)'>band</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_bichhien' onclick='pe_collapse(this)'>bich-hien</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_diem' onclick='pe_collapse(this)'>diem</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_dieuhuyen' onclick='pe_collapse(this)'>dieu-huyen</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_dungvu' onclick='pe_collapse(this)'>dung-vu</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_duylinh' onclick='pe_collapse(this)'>duy-linh</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_giacau' onclick='pe_collapse(this)'>gia-cau</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_hoatau' onclick='pe_collapse(this)'>hoa-tau</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_kimanh' onclick='pe_collapse(this)'>kim-anh</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_loc' onclick='pe_collapse(this)'>loc</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_lynn' onclick='pe_collapse(this)'>lynn</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_maihuong' onclick='pe_collapse(this)'>mai-huong</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_maikha' onclick='pe_collapse(this)'>mai-kha</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_michelle' onclick='pe_collapse(this)'>michelle</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_mike' onclick='pe_collapse(this)'>mike</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_minh' onclick='pe_collapse(this)'>minh</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_phamhung' onclick='pe_collapse(this)'>pham-hung</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_phi' onclick='pe_collapse(this)'>phi</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_phu' onclick='pe_collapse(this)'>phu</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_thanh' onclick='pe_collapse(this)'>thanh</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_thanhliem' onclick='pe_collapse(this)'>thanh-liem</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_thien' onclick='pe_collapse(this)'>thien</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_thienhuong' onclick='pe_collapse(this)'>thien-huong</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_thong' onclick='pe_collapse(this)'>thong</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_thumike' onclick='pe_collapse(this)'>thu&mike</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_thuydung' onclick='pe_collapse(this)'>thuy-dung</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_tuananh' onclick='pe_collapse(this)'>tuan-anh</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_tue' onclick='pe_collapse(this)'>tue</button>
-<button class='btn btn-outline-secondary btn-sm' data-show='s_vanessa' onclick='pe_collapse(this)'>vanessa</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_yenphuong' onclick='pe_collapse(this)'>yen-phuong</button>
 <button class='btn btn-outline-secondary btn-sm' data-show='s_yenphuongmaihuong' onclick='pe_collapse(this)'>yen-phuong&mai-huong</button>
 <div class='s_michelle si_collapse'>
@@ -2803,8 +2788,8 @@ Lyric
 <button class='btn btn-sm btn-outline-primary' data-lyric-id='row_27' data-note-id='row_27c' data-toggle='button' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-sm btn-outline-primary' disabled>
-<i class='fa fa-headphone fa-fw'></i>
+<button class='btn btn-sm btn-outline-primary' data-lyric-id='row_27' data-main-id='row_27a' data-vindex='26' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<i class='fa fa-headphones fa-fw'></i>
 </button>
 <button class='btn btn-sm btn-outline-secondary' data-lyric-id='row_27' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
 <i class='fa fa-arrow-down'></i>
@@ -2838,6 +2823,26 @@ Tuan Anh
 </div>
 <div class='collapse pl_collapse' id='row_27'>
 <div class='row' id='row_27c'>
+<div class='col-6'>
+<div class='row'>
+<div class='col-6' id='video_abiYJ60Y36E_0_25'></div>
+<div class='pull-right small'>
+VKey: Bbm
+<br>
+Trans: 1
+<br>
+<a href='https://www.youtube.com/watch?v=abiYJ60Y36E' target='youtube'>
+<i class='fab fa-youtube fa-3x'></i>
+</a>
+</div>
+</div>
+</div>
+<div class='col-2'>
+Ac Guitar, Voice
+</div>
+<div class='col-4'>
+<span class='none'></span><span class="chord_intro">E</span><span class='none'> </span><span class="chord_intro">Am</span><span class='none'> </span><span class="chord_intro">E</span><span class='none'> </span><span class="chord_intro">Am</span><span class='none'><br>-5136565-7 -5-7265651 -5136565-7 -56543-721<br>Be: (Tata) 654 (a) 32436598 (Tatata) 432 43</span>
+</div>
 </div>
 <div class='row'>
 <div class='col'>
@@ -2878,7 +2883,7 @@ Lyric
 <button class='btn btn-sm btn-outline-primary' data-lyric-id='row_28' data-note-id='row_28c' data-toggle='button' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-sm btn-outline-primary' data-lyric-id='row_28' data-main-id='row_28a' data-vindex='26' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<button class='btn btn-sm btn-outline-primary' data-lyric-id='row_28' data-main-id='row_28a' data-vindex='27' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
 <i class='fa fa-headphones fa-fw'></i>
 </button>
 <button class='btn btn-sm btn-outline-secondary' data-lyric-id='row_28' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
@@ -2986,7 +2991,7 @@ Lyric
 <button class='btn btn-sm btn-outline-primary' data-lyric-id='row_29' data-note-id='row_29c' data-toggle='button' onclick='pe_toggle_chord(this)' role='button' title='Hide chords' type='button'>
 <i class='fa fa-microphone'></i>
 </button>
-<button class='btn btn-sm btn-outline-primary' data-lyric-id='row_29' data-main-id='row_29a' data-vindex='27' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
+<button class='btn btn-sm btn-outline-primary' data-lyric-id='row_29' data-main-id='row_29a' data-vindex='28' onclick='pe_playVideo(this)' role='button' title='Play intro music' type='button'>
 <i class='fa fa-headphones fa-fw'></i>
 </button>
 <button class='btn btn-sm btn-outline-secondary' data-lyric-id='row_29' onclick='pe_transpose(this, -1)' role='button' title='Transpose down 1/2 tone'>
@@ -3080,7 +3085,7 @@ Mình </span><span class="chord">D</span><span class='t2lyric'> đã mất nhau 
 </div>
 
 <footer>
-<div class='small text-muted publish_date'>2019-12-09 22:00:24 -0800</div>
+<div class='small text-muted publish_date'>2019-12-09 22:19:32 -0800</div>
 </footer>
 </div>
 <script crossorigin='anonymous' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
@@ -3099,7 +3104,7 @@ Mình </span><span class="chord">D</span><span class='t2lyric'> đã mất nhau 
     $('button').tooltip();
   });
   
-  var videos     = [{"vid":"video_xs4RehhJaYc_0_16","video":"xs4RehhJaYc","start":0,"end":16,"key":"Am"},{"vid":"video_mhmbQdiimJo_0_23","video":"mhmbQdiimJo","start":0,"end":23,"key":"Cm"},{"vid":"video_m2uihNRe3s_0_38","video":"m2-uihNRe3s","start":0,"end":38,"key":"Fm"},{"vid":"video_Zqo1Z6dpozI_0_5","video":"Zqo1Z6dpozI","start":0,"end":5,"key":"Em"},{"vid":"video_B24sfq_seF0_0_31","video":"B24sfq_seF0","start":0,"end":31,"key":"F#m"},{"vid":"video_ItXSLHdze9k_5_49","video":"ItXSLHdze9k","start":5,"end":49,"key":"Gm"},{"vid":"video_7dWP08VNTb4_0_47","video":"7dWP08VNTb4","start":0,"end":47,"key":"Em"},{"vid":"video_WM7gXJG_Xys_0_28","video":"WM7gXJG_Xys","start":0,"end":28,"key":"Cm"},{"vid":"video_r0siUHkCFE_0_23","video":"r0siUHk-CFE","start":0,"end":23,"key":"A"},{"vid":"video_BXoExObL670_8_21","video":"BXoExObL670","start":8,"end":21,"key":"Bm"},{"vid":"video_OCII9cda3Mc_0_28","video":"OCII9cda3Mc","start":0,"end":28,"key":"Abm"},{"vid":"video_OCII9cda3Mc_170_194","video":"OCII9cda3Mc","start":170,"end":194,"key":"Abm"},{"vid":"video_yw8wS6AVXcc_0_23","video":"yw8wS6AVXcc","start":0,"end":23,"key":"Am"},{"vid":"video_FahlVJlVnOc_5_30","video":"FahlVJlVnOc","start":5,"end":30,"key":"Gm"},{"vid":"video_eOgUG806mxM_7_26","video":"eOgUG806mxM","start":7,"end":26,"key":"Dm"},{"vid":"video_eOgUG806mxM_124_146","video":"eOgUG806mxM","start":124,"end":146,"key":"Dm"},{"vid":"video_XZZp65hYtUs_0_17","video":"XZZp65hYtUs","start":0,"end":17,"key":"Em"},{"vid":"video_5zLHe1AQwgA_5_22","video":"5zLHe1AQwgA","start":5,"end":22,"key":"Gm"},{"vid":"video_gNfacW2YnM8_5_35","video":"gNfacW2YnM8","start":5,"end":35,"key":"Fm"},{"vid":"video_dKa193D9V3I_0_37","video":"dKa193D9V3I","start":0,"end":37,"key":"Am"},{"vid":"video_PEePRXDWkQw_0_27","video":"PEePRXDWkQw","start":0,"end":27,"key":"Em"},{"vid":"video_Xw7C1v3hYao_2_21","video":"Xw7C1v3hYao","start":2,"end":21,"key":"Dm"},{"vid":"video_mE9DUuPdlJY_2_33","video":"mE9DUuPdlJY","start":2,"end":33,"key":"Dm"},{"vid":"video_jO2P0uVTplo_6_36","video":"jO2P0uVTplo","start":6,"end":36,"key":"Cm"},{"vid":"video_4t0jbcwzjG8_0_35","video":"4t0jbcwzjG8","start":0,"end":35,"key":"Ebm"},{"vid":"video_4t0jbcwzjG8_175_210","video":"4t0jbcwzjG8","start":175,"end":210,"key":"Ebm"},{"vid":"video_U7FuXrOgk4U_22_30","video":"U7FuXrOgk4U","start":22,"end":30,"key":"Gm"},{"vid":"video_fWKLwbV2dLk_0_300","video":"fWKLwbV2dLk","start":0,"end":300,"key":"Ebm"}];
+  var videos     = [{"vid":"video_xs4RehhJaYc_0_16","video":"xs4RehhJaYc","start":0,"end":16,"key":"Am"},{"vid":"video_mhmbQdiimJo_0_23","video":"mhmbQdiimJo","start":0,"end":23,"key":"Cm"},{"vid":"video_m2uihNRe3s_0_38","video":"m2-uihNRe3s","start":0,"end":38,"key":"Fm"},{"vid":"video_Zqo1Z6dpozI_0_5","video":"Zqo1Z6dpozI","start":0,"end":5,"key":"Em"},{"vid":"video_B24sfq_seF0_0_31","video":"B24sfq_seF0","start":0,"end":31,"key":"F#m"},{"vid":"video_ItXSLHdze9k_5_49","video":"ItXSLHdze9k","start":5,"end":49,"key":"Gm"},{"vid":"video_7dWP08VNTb4_0_47","video":"7dWP08VNTb4","start":0,"end":47,"key":"Em"},{"vid":"video_WM7gXJG_Xys_0_28","video":"WM7gXJG_Xys","start":0,"end":28,"key":"Cm"},{"vid":"video_r0siUHkCFE_0_23","video":"r0siUHk-CFE","start":0,"end":23,"key":"A"},{"vid":"video_BXoExObL670_8_21","video":"BXoExObL670","start":8,"end":21,"key":"Bm"},{"vid":"video_OCII9cda3Mc_0_28","video":"OCII9cda3Mc","start":0,"end":28,"key":"Abm"},{"vid":"video_OCII9cda3Mc_170_194","video":"OCII9cda3Mc","start":170,"end":194,"key":"Abm"},{"vid":"video_yw8wS6AVXcc_0_23","video":"yw8wS6AVXcc","start":0,"end":23,"key":"Am"},{"vid":"video_FahlVJlVnOc_5_30","video":"FahlVJlVnOc","start":5,"end":30,"key":"Gm"},{"vid":"video_eOgUG806mxM_7_26","video":"eOgUG806mxM","start":7,"end":26,"key":"Dm"},{"vid":"video_eOgUG806mxM_124_146","video":"eOgUG806mxM","start":124,"end":146,"key":"Dm"},{"vid":"video_XZZp65hYtUs_0_17","video":"XZZp65hYtUs","start":0,"end":17,"key":"Em"},{"vid":"video_5zLHe1AQwgA_5_22","video":"5zLHe1AQwgA","start":5,"end":22,"key":"Gm"},{"vid":"video_gNfacW2YnM8_5_35","video":"gNfacW2YnM8","start":5,"end":35,"key":"Fm"},{"vid":"video_dKa193D9V3I_0_37","video":"dKa193D9V3I","start":0,"end":37,"key":"Am"},{"vid":"video_PEePRXDWkQw_0_27","video":"PEePRXDWkQw","start":0,"end":27,"key":"Em"},{"vid":"video_Xw7C1v3hYao_2_21","video":"Xw7C1v3hYao","start":2,"end":21,"key":"Dm"},{"vid":"video_mE9DUuPdlJY_2_33","video":"mE9DUuPdlJY","start":2,"end":33,"key":"Dm"},{"vid":"video_jO2P0uVTplo_6_36","video":"jO2P0uVTplo","start":6,"end":36,"key":"Cm"},{"vid":"video_4t0jbcwzjG8_0_35","video":"4t0jbcwzjG8","start":0,"end":35,"key":"Ebm"},{"vid":"video_4t0jbcwzjG8_175_210","video":"4t0jbcwzjG8","start":175,"end":210,"key":"Ebm"},{"vid":"video_abiYJ60Y36E_0_25","video":"abiYJ60Y36E","start":0,"end":25,"key":"Bbm"},{"vid":"video_U7FuXrOgk4U_22_30","video":"U7FuXrOgk4U","start":22,"end":30,"key":"Gm"},{"vid":"video_fWKLwbV2dLk_0_300","video":"fWKLwbV2dLk","start":0,"end":300,"key":"Ebm"}];
   
   function pe_collapse(button) {
     var show_class = button.getAttribute("data-show");

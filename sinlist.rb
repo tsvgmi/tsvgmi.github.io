@@ -541,8 +541,8 @@ class PlayOrder
     end
   end
 
-  def singers
-    @content_str.map do |sid, sinfo|
+  def singers(active=true)
+    @content_str.select {|sid, sinfo| sinfo[:active]}.map do |sid, sinfo|
       sinfo[:singer]
     end.compact.uniq.sort
   end
@@ -747,7 +747,7 @@ class VideoInfo
           ytend   = $`.to_i*60 + $'.to_i
         end
         vid = "video_#{video.gsub(/[^a-z0-9_]/i, '')}_#{ytstart}_#{ytend}"
-        Plog.dump_info(vid:vid)
+        #Plog.dump_info(vid:vid)
         @videos << {
           vid:   vid,
           video: video,
