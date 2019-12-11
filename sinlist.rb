@@ -297,6 +297,16 @@ helpers do
   end
 end
 
+def search_data_file(fname)
+  ["/Volumes/Voice/SMULE/#{fname}",
+   "#{ENV['HOME']}/#{fname}"].each do |afile|
+    if test(?r, afile)
+      return afile
+    end
+  end
+  nil
+end
+
 class DBCache
   class << self
     attr_reader :DB
@@ -340,39 +350,36 @@ class DBCache
       @DB
     end
 
-    def search_file(fname)
-      ["/Volumes/Voice/SMULE/#{fname}",
-       "#{ENV['HOME']}/#{fname}"].each do |afile|
-        if test(?r, afile)
-          return afile
-        end
-      end
-      nil
-    end
-
     def load_db_for_user(user)
       @uloaded ||= {}
       @DB      ||= create_db_and_schemas
-      unless @uloaded[user]
+      content_file = search_data_file("content-#{user}.yml")
+      if !@uloaded[user] || (@uloaded[user] < File.mtime(content_file))
         Plog.info("Loading db/cache for #{user}")
         contents = @DB[:contents]
         singers  = @DB[:singers]
         songtags = @DB[:songtags]
-        YAML.load_file(search_file("content-#{user}.yml")).each do |sid, sinfo|
+
+        contents.delete
+        YAML.load_file(content_file).each do |sid, sinfo|
           irec = sinfo.dup
           irec.delete(:m4tag)
-          irec[:record_by] = irec[:record_by].join(',')
+          if irec[:record_by].is_a?(Array)
+            irec[:record_by] = irec[:record_by].join(',')
+          end
           contents.insert(irec)
         end
-        YAML.load_file(search_file("singers.yml")).each do |singer, sinfo|
+        singers.delete
+        YAML.load_file(search_data_file("singers.yml")).each do |singer, sinfo|
           irec = sinfo.dup
           singers.insert(irec)
         end
-        File.read(search_file("songtags.yml")).split("\n").each do |l|
+        songtags.delete
+        File.read(search_data_file("songtags.yml")).split("\n").each do |l|
           name, tags = l.split(':::')
           songtags.insert(name:name, tags:tags)
         end
-        @uloaded[user] = true
+        @uloaded[user] = Time.now
       end
     end
   end
@@ -416,19 +423,21 @@ class SmContent
   end
 
   def remove(sid)
-    unless @content[sid]
+    unless content.where(sid:sid)
       Plog.info("Cannot locate #{sid} - #{@content.size}")
       return true
     end
     Plog.info("Deleting #{sid}")
-    @content.delete(sid)
-    ["/Volumes/Voice/SMULE/content-#{@user}.yml",
-     "#{ENV['HOME']}/content-#{@user}.yml"].each do |afile|
-      if test(?f, afile)
-        Plog.info("Updating #{afile}")
-        File.open(afile, 'w') do |fod|
-          fod.puts @content.to_yaml
-        end
+    content.where(sid:sid).delete
+    if afile = search_data_file("content-#{@user}.yml")
+      Plog.info("Updating #{afile}")
+      scontent = {}
+      content.each do |r|
+        scontent[r[:sid]] = r
+      end
+      #Plog.dump_info(content:content)
+      File.open(afile, 'w') do |fod|
+        fod.puts scontent.to_yaml
       end
     end
     true

@@ -1,9 +1,10 @@
 # song_id,title,version,singer,skey,style,tempo,lead,solo_idx
-6999,nguoi-yeu-ly-tuong,,michelle,Am,Chacha
+6999,nguoi-yeu-ly-tuong,thienv,michelle,Am,Chacha
 4464,xot-xa,,yen-phuong,Am,Rhumba
 7848,anh-con-yeu-em,thienv,thien,Fm,Boston,,,1
+5835,yeu-em-ca-trong-giac-mo,,thanh-liem,Cm,Techno,
 2728,jingle-bells,,yen-phuong&mai-huong,,Pasodoble,
-3099,tinh-nghia-doi-ta-chi-the-thoi,,mai-huong,C
+3099,tinh-nghia-doi-ta-chi-the-thoi,thienv,mai-huong,C,Chacha
 29279,stay-with-me-ostani,,thien-huong,Em,Bossa Nova,
 4168,ben-nhau-dem-nay-dancing-all-night,,thuy-dung,Dm,Chacha,135
 14856,chi-mot-minh-anh-thoi,thienv,bich-hien,Cm,Tango,
@@ -14,15 +15,16 @@
 2383,hay-de-mua-roi,thienv,gia-cau,Em,Bebop
 2630,neu-em-duoc-lua-chon,thienv,kim-anh,Gm,Rhumba,60
 13332,tango-tim,thienv,mai-kha,Dm,Tango
-5939,co-nho-dem-nao,,thanh-liem,Em,Chacha,,,1
+5546,em-muon-anh-song-sao,,thanh-liem,Am,techno,
+5223,thoi,,mike,Dm,Chacha
 28319,smooth-operator,,mai-huong,Dm,Chacha
 5272,bai-tango-cho-rieng-em,,thuy-dung,Gm,Tango,,thien,0
 29291,phai-quen-anh-thoi,,bich-hien,Gm,Ballade,
 11979,tinh-yeu-tuyet-voi,,yen-phuong,Em,Rock,
 11625,mua-he-dep-nhat,thienv,thien,Bm,Slow Valse,
 12353,hon,thienv,thien-huong,Em,Rhumba,
-5223,thoi,,mike,Dm,Chacha
-5546,em-muon-anh-song-sao,,thanh-liem,Am,techno,
+5932,yeu-em-dat-do,thienv,dung-vu,,Slow-Rock,
+5939,co-nho-dem-nao,thienv,thanh-liem,Em,Chacha,,,1
 29359,bai-tho-cuoi-cung,,thuy-dung,Dm,Boston,
 1228,ao-lua-ha-dong,,yen-phuong,Am,Chacha
 6945,tinh-da-vut-bay,thienv,tuan-anh,Am,Rhumba,
