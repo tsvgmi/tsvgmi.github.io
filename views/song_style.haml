@@ -43,47 +43,57 @@
   %input(type='hidden' name='song_name' value=song_name)
   .row
     .col-6
-      .form-group
-        %label(for='instrument') Instrument(s)
-        %input.form-control#instrument(type='text' name='instrument' value="#{instrument}")
-      .form-group
-        %label(for='key') Key
-        %input.form-control#key(type='text' name='key' value="#{uperf_info[:key]}")
-      .form-group
-        %label(for='intro') Other Notes (Intro/Out/Solo)
-        %textarea.form-control#intro(name='intro' rows=5)
-          = uperf_info[:intro]
+      .row
+        .col-12
+          .form-group
+            %label(for='instrument') Instrument(s)
+            %input.form-control#instrument(type='text' name='instrument' value="#{instrument}")
+          .form-group
+            %label(for='key') Key
+            %input.form-control#key(type='text' name='key' value="#{uperf_info[:key]}")
+          .form-group
+            %label(for='intro') Other Notes (Intro/Out/Solo)
+            %textarea.form-control#intro(name='intro' rows=5)
+              = uperf_info[:intro]
+      .row
+        .col-6
+          .form-group
+            %label(for='smvideo') Smule Record
+            %input.form-control#smule(type='text' name='smule' value="#{smule}")
+        .col-6
+          .form-group
+            %label(for='smkey') Video Key (Smule)
+            %input.form-control#smkey(type='text' name='smkey' value="#{uperf_info[:smkey]}")
+            - if smule && !smule.empty?
+              %iframe(frameborder="0" width="100%" height="125" src="https://www.smule.com/recording/#{smule}/frame")
     .col-6
-      .form-group
-        %label(for='ytvideo') Youtube ID, Start, Stop, ..., | ...
-        %input.form-control#ytvideo(type='text' name='ytvideo' value="#{ytvideo}")
-      .form-group
-        %label(for='vidkey') Video Key
-        %input.form-control#vidkey(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
-      - videos = VideoInfo.new(ytvideo).videos
-      - videos.each do |vinfo|
-        %div(id="#{vinfo[:vid]}")
-    .col-6
-      .form-group
-        %label(for='smvideo') Smule Record
-        %input.form-control#smule(type='text' name='smule' value="#{smule}")
-      .form-group
-        %label(for='smkey') Video Key (Smule)
-        %input.form-control#smkey(type='text' name='smkey' value="#{uperf_info[:smkey]}")
-        - if smule && !smule.empty?
-          %iframe(frameborder="0" width="100%" height="125" src="https://www.smule.com/recording/#{smule}/frame")
-
-    .col-6
-      .form-group
-        %label(for='ytkvideo') Youtube Karaoke
-        %input.form-control#nct(type='text' name='ytkvideo' value="#{ytkvideo}")
-      .form-group
-        %label(for='ytkkey') Video Key
-        %input.form-control#nctkey(type='text' name='ytkkey' value="#{uperf_info[:ytkkey]}")
-      - kvideos = VideoInfo.new(ytkvideo).videos
-      - videos.concat(kvideos)
-      - kvideos.each do |vinfo|
-        %div(id="#{vinfo[:vid]}")
+      .row
+        .col-6
+          .form-group
+            %label(for='ytvideo') Youtube ID, Start, Stop, ..., | ...
+            %input.form-control#ytvideo(type='text' name='ytvideo' value="#{ytvideo}")
+        .col-6
+          .form-group
+            %label(for='vidkey') Video Key
+            %input.form-control#vidkey(type='text' name='vidkey' value="#{uperf_info[:vidkey]}")
+        - videos = VideoInfo.new(ytvideo).videos
+        - videos.each do |vinfo|
+          .col-6
+            %div(id="#{vinfo[:vid]}")
+      .row
+        .col-6
+          .form-group
+            %label(for='ytkvideo') Youtube Karaoke
+            %input.form-control#nct(type='text' name='ytkvideo' value="#{ytkvideo}")
+        .col-6
+          .form-group
+            %label(for='ytkkey') Video Key
+            %input.form-control#nctkey(type='text' name='ytkkey' value="#{uperf_info[:ytkkey]}")
+        - kvideos = VideoInfo.new(ytkvideo).videos
+        - videos.concat(kvideos)
+        - kvideos.each do |vinfo|
+          .col-6
+            %div(id="#{vinfo[:vid]}")
     .col-6
       .form-group
         %label(for='nctvideo') NCT Record
