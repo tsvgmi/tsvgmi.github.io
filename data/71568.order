@@ -13,8 +13,8 @@
 8437,noi-dau-muon-mang,,tuan-anh,Am,Bossa Nova
 6628,ghen,thienv,phu,C,twist
 370,bai-thanh-ca-buon,thienv,thu&mike,A,Slow
-2383,hay-de-mua-roi,doantuoi,gia-cau,Em,Bebop
-2630,neu-em-duoc-lua-chon,thienv,kim-anh,Gm,Rhumba,60
+2383,hay-de-mua-roi,doantuoi,gia-cau,Em,Bebop,,,1
+-2630,neu-em-duoc-lua-chon,thienv,kim-anh,Gm,Rhumba,60
 13332,tango-tim,thienv,mai-kha,Dm,Tango
 5546,em-muon-anh-song-sao,,thanh-liem,Am,techno,
 5223,thoi,,mike,Dm,Chacha
@@ -30,6 +30,7 @@
 29359,bai-tho-cuoi-cung,,thuy-dung,Dm,Boston,,thien
 1228,ao-lua-ha-dong,,yen-phuong,Am,Chacha,,thien
 6945,tinh-da-vut-bay,thienv,tuan-anh,Am,Rhumba,
+28320,tinh-la-gi,,yen-phuong,Am,Rock Ballad
 13456,mambo-italiano,vnhv2018,mai-huong,Gm,Chacha,,thien
 2360,vang-trang-dem-troi,thienv,michelle,Em,Techno,
 -29292,corazoncito-bonito,,mai-huong,C,,

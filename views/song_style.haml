@@ -92,7 +92,7 @@
         - videos = VideoInfo.new(ytvideo).videos
         - videos.each do |vinfo|
           .col-6
-            %div(id="#{vinfo[:vid]}")
+            %div.embed-responsive(id="#{vinfo[:vid]}")
       .row
         .col-6
           .form-group
