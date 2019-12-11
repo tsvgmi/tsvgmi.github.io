@@ -74,7 +74,7 @@
               - videos.concat(new_videos)
               - new_videos.each do |vinfo|
                 -# Plog.dump_info(title:oinfo[:title])
-                %div.col-6(id="#{vinfo[:vid]}")
+                %div.col-6.embed-responsive(id="#{vinfo[:vid]}")
                 - if vinfo[:key] && !vinfo[:key].empty?
                   - offset = key_offset(vinfo[:key], oinfo[:singer_key], true)
                   .pull-right.small
