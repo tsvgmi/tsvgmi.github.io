@@ -3,6 +3,7 @@
 - version = oinfo[:version]
 - link    = sinfo[:href]
 - no_note = params[:no_note]
+-#= oinfo.inspect
 - if version && !version.empty?
   - link += "/#{version}"
 - lyric_id  = "row_#{row_no}"
@@ -54,15 +55,14 @@
     .col.md
       = (oinfo[:singer] || '').gsub(/\//, ', ').split('-').map{|w| w.capitalize}.join(' ')
       .pull-right= oinfo[:singer_key]
-      - if oinfo[:lead]
-        %br/
-        = "(#{oinfo[:lead]})"
     .col.md
+      .small.text-muted.float-right= "#{oinfo[:style]} [#{oinfo[:tempo]} bpm]"
       - unless viewmode
         %a(href="/song-style/#{user}/#{sinfo[:song_id]}/#{sname}" target='song_edit')
           %i.fa.fa-edit
-      %small.text-mutd= oinfo[:style]
-      .pull-right= oinfo[:tempo]
+      - unless (oinfo[:lead] || '').empty?
+        %br/
+        .small.float-right.text-muted= "Lead: #{oinfo[:lead]}"
   %div.collapse.pl_collapse(id=lyric_id)
     - unless no_note
       .row(id=note_id)
