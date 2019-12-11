@@ -131,9 +131,10 @@ get '/perflist/:user' do |user|
   order_list = Hash[play_order.content_str]
   song_list  = play_order.fetch_songs
   singers    = play_order.singers
+  leads      = play_order.leads
   perf_info  = PlayNote.new(user)
   haml :perflist, locals: {list_info:list_info, song_list:song_list, user:user,
-                           order_list:order_list, singers:singers,
+                           order_list:order_list, singers:singers, leads:leads,
                            playlists:playlists, perf_info:perf_info}
 end
 
@@ -551,8 +552,22 @@ class PlayOrder
   end
 
   def singers(active=true)
-    @content_str.select {|sid, sinfo| sinfo[:active]}.map do |sid, sinfo|
+    content_str = @content_str
+    if active
+      content_str = content_str.select {|sid, sinfo| sinfo[:active]}
+    end
+    content_str.map do |sid, sinfo|
       sinfo[:singer]
+    end.compact.uniq.sort
+  end
+
+  def leads(active=true)
+    content_str = @content_str
+    if active
+      content_str = content_str.select {|sid, sinfo| sinfo[:active]}
+    end
+    content_str.map do |sid, sinfo|
+      sinfo[:lead]
     end.compact.uniq.sort
   end
 

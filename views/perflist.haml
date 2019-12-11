@@ -127,6 +127,9 @@
 - singers.select{|s| !s.empty?}.each do |asinger|
   - sclass = "s_#{asinger.gsub(/[^a-z]/i, '')}"
   %button.btn.btn-outline-secondary.btn-sm(onclick='pe_collapse(this)' data-show="#{sclass}")= asinger
+- leads.select{|s| !s.empty?}.each do |asinger|
+  - lclass = "l_#{asinger.gsub(/[^a-z]/i, '')}"
+  %button.btn.btn-primary.btn-sm(onclick='pe_collapse(this)' data-show="#{lclass}")= asinger
 
 - song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
@@ -135,10 +138,12 @@
     - next unless "#{oinfo[:lead]}.#{oinfo[:singer]}" =~ ptn
   - row_no += 1
   - singer = oinfo[:singer] || 'none'
+  - lead   = oinfo[:lead] || 'none'
   - sclass = "s_#{singer.gsub(/[^a-z]/i, '')}"
+  - lclass = "l_#{lead.gsub(/[^a-z]/i, '')}"
   -# Plog.dump_info(sclass:sclass, singer:singer, oinfo:oinfo)
   - locals = {sinfo:sinfo, oinfo:oinfo, perf_info:perf_info, row_no:row_no, viewmode:viewmode, user:user, videos:videos}
-  %div(class="#{sclass} si_collapse")
+  %div(class="#{sclass} #{lclass} si_collapse")
     = partial :_perflist_song, locals:locals
 
 - content_for :javascript do
