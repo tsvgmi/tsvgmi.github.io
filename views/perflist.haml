@@ -122,8 +122,8 @@
 - if (limit = params[:limit].to_i) > 0
   - song_list = song_list[0..limit-1]
 
-%button.btn.btn-outline-secondary.btn-lg(onclick='stopAllExcept()') Stop Music
-%button.btn.btn-outline-secondary.btn-lg(onclick='pe_collapse(this)' data-show="si_collapse") All
+%button.btn.btn-secondary.btn-lg(onclick='stopAllExcept()') Stop Music
+%button.btn.btn-secondary.btn-lg(onclick='pe_collapse(this)' data-show="si_collapse") All
 - singers.select{|s| !s.empty?}.each do |asinger|
   - sclass = "s_#{asinger.gsub(/[^a-z]/i, '')}"
   %button.btn.btn-outline-secondary.btn-sm(onclick='pe_collapse(this)' data-show="#{sclass}")= asinger
