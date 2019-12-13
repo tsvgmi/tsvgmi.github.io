@@ -2202,5 +2202,31 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "kiep-ngheo": {
+    "instrument": "Acoustic Guitar",
+    "key": "Am",
+    "intro": "[Am] [E] [F] [E] [Am] [E] [F]-[E] [Am]\r\n==\r\n56585434 32123 4321321-72\r\n56585434 32123 4321321-71",
+    "ytvideo": "9DPY6xy_gPs,0,20",
+    "vidkey": "Bm",
+    "ytkvideo": "",
+    "ytkkey": "",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "em-da-tung-yeu-ta-da-tung-yeu": {
+    "instrument": "Piano & String",
+    "key": "Am",
+    "intro": "[Dm] [Am] [Dm]-[Bm7b5] [E7]\r\nPiano: -5 123 3-(656) 123 -(545) \r\nString: 5676 6534 2345",
+    "ytvideo": "dhxM293bFLw,0,19",
+    "vidkey": "Cm",
+    "ytkvideo": "y6IyqpfJYno,0,20",
+    "ytkkey": "Cm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
