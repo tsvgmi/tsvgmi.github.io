@@ -2062,11 +2062,13 @@
     "nct": ""
   },
   "anh-con-yeu-em": {
-    "instrument": "[]",
+    "instrument": "Dist Guitar, Orchestra",
     "key": "Am",
-    "intro": "[Dm] [F] [G] [Am]\r\n8784 (5451) 4342 1-711\r\n",
+    "intro": "[Am] [Dm] [F]-[G] [Am] [F]-[G] [Am] [F]-[G] [Am]\r\n[Am] [Dm] [F]-[G] [Am]\r\nDistortion: 8788 8784 4341 32-71 (-71-71313434554588) +(2132132-71)\r\nString: 8785 8784 5451 4342 1-711\r\n",
     "ytvideo": "j5bOhBaG9QA,0,12|m2-uihNRe3s,0,38",
     "vidkey": "Fm|Fm",
+    "ytkvideo": "",
+    "ytkkey": "",
     "smkey": "",
     "smule": "",
     "nctkey": "",
