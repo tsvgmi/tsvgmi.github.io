@@ -752,8 +752,9 @@ class VideoInfo
   # could be played in multiple styles
   def select_set(solo_idx)
     if solo_idx && @yk_videos.size > 0
-      solo_sel  = solo_idx.split('/').map{|f| f.to_i}
-      @yk_videos  = @yk_videos.values_at(*solo_sel).compact
+      solo_sel   = solo_idx.split('/').map{|f| f.to_i}
+      @yk_videos = @yk_videos.values_at(*solo_sel).compact
+      Plog.dump_info(solo_sel:solo_sel, yk_videos:@yk_videos)
       check_videos
     end
     @yk_videos
