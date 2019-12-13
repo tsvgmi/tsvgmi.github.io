@@ -1,7 +1,7 @@
 # song_id,title,version,singer,skey,style,tempo,lead,solo_idx
 6999,nguoi-yeu-ly-tuong,thienv,michelle,Am,Chacha,,thien
 4464,xot-xa,,yen-phuong,Am,Rhumba,,thien
-7848,anh-con-yeu-em,thienv,thien,Fm,Boston,,,1
+7848,anh-con-yeu-em,thienv,thien,Fm,Boston,55,,1
 5835,yeu-em-ca-trong-giac-mo,,thanh-liem,Cm,Techno,
 2728,jingle-bells,,yen-phuong&mai-huong,,Pasodoble,
 3099,tinh-nghia-doi-ta-chi-the-thoi,thienv,mai-huong,C,Chacha,,thien
@@ -10,28 +10,30 @@
 -4168,ben-nhau-dem-nay-dancing-all-night,,thuy-dung,Dm,Chacha,135,thien
 14856,chi-mot-minh-anh-thoi,thienv,bich-hien,Cm,Tango,,thien
 2474,sau-dong,thienv,dung-vu,Dm,Chacha
-8437,noi-dau-muon-mang,,tuan-anh,Am,Bossa Nova
+8437,noi-dau-muon-mang,,tuan-anh,Am,Bossa Nova,,hiep
 6628,ghen,thienv,phu,C,twist
-370,bai-thanh-ca-buon,thienv,thu&mike,A,Slow
+370,bai-thanh-ca-buon,thienv,thu&mike,A,Slow,,hiep
 2383,hay-de-mua-roi,doantuoi,gia-cau,Em,Bebop,,,1
 13332,tango-tim,thienv,mai-kha,Dm,Tango
 5546,em-muon-anh-song-sao,,thanh-liem,Am,techno,,thien,1
 5223,thoi,,mike,Dm,Chacha
-13139,mot-coi-tinh-phai,thienv,mike,Bm,Slow
+-2973,o-holy-night,,mike,G,Slow,65,mike
+-1777,de-nho-mot-thoi-ta-da-yeu,thienv,anh-thu,Gm,Rhumba,,hiep
+-13139,mot-coi-tinh-phai,thienv,mike,Bm,Slow
 28319,smooth-operator,,mai-huong,Dm,Chacha,120
-3383,tuyet-roi,,thuy-dung,Dm,rhumba,93
-10232,em-da-tung-yeu-ta-da-tung-yeu,thienv,thanh-liem,Bm,Slow,
+3383,tuyet-roi,,thuy-dung,Dm,Rhumba,93,hiep
+10232,em-da-tung-yeu-ta-da-tung-yeu,thienv,thanh-liem,Bm,Slow,,thien
 4663,kiep-ngheo,thienv,diem,Gm,Tango
 29291,phai-quen-anh-thoi,,bich-hien,Gm,Ballade,,thien
 11979,tinh-yeu-tuyet-voi,,yen-phuong,Em,Rock,,thien
-11625,mua-he-dep-nhat,thienv,thien,Bm,Slow Valse,
-12353,hon,thienv,thien-huong,Em,Rhumba,
+11625,mua-he-dep-nhat,thienv,thien,Bm,Slow Valse,80
+12353,hon,thienv,thien-huong,Em,Rhumba,,hiep
 5932,yeu-em-dat-do,thienv,dung-vu,,Slow-Rock,
 5939,co-nho-dem-nao,thienv,thanh-liem,Em,Chacha,,thien,1
-3781,doi-em-trong-mo,,thien,Bm,Tango/Remix
+3781,doi-em-trong-mo,,thien,Bm,Tango/Remix,130
 1228,ao-lua-ha-dong,,yen-phuong,Am,Chacha,,thien
 29359,bai-tho-cuoi-cung,,thuy-dung,Dm,Boston,,thien
-6945,tinh-da-vut-bay,thienv,tuan-anh,Am,Rhumba,
+6945,tinh-da-vut-bay,thienv,tuan-anh,Am,Rhumba,,hiep
 28320,tinh-la-gi,,yen-phuong,Am,Rock Ballad
 13456,mambo-italiano,vnhv2018,mai-huong,Gm,Chacha,,thien
 2360,vang-trang-dem-troi,thienv,michelle,Em,Techno,
@@ -78,7 +80,6 @@
 -6083,cho-dong,thienv
 -29508,one-day-when-we-were-young,,,,,
 -9251,vay-la-minh-xa-nhau,,,,,
--2973,o-holy-night,,lynn,G,Slow,65
 -7442,mua-dem-doc-hanh,,hoa-tau,Dm
 -5554,la-thu-tran-the,,,,,
 -799,chuyen-thuong-tinh-the-thoi,,michelle,Dm,rhumba

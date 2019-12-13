@@ -126,10 +126,14 @@
 %button.btn.btn-secondary.btn-lg(onclick='pe_collapse(this)' data-show="si_collapse") All
 - singers.select{|s| !s.empty?}.each do |asinger|
   - sclass = "s_#{asinger.gsub(/[^a-z]/i, '')}"
-  %button.btn.btn-outline-secondary.btn-sm(onclick='pe_collapse(this)' data-show="#{sclass}")= asinger
+  %button.btn.btn-outline-secondary.btn-sm(onclick='pe_collapse(this)' data-show="#{sclass}")
+    %i.fa.fa-microphone
+    = asinger
 - leads.select{|s| !s.empty?}.each do |asinger|
   - lclass = "l_#{asinger.gsub(/[^a-z]/i, '')}"
-  %button.btn.btn-primary.btn-sm(onclick='pe_collapse(this)' data-show="#{lclass}")= asinger
+  %button.btn.btn-primary.btn-sm(onclick='pe_collapse(this)' data-show="#{lclass}")
+    %i.fa.fa-music
+    = asinger
 
 - song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
