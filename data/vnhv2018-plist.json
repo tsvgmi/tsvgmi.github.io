@@ -1536,9 +1536,11 @@
   "tinh-la-gi": {
     "instrument": "Elec Guitar",
     "key": "Am",
-    "intro": "[Am]",
-    "ytvideo": "VMbkfCG6yC8,3,12",
+    "intro": "[Am]\r\nMid Part:\r\n[Am] [F] [G]-[Em] [Am] [Am] [F] [G]-[Em] [Am]\r\n5675 ~531577 5787 +(2345)\r\n34556755 25 585321 5567564542 -713434578",
+    "ytvideo": "VMbkfCG6yC8,3,12,2:42,3:17",
     "vidkey": "Am",
+    "ytkvideo": "",
+    "ytkkey": "",
     "smkey": "",
     "smule": "",
     "nctkey": "",
