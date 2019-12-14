@@ -3,7 +3,6 @@
 - version = oinfo[:version]
 - link    = sinfo[:href]
 - no_note = params[:no_note]
--#= oinfo.inspect
 - if version && !version.empty?
   - link += "/#{version}"
 - lyric_id  = "row_#{row_no}"
@@ -66,14 +65,14 @@
   %div.collapse.pl_collapse(id=lyric_id)
     - unless no_note
       .row(id=note_id)
-        - vidinfos.select_set(oinfo[:solo_idx])
-        - if vidinfos.yk_videos.size > 0
+        - solo_idx = params[:karaoke] ? '0' : oinfo[:solo_idx]
+        - vidinfos.select_set(solo_idx)
+        - if vidinfos.videos.size > 0
           .col-6
             .row
               - new_videos = vidinfos.videos
               - videos.concat(new_videos)
               - new_videos.each do |vinfo|
-                -# Plog.dump_info(title:oinfo[:title])
                 %div.col-6.embed-responsive(id="#{vinfo[:vid]}")
                 - if vinfo[:key] && !vinfo[:key].empty?
                   - offset = key_offset(vinfo[:key], oinfo[:singer_key], true)
