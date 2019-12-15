@@ -95,6 +95,7 @@
 .row
   .col-md-9
     %h2
+      - list_info ||= {}
       List:
       - unless viewmode
         %a(href="/playorder/#{user}/#{list_info[:id]}" target='list_edit')
@@ -110,7 +111,7 @@
           %option ---
           - files.sort.each do |file|
             - bfile = File.basename(file).sub(/\.html$/, '')
-            %option= bfile
+            %option(value=bfile)= bfile.sub(/-program$/, '')
       - else
         %select.form-control(name="listno" onchange="this.form.submit()")
           - playlists.sort_by{|r| r[:name]}.each do |plinfo|
