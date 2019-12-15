@@ -39,6 +39,7 @@ gem 'rerun'
 gem 'nokogiri'
 gem 'haml'
 gem 'sqlite3'
+gem 'rdiscount'
 
 group :development do
   gem 'byebug'

@@ -86,8 +86,12 @@
     -webkit-border-radius:7px 7px 7px 7px ;
     border-radius:7px 7px 7px 7px ;
   }
+  .perflist-note {
+    background-color: #cff;
+  }
 
 - viewmode = params[:viewmode] && !params[:viewmode].empty?
+.perflist-note= note
 .row
   .col-md-9
     %h2
@@ -111,7 +115,7 @@
         %select.form-control(name="listno" onchange="this.form.submit()")
           - playlists.sort_by{|r| r[:name]}.each do |plinfo|
             - selected = params[:listno].to_i == plinfo[:id]
-            %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:id]}. #{plinfo[:name][0..39]} [#{plinfo[:song_count]}]"
+            %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:name][0..39]} [#{plinfo[:song_count]}]"
 
 - if ptn = params[:ptn]
   - ptn = /#{ptn}/io
@@ -158,6 +162,7 @@
       $('.a-tooltip').tooltip({"html":true}); 
       $('.si_collapse').collapse();
       $('button').tooltip();
+      $('.perflist-note').fadeOut(3000)
     });
 
     var videos     = #{videos.to_json};

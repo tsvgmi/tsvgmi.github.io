@@ -1,6 +1,6 @@
-- Dir.glob("playlist/*-program.html").sort.each do |aprogram|
-  .row
-    .col-md-12
-      - basename = File.basename(aprogram)
+.row
+  - Dir.glob("playlist/*-program.html").sort.each do |aprogram|
+    .col-md-4
+      - basename = File.basename(aprogram).sub(/-program.html$/, '')
       %a(href="/#{aprogram}")= basename
 

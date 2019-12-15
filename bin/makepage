@@ -35,6 +35,7 @@ build_page data/67622.order playlist/vnhv-6-2019s vnhv2018 1
 build_page data/70118.order playlist/labor-party-2019s vnhv2018 1
 #build_page data/71568.order playlist/vnhv-10-19-2019 vnhv2018 1
 build_page data/71568.order playlist/christmas-2019 vnhv2018 0
+build_page data/73797.order playlist/van-christmas-2019 thienv 0
 
 curl -so playlist/index.html http://127.0.0.1:4567/playlist
 #curl -so smulelist/THV_13.html http://127.0.0.1:4567/smulelist/THV_13?nosinger=true

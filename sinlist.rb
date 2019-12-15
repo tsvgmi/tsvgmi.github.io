@@ -11,6 +11,7 @@ require 'core'
 require 'listhelper'
 require 'sequel'
 require 'better_errors'
+require 'rdiscount'
 require_relative '../hacauto/bin/hac-nhac'
 
 set :bind, '0.0.0.0'
@@ -133,9 +134,15 @@ get '/perflist/:user' do |user|
   singers    = play_order.singers
   leads      = play_order.leads
   perf_info  = PlayNote.new(user)
+  notefile   = "data/#{listno}.notes"
+  note       = nil
+  if test(?f, notefile)
+    note = markdown(File.read(notefile))
+  end
   haml :perflist, locals: {list_info:list_info, song_list:song_list, user:user,
                            order_list:order_list, singers:singers, leads:leads,
-                           playlists:playlists, perf_info:perf_info}
+                           playlists:playlists, perf_info:perf_info,
+                           note:note}
 end
 
 get '/send_patch/:pstring' do |pstring|
