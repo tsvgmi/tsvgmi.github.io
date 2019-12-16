@@ -95,13 +95,14 @@
 .row
   .col-md-9
     %h2
-      - list_info ||= {}
-      List:
-      - unless viewmode
-        %a(href="/playorder/#{user}/#{list_info[:id]}" target='list_edit')
-          %i.fa.fa-edit
-      - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}"
-      %a(href=link target='hopamchuan')= "#{list_info[:name]}"
+      - if playlists
+        - list_info ||= {}
+        List:
+        - if !viewmode
+          %a(href="/playorder/#{user}/#{list_info[:id]}" target='list_edit')
+            %i.fa.fa-edit
+        - link = "https://hopamchuan.com/playlist/v/#{list_info[:id]}"
+        %a(href=link target='hopamchuan')= "#{list_info[:name]}"
   .col-md-3
     %form
       %input(type='hidden' name='viewmode' value=viewmode)
@@ -112,11 +113,16 @@
           - files.sort.each do |file|
             - bfile = File.basename(file).sub(/\.html$/, '')
             %option(value=bfile)= bfile.sub(/-program$/, '')
-      - else
+      - elsif playlists
         %select.form-control(name="listno" onchange="this.form.submit()")
           - playlists.sort_by{|r| r[:name]}.each do |plinfo|
-            - selected = params[:listno].to_i == plinfo[:id]
+            - selected = params[:listno].to_i == plinfo[:id].to_i
             %option{value:"#{plinfo[:id]}", selected:selected}= "#{plinfo[:name][0..39]} [#{plinfo[:song_count]}]"
+      - elsif singer_lists
+        %select.form-control(name="listno" onchange="this.form.submit()")
+          - singer_lists.sort_by{|r| r[:name]}.each do |plinfo|
+            - selected = params[:singer] == plinfo[:name]
+            %option{value:"#{plinfo[:name]}", selected:selected}= "#{plinfo[:name]}"
 
 - if ptn = params[:ptn]
   - ptn = /#{ptn}/io
