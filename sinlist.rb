@@ -124,9 +124,7 @@ get '/singer_list/:singer' do |singer|
   end
   reload       = params[:reload].to_i
   locals       = PlayList.collect_for_singer(singer, reload:reload==2)
-  singer_lists = %w(bich-hien gia-cau mai-huong michelle mike thanh
-                  thanh-liem thien thien-huong thuy-dung yen-phuong).
-                  map{|r| {name:r}}
+  singer_lists = Playlist.band_singers.map{|r| {name:r}}
   locals.update(user:nil, playlists:nil, singer_lists:singer_lists,
                 note:nil)
   haml :perflist, locals: locals
