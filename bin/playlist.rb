@@ -354,8 +354,10 @@ class PlayList
     end
 
     def gen_singer_list(singer, reload=false)
-      order_file = "data/#{singer}.order"
-      if !reload && test(?s, order_file)
+      order_file = "#{Dir.pwd}/data/#{singer}.order"
+      Plog.dump_info(reload:reload, order_file:order_file)
+      if (!reload || true) && (test(?f, order_file))
+        Plog.dump_info(reload:reload, nreload:!reload, order_file:order_file)
         return true
       end
       sids = {}

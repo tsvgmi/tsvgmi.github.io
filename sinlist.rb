@@ -22,13 +22,29 @@ set :bind, '0.0.0.0'
 
 enable :sessions
 
-configure :development do
-  use BetterErrors::Middleware
-  BetterErrors.application_root = __dir__
-end
+#configure :development do
+  #use BetterErrors::Middleware
+  #BetterErrors.application_root = __dir__
+#end
 
 before do
   response.headers['Access-Control-Allow-Origin'] = '*'
+end
+
+not_found do
+  path = request.env['PATH_INFO']
+  mdkfile = "#{settings.views}/#{path}.mdk"
+  mdfile = "#{settings.views}/#{path}.md"
+  if test(?f, mdkfile)
+    eresult = ERB.new(File.read(mdkfile)).result(binding)
+    result  = RDiscount.new(eresult).to_html
+    return [200, result]
+  elsif test(?f, mdfile)
+    eresult = File.read(mdfile)
+    result  = RDiscount.new(eresult).to_html
+    return [200, result]
+  end
+  return [404, "Page #{path} not found"]
 end
 
 # routes...
@@ -124,8 +140,8 @@ get '/singer_list/:singer' do |singer|
   end
   reload       = params[:reload].to_i
   locals       = PlayList.collect_for_singer(singer, reload:reload==2)
-  singer_lists = Playlist.band_singers.map{|r| {name:r}}
-  locals.update(user:nil, playlists:nil, singer_lists:singer_lists,
+  singer_lists = PlayList.band_singers.map{|r| {name:r}}
+  locals.update(user:'thienv', playlists:nil, singer_lists:singer_lists,
                 note:nil)
   haml :perflist, locals: locals
 end
@@ -228,7 +244,32 @@ get '/reload-song/:song_id' do |song_id|
   FileUtils.rm(files, verbose:true)
 end
 
+get '/testing' do
+  render_mdk :test, locals:{aa:10, bb:20}
+end
+
 helpers do
+  def render_mdk(template, options={})
+    # Save a local copy as I can't control if haml is going to
+    # mess with the definition
+    locals = options[:locals] || {}
+    page_out = haml(:layout, options) do
+      mdkfile = "#{settings.views}/#{template}.mdk"
+      if test(?f, mdkfile)
+        bind = binding
+        locals.each do |k, v|
+          bind.local_variable_set(k, v)
+        end
+        eresult = ERB.new(File.read(mdkfile)).result(bind)
+        result  = RDiscount.new(eresult).to_html
+      else
+        raise "Template mdk #{template} not found"
+      end
+      result
+    end
+    return [200, page_out]
+  end
+
   def download_transpose(video, offset, options)
     require 'tempfile'
 
@@ -306,7 +347,7 @@ end
 
 def search_data_file(fname)
   ["/Volumes/Voice/SMULE/#{fname}",
-   "#{ENV['HOME']}/#{fname}"].each do |afile|
+   "#{ENV['HOME']}/shared/#{fname}"].each do |afile|
     if test(?r, afile)
       return afile
     end
