@@ -2332,5 +2332,57 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "u-thi-thoi": {
+    "instrument": "Bau, Tranh",
+    "key": "C",
+    "intro": "[C] [Am] [Dm]-[G] [C]-[F]-[G] [C]\r\n1125 {12125} 2568 {2568} 9865 868652 56898 {5+(1253251)}",
+    "ytvideo": "_2Kz-NaXdik,22,43",
+    "vidkey": "Abm",
+    "ytkvideo": "eb1LhAaOc-A,24,46",
+    "ytkkey": "Abm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "dap-mo-cuoc-tinh": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "zZjGBB5X3Z4,6,33",
+    "vidkey": "Ebm",
+    "ytkvideo": "H3x1g93lDYk,0,27",
+    "ytkkey": "Ebm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "nang-co-con-xuan": {
+    "instrument": "Synth",
+    "key": "Am",
+    "intro": "[Am] [Am] [Am] [C] [C] [C] [C] [C] [Em]\r\n[Dm] [Dm] [Dm] [Dm] [Am] [Am] [G] [G] [Am]\r\n5 555431 8745 \r\n5 55 54354431-5\r\n44341434545 44345431-5 33131344 2 217217217211",
+    "ytvideo": "pgjdIv_GSMM,0,36",
+    "vidkey": "Bbm",
+    "ytkvideo": "NK7iM6zaUjE,5,45",
+    "ytkkey": "Bbm",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "bon-mau-ao": {
+    "instrument": "[]",
+    "key": "",
+    "intro": "",
+    "ytvideo": "_a6fXFTcCV0,10,57",
+    "vidkey": "F#",
+    "ytkvideo": "3x7lFoqZHAQ,12,1:01",
+    "ytkkey": "F#",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
