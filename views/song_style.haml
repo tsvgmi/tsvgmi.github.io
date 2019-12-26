@@ -33,8 +33,8 @@
 %h2
   = song_info[:title]
   - href = "https://www.youtube.com/results?search_query=#{CGI.escape(song_info[:title])}"
-  %a(href=href target='youtube')
-    %i.fa.fa-youtube
+  %a(href=href target='youtube' title='Search in youtube')
+    %i.fab.fa-youtube
 %ul.list-inline
   %li.list-inline-item
     - if link = song_info[:link]

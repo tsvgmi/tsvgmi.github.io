@@ -244,10 +244,6 @@ get '/reload-song/:song_id' do |song_id|
   FileUtils.rm(files, verbose:true)
 end
 
-get '/testing' do
-  render_mdk :test, locals:{aa:10, bb:20}
-end
-
 helpers do
   def render_mdk(template, options={})
     # Save a local copy as I can't control if haml is going to
