@@ -248,9 +248,7 @@ get '/smulelist/:user' do |user|
   content   = []
   singer    = (params[:singer] || "").split
   tags      = (params[:tags] || "").split.join('|')
-  unless tags.empty?
-    tags = Regexp.new(tags)
-  end
+  tags      = tags.empty? ? nil : Regexp.new(tags)
   singers   = {}
   smcontent = SmContent.new(user)
   records   = smcontent.content.left_join(smcontent.songtags, name: :title).
