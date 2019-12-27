@@ -6,7 +6,8 @@
     clip-path: circle(15px at center);
   }
 
-- cwidth = params[:nosinger] ? 12 : 8
+- readonly = params[:readonly]
+- cwidth   = readonly ? 12 : 8
 .row
   %div(class="col-lg-#{cwidth}")
     %table.cell-border.display#main_table
@@ -18,6 +19,7 @@
           %th Listens
           %th Loves
           %th Recorded
+          %th Tags
       %tbody
         - content.each do |arow|
           - avatar = arow[:avatar]
@@ -26,19 +28,18 @@
             %td.small
               - href = 'https://www.smule.com' + arow[:href]
               %img.savatar(src=avatar height=30 width=30)
-              %a(href="/smulelist/#{user}?title=#{arow[:title]}")
-                %i.fa.fa-search
-              - url = "/smremove/#{user}/#{arow[:sid]}"
-              %a(href="#" onclick="return smdelete('#{url}', '#{arow[:title]}')")
-                %i.fa.fa-trash
-              - ofile = arow[:sfile] || arow[:ofile]
-              - if ofile
-                - url   = "/play-here?ofile=#{CGI.escape(ofile)}"
-                %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{url}'); return false;")
-                  %i.fa.fa-play
-              - else
-                - Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
-                %i.fa.fa-play.invisible
+              - unless readonly
+                - url = "/smremove/#{user}/#{arow[:sid]}"
+                %a(href="#" onclick="return smdelete('#{url}', '#{arow[:title]}')")
+                  %i.fa.fa-trash
+                - ofile = arow[:sfile] || arow[:ofile]
+                - if ofile
+                  - url   = "/play-here?ofile=#{CGI.escape(ofile)}"
+                  %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{url}'); return false;")
+                    %i.fa.fa-play
+                - else
+                  - Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
+                  %i.fa.fa-play.invisible
               %a(href=href target='smule')
                 = arow[:title]
             %td.small(data-sort="#{arow[:isfav] ? 2 : (arow[:oldfav] ? 1 : 0)}")
@@ -50,15 +51,17 @@
                 %i.fa.fa-star.invisible
             %td.small
               - arow[:record_by].split(',').sort.each do |singer|
-                %a(href="/smulelist/#{user}?singer=#{singer}")
-                  %i.fa.fa-search
-                  %a(href="https://www.smule.com/#{singer}" target='smule')= singer[0..9]
+                - unless readonly
+                  %a(href="/smulelist/#{user}?singer=#{singer}")
+                    %i.fa.fa-search
+                %a(href="https://www.smule.com/#{singer}" target='smule')= singer[0..9]
                 <br>
             %td.dt-right.small= arow[:listens]
             %td.dt-right.small= arow[:loves]
             %td.small= arow[:created] ? arow[:created].strftime('%Y-%m-%d') : nil
+            %td.small= arow[:tags]
 
-  - unless params[:nosinger]
+  - unless readonly
     .col-lg-4
       %table.cell-border.display#singer_table
         %thead
