@@ -283,8 +283,11 @@ end
 get '/smulegroup/:user' do |user|
   content   = []
   singer    = (params[:singer] || "").split
+  tags      = (params[:tags] || "").split.join('|')
+  tags      = tags.empty? ? nil : Regexp.new(tags)
   smcontent = SmContent.new(user)
-  records   = smcontent.content
+  records   = smcontent.content.left_join(smcontent.songtags, name: :title).
+    reverse(:created)
   records.each do |r|
     if singer.size > 0
       record_by = r[:record_by].split(',')
@@ -292,6 +295,9 @@ get '/smulegroup/:user' do |user|
     end
     if params[:title] && r[:title] != params[:title]
       next
+    end
+    if tags
+      next unless r[:tags] =~ tags
     end
     content << r
   end

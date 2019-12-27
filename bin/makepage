@@ -40,3 +40,4 @@ build_page data/73797.order playlist/van-christmas-2019 thienv 0
 set -x
 curl -so playlist/index.html http://127.0.0.1:4567/playlist
 curl -so smulelist/THV_13-nhac-xua.html "http://127.0.0.1:4567/smulelist/THV_13?tags=nhac-xua&readonly=true"
+curl -so smulegroup/THV_13-nhac-xua.html "http://127.0.0.1:4567/smulegroup/THV_13?tags=nhac-xua&readonly=true"
