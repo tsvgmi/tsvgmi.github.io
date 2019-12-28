@@ -14,10 +14,11 @@
         %tr
           %th Title
           %th Record_By
-          %th Tags
           %th Latest
-          %th Listens
-          %th Loves
+          - unless readonly
+            %th Tags
+            %th Listens
+            %th Loves
       %tbody
         - scontent.keys.sort.each do |title|
           - slist = scontent[title]
@@ -39,31 +40,33 @@
                 - Plog.dump_info(sinfo:sinfo)
                 - worklist << [rec_str, aperf, ofile, sinfo]
               - worklist = worklist.sort_by{|w| w[1][:created]}.reverse
-              - worklist.each do |rec_str, aperf, ofile, sinfo|
-                %span.col-lg-3
-                  - if avatar = sinfo[:avatar]
-                    %a(href="https://www.smule.com/#{sinfo[:name]}" target='smule')
-                      %img.uavatar(src=avatar height=30 width=30 title=rec_str)
-                  - unless readonly
-                    - if ofile
-                      - lurl   = "/play-here?ofile=#{CGI.escape(ofile)}"
-                      %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{lurl}'); return false;")
-                        %i.fa.fa-play
-                    - else
-                      -# Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
-                      %i.fa.fa-play.invisible
-                  - href = 'https://www.smule.com' + aperf[:href]
-                  %a(href=href target='smule' title="#{aperf[:created].strftime('%Y-%m-%d')}")= rec_str[0..7]
-            %td.small
-              = (songtags.first(name:arow[:title]) || {})[:tags]
+              .row
+                - worklist.each do |rec_str, aperf, ofile, sinfo|
+                  %div.col-sm-3
+                    - if avatar = sinfo[:avatar]
+                      %a(href="https://www.smule.com/#{sinfo[:name]}" target='smule')
+                        %img.uavatar(src=avatar height=30 width=30 title=rec_str)
+                    - unless readonly
+                      - if ofile
+                        - lurl   = "/play-here?ofile=#{CGI.escape(ofile)}"
+                        %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{lurl}'); return false;")
+                          %i.fa.fa-play
+                      - else
+                        -# Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
+                        %i.fa.fa-play.invisible
+                    - href = 'https://www.smule.com' + aperf[:href]
+                    %a(href=href target='smule' title="#{aperf[:created].strftime('%Y-%m-%d')}")= rec_str[0..9]
             %td.small
               - cdate = ((worklist[0] || [])[1] || {})[:created]
               - if cdate
                 = cdate.strftime("%Y-%m-%d")
-            %td.dt-right.small
-              = slist.inject(0){|sum,x| sum + x[:listens] }
-            %td.dt-right.small
-              = slist.inject(0){|sum,x| sum + x[:loves] }
+            - unless readonly
+              %td.small
+                = (songtags.first(name:arow[:title]) || {})[:tags]
+              %td.dt-right.small
+                = slist.inject(0){|sum,x| sum + x[:listens] }
+              %td.dt-right.small
+                = slist.inject(0){|sum,x| sum + x[:loves] }
 
 - content_for :javascript do
   :javascript
