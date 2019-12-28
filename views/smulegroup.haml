@@ -5,6 +5,11 @@
   .uavatar {
     clip-path: circle(15px at center);
   }
+  .fav-1 {
+    background-color: #cfc;
+    font-weight: bold;
+    font-size: 120%;
+  }
 
 - readonly = params[:readonly]
 .row
@@ -15,8 +20,8 @@
           %th Title
           %th Record_By
           %th Latest
+          %th Tags
           - unless readonly
-            %th Tags
             %th Listens
             %th Loves
       %tbody
@@ -37,16 +42,25 @@
                 - next if !rec_str || rec_str.empty?
                 - ofile = arow[:sfile] || arow[:ofile]
                 - sinfo = all_singers.first(name:rec_str) || {}
-                - Plog.dump_info(sinfo:sinfo)
+                -# Plog.dump_info(sinfo:sinfo)
                 - worklist << [rec_str, aperf, ofile, sinfo]
               - worklist = worklist.sort_by{|w| w[1][:created]}.reverse
               .row
                 - worklist.each do |rec_str, aperf, ofile, sinfo|
                   %div.col-sm-3
-                    - if avatar = sinfo[:avatar]
-                      %a(href="https://www.smule.com/#{sinfo[:name]}" target='smule')
-                        %img.uavatar(src=avatar height=30 width=30 title=rec_str)
-                    - unless readonly
+                    - song_href = 'https://www.smule.com' + aperf[:href]
+                    - avatar = sinfo[:avatar]
+                    - if readonly
+                      %a(href=song_href target='smule' title="#{aperf[:created].strftime('%Y-%m-%d')}")
+                        - if avatar
+                          %img.uavatar(src=avatar height=30 width=30 title=rec_str)
+                        - isfav = aperf[:isfav] || aperf[:oldfav]
+                        - Plog.dump_info(isfav:isfav)
+                        %span(class="fav-#{isfav}")= rec_str[0..9]
+                    - else
+                      - if avatar
+                        %a(href="https://www.smule.com/#{sinfo[:name]}" target='smule')
+                          %img.uavatar(src=avatar height=30 width=30 title=rec_str)
                       - if ofile
                         - lurl   = "/play-here?ofile=#{CGI.escape(ofile)}"
                         %a(href="#" id="#{arow[:sid]}" onclick="jQuery.ajax('#{lurl}'); return false;")
@@ -54,15 +68,16 @@
                       - else
                         -# Plog.warn(title:arow[:title], ofile:ofile, sid:arow[:sid])
                         %i.fa.fa-play.invisible
-                    - href = 'https://www.smule.com' + aperf[:href]
-                    %a(href=href target='smule' title="#{aperf[:created].strftime('%Y-%m-%d')}")= rec_str[0..9]
+                      %a(href=song_href target='smule' title="#{aperf[:created].strftime('%Y-%m-%d')}")
+                        - isfav = aperf[:isfav] || aperf[:oldfav]
+                        %span(class="fav-#{isfav}")= rec_str[0..9]
             %td.small
               - cdate = ((worklist[0] || [])[1] || {})[:created]
               - if cdate
                 = cdate.strftime("%Y-%m-%d")
+            %td.small
+              = ((songtags.first(name:arow[:title]) || {})[:tags] || '').gsub(/,/, ', ')
             - unless readonly
-              %td.small
-                = (songtags.first(name:arow[:title]) || {})[:tags]
               %td.dt-right.small
                 = slist.inject(0){|sum,x| sum + x[:listens] }
               %td.dt-right.small
