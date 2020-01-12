@@ -770,6 +770,14 @@ class Plog
       end
     end
 
+    def dump_error(obj)
+      if obj[:_ofmt] == 'Y'
+        Plog.error(obj.to_yaml)
+      else
+        Plog.error(obj.inspect)
+      end
+    end
+
     def method_missing(symbol, *args)
       result = nil
       myLogs.each do |alog, tmp|

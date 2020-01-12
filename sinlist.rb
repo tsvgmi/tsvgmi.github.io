@@ -230,11 +230,19 @@ get "/smule_data/:user" do |user|
     data0  = data0.order(columns[ocolumn])
   end
   if search
-    search = search.upcase
-    data0 = data0.where(Sequel.lit("UPPER(title) like ? or UPPER(record_by) like ?",
+    search = search.downcase
+    data0 = data0.where(Sequel.lit("LOWER(stitle) like ? or LOWER(record_by) like ?",
                                    "%#{search}%", "%#{search}%"))
   end
-  data1 = data0.select_map(columns)
+  data1 = data0.map {|r|
+    isfav_0     = r[:isfav] ? "<i class='fa fa-star'></i>" : ""
+    href        = "https://www.smule.com"
+    record_by_0 = r[:record_by].split(',').map{|n| "<a href='#{href}/#{n}' target='smule'>#{n}</a>"}.join(", ")
+    avatar      = "<img class=savatar src=#{r[:avatar]} height=30 width=30></img>"
+    title       = "<a href='#{href}#{r[:href]}' target='smule'>#{r[:title]}</a>"
+    title_0     = "#{avatar}#{title}"
+    [title_0, isfav_0, record_by_0, r[:listens], r[:loves], r[:created]]
+  }
   data = {
     draw:            params[:draw],
     recordsTotal:    smcontent.content.count,
@@ -251,7 +259,7 @@ get '/smulelist/:user' do |user|
   tags      = tags.empty? ? nil : Regexp.new(tags)
   singers   = {}
   smcontent = SmContent.new(user)
-  records   = smcontent.content.left_join(smcontent.songtags, name: :title).
+  records   = smcontent.content.left_join(smcontent.songtags, name: :stitle).
     reverse(:created)
   records.each do |r|
     record_by = r[:record_by].split(',')
@@ -286,7 +294,7 @@ get '/smulegroup/:user' do |user|
   tags      = (params[:tags] || "").split.join('|')
   tags      = tags.empty? ? nil : Regexp.new(tags)
   smcontent = SmContent.new(user)
-  records   = smcontent.content.left_join(smcontent.songtags, name: :title).
+  records   = smcontent.content.left_join(smcontent.songtags, name: :stitle).
     reverse(:created)
   records.each do |r|
     if singer.size > 0
@@ -434,10 +442,11 @@ class DBCache
       @DB = Sequel.sqlite
       @DB.create_table :singers do
         primary_key :id
-        String :name, unique: true, null: false
-        String :avatar
-        String :following
-        String :follower
+        Integer :account_id, unique:true
+        String  :name, unique: true, null: false
+        String  :avatar
+        String  :following
+        String  :follower
       end
       @DB.create_table :songtags do
         primary_key :id
@@ -448,6 +457,7 @@ class DBCache
         primary_key :id
         String  :sid, unique: true, null: false
         String  :title
+        String  :stitle
         String  :avatar
         String  :href
         String  :record_by
@@ -457,8 +467,10 @@ class DBCache
         String  :collab_url
         String  :play_path
         String  :parent
+        String  :orig_city
         Integer :listens
         Integer :loves
+        Integer :gifts
         String  :ofile
         String  :sfile
         String  :since
@@ -470,37 +482,45 @@ class DBCache
     end
 
     def load_db_for_user(user)
-      @uloaded ||= {}
       @DB      ||= create_db_and_schemas
       content_file  = search_data_file("content-#{user}.yml")
-      songtags_file = search_data_file("songtags.yml")
-      if !@uloaded[user] || (@uloaded[user] < File.mtime(content_file)) ||
-          (@uloaded[user] < File.mtime(songtags_file))
+      songtags_file = search_data_file("songtags2.yml")
+      if !@cur_user || (@cur_user != user) || (@load_time < File.mtime(content_file)) ||
+          (@load_time < File.mtime(songtags_file))
         Plog.info("Loading db/cache for #{user}")
         contents = @DB[:contents]
         singers  = @DB[:singers]
         songtags = @DB[:songtags]
 
         contents.delete
+        singers.delete
+        songtags.delete
+
         YAML.load_file(content_file).each do |sid, sinfo|
           irec = sinfo.dup
           irec.delete(:m4tag)
+          irec.delete(:media_url)
           if irec[:record_by].is_a?(Array)
             irec[:record_by] = irec[:record_by].join(',')
           end
           contents.insert(irec)
         end
         singers.delete
-        YAML.load_file(search_data_file("singers.yml")).each do |singer, sinfo|
+        YAML.load_file(search_data_file("singers-#{user}.yml")).each do |singer, sinfo|
           irec = sinfo.dup
-          singers.insert(irec)
+          begin
+            singers.insert(irec)
+          rescue => errmsg
+            Plog.dump_info(errmsg:errmsg, singer:singer, sinfo:sinfo)
+          end
         end
         songtags.delete
         File.read(songtags_file).split("\n").each do |l|
           name, tags = l.split(':::')
           songtags.insert(name:name, tags:tags)
         end
-        @uloaded[user] = Time.now
+        @cur_user  = user
+        @load_time = Time.now
       end
     end
   end

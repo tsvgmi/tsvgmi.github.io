@@ -20,6 +20,7 @@
           %th Loves
           %th Recorded
           %th Tags
+          %th City
       %tbody
         - content.each do |arow|
           - avatar = arow[:avatar]
@@ -50,7 +51,7 @@
               - else
                 %i.fa.fa-star.invisible
             %td.small
-              - arow[:record_by].split(',').sort.each do |singer|
+              - arow[:record_by].split(',').each do |singer|
                 - unless readonly
                   %a(href="/smulelist/#{user}?singer=#{singer}")
                     %i.fa.fa-search
@@ -59,7 +60,8 @@
             %td.dt-right.small= arow[:listens]
             %td.dt-right.small= arow[:loves]
             %td.small= arow[:created] ? arow[:created].strftime('%Y-%m-%d') : nil
-            %td.small= arow[:tags]
+            %td.small= arow[:tags] ? arow[:tags].gsub(/,/, ', ') : ''
+            %td.small= arow[:orig_city]
 
   - unless readonly
     .col-lg-4
