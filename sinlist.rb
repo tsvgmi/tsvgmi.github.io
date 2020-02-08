@@ -379,7 +379,6 @@ helpers do
     system "set -x; #{command}"
   end
 
-
   KeyPos = %w(A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab)
   # Attach play note to the like star
   def key_offset(base_key, new_key, closer=false)

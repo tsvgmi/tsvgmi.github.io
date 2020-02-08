@@ -76,7 +76,7 @@
               - if cdate
                 = cdate.strftime("%Y-%m-%d")
             %td.small
-              = ((songtags.first(name:arow[:title]) || {})[:tags] || '').gsub(/,/, ', ')
+              = (slist[0][:tags] || '').gsub(/,/, ', ')
             - unless readonly
               %td.dt-right.small
                 = slist.inject(0){|sum,x| sum + x[:listens] }

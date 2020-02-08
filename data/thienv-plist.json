@@ -2397,5 +2397,31 @@
     "smule": "",
     "nctkey": "",
     "nct": ""
+  },
+  "con-buom-xuan-canh-buom-mua-xuan": {
+    "instrument": "[]",
+    "key": "Dm",
+    "intro": "15 38 75 4 2 3 18 75 +3+2 8 78\r\n575 575 ... 575 575",
+    "ytvideo": "-41E5B85rTI,15,52",
+    "vidkey": "Gm",
+    "ytkvideo": "",
+    "ytkkey": "",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
+  },
+  "khuc-nhac-ngay-xuan": {
+    "instrument": "[]",
+    "key": "C",
+    "intro": "331 221 6687 66565 212121 3321",
+    "ytvideo": "ERNT9SmJ0zE,0,15",
+    "vidkey": "F",
+    "ytkvideo": "",
+    "ytkkey": "",
+    "smkey": "",
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   }
 }
