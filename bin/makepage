@@ -37,6 +37,7 @@ build_page data/70118.order playlist/labor-party-2019s vnhv2018 1
 build_page data/71568.order playlist/christmas-2019 vnhv2018 0
 build_page data/73797.order playlist/van-christmas-2019 thienv 0
 build_page data/75394.order playlist/vnhv-2-2020 thienv 0
+build_page data/75431.order playlist/vnhv2-2-2020 thienv 0
 
 set -x
 curl -so playlist/index.html http://127.0.0.1:4567/playlist
