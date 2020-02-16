@@ -146,7 +146,7 @@
     %i.fa.fa-music
     = asinger
 
-- song_list.each do |sinfo|
+- song_list[0..2].each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
   - next if !oinfo[:active] || (oinfo[:singer] || "").start_with?('-')
   - if ptn
@@ -158,7 +158,7 @@
   - lclass = "l_#{lead.gsub(/[^a-z]/i, '')}"
   -# Plog.dump_info(sclass:sclass, singer:singer, oinfo:oinfo)
   - locals = {sinfo:sinfo, oinfo:oinfo, perf_info:perf_info, row_no:row_no, viewmode:viewmode, user:user, videos:videos}
-  %div(class="#{sclass} #{lclass} si_collapse")
+  %div(class="#{sclass} #{lclass} si_collapse delay_load")
     = partial :_perflist_song, locals:locals
 
 - content_for :javascript do
@@ -170,6 +170,9 @@
       $('.si_collapse').collapse();
       $('button').tooltip();
       $('.perflist-note').fadeOut(3000)
+      $('.delay_load').each(function(index) {
+        console.log( index + ": " + $( this ).text() );
+      });
     });
 
     var videos     = #{videos.to_json};

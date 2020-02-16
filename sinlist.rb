@@ -271,17 +271,20 @@ get '/smulelist/:user' do |user|
     end
     content << r
     record_by.each do |asinger|
-      singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0}
+      singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0, favs:0}
       singers[asinger][:count]   += 1
       singers[asinger][:listens] += (r[:listens] || 0)
       singers[asinger][:loves]   += r[:loves]
+      if r[:isfav] || r[:oldfav]
+        singers[asinger][:favs] += 1
+      end
     end
   end
   # Front end will also do sort, but we do on backend so content would
   # not change during initial display
   content = content.sort_by {|r| r[:sincev].to_f }
   singers = singers.values.sort_by {|r| r[:count]}.reverse
-  Plog.dump_info(all_singers:smcontent.singers.count)
+  #Plog.dump_info(all_singers:smcontent.singers.count)
   haml :smulelist, locals: {user:user, content:content, singers:singers,
                             all_singers:smcontent.singers,
                             join_me:smcontent.join_me,

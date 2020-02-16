@@ -166,7 +166,7 @@ List:
 <i class='fa fa-microphone'></i>
 thien
 </button>
-<div class='s_thien l_none si_collapse'>
+<div class='s_thien l_none si_collapse delay_load'>
 <div id='row_1a'>
 <div class='row song_header'>
 <div class='col-6'>
@@ -268,7 +268,7 @@ Tuyệt vời </span><span class="chord">C</span><span class='t2lyric'>trong b�
 </div>
 
 </div>
-<div class='s_thien l_none si_collapse'>
+<div class='s_thien l_none si_collapse delay_load'>
 <div id='row_2a'>
 <div class='row song_header'>
 <div class='col-6'>
@@ -385,7 +385,7 @@ Vui yêu </span><span class="chord">Gm</span><span class='t2lyric'>đời lòng 
 <footer>
 <div class='small text-muted publish_date'>
 Copyright (C) - 2018-2019.  Updated
-2020-02-08 17:46:01 -0800
+2020-02-16 11:56:35 -0800
 </div>
 </footer>
 </div>
@@ -404,6 +404,9 @@ Copyright (C) - 2018-2019.  Updated
     $('.si_collapse').collapse();
     $('button').tooltip();
     $('.perflist-note').fadeOut(3000)
+    $('.delay_load').each(function(index) {
+      console.log( index + ": " + $( this ).text() );
+    });
   });
   
   var videos     = [{"vid":"video_41E5B85rTI_15_52","video":"-41E5B85rTI","start":15,"end":52,"key":"Gm"},{"vid":"video_ERNT9SmJ0zE_0_15","video":"ERNT9SmJ0zE","start":0,"end":15,"key":"F"}];
