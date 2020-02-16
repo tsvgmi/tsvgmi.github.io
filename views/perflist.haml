@@ -146,7 +146,7 @@
     %i.fa.fa-music
     = asinger
 
-- song_list[0..2].each do |sinfo|
+- song_list.each do |sinfo|
   - oinfo   = order_list[sinfo[:song_id]] || {}
   - next if !oinfo[:active] || (oinfo[:singer] || "").start_with?('-')
   - if ptn
