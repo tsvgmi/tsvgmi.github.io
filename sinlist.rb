@@ -180,11 +180,11 @@ get '/smremove/:user/:sid' do |user, sid|
   redirect "/smulelist/#{user}"
 end
 
-get '/smulelist2/:user' do |user|
+get '/smulelist/:user' do |user|
   content   = []
-  singer    = params[:singer]
+  singer    = (params[:singer] || "").split
   singers   = {}
-  if false
+  if true
     smcontent = SmContent.new(user)
     records   = smcontent.content
     records.each do |r|
@@ -209,20 +209,24 @@ get '/smulelist2/:user' do |user|
     singers = singers.values.sort_by {|r| r[:count]}.reverse
     Plog.dump_info(all_singers:smcontent.singers.count)
   end
-  haml :smulelist2, locals: {user:user, singer:singer, singers:singers}
+  haml :smulelist, locals: {user:user, singer:singer, singers:singers,
+                            all_singers:smcontent.singers,
+                            join_me:smcontent.join_me,
+                            i_join:smcontent.i_join}
 end
 
 get "/smule_data/:user" do |user|
   Plog.dump_info(params:params)
   singer    = (params[:singer] || "").split
   start     = params[:start].to_i
-  length    = (params[:length] || 100).to_i
+  length    = (params[:length] || 1).to_i
   order     = (params[:order] || {}).values.first || {'column'=>5, 'dir'=>'desc'}
   search    = (params[:search] || {})['value']
-  Plog.dump_info(order:order)
   smcontent = SmContent.new(user)
+
   columns   = [:title, :isfav, :record_by, :listens, :loves, :created]
-  data0     = smcontent.content.limit(length).offset(start)
+  records   = smcontent.content.left_join(smcontent.songtags, name: :stitle)
+  data0     = records
   ocolumn   = order['column'].to_i
   if order['dir'] == 'desc'
     data0  = data0.reverse(columns[ocolumn])
@@ -231,64 +235,20 @@ get "/smule_data/:user" do |user|
   end
   if search
     search = search.downcase
-    data0 = data0.where(Sequel.lit("LOWER(stitle) like ? or LOWER(record_by) like ?",
+    data0  = data0.where(Sequel.lit("LOWER(stitle) like ? or LOWER(record_by) like ? or LOWER(orig_city) like ? OR LOWER(tags) like ?",
+                                   "%#{search}%", "%#{search}%",
                                    "%#{search}%", "%#{search}%"))
   end
-  data1 = data0.map {|r|
-    isfav_0     = r[:isfav] ? "<i class='fa fa-star'></i>" : ""
-    href        = "https://www.smule.com"
-    record_by_0 = r[:record_by].split(',').map{|n| "<a href='#{href}/#{n}' target='smule'>#{n}</a>"}.join(", ")
-    avatar      = "<img class=savatar src=#{r[:avatar]} height=30 width=30></img>"
-    title       = "<a href='#{href}#{r[:href]}' target='smule'>#{r[:title]}</a>"
-    title_0     = "#{avatar}#{title}"
-    [title_0, isfav_0, record_by_0, r[:listens], r[:loves], r[:created]]
+  data = data0.limit(length).offset(start)
+  locals = {
+    total:    records,
+    filtered: data0.count,
+    user:     user,
+    data:     data,
   }
-  data = {
-    draw:            params[:draw],
-    recordsTotal:    smcontent.content.count,
-    recordsFiltered: data0.count,
-    data:            data1,
-  }
-  data.to_json
-end
-
-get '/smulelist/:user' do |user|
-  content   = []
-  singer    = (params[:singer] || "").split
-  tags      = (params[:tags] || "").split.join('|')
-  tags      = tags.empty? ? nil : Regexp.new(tags)
-  singers   = {}
-  smcontent = SmContent.new(user)
-  records   = smcontent.content.left_join(smcontent.songtags, name: :stitle).
-    reverse(:created)
-  records.each do |r|
-    record_by = r[:record_by].split(',')
-    if singer.size > 0
-      next unless (record_by & singer).size > 0
-    end
-    if tags
-      next unless r[:tags] =~ tags
-    end
-    content << r
-    record_by.each do |asinger|
-      singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0, favs:0}
-      singers[asinger][:count]   += 1
-      singers[asinger][:listens] += (r[:listens] || 0)
-      singers[asinger][:loves]   += r[:loves]
-      if r[:isfav] || r[:oldfav]
-        singers[asinger][:favs] += 1
-      end
-    end
-  end
-  # Front end will also do sort, but we do on backend so content would
-  # not change during initial display
-  content = content.sort_by {|r| r[:sincev].to_f }
-  singers = singers.values.sort_by {|r| r[:count]}.reverse
-  #Plog.dump_info(all_singers:smcontent.singers.count)
-  haml :smulelist, locals: {user:user, content:content, singers:singers,
-                            all_singers:smcontent.singers,
-                            join_me:smcontent.join_me,
-                            i_join:smcontent.i_join}
+  yaml_src = erb(File.read('views/smule_data.yml'), locals:locals)
+  #STDERR.puts(yaml_src)
+  YAML.load(yaml_src).to_json
 end
 
 get '/smulegroup/:user' do |user|

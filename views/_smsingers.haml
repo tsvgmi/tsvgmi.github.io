@@ -1,0 +1,41 @@
+%table.cell-border.display#singer_table
+  %thead
+    %tr
+      %th Record With
+      %th Count
+      %th Listens
+      %th Loves
+  %tbody
+    - singers.each do |stats|
+      - singer = stats[:name]
+      - sinfo  = all_singers[name:singer] || {}
+      %tr
+        %td.small
+          - if avatar = sinfo[:avatar]
+            %a(href="https://www.smule.com/#{singer}" target='smule' title="#{singer} on Smule")
+              %img.uavatar(src=avatar height=30 width=30)
+          - if sinfo[:following]
+            %i.fa.fa-heart
+          - else
+            %i.fa.fa-heart.invisible
+          %span.small= i_join[singer]
+          - if sinfo[:follower]
+            %i.fa.fa-running
+          - else
+            %i.fa.fa-running.invisible
+          %span.small= join_me[singer]
+          - if stats[:favs].to_i > 0
+            %i.fa.fa-star
+            %span.small= stats[:favs]
+          %br/
+          - href = "https://sing.salon/insights/?user=#{singer}"
+          %a(href=href target='sing_salon' title='Sing Salon')
+            %i.fa.fa-hotel
+          - href = "/smulelist/#{user}?singer=#{singer}"
+          %a.small(href=href)= singer
+
+          
+        %td.dt-right.small
+          = stats[:count]
+        %td.dt-right.small= stats[:listens]
+        %td.dt-right.small= stats[:loves]

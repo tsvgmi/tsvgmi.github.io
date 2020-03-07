@@ -1,0 +1,55 @@
+<%
+%>
+---
+draw:            <%= params[:draw].to_i %>
+recordsTotal:    <%= total %>
+recordsFiltered: <%= filtered %>
+data:
+  <% data.each do |r|
+    isfav_0 = ""
+    if r[:isfav]
+      isfav_0 = "<i class='fa fa-star text-primary'></i>"
+    elsif r[:oldfav]
+      isfav_0 = "<i class='fa fa-star text-secondary'></i>"
+    end
+
+    href        = "https://www.smule.com"
+    record_by_0 = r[:record_by].split(',').map{|n| "<a href='#{href}/#{n}' target='smule'>#{n}</a>"}.join(", ")
+    avatar      = "<img class=savatar src=#{r[:avatar]} height=30 width=30></img>"
+    title       = "<a href='#{href}#{r[:href]}' target='smule'>#{r[:title]}</a>"
+    title_head = avatar
+    url        = "/smremove/#{user}/#{r[:sid]}"
+    title_head += <<EOB
+<a href='#' onclick="return smdelete('#{url}', '#{r[:title]}')">
+  <i class='fa fa-trash'></i>
+</a>
+EOB
+    ofile = r[:sfile] || r[:ofile]
+    if ofile
+      url = "/play-here?ofile=#{CGI.escape(ofile)}"
+      title_head += <<EOB
+<a href="#" id="#{r[:sid]}" onclick="jQuery.ajax('#{url}'); return false;">
+  <i class='fa fa-trash'></i>
+</a>
+EOB
+    else
+      Plog.warn(title:r[:title], ofile:ofile, sid:r[:sid])
+      title_head += <<EOB
+<i class='fa fa-play invisible'></i>
+EOB
+    end
+  %>
+  -
+    # <%= r.inspect %>
+    DT_RowClass: srow
+    title: |
+      <%= title_head.split("\n").map{|r| "      " + r}.join("\n").strip %>
+      <%= title %>
+    isfav:     <%= isfav_0 %>
+    record_by: <%= record_by_0 %>
+    listens:   <%= r[:listens] %>
+    loves:     <%= r[:loves] %>
+    created:   <%= r[:created] %>
+    tags:      <%= r[:tags] ? r[:tags].split(',').uniq.join(', ') : '' %>
+    orig_city: <%= r[:orig_city] %>
+  <% end %>
