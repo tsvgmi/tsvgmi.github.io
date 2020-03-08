@@ -182,34 +182,25 @@ end
 
 get '/smulelist/:user' do |user|
   content   = []
-  singer    = (params[:singer] || "").split
   singers   = {}
-  if true
-    smcontent = SmContent.new(user)
-    records   = smcontent.content
-    records.each do |r|
-      record_by = r[:record_by].split(',')
-      if singer.size > 0
-        next unless (record_by & singer).size > 0
-      end
-      if params[:title] && r[:title] != params[:title]
-        next
-      end
-      content << r
-      record_by.each do |asinger|
-        singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0}
-        singers[asinger][:count]   += 1
-        singers[asinger][:listens] += (r[:listens] || 0)
-        singers[asinger][:loves]   += r[:loves]
-      end
+  smcontent = SmContent.new(user)
+  records   = smcontent.content
+  records.each do |r|
+    record_by = r[:record_by].split(',')
+    content << r
+    record_by.each do |asinger|
+      singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0}
+      singers[asinger][:count]   += 1
+      singers[asinger][:listens] += (r[:listens] || 0)
+      singers[asinger][:loves]   += r[:loves]
     end
-    # Front end will also do sort, but we do on backend so content would
-    # not change during initial display
-    content = content.sort_by {|r| r[:sincev].to_f }
-    singers = singers.values.sort_by {|r| r[:count]}.reverse
-    Plog.dump_info(all_singers:smcontent.singers.count)
   end
-  haml :smulelist, locals: {user:user, singer:singer, singers:singers,
+  # Front end will also do sort, but we do on backend so content would
+  # not change during initial display
+  content = content.sort_by {|r| r[:sincev].to_f }
+  singers = singers.values.sort_by {|r| r[:count]}.reverse
+  Plog.dump_info(all_singers:smcontent.singers.count)
+  haml :smulelist, locals: {user:user, singers:singers,
                             all_singers:smcontent.singers,
                             join_me:smcontent.join_me,
                             i_join:smcontent.i_join}
@@ -241,7 +232,7 @@ get "/smule_data/:user" do |user|
   end
   data = data0.limit(length).offset(start)
   locals = {
-    total:    records,
+    total:    records.count,
     filtered: data0.count,
     user:     user,
     data:     data,

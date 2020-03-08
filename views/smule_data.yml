@@ -14,7 +14,7 @@ data:
     end
 
     href        = "https://www.smule.com"
-    record_by_0 = r[:record_by].split(',').map{|n| "<a href='#{href}/#{n}' target='smule'>#{n}</a>"}.join(", ")
+    record_by_0 = r[:record_by].split(',').map{|n| "<a href='#{href}/#{n}' target='smule'>#{n[0..10]}</a>"}.join("<br/>")
     avatar      = "<img class=savatar src=#{r[:avatar]} height=30 width=30></img>"
     title       = "<a href='#{href}#{r[:href]}' target='smule'>#{r[:title]}</a>"
     title_head = avatar

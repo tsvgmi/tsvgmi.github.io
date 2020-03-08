@@ -14,7 +14,7 @@
 
 .row
   %div(class="col-lg-8")
-    %table.cell-border.display#main_table
+    %table.cell-border.compact.display#main_table
       %thead
         %tr
           %th Title
@@ -33,10 +33,11 @@
   :javascript
     $(function() {
       $('#main_table').dataTable({
+        "dom": '<"top"lfi>rt<"bottom"p><"clear">',
         "order": [[ 5, "desc" ]],
         "pageLength": 100,
         "serverSide": true,
-        "ajax": "/smule_data/#{user}?singer=#{singer}",
+        "ajax": "/smule_data/#{user}",
         "columns": [
             { "data": "title" },
             { "data": "isfav" },
