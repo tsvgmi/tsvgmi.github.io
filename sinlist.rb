@@ -456,7 +456,11 @@ class DBCache
           if irec[:record_by].is_a?(Array)
             irec[:record_by] = irec[:record_by].join(',')
           end
-          contents.insert(irec)
+          begin
+            contents.insert(irec)
+          rescue => errmsg
+            Plog.dump_error(errmsg:errmsg, irec:irec)
+          end
         end
         singers.delete
         YAML.load_file(search_data_file("singers-#{user}.yml")).each do |singer, sinfo|

@@ -14,7 +14,7 @@
 
 .row
   %div(class="col-lg-8")
-    %table.cell-border.compact.display#main_table
+    %table.cell-border.compact.display.dt-responsive#main_table
       %thead
         %tr
           %th Title
@@ -37,6 +37,7 @@
         "order": [[ 5, "desc" ]],
         "pageLength": 100,
         "serverSide": true,
+        "responsive": true,
         "ajax": "/smule_data/#{user}",
         "columns": [
             { "data": "title" },
@@ -51,6 +52,7 @@
       });
       $('#singer_table').DataTable({
         "order": [[ 1, "desc" ]],
+        "responsive": true,
         "pageLength": 100
       });
     });

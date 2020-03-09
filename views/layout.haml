@@ -16,12 +16,10 @@
     %meta{:content => "PlayList", :name => "Playlist - Program"}/
     %link{rel:"shortcut icon", href:"/favicon.ico?version=0", type:"image/x-icon"}
     %title= title
-    -#%link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
     %link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/#{theme}/bootstrap.min.css" crossorigin="anonymous")
     %link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
 
-    -#%link(rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css")
-    %link(rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.css")
+    %link(rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css")
     = yield_content :css
     :css
       .vsmall {
@@ -48,7 +46,6 @@
     %script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous")
     %script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous")
     %script(src="/js/knockout-3.4.2.js")
-    %script(type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js")
-    %script(type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.js")
+    %script(type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js")
     %script(type="text/javascript" src="/js/dt_remove_accent.js")
     = yield_content :javascript
