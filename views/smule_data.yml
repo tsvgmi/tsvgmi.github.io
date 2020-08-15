@@ -1,5 +1,3 @@
-<%
-%>
 ---
 draw:            <%= params[:draw].to_i %>
 recordsTotal:    <%= total %>

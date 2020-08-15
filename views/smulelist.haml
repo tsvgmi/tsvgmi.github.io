@@ -12,6 +12,7 @@
     text-align: right;
   }
 
+- readonly = params[:readonly]
 .row
   %div(class="col-lg-8")
     %table.cell-border.compact.display.dt-responsive#main_table
@@ -37,8 +38,9 @@
         "order": [[ 5, "desc" ]],
         "pageLength": 100,
         "serverSide": true,
+        "searchDelay": 1000,
         "responsive": true,
-        "ajax": "/smule_data/#{user}",
+        "ajax": "/smsongs_data/#{user}",
         "columns": [
             { "data": "title" },
             { "data": "isfav" },

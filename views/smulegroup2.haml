@@ -1,0 +1,59 @@
+:css
+  .savatar {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+  .uavatar {
+    clip-path: circle(15px at center);
+  }
+  .fav-1 {
+    background-color: #cfc;
+    font-weight: bold;
+    font-size: 120%;
+  }
+  .srow td {
+    font-size: small;
+  }
+  .srow td:nth-child(6), .srow td:nth-child(5) {
+    text-align: right;
+  }
+
+- readonly = params[:readonly]
+.row
+  .col-lg-12
+    %table.cell-border.display.compact.dt-response#main_table
+      %thead
+        %tr
+          %th Title
+          %th Record_By
+          %th Latest
+          %th Tags
+          - unless readonly
+            %th Listens
+            %th Loves
+
+- content_for :javascript do
+  :javascript
+    $(function() {
+      $('#main_table').dataTable({
+        "columnDefs": [
+          {"width": "35%", "targets": 0}
+        ],
+        "dom": '<"top"lfi>rt<"bottom"p><"clear">',
+        "order": [[ 2, "desc" ]],
+        "pageLength": 100,
+        "serverSide": true,
+        "responsive": true,
+        "ajax": "/smgroups_data/#{user}",
+        "columns": [
+            { "data": "title" },
+            { "data": "record_by" },
+            { "data": "created" },
+            { "data": "tags" },
+            { "data": "listens" },
+            { "data": "loves" }
+        ],
+        "drawCallback": function(settings) {
+          $('a').tooltip();
+        }
+      });
+    });

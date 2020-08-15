@@ -36,5 +36,9 @@
           
         %td.dt-right.small
           = stats[:count]
-        %td.dt-right.small= stats[:listens]
-        %td.dt-right.small= stats[:loves]
+        %td.dt-right.small
+          - rate = stats[:listens].to_f/stats[:count]
+          = "%3.1f" % [rate]
+        %td.dt-right.small
+          - rate = stats[:loves].to_f/stats[:count]
+          = "%3.1f" % [rate]

@@ -20,6 +20,8 @@ require_relative '../hacauto/bin/hac-nhac'
 require_relative '../hacauto/bin/hac-nhac'
 
 set :bind, '0.0.0.0'
+set :lock, true
+set :show_exceptions, true
 
 enable :sessions
 
@@ -94,7 +96,7 @@ get '/play-here' do
   ofile = params[:ofile]
   Plog.dump_info(ofile:ofile)
   if test(?f, ofile)
-    system("open \"#{ofile}\"")
+    system("open -g \"#{ofile}\"")
   end
 end
 
@@ -187,17 +189,18 @@ get '/smulelist/:user' do |user|
   records   = smcontent.content
   records.each do |r|
     record_by = r[:record_by].split(',')
+    isfav = r[:isfav] || r[:oldfav]
     content << r
     record_by.each do |asinger|
-      singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0}
-      singers[asinger][:count]   += 1
-      singers[asinger][:listens] += (r[:listens] || 0)
-      singers[asinger][:loves]   += r[:loves]
+      siinfo = singers[asinger] ||= {name:asinger, count:0, listens:0, loves:0, favs:0}
+      siinfo[:count]   += 1
+      siinfo[:favs]    += 1 if isfav
+      siinfo[:listens] += (r[:listens] || 0)
+      siinfo[:loves]   += r[:loves]
     end
   end
   # Front end will also do sort, but we do on backend so content would
   # not change during initial display
-  content = content.sort_by {|r| r[:sincev].to_f }
   singers = singers.values.sort_by {|r| r[:count]}.reverse
   Plog.dump_info(all_singers:smcontent.singers.count)
   haml :smulelist, locals: {user:user, singers:singers,
@@ -206,8 +209,8 @@ get '/smulelist/:user' do |user|
                             i_join:smcontent.i_join}
 end
 
-get "/smule_data/:user" do |user|
-  Plog.dump_info(params:params)
+get "/smsongs_data/:user" do |user|
+  #Plog.dump_info(params:params)
   singer    = (params[:singer] || "").split
   start     = params[:start].to_i
   length    = (params[:length] || 1).to_i
@@ -224,6 +227,8 @@ get "/smule_data/:user" do |user|
   else
     data0  = data0.order(columns[ocolumn])
   end
+  Plog.info(search:search)
+
   if search
     search = search.downcase
     data0  = data0.where(Sequel.lit("LOWER(stitle) like ? or LOWER(record_by) like ? or LOWER(orig_city) like ? OR LOWER(tags) like ?",
@@ -238,7 +243,53 @@ get "/smule_data/:user" do |user|
     data:     data,
   }
   yaml_src = erb(File.read('views/smule_data.yml'), locals:locals)
-  #STDERR.puts(yaml_src)
+  #STDERR.puts yaml_src
+  YAML.load(yaml_src).to_json
+end
+
+get '/smulegroup2/:user' do |user|
+  haml :smulegroup2, locals: {user:user}
+end
+
+get '/smgroups_data/:user' do |user|
+  Plog.dump_info(params:params)
+  start     = params[:start].to_i
+  length    = (params[:length] || 1).to_i
+  order     = (params[:order] || {}).values.first || {'column'=>2, 'dir'=>'desc'}
+  search    = (params[:search] || {})['value']
+  smcontent = SmContent.new(user)
+  columns   = [:stitle, :record_by, :created, :tags, :listens, :loves]
+  records   = smcontent.content.left_join(smcontent.songtags, name: :stitle)
+  data0     = records
+  ocolumn   = order['column'].to_i
+  if order['dir'] == 'desc'
+    data0  = data0.reverse(columns[ocolumn])
+  else
+    data0  = data0.order(columns[ocolumn])
+  end
+  data0 = data0.group(:stitle)
+  total = data0.count
+
+  if search
+    search = search.downcase
+    data0  = data0.where(Sequel.lit("LOWER(stitle) like ? or \
+                                    LOWER(record_by) like ? or LOWER(tags) like ?",
+                                   "%#{search}%", "%#{search}%", "%#{search}%"))
+  end
+  filtered = data0.count
+  data0    = data0.limit(length).offset(start)
+  stitles  = data0.group(:stitle).map{|r| r[:stitle]}
+
+  data = records.where(stitle:stitles).reverse(:created).map{|r| r}.group_by{|r| r[:stitle]}
+
+  locals = {
+    total:    total,
+    filtered: filtered,
+    user:     user,
+    data:     data,
+    all_singers: smcontent.singers,
+  }
+  yaml_src = erb(File.read('views/smgroups_data.yml'), locals:locals)
   YAML.load(yaml_src).to_json
 end
 
@@ -377,9 +428,9 @@ helpers do
 end
 
 def search_data_file(fname)
-  ["/Volumes/Voice/SMULE/#{fname}",
-   "#{ENV['HOME']}/shared/#{fname}"].each do |afile|
-    Plog.dump_info(afile:afile, fname:fname)
+  ["#{ENV['HOME']}/shared/#{fname}",
+   "/Volumes/Voice/SMULE/#{fname}"].each do |afile|
+    #Plog.dump_info(afile:afile, fname:fname)
     if test(?r, afile)
       return afile
     end
@@ -391,94 +442,10 @@ class DBCache
   class << self
     attr_reader :DB
 
-    def create_db_and_schemas
-      @DB = Sequel.sqlite
-      @DB.create_table :singers do
-        primary_key :id
-        Integer :account_id, unique:true
-        String  :name, unique: true, null: false
-        String  :avatar
-        String  :following
-        String  :follower
-      end
-      @DB.create_table :songtags do
-        primary_key :id
-        String :name, unique: true, null: false
-        String :tags
-      end
-      @DB.create_table :contents do
-        primary_key :id
-        String  :sid, unique: true, null: false
-        String  :title
-        String  :stitle
-        String  :avatar
-        String  :href
-        String  :record_by
-        Boolen  :is_ensemble
-        Boolen  :isfav
-        Boolen  :oldfav
-        String  :collab_url
-        String  :play_path
-        String  :parent
-        String  :orig_city
-        Integer :listens
-        Integer :loves
-        Integer :gifts
-        String  :ofile
-        String  :sfile
-        String  :since
-        Float   :sincev
-        Date    :created
-        Date    :updated_at
-      end
-      @DB
-    end
+    DBNAME = "smule.db"
 
     def load_db_for_user(user)
-      @DB      ||= create_db_and_schemas
-      content_file  = search_data_file("content-#{user}.yml")
-      songtags_file = search_data_file("songtags2.yml")
-      if !@cur_user || (@cur_user != user) || (@load_time < File.mtime(content_file)) ||
-          (@load_time < File.mtime(songtags_file))
-        Plog.info("Loading db/cache for #{user}")
-        contents = @DB[:contents]
-        singers  = @DB[:singers]
-        songtags = @DB[:songtags]
-
-        contents.delete
-        singers.delete
-        songtags.delete
-
-        YAML.load_file(content_file).each do |sid, sinfo|
-          irec = sinfo.dup
-          irec.delete(:m4tag)
-          irec.delete(:media_url)
-          if irec[:record_by].is_a?(Array)
-            irec[:record_by] = irec[:record_by].join(',')
-          end
-          begin
-            contents.insert(irec)
-          rescue => errmsg
-            Plog.dump_error(errmsg:errmsg, irec:irec)
-          end
-        end
-        singers.delete
-        YAML.load_file(search_data_file("singers-#{user}.yml")).each do |singer, sinfo|
-          irec = sinfo.dup
-          begin
-            singers.insert(irec)
-          rescue => errmsg
-            Plog.dump_info(errmsg:errmsg, singer:singer, sinfo:sinfo)
-          end
-        end
-        songtags.delete
-        File.read(songtags_file).split("\n").each do |l|
-          name, tags = l.split(':::')
-          songtags.insert(name:name, tags:tags)
-        end
-        @cur_user  = user
-        @load_time = Time.now
-      end
+      @DB      ||= Sequel.sqlite(DBNAME)
     end
   end
 end
@@ -521,23 +488,8 @@ class SmContent
   end
 
   def remove(sid)
-    unless content.where(sid:sid)
-      Plog.info("Cannot locate #{sid} - #{@content.size}")
-      return true
-    end
     Plog.info("Deleting #{sid}")
     content.where(sid:sid).delete
-    if afile = search_data_file("content-#{@user}.yml")
-      Plog.info("Updating #{afile}")
-      scontent = {}
-      content.each do |r|
-        scontent[r[:sid]] = r
-      end
-      #Plog.dump_info(content:content)
-      File.open(afile, 'w') do |fod|
-        fod.puts scontent.to_yaml
-      end
-    end
     true
   end
 end
