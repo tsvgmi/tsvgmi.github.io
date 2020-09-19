@@ -88,7 +88,6 @@ get '/song-style/:user/:song_id/:song_name' do |user, song_id, song_name|
   song_info  = SongInfo.new(song_id).content
   locals     = {user:user, song_id:song_id, song_name:song_name,
                 uperf_info:uperf_info, song_info:song_info}
-  #Plog.dump_info(locals:locals)
   haml :song_style, locals:locals
 end
 
@@ -234,6 +233,7 @@ get "/smsongs_data/:user" do |user|
     data0  = data0.where(Sequel.lit("LOWER(stitle) like ? or LOWER(record_by) like ? or LOWER(orig_city) like ? OR LOWER(tags) like ?",
                                    "%#{search}%", "%#{search}%",
                                    "%#{search}%", "%#{search}%"))
+    p data0
   end
   data = data0.limit(length).offset(start)
   locals = {
@@ -280,7 +280,11 @@ get '/smgroups_data/:user' do |user|
   data0    = data0.limit(length).offset(start)
   stitles  = data0.group(:stitle).map{|r| r[:stitle]}
 
-  data = records.where(stitle:stitles).reverse(:created).map{|r| r}.group_by{|r| r[:stitle]}
+  data = records.where(stitle:stitles).reverse(:created).
+    map{|r| r}.group_by{|r| r[:stitle]}.
+    select do |stitle, sinfos| 
+      !sinfos.find{|sinfo| sinfo[:record_by] == user}
+    end
 
   locals = {
     total:    total,
@@ -445,7 +449,7 @@ class DBCache
     DBNAME = "smule.db"
 
     def load_db_for_user(user)
-      @DB      ||= Sequel.sqlite(DBNAME)
+      @DB ||= Sequel.sqlite(DBNAME)
     end
   end
 end
@@ -454,7 +458,7 @@ class SmContent
   attr_reader :join_me, :i_join
 
   def content
-    DBCache.DB[:contents]
+    DBCache.DB[:performances]
   end
 
   def singers
@@ -462,7 +466,7 @@ class SmContent
   end
 
   def songtags
-    DBCache.DB[:songtags]
+    DBCache.DB[:song_tags]
   end
 
   def initialize(user)
@@ -471,7 +475,7 @@ class SmContent
     @i_join  = {}
 
     DBCache.load_db_for_user(user)
-    DBCache.DB[:contents].where(Sequel.lit("record_by like '%#{user}%'")).
+    content.where(Sequel.lit("record_by like '%#{user}%'")).
       each do |r|
       rby = r[:record_by].split(',')
       if rby[0] == user
@@ -493,8 +497,6 @@ class SmContent
     true
   end
 end
-
-
 
 class SongInfo
   attr_reader :content

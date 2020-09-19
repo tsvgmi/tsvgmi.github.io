@@ -50,5 +50,5 @@ EOB
     loves:     <%= r[:loves] %>
     created:   <%= r[:created] %>
     tags:      <%= r[:tags] ? r[:tags].split(',').uniq.join(', ') : '' %>
-    orig_city: <%= r[:orig_city] %>
+    orig_city: <%= r[:record_by].start_with?(user) ? r[:other_city] : r[:orig_city] %>
   <% end %>
