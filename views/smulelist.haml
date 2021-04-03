@@ -12,7 +12,9 @@
     text-align: right;
   }
 
+= request.query_string
 - readonly = params[:readonly]
+- days = params[:days]
 .row
   %div(class="col-lg-8")
     %table.cell-border.compact.display.dt-responsive#main_table
@@ -36,11 +38,11 @@
       $('#main_table').dataTable({
         "dom": '<"top"lfi>rt<"bottom"p><"clear">',
         "order": [[ 5, "desc" ]],
-        "pageLength": 100,
+        "pageLength": 50,
         "serverSide": true,
         "searchDelay": 1000,
         "responsive": true,
-        "ajax": "/smsongs_data/#{user}",
+        "ajax": "/smsongs_data/#{user}?#{request.query_string}",
         "columns": [
             { "data": "title" },
             { "data": "isfav" },
@@ -55,7 +57,7 @@
       $('#singer_table').DataTable({
         "order": [[ 1, "desc" ]],
         "responsive": true,
-        "pageLength": 100
+        "pageLength": 25
       });
     });
     function smdelete(url, title) {

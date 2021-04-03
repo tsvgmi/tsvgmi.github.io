@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 #---------------------------------------------------------------------------
 # File:        hacauto.rb
 # Date:        2017-07-29 09:54:48 -0700
@@ -6,17 +8,19 @@
 # $Id$
 #---------------------------------------------------------------------------
 #++
-require File.dirname(__FILE__) + "/../etc/toolenv"
-$: << File.dirname(__FILE__)
+require "#{File.dirname(__FILE__)}/../etc/toolenv"
+$LOAD_PATH << File.dirname(__FILE__)
 require 'micromidi'
 require 'core'
 
+# BKSet Definition
 class BKSet
-  extendCli __FILE__
+  extend_cli __FILE__
 
+  # Tone Settings
   class ToneSetting
     class << self
-      TONE_DIR   = ENV['HOME'] + "/myprofile/etc"
+      TONE_DIR   = "#{ENV['HOME']}/myprofile/etc"
       INSTRUMENT = 'bk50'
 
       def _load_soundlist(file)
@@ -24,15 +28,19 @@ class BKSet
         File.read(file).split("\n").each do |l|
           fs = l.split
           next unless fs.size >= 5
-          sno, c0, c32, ch = fs[0], fs[-3], fs[-2], fs[-1]
+
+          sno = fs[0]
+          c0 = fs[-3]
+          c32 = fs[-2]
+          ch = fs[-1]
           name = fs[1..-4].join(' ')
-          defs[sno] = {name: name, send:"#{c0}.#{c32}.#{ch}", sno:sno}
+          defs[sno] = {name: name, send: "#{c0}.#{c32}.#{ch}", sno: sno}
         end
         defs
       end
 
       def sound(sname)
-        sname = "%04d" % sname.to_i
+        sname = format('%04d', sname.to_i)
         @sdefs ||= _load_soundlist("#{TONE_DIR}/sounds-#{INSTRUMENT}.dat")
         ret = @sdefs[sname]
         Plog.error("#{sname} not found") unless ret
@@ -40,7 +48,7 @@ class BKSet
       end
 
       def rhymth(rname)
-        rname = "%04d" % rname.to_i
+        rname = format('%04d', rname.to_i)
         @rdefs ||= _load_soundlist("#{TONE_DIR}/rhymths-#{INSTRUMENT}.dat")
         ret = @rdefs[rname]
         Plog.error("#{rname} not found") unless ret
@@ -49,6 +57,7 @@ class BKSet
     end
   end
 
+  # handle of Midi play
   class MidiPlay
     def self.instance
       @mobj ||= MidiPlay.new
@@ -60,60 +69,58 @@ class BKSet
       @midi = MIDI::Session.new(@o)
     end
 
-    Notes = %w{C C#|Db D D#|Eb E F F#|Gb G G#|Ab A A#|Bb B}
-    Major = [0, 4, 7]
-    Minor = [0, 3, 7]
+    NOTES = %w[C C#|Db D D#|Eb E F F#|Gb G G#|Ab A A#|Bb B].freeze
+    MAJOR = [0, 4, 7].freeze
+    MINOR = [0, 3, 7].freeze
 
     def notes_for_chord(key)
-      mset     = (key[-1] == 'm') ? Minor : Major
-      base_ofs = Notes.index{|n| key =~ /^#{n}/}
+      mset     = key[-1] == 'm' ? MINOR : MAJOR
+      base_ofs = NOTES.index { |n| key =~ /^#{n}/ }
       unless base_ofs
         Plog.error "Unknown key: #{key}"
         return []
       end
       notes = mset.map do |interval|
-        offset = (base_ofs + interval) % Notes.size
-        snote  = Notes[offset].split('|')[0]
-        [snote+"4", snote+"5"]
+        offset = (base_ofs + interval) % NOTES.size
+        snote  = NOTES[offset].split('|')[0]
+        ["#{snote}4", "#{snote}5"]
       end
       notes.flatten
     end
 
-    def sselect(plist, sounding=true)
-      #Plog.info({plist:plist}.inspect)
+    def sselect(plist, sounding: true)
+      # Plog.info({plist:plist}.inspect)
       sendc = 0
-      [:lower, :upper, :rhymth].each do |atype|
-        if value = plist[atype]
+      %i[lower upper rhymth].each do |atype|
+        unless (value = plist[atype]).nil?
           send_pc(atype, value)
           sendc += value.size
         end
       end
-      if value = plist[:pchange]
-        @midi.program_change value.to_i-1
+      unless (value = plist[:pchange]).nil?
+        @midi.program_change value.to_i - 1
         sleep 0.1
       end
-      
-      sound_chord(plist[:key] || "C") if sounding
-      if plist[:rhymth]
-        @midi.parse([0xfa])
-      end
+
+      sound_chord(plist[:key] || 'C') if sounding
+      @midi.parse([0xfa]) if plist[:rhymth]
     end
 
-    ChannelMap = {
+    CHANNEL_MAP = {
       drum:   9,
       lower:  10,
-      rhymth: 0,                # Must set in keyboard everytime
+      rhymth: 0, # Must set in keyboard everytime
       upper:  3,
-    }
+    }.freeze
     def send_pc(mtype, unos)
-      chan = ChannelMap[mtype]
+      chan = CHANNEL_MAP[mtype]
       @midi.channel chan
       unos.each do |uno|
         Plog.info "C#{chan} - #{mtype}: #{uno.inspect}"
         b0, b1, c = uno[:send].split('.')
         @midi.control_change 0, b0.to_i
         @midi.control_change 32, b1.to_i
-        @midi.program_change c.to_i-1
+        @midi.program_change c.to_i - 1
         sleep 0.1
       end
     end
@@ -123,53 +130,54 @@ class BKSet
     end
 
     def sound_notes(notes)
-      Plog.dump_info(notes:notes)
+      Plog.dump_info(notes: notes)
       notes.each do |ano|
         @midi.note ano
       end
       sleep 1
-      @midi.control_change 0x7b, 0   # All notes off
+      @midi.control_change 0x7b, 0 # All notes off
     end
   end
 
   class << self
-    def apply_settings(midiplay, sinfo, sounding=true)
+    def apply_settings(midiplay, sinfo, sounding: true)
       # Sort/reverse is needed so I don't intone the percussion
-      htones = (sinfo[:htones] || []).sort.reverse.
-        map {|htone| ToneSetting.sound(htone) }
+      htones = (sinfo[:htones] || []).sort.reverse
+                                     .map { |htone| ToneSetting.sound(htone) }
       ltone  = ToneSetting.sound(sinfo[:ltone])
       rhymth = ToneSetting.rhymth(sinfo[:rhymth])
-      plist = {upper:htones, lower:ltone ? [ltone] : nil,
-               rhymth:rhymth ? [rhymth] : nil,
-               key:sinfo[:key]}
-      midiplay.sselect(plist, sounding)
+      plist = {upper: htones, lower: ltone ? [ltone] : nil,
+               rhymth: rhymth ? [rhymth] : nil,
+               key: sinfo[:key]}
+      midiplay.sselect(plist, sounding: sounding)
       plist
     end
 
     def load_setlist(flist)
       smap  = {}
       lcnt  = 0
-      YAML.load_file(flist).each.sort_by {|r|
+      cnames = YAML.load_file(flist).sort_by do |r|
         r[:href] ? r[:href].split('/')[5] : r[:name].downcase
-      }.each_with_index do |sentry, index|
+      end
+      cnames.each_with_index do |sentry, index|
         song = sentry[:name].strip[0..31]
         if sentry[:sound]
           htones, ltone, rhymth = sentry[:sound].to_s.split(',')
-          skey = "#{index+1}.#{song}"
+          skey = "#{index + 1}.#{song}"
           smap[skey] = {
             htones: (htones || '').split('/'),
             ltone:  ltone,
             rhymth: rhymth,
           }
         else
-          skey = "-#{index+1}.#{song}"
+          skey = "-#{index + 1}.#{song}"
           smap[skey] = {}
         end
         smap[skey].update({
-          index:    lcnt+1,
+                            index:    lcnt + 1,
           key:      sentry['key'],
           playnote: sentry['playnote'],
-        })
+                          })
         lcnt += 1
       end
       smap
@@ -178,26 +186,27 @@ class BKSet
     def apply_midi(set_str)
       require 'json'
 
-      options = getOption
+      options = get_option
       htones, ltone, rhymth = set_str.split(',')
-      htones   = htones.split(/[\/\+]/)
+      htones   = htones.split(%r{[/+]})
       setup    = {
-        htones:htones, ltone:ltone, rhymth:rhymth, key:options[:key]
+        htones: htones, ltone: ltone, rhymth: rhymth, key: options[:key]
       }
-      Plog.dump_info(setup:setup)
+      Plog.dump_info(setup: setup)
       midiplay = MidiPlay.instance
-      plist = apply_settings(midiplay, setup, true)
+      plist = apply_settings(midiplay, setup, sounding: true)
       plist.to_json
     end
 
+    # rubocop:disable Security/Eval
     def setloop(flist)
       smap     = load_setlist(flist)
       smtime   = File.mtime(flist)
       midiplay = MidiPlay.instance
-      puts <<EOF
-Roland BK-50 Midi SetList.
-*** Remember to set rhymth in MIDI section every power on ***
-EOF
+      puts <<~EOF
+        Roland BK-50 Midi SetList.
+        *** Remember to set rhymth in MIDI section every power on ***
+      EOF
       loop do
         if File.mtime(flist) > smtime
           Plog.info("#{flist} changed.  Reload")
@@ -215,24 +224,24 @@ EOF
               $0 = 'Running'
               file = __FILE__
               begin
-                eval "load '#{file}'", TOPLEVEL_BINDING
-              rescue => errmsg
-                Plog.error errmsg
+                eval "load '#{file}'", TOPLEVEL_BINDING, __FILE__, __LINE__
+              rescue StandardError => e
+                Plog.error e
               end
             when /^b/i
               require 'byebug'
               byebug
             when /^u/
-              htones = $'.split('/').map{|sno| ToneSetting.sound(sno.strip)}
-              midiplay.sselect(upper:htones) if htones
+              htones = Regexp.last_match.post_match.split('/').map { |sno| ToneSetting.sound(sno.strip) }
+              midiplay.sselect(upper: htones) if htones
             when /^l/
-              ltone = ToneSetting.sound($'.strip)
-              midiplay.sselect(lower:[ltone]) if ltone
+              ltone = ToneSetting.sound(Regexp.last_match.post_match.strip)
+              midiplay.sselect(lower: [ltone]) if ltone
             when /^r/
-              rhymth = ToneSetting.rhymth($'.strip)
-              midiplay.sselect(rhymth:[rhymth]) if rhymth
+              rhymth = ToneSetting.rhymth(Regexp.last_match.post_match.strip)
+              midiplay.sselect(rhymth: [rhymth]) if rhymth
             when /^c/
-              midiplay.sselect(pchange:$')
+              midiplay.sselect(pchange: Regexp.last_match.post_match)
             when /^x/
               break
             end
@@ -240,16 +249,18 @@ EOF
           ans
         end
         break unless song
+
         Plog.info("Selecting #{song}: #{smap[song].inspect}")
         apply_settings(midiplay, smap[song])
       end
     end
+    # rubocop:enable Security/Eval
   end
 end
 
-if (__FILE__ == $0)
-  BKSet.handleCli(
+if __FILE__ == $PROGRAM_NAME
+  BKSet.handle_cli(
     ['--channel', '-C', 1],
-    ['--key',     '-k', 1],
+    ['--key',     '-k', 1]
   )
 end

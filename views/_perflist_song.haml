@@ -75,7 +75,7 @@
               - new_videos.each do |vinfo|
                 %div.col-6.embed-responsive(id="#{vinfo[:vid]}")
                 - if vinfo[:key] && !vinfo[:key].empty?
-                  - offset = key_offset(vinfo[:key], oinfo[:singer_key], true)
+                  - offset = key_offset(vinfo[:key], oinfo[:singer_key], closer:true)
                   .pull-right.small
                     VKey: #{vinfo[:key]}
                     %br/
