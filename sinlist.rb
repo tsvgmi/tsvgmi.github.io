@@ -101,10 +101,6 @@ get '/play-here' do
   system("open -g \"#{ofile}\"") if test('f', ofile)
 end
 
-get '/list/:event' do |event|
-  haml :list, locals: {event: event}, layout: nil
-end
-
 get '/playorder/:user/:listno' do |user, listno|
   playlists  = PlayList.for_user(user)
   list_info  = playlists.find { |r| r[:id] == listno.to_i }
@@ -192,14 +188,15 @@ get '/smulelist/:user' do |user|
   end
   records.each do |r|
     record_by = r[:record_by].split(',')
-    isfav = r[:isfav] || r[:oldfav]
+    isfav     = r[:isfav] || r[:oldfav]
     content << r
     record_by.each do |asinger|
-      siinfo = singers[asinger] ||= {name: asinger, count: 0, listens: 0, loves: 0, favs: 0}
+      siinfo = singers[asinger] ||= {name: asinger, count: 0, listens: 0,
+                                     loves: 0, favs: 0}
       siinfo[:count]   += 1
       siinfo[:favs]    += 1 if isfav
       siinfo[:listens] += (r[:listens] || 0)
-      siinfo[:loves]   += r[:loves]
+      siinfo[:loves]   += r[:loves].to_i
     end
   end
   # Front end will also do sort, but we do on backend so content would
@@ -215,9 +212,13 @@ end
 get '/smsongs_data/:user' do |user|
   # Plog.dump_info(params:params, _ofmt:'Y')
   start     = params[:start].to_i
-  length    = (params[:length] || 1).to_i
+  length    = (params[:length] || 10000).to_i
   order     = (params[:order] || {}).values.first || {'column' => 5, 'dir' => 'desc'}
-  search    = (params[:search] || {})['value']
+  if params[:search_c] && !params[:search_c].empty?
+    search = params[:search_c]
+  else
+    search = (params[:search] || {})['value']
+  end
   days      = params[:days].to_i
   smcontent = SmContent.new(user)
 
@@ -227,6 +228,7 @@ get '/smsongs_data/:user' do |user|
 
   records = records.where(record_by: user) if params[:open]
 
+  p search
   sfields = %w[stitle record_by orig_city tags]
   case search
   when /^o:/
@@ -489,6 +491,7 @@ class SmContent
 
   def content
     DBCache.dbase[:performances]
+           .where(deleted:nil).or(deleted:0)
            .where(Sequel.lit("record_by like '%#{@user}%'"))
   end
 

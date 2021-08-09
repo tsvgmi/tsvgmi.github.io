@@ -176,11 +176,15 @@
   "phien-da-sau": {
     "instrument": "String, Piano",
     "key": "Am",
-    "intro": "[Am] [Am] [D] [Dm] [Am] [Am] [D] [Dm]\r\n[G] [C] [Dm]-[E7] [Am]\r\n3331 3331 4441 4441\r\n3331 3331 4441 4441\r\n4334-7 -53223-5 -(487785) 231\r\nSolo:\r\n[Am] [Am] [Am] [Am] [Fm] [Fm] [Ab] [Eb] [Db] [Db] [Gm7b5] [C]-[E] [Am] [Am7/G] [D] [Dm]-[E] [Am]\r\n31 1551122115 5113311551 12211551 1331155 1221155 ...\r\nOut: Same as intro",
+    "intro": "[Am] [Am] [D] [Dm] [Am] [Am] [D] [Dm]\r\n[G] [C] [Dm]-[E7] [Am]\r\n3331 3331 4441 4441\r\n3331 3331 4441 4441\r\n4334-7 -53223-5 -(486685) 231\r\nSolo:\r\n[Am] [Am] [Am] [Am] [Fm] [Fm] [Ab] [Eb] [Db] [Db] [Gm7b5] [C]-[E] [Am] [Am7/G] [D] [Dm]-[E] [Am]\r\n31 1551122115 5113311551 12211551 1331155 1221155 ...\r\nOut: Same as intro",
     "ytvideo": "R45deIDXYnc,0,43,154,216",
     "vidkey": "Am",
+    "ytkvideo": "",
+    "ytkkey": "",
     "smkey": "",
-    "smule": ""
+    "smule": "",
+    "nctkey": "",
+    "nct": ""
   },
   "diem-xua": {
     "instrument": "String",

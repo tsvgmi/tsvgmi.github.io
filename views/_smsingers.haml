@@ -4,7 +4,7 @@
       %th Record With
       %th Count
       %th Listens
-      %th Loves
+      %th Favs
   %tbody
     - singers.each do |stats|
       - singer = stats[:name]
@@ -40,5 +40,4 @@
           - rate = stats[:listens].to_f/stats[:count]
           = "%3.1f" % [rate]
         %td.dt-right.small
-          - rate = stats[:loves].to_f/stats[:count]
-          = "%3.1f" % [rate]
+          = stats[:favs]

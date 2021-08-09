@@ -3,7 +3,8 @@ draw:            <%= params[:draw].to_i %>
 recordsTotal:    <%= total %>
 recordsFiltered: <%= filtered %>
 data:
-  <% data.each do |r|
+  <%
+  data.each do |r|
     isfav_0 = ""
     if r[:isfav]
       isfav_0 = "<i class='fa fa-star text-primary'></i>"
@@ -25,6 +26,7 @@ data:
 </a>
 EOB
     ofile = r[:sfile] || r[:ofile]
+    ofile = "/Volumes/Voice/SMULE/STORE/#{r[:sid]}.m4a"
     if ofile
       url = "/play-here?ofile=#{CGI.escape(ofile)}"
       title_head += <<EOB

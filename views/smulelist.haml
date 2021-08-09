@@ -12,12 +12,10 @@
     text-align: right;
   }
 
-= request.query_string
-- readonly = params[:readonly]
-- days = params[:days]
+-# = request.query_string
 .row
-  %div(class="col-lg-8")
-    %table.cell-border.compact.display.dt-responsive#main_table
+  .col-lg-8
+    %table.cell-border.compact.display.dt-responsive#main-table
       %thead
         %tr
           %th Title
@@ -30,12 +28,12 @@
           %th City
 
   .col-lg-4
-    = partial :_smsingers, locals:locals
+    = partial :_smsingers, locals: locals
 
 - content_for :javascript do
   :javascript
     $(function() {
-      $('#main_table').dataTable({
+      $('#main-table').dataTable({
         "dom": '<"top"lfi>rt<"bottom"p><"clear">',
         "order": [[ 5, "desc" ]],
         "pageLength": 50,

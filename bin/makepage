@@ -41,6 +41,7 @@ build_page data/75431.order playlist/vnhv2-2-2020 thienv 1
 
 set -x
 curl -so playlist/index.html http://127.0.0.1:4567/playlist
-curl -so smulelist/THV_13-nhac-xua.html "http://127.0.0.1:4567/smulelist/THV_13?tags=nhac-xua&readonly=true"
+curl -so smulelist/THV_13-nhac-xua.html "http://127.0.0.1:4567/smulelist/THV_13?search_c=t:nhac-xua"
+curl -so smsongs_data/THV_13 "http://127.0.0.1:4567/smsongs_data/THV_13?search_c=t:nhac-xua"
 curl -so smulegroup/THV_13-nhac-xua.html "http://127.0.0.1:4567/smulegroup/THV_13?tags=nhac-xua&readonly=true"
 curl -so smulegroup/THV_13-xuan.html "http://127.0.0.1:4567/smulegroup/THV_13?tags=xuan&readonly=true"

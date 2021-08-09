@@ -140,10 +140,9 @@ class PlayOrder
     qorder = @content_str.map { |r| r[0] }
     @playlist.fetch[:content].select do |asong|
       qorder.include?(asong[:song_id])
-    end
-    @playlist = @playlist.sort_by do |asong|
-      qorder.index(asong[:song_id])
-    end
+    end.sort_by do |asong|
+     qorder.index(asong[:song_id])
+   end
   end
 
   def fetch_songs
@@ -321,7 +320,7 @@ class PlayList
     end
 
     def collect_for_singer(singer, reload: false)
-      playlists  = PlayList.for_singer(singer, reload)
+      playlists  = PlayList.for_singer(singer, reload: reload)
       play_order = PlayOrder.new(singer)
       order_list = Hash[play_order.content_str]
       song_list  = play_order.fetch_songs
