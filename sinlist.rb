@@ -209,15 +209,15 @@ get '/smulelist/:user' do |user|
                             i_join: smcontent.i_join}
 end
 
-get '/smsongs_data/:user' do |user|
+get '/smulelist-perf/:user' do |user|
   # Plog.dump_info(params:params, _ofmt:'Y')
   start     = params[:start].to_i
   length    = (params[:length] || 10000).to_i
   order     = (params[:order] || {}).values.first || {'column' => 5, 'dir' => 'desc'}
   if params[:search_c] && !params[:search_c].empty?
-    search = params[:search_c]
+    searches = [params[:search_c]]
   else
-    search = (params[:search] || {})['value']
+    searches = (params[:search] || {})['value'].split(',')
   end
   days      = params[:days].to_i
   smcontent = SmContent.new(user)
@@ -228,25 +228,28 @@ get '/smsongs_data/:user' do |user|
 
   records = records.where(record_by: user) if params[:open]
 
-  p search
-  sfields = %w[stitle record_by orig_city tags]
-  case search
-  when /^o:/
-    search  = Regexp.last_match.post_match
-    records = records.where(Sequel.lit("href like '%ensembles'"))
-  when /^t:/
-    search  = Regexp.last_match.post_match
-    sfields = %w[tags]
-  when /^s:/
-    search  = Regexp.last_match.post_match
-    sfields = %w[stitle]
-  when /^r:/
-    search  = Regexp.last_match.post_match
-    sfields = %w[record_by]
-  when /^c:/
-    search  = Regexp.last_match.post_match
-    sfields = %w[orig_city]
+  dsearches =[]
+  searches.each do |search|
+    next if search.empty?
+    sfields = %w[stitle record_by orig_city tags]
+    case search
+    when /^f:/
+      records = records.filter(isfav:true).or(oldfav:true)
+    when /^o:/
+      records = records.where(Sequel.lit("href like '%ensembles'"))
+    when /^t:/
+      dsearches << [%w[tags], Regexp.last_match.post_match]
+    when /^s:/
+      dsearches << [%w[sfile], Regexp.last_match.post_match]
+    when /^r:/
+      dsearches << [%w[record_by], Regexp.last_match.post_match]
+    when /^c:/
+      dsearches << [%w[orig_city], Regexp.last_match.post_match]
+    else
+      dsearches << [sfields, search]
+    end
   end
+  Plog.dump_info(searches:searches, dsearches:dsearches)
 
   records = records.where(created: Time.now - days * 24 * 3600..Time.now) if days > 0
 
@@ -259,7 +262,7 @@ get '/smsongs_data/:user' do |user|
           end
   # Plog.dump_info(search:search)
 
-  if search
+  dsearches.each do |sfields, search|
     search = search.downcase.gsub(/_/, '/_')
     pdata   = []
     query   = sfields.map do |f|
@@ -269,7 +272,7 @@ get '/smsongs_data/:user' do |user|
     data0 = data0.where(Sequel.lit(query, *pdata))
   end
   data = data0.limit(length).offset(start)
-  # Plog.dump_info(data:data.sql, data0:data0.sql)
+  Plog.dump_info(data:data.sql, data0:data0.sql)
   locals = {
     total:    records.count,
     filtered: data0.count,
@@ -277,7 +280,9 @@ get '/smsongs_data/:user' do |user|
     data:     data,
   }
   yaml_src = erb(File.read('views/smule_data.yml'), locals: locals)
-  # STDERR.puts yaml_src
+# File.open('test.yml', 'w') do |fod|
+#   fod.puts yaml_src
+# end
   YAML.safe_load(yaml_src).to_json
 end
 
