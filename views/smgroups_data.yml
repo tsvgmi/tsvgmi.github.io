@@ -1,0 +1,55 @@
+---
+draw:            <%= params[:draw].to_i %>
+recordsTotal:    <%= total %>
+recordsFiltered: <%= filtered %>
+data:
+  <%
+    data.each do |stitle, sinfo|
+      slist   = sinfo[:list]
+      arow    = slist[0]
+      listens = sinfo[:listens]
+      loves   = sinfo[:loves]
+      tags    = sinfo[:tags]
+      created = slist[0][:created]
+      ptitle  = "<img class=savatar src=#{arow[:avatar]} height=30 width=30></img>"
+      title   = [ptitle, arow[:title]].join(" ")
+  %>
+  -
+    # <%= slist.inspect %>
+    DT_RowClass: srow
+    title: |
+      <%= title %>
+    record_by: |
+      <div class='row'>
+        <% slist.each do |aperf| %>
+          <div class='col-sm-1'>
+          <%= 
+            output      = []
+            value       = aperf[:record_by]
+            singer      = value.include?(',') ? value.sub(/,?#{user},?/, '') : value
+            href_singer = "https://smule.com/#{singer}"
+            href_song   = 'https://smule.com' + aperf[:href]
+            sinfo       = all_singers.first(name:singer) || all_singers.first
+
+            avatar      = sinfo[:avatar]
+            avshape     = (aperf[:isfav] || aperf[:oldfav]) ?
+                            'uavatar_f' : 'uavatar'
+            sdate       = aperf[:created].strftime('%Y-%m-%d')
+            output << "<a href=#{href_song} target='smule' title='#{singer} - #{sdate}'>"
+            output << "<img class=#{avshape} src=#{avatar} height=30 width=30></img>"
+            output << "</a>"
+
+            lurl   = "/player/#{aperf[:sid]}"
+            output << "<a data-toggle=tooltip href=# id=#{aperf[:sid]} onclick=\"jQuery.ajax('#{lurl}'); return false;\")>"
+            output << "<i class='fa fa-play fa-sm'></i>"
+            output << "</a>"
+            output.join(" ")
+          %>
+          </div>
+        <% end %>
+      </div>
+    listens:   <%= listens %>
+    loves:     <%= loves %>
+    created:   "<%= created.strftime('%Y-%m-%d') %>"
+    tags:      <%= tags %>
+  <% end %>

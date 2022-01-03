@@ -5,6 +5,9 @@
   .uavatar {
     clip-path: circle(15px at center);
   }
+  .uavatar_f {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
   .fav-1 {
     background-color: #cfc;
     font-weight: bold;
@@ -36,7 +39,7 @@
     $(function() {
       $('#main_table').dataTable({
         "columnDefs": [
-          {"width": "35%", "targets": 0}
+          {"width": "30%", "targets": 0}
         ],
         "dom": '<"top"lfi>rt<"bottom"p><"clear">',
         "order": [[ 2, "desc" ]],
