@@ -96,7 +96,9 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     mysql2 (0.5.3)
-    nokogiri (1.12.2-x86_64-darwin)
+    nokogiri (1.13.2-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.2-x86_64-linux)
       racc (~> 1.4)
     parallel (1.20.1)
     parser (3.0.2.0)
@@ -104,7 +106,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
-    racc (1.5.2)
+    racc (1.6.0)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -170,6 +172,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   better_errors
