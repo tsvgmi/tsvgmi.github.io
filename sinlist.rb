@@ -214,43 +214,13 @@ get '/smulelist-perf/:user' do |user|
   start     = params[:start].to_i
   length    = (params[:length] || 10000).to_i
   order     = (params[:order] || {}).values.first || {'column' => 5, 'dir' => 'desc'}
-  if params[:search_c] && !params[:search_c].empty?
-    searches = [params[:search_c]]
-  else
-    searches = (params[:search] || {})['value'].split(',')
-  end
   days      = params[:days].to_i
   smcontent = SmContent.new(user)
 
-  columns   = %i[title isfav record_by listens loves created]
-  records   = smcontent.content
-  records   = records.left_join(smcontent.songtags, name: :stitle)
-
-  records = records.where(record_by: user) if params[:open]
-
-  dsearches =[]
-  searches.each do |search|
-    next if search.empty?
-    sfields = %w[stitle record_by orig_city tags]
-    case search
-    when /^f:/
-      records = records.filter(isfav:true).or(oldfav:true)
-    when /^o:/
-      records = records.where(Sequel.lit("href like '%ensembles'"))
-    when /^t:/
-      dsearches << [%w[tags], Regexp.last_match.post_match]
-    when /^s:/
-      dsearches << [%w[sfile], Regexp.last_match.post_match]
-    when /^r:/
-      dsearches << [%w[record_by], Regexp.last_match.post_match]
-    when /^c:/
-      dsearches << [%w[orig_city], Regexp.last_match.post_match]
-    else
-      dsearches << [sfields, search]
-    end
-  end
-  Plog.dump_info(searches:searches, dsearches:dsearches)
-
+  columns = %i[title isfav record_by listens loves created]
+  records = smcontent.content
+  records = records.left_join(smcontent.songtags, name: :stitle)
+  records = get_searches(records)
   records = records.where(created: Time.now - days * 24 * 3600..Time.now) if days > 0
 
   data0     = records
@@ -262,17 +232,8 @@ get '/smulelist-perf/:user' do |user|
           end
   # Plog.dump_info(search:search)
 
-  dsearches.each do |sfields, search|
-    search = search.downcase.gsub(/_/, '/_')
-    pdata   = []
-    query   = sfields.map do |f|
-      pdata << "%#{search}%"
-      "LOWER(#{f}) like ? escape '/'"
-    end.join(' or ')
-    data0 = data0.where(Sequel.lit(query, *pdata))
-  end
   data = data0.limit(length).offset(start)
-  Plog.dump_info(data:data.sql, data0:data0.sql)
+  #Plog.dump_info(data:data.sql, data0:data0.sql)
   locals = {
     total:    records.count,
     filtered: data0.count,
@@ -298,47 +259,76 @@ get '/smulegroup2/:user' do |user|
 end
 
 get '/smgroups_data/:user' do |user|
-  Plog.dump_info(params: params)
+  #Plog.dump_info(params: params)
+  Plog.dump_info(order: params[:order])
   start     = params[:start].to_i
   length    = (params[:length] || 1).to_i
   order     = (params[:order] || {}).values.first || {'column' => 2, 'dir' => 'desc'}
   search    = (params[:search] || {})['value']
+
   smcontent = SmContent.new(user)
   columns   = %i[stitle record_by created tags listens loves]
   records   = smcontent.content.left_join(smcontent.songtags, name: :stitle)
+
   data0     = records
+  data0     = get_searches(data0)
   ocolumn   = order['column'].to_i
-  data0 = if order['dir'] == 'desc'
-            data0.reverse(columns[ocolumn])
-          else
-            data0.order(columns[ocolumn])
-          end
-  data0 = data0.group(:stitle)
-  total = data0.count
+  odir      = order['dir']
+  fmap      = %w[stitle record_by created tags]
+  data0     = data0.group(:stitle)
+  Plog.dump_info(query:data0, count:data0.count)
+  total     = data0.count
 
-  if search
-    search = search.downcase
-    data0  = data0.where(
-      Sequel.lit("LOWER(stitle) like ? or \
-                  LOWER(record_by) like ? or LOWER(tags) like ?",
-                 "%#{search}%", "%#{search}%", "%#{search}%")
-    )
+  filtered  = data0.count
+
+  Plog.dump_info(query:data0, count:data0.count)
+  if odir == 'desc'
+    data0 = data0.reverse(fmap[ocolumn])
+  else
+    data0 = data0.order(fmap[ocolumn])
   end
-  filtered = data0.count
-  data0    = data0.limit(length).offset(start)
-  stitles  = data0.group(:stitle).map { |r| r[:stitle] }
+  stitles = data0.group(:stitle).map { |r| r[:stitle] }
+  data0   = data0.limit(length).offset(start)
+  Plog.dump_info(query:data0, count:data0.count)
 
-  data = records.where(stitle: stitles).reverse(:created)
-                .map { |r| r }.group_by { |r| r[:stitle] }
+
+  #data = records.where(stitle: stitles).reverse(:created)
+  data = records.where(stitle: stitles[start..start+length-1])
+  if odir == 'desc'
+    data = data.reverse(fmap[ocolumn])
+  else
+    data = data.order(fmap[ocolumn])
+  end
+  Plog.dump_info(query:data, count:data.count)
+  data = data.map { |r| r }.group_by { |r| r[:stitle] }
                 .reject do |_stitle, sinfos|
     sinfos.find { |sinfo| sinfo[:record_by] == user }
+  end
+
+  ndata = {}
+  data.each do |stitle, slist|
+    arow    = slist[0]
+    ndata[stitle] = {
+      listens:   slist.inject(0){|sum,x| sum + x[:listens] },
+      loves:     slist.inject(0){|sum,x| sum + x[:loves] },
+      tags:      slist.inject([]){|sum,x| sum << x[:tags]}
+                      .join(',').split(',').uniq.join(', '),
+      created:   slist[0][:created],
+      stitle:    slist[0][:stitle],
+      record_by: slist[0][:record_by],
+      list:      slist,
+    }
+  end
+  ndata = ndata.to_a.sort_by {|r| r[1][columns[ocolumn]]}
+  if order['dir'] == 'desc'
+    ndata = ndata.reverse
   end
 
   locals = {
     total:    total,
     filtered: filtered,
     user:     user,
-    data:     data,
+    data:     ndata,
     all_singers: smcontent.singers,
   }
   yaml_src = erb(File.read('views/smgroups_data.yml'), locals: locals)
@@ -467,6 +457,49 @@ helpers do
       result << [span1, span2]
     end
     result
+  end
+
+  def get_searches(records)
+    if params[:search_c] && !params[:search_c].empty?
+      searches = [params[:search_c]]
+    else
+      searches = (params[:search] || {})['value'].split(',')
+    end
+
+    dsearches = []
+    searches.each do |search|
+      next if search.empty?
+      sfields = %w[stitle record_by orig_city tags]
+      case search
+      when /^f:/
+        records = records.filter(isfav:true).or(oldfav:true)
+      when /^o:/
+        records = records.where(Sequel.lit("href like '%ensembles'"))
+      when /^t:/
+        dsearches << [%w[tags], Regexp.last_match.post_match]
+      when /^s:/
+        dsearches << [%w[sfile], Regexp.last_match.post_match]
+      when /^r:/
+        dsearches << [%w[record_by], Regexp.last_match.post_match]
+      when /^c:/
+        dsearches << [%w[orig_city], Regexp.last_match.post_match]
+      else
+        dsearches << [sfields, search]
+      end
+    end
+    #Plog.dump_info(searches:searches, dsearches:dsearches)
+
+    dsearches.each do |sfields, search|
+      search = search.downcase.gsub(/_/, '/_')
+      pdata   = []
+      query   = sfields.map do |f|
+        pdata << "%#{search}%"
+        "LOWER(#{f}) like ? escape '/'"
+      end.join(' or ')
+      records = records.where(Sequel.lit(query, *pdata))
+    end
+    Plog.dump_info(records:records, count:records.count)
+    records
   end
 end
 
