@@ -80,9 +80,9 @@
               = (slist[0][:tags] || '').gsub(/,/, ', ')
             - unless readonly
               %td.dt-right.small
-                = slist.inject(0){|sum,x| sum + x[:listens] }
+              = slist.inject(0){|sum,x| sum + x[:listens].to_i }
               %td.dt-right.small
-                = slist.inject(0){|sum,x| sum + x[:loves] }
+              = slist.inject(0){|sum,x| sum + x[:loves].to_i }
 
 - content_for :javascript do
   :javascript

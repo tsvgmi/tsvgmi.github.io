@@ -259,7 +259,7 @@ get '/smulegroup2/:user' do |user|
 end
 
 get '/smgroups_data/:user' do |user|
-  Plog.dump_info(params: params)
+  #Plog.dump_info(params: params)
   Plog.dump_info(order: params[:order])
   start     = params[:start].to_i
   length    = (params[:length] || 1).to_i
@@ -269,18 +269,38 @@ get '/smgroups_data/:user' do |user|
   smcontent = SmContent.new(user)
   columns   = %i[stitle record_by created tags listens loves]
   records   = smcontent.content.left_join(smcontent.songtags, name: :stitle)
+
   data0     = records
   data0     = get_searches(data0)
   ocolumn   = order['column'].to_i
+  odir      = order['dir']
+  fmap      = %w[stitle record_by created tags]
   data0     = data0.group(:stitle)
+  Plog.dump_info(query:data0, count:data0.count)
   total     = data0.count
 
   filtered  = data0.count
-  data0     = data0.limit(length).offset(start)
-  stitles   = data0.group(:stitle).map { |r| r[:stitle] }
 
-  data = records.where(stitle: stitles).reverse(:created)
-                .map { |r| r }.group_by { |r| r[:stitle] }
+  Plog.dump_info(query:data0, count:data0.count)
+  if odir == 'desc'
+    data0 = data0.reverse(fmap[ocolumn])
+  else
+    data0 = data0.order(fmap[ocolumn])
+  end
+  stitles = data0.group(:stitle).map { |r| r[:stitle] }
+  data0   = data0.limit(length).offset(start)
+  Plog.dump_info(query:data0, count:data0.count)
+
+
+  #data = records.where(stitle: stitles).reverse(:created)
+  data = records.where(stitle: stitles[start..start+length-1])
+  if odir == 'desc'
+    data = data.reverse(fmap[ocolumn])
+  else
+    data = data.order(fmap[ocolumn])
+  end
+  Plog.dump_info(query:data, count:data.count)
+  data = data.map { |r| r }.group_by { |r| r[:stitle] }
                 .reject do |_stitle, sinfos|
     sinfos.find { |sinfo| sinfo[:record_by] == user }
   end
@@ -299,7 +319,7 @@ get '/smgroups_data/:user' do |user|
       list:      slist,
     }
   end
-  ndata = ndata.to_a.sort_by {|r| p r; r[1][columns[ocolumn]]}
+  ndata = ndata.to_a.sort_by {|r| r[1][columns[ocolumn]]}
   if order['dir'] == 'desc'
     ndata = ndata.reverse
   end
@@ -478,6 +498,7 @@ helpers do
       end.join(' or ')
       records = records.where(Sequel.lit(query, *pdata))
     end
+    Plog.dump_info(records:records, count:records.count)
     records
   end
 end
