@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-$LOAD_PATH << "#{File.dirname(__FILE__)}/lib"
+$LOAD_PATH << "#{File.dirname(__FILE__)}/../lib"
 
-require "#{File.dirname(__FILE__)}/etc/toolenv"
 require 'sinatra'
 require 'sinatra/content_for'
 require 'sinatra/reloader'
@@ -15,17 +14,18 @@ require 'net/http'
 require 'sequel'
 require 'better_errors'
 
-require_relative 'lib/core'
-require_relative 'lib/listhelper'
-require_relative 'lib/playlist'
+require_relative '../etc/toolenv'
+require_relative '../lib/core'
+require_relative '../lib/listhelper'
+require_relative '../lib/playlist'
 
-require_relative '../hacauto/bin/hac-nhac'
-# require_relative '../hacauto/bin/hac-nhac'
+require_relative '../../hacauto/bin/hac-nhac'
 
-set :bind, '0.0.0.0'
-set :lock, true
+set :bind,            '0.0.0.0'
+set :lock,            true
 set :show_exceptions, true
-set :server, 'thin'
+set :server,          'thin'
+set :root,            "#{File.dirname(__FILE__)}/.."
 
 enable :sessions
 
@@ -36,22 +36,6 @@ enable :sessions
 
 before do
   response.headers['Access-Control-Allow-Origin'] = '*'
-end
-
-not_found do
-  path = request.env['PATH_INFO']
-  mdkfile = "#{settings.views}/#{path}.mdk"
-  mdfile = "#{settings.views}/#{path}.md"
-  if test('f', mdkfile)
-    eresult = ERB.new(File.read(mdkfile)).result(binding)
-    result  = RDiscount.new(eresult).to_html
-    return [200, result]
-  elsif test('f', mdfile)
-    eresult = File.read(mdfile)
-    result  = RDiscount.new(eresult).to_html
-    return [200, result]
-  end
-  return [404, "Page #{path} not found"]
 end
 
 # routes...
@@ -373,25 +357,6 @@ end
 
 KEY_POS = %w[A A#|Bb B C C#|Db D D#|Eb E F F#|Gb G G#|Ab].freeze
 helpers do
-  def render_mdk(template, options={})
-    # Save a local copy as I can't control if haml is going to
-    # mess with the definition
-    locals = options[:locals] || {}
-    page_out = haml(:layout, options) do
-      mdkfile = "#{settings.views}/#{template}.mdk"
-      raise "Template mdk #{template} not found" unless test('f', mdkfile)
-
-      bind = binding
-      locals.each do |k, v|
-        bind.local_variable_set(k, v)
-      end
-      eresult = ERB.new(File.read(mdkfile)).result(bind)
-      result  = RDiscount.new(eresult).to_html
-      result
-    end
-    [200, page_out]
-  end
-
   def download_transpose(video, offset, options)
     require 'tempfile'
 

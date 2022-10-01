@@ -1,0 +1,35 @@
+#!/bin/bash
+APP_DIR=${0%/*}/..
+
+. $APP_DIR/etc/tool.env
+#######################################################################
+# File: 	admtool
+# Description:  Sysadmin tools
+# Created:	2002-06-23
+# $Id$
+#######################################################################
+if [ -d ~/.rbenv ];  then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init - zsh)"
+fi
+
+#------------------------------------------------ Begin of script ---
+#------------------------------------------------ Begin of script ---
+#------------------------------------------------ Begin of script ---
+
+oper=$1; shift
+case $oper in
+  run)
+    roper=$(echo ${oper#smule-} | tr '-' '_')
+    cd $APP_DIR
+    set -x
+    exec sinlist.rb
+    ;;
+
+  *)
+    roper=$(echo $oper | tr '-' '_')
+    exec playlist.rb $roper "$@"
+    ;;
+esac
+exit 0
+

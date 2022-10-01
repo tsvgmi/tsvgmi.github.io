@@ -40,17 +40,23 @@ EOB
 <i class='fa fa-play invisible'></i>
 EOB
     end
-    if r[:record_by].start_with?(user)
+    if r[:record_by] == user
+      city, latlong = r[:orig_city], r[:latlong]
+    elsif r[:record_by].start_with?(user)
       city, latlong = r[:other_city], r[:latlong_2]
     else
       city, latlong = r[:orig_city], r[:latlong]
     end
     if latlong
-      #href    = "https://google.com/maps/place/#{latlong}"
-      #href    = "https://www.google.com/maps/search/?api=1&query=#{latlong}"
-      href    = "https://maps.google.com/?q=#{latlong}&ll=#{latlong}&z=10"
-      #href    = "https://www.google.com/maps/@?api=1&map_action=map&center=#{latlong}&zoom=7"
-      latlong = "<a href=#{href} target=gmap><i class='fa fa-map'></i></a>"
+      if latlong.empty? || latlong == ','
+        latlong = nil
+      else
+        #href    = "https://google.com/maps/place/#{latlong}"
+        #href    = "https://www.google.com/maps/search/?api=1&query=#{latlong}"
+        href    = "https://maps.google.com/?q=#{latlong}&ll=#{latlong}&z=10"
+        #href    = "https://www.google.com/maps/@?api=1&map_action=map&center=#{latlong}&zoom=7"
+        latlong = "<a href=#{href} target=gmap><i class='fa fa-map'></i></a>"
+      end
     end
     city = [city, latlong].compact.join(', ')
   %>
