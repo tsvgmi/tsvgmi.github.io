@@ -20,7 +20,7 @@ class BKSet
   # Tone Settings
   class ToneSetting
     class << self
-      TONE_DIR   = "#{ENV['HOME']}/myprofile/etc"
+      TONE_DIR   = "#{ENV['HOME']}/myprofile/etc".freeze
       INSTRUMENT = 'bk50'
 
       def _load_soundlist(file)
@@ -34,7 +34,7 @@ class BKSet
           c32 = fs[-2]
           ch = fs[-1]
           name = fs[1..-4].join(' ')
-          defs[sno] = {name: name, send: "#{c0}.#{c32}.#{ch}", sno: sno}
+          defs[sno] = {name:, send: "#{c0}.#{c32}.#{ch}", sno:}
         end
         defs
       end
@@ -130,7 +130,7 @@ class BKSet
     end
 
     def sound_notes(notes)
-      Plog.dump_info(notes: notes)
+      Plog.dump_info(notes:)
       notes.each do |ano|
         @midi.note ano
       end
@@ -149,7 +149,7 @@ class BKSet
       plist = {upper: htones, lower: ltone ? [ltone] : nil,
                rhymth: rhymth ? [rhymth] : nil,
                key: sinfo[:key]}
-      midiplay.sselect(plist, sounding: sounding)
+      midiplay.sselect(plist, sounding:)
       plist
     end
 
@@ -166,8 +166,8 @@ class BKSet
           skey = "#{index + 1}.#{song}"
           smap[skey] = {
             htones: (htones || '').split('/'),
-            ltone:  ltone,
-            rhymth: rhymth,
+            ltone:,
+            rhymth:,
           }
         else
           skey = "-#{index + 1}.#{song}"
@@ -190,18 +190,56 @@ class BKSet
       htones, ltone, rhymth = set_str.split(',')
       htones   = htones.split(%r{[/+]})
       setup    = {
-        htones: htones, ltone: ltone, rhymth: rhymth, key: options[:key]
+        htones:, ltone:, rhymth:, key: options[:key]
       }
-      Plog.dump_info(setup: setup)
+      Plog.dump_info(setup:)
       midiplay = MidiPlay.instance
       plist = apply_settings(midiplay, setup, sounding: true)
       plist.to_json
     end
 
-    # rubocop:disable Security/Eval
+    def handle_setloop(smap_keys)
+      aprompt = 'Select song to load [R|b|c..|l..|r..|u..]'
+      Cli.select(smap_keys) do
+        ans = nil
+        loop do
+          $stderr.print "#{aprompt}: "
+          ans = $stdin.gets.chomp
+          case ans
+          when /^R/
+            $0   = 'Running' #                     Mangle $0 to disable init code
+            file = __FILE__
+            # rubocop:disable Security/Eval
+            begin
+              eval "load '#{file}'", TOPLEVEL_BINDING, __FILE__, __LINE__
+            rescue StandardError => e
+              Plog.error e
+            end
+            # rubocop:enable Security/Eval
+          when /^b/i
+            require 'byebug'
+            byebug
+          when /^u/
+            htones = Regexp.last_match.post_match.split('/').map { |sno| ToneSetting.sound(sno.strip) }
+            midiplay.sselect(upper: htones) if htones
+          when /^l/
+            ltone = ToneSetting.sound(Regexp.last_match.post_match.strip)
+            midiplay.sselect(lower: [ltone]) if ltone
+          when /^r/
+            rhymth = ToneSetting.rhymth(Regexp.last_match.post_match.strip)
+            midiplay.sselect(rhymth: [rhymth]) if rhymth
+          when /^c/
+            midiplay.sselect(pchange: Regexp.last_match.post_match)
+          when /^x/
+            break
+          end
+        end
+        ans
+      end
+    end
+
     def setloop(flist)
-      smap     = load_setlist(flist)
-      smtime   = File.mtime(flist)
+      smtime   = Time.at(0)
       midiplay = MidiPlay.instance
       puts <<~EOF
         Roland BK-50 Midi SetList.
@@ -213,49 +251,15 @@ class BKSet
           smap   = load_setlist(flist)
           smtime = File.mtime(flist)
         end
-        aprompt = 'Select song to load [R|b|c..|l..|r..|u..]'
-        song = Cli.select(smap.keys.sort) do
-          ans = nil
-          loop do
-            $stderr.print "#{aprompt}: "
-            ans = $stdin.gets.chomp
-            case ans
-            when /^R/
-              $0 = 'Running'
-              file = __FILE__
-              begin
-                eval "load '#{file}'", TOPLEVEL_BINDING, __FILE__, __LINE__
-              rescue StandardError => e
-                Plog.error e
-              end
-            when /^b/i
-              require 'byebug'
-              byebug
-            when /^u/
-              htones = Regexp.last_match.post_match.split('/').map { |sno| ToneSetting.sound(sno.strip) }
-              midiplay.sselect(upper: htones) if htones
-            when /^l/
-              ltone = ToneSetting.sound(Regexp.last_match.post_match.strip)
-              midiplay.sselect(lower: [ltone]) if ltone
-            when /^r/
-              rhymth = ToneSetting.rhymth(Regexp.last_match.post_match.strip)
-              midiplay.sselect(rhymth: [rhymth]) if rhymth
-            when /^c/
-              midiplay.sselect(pchange: Regexp.last_match.post_match)
-            when /^x/
-              break
-            end
-          end
-          ans
+        unless (song = handle_setloop(smap.keys.sort))
+          break
         end
-        break unless song
 
         Plog.info("Selecting #{song}: #{smap[song].inspect}")
         apply_settings(midiplay, smap[song])
       end
     end
-    # rubocop:enable Security/Eval
-  end
+      end
 end
 
 if __FILE__ == $PROGRAM_NAME

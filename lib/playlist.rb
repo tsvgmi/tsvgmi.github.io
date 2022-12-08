@@ -124,7 +124,7 @@ class PlayOrder
     # Plog.dump_info(wset:wset.keys)
     output = []
     @playlist.fetch[:content].sort_by { |r| r[:name] }.each do |r|
-      Plog.dump_info(r: r)
+      Plog.dump_info(r:)
       fs = r[:href].split('/')
       if wset[r[:song_id]]
         Plog.dump_info(previous: wset[r[:song_id]])
@@ -138,11 +138,10 @@ class PlayOrder
 
   def fetch_song_list
     qorder = @content_str.map { |r| r[0] }
-    @playlist.fetch[:content].select do |asong|
+    res    = @playlist.fetch[:content].select do |asong|
       qorder.include?(asong[:song_id])
-    end.sort_by do |asong|
-     qorder.index(asong[:song_id])
-   end
+    end
+    res.sort_by { |asong| qorder.index(asong[:song_id]) }
   end
 
   def fetch_songs
@@ -179,17 +178,17 @@ class PlayOrder
         active = true
       end
       rec = {
-        song_id:    song_id,
-        title:      title,
+        song_id:,
+        title:,
         version:    version && !version.empty? ? version : nil,
-        singer:     singer,
+        singer:,
         singer_key: skey,
-        style:      style,
-        tempo:      tempo,
-        lead:       lead,
+        style:,
+        tempo:,
+        lead:,
         order:      lno,
-        solo_idx:   solo_idx,
-        active:     active,
+        solo_idx:,
+        active:,
       }
       lno += 1
       order_list << [song_id, rec]
@@ -285,7 +284,7 @@ class PlayList
     def collect_for_user(user, listno: nil, reload: false, options: {})
       reload = reload == 'true' if reload.is_a?(String)
 
-      playlists = PlayList.for_user(user, reload: reload)
+      playlists = PlayList.for_user(user, reload:)
       raise "No playlists found for user #{user}" if playlists.size <= 0
 
       listno ||= playlists[0][:id]
@@ -295,11 +294,11 @@ class PlayList
       order_list = Hash[play_order.content_str]
       song_list  = play_order.fetch_songs
       {
-        listno:     listno,
-        list_info:  list_info,
-        playlists:  playlists,
-        order_list: order_list,
-        song_list:  song_list,
+        listno:,
+        list_info:,
+        playlists:,
+        order_list:,
+        song_list:,
         singers:    play_order.singers,
         leads:      play_order.leads,
         perf_info:  PlayNote.new(user),
@@ -320,16 +319,16 @@ class PlayList
     end
 
     def collect_for_singer(singer, reload: false)
-      playlists  = PlayList.for_singer(singer, reload: reload)
+      playlists  = PlayList.for_singer(singer, reload:)
       play_order = PlayOrder.new(singer)
       order_list = Hash[play_order.content_str]
       song_list  = play_order.fetch_songs
       {
         list_no:    singer,
         list_info:  playlists[0],
-        playlists:  playlists,
-        order_list: order_list,
-        song_list:  song_list,
+        playlists:,
+        order_list:,
+        song_list:,
         singers:    play_order.singers,
         leads:      play_order.leads,
         perf_info:  PlayNote.new('thienv'),
@@ -337,7 +336,7 @@ class PlayList
     end
 
     def for_singer(singer, reload: false)
-      gen_singer_list(singer, reload: reload)
+      gen_singer_list(singer, reload:)
       [
         {
           id:         singer,
@@ -350,9 +349,9 @@ class PlayList
 
     def gen_singer_list(singer, reload: false)
       order_file = "#{Dir.pwd}/data/#{singer}.order"
-      Plog.dump_info(reload: reload, order_file: order_file)
+      Plog.dump_info(reload:, order_file:)
       if !reload && test('f', order_file)
-        Plog.dump_info(reload: reload, nreload: !reload, order_file: order_file)
+        Plog.dump_info(reload:, nreload: !reload, order_file:)
         return true
       end
       sids = {}

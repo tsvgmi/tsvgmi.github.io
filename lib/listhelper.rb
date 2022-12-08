@@ -109,7 +109,7 @@ class ListHelper
       order_list = nil
       if test('s', ord_file)
         order_list = File.read(ord_file).split("\n")
-        Plog.dump_info(ord_file: ord_file, order_list: order_list)
+        Plog.dump_info(ord_file:, order_list:)
       else
         order_list = plist.map { |r| r[:sname] }
       end

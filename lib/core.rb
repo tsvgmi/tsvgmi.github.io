@@ -68,7 +68,7 @@ end
 
 def progress_set(wset, title=nil)
   title ||= caller[0].split.last.gsub(/['"`]/, '')
-  tstring = format('%<title>-16.16s [:bar] :percent', title: title)
+  tstring = format('%<title>-16.16s [:bar] :percent', title:)
   bar     = TTY::ProgressBar.new(tstring, total: wset.size)
   wset.each do |entry|
     break unless yield entry, bar
@@ -399,13 +399,13 @@ class PLogger < Logger
     script = caller[@slevel + @clevel].sub(/:in .*$/, '').sub(%r{^.*/}, '')
     if @simple
       format("%<sev>s - [%<script>s] %<msg>s\n",
-             sev: severity[0..0], script: script, msg: msg)
+             sev: severity[0..0], script:, msg:)
     elsif timestamp.respond_to?(:strftime)
       format(FORMAT2, sev: severity[0..0], time: timestamp.strftime('%y/%m/%d %T'),
-             script: script, msg: msg)
+             script:, msg:)
     else
       format(FORMAT2, sev: severity[0..0], time: timestamp,
-             script: script, msg: progname)
+             script:, msg: progname)
     end
   end
 
