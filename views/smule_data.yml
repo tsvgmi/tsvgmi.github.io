@@ -1,4 +1,8 @@
 ---
+<%
+  song_info_urls = data.map{|r| r[:song_info_url]}.compact.uniq
+%>
+
 draw:            <%= params[:draw].to_i %>
 recordsTotal:    <%= total %>
 recordsFiltered: <%= filtered %>
@@ -51,14 +55,14 @@ EOB
       if latlong.empty? || latlong == ','
         latlong = nil
       else
-        #href    = "https://google.com/maps/place/#{latlong}"
-        #href    = "https://www.google.com/maps/search/?api=1&query=#{latlong}"
         href    = "https://maps.google.com/?q=#{latlong}&ll=#{latlong}&z=10"
-        #href    = "https://www.google.com/maps/@?api=1&map_action=map&center=#{latlong}&zoom=7"
+        latlong_p = latlong.sub(',', '_')
+        href    = "https://www.bing.com/maps?cp=#{latlong}&lvl=10&sp=point.#{latlong_p}_Pin"
         latlong = "<a href=#{href} target=gmap><i class='fa fa-map'></i></a>"
       end
     end
     city = [city, latlong].compact.join(', ')
+    tags = [r[:author], r[:singer], r[:tags]].join(' ').strip.gsub(/[ ,]/, ' ')
   %>
   -
     # <%= r.inspect %>
@@ -71,6 +75,6 @@ EOB
     listens:   <%= r[:listens] %>
     loves:     <%= r[:loves] %>
     created:   <%= r[:created].strftime("%Y-%m-%d %H:%M") %>
-    tags:      <%= r[:tags] ? r[:tags].split(',').uniq.join(', ').inspect : '' %>
+    tags:      "<%= tags %>"
     orig_city: "<%= city %>"
   <% end %>

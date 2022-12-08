@@ -8,24 +8,33 @@ require 'sinatra/content_for'
 require 'sinatra/reloader'
 require 'sinatra/partial'
 require 'sinatra/flash'
+
 require 'json'
 require 'yaml'
 require 'net/http'
 require 'sequel'
 require 'better_errors'
+require 'haml'
+require 'zeitwerk'
+
+loader = Zeitwerk::Loader.new
+loader.push_dir('./lib')
+loader.enable_reloading
+loader.setup
 
 require_relative '../etc/toolenv'
 require_relative '../lib/core'
-require_relative '../lib/listhelper'
-require_relative '../lib/playlist'
+#require_relative '../lib/listhelper'
+#require_relative '../lib/playlist'
 
-require_relative '../../hacauto/bin/hac-nhac'
+#require_relative '../../hacauto/bin/hac-nhac'
 
 set :bind,            '0.0.0.0'
 set :lock,            true
 set :show_exceptions, true
 set :server,          'thin'
 set :root,            "#{File.dirname(__FILE__)}/.."
+set :haml,            {escape_html: false}
 
 enable :sessions
 
@@ -48,7 +57,7 @@ end
 
 get '/fragment_upload/:user_name/:song_id/:song_name' do |_user_name, _song_id, _song_name|
   locals = params.dup
-  haml :fragment_upload, locals: locals
+  haml :fragment_upload, locals:
 end
 
 post '/song-style' do
@@ -74,14 +83,14 @@ get '/song-style/:user/:song_id/:song_name' do |user, song_id, song_name|
   uperf_info = PlayNote.new(user)[song_name] || {}
   song_id    = song_id.to_i
   song_info  = SongInfo.new(song_id).content
-  locals     = {user: user, song_id: song_id, song_name: song_name,
-                uperf_info: uperf_info, song_info: song_info}
-  haml :song_style, locals: locals
+  locals     = {user:, song_id:, song_name:,
+                uperf_info:, song_info:}
+  haml :song_style, locals:
 end
 
 get '/play-here' do
   ofile = params[:ofile]
-  Plog.dump_info(ofile: ofile)
+  Plog.dump_info(ofile:)
   system("open -g \"#{ofile}\"") if test('f', ofile)
 end
 
@@ -95,7 +104,7 @@ get '/playorder/:user/:listno' do |user, listno|
   elsif params[:refresh]
     play_order.refresh_file
   end
-  haml :playorder, locals: {play_order: play_order, list_info: list_info}
+  haml :playorder, locals: {play_order:, list_info:}
 end
 
 post '/playorder' do
@@ -117,7 +126,7 @@ get '/playlist' do
 end
 
 get '/singer_list/:singer' do |singer|
-  Plog.dump_info(singer: singer, params: params)
+  Plog.dump_info(singer:, params:)
   if params[:listno] && !params[:listno].empty? && params[:listno] != singer
     Plog.info('Redirecting')
     redirect "/singer_list/#{params[:listno]}"
@@ -125,13 +134,13 @@ get '/singer_list/:singer' do |singer|
   reload       = params[:reload].to_i
   locals       = PlayList.collect_for_singer(singer, reload: reload == 2)
   singer_lists = PlayList.band_singers.map { |r| {name: r} }
-  locals.update(user: 'thienv', playlists: nil, singer_lists: singer_lists,
+  locals.update(user: 'thienv', playlists: nil, singer_lists:,
                 note: nil)
-  haml :perflist, locals: locals
+  haml :perflist, locals:
 end
 
 get '/perflist/:user' do |user|
-  Plog.dump_info(params: params)
+  Plog.dump_info(params:)
   reload   = params[:reload].to_i
   locals   = PlayList.collect_for_user(user, listno: params[:listno],
                                        reload: reload == 2)
@@ -139,8 +148,8 @@ get '/perflist/:user' do |user|
   notefile = "data/#{listno}.notes"
   note     = nil
   note = markdown(File.read(notefile)) if test('f', notefile)
-  locals.update(user: user, note: note)
-  haml :perflist, locals: locals
+  locals.update(user:, note:)
+  haml :perflist, locals:
 end
 
 get '/send_patch/:pstring' do |pstring|
@@ -150,7 +159,7 @@ get '/send_patch/:pstring' do |pstring|
   end
   Plog.info(command)
   presult = JSON.parse(`#{command}`)
-  haml :patch_info, locals: {presult: presult}, layout: nil
+  haml :patch_info, locals: {presult:}, layout: nil
 end
 
 get '/poke/:command' do |command|
@@ -187,7 +196,7 @@ get '/smulelist/:user' do |user|
   # not change during initial display
   singers = singers.values.sort_by { |r| r[:count] }.reverse
   Plog.dump_info(all_singers: smcontent.singers.count)
-  haml :smulelist, locals: {user: user, singers: singers,
+  haml :smulelist, locals: {user:, singers:,
                             all_singers: smcontent.singers,
                             join_me: smcontent.join_me,
                             i_join: smcontent.i_join}
@@ -196,14 +205,14 @@ end
 get '/smulelist-perf/:user' do |user|
   # Plog.dump_info(params:params, _ofmt:'Y')
   start     = params[:start].to_i
-  length    = (params[:length] || 10000).to_i
+  length    = (params[:length] || 10_000).to_i
   order     = (params[:order] || {}).values.first || {'column' => 5, 'dir' => 'desc'}
   days      = params[:days].to_i
   smcontent = SmContent.new(user)
 
   columns = %i[title isfav record_by listens loves created]
   records = smcontent.content
-  records = records.left_join(smcontent.songtags, name: :stitle)
+  records = records.left_join(smcontent.songinfos, song_info_url: :song_info_url)
   records = get_searches(records)
   records = records.where(created: Time.now - days * 24 * 3600..Time.now) if days > 0
 
@@ -217,18 +226,19 @@ get '/smulelist-perf/:user' do |user|
   # Plog.dump_info(search:search)
 
   data = data0.limit(length).offset(start)
-  #Plog.dump_info(data:data.sql, data0:data0.sql)
+  p data
+
+  # Plog.dump_info(data:data.sql, data0:data0.sql)
   locals = {
     total:    records.count,
     filtered: data0.count,
-    user:     user,
-    data:     data,
+    user:,
+    data:,
   }
-  yaml_src = erb(File.read('views/smule_data.yml'), locals: locals)
-# File.open('test.yml', 'w') do |fod|
-#   fod.puts yaml_src
-# end
-  YAML.safe_load(yaml_src).to_json
+  yaml_src = erb(File.read('views/smule_data.yml'), locals:)
+  data = YAML.safe_load(yaml_src)
+  data['data'] ||= []
+  data.to_json
 end
 
 get '/player/:sid' do |sid|
@@ -239,20 +249,20 @@ get '/player/:sid' do |sid|
 end
 
 get '/smulegroup2/:user' do |user|
-  haml :smulegroup2, locals: {user: user}
+  haml :smulegroup2, locals: {user:}
 end
 
 get '/smgroups_data/:user' do |user|
-  #Plog.dump_info(params: params)
+  # Plog.dump_info(params: params)
   Plog.dump_info(order: params[:order])
   start     = params[:start].to_i
   length    = (params[:length] || 1).to_i
   order     = (params[:order] || {}).values.first || {'column' => 2, 'dir' => 'desc'}
-  search    = (params[:search] || {})['value']
+  # search    = (params[:search] || {})['value']
 
   smcontent = SmContent.new(user)
   columns   = %i[stitle record_by created tags listens loves]
-  records   = smcontent.content.left_join(smcontent.songtags, name: :stitle)
+  records   = smcontent.content.left_join(smcontent.songinfos, song_info_url: :song_info_url)
 
   data0     = records
   data0     = get_searches(data0)
@@ -260,42 +270,40 @@ get '/smgroups_data/:user' do |user|
   odir      = order['dir']
   fmap      = %w[stitle record_by created tags]
   data0     = data0.group(:stitle)
-  Plog.dump_info(query:data0, count:data0.count)
+  Plog.dump_info(query: data0, count: data0.count)
   total     = data0.count
 
   filtered  = data0.count
 
-  Plog.dump_info(query:data0, count:data0.count)
-  if odir == 'desc'
-    data0 = data0.reverse(fmap[ocolumn])
-  else
-    data0 = data0.order(fmap[ocolumn])
-  end
+  Plog.dump_info(query: data0, count: data0.count)
+  data0 = if odir == 'desc'
+            data0.reverse(fmap[ocolumn])
+          else
+            data0.order(fmap[ocolumn])
+          end
   stitles = data0.group(:stitle).map { |r| r[:stitle] }
   data0   = data0.limit(length).offset(start)
-  Plog.dump_info(query:data0, count:data0.count)
+  Plog.dump_info(query: data0, count: data0.count)
 
-
-  #data = records.where(stitle: stitles).reverse(:created)
-  data = records.where(stitle: stitles[start..start+length-1])
-  if odir == 'desc'
-    data = data.reverse(fmap[ocolumn])
-  else
-    data = data.order(fmap[ocolumn])
-  end
-  Plog.dump_info(query:data, count:data.count)
+  # data = records.where(stitle: stitles).reverse(:created)
+  data = records.where(stitle: stitles[start..start + length - 1])
+  data = if odir == 'desc'
+           data.reverse(fmap[ocolumn])
+         else
+           data.order(fmap[ocolumn])
+         end
+  Plog.dump_info(query: data, count: data.count)
   data = data.map { |r| r }.group_by { |r| r[:stitle] }
-                .reject do |_stitle, sinfos|
+             .reject do |_stitle, sinfos|
     sinfos.find { |sinfo| sinfo[:record_by] == user }
   end
 
   ndata = {}
   data.each do |stitle, slist|
-    arow    = slist[0]
     ndata[stitle] = {
-      listens:   slist.inject(0){|sum,x| sum + x[:listens] },
-      loves:     slist.inject(0){|sum,x| sum + x[:loves] },
-      tags:      slist.inject([]){|sum,x| sum << x[:tags]}
+      listens:   slist.inject(0) { |sum, x| sum + x[:listens] },
+      loves:     slist.inject(0) { |sum, x| sum + x[:loves] },
+      tags:      slist.inject([]) { |sum, x| sum << x[:tags] }
                       .join(',').split(',').uniq.join(', '),
       created:   slist[0][:created],
       stitle:    slist[0][:stitle],
@@ -303,19 +311,17 @@ get '/smgroups_data/:user' do |user|
       list:      slist,
     }
   end
-  ndata = ndata.to_a.sort_by {|r| r[1][columns[ocolumn]]}
-  if order['dir'] == 'desc'
-    ndata = ndata.reverse
-  end
+  ndata = ndata.to_a.sort_by { |r| r[1][columns[ocolumn]] }
+  ndata = ndata.reverse if order['dir'] == 'desc'
 
   locals = {
-    total:    total,
-    filtered: filtered,
-    user:     user,
+    total:,
+    filtered:,
+    user:,
     data:     ndata,
     all_singers: smcontent.singers,
   }
-  yaml_src = erb(File.read('views/smgroups_data.yml'), locals: locals)
+  yaml_src = erb(File.read('views/smgroups_data.yml'), locals:)
   YAML.safe_load(yaml_src).to_json
 end
 
@@ -325,7 +331,7 @@ get '/smulegroup/:user' do |user|
   tags      = (params[:tags] || '').split.join('|')
   tags      = tags.empty? ? nil : Regexp.new(tags)
   smcontent = SmContent.new(user)
-  records   = smcontent.content.left_join(smcontent.songtags, name: :stitle)
+  records   = smcontent.content.left_join(smcontent.songinfos, song_info_url: :song_info_url)
                        .reverse(:created)
   records.each do |r|
     unless singer.empty?
@@ -339,9 +345,8 @@ get '/smulegroup/:user' do |user|
     content << r
   end
   scontent = content.group_by { |r| r[:title].downcase.sub(/\s*\(.*$/, '') }
-  haml :smulegroup, locals: {user: user, scontent: scontent,
-                            all_singers: smcontent.singers,
-                            songtags:    smcontent.songtags}
+  haml :smulegroup, locals: {user:, scontent:,
+                             all_singers: smcontent.singers}
 end
 
 get '/dl-transpose/:video' do |video|
@@ -351,7 +356,7 @@ end
 
 get '/reload-song/:song_id' do |song_id|
   files = Dir.glob("data/SONGS/song:#{song_id}:*")
-  Plog.dump_info(files: files)
+  Plog.dump_info(files:)
   FileUtils.rm(files, verbose: true)
 end
 
@@ -360,7 +365,7 @@ helpers do
   def download_transpose(video, offset, options)
     require 'tempfile'
 
-    Plog.dump_info(options: options)
+    Plog.dump_info(options:)
     url   = "https://www.youtube.com/watch?v=#{video}"
     odir  = options[:odir]  || 'data/MP3'
     ofile = options[:title] || '%(title)s-%(creator)s-%(release_date)s'
@@ -390,7 +395,7 @@ helpers do
   # Attach play note to the like star
   def key_offset(base_key, new_key, closer: false)
     if !base_key || !new_key || base_key.empty? || new_key.empty?
-      Plog.dump_info(msg: 'No key', base_key: base_key, new_key: new_key)
+      Plog.dump_info(msg: 'No key', base_key:, new_key:)
       return 0
     end
     base_key = base_key.sub(/m$/, '')
@@ -399,7 +404,7 @@ helpers do
     new_offset = KEY_POS.index { |f| new_key =~ /^#{f}$/ }
     base_offset = KEY_POS.index { |f| base_key =~ /^#{f}$/ }
     if !new_offset || !base_offset
-      Plog.dump_info(msg: 'No key offset', base_key: base_key, new_key: new_key) if new_key && !new_key.empty?
+      Plog.dump_info(msg: 'No key offset', base_key:, new_key:) if new_key && !new_key.empty?
       return 0
     end
     offset = new_offset - base_offset
@@ -425,34 +430,34 @@ helpers do
   end
 
   def get_searches(records)
-    if params[:search_c] && !params[:search_c].empty?
-      searches = [params[:search_c]]
-    else
-      searches = (params[:search] || {})['value'].split(',')
-    end
+    searches = if params[:search_c] && !params[:search_c].empty?
+                 [params[:search_c]]
+               else
+                 (params[:search] || {})['value'].split(',')
+               end
 
     dsearches = []
     searches.each do |search|
       next if search.empty?
-      sfields = %w[stitle record_by orig_city tags]
+
       case search
       when /^f:/
-        records = records.filter(isfav:true).or(oldfav:true)
+        records = records.filter(isfav: true).or(oldfav: true)
       when /^o:/
         records = records.where(Sequel.lit("href like '%ensembles'"))
       when /^t:/
-        dsearches << [%w[tags], Regexp.last_match.post_match]
+        dsearches << [%w[tags author singer], Regexp.last_match.post_match]
       when /^s:/
         dsearches << [%w[sfile], Regexp.last_match.post_match]
       when /^r:/
         dsearches << [%w[record_by], Regexp.last_match.post_match]
       when /^c:/
-        dsearches << [%w[orig_city], Regexp.last_match.post_match]
+        dsearches << [%w[orig_city other_city], Regexp.last_match.post_match]
       else
-        dsearches << [sfields, search]
+        dsearches << [%w[performances.stitle record_by], search]
       end
     end
-    #Plog.dump_info(searches:searches, dsearches:dsearches)
+    # Plog.dump_info(searches:searches, dsearches:dsearches)
 
     dsearches.each do |sfields, search|
       search = search.downcase.gsub(/_/, '/_')
@@ -463,7 +468,7 @@ helpers do
       end.join(' or ')
       records = records.where(Sequel.lit(query, *pdata))
     end
-    Plog.dump_info(records:records, count:records.count)
+    Plog.dump_info(records:, count: records.count)
     records
   end
 end
@@ -477,124 +482,3 @@ def search_data_file(fname)
   nil
 end
 
-# DB Cache Definition
-class DBCache
-  class << self
-    DBNAME = 'smule.db'
-
-    def dbase
-      @dbase ||= Sequel.sqlite(DBNAME)
-    end
-  end
-end
-
-# SM Content Definition
-class SmContent
-  attr_reader :join_me, :i_join
-
-  def content
-    DBCache.dbase[:performances]
-           .where(deleted:nil).or(deleted:0)
-           .where(Sequel.lit("record_by like '%#{@user}%'"))
-  end
-
-  def singers
-    DBCache.dbase[:singers]
-  end
-
-  def songtags
-    DBCache.dbase[:song_tags]
-  end
-
-  def initialize(user)
-    @user    = user
-    @join_me = {}
-    @i_join  = {}
-
-    DBCache.dbase
-    content.where(Sequel.lit("record_by like '%#{user}%'"))
-           .each do |r|
-      rby = r[:record_by].split(',')
-      if rby[0] == user
-        other = rby[1]
-        @join_me[other] ||= 0
-        @join_me[other] += 1
-      end
-      next unless rby[1] == user
-
-      other = rby[0]
-      @i_join[other] ||= 0
-      @i_join[other] += 1
-    end
-  end
-
-  def remove(sid)
-    Plog.info("Deleting #{sid}")
-    content.where(sid: sid).delete
-    true
-  end
-end
-
-# Extract Song Info
-class SongInfo
-  attr_reader :content
-
-  def initialize(song_id, version=nil)
-    fptn = if version
-             "data/SONGS/song:#{song_id}:#{version}:*"
-           else
-             "data/SONGS/song:#{song_id}:{,*}:*"
-           end
-    @content = {}
-    return if (sfile = Dir.glob(fptn)[0]).empty?
-
-    if !test('s', sfile)
-      Plog.dump_error(msg: 'File not found', sfile: sfile)
-    else
-      @content = YAML.load_file(sfile)
-    end
-  end
-end
-
-# Extract video info (youtube)
-class VideoInfo
-  attr_reader :videos, :yk_videos
-
-  def initialize(vstring, kstring=nil)
-    yvideos = (vstring || '').split('|')
-    vidkeys = (kstring || '').split('|')
-    @yk_videos = yvideos.zip(vidkeys)
-    check_videos
-  end
-
-  # Select set is "1/2/3"
-  # If there is one or more solo index specified.  Use it since same song
-  # could be played in multiple styles
-  def select_set(solo_idx)
-    if solo_idx && !@yk_videos.empty?
-      solo_sel   = solo_idx.split('/').map(&:to_i)
-      @yk_videos = @yk_videos.values_at(*solo_sel).compact
-      # Plog.dump_info(solo_sel:solo_sel, yk_videos:@yk_videos)
-      check_videos
-    end
-    @yk_videos
-  end
-
-  def check_videos
-    @videos = []
-    @yk_videos.each do |svideo, skey|
-      video, *ytoffset = svideo.split(',')
-      ytoffset.each_slice(2) do |ytstart, ytend|
-        ytstart = Regexp.last_match.pre_match.to_i * 60 + Regexp.last_match.post_match.to_i if ytstart =~ /:/
-        ytend   = Regexp.last_match.pre_match.to_i * 60 + Regexp.last_match.post_match.to_i if ytend =~ /:/
-        vid = "video_#{video.gsub(/[^a-z0-9_]/i, '')}_#{ytstart}_#{ytend}"
-        # Plog.dump_info(vid:vid)
-        @videos << {
-          vid:   vid,
-          video: video,
-          start: ytstart.to_i, end: ytend.to_i, key: skey
-        }
-      end
-    end
-  end
-end

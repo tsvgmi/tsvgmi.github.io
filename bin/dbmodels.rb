@@ -19,7 +19,7 @@ module DbUtils
     if (dbrec = first(keys)).empty?
       vset = keys
       vset.update(values)
-      Plog.dump_info(vset: vset)
+      Plog.dump_info(vset:)
       dbrec = create(vset)
     else
       # Don't update nil value
@@ -57,8 +57,8 @@ class Dbm
       YAML.load_file(order_file).each do |agroup|
         agroup['list'].each do |entry|
           name_k, singer, key = entry.split(',')
-          keys   = {name_k: name_k, singer: singer}
-          values = {key: key}
+          keys   = {name_k:, singer:}
+          values = {key:}
           Singer.create_or_update(keys, values)
         end
       end
@@ -72,7 +72,7 @@ class Dbm
         p name_k, se
         next unless name_k
 
-        keys   = {name_k: name_k}
+        keys   = {name_k:}
         values = {
           name:      se[:name],
           artist:    se[:artist],
@@ -87,7 +87,7 @@ class Dbm
         if se[:perform]
           se[:perform].each do |aperf|
             keys = {
-              name_k: name_k,
+              name_k:,
               singer: aperf[:singer],
             }
             values = {
@@ -99,7 +99,7 @@ class Dbm
           end
         elsif se[:performer]
           keys = {
-            name_k: name_k,
+            name_k:,
             singer: se[:performer],
           }
           values = {
@@ -111,7 +111,7 @@ class Dbm
         end
         next unless se[:sound]
 
-        keys   = {name_k: name_k}
+        keys   = {name_k:}
         values = {bk3_set: se[:sound]}
         Sound.create_or_update(keys, values)
       end

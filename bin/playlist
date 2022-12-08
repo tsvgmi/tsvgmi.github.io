@@ -23,7 +23,7 @@ case $oper in
     roper=$(echo ${oper#smule-} | tr '-' '_')
     cd $APP_DIR
     set -x
-    exec sinlist.rb
+    exec bin/sinlist.rb
     ;;
 
   *)

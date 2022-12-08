@@ -15,6 +15,8 @@
 -# = request.query_string
 .row
   .col-lg-8
+    .span.muted.float-right
+      f:fav o:open t:tags r:record_by c:city
     %table.cell-border.compact.display.dt-responsive#main-table
       %thead
         %tr
@@ -42,13 +44,13 @@
         "responsive": true,
         "ajax": "/smulelist-perf/#{user}?#{request.query_string}",
         "columns": [
-            { "data": "title" },
+            { "data": "title", "width": "30%" },
             { "data": "isfav" },
             { "data": "record_by" },
             { "data": "listens" },
             { "data": "loves" },
             { "data": "created" },
-            { "data": "tags" },
+            { "data": "tags", "width": "10%" },
             { "data": "orig_city" }
         ]
       });
