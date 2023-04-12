@@ -219,6 +219,8 @@ get '/smulelist-perf/:user' do |user|
   # Plog.dump_info(search:search)
 
   data = data0.limit(length).offset(start)
+  p data
+
   # Plog.dump_info(data:data.sql, data0:data0.sql)
   locals = {
     total:    records.count,
@@ -227,10 +229,9 @@ get '/smulelist-perf/:user' do |user|
     data:,
   }
   yaml_src = erb(File.read('views/smule_data.yml'), locals:)
-  # File.open('test.yml', 'w') do |fod|
-  #   fod.puts yaml_src
-  # end
-  YAML.safe_load(yaml_src).to_json
+  data = YAML.safe_load(yaml_src)
+  data['data'] ||= []
+  data.to_json
 end
 
 get '/player/:sid' do |sid|
@@ -432,7 +433,6 @@ helpers do
     searches.each do |search|
       next if search.empty?
 
-      sfields = %w[performances.stitle record_by orig_city other_city tags author singer tags]
       case search
       when /^f:/
         records = records.filter(isfav: true).or(oldfav: true)
@@ -447,7 +447,7 @@ helpers do
       when /^c:/
         dsearches << [%w[orig_city other_city], Regexp.last_match.post_match]
       else
-        dsearches << [sfields, search]
+        dsearches << [%w[performances.stitle record_by], search]
       end
     end
     # Plog.dump_info(searches:searches, dsearches:dsearches)
