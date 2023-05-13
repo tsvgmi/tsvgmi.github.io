@@ -54,3 +54,4 @@ group :development do
 end
 
 gem 'webrick'
+gem 'zeitwerk'

@@ -8,19 +8,26 @@ require 'sinatra/content_for'
 require 'sinatra/reloader'
 require 'sinatra/partial'
 require 'sinatra/flash'
+
 require 'json'
 require 'yaml'
 require 'net/http'
 require 'sequel'
 require 'better_errors'
 require 'haml'
+require 'zeitwerk'
+
+loader = Zeitwerk::Loader.new
+loader.push_dir('./lib')
+loader.enable_reloading
+loader.setup
 
 require_relative '../etc/toolenv'
 require_relative '../lib/core'
-require_relative '../lib/listhelper'
-require_relative '../lib/playlist'
+#require_relative '../lib/listhelper'
+#require_relative '../lib/playlist'
 
-require_relative '../../hacauto/bin/hac-nhac'
+#require_relative '../../hacauto/bin/hac-nhac'
 
 set :bind,            '0.0.0.0'
 set :lock,            true
@@ -475,123 +482,3 @@ def search_data_file(fname)
   nil
 end
 
-# DB Cache Definition
-class DBCache
-  class << self
-    DBNAME = 'smule.db'
-
-    def dbase
-      @dbase ||= Sequel.sqlite(DBNAME)
-    end
-  end
-end
-
-# SM Content Definition
-class SmContent
-  attr_reader :join_me, :i_join
-
-  def content
-    DBCache.dbase[:performances]
-           .where(deleted: nil).or(deleted: 0)
-           .where(Sequel.lit("record_by like '%#{@user}%'"))
-  end
-
-  def singers
-    DBCache.dbase[:singers]
-  end
-
-  def songinfos
-    DBCache.dbase[:song_infos]
-  end
-
-  def initialize(user)
-    @user    = user
-    @join_me = {}
-    @i_join  = {}
-
-    DBCache.dbase
-    content.where(Sequel.lit("record_by like '%#{user}%'"))
-           .each do |r|
-      rby = r[:record_by].split(',')
-      if rby[0] == user
-        other = rby[1]
-        @join_me[other] ||= 0
-        @join_me[other] += 1
-      end
-      next unless rby[1] == user
-
-      other = rby[0]
-      @i_join[other] ||= 0
-      @i_join[other] += 1
-    end
-  end
-
-  def remove(sid)
-    Plog.info("Deleting #{sid}")
-    content.where(sid:).delete
-    true
-  end
-end
-
-# Extract Song Info
-class SongInfo
-  attr_reader :content
-
-  def initialize(song_id, version=nil)
-    fptn = if version
-             "data/SONGS/song:#{song_id}:#{version}:*"
-           else
-             "data/SONGS/song:#{song_id}:{,*}:*"
-           end
-    @content = {}
-    return if (sfile = Dir.glob(fptn)[0]).empty?
-
-    if !test('s', sfile)
-      Plog.dump_error(msg: 'File not found', sfile:)
-    else
-      @content = YAML.load_file(sfile)
-    end
-  end
-end
-
-# Extract video info (youtube)
-class VideoInfo
-  attr_reader :videos, :yk_videos
-
-  def initialize(vstring, kstring=nil)
-    yvideos = (vstring || '').split('|')
-    vidkeys = (kstring || '').split('|')
-    @yk_videos = yvideos.zip(vidkeys)
-    check_videos
-  end
-
-  # Select set is "1/2/3"
-  # If there is one or more solo index specified.  Use it since same song
-  # could be played in multiple styles
-  def select_set(solo_idx)
-    if solo_idx && !@yk_videos.empty?
-      solo_sel   = solo_idx.split('/').map(&:to_i)
-      @yk_videos = @yk_videos.values_at(*solo_sel).compact
-      # Plog.dump_info(solo_sel:solo_sel, yk_videos:@yk_videos)
-      check_videos
-    end
-    @yk_videos
-  end
-
-  def check_videos
-    @videos = []
-    @yk_videos.each do |svideo, key|
-      video, *ytoffset = svideo.split(',')
-      ytoffset.each_slice(2) do |ytstart, ytend|
-        ytstart = Regexp.last_match.pre_match.to_i * 60 + Regexp.last_match.post_match if ytstart =~ /:/
-        ytend   = Regexp.last_match.pre_match.to_i * 60 + Regexp.last_match.post_match if ytend =~ /:/
-        vid = "video_#{video.gsub(/[^a-z0-9_]/i, '')}_#{ytstart}_#{ytend}"
-        # Plog.dump_info(vid:vid)
-        @videos << {
-          vid:, video:, key:,
-          start: ytstart.to_i, end: ytend.to_i
-        }
-      end
-    end
-  end
-end
