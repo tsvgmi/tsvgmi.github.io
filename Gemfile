@@ -33,7 +33,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 #gem 'haml', '< 6.0'
 gem 'haml'
-#gem 'mysql2'
+gem 'mysql2'
 gem 'nokogiri'
 gem 'rerun'
 gem 'sequel'

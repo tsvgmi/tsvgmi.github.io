@@ -1,6 +1,35 @@
 # SM Content Definition
 class SmContent
-  attr_reader :join_me, :i_join
+  def initialize(user)
+    @user    = user
+  end
+
+  def build_joins
+    @i_join, @join_me = {}, {}
+    content.each do |r|
+      rby = r[:record_by].split(',')
+      if rby[0] == @user
+        other = rby[1]
+        @join_me[other] ||= 0
+        @join_me[other] += 1
+      end
+      next unless rby[1] == @user
+
+      other = rby[0]
+      @i_join[other] ||= 0
+      @i_join[other] += 1
+    end
+  end
+
+  def join_me
+    build_joins unless @join_me
+    @join_me
+  end
+
+  def i_join
+    build_joins unless @i_join
+    @i_join
+  end
 
   def content
     DbCache.dbase[:performances]
@@ -14,28 +43,6 @@ class SmContent
 
   def songinfos
     DbCache.dbase[:song_infos]
-  end
-
-  def initialize(user)
-    @user    = user
-    @join_me = {}
-    @i_join  = {}
-
-    DbCache.dbase
-    content.where(Sequel.lit("record_by like '%#{user}%'"))
-           .each do |r|
-      rby = r[:record_by].split(',')
-      if rby[0] == user
-        other = rby[1]
-        @join_me[other] ||= 0
-        @join_me[other] += 1
-      end
-      next unless rby[1] == user
-
-      other = rby[0]
-      @i_join[other] ||= 0
-      @i_join[other] += 1
-    end
   end
 
   def remove(sid)

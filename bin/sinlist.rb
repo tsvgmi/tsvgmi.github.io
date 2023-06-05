@@ -17,19 +17,20 @@ require 'better_errors'
 require 'haml'
 require 'zeitwerk'
 
-loader = Zeitwerk::Loader.new
-loader.push_dir('./lib')
-loader.enable_reloading
-loader.setup
+#loader = Zeitwerk::Loader.new
+#loader.push_dir('./lib')
+#loader.enable_reloading
+#loader.setup
 
 require_relative '../etc/toolenv'
 require_relative '../lib/core'
-#require_relative '../lib/listhelper'
-#require_relative '../lib/playlist'
 
-#require_relative '../../hacauto/bin/hac-nhac'
+require 'db_cache'
+require 'sm_content'
+require 'plog'
 
 set :bind,            '0.0.0.0'
+set :port,            (ENV['PORT'] || 4567).to_i
 set :lock,            true
 set :show_exceptions, true
 set :server,          'thin'
@@ -37,11 +38,6 @@ set :root,            "#{File.dirname(__FILE__)}/.."
 set :haml,            {escape_html: false}
 
 enable :sessions
-
-# configure :development do
-# use BetterErrors::Middleware
-# BetterErrors.application_root = __dir__
-# end
 
 before do
   response.headers['Access-Control-Allow-Origin'] = '*'
@@ -192,12 +188,14 @@ get '/smulelist/:user' do |user|
       siinfo[:loves]   += r[:loves].to_i
     end
   end
+  Plog.dump_info(records:records)
   # Front end will also do sort, but we do on backend so content would
   # not change during initial display
-  singers = singers.values.sort_by { |r| r[:count] }.reverse
-  Plog.dump_info(all_singers: smcontent.singers.count)
+  singers     = singers.values.sort_by { |r| r[:count] }.reverse
+  all_singers = smcontent.singers
+                          .as_hash(:name, [:avatar, :following, :follower])
   haml :smulelist, locals: {user:, singers:,
-                            all_singers: smcontent.singers,
+                            all_singers: all_singers,
                             join_me: smcontent.join_me,
                             i_join: smcontent.i_join}
 end
@@ -208,6 +206,7 @@ get '/smulelist-perf/:user' do |user|
   length    = (params[:length] || 10_000).to_i
   order     = (params[:order] || {}).values.first || {'column' => 5, 'dir' => 'desc'}
   days      = params[:days].to_i
+  Plog.info "Content again - perf"
   smcontent = SmContent.new(user)
 
   columns = %i[title isfav record_by listens loves created]
@@ -226,7 +225,6 @@ get '/smulelist-perf/:user' do |user|
   # Plog.dump_info(search:search)
 
   data = data0.limit(length).offset(start)
-  p data
 
   # Plog.dump_info(data:data.sql, data0:data0.sql)
   locals = {
