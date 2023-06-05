@@ -6,21 +6,13 @@ GEM
     alsa-rawmidi (0.4.0)
       ffi (~> 1.15, >= 1.15.5)
     ast (2.4.2)
-    better_errors (2.10.0)
-      erubi (>= 1.0.0)
-      rack (>= 0.9.0)
-      rouge (>= 1.0.0)
-    binding_of_caller (1.0.0)
-      debug_inspector (>= 0.0.1)
     byebug (11.1.3)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     daemons (1.4.1)
-    debug_inspector (1.1.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
-    erubi (1.12.0)
     eventmachine (1.2.7)
     ffi (1.15.5)
     ffi-coremidi (0.5.1)
@@ -174,14 +166,11 @@ GEM
       midi-jruby (~> 0.2, >= 0.2.0)
       midi-winmm (~> 0.1, >= 0.1.10)
     webrick (1.8.1)
-    zeitwerk (2.6.8)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  better_errors
-  binding_of_caller
   byebug
   haml
   haml_lint
@@ -201,8 +190,6 @@ DEPENDENCIES
   sqlite3
   thin
   tzinfo-data
-  webrick
-  zeitwerk
 
 BUNDLED WITH
    2.3.26

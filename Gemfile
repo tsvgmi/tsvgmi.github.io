@@ -45,13 +45,9 @@ gem 'sqlite3'
 gem 'thin'
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
   gem 'byebug'
   gem 'rubycop', require: false
   gem 'haml_lint', require: false
-  #gem 'erb_lint', require: false
 end
 
-gem 'webrick'
-gem 'zeitwerk'
+#gem 'webrick'
