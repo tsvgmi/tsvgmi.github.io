@@ -82,6 +82,13 @@ get '/smulelist/:user' do |user|
                             i_join: smcontent.i_join}
 end
 
+get '/stream/:sid' do |sid|
+  sdir = sid.split('_').map{|f| f[0..1]}.join
+  file = "/mnt/voice/SMULE/STORE/#{sdir}/#{sid}.m4a"
+  Plog.dump_info(file:file)
+  send_file(file, disposition: :inline)
+end
+
 get '/smulelist-perf/:user' do |user|
   # Plog.dump_info(params:params, _ofmt:'Y')
   start     = params[:start].to_i
@@ -235,7 +242,7 @@ helpers do
     searches = if params[:search_c] && !params[:search_c].empty?
                  [params[:search_c]]
                else
-                 (params[:search] || {})['value'].split(',')
+                 ((params[:search] || {})['value'] || '').split(',')
                end
 
     dsearches = []
